@@ -1,0 +1,3 @@
+urls:
+  root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.0/docs/WebHelp/references/csawlib
+  classes: all-classes.html

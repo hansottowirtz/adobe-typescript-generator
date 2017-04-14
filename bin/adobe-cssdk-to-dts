@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require_relative '../src/adobe_cssdk_to_dts'
+
+converter = AdobeCssdkToDts
+
+case ARGV[0]
+when 'download-html'
+  converter.download_html
+when 'convert-all'
+  converter.convert_all
+when 'convert'
+  converter.convert(ARGV[1])
+end

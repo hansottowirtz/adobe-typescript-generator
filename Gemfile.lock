@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.1)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    method_source (0.8.2)
+    mini_portile2 (2.1.0)
+    multi_xml (0.6.0)
+    nokogiri (1.7.1)
+      mini_portile2 (~> 2.1.0)
+    parallel (1.11.1)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    slop (3.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  httparty
+  nokogiri
+  parallel
+  pry
+
+BUNDLED WITH
+   1.14.6
