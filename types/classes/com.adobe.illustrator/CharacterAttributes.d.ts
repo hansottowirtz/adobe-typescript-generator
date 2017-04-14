@@ -1,25 +1,25 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class CharacterAttributes extends IllustratorHostObject {
+		class CharacterAttributes extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The em amount of left aki. */
 			public akiLeft: number;
 			/** The em amount of right aki amount. */
 			public akiRight: number;
 			/** The character alignment type. */
-			public alignment: StyleRunAlignmentType;
+			public alignment: Adobe.Illustrator.StyleRunAlignmentType;
 			/** The alternate glyphs form. */
-			public alternateGlyphs: AlternateGlyphsForm;
+			public alternateGlyphs: Adobe.Illustrator.AlternateGlyphsForm;
 			/** Whether to use automatic leading. */
 			public autoLeading: boolean;
 			/** The Japanese text baseline direction. */
-			public baselineDirection: BaselineDirectionType;
+			public baselineDirection: Adobe.Illustrator.BaselineDirectionType;
 			/** The baseline position of text. */
-			public baselinePosition: FontBaselineOption;
+			public baselinePosition: Adobe.Illustrator.FontBaselineOption;
 			/** The amount of shift (in points) of the text baseline. */
 			public baselineShift: number;
 			/** The case of text. */
-			public capitalization: FontCapsOption;
+			public capitalization: Adobe.Illustrator.FontCapsOption;
 			/** Whether the OpenType connection forms should be used. */
 			public connectionForms: boolean;
 			/** Whether the contextual ligature should be used. */
@@ -27,9 +27,9 @@ declare namespace Adobe {
 			/** Whether the discretionary ligature should be used. */
 			public discretionaryLigature: boolean;
 			/** Which figure style to use in OpenType font. */
-			public figureStyle: FigureStyleType;
+			public figureStyle: Adobe.Illustrator.FigureStyleType;
 			/** The color of the text fill. */
-			public fillColor: Color;
+			public fillColor: Adobe.Illustrator.Color;
 			/** Whether the OpenType fractions should be used. */
 			public fractions: boolean;
 			/**
@@ -40,9 +40,9 @@ declare namespace Adobe {
 			/** Does the Japanese OpenType support italics? */
 			public italics: boolean;
 			/** The automatic kerning method to use. */
-			public kerningMethod: AutoKernType;
+			public kerningMethod: Adobe.Illustrator.AutoKernType;
 			/** The language of text. */
-			public language: LanguageType;
+			public language: Adobe.Illustrator.LanguageType;
 			/** The amount of space between two lines of text (in points) */
 			public leading: number;
 			/** Whether the ligature should be used. */
@@ -50,7 +50,7 @@ declare namespace Adobe {
 			/** Whether line breaks are allowed. */
 			public noBreak: boolean;
 			/** The OpenType baseline position. */
-			public openTypePosition: FontOpenTypePositionOption;
+			public openTypePosition: Adobe.Illustrator.FontOpenTypePositionOption;
 			/** Whether the OpenType ordinals should be used. */
 			public ordinals: boolean;
 			/** Whether the OpenType ornaments should be used. */
@@ -68,7 +68,7 @@ declare namespace Adobe {
 			/** Whether to draw a strike through line over the text. */
 			public strikeThrough: boolean;
 			/** The color of the text stroke. */
-			public strokeColor: Color;
+			public strokeColor: Adobe.Illustrator.Color;
 			/** Line width of stroke. */
 			public strokeWeight: number;
 			/** Whether the OpenType stylistic alternates should be used. */
@@ -80,7 +80,7 @@ declare namespace Adobe {
 			/** The Tate-Chu-Yoko vertical adjustment in points. */
 			public tateChuYokoVertical: number;
 			/** The text font. */
-			public textFont: TextFont;
+			public textFont: Adobe.Illustrator.TextFont;
 			/** Whether the OpenType titling alternates should be used. */
 			public titling: boolean;
 			/** The tracking or range kerning amount in thousands of an em. */
@@ -101,7 +101,7 @@ declare namespace Adobe {
 			public wariChuCharactersBeforeBreak: number;
 			/** Whether WariChu is enabled. */
 			public wariChuEnabled: boolean;
-			public wariChuJustification: WariChuJustificationType;
+			public wariChuJustification: Adobe.Illustrator.WariChuJustificationType;
 			/** The Wari-Chu line gap. */
 			public wariChuLineGap: number;
 			/**

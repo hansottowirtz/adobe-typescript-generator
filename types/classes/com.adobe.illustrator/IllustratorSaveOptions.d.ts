@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class IllustratorSaveOptions extends IllustratorHostObject {
+		class IllustratorSaveOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * If SaveMultipleArtboards is true ,this will be considered 
 			 * for multi-asset extraction which specifies artboard 
@@ -13,7 +13,7 @@ declare namespace Adobe {
 			 * what Illustrator file format version to create ( default: 
 			 * Compatibility.ILLUSTRATOR15 )
 			 */
-			public compatibility: Compatibility;
+			public compatibility: Adobe.Illustrator.Compatibility;
 			/**
 			 * should the saved file be compressed (version 10 or later) ( 
 			 * default: true )
@@ -34,7 +34,7 @@ declare namespace Adobe {
 			 * versions (pre-version 9) ( default: 
 			 * OutputFlattening.PRESERVEAPPEARANCE )
 			 */
-			public flattenOutput: OutputFlattening;
+			public flattenOutput: Adobe.Illustrator.OutputFlattening;
 			/**
 			 * include a subset of fonts when less than this percentage of 
 			 * characters are used (version 9 or later) ( 0.0 - 100.0; 

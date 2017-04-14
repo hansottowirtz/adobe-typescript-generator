@@ -1,20 +1,20 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Swatches extends IllustratorHostObject {
+		class Swatches extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** number of elements in the collection */
 			public readonly length: number;
 			/** create a swatch */
-			public add(): Swatch;
+			public add(): Adobe.Illustrator.Swatch;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.
 			 */
-			public getByName(nameParam: string): Swatch;
+			public getByName(nameParam: string): Adobe.Illustrator.Swatch;
 			/** Get selected swatches in the document. */
 			public getSelected(): any;
 			/** Get the element in the collection at the provided index. */
-			public index(idx: number): Swatch;
+			public index(idx: number): Adobe.Illustrator.Swatch;
 			/** Overriding this allows us to support for each...in */
 			public nextNameIndex(idx: number): number;
 			/** Overriding this allows us to support for each...in */

@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PrintPageMarksOptions extends IllustratorHostObject {
+		class PrintPageMarksOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** the bleed offset rect */
 			public bleedOffsetRect: any[];
 			/** whether to enable color bars printing ( default: false ) */
@@ -14,7 +14,7 @@ declare namespace Adobe {
 			 */
 			public pageInfoMarks: boolean;
 			/** the page marks style ( default: PageMarksTypes.Roman ) */
-			public pageMarksType: PageMarksTypes;
+			public pageMarksType: Adobe.Illustrator.PageMarksTypes;
 			/**
 			 * whether to enable registration marks printing ( default: 
 			 * false )

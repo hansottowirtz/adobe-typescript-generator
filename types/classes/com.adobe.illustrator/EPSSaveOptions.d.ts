@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class EPSSaveOptions extends IllustratorHostObject {
+		class EPSSaveOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * If SaveMultipleArtboards is true,this will be considered for 
 			 * multi-asset extraction which specifies artboard range.Empty 
@@ -15,7 +15,7 @@ declare namespace Adobe {
 			 * what Illustrator file format version to create ( default: 
 			 * Compatibility.ILLUSTRATOR15 )
 			 */
-			public compatibility: Compatibility;
+			public compatibility: Adobe.Illustrator.Compatibility;
 			/**
 			 * create a raster item of the gradient or gradient mesh so 
 			 * that PostScript Level 2 printers can print the object ( 
@@ -37,21 +37,21 @@ declare namespace Adobe {
 			 * versions (pre-version 9) ( default: 
 			 * OutputFlattening.PRESERVEAPPEARANCE )
 			 */
-			public flattenOutput: OutputFlattening;
+			public flattenOutput: Adobe.Illustrator.OutputFlattening;
 			/**
 			 * include thumbnail image of the EPS artwork ( default: true )
 			 */
 			public includeDocumentThumbnails: boolean;
 			/** ( default: PDFOverprint.PRESERVEPDFOVERPRINT ) */
-			public overprint: PDFOverprint;
+			public overprint: Adobe.Illustrator.PDFOverprint;
 			/**
 			 * PostScript level to use (level 1 valid for file format 
 			 * version 8 or older) ( default: EPSPostScriptLevelEnum.LEVEL2 
 			 * )
 			 */
-			public postScript: EPSPostScriptLevelEnum;
+			public postScript: Adobe.Illustrator.EPSPostScriptLevelEnum;
 			/** EPS preview format */
-			public preview: EPSPreview;
+			public preview: Adobe.Illustrator.EPSPreview;
 			/**
 			 * All the artboards or range of the artboards will be saved ( 
 			 * default: false )

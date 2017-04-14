@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class ExportOptionsSVG extends IllustratorHostObject {
+		class ExportOptionsSVG extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** should the exported file be compressed ( default: false ) */
 			public compressed: boolean;
 			/**
@@ -14,17 +14,17 @@ declare namespace Adobe {
 			 * the document ( default: 
 			 * SVGCSSPropertyLocation.STYLEATTRIBUTES )
 			 */
-			public cssProperties: SVGCSSPropertyLocation;
+			public cssProperties: Adobe.Illustrator.SVGCSSPropertyLocation;
 			/**
 			 * how should the text in the document be encoded ( default: 
 			 * SVGDocumentEncoding.ASCII )
 			 */
-			public documentEncoding: SVGDocumentEncoding;
+			public documentEncoding: Adobe.Illustrator.SVGDocumentEncoding;
 			/**
 			 * the version of DTD that the exported file should be 
 			 * conforming to ( default: SVGDTDVersion.SVG1_1 )
 			 */
-			public DTD: SVGDTDVersion;
+			public DTD: Adobe.Illustrator.SVGDTDVersion;
 			/**
 			 * should the raster images in the exported file be included ( 
 			 * default: false )
@@ -34,12 +34,12 @@ declare namespace Adobe {
 			 * what font glyphs should be included in the exported file ( 
 			 * default: SVGFontSubsetting.ALLGLYPHS )
 			 */
-			public fontSubsetting: SVGFontSubsetting;
+			public fontSubsetting: Adobe.Illustrator.SVGFontSubsetting;
 			/**
 			 * the type of font that should be included in the exported 
 			 * file ( default: SVGFontType.CEFFONT )
 			 */
-			public fontType: SVGFontType;
+			public fontType: Adobe.Illustrator.SVGFontType;
 			/** ( default: false ) */
 			public includeFileInfo: boolean;
 			/** ( default: false ) */

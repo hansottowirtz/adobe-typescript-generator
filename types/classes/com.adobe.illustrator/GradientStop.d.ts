@@ -1,9 +1,9 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class GradientStop extends IllustratorHostObject {
+		class GradientStop extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The color linked to this gradient stop. */
-			public color: Color;
+			public color: Adobe.Illustrator.Color;
 			/** Midpoint key value in percent. ( 13.0 - 87.0 ) */
 			public midPoint: number;
 			/**

@@ -1,16 +1,16 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class TextFonts extends IllustratorHostObject {
+		class TextFonts extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** number of elements in the collection */
 			public readonly length: number;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.
 			 */
-			public getByName(nameParam: string): TextFont;
+			public getByName(nameParam: string): Adobe.Illustrator.TextFont;
 			/** Get the element in the collection at the provided index. */
-			public index(idx: number): TextFont;
+			public index(idx: number): Adobe.Illustrator.TextFont;
 			/** Overriding this allows us to support for each...in */
 			public nextNameIndex(idx: number): number;
 			/** Overriding this allows us to support for each...in */

@@ -17,6 +17,7 @@ require_relative './klass'
 require_relative './types'
 require_relative './package'
 require_relative './typescript'
+require_relative './util'
 
 module AdobeCssdkToDts
   class << self

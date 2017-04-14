@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class ExportOptionsPhotoshop extends IllustratorHostObject {
+		class ExportOptionsPhotoshop extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** should the resulting image be antialiased ( default: true ) */
 			public antiAliasing: boolean;
 			/**
@@ -22,7 +22,7 @@ declare namespace Adobe {
 			 * the color space of the exported file ( default: 
 			 * ImageColorSpace.RGB )
 			 */
-			public imageColorSpace: ImageColorSpace;
+			public imageColorSpace: Adobe.Illustrator.ImageColorSpace;
 			/**
 			 * preserve as much of the original document's structure as 
 			 * possible when exporting ( default: true )

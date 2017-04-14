@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.csawlib.misc/index.d.ts"/>
 declare namespace Adobe {
 	namespace CsawlibMisc {
-		class BridgeTalk extends CSHostObject {
+		class BridgeTalk extends Adobe.Csawlib.CSHostObject {
 			public static readonly appInfo: string;
 			public static readonly appInstance: string;
 			public static readonly appLocale: string;
@@ -10,7 +10,7 @@ declare namespace Adobe {
 			public static readonly appStatus: string;
 			public static readonly appVersion: string;
 			public body: string;
-			public readonly headers: BridgeTalkHeaders;
+			public readonly headers: Adobe.CsawlibMisc.BridgeTalkHeaders;
 			public sender: string;
 			public target: string;
 			public timeout: number;

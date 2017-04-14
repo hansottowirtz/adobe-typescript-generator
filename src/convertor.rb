@@ -13,6 +13,7 @@ class Convertor
     FileUtils.mkdir_p File.dirname(klass.path)
     adobe_chunk = Chunk.new
     adobe_chunk.puts "/// <reference path=\"#{klass.package.path}\"/>"
+    adobe_chunk.puts "\n"
     adobe_chunk.puts 'declare namespace Adobe {'
     namespace_chunk = Chunk.new("namespace #{klass.package.namespace} {")
     namespace_chunk.merge klass.chunk.pad(1)

@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PrintFlattenerOptions extends IllustratorHostObject {
+		class PrintFlattenerOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** whether to clip complex regions ( default: false ) */
 			public clipComplexRegions: boolean;
 			/**
@@ -16,7 +16,7 @@ declare namespace Adobe {
 			/** the gradient resolution ( 1.0 - 9600.0; default: 300.0 ) */
 			public gradientResolution: number;
 			/** overprint ( default: PDFOverprint.PRESERVEPDFOVERPRINT ) */
-			public overprint: PDFOverprint;
+			public overprint: Adobe.Illustrator.PDFOverprint;
 			/**
 			 * the rasterization resolution ( 1.0 - 9600.0; default: 300.0 
 			 * )

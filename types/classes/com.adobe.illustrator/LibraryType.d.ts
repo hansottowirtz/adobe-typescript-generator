@@ -1,18 +1,18 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class LibraryType extends IllustratorEnumBase {
+		class LibraryType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Illustrator brushes library. */
-			public static readonly BRUSHES: LibraryType;
-			public static readonly enumCache: CSEnumSharedCache;
+			public static readonly BRUSHES: Adobe.Illustrator.LibraryType;
+			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/** Illustrator graphic styles library. */
-			public static readonly GRAPHICSTYLES: LibraryType;
+			public static readonly GRAPHICSTYLES: Adobe.Illustrator.LibraryType;
 			/** Illustrator artwork. */
-			public static readonly ILLUSTRATORARTWORK: LibraryType;
+			public static readonly ILLUSTRATORARTWORK: Adobe.Illustrator.LibraryType;
 			/** Illustrator swatches library. */
-			public static readonly SWATCHES: LibraryType;
+			public static readonly SWATCHES: Adobe.Illustrator.LibraryType;
 			/** Illustrator symbols library. */
-			public static readonly SYMBOLS: LibraryType;
+			public static readonly SYMBOLS: Adobe.Illustrator.LibraryType;
 			/** Constructor */
 			public constructor(ho: HostObject, _enum: number);
 		}

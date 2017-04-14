@@ -8,9 +8,9 @@ module Downloader
       as = doc.xpath('//a')
       l = as.length
       Parallel.each_with_index(as) do |a, i|
-        href = a.attributes['href'].value
+        href = a['href']
         next if !href.start_with?('com')
-        md = /^(.+)\.(\w+)$/.match(a.attributes['title'].value)
+        md = /^(.+)\.(\w+)$/.match(a['title'])
         package = md[1]
         klass = md[2]
         package_dir_path = "#{html_dir_path}/classes/#{package}"

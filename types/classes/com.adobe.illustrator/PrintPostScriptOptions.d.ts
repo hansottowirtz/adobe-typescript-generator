@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PrintPostScriptOptions extends IllustratorHostObject {
+		class PrintPostScriptOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** whether to print in binary mode ( default: false ) */
 			public binaryPrinting: boolean;
 			/**
@@ -15,14 +15,14 @@ declare namespace Adobe {
 			 * the image compression type ( default: 
 			 * PostScriptImageCompressionType.IMAGECOMPRESSIONNONE )
 			 */
-			public imageCompression: PostScriptImageCompressionType;
+			public imageCompression: Adobe.Illustrator.PostScriptImageCompressionType;
 			/** whether to print in negative mode ( default: false ) */
 			public negativePrinting: boolean;
 			/**
 			 * the PostScript language level ( default: 
 			 * PrinterPostScriptLevelEnum.PSLEVEL2 )
 			 */
-			public postScriptLevel: PrinterPostScriptLevelEnum;
+			public postScriptLevel: Adobe.Illustrator.PrinterPostScriptLevelEnum;
 			/** the shading resolution ( 1.0 - 9600.0; default: 300.0 ) */
 			public shadingResolution: number;
 		}

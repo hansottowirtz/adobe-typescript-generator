@@ -4,8 +4,8 @@ declare namespace Adobe {
 		class CSGlobalCache {
 			public constructor();
 			public getAllQualNames(): any[];
-			public getInstance(): CSGlobalCache;
-			public getItem(qualifiedClassName: string): CSEnumSharedCache;
+			public getInstance(): Adobe.Csawlib.CSGlobalCache;
+			public getItem(qualifiedClassName: string): Adobe.Csawlib.CSEnumSharedCache;
 			public putItem(qualifiedClassName: string, csenumCache: CSEnumSharedCache): void;
 		}
 	}

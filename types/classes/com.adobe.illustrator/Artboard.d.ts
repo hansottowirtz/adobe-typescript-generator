@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Artboard extends IllustratorHostObject {
+		class Artboard extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** Size and position of artboard. */
 			public artboardRect: any[];
 			/**

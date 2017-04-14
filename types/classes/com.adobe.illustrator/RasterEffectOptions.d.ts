@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class RasterEffectOptions extends IllustratorHostObject {
+		class RasterEffectOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * should the resulting image be antialiased ( default: false )
 			 */
@@ -15,7 +15,7 @@ declare namespace Adobe {
 			 * The color model for the rasterization ( default: 
 			 * RasterizationColorModel.DEFAULTCOLORMODEL )
 			 */
-			public colorModel: RasterizationColorModel;
+			public colorModel: Adobe.Illustrator.RasterizationColorModel;
 			/**
 			 * whether to convert all spot colors to process colors in the 
 			 * resulting image ( default: false )

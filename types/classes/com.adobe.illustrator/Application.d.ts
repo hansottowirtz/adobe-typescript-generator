@@ -1,9 +1,9 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Application extends IllustratorHostObject {
+		class Application extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The active document. */
-			public activeDocument: Document;
+			public activeDocument: Adobe.Illustrator.Document;
 			/** Is a web browser available? */
 			public readonly browserAvailable: boolean;
 			/** The build number of the Adobe Illustrator application. */
@@ -14,14 +14,14 @@ declare namespace Adobe {
 			 */
 			public readonly colorSettingsList: any;
 			/** Coordinate System used by script */
-			public coordinateSystem: CoordinateSystem;
+			public coordinateSystem: Adobe.Illustrator.CoordinateSystem;
 			/**
 			 * The default color settings file for the current application 
 			 * locale.
 			 */
 			public readonly defaultColorSettings: File;
 			/** The open documents. */
-			public readonly documents: Documents;
+			public readonly documents: Adobe.Illustrator.Documents;
 			/**
 			 * The list of flattener style names currently available for 
 			 * use.
@@ -47,7 +47,7 @@ declare namespace Adobe {
 			 */
 			public readonly PPDFileList: any;
 			/** Preferences for Illustrator. */
-			public readonly preferences: Preferences;
+			public readonly preferences: Adobe.Illustrator.Preferences;
 			/** The list of installed printers. */
 			public readonly printerList: any;
 			/** The list of print preset names currently available for use. */
@@ -59,7 +59,7 @@ declare namespace Adobe {
 			/** The list of presets available for creating a new document. */
 			public readonly startupPresetsList: any;
 			/** Installed fonts. */
-			public readonly textFonts: TextFonts;
+			public readonly textFonts: Adobe.Illustrator.TextFonts;
 			/**
 			 * The list of tracing preset names currently available for 
 			 * use.
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			 * What level of interaction with the user should be allowed 
 			 * when handling script commands.
 			 */
-			public userInteractionLevel: UserInteractionLevel;
+			public userInteractionLevel: Adobe.Illustrator.UserInteractionLevel;
 			/** The version of the Adobe Illustrator application. */
 			public readonly version: string;
 			/** Is the application visible. */
@@ -139,13 +139,13 @@ declare namespace Adobe {
 			public applySingleDataPointToItem(sessionIndex: number, item: string, dataID: string, data: string): boolean;
 			public beep(): void;
 			/** Concatenate two transformation matrices. */
-			public concatenateMatrix(matrix: Matrix, secondMatrix: Matrix): Matrix;
+			public concatenateMatrix(matrix: Matrix, secondMatrix: Matrix): Adobe.Illustrator.Matrix;
 			/** Concatenate a rotation matrix to a transformation matrix. */
-			public concatenateRotationMatrix(matrix: Matrix, angle: number): Matrix;
+			public concatenateRotationMatrix(matrix: Matrix, angle: number): Adobe.Illustrator.Matrix;
 			/** Concatenate a scale matrix to a transformation matrix. */
-			public concatenateScaleMatrix(matrix: Matrix, scaleX: number, scaleY: number): Matrix;
+			public concatenateScaleMatrix(matrix: Matrix, scaleX: number, scaleY: number): Adobe.Illustrator.Matrix;
 			/** Concatenate a translation to a transformation matrix. */
-			public concatenateTranslationMatrix(matrix: Matrix, deltaX: number, deltaY: number): Matrix;
+			public concatenateTranslationMatrix(matrix: Matrix, deltaX: number, deltaY: number): Adobe.Illustrator.Matrix;
 			/**
 			 * Converts a sample-component color from one color space to 
 			 * another.
@@ -161,9 +161,9 @@ declare namespace Adobe {
 			 */
 			public getExecutionOutput(): string;
 			/** Returns an identity matrix. */
-			public getIdentityMatrix(): Matrix;
+			public getIdentityMatrix(): Adobe.Illustrator.Matrix;
 			/** Get detailed info from the specified PPD file. */
-			public getPPDFileInfo(name: string): PPDFileInfo;
+			public getPPDFileInfo(name: string): Adobe.Illustrator.PPDFileInfo;
 			/**
 			 * Given a preset type, returns the full path to the 
 			 * application's default document profile for the type.
@@ -173,22 +173,22 @@ declare namespace Adobe {
 			 * Given a preset name, tries and retrieves the settings from 
 			 * the preset template.
 			 */
-			public getPresetSettings(preset: string): DocumentPreset;
+			public getPresetSettings(preset: string): Adobe.Illustrator.DocumentPreset;
 			/** Returns a rotation transformation matrix. */
-			public getRotationMatrix(angle: number): Matrix;
+			public getRotationMatrix(angle: number): Adobe.Illustrator.Matrix;
 			/** Returns a scale transformation matrix. */
-			public getScaleMatrix(scaleX: number, scaleY: number): Matrix;
+			public getScaleMatrix(scaleX: number, scaleY: number): Adobe.Illustrator.Matrix;
 			/**
 			 * Get the scriptable help group object that represents the 
 			 * search widget in the app bar.
 			 */
 			public getScriptableHelpGroup(): any;
 			/** Returns a translation matrix. */
-			public getTranslationMatrix(deltaX: number, deltaY: number): Matrix;
+			public getTranslationMatrix(deltaX: number, deltaY: number): Adobe.Illustrator.Matrix;
 			/** Retrieves a string representing the AAT version. */
 			public getVersionString(): string;
 			/** Invert a matrix. */
-			public invertMatrix(matrix: Matrix): Matrix;
+			public invertMatrix(matrix: Matrix): Adobe.Illustrator.Matrix;
 			/** Compares two matrices for equality. */
 			public isEqualMatrix(matrix: Matrix, secondMatrix: Matrix): boolean;
 			/** Tests if a matrix is singular (cannot be inverted) */
@@ -199,7 +199,7 @@ declare namespace Adobe {
 			 */
 			public loadColorSettings(fileSpec: File): void;
 			/** Open the specified document file. */
-			public open(file: File, documentColorSpace: DocumentColorSpace, options: any): Document;
+			public open(file: File, documentColorSpace: DocumentColorSpace, options: any): Adobe.Illustrator.Document;
 			/** Paste clipboard into the current document. */
 			public paste(): void;
 			/** Quit the application. */

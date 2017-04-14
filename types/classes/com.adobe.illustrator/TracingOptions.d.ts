@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class TracingOptions extends IllustratorHostObject {
+		class TracingOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** Corner angle. */
 			public cornerAngle: number;
 			/**
@@ -52,11 +52,11 @@ declare namespace Adobe {
 			 */
 			public threshold: number;
 			/** The tracing mode: color, gray, black and white. */
-			public tracingMode: TracingModeType;
+			public tracingMode: Adobe.Illustrator.TracingModeType;
 			/** The raster visualization mode. */
-			public viewRaster: ViewRasterType;
+			public viewRaster: Adobe.Illustrator.ViewRasterType;
 			/** The vector visualization mode. */
-			public viewVector: ViewVectorType;
+			public viewVector: Adobe.Illustrator.ViewVectorType;
 			/** Load options from preset. */
 			public loadFromPreset(presetName: string): boolean;
 			/**

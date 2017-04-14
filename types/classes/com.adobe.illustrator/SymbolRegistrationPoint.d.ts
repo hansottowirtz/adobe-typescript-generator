@@ -1,26 +1,26 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class SymbolRegistrationPoint extends IllustratorEnumBase {
-			public static readonly enumCache: CSEnumSharedCache;
+		class SymbolRegistrationPoint extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
+			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/** bottom left point of symbol bounding box */
-			public static readonly SYMBOLBOTTOMLEFTPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLBOTTOMLEFTPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** bottom middle point of symbol bounding box */
-			public static readonly SYMBOLBOTTOMMIDDLEPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLBOTTOMMIDDLEPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** bottom right point of symbol bounding box */
-			public static readonly SYMBOLBOTTOMRIGHTPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLBOTTOMRIGHTPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** center point of symbol bounding box */
-			public static readonly SYMBOLCENTERPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLCENTERPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** middle left point of symbol bounding box */
-			public static readonly SYMBOLMIDDLELEFTPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLMIDDLELEFTPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** middle right point of symbol bounding box */
-			public static readonly SYMBOLMIDDLERIGHTPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLMIDDLERIGHTPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** top left point of symbol bounding box */
-			public static readonly SYMBOLTOPLEFTPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLTOPLEFTPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** top middle point of symbol bounding box */
-			public static readonly SYMBOLTOPMIDDLEPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLTOPMIDDLEPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** top right point of symbol bounding box */
-			public static readonly SYMBOLTOPRIGHTPOINT: SymbolRegistrationPoint;
+			public static readonly SYMBOLTOPRIGHTPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** Constructor */
 			public constructor(ho: HostObject, _enum: number);
 		}

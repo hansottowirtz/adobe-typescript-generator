@@ -1,35 +1,35 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Document extends IllustratorHostObject {
+		class Document extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The active data set. */
-			public activeDataSet: DataSet;
+			public activeDataSet: Adobe.Illustrator.DataSet;
 			/** The active layer. */
-			public activeLayer: Layer;
+			public activeLayer: Adobe.Illustrator.Layer;
 			/** The document's current view. */
-			public readonly activeView: View;
+			public readonly activeView: Adobe.Illustrator.View;
 			/** All artboards in the document. */
-			public readonly artboards: Artboards;
+			public readonly artboards: Adobe.Illustrator.Artboards;
 			/** The brushes defined in this document. */
-			public readonly brushes: Brushes;
+			public readonly brushes: Adobe.Illustrator.Brushes;
 			/** The list of character styles in this document. */
-			public readonly characterStyles: CharacterStyles;
+			public readonly characterStyles: Adobe.Illustrator.CharacterStyles;
 			/** The compound path artwork in this collection. */
-			public readonly compoundPathItems: CompoundPathItems;
+			public readonly compoundPathItems: Adobe.Illustrator.CompoundPathItems;
 			public cropBox: any[];
-			public cropStyle: CropOptions;
+			public cropStyle: Adobe.Illustrator.CropOptions;
 			/** The data sets defined in this document. */
-			public readonly dataSets: DataSets;
+			public readonly dataSets: Adobe.Illustrator.DataSets;
 			/** Default fill color. */
-			public defaultFillColor: Color;
+			public defaultFillColor: Adobe.Illustrator.Color;
 			/** Should a new path be filled? */
 			public defaultFilled: boolean;
 			/** Will art beneath a filled object be overprinted by default? */
 			public defaultFillOverprint: boolean;
 			/** Default type of line capping. */
-			public defaultStrokeCap: StrokeCap;
+			public defaultStrokeCap: Adobe.Illustrator.StrokeCap;
 			/** Default stroke color. */
-			public defaultStrokeColor: Color;
+			public defaultStrokeColor: Adobe.Illustrator.Color;
 			/** Should a new path be stroked? */
 			public defaultStroked: boolean;
 			/** Default dash lengths (set to {} for a solid line) */
@@ -40,7 +40,7 @@ declare namespace Adobe {
 			 */
 			public defaultStrokeDashOffset: number;
 			/** Default type of joints. */
-			public defaultStrokeJoin: StrokeJoin;
+			public defaultStrokeJoin: Adobe.Illustrator.StrokeJoin;
 			/**
 			 * Specifies whether a join is mitered (pointed) or beveled 
 			 * (squared-off) by default.
@@ -53,59 +53,59 @@ declare namespace Adobe {
 			/** Default width of stroke. */
 			public defaultStrokeWidth: number;
 			/** The color space used for the document. */
-			public readonly documentColorSpace: DocumentColorSpace;
+			public readonly documentColorSpace: Adobe.Illustrator.DocumentColorSpace;
 			/** The file associated with the document. */
 			public readonly fullName: File;
 			/** The bounds of the illustration excluding stroke width. */
 			public readonly geometricBounds: any[];
 			/** The gradients available in this document. */
-			public readonly gradients: Gradients;
+			public readonly gradients: Adobe.Illustrator.Gradients;
 			/** The graphic styles defined in this document. */
-			public readonly graphicStyles: GraphicStyles;
+			public readonly graphicStyles: Adobe.Illustrator.GraphicStyles;
 			/** The graph art items in this document. */
-			public readonly graphItems: GraphItems;
+			public readonly graphItems: Adobe.Illustrator.GraphItems;
 			/** The group items in this document. */
-			public readonly groupItems: GroupItems;
+			public readonly groupItems: Adobe.Illustrator.GroupItems;
 			public readonly height: number;
 			/** The list of inks in this document. */
 			public readonly inkList: any;
 			/** The Kinsoku set. */
 			public readonly kinsokuSet: any;
 			/** The layers in this document. */
-			public readonly layers: Layers;
+			public readonly layers: Adobe.Illustrator.Layers;
 			/** The text frame items in this story. */
-			public readonly legacyTextItems: LegacyTextItems;
+			public readonly legacyTextItems: Adobe.Illustrator.LegacyTextItems;
 			/** The mesh art items in this document. */
-			public readonly meshItems: MeshItems;
+			public readonly meshItems: Adobe.Illustrator.MeshItems;
 			/** The Mojikumi set. */
 			public readonly mojikumiSet: any;
 			/** The document's name. */
 			public readonly name: string;
 			/** The non-native art items in this document. */
-			public readonly nonNativeItems: NonNativeItems;
+			public readonly nonNativeItems: Adobe.Illustrator.NonNativeItems;
 			public readonly outputResolution: number;
 			/** All the artwork in this document. */
-			public readonly pageItems: PageItems;
+			public readonly pageItems: Adobe.Illustrator.PageItems;
 			public pageOrigin: any[];
 			/** The list of paragraph styles in this document. */
-			public readonly paragraphStyles: ParagraphStyles;
+			public readonly paragraphStyles: Adobe.Illustrator.ParagraphStyles;
 			/** Path specification for the document. */
 			public readonly path: File;
 			/** The path artwork in this document. */
-			public readonly pathItems: PathItems;
+			public readonly pathItems: Adobe.Illustrator.PathItems;
 			/** The patterns available in this document. */
-			public readonly patterns: Patterns;
+			public readonly patterns: Adobe.Illustrator.Patterns;
 			/** The placed art items in this document. */
-			public readonly placedItems: PlacedItems;
+			public readonly placedItems: Adobe.Illustrator.PlacedItems;
 			/** The plugin art items in this document. */
-			public readonly pluginItems: PluginItems;
+			public readonly pluginItems: Adobe.Illustrator.PluginItems;
 			public readonly printTiles: boolean;
 			/** The document raster effects settings. */
-			public rasterEffectSettings: RasterEffectOptions;
+			public rasterEffectSettings: Adobe.Illustrator.RasterEffectOptions;
 			/** The raster art items in this document. */
-			public readonly rasterItems: RasterItems;
+			public readonly rasterItems: Adobe.Illustrator.RasterItems;
 			public rulerOrigin: any[];
-			public readonly rulerUnits: RulerUnits;
+			public readonly rulerUnits: Adobe.Illustrator.RulerUnits;
 			/** Has the document been saved? */
 			public saved: boolean;
 			/** The selection within the document. */
@@ -113,31 +113,31 @@ declare namespace Adobe {
 			public readonly showPlacedImages: boolean;
 			public readonly splitLongPaths: boolean;
 			/** The custom spot colors available in this document. */
-			public readonly spots: Spots;
+			public readonly spots: Adobe.Illustrator.Spots;
 			/** Is the file a stationery file? */
 			public readonly stationery: boolean;
 			/** The story items in this document. */
-			public readonly stories: Stories;
+			public readonly stories: Adobe.Illustrator.Stories;
 			/** The swatches in this document. */
-			public readonly swatches: Swatches;
+			public readonly swatches: Adobe.Illustrator.Swatches;
 			/** The Swatch Groups in this document. */
-			public readonly swatchGroups: SwatchGroups;
+			public readonly swatchGroups: Adobe.Illustrator.SwatchGroups;
 			/** The symbol items in this document. */
-			public readonly symbolItems: SymbolItems;
+			public readonly symbolItems: Adobe.Illustrator.SymbolItems;
 			/** The symbols defined in this document. */
-			public readonly symbols: Symbols;
+			public readonly symbols: Adobe.Illustrator.Symbols;
 			/** The tags in this document. */
-			public readonly tags: Tags;
+			public readonly tags: Adobe.Illustrator.Tags;
 			/** The text frame items in this document. */
-			public readonly textFrames: TextFrames;
+			public readonly textFrames: Adobe.Illustrator.TextFrames;
 			public readonly tileFullPages: boolean;
 			public readonly useDefaultScreen: boolean;
 			/** The variables defined in this document. */
-			public readonly variables: Variables;
+			public readonly variables: Adobe.Illustrator.Variables;
 			/** The locked variables. */
 			public variablesLocked: boolean;
 			/** The views in this document. */
-			public readonly views: Views;
+			public readonly views: Adobe.Illustrator.Views;
 			/**
 			 * The visible bounds of the illustration including stroke 
 			 * width.
@@ -174,7 +174,7 @@ declare namespace Adobe {
 			 * Gets the active plane of the active perspective grid of the 
 			 * document
 			 */
-			public getPerspectiveActivePlane(): PerspectiveGridPlaneType;
+			public getPerspectiveActivePlane(): Adobe.Illustrator.PerspectiveGridPlaneType;
 			/**
 			 * Hides the current active perspective grid for the document, 
 			 * if there is visible perspective grid.
@@ -216,7 +216,7 @@ declare namespace Adobe {
 			 * bounds. The source art(s) are disposed as a result of the 
 			 * rasterization.
 			 */
-			public rasterize(sourceArt: any, clipBounds: any[], options: RasterizeOptions): PageItem;
+			public rasterize(sourceArt: any, clipBounds: any[], options: RasterizeOptions): Adobe.Illustrator.PageItem;
 			/** Save the document. */
 			public save(): void;
 			/** Save the document with specific save options. */

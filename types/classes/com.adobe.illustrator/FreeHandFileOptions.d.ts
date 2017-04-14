@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class FreeHandFileOptions extends IllustratorHostObject {
+		class FreeHandFileOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** Should all text be converted to outlines (default: false) */
 			public convertTextToOutlines: boolean;
 			/**

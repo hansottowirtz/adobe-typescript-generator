@@ -1,18 +1,18 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Layers extends IllustratorHostObject {
+		class Layers extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** number of elements in the collection */
 			public readonly length: number;
 			/** create a layer */
-			public add(): Layer;
+			public add(): Adobe.Illustrator.Layer;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.
 			 */
-			public getByName(nameParam: string): Layer;
+			public getByName(nameParam: string): Adobe.Illustrator.Layer;
 			/** Get the element in the collection at the provided index. */
-			public index(idx: number): Layer;
+			public index(idx: number): Adobe.Illustrator.Layer;
 			/** Overriding this allows us to support for each...in */
 			public nextNameIndex(idx: number): number;
 			/** Overriding this allows us to support for each...in */

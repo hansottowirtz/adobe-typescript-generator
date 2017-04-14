@@ -1,18 +1,18 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Artboards extends IllustratorHostObject {
+		class Artboards extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** number of elements in the collection */
 			public readonly length: number;
 			/** add artboard object */
-			public add(artboardRect: any[]): Artboard;
+			public add(artboardRect: any[]): Adobe.Illustrator.Artboard;
 			/**
 			 * Retrieves the index position of the active artboard in the 
 			 * document's list.
 			 */
 			public getActiveArtboardIndex(): number;
 			/** Get the element in the collection at the provided index. */
-			public index(idx: number): Artboard;
+			public index(idx: number): Adobe.Illustrator.Artboard;
 			/** Overriding this allows us to support for each...in */
 			public nextNameIndex(idx: number): number;
 			/** Overriding this allows us to support for each...in */

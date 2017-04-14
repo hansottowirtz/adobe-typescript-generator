@@ -21,7 +21,6 @@ class DetailUntangler
 
     case @kind
     when 'property'
-      prop_regex =
       s = body.xpath("//text()[. = ' Implementation ']")[0] # .next_sibling.next_sibling.text
       text = body.css('code')[1].text.gsub(/\A\p{Space}*/, '').strip
       md = PROPERTY_REGEX.match(text)
@@ -52,7 +51,12 @@ class DetailUntangler
         @args << Argument.new("...#{spread_argument}", 'any[]', nil)
       end
     end
-    @type = Types.get(org_type)
+
+    if a = body.xpath("//a[text() = '#{org_type}']").last
+      @type = Util.extract_type(a, org_type)
+    else
+      @type = Types.get(org_type)
+    end
   end
 
   def to_attribute

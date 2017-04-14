@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class ExportOptionsFlash extends IllustratorHostObject {
+		class ExportOptionsFlash extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * If SaveMultipleArtboards is true,this will be considered for 
 			 * multi-asset extraction which specifies artboard range.Empty 
@@ -13,9 +13,9 @@ declare namespace Adobe {
 			 * how should the arts be clipped during the output ( default: 
 			 * ArtClippingOption.OUTPUTARTBOUNDS )
 			 */
-			public artClipping: ArtClippingOption;
+			public artClipping: Adobe.Illustrator.ArtClippingOption;
 			/** the background color */
-			public backgroundColor: RGBColor;
+			public backgroundColor: Adobe.Illustrator.RGBColor;
 			/**
 			 * a list of layers to be included as the static background in 
 			 * all exported Flash frames
@@ -26,7 +26,7 @@ declare namespace Adobe {
 			 * to Flash frames ( default: 
 			 * BlendAnimationType.NOBLENDANIMATION )
 			 */
-			public blendAnimation: BlendAnimationType;
+			public blendAnimation: Adobe.Illustrator.BlendAnimationType;
 			/** should the exported file be compressed ( default: false ) */
 			public compressed: boolean;
 			/** should all text be converted to outlines ( default: false ) */
@@ -45,12 +45,12 @@ declare namespace Adobe {
 			 * how should the Flash file be created ( default: 
 			 * FlashExportStyle.ASFLASHFILE )
 			 */
-			public exportStyle: FlashExportStyle;
+			public exportStyle: Adobe.Illustrator.FlashExportStyle;
 			/**
 			 * which version of SWF to export ( default: 
 			 * FlashExportVersion.FLASHVERSION9 )
 			 */
-			public exportVersion: FlashExportVersion;
+			public exportVersion: Adobe.Illustrator.FlashExportVersion;
 			/**
 			 * when exporting layers to Flash frames ( 0.01 - 120.0; 
 			 * default: 12.0 )
@@ -65,21 +65,21 @@ declare namespace Adobe {
 			 * how should the images in the exported Flash file be 
 			 * compressed ( default: FlashImageFormat.LOSSLESS )
 			 */
-			public imageFormat: FlashImageFormat;
+			public imageFormat: Adobe.Illustrator.FlashImageFormat;
 			/**
 			 * If true, include minimal XMP metadata in the exported file ( 
 			 * default: false )
 			 */
 			public includeMetadata: boolean;
 			/** what method to use ( default: FlashJPEGMethod.Standard ) */
-			public jpegMethod: FlashJPEGMethod;
+			public jpegMethod: Adobe.Illustrator.FlashJPEGMethod;
 			/** level of compression ( 0 - 10; default: 3 ) */
 			public jpegQuality: number;
 			/**
 			 * the order in which the layers will be exported to Flash 
 			 * frames ( default: LayerOrderType.BOTTOMUP )
 			 */
-			public layerOrder: LayerOrderType;
+			public layerOrder: Adobe.Illustrator.LayerOrderType;
 			/**
 			 * should the Flash file be set to loop when run ( default: 
 			 * false )
@@ -89,7 +89,7 @@ declare namespace Adobe {
 			 * what access should the SWF file have - local or network 
 			 * access ( default: FlashPlaybackSecurity.PlaybackLocal )
 			 */
-			public playbackAccess: FlashPlaybackSecurity;
+			public playbackAccess: Adobe.Illustrator.FlashPlaybackSecurity;
 			/**
 			 * choose whether to preserve artwork appearance or editability 
 			 * (default) during export ( default: false )
@@ -104,7 +104,7 @@ declare namespace Adobe {
 			 * if a file with the same name already exists, should it be 
 			 * replaced? ( default: SaveOptions.PROMPTTOSAVECHANGES )
 			 */
-			public replacing: SaveOptions;
+			public replacing: Adobe.Illustrator.SaveOptions;
 			/** pixels per inch ( 72.0 - 2400.0; default: 72.0 ) */
 			public resolution: number;
 			/**

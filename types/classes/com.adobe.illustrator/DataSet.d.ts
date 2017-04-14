@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class DataSet extends IllustratorHostObject {
+		class DataSet extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The name of this dataset. */
 			public name: string;
 			/**

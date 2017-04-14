@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class OpenOptions extends IllustratorHostObject {
+		class OpenOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * Convert crop area to Artboard when opening legacy document 
 			 * (pre-Illustrator CS4) in CS4 or later. If false then crop 
@@ -23,7 +23,7 @@ declare namespace Adobe {
 			 * open the file as library ( default: 
 			 * LibraryType.ILLUSTRATORARTWORK )
 			 */
-			public openAs: LibraryType;
+			public openAs: Adobe.Illustrator.LibraryType;
 			/**
 			 * Preserve Legacy Artboard (pre-Illustrator CS4) when opening 
 			 * in CS4 or later. ( default: true )

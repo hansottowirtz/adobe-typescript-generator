@@ -1,35 +1,35 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class GroupItem extends PageItem {
+		class GroupItem extends Adobe.Illustrator.PageItem {
 			/** Are the group elements clipped to the clipping path? */
 			public clipped: boolean;
 			/** The compound path artwork in this group. */
-			public readonly compoundPathItems: CompoundPathItems;
+			public readonly compoundPathItems: Adobe.Illustrator.CompoundPathItems;
 			/** The graph art items in this group. */
-			public readonly graphItems: GraphItems;
+			public readonly graphItems: Adobe.Illustrator.GraphItems;
 			/** The group items in this group. */
-			public readonly groupItems: GroupItems;
+			public readonly groupItems: Adobe.Illustrator.GroupItems;
 			/** The text frame items in this story. */
-			public readonly legacyTextItems: LegacyTextItems;
+			public readonly legacyTextItems: Adobe.Illustrator.LegacyTextItems;
 			/** The mesh art items in this group. */
-			public readonly meshItems: MeshItems;
+			public readonly meshItems: Adobe.Illustrator.MeshItems;
 			/** The non-native art items in this group. */
-			public readonly nonNativeItems: NonNativeItems;
+			public readonly nonNativeItems: Adobe.Illustrator.NonNativeItems;
 			/** All the artwork in this group. */
-			public readonly pageItems: PageItems;
+			public readonly pageItems: Adobe.Illustrator.PageItems;
 			/** The path artwork in this group. */
-			public readonly pathItems: PathItems;
+			public readonly pathItems: Adobe.Illustrator.PathItems;
 			/** The placed art items in this group. */
-			public readonly placedItems: PlacedItems;
+			public readonly placedItems: Adobe.Illustrator.PlacedItems;
 			/** The plugin art items in this group. */
-			public readonly pluginItems: PluginItems;
+			public readonly pluginItems: Adobe.Illustrator.PluginItems;
 			/** The raster art items in this group. */
-			public readonly rasterItems: RasterItems;
+			public readonly rasterItems: Adobe.Illustrator.RasterItems;
 			/** The symbol items in this group. */
-			public readonly symbolItems: SymbolItems;
+			public readonly symbolItems: Adobe.Illustrator.SymbolItems;
 			/** The text frame items in this group. */
-			public readonly textFrames: TextFrames;
+			public readonly textFrames: Adobe.Illustrator.TextFrames;
 		}
 	}
 }

@@ -1,13 +1,13 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class ParagraphAttributes extends IllustratorHostObject {
+		class ParagraphAttributes extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** Auto leading amount (in percentage) */
 			public autoLeadingAmount: number;
 			/** Is BunriKinshi enabled? */
 			public bunriKinshi: boolean;
 			/** The Burasagari type. */
-			public burasagariType: BurasagariTypeEnum;
+			public burasagariType: Adobe.Illustrator.BurasagariTypeEnum;
 			/** Desired glyph scaling expressed as a percentage. */
 			public desiredGlyphScaling: number;
 			/** Desired letter spacing expressed as a percentage. */
@@ -33,15 +33,15 @@ declare namespace Adobe {
 			/** Size of the hyphenation zone. */
 			public hyphenationZone: number;
 			/** Paragraph justification. */
-			public justification: Justification;
+			public justification: Adobe.Illustrator.Justification;
 			/** The Kinsoku Shori name. */
 			public kinsoku: string;
 			/** The preferred Kinsoku order. */
-			public kinsokuOrder: KinsokuOrderEnum;
+			public kinsokuOrder: Adobe.Illustrator.KinsokuOrderEnum;
 			/** Is KurikaeshiMojiShori enabled? */
 			public kurikaeshiMojiShori: boolean;
 			/** Auto leading type. */
-			public leadingType: AutoLeadingType;
+			public leadingType: Adobe.Illustrator.AutoLeadingType;
 			/** Left indent of margin expressed in points. */
 			public leftIndent: number;
 			/** Maximum number of consecutive hypenated lines. */
@@ -71,7 +71,7 @@ declare namespace Adobe {
 			/** Is Roman hanging punctuation enabled? */
 			public romanHanging: boolean;
 			/** Single word justification. */
-			public singleWordJustification: Justification;
+			public singleWordJustification: Adobe.Illustrator.Justification;
 			/** Spacing after paragraph in points. */
 			public spaceAfter: number;
 			/** Spacing before paragraph in points. */

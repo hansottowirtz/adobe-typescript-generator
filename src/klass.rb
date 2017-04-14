@@ -1,24 +1,24 @@
 class Klass < Documentable
   attr_reader :name
-  attr_reader :superklass
-  attr_reader :superklass
+  attr_reader :superklass_name
   attr_reader :package
   attr_reader :description
   attr_reader :references
 
-  def initialize(name, superklass, attributes, package)
+  def initialize(name, superklass_name, attributes, package)
     @name = name
-    @superklass = superklass
+    @superklass_name = superklass_name
     @attributes = attributes
     @package = package
+    @package.klasses[@name] = self
   end
 
   def declaration
     c = Chunk.new
     c.puts 'class '
     c.print @name
-    if @superklass
-      c.print " extends #{@superklass}"
+    if @superklass_name
+      c.print " extends #{@superklass_name}"
     end
     c.print ' {'
     attr_c = Chunk.new
@@ -35,5 +35,9 @@ class Klass < Documentable
 
   def path
     "#{AdobeCssdkToDts.root}/types/classes/#{package.name}/#{@name}.d.ts"
+  end
+
+  def superklass
+    @superklass ||= @package.klasses[@superklass_name]
   end
 end

@@ -1,14 +1,14 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class TextFrame extends PageItem {
+		class TextFrame extends Adobe.Illustrator.PageItem {
 			/**
 			 * The position of the anchor point (start of base line for 
 			 * point text)
 			 */
 			public anchor: any[];
 			/** All the characters in this text range. */
-			public readonly characters: Characters;
+			public readonly characters: Adobe.Illustrator.Characters;
 			/** The column count in the text frame (area text only) */
 			public columnCount: number;
 			/** The column gutter in the text frame (area text only) */
@@ -28,23 +28,23 @@ declare namespace Adobe {
 			 */
 			public flowLinksHorizontally: boolean;
 			/** All the insertion points in this text range. */
-			public readonly insertionPoints: InsertionPoints;
+			public readonly insertionPoints: Adobe.Illustrator.InsertionPoints;
 			/** The type of a text frame item. */
-			public readonly kind: TextType;
+			public readonly kind: Adobe.Illustrator.TextType;
 			/** All the lines in this text range. */
-			public readonly lines: Lines;
+			public readonly lines: Adobe.Illustrator.Lines;
 			/** The transformation matrix of the text frame object. */
-			public readonly matrix: Matrix;
+			public readonly matrix: Adobe.Illustrator.Matrix;
 			/** The linked text frame following this one. */
-			public nextFrame: TextFrame;
+			public nextFrame: Adobe.Illustrator.TextFrame;
 			/** Is the optical alignment active? */
 			public opticalAlignment: boolean;
 			/** The orientation of the text in the frame. */
-			public orientation: TextOrientation;
+			public orientation: Adobe.Illustrator.TextOrientation;
 			/** All the paragraphs in this text range. */
-			public readonly paragraphs: Paragraphs;
+			public readonly paragraphs: Adobe.Illustrator.Paragraphs;
 			/** The linked text frame preceding this one. */
-			public previousFrame: TextFrame;
+			public previousFrame: Adobe.Illustrator.TextFrame;
 			/** The row count in the text frame (area text only) */
 			public rowCount: number;
 			/** The row gutter in the text frame (area text only) */
@@ -57,19 +57,19 @@ declare namespace Adobe {
 			 */
 			public startTValue: number;
 			/** The story of the text frame. */
-			public readonly story: Story;
+			public readonly story: Adobe.Illustrator.Story;
 			/** The path for the text frame (area and path text) */
-			public readonly textPath: TextPath;
+			public readonly textPath: Adobe.Illustrator.TextPath;
 			/** The text range of the text frame. */
-			public readonly textRange: TextRange;
+			public readonly textRange: Adobe.Illustrator.TextRange;
 			/** All the text in this text range. */
-			public readonly textRanges: TextRanges;
+			public readonly textRanges: Adobe.Illustrator.TextRanges;
 			/** The selected text (ranges) in the story. */
 			public readonly textSelection: any;
 			/** All the words in this text range. */
-			public readonly words: Words;
+			public readonly words: Adobe.Illustrator.Words;
 			/** Convert text item to path items. */
-			public createOutline(): GroupItem;
+			public createOutline(): Adobe.Illustrator.GroupItem;
 		}
 	}
 }

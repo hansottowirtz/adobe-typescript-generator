@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class ExportOptionsPNG8 extends IllustratorHostObject {
+		class ExportOptionsPNG8 extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** should the resulting image be antialiased ( default: true ) */
 			public antiAliasing: boolean;
 			/**
@@ -18,12 +18,12 @@ declare namespace Adobe {
 			 * method used to dither colors ( default: 
 			 * ColorDitherMethod.DIFFUSION )
 			 */
-			public colorDither: ColorDitherMethod;
+			public colorDither: Adobe.Illustrator.ColorDitherMethod;
 			/**
 			 * method used to reduce the number of colors ( default: 
 			 * ColorReductionMethod.SELECTIVE )
 			 */
-			public colorReduction: ColorReductionMethod;
+			public colorReduction: Adobe.Illustrator.ColorReductionMethod;
 			/**
 			 * how much should the colors be dithered ( 0 - 100; default: 
 			 * 88 )
@@ -38,7 +38,7 @@ declare namespace Adobe {
 			 */
 			public matte: boolean;
 			/** the color to use when matting the artboard (default: white) */
-			public matteColor: RGBColor;
+			public matteColor: Adobe.Illustrator.RGBColor;
 			/**
 			 * should the resulting image be saved as HTML ( default: false 
 			 * )

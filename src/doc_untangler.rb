@@ -1,7 +1,7 @@
 class DocUntangler
   def initialize(doc)
     if a = doc.css('.inheritanceList a')[0]
-      superklass = a.text.strip
+      superklass_name = Util.extract_type(a, a.text.strip)
     end
     signature = doc.css('.classSignature')[0].text
     md = signature.strip.gsub(/ +/, ' ').match(/^(public) ?(dynamic)? ?class (\w+)$/)
@@ -16,7 +16,7 @@ class DocUntangler
     package_name = doc.xpath("//text()[. = 'Package']")[0].parent.next_sibling.text
     # binding.pry
     @package = Package.get_or_new(package_name)
-    @klass = Klass.new(klass_name, superklass, attributes, @package)
+    @klass = Klass.new(klass_name, superklass_name, attributes, @package)
   end
 
   def to_klass

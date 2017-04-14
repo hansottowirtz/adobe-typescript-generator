@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class TracingObject extends IllustratorHostObject {
+		class TracingObject extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The number of anchors in the tracing result. */
 			public readonly anchorCount: number;
 			/** The number of areas in the tracing result. */
@@ -11,18 +11,18 @@ declare namespace Adobe {
 			/** The number of paths in the tracing result. */
 			public readonly pathCount: number;
 			/** The source art used when creating a new tracing object. */
-			public readonly sourceArt: PageItem;
+			public readonly sourceArt: Adobe.Illustrator.PageItem;
 			/** The options used when tracing the artwork. */
-			public readonly tracingOptions: TracingOptions;
+			public readonly tracingOptions: Adobe.Illustrator.TracingOptions;
 			/** The number of colors used in the tracing result. */
 			public readonly usedColorCount: number;
 			/** Expand the tracing to paths. Deletes this tracing object. */
-			public expandTracing(viewed: boolean): GroupItem;
+			public expandTracing(viewed: boolean): Adobe.Illustrator.GroupItem;
 			/**
 			 * Release the source artwork for the tracing object. Deletes 
 			 * this tracing object.
 			 */
-			public releaseTracing(): PageItem;
+			public releaseTracing(): Adobe.Illustrator.PageItem;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class LegacyTextItems extends IllustratorHostObject {
+		class LegacyTextItems extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** number of elements in the collection */
 			public readonly length: number;
 			/**
@@ -13,9 +13,9 @@ declare namespace Adobe {
 			 * Get the first element in the collection with the provided 
 			 * name.
 			 */
-			public getByName(nameParam: string): LegacyTextItem;
+			public getByName(nameParam: string): Adobe.Illustrator.LegacyTextItem;
 			/** Get the element in the collection at the provided index. */
-			public index(idx: number): LegacyTextItem;
+			public index(idx: number): Adobe.Illustrator.LegacyTextItem;
 			/** Overriding this allows us to support for each...in */
 			public nextNameIndex(idx: number): number;
 			/** Overriding this allows us to support for each...in */

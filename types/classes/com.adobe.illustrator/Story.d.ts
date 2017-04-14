@@ -1,27 +1,27 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Story extends IllustratorHostObject {
+		class Story extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** All the characters in this text range. */
-			public readonly characters: Characters;
+			public readonly characters: Adobe.Illustrator.Characters;
 			/** All the insertion points in this text range. */
-			public readonly insertionPoints: InsertionPoints;
+			public readonly insertionPoints: Adobe.Illustrator.InsertionPoints;
 			/** The number of characters in the story. */
 			public readonly length: number;
 			/** All the lines in this text range. */
-			public readonly lines: Lines;
+			public readonly lines: Adobe.Illustrator.Lines;
 			/** All the paragraphs in this text range. */
-			public readonly paragraphs: Paragraphs;
+			public readonly paragraphs: Adobe.Illustrator.Paragraphs;
 			/** The text frame items in this story. */
-			public readonly textFrames: TextFrames;
+			public readonly textFrames: Adobe.Illustrator.TextFrames;
 			/** The text range of the story. */
-			public readonly textRange: TextRange;
+			public readonly textRange: Adobe.Illustrator.TextRange;
 			/** All the text in this text range. */
-			public readonly textRanges: TextRanges;
+			public readonly textRanges: Adobe.Illustrator.TextRanges;
 			/** The selected text (ranges) in the story. */
 			public readonly textSelection: any;
 			/** All the words in this text range. */
-			public readonly words: Words;
+			public readonly words: Adobe.Illustrator.Words;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PathItem extends PageItem {
+		class PathItem extends Adobe.Illustrator.PageItem {
 			/** The area of this path in square points. */
 			public readonly area: number;
 			/** Should this be used as a clipping path? */
@@ -11,7 +11,7 @@ declare namespace Adobe {
 			/** Should the even-odd rule be used to determine insideness? */
 			public evenodd: boolean;
 			/** Fill color. */
-			public fillColor: Color;
+			public fillColor: Adobe.Illustrator.Color;
 			/** Should the path be filled? */
 			public filled: boolean;
 			/** Will art beneath a filled object be overprinted? */
@@ -20,17 +20,17 @@ declare namespace Adobe {
 			public guides: boolean;
 			/** The length of this path in points. */
 			public readonly length: number;
-			public readonly pathPoints: PathPoints;
+			public readonly pathPoints: Adobe.Illustrator.PathPoints;
 			/** The polarity the path. */
-			public polarity: PolarityValues;
+			public polarity: Adobe.Illustrator.PolarityValues;
 			/** The resolution of the path. */
 			public resolution: number;
 			/** All the selected points in the path. */
 			public readonly selectedPathPoints: any[];
 			/** Type of line capping. */
-			public strokeCap: StrokeCap;
+			public strokeCap: Adobe.Illustrator.StrokeCap;
 			/** Stroke color. */
-			public strokeColor: Color;
+			public strokeColor: Adobe.Illustrator.Color;
 			/** Should the path be stroked? */
 			public stroked: boolean;
 			/** Dash lengths (set to {} for a solid line) */
@@ -41,7 +41,7 @@ declare namespace Adobe {
 			 */
 			public strokeDashOffset: number;
 			/** Type of joints. */
-			public strokeJoin: StrokeJoin;
+			public strokeJoin: Adobe.Illustrator.StrokeJoin;
 			/**
 			 * Whether a join is mitered (pointed) or beveled (squared-off)
 			 */

@@ -1,11 +1,11 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class TextPath extends IllustratorHostObject {
+		class TextPath extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The area of this path in square points. */
 			public readonly area: number;
 			/** The mode used when compositing an object. */
-			public blendingMode: BlendModes;
+			public blendingMode: Adobe.Illustrator.BlendModes;
 			/** Should this be used as a clipping path? */
 			public clipping: boolean;
 			/** Is this path closed? */
@@ -15,7 +15,7 @@ declare namespace Adobe {
 			/** Should the even-odd rule be used to determine insideness? */
 			public evenodd: boolean;
 			/** Fill color. */
-			public fillColor: Color;
+			public fillColor: Adobe.Illustrator.Color;
 			/** Should the path be filled? */
 			public filled: boolean;
 			/** Will art beneath a filled object be overprinted? */
@@ -32,9 +32,9 @@ declare namespace Adobe {
 			 * The object's opacity (between 0.0 and 100.0) ( 0.0 - 100.0 )
 			 */
 			public opacity: number;
-			public readonly pathPoints: PathPoints;
+			public readonly pathPoints: Adobe.Illustrator.PathPoints;
 			/** The polarity the path. */
-			public polarity: PolarityValues;
+			public polarity: Adobe.Illustrator.PolarityValues;
 			/** The position of the top left corner of the text path. */
 			public position: any[];
 			/** The resolution of the path. */
@@ -42,9 +42,9 @@ declare namespace Adobe {
 			/** All the selected points in the path. */
 			public readonly selectedPathPoints: any[];
 			/** Type of line capping. */
-			public strokeCap: StrokeCap;
+			public strokeCap: Adobe.Illustrator.StrokeCap;
 			/** Stroke color. */
-			public strokeColor: Color;
+			public strokeColor: Adobe.Illustrator.Color;
 			/** Should the path be stroked? */
 			public stroked: boolean;
 			/** Dash lengths (set to {} for a solid line) */
@@ -55,7 +55,7 @@ declare namespace Adobe {
 			 */
 			public strokeDashOffset: number;
 			/** Type of joints. */
-			public strokeJoin: StrokeJoin;
+			public strokeJoin: Adobe.Illustrator.StrokeJoin;
 			/**
 			 * Whether a join is mitered (pointed) or beveled (squared-off)
 			 */

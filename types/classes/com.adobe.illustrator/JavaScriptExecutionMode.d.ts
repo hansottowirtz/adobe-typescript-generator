@@ -1,20 +1,20 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class JavaScriptExecutionMode extends IllustratorEnumBase {
+		class JavaScriptExecutionMode extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/**
 			 * Show the JavaScript debugger at the first line of the 
 			 * JavaScript.
 			 */
-			public static readonly BeforeRunning: JavaScriptExecutionMode;
-			public static readonly enumCache: CSEnumSharedCache;
+			public static readonly BeforeRunning: Adobe.Illustrator.JavaScriptExecutionMode;
+			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/**
 			 * Never show the JavaScript debugger. Treat runtime errors by 
 			 * throwing a JavaScript exceptions.
 			 */
-			public static readonly never: JavaScriptExecutionMode;
+			public static readonly never: Adobe.Illustrator.JavaScriptExecutionMode;
 			/** Show the JavaScript debugger is a runtime error occurs. */
-			public static readonly OnRuntimeError: JavaScriptExecutionMode;
+			public static readonly OnRuntimeError: Adobe.Illustrator.JavaScriptExecutionMode;
 			/** Constructor */
 			public constructor(ho: HostObject, _enum: number);
 		}

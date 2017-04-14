@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class RasterItem extends PageItem {
+		class RasterItem extends Adobe.Illustrator.PageItem {
 			/** The number of bits per channel. */
 			public readonly bitsPerChannel: number;
 			/**
@@ -22,13 +22,13 @@ declare namespace Adobe {
 			/** The file containing the raster artwork. */
 			public readonly file: File;
 			/** The color space of the raster image. */
-			public readonly imageColorSpace: ImageColorSpace;
+			public readonly imageColorSpace: Adobe.Illustrator.ImageColorSpace;
 			/** The transformation matrix of the raster art object. */
-			public matrix: Matrix;
+			public matrix: Adobe.Illustrator.Matrix;
 			/** Is the raster art overprinting? */
 			public overprint: boolean;
 			/** Status of the linked image. */
-			public readonly status: RasterLinkState;
+			public readonly status: Adobe.Illustrator.RasterLinkState;
 			/** Is the raster art transparent? */
 			public readonly transparent: boolean;
 			/** Colorize the RasterItem with a CMYK or RGB Color. */
@@ -37,7 +37,7 @@ declare namespace Adobe {
 			 * Trace this raster object using default options. Reorders 
 			 * this raster to the source art.
 			 */
-			public trace(): PluginItem;
+			public trace(): Adobe.Illustrator.PluginItem;
 		}
 	}
 }

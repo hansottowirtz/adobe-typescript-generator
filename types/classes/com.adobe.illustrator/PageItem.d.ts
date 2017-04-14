@@ -1,11 +1,11 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PageItem extends IllustratorHostObject {
+		class PageItem extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** Is the artwork used to create a knockout. */
-			public artworkKnockout: KnockoutState;
+			public artworkKnockout: Adobe.Illustrator.KnockoutState;
 			/** The mode used when compositing an object. */
-			public blendingMode: BlendModes;
+			public blendingMode: Adobe.Illustrator.BlendModes;
 			/**
 			 * The bounds of the artwork including stroke width and 
 			 * controls.
@@ -22,7 +22,7 @@ declare namespace Adobe {
 			/** Is the artwork isolated. */
 			public isIsolated: boolean;
 			/** The layer to which this artwork belongs. */
-			public readonly layer: Layer;
+			public readonly layer: Adobe.Illustrator.Layer;
 			/** The left position of the art item. */
 			public left: number;
 			/** Is this artwork item locked? */
@@ -42,7 +42,7 @@ declare namespace Adobe {
 			/** Is the art item sliced (default: false) */
 			public sliced: boolean;
 			/** The collection of tags associated with this page item. */
-			public readonly tags: Tags;
+			public readonly tags: Adobe.Illustrator.Tags;
 			/** The top position of the art item. */
 			public top: number;
 			/**
@@ -73,7 +73,7 @@ declare namespace Adobe {
 			 */
 			public bringInPerspective(positionX: number, positionY: number, perspectiveGridPlane: PerspectiveGridPlaneType): void;
 			/** create a duplicate of the object */
-			public duplicate(relativeObject: any, insertionLocation: ElementPlacement): PageItem;
+			public duplicate(relativeObject: any, insertionLocation: ElementPlacement): Adobe.Illustrator.PageItem;
 			/** move the object */
 			public move(relativeObject: any, insertionLocation: ElementPlacement): void;
 			/** delete the object */

@@ -1,12 +1,12 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class RasterizeOptions extends IllustratorHostObject {
+		class RasterizeOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * the type of antialiasing method ( default: 
 			 * AntiAliasingMethod.ARTOPTIMIZED )
 			 */
-			public antiAliasingMethod: AntiAliasingMethod;
+			public antiAliasingMethod: Adobe.Illustrator.AntiAliasingMethod;
 			/**
 			 * should rasterize against a black background instead of white 
 			 * ( default: false )
@@ -21,7 +21,7 @@ declare namespace Adobe {
 			 * The color model for the rasterization ( default: 
 			 * RasterizationColorModel.DEFAULTCOLORMODEL )
 			 */
-			public colorModel: RasterizationColorModel;
+			public colorModel: Adobe.Illustrator.RasterizationColorModel;
 			/**
 			 * whether to convert all spot colors to process colors in the 
 			 * resulting image ( default: false )

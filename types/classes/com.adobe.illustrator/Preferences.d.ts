@@ -1,15 +1,15 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class Preferences extends IllustratorHostObject {
+		class Preferences extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** Options to use when opening or placing a AutoCAD file. */
-			public readonly AutoCADFileOptions: AutoCADFileOptions;
+			public readonly AutoCADFileOptions: Adobe.Illustrator.AutoCADFileOptions;
 			/** Options to use when opening or placing a FreeHand file. */
-			public readonly FreeHandFileOptions: FreeHandFileOptions;
+			public readonly FreeHandFileOptions: Adobe.Illustrator.FreeHandFileOptions;
 			/** Options to use when opening or placing a PDF file. */
-			public readonly PDFFileOptions: PDFFileOptions;
+			public readonly PDFFileOptions: Adobe.Illustrator.PDFFileOptions;
 			/** Options to use when opening or placing a Photoshop file. */
-			public readonly photoshopFileOptions: PhotoshopFileOptions;
+			public readonly photoshopFileOptions: Adobe.Illustrator.PhotoshopFileOptions;
 			/**
 			 * Retrieve the value of the application preference key as 
 			 * boolean.

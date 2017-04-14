@@ -1,11 +1,11 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PrinterInfo extends IllustratorHostObject {
+		class PrinterInfo extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** does the printer support binary printing? */
 			public binaryPrintingSupport: boolean;
 			/** the printer color capability */
-			public colorSupport: PrinterColorMode;
+			public colorSupport: Adobe.Illustrator.PrinterColorMode;
 			/** does the printer support custom paper size? */
 			public customPaperSupport: boolean;
 			/** does the printer support custom paper transverse? */
@@ -35,9 +35,9 @@ declare namespace Adobe {
 			/** the list of supported paper sizes */
 			public paperSizes: any;
 			/** the PostScript level */
-			public postScriptLevel: PrinterPostScriptLevelEnum;
+			public postScriptLevel: Adobe.Illustrator.PrinterPostScriptLevelEnum;
 			/** the printer type */
-			public printerType: PrinterTypeEnum;
+			public printerType: Adobe.Illustrator.PrinterTypeEnum;
 		}
 	}
 }

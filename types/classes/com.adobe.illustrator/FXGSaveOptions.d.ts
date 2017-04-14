@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class FXGSaveOptions extends IllustratorHostObject {
+		class FXGSaveOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * If SaveMultipleArtboards is true,this will be considered for 
 			 * multi-asset extraction which specifies artboard range.Empty 
@@ -23,12 +23,12 @@ declare namespace Adobe {
 			 * the policy used by FXG to preserve filters ( default: 
 			 * FiltersPreservePolicy.KEEPFILTERSEDITABLE )
 			 */
-			public filtersPolicy: FiltersPreservePolicy;
+			public filtersPolicy: Adobe.Illustrator.FiltersPreservePolicy;
 			/**
 			 * the policy used by FXG to preserve gradients ( default: 
 			 * GradientsPreservePolicy.KEEPGRADIENTSEDITABLE )
 			 */
-			public gradientsPolicy: GradientsPreservePolicy;
+			public gradientsPolicy: Adobe.Illustrator.GradientsPreservePolicy;
 			/** choose to include metadata (XMP) ( default: false ) */
 			public includeMetadata: boolean;
 			/** choose to include unused symbols ( default: false ) */
@@ -47,12 +47,12 @@ declare namespace Adobe {
 			 * the policy used by FXG to preserve text ( default: 
 			 * TextPreservePolicy.KEEPTEXTEDITABLE )
 			 */
-			public textPolicy: TextPreservePolicy;
+			public textPolicy: Adobe.Illustrator.TextPreservePolicy;
 			/**
 			 * the version of the FXG file format to create ( default: 
 			 * FXGVersion.VERSION1PT0 )
 			 */
-			public version: FXGVersion;
+			public version: Adobe.Illustrator.FXGVersion;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PatternColor extends Color {
+		class PatternColor extends Adobe.Illustrator.Color {
 			/**
 			 * whether or not the prototype is reflected before filling ( 
 			 * default: false )
@@ -10,8 +10,8 @@ declare namespace Adobe {
 			/**
 			 * additional transformation arising from manipulating the path
 			 */
-			public matrix: Matrix;
-			public pattern: Pattern;
+			public matrix: Adobe.Illustrator.Matrix;
+			public pattern: Adobe.Illustrator.Pattern;
 			/** the axis around which to reflect ( default: 0.0 ) */
 			public reflectAngle: number;
 			/** the angle to rotate the before filling ( default: 0.0 ) */

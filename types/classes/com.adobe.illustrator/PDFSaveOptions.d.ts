@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PDFSaveOptions extends IllustratorHostObject {
+		class PDFSaveOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * create acrobat layers from top-level layers - acrobat 6 only 
 			 * option ( default: false )
@@ -23,18 +23,18 @@ declare namespace Adobe {
 			 * how should color bitmap images be compressed ( default: 
 			 * CompressionQuality.None )
 			 */
-			public colorCompression: CompressionQuality;
+			public colorCompression: Adobe.Illustrator.CompressionQuality;
 			/**
 			 * PDF color conversion policy. Three choices are available: 
 			 * (1)No Color Conversion (2) Repurpose (3) Convert to 
 			 * Destination ( default: ColorConversion.None )
 			 */
-			public colorConversionID: ColorConversion;
+			public colorConversionID: Adobe.Illustrator.ColorConversion;
 			/**
 			 * When NoColorConversion is specified for Color Conversion, 
 			 * NoColorDestination is set ( default: ColorDestination.None )
 			 */
-			public colorDestinationID: ColorDestination;
+			public colorDestinationID: Adobe.Illustrator.ColorDestination;
 			/**
 			 * if zero, no downsampling, otherwise, the resolution to 
 			 * downsample color bitmap images to ( default: 150.0 )
@@ -49,19 +49,19 @@ declare namespace Adobe {
 			 * how should color bitmap images be resampled ( default: 
 			 * DownsampleMethod.NODOWNSAMPLE )
 			 */
-			public colorDownsamplingMethod: DownsampleMethod;
+			public colorDownsamplingMethod: Adobe.Illustrator.DownsampleMethod;
 			/**
 			 * If CMS is off, Don't Include Profiles is set ( default: 
 			 * ColorProfile.None )
 			 */
-			public colorProfileID: ColorProfile;
+			public colorProfileID: Adobe.Illustrator.ColorProfile;
 			/** tile size when compressing with JPEG2000 ( default: 256 ) */
 			public colorTileSize: number;
 			/**
 			 * the version of the Acrobat file format to create ( default: 
 			 * PDFCompatibility.ACROBAT5 )
 			 */
-			public compatibility: PDFCompatibility;
+			public compatibility: Adobe.Illustrator.PDFCompatibility;
 			/** should line art and text be compressed? ( default: true ) */
 			public compressArt: boolean;
 			/** a password string to open the document ( default:  ) */
@@ -78,7 +78,7 @@ declare namespace Adobe {
 			 */
 			public enablePlainText: boolean;
 			/** the printing flattener options */
-			public flattenerOptions: PrintFlattenerOptions;
+			public flattenerOptions: Adobe.Illustrator.PrintFlattenerOptions;
 			/** the transparency flattener preset name */
 			public flattenerPreset: string;
 			/**
@@ -94,7 +94,7 @@ declare namespace Adobe {
 			 * how should grayscale bitmap images be compressed ( default: 
 			 * CompressionQuality.None )
 			 */
-			public grayscaleCompression: CompressionQuality;
+			public grayscaleCompression: Adobe.Illustrator.CompressionQuality;
 			/**
 			 * if zero, no downsampling, otherwise, the resolution to 
 			 * downsample grayscale images to ( default: 150.0 )
@@ -109,14 +109,14 @@ declare namespace Adobe {
 			 * how should grayscale bitmap images be resampled ( default: 
 			 * DownsampleMethod.NODOWNSAMPLE )
 			 */
-			public grayscaleDownsamplingMethod: DownsampleMethod;
+			public grayscaleDownsamplingMethod: Adobe.Illustrator.DownsampleMethod;
 			/** tile size when compressing with JPEG2000 ( default: 256 ) */
 			public grayscaleTileSize: number;
 			/**
 			 * how should monochrome bitmap images be compressed ( default: 
 			 * MonochromeCompression.None )
 			 */
-			public monochromeCompression: MonochromeCompression;
+			public monochromeCompression: Adobe.Illustrator.MonochromeCompression;
 			/**
 			 * If zero, no downsampling, otherwise, the resolution to 
 			 * downsample images to ( default: 300.0 )
@@ -131,7 +131,7 @@ declare namespace Adobe {
 			 * how should monochrome bitmap images be resampled ( default: 
 			 * DownsampleMethod.NODOWNSAMPLE )
 			 */
-			public monochromeDownsamplingMethod: DownsampleMethod;
+			public monochromeDownsamplingMethod: Adobe.Illustrator.DownsampleMethod;
 			/**
 			 * custom offset (in points) for using the custom paper ( 
 			 * default: 0.0 )
@@ -162,17 +162,17 @@ declare namespace Adobe {
 			/** draw page information ( default: false ) */
 			public pageInformation: boolean;
 			/** the page marks style ( default: PageMarksTypes.Roman ) */
-			public pageMarksType: PageMarksTypes;
+			public pageMarksType: Adobe.Illustrator.PageMarksTypes;
 			/**
 			 * PDF security printing permission ( default: 
 			 * PDFPrintAllowedEnum.PRINT128HIGHRESOLUTION )
 			 */
-			public pDFAllowPrinting: PDFPrintAllowedEnum;
+			public pDFAllowPrinting: Adobe.Illustrator.PDFPrintAllowedEnum;
 			/**
 			 * PDF security changes allowed ( default: 
 			 * PDFChangesAllowedEnum.CHANGE128ANYCHANGES )
 			 */
-			public pDFChangesAllowed: PDFChangesAllowedEnum;
+			public pDFChangesAllowed: Adobe.Illustrator.PDFChangesAllowedEnum;
 			/**
 			 * The max string length is 255 bytes. Name of PDF preset to 
 			 * use.
@@ -183,7 +183,7 @@ declare namespace Adobe {
 			 * not complying with any PDF standard ( default: 
 			 * PDFXStandard.PDFXNONE )
 			 */
-			public pDFXStandard: PDFXStandard;
+			public pDFXStandard: Adobe.Illustrator.PDFXStandard;
 			/** This displays the description from the selected preset */
 			public pDFXStandardDescription: string;
 			/**
@@ -224,7 +224,7 @@ declare namespace Adobe {
 			 * trim mark weight ( default: 
 			 * PDFTrimMarkWeight.TRIMMARKWEIGHT0125 )
 			 */
-			public trimMarkWeight: PDFTrimMarkWeight;
+			public trimMarkWeight: Adobe.Illustrator.PDFTrimMarkWeight;
 			/** view PDF after saving ( default: false ) */
 			public viewAfterSaving: boolean;
 		}

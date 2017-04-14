@@ -1,7 +1,7 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
 declare namespace Adobe {
 	namespace Illustrator {
-		class PrintJobOptions extends IllustratorHostObject {
+		class PrintJobOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * Artboard Range to be printed if PrintAllArtboards is false ( 
 			 * default: 1- )
@@ -17,7 +17,7 @@ declare namespace Adobe {
 			 * the layers/objects to be printed ( default: 
 			 * PrintArtworkDesignation.VISIBLEPRINTABLELAYERS )
 			 */
-			public designation: PrintArtworkDesignation;
+			public designation: Adobe.Illustrator.PrintArtworkDesignation;
 			/** the file to be printed to */
 			public file: File;
 			/** the print job name */
@@ -28,7 +28,7 @@ declare namespace Adobe {
 			 * the printing bounds ( default: PrintingBounds.ARTBOARDBOUNDS 
 			 * )
 			 */
-			public printArea: PrintingBounds;
+			public printArea: Adobe.Illustrator.PrintingBounds;
 			/** whether to print as bitmap ( default: false ) */
 			public printAsBitmap: boolean;
 			/** print pages in reverse order ( default: false ) */
