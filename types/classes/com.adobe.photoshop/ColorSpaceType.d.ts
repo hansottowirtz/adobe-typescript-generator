@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The type of color space. */
 		class ColorSpaceType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Use the Adobe RGB color space. */
 			public static readonly ADOBERGB: Adobe.Photoshop.ColorSpaceType;

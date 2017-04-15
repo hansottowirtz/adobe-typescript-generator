@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Preference */
 		class IndexOptions extends Adobe.Indesign.Preference {
 			/** The character(s) inserted at the start of cross references. */
 			public beforeCrossReferenceSeparator: string;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The location of history log data. */
 		class SaveLogItemsType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/** Save history log in a text file. */

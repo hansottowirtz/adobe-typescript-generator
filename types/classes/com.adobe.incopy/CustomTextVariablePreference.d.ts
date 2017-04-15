@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** Preference */
 		class CustomTextVariablePreference extends Adobe.Incopy.Preference {
 			/**
 			 * The contents of the text. Can return: String or 

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The history log edit options. */
 		class EditLogItemsType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Save a concise history log. */
 			public static readonly CONCISE: Adobe.Photoshop.EditLogItemsType;

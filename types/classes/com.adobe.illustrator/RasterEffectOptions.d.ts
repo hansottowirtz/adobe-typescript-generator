@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The document raster effects settings */
 		class RasterEffectOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * should the resulting image be antialiased ( default: false )

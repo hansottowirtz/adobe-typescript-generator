@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The stroke joint. */
 		class StrokeJoin extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Beveled joints. */
 			public static readonly BEVELENDJOIN: Adobe.Illustrator.StrokeJoin;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** SplineItem */
 		class Polygon extends Adobe.Indesign.SplineItem {
 			/**
 			 * Indicates whether the Polygon has been flipped independently 

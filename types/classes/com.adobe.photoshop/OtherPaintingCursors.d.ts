@@ -1,7 +1,12 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The pointer for the following tools: Eraser, Pencil, 
+		 * Paintbrush, Healing Brush, Rubber Stamp, Pattern Stamp, 
+		 * Smudge, Blur, Sharpen, Dodge, Burn, Sponge.
+		 */
 		class OtherPaintingCursors extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/** Displays pointers as cross hairs. */

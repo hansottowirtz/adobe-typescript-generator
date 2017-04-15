@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The alternate glyphs form of text. */
 		class AlternateGlyphsForm extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly DEFAULTFORM: Adobe.Illustrator.AlternateGlyphsForm;
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Fonts for web photo gallery text. */
 		class GalleryFontType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Arial font. */
 			public static readonly ARIAL: Adobe.Photoshop.GalleryFontType;

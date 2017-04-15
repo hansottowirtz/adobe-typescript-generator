@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The ink printing status. */
 		class InkPrintStatus extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Convert to process color during print. */
 			public static readonly CONVERTINK: Adobe.Illustrator.InkPrintStatus;

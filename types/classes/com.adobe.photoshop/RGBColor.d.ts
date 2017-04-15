@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** An RGB color specification */
 		class RGBColor extends Adobe.Photoshop.Color {
 			/** the blue color value ( 0.0 - 255.0; default: 255.0 ) */
 			public blue: number;

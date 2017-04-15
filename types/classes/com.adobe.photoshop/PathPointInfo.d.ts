@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Path point information (returned by entire path 
+		 * dataClassProperty of path item class)
+		 */
 		class PathPointInfo extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** the position of the anchor (in coordinates) */
 			public anchor: any[];

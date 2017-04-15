@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The quality of an image converted to bitmap mode. */
 		class BitmapConversionType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Simulates the effect of printing a grayscale image through a 

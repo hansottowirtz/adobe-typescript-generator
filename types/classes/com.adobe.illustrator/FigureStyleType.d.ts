@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The figure style type. */
 		class FigureStyleType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Default figure style. */
 			public static readonly DEFAULTFIGURESTYLE: Adobe.Illustrator.FigureStyleType;

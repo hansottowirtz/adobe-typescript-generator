@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The number of bits per color channel. */
 		class BitsPerChannelType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** 8 bits per channel. */
 			public static readonly EIGHT: Adobe.Photoshop.BitsPerChannelType;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The destination, if any, for batch-processed files. */
 		class BatchDestinationType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/** Outputs files to a folder. */

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Options for saving a file. */
 		class SaveOptions extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Do not save changes. */
 			public static readonly DONOTSAVECHANGES: Adobe.Photoshop.SaveOptions;

@@ -1,7 +1,12 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The destination color mode. Note: Color images must be 
+		 * changed to Grayscale mode before you can change them to 
+		 * Bitmap mode.
+		 */
 		class ChangeMode extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Bitmap. Note: Color images must be changed to Grayscale mode 

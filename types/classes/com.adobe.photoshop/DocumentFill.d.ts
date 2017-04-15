@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The document window fill type. */
 		class DocumentFill extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The background color as displayed in the toolbox. */
 			public static readonly BACKGROUNDCOLOR: Adobe.Photoshop.DocumentFill;

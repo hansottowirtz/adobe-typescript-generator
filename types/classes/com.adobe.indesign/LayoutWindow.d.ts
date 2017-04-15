@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Window */
 		class LayoutWindow extends Adobe.Indesign.Window {
 			/** The active layer. Can also accept: String. */
 			public activeLayer: Adobe.Indesign.Layer;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The warp style for text. */
 		class WarpStyle extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The type is warped in the shape of an arc. */
 			public static readonly ARC: Adobe.Photoshop.WarpStyle;

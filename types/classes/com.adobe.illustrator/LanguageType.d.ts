@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The language of text. */
 		class LanguageType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly BOKMALNORWEGIAN: Adobe.Illustrator.LanguageType;
 			public static readonly BRAZILLIANPORTUGUESE: Adobe.Illustrator.LanguageType;

@@ -1,7 +1,15 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * An event-handler object that tells the script to execute 
+		 * specified code when a specified event occurs. For notifiers 
+		 * to work, they must be enabled. See the 'notifiers enabled' 
+		 * property of the Application object. Events that occur within 
+		 * scripts do not generally trigger notifiers, because they 
+		 * occur inside of a "play script" event.
+		 */
 		class Notifier extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/**
 			 * The event ID in four characters or a unique string that the 

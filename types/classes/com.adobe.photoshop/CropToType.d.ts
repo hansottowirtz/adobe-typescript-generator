@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The style to use when cropping a page. */
 		class CropToType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Crop to the art box. */
 			public static readonly ARTBOX: Adobe.Photoshop.CropToType;

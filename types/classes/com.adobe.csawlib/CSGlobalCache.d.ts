@@ -1,4 +1,4 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.csawlib/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
@@ -7,12 +7,12 @@ declare namespace Adobe {
 			public getAllQualNames(): any[];
 			public getInstance(): Adobe.Csawlib.CSGlobalCache;
 			/**
-			 * @param {string} qualifiedClassName - 
+			 * @param {string} qualifiedClassName
 			 */
 			public getItem(qualifiedClassName: string): Adobe.Csawlib.CSEnumSharedCache;
 			/**
-			 * @param {string} qualifiedClassName - 
-			 * @param {CSEnumSharedCache} csenumCache - 
+			 * @param {string} qualifiedClassName
+			 * @param {CSEnumSharedCache} csenumCache
 			 */
 			public putItem(qualifiedClassName: string, csenumCache: CSEnumSharedCache): void;
 		}

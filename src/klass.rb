@@ -5,16 +5,24 @@ class Klass < Documentable
   attr_reader :description
   attr_reader :references
 
-  def initialize(name, superklass_name, attributes, package)
+  def initialize(name, superklass_name, attributes, package, description)
     @name = name
     @superklass_name = superklass_name
     @attributes = attributes
     @package = package
-    @package.klasses[@name] = self
+    @description = description
+  end
+
+  def doc
+    Doc.generate(@description, @summary)
   end
 
   def declaration
     c = Chunk.new
+
+    # if @description.include?('provides access to the global class of the package')
+    #   puts @name
+    # else
     c.puts 'class '
     c.print @name
     if @superklass_name && @superklass_name != 'any'
@@ -34,7 +42,11 @@ class Klass < Documentable
   end
 
   def path
-    "#{AdobeCssdkToDts.root}/types/classes/#{package.name}/#{@name}.d.ts"
+    Pathname.new "#{AdobeCssdkToDts.root}/types/classes/#{package.name}/#{@name}.d.ts"
+  end
+
+  def relative_path_from(other_path)
+    path.relative_path_from(other_path.dirname)
   end
 
   def superklass

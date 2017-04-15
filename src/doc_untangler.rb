@@ -19,8 +19,10 @@ class DocUntangler
     end
     package_name = doc.xpath("//text()[. = 'Package']")[0].parent.next_sibling.text
     # binding.pry
+    description = doc.css('.classHeaderTable')[0].parent.xpath('text()').text.gsub(/[\r\n\t\r]/, '')
+    description = nil if description.empty?
     @package = Package.get_or_new(package_name)
-    @klass = Klass.new(klass_name, superklass_name, attributes, @package)
+    @klass = Klass.new(klass_name, superklass_name, attributes, @package, description)
   end
 
   def to_klass

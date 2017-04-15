@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** XMLItem */
 		class XMLInstruction extends Adobe.Incopy.XMLItem {
 			/**
 			 * A value that tells the application reading the exported XML 

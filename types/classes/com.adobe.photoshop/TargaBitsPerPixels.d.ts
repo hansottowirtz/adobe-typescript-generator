@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The resolution to use when saving an image in Targa format. */
 		class TargaBitsPerPixels extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/** 16 bits per pixel. */

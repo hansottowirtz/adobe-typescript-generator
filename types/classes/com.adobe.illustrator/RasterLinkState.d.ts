@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The raster link state. */
 		class RasterLinkState extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Image data is from the linked file. */
 			public static readonly DATAFROMFILE: Adobe.Illustrator.RasterLinkState;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** Behavior */
 		class GotoNextStateBehavior extends Adobe.Incopy.Behavior {
 			/** The associated multi-state object page item. */
 			public readonly associatedMultiStateObject: Adobe.Incopy.MultiStateObject;

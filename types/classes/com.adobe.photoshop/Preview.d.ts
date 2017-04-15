@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The type of image to use as a low-resolution preview in the 
+		 * destination application.
+		 */
 		class Preview extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** 8-bit TIFF. */
 			public static readonly EIGHTBITTIFF: Adobe.Photoshop.Preview;

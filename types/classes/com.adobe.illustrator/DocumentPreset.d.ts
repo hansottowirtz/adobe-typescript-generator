@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** the new document preset to use for creating a new document */
 		class DocumentPreset extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * layout for artboards ( default: 

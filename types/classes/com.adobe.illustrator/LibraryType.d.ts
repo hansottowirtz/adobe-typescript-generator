@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Illustrator library types. */
 		class LibraryType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Illustrator brushes library. */
 			public static readonly BRUSHES: Adobe.Illustrator.LibraryType;

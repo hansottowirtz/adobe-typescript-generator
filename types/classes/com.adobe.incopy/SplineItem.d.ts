@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** PageItem */
 		class SplineItem extends Adobe.Incopy.PageItem {
 			/**
 			 * Indicates whether the SplineItem has been flipped 

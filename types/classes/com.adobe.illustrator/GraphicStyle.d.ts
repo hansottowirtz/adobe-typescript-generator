@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** An art style. */
 		class GraphicStyle extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The art style's name. */
 			public name: string;

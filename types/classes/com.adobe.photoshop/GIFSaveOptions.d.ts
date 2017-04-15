@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Settings related to saving a GIF document */
 		class GIFSaveOptions extends Adobe.Photoshop.SaveOptions {
 			/**
 			 * number of colors in palette (only settable for some palette 

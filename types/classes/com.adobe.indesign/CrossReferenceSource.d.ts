@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** HyperlinkTextSource */
 		class CrossReferenceSource extends Adobe.Indesign.HyperlinkTextSource {
 			/** Character style of the hyperlink text source. */
 			public appliedCharacterStyle: Adobe.Indesign.CharacterStyle;

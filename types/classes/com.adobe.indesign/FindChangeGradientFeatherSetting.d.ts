@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** GradientFeatherSetting */
 		class FindChangeGradientFeatherSetting extends Adobe.Indesign.GradientFeatherSetting {
 			/**
 			 * The angle of the gradient feather. Can return: Real (-180 - 

@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/**
+		 * The parent class for all color values used in Illustrator.  
+		 * See the specific color classes for more information
+		 */
 		class Color extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			
 		}

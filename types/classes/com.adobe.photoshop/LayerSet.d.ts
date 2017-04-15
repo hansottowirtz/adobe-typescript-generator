@@ -1,7 +1,13 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * A group of layer objects, which can include art layer 
+		 * objects and other (nested) layer set objects. A single 
+		 * command or set of commands manipulates all layers in a layer 
+		 * set object.
+		 */
 		class LayerSet extends Adobe.Photoshop.Layer {
 			/** The art layers contained in this layer set. */
 			public readonly artLayers: Adobe.Photoshop.ArtLayers;

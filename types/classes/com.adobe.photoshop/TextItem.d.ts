@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The text object contained in an art layer. */
 		class TextItem extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** If true, alternate ligatures are used. */
 			public alternateLigatures: boolean;

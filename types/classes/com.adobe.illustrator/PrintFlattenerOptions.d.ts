@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** the transparency flattening options */
 		class PrintFlattenerOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** whether to clip complex regions ( default: false ) */
 			public clipComplexRegions: boolean;

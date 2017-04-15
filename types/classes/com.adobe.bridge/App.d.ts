@@ -1,4 +1,4 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -155,7 +155,7 @@ declare namespace Adobe {
 			public openUrl(url: string): void;
 			/**
 			 * This is not a Method Description.
-			 * @param {Operator} operator - 
+			 * @param {Operator} operator
 			 */
 			public operationChanged(operator: Operator): void;
 			/**
@@ -217,7 +217,7 @@ declare namespace Adobe {
 			public removeLegalNotice(title: string): void;
 			/**
 			 * This is not a Method Description.
-			 * @param {Thumbnail} thumbnail - 
+			 * @param {Thumbnail} thumbnail
 			 * @param {string} name - 
 			 */
 			public renameCollection(thumbnail: Thumbnail, name: string): boolean;

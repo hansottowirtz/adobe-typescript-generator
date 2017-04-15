@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Settings related to saving a pdf document */
 		class PDFSaveOptions extends Adobe.Photoshop.SaveOptions {
 			/** save alpha channels */
 			public alphaChannels: boolean;

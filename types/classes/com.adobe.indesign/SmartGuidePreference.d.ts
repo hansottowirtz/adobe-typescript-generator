@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Preference */
 		class SmartGuidePreference extends Adobe.Indesign.Preference {
 			/** If true, smart alignment to object centers is enabled. */
 			public alignToObjectCenter: boolean;

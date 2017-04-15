@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** InnerShadowSetting */
 		class FindChangeInnerShadowSetting extends Adobe.Indesign.InnerShadowSetting {
 			/**
 			 * The angle at which the inner shadow is thrown. (Range: -360 

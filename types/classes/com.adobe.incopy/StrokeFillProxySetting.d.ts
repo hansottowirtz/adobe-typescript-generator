@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** Preference */
 		class StrokeFillProxySetting extends Adobe.Incopy.Preference {
 			/** Which part of the stroke/fill proxy is currently active. */
 			public active: Adobe.Incopy.StrokeFillProxyOptions;

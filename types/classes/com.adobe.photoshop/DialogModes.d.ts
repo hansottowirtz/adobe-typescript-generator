@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Controls whether Photoshop displays dialogs during scripts. */
 		class DialogModes extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Show all dialogs. */
 			public static readonly ALL: Adobe.Photoshop.DialogModes;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** options for the Picture Package command */
 		class PicturePackageOptions extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/**
 			 * content information ( default: PicturePackageTextType.NONE )

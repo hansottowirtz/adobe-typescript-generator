@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Screen information */
 		class ScreenInfo extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** the screen's angle (in degrees) */
 			public angle: number;

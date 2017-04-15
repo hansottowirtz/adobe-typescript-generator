@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The application's behavior regarding image previews and file 
+		 * extensions when a save method is called.
+		 */
 		class SaveBehavior extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Always save the item with the file. */
 			public static readonly ALWAYSSAVE: Adobe.Photoshop.SaveBehavior;

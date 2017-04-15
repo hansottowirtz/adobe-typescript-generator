@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The default Camera RAW settings. */
 		class CameraRAWSettingsType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Use the settings of the camera. */
 			public static readonly CAMERA: Adobe.Photoshop.CameraRAWSettingsType;

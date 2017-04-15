@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** InnerGlowSetting */
 		class FindChangeInnerGlowSetting extends Adobe.Indesign.InnerGlowSetting {
 			/**
 			 * If true, the inner glow effect is applied. Can return: 

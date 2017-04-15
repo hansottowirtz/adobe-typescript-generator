@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** BlendingSetting */
 		class FindChangeBlendingSetting extends Adobe.Indesign.BlendingSetting {
 			/**
 			 * The blending mode for controlling how the base color 

@@ -1,7 +1,12 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The PDF/X standard with which the document complies. PDF/X 
+		 * compliant files must contain information describing the 
+		 * printing condition for which they are prepared.
+		 */
 		class PDFStandard extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/** The document does not use the PDF/X standard. */

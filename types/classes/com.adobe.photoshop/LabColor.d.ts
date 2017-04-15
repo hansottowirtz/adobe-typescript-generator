@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** An Lab color specification */
 		class LabColor extends Adobe.Photoshop.Color {
 			/** the a-value (between -128.0 and 127.0) */
 			public a: number;

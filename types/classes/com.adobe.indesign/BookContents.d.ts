@@ -1,4 +1,4 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -9,7 +9,7 @@ declare namespace Adobe {
 			 * Creates a new book content object.
 			 * @param {File} fullNameParam - The full path name of the new 
 			 * book content object.
-			 * @param {number} atParam - 
+			 * @param {number} atParam
 			 * @param {any} withPropertiesParam - Initial values for 
 			 * properties of the new BookContent (Optional)
 			 */
@@ -61,12 +61,12 @@ declare namespace Adobe {
 			public nextItem(objParam: BookContent): Adobe.Indesign.BookContent;
 			/**
 			 * Overriding this allows us to support for each...in
-			 * @param {number} idx - 
+			 * @param {number} idx
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
-			 * @param {number} index - 
+			 * @param {number} index
 			 */
 			public nextValue(index: number): any;
 			/**

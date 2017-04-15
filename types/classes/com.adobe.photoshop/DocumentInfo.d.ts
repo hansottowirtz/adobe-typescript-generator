@@ -1,7 +1,12 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Metadata about a document object. These values can be set by 
+		 * selecting File > File Info in the Adobe Photoshop 
+		 * application.
+		 */
 		class DocumentInfo extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** The author. */
 			public author: string;

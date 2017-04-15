@@ -1,7 +1,13 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The pointer for the following tools: Marquee, Lasso, 
+		 * Polygonal Lasso, Magic Wand, Crop, Slice, Patch Eyedropper, 
+		 * Pen, Gradient, Line, Paint Bucket, Magnetic Lasso, Magnetic 
+		 * Pen, Freeform Pen, Measure, and Color Sampler.
+		 */
 		class PaintingCursors extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Displays cursors as brush shapes representing the size of 

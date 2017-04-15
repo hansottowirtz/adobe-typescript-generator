@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The type of channel. */
 		class ChannelType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The channel related to the document color model. */
 			public static readonly COMPONENT: Adobe.Photoshop.ChannelType;

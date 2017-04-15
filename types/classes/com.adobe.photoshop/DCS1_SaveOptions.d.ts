@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Settings related to saving a Photoshop DCS 1.0 document */
 		class DCS1_SaveOptions extends Adobe.Photoshop.SaveOptions {
 			/** ( default: DCSType.COLORCOMPOSITE ) */
 			public dCS: Adobe.Photoshop.DCSType;

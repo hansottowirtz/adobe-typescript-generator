@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The Wari-Chu alignment type. */
 		class WariChuJustificationType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly Center: Adobe.Illustrator.WariChuJustificationType;
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;

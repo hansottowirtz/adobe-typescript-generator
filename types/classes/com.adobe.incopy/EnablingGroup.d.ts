@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** Widget */
 		class EnablingGroup extends Adobe.Incopy.Widget {
 			/** A collection of angle comboboxes. */
 			public readonly angleComboboxes: Adobe.Incopy.AngleComboboxes;

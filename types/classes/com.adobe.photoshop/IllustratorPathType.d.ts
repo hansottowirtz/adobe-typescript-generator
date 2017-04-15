@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The paths to export. */
 		class IllustratorPathType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Exports all paths. */
 			public static readonly ALLPATHS: Adobe.Photoshop.IllustratorPathType;

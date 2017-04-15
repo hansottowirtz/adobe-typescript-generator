@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** An artwork group item. */
 		class GroupItem extends Adobe.Illustrator.PageItem {
 			/** Are the group elements clipped to the clipping path? */
 			public clipped: boolean;

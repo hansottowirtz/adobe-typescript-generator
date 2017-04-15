@@ -1,7 +1,13 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Options to define for the preferences property of the 
+		 * application object, basically equivalent to selecting Edit > 
+		 * Preferences (Windows) or Photoshop > Preferences in the 
+		 * Adobe Photoshop application.
+		 */
 		class Preferences extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/**
 			 * The path to the additional plug-in folder. Valid only when 

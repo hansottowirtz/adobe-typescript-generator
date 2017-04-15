@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Options for the web photo gallery images */
 		class GalleryImagesOptions extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/**
 			 * the amount of border pixels you want between your images ( 0 

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The preset types available for new documents. */
 		class DocumentPresetType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** The default CMYK document preset. */
 			public static readonly BasicCMYK: Adobe.Illustrator.DocumentPresetType;

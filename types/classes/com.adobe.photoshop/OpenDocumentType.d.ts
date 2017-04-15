@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Document formats that Photoshop can open. */
 		class OpenDocumentType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Alias PIX format. */
 			public static readonly ALIASPIX: Adobe.Photoshop.OpenDocumentType;

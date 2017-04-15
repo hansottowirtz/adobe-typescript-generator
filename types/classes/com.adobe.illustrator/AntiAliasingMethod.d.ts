@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/**
+		 * Controls the type of antialiasing method used in the 
+		 * rasterization.
+		 */
 		class AntiAliasingMethod extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Optimize for the art object. */
 			public static readonly ARTOPTIMIZED: Adobe.Illustrator.AntiAliasingMethod;

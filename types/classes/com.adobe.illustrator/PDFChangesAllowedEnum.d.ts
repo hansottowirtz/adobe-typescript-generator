@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Options available for making changes to a pdf document. */
 		class PDFChangesAllowedEnum extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Any changes allowed except extracting of pages- 128bit. */
 			public static readonly CHANGE128ANYCHANGES: Adobe.Illustrator.PDFChangesAllowedEnum;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** A text path item. */
 		class TextPath extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The area of this path in square points. */
 			public readonly area: number;

@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The type of color model that defines the document's working 
+		 * space.
+		 */
 		class ColorProfile extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Color manages this document using a custom color profile. */
 			public static readonly CUSTOM: Adobe.Photoshop.ColorProfile;

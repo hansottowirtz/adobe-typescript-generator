@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** How to re-arrange the art item. */
 		class ZOrderMethod extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Move art one step forward in it's group or layer. */
 			public static readonly BRINGFORWARD: Adobe.Illustrator.ZOrderMethod;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Options which may be supplied when opening a AutoCAD file. */
 		class AutoCADFileOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * To center the created artwork on the artboard (default: 

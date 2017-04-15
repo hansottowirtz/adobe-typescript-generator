@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The color to use for text displayed over gallery images as 
+		 * an antitheft deterrent.
+		 */
 		class GallerySecurityTextColorType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Black text. */
 			public static readonly BLACK: Adobe.Photoshop.GallerySecurityTextColorType;

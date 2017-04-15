@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Preference */
 		class DictionaryPreference extends Adobe.Indesign.Preference {
 			/** The hyphenation exception list to use when composing text. */
 			public composition: Adobe.Indesign.ComposeUsing;

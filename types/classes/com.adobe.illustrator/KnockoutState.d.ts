@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Knockout state of a page item. */
 		class KnockoutState extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Knockout off. */
 			public static readonly DISABLED: Adobe.Illustrator.KnockoutState;

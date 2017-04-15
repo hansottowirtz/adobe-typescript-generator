@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** An installed font. */
 		class TextFont extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The font's family name. */
 			public readonly family: string;

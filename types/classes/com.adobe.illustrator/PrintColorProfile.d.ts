@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The color profile type. */
 		class PrintColorProfile extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Use custom color profile. */
 			public static readonly CUSTOMPROFILE: Adobe.Illustrator.PrintColorProfile;

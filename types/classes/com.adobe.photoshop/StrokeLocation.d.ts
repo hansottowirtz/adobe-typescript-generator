@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The placement of path or selection boundary strokes. */
 		class StrokeLocation extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * The border is placed in the center of the the selection or 

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The printer font download mode. */
 		class PrintFontDownloadMode extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Download complete. */
 			public static readonly DOWNLOADCOMPLETE: Adobe.Illustrator.PrintFontDownloadMode;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** DirectionalFeatherSetting */
 		class FindChangeDirectionalFeatherSetting extends Adobe.Indesign.DirectionalFeatherSetting {
 			/**
 			 * The angle of the feather. (Range: 180 to -180). Can return: 

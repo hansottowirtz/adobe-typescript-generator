@@ -1,4 +1,4 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -42,7 +42,7 @@ declare namespace Adobe {
 			 */
 			public create(_type: string, text: string, location: string, id: string): Adobe.Bridge.MenuElement;
 			/**
-			 * @param {any[]} args - 
+			 * @param {any[]} args
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**

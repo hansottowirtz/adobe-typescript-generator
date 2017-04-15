@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** BevelAndEmbossSetting */
 		class FindChangeBevelAndEmbossSetting extends Adobe.Indesign.BevelAndEmbossSetting {
 			/**
 			 * The altitude of the light source. (Range: 0 to 90). Can 

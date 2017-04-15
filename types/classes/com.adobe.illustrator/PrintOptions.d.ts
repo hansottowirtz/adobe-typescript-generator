@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** the print options */
 		class PrintOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** the printing color management options */
 			public colorManagementOptions: Adobe.Illustrator.PrintColorManagementOptions;

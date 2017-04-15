@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** An Lab color specification */
 		class LabColor extends Adobe.Illustrator.Color {
 			/**
 			 * the a color value (between -128.0 and 127.0) ( -128.0 - 

@@ -1,7 +1,13 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The number of bits per channel (also called pixel depth or 
+		 * color depth). The number selected indicates the exponent of 
+		 * 2. For example, a pixel with a bit-depth of EIGHT has 
+		 * 2-to-the-8th, or 256, possible color values.
+		 */
 		class BMPDepthType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** A1 R5 G5 B5 advanced bit depth specification. */
 			public static readonly BMP_A1R5G5B5: Adobe.Photoshop.BMPDepthType;

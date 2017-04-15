@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** Swatch */
 		class MixedInk extends Adobe.Incopy.Swatch {
 			/** The mixed ink group that a mixed ink swatch is based on. */
 			public readonly baseColor: Adobe.Incopy.MixedInkGroup;

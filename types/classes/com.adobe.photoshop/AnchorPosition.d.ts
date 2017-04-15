@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The point around which to transform the object. */
 		class AnchorPosition extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The middle point of the bottom of the object. */
 			public static readonly BOTTOMCENTER: Adobe.Photoshop.AnchorPosition;

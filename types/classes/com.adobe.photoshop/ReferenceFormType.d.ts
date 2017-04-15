@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The type of action reference object. */
 		class ReferenceFormType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Class. */
 			public static readonly CLASSTYPE: Adobe.Photoshop.ReferenceFormType;

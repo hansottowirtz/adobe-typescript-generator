@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/**
+		 * Unconverted legacy text items from documents in pre-version 
+		 * 11 formats.
+		 */
 		class LegacyTextItem extends Adobe.Illustrator.PageItem {
 			/**
 			 * Has the legacy text item been updated to a native text frame 

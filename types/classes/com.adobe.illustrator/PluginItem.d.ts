@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Plugin artwork item. */
 		class PluginItem extends Adobe.Illustrator.PageItem {
 			/** Is the plugin group a tracing? */
 			public readonly isTracing: boolean;

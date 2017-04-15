@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The DCS format. */
 		class DCSType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Creates a color composite file in addition to DCS files. */
 			public static readonly COLORCOMPOSITE: Adobe.Photoshop.DCSType;

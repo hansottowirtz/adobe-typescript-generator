@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** A guide in the document */
 		class Guide extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** location of the guide from origin of image */
 			public coordinate: string;

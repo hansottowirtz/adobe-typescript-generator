@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Options which may be supplied when opening a PDF file. */
 		class PDFFileOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * What page should be used when opening a multipage document 

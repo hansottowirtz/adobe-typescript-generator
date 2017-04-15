@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The placement of paragraph text within the bounding box. */
 		class Justification extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Text is centered on each line. */
 			public static readonly CENTER: Adobe.Photoshop.Justification;

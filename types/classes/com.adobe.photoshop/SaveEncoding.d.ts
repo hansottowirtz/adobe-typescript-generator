@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The encoding to use when saving documents. */
 		class SaveEncoding extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** ASCII. */
 			public static readonly ASCII: Adobe.Photoshop.SaveEncoding;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** A gradient stop. */
 		class GradientStop extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The color linked to this gradient stop. */
 			public color: Adobe.Illustrator.Color;

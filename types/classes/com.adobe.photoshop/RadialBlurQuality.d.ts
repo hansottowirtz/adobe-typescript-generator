@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The radial blur quality. */
 		class RadialBlurQuality extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Produces best results. */
 			public static readonly BEST: Adobe.Photoshop.RadialBlurQuality;

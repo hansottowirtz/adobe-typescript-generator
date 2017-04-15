@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The font capitalization option. */
 		class FontCapsOption extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** All caps. */
 			public static readonly ALLCAPS: Adobe.Illustrator.FontCapsOption;

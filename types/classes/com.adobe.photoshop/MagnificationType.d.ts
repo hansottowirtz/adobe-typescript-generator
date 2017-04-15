@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The PDF magnification type. */
 		class MagnificationType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Displays the image at actual size. */
 			public static readonly ACTUALSIZE: Adobe.Photoshop.MagnificationType;

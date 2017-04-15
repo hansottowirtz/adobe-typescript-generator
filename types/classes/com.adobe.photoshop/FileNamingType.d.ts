@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** File naming options for the batch command. */
 		class FileNamingType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Uses the date formatted as ddmm. */
 			public static readonly DDMM: Adobe.Photoshop.FileNamingType;

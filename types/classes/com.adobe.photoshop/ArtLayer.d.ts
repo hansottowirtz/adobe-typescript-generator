@@ -1,7 +1,12 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * An object within a document that contains the visual 
+		 * elements of the image (equivalent to a layer in the Adobe 
+		 * Photoshop application).
+		 */
 		class ArtLayer extends Adobe.Photoshop.Layer {
 			/** The interior opacity of the layer. Range: 0.0 to 100.0. */
 			public fillOpacity: number;

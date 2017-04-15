@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Options for the web photo gallery banner options */
 		class GalleryBannerOptions extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** web photo gallery contact info ( default:  ) */
 			public contactInfo: string;

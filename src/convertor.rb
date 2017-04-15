@@ -16,7 +16,7 @@ class Convertor
     klass = DocUntangler.new(doc).to_klass
     FileUtils.mkdir_p File.dirname(klass.path)
     adobe_chunk = Chunk.new
-    adobe_chunk.puts "/// <reference path=\"#{klass.package.path}\"/>"
+    adobe_chunk.puts "/// <reference path=\"#{klass.package.relative_path_from(klass.path)}\"/>"
     adobe_chunk.lines << ''
     adobe_chunk.puts 'declare namespace Adobe {'
     namespace_chunk = Chunk.new("namespace #{klass.package.namespace} {")

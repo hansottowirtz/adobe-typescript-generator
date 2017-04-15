@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Options for the web photo gallery command */
 		class GalleryOptions extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/**
 			 * add width and height attributes for images ( default: true )

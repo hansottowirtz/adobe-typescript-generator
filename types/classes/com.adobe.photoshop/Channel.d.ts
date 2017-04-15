@@ -1,7 +1,17 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Object that stores information about a color element in the 
+		 * image, analogous to a plate in the printing process that 
+		 * applies a single color. The document's color mode determines 
+		 * the number of default channels. For example, an RGB document 
+		 * has four default channels: A composite channel: RGB; and 
+		 * three component channels: red, green, and blue. A channel 
+		 * can also be an alpha channel, which stores selections as 
+		 * masks; or a spot channel, which stores spot colors.
+		 */
 		class Channel extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** The color of the channel. Not valid for component channels. */
 			public color: Adobe.Photoshop.SolidColor;

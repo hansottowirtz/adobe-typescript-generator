@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/**
+		 * Denotes the purpose of color conversion using 
+		 * ConvertSmapleColor method.
+		 */
 		class ColorConvertPurpose extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Do standard conversion, without black preservation. */
 			public static readonly defaultpurpose: Adobe.Illustrator.ColorConvertPurpose;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Properties of a character. */
 		class CharacterAttributes extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The em amount of left aki. */
 			public akiLeft: number;

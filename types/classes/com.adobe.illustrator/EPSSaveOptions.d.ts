@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/**
+		 * Options which may be supplied when saving a document as an 
+		 * Illustrator EPS file
+		 */
 		class EPSSaveOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * If SaveMultipleArtboards is true,this will be considered for 

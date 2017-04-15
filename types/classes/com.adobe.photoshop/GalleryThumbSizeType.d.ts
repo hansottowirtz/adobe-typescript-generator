@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Deprecated for Adobe Photoshop CS3. Web photo gallery thumb 
+		 * size types.
+		 */
 		class GalleryThumbSizeType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Custom thumbnail. */
 			public static readonly CUSTOM: Adobe.Photoshop.GalleryThumbSizeType;

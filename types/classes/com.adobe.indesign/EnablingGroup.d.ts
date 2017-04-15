@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Widget */
 		class EnablingGroup extends Adobe.Indesign.Widget {
 			/** A collection of angle comboboxes. */
 			public readonly angleComboboxes: Adobe.Indesign.AngleComboboxes;

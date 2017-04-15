@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The type of texture or glass surface image to load for a 
+		 * texturizer or glass filter.
+		 */
 		class TextureType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The image appears as if viewed through glass blocks. */
 			public static readonly BLOCKS: Adobe.Photoshop.TextureType;

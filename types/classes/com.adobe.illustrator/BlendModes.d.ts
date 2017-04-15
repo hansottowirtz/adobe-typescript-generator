@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Blend modes used when compositing an object. */
 		class BlendModes extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly COLORBLEND: Adobe.Illustrator.BlendModes;
 			public static readonly COLORBURN: Adobe.Illustrator.BlendModes;

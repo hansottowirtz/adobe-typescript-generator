@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The color reduction algorithm. */
 		class ColorReductionType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Samples color from the spectrum appearing most commonly in 

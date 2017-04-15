@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Preference */
 		class ContourOption extends Adobe.Indesign.Preference {
 			/** A list of the alpha channels stored in the graphic. */
 			public readonly alphaChannelPathNames: any;

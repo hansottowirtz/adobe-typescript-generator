@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** Preference */
 		class LinkingPreference extends Adobe.Incopy.Preference {
 			/** If true, link states will be checked at document open time */
 			public checkLinksAtOpen: boolean;

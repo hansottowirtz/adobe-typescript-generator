@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Deprecated for Adobe Photoshop CS3. Constrain values for 
+		 * images.
+		 */
 		class GalleryConstrainType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Constrain both the height and the width of the image. */
 			public static readonly CONSTRAINBOTH: Adobe.Photoshop.GalleryConstrainType;

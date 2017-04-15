@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The monochrome compression type. */
 		class MonochromeCompression extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** CCITT Group 3 compression. */
 			public static readonly CCIT3: Adobe.Illustrator.MonochromeCompression;

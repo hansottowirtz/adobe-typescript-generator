@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The method to use to smooth edges by softening the color 
+		 * transition between edge pixels and background pixels.
+		 */
 		class AntiAlias extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Makes type appear somewhat sharp. */
 			public static readonly CRISP: Adobe.Photoshop.AntiAlias;

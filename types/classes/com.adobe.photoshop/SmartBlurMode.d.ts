@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The method to use for smart blurring. */
 		class SmartBlurMode extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Blur is applied only to edges of color transitions. Where 

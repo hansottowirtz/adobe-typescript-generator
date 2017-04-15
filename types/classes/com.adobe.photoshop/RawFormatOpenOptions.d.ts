@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Settings related to opening a raw format document */
 		class RawFormatOpenOptions extends Adobe.Photoshop.OpenOptions {
 			/** number of bits for each channel (8 or 16) */
 			public bitsPerChannel: number;

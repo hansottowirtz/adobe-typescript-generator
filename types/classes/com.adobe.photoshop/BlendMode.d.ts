@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Controls how pixels in the image are blended. */
 		class BlendMode extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Creates a result color with the luminance of the base color 

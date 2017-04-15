@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Widget */
 		class RadiobuttonControl extends Adobe.Indesign.Widget {
 			/** If true, the control is checked by default in the dialog. */
 			public checkedState: boolean;

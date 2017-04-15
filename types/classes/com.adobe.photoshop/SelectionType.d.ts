@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The selection behavior when a selection already exists. */
 		class SelectionType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Remove the selection from the already selected area. */
 			public static readonly DIMINISH: Adobe.Photoshop.SelectionType;

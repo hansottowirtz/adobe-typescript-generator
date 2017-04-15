@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
+		/** MenuElement */
 		class MenuItem extends Adobe.Incopy.MenuElement {
 			/** The menu action that implements the menu item. */
 			public readonly associatedMenuAction: Adobe.Incopy.MenuAction;

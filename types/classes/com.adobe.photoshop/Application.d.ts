@@ -1,7 +1,14 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The Adobe Photoshop application object.         This is the 
+		 * root of the object model, and provides access to all other 
+		 * objects. To access the properties and methods, you can use 
+		 * the pre-defined global variable        app        . For 
+		 * example:        var currentDoc = app.activeDocument;
+		 */
 		class Application extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** The frontmost document. */
 			public activeDocument: Adobe.Photoshop.Document;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The preview modes available when creating a new document. */
 		class DocumentPreviewMode extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Default Preview mode. */
 			public static readonly DefaultPreview: Adobe.Illustrator.DocumentPreviewMode;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The type of pixels to trim around an image. */
 		class TrimType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Removes from the image an area the color of the lower right 

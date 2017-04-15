@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Controls the color model for the rasterization. */
 		class RasterizationColorModel extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Rasterize as 1-bit bitmap. */
 			public static readonly BITMAP: Adobe.Illustrator.RasterizationColorModel;

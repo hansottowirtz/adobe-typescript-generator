@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The resample type. */
 		class DownsampleMethod extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Average Downsampling. */
 			public static readonly AVERAGEDOWNSAMPLE: Adobe.Illustrator.DownsampleMethod;

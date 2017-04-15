@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The artwork layers/objects to be printed. */
 		class PrintArtworkDesignation extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Print all layers. */
 			public static readonly ALLLAYERS: Adobe.Illustrator.PrintArtworkDesignation;

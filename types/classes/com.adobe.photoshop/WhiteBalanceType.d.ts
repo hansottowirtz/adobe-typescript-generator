@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The lighting conditions (affects color balance). */
 		class WhiteBalanceType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Use the settings of the camera as shot. */
 			public static readonly ASSHOT: Adobe.Photoshop.WhiteBalanceType;

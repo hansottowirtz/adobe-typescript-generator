@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The position of the text displayed over gallery images as an 
+		 * antitheft deterrent.
+		 */
 		class GallerySecurityTextPositionType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Text is centered on each image. */
 			public static readonly CENTERED: Adobe.Photoshop.GallerySecurityTextPositionType;

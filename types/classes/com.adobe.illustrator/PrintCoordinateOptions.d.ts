@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** the print coordinate options */
 		class PrintCoordinateOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** whether to flip artwork horizontally ( default: false ) */
 			public emulsion: boolean;

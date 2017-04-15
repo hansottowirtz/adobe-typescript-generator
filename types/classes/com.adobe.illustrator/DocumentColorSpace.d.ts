@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The color spaces available for documents. */
 		class DocumentColorSpace extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** CMYK document color space. */
 			public static readonly CMYK: Adobe.Illustrator.DocumentColorSpace;

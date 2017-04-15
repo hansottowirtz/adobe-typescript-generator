@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** Preferences for Illustrator. */
 		class Preferences extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** Options to use when opening or placing a AutoCAD file. */
 			public readonly AutoCADFileOptions: Adobe.Illustrator.AutoCADFileOptions;

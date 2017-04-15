@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.csawlib/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
+		/**  Base for all enum-representing classes  */
 		class CSEnumBase extends Adobe.Csawlib.CSHostObject {
 			/** Returns the numerical value */
 			public readonly value: any;

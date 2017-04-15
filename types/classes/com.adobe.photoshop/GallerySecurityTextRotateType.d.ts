@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Deprecated for Adobe Photoshop CS3. web photo gallery 
+		 * security text rotation types.
+		 */
 		class GallerySecurityTextRotateType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Rotate 45 degrees clock wise. */
 			public static readonly CLOCKWISE45: Adobe.Photoshop.GallerySecurityTextRotateType;

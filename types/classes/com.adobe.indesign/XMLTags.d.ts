@@ -1,4 +1,4 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -63,12 +63,12 @@ declare namespace Adobe {
 			public nextItem(objParam: XMLTag): Adobe.Indesign.XMLTag;
 			/**
 			 * Overriding this allows us to support for each...in
-			 * @param {number} idx - 
+			 * @param {number} idx
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
-			 * @param {number} index - 
+			 * @param {number} index
 			 */
 			public nextValue(index: number): any;
 			/**

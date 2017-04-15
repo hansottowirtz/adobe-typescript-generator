@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The function or meaning of text in a Picture Package. */
 		class PicturePackageTextType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The text is a caption. */
 			public static readonly CAPTION: Adobe.Photoshop.PicturePackageTextType;

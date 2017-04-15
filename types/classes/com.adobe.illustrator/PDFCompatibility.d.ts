@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The PDF compatibility type. */
 		class PDFCompatibility extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Acrobat version 4. */
 			public static readonly ACROBAT4: Adobe.Illustrator.PDFCompatibility;

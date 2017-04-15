@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The measurement unit for ruler increments. */
 		class Units extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Centimeters. */
 			public static readonly CM: Adobe.Photoshop.Units;

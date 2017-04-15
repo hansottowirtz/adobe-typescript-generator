@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** A point on a path. */
 		class PathPoint extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The position (coordinates) of the anchor point. */
 			public anchor: any[];

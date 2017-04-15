@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** PDF color conversion policy. */
 		class ColorConversion extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/**
 			 * Preserves color numbers for untagged content in the same 

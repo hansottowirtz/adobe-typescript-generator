@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** DropShadowSetting */
 		class FindChangeDropShadowSetting extends Adobe.Indesign.DropShadowSetting {
 			/**
 			 * The angle at which the shadow is thrown. Can return: Real 

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** the paper options */
 		class PrintPaperOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * the custom height (in points) for using the custom paper ( 

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** A tracing object. */
 		class TracingObject extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The number of anchors in the tracing result. */
 			public readonly anchorCount: number;

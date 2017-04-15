@@ -1,7 +1,14 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * A layer object. Layers may contain nested layers, which are 
+		 * called sublayers in the user interface. The layer object 
+		 * contains all of the page items in the specific layer as 
+		 * elements. Your script can access page items as elements of 
+		 * either the layer object or the document object.
+		 */
 		class Layer extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** If true, the layer's contents and settings are locked. */
 			public allLocked: boolean;

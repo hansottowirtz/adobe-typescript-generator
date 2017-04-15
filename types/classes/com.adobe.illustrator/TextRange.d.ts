@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** A range of characters from a text item. */
 		class TextRange extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The character properties for the text range. */
 			public readonly characterAttributes: Adobe.Illustrator.CharacterAttributes;

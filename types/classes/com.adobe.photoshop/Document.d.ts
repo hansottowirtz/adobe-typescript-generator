@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * The active containment object for the layers and all other 
+		 * objects in the script; the basic canvas for the file.
+		 */
 		class Document extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** The selected channels. */
 			public activeChannels: any[];

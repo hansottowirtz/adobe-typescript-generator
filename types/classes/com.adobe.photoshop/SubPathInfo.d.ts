@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * Sub path information (returned by entire path 
+		 * dataClassProperty of path item class)
+		 */
 		class SubPathInfo extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** is this path closed? */
 			public closed: boolean;

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** When should a JavaScript debugger be shown. */
 		class JavaScriptExecutionMode extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/**
 			 * Show the JavaScript debugger at the first line of the 

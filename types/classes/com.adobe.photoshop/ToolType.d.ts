@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** Tools for the stroke path command. */
 		class ToolType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Art history brush. */
 			public static readonly ARTHISTORYBRUSH: Adobe.Photoshop.ToolType;

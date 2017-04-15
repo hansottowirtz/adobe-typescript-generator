@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
+		/** Widget */
 		class Dropdown extends Adobe.Indesign.Widget {
 			/** A collection of event listeners. */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;

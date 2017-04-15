@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** PDF presentation transition types. */
 		class TransitionType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/**
 			 * Images transition in horizontal stripes like Venetian 

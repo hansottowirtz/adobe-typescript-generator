@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The path point kind. */
 		class PointKind extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The point must be a corner. */
 			public static readonly CORNERPOINT: Adobe.Photoshop.PointKind;

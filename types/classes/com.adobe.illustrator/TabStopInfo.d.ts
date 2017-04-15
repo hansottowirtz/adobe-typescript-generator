@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/**
+		 * Tab stop information (returned by tab stops from a paragraph 
+		 * object)
+		 */
 		class TabStopInfo extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * the alignment of the tab stop ( default: 

@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The method for replacing eliminated fields. */
 		class CreateFields extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** Duplicates existing pixels. */
 			public static readonly DUPLICATION: Adobe.Photoshop.CreateFields;

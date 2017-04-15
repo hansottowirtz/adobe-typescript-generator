@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/**
+		 * Options which may be supplied when capturing a portion of 
+		 * the artwork as an 24 bit PNG file
+		 */
 		class ImageCaptureOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/**
 			 * should the resulting image be antialiased ( default: false )

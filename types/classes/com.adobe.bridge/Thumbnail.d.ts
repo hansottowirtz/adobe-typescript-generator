@@ -1,4 +1,4 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -72,7 +72,7 @@ declare namespace Adobe {
 			 */
 			public copyTo(path: string): boolean;
 			/**
-			 * @param {any[]} args - 
+			 * @param {any[]} args
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**

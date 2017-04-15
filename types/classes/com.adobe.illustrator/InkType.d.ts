@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
+		/** The ink type. */
 		class InkType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			/** Black color ink. */
 			public static readonly BLACKINK: Adobe.Illustrator.InkType;

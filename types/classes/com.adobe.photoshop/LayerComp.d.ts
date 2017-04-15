@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * A snapshot of a state of the layers in a document (can be 
+		 * used to view different page layouts or compostions).
+		 */
 		class LayerComp extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** If true, uses layer appearance (layer styles) settings. */
 			public appearance: boolean;

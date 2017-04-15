@@ -1,7 +1,12 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/**
+		 * A path or drawing object, such as the outline of a shape or 
+		 * a straight or curved line, which contains sub paths that 
+		 * comprise its geometry.
+		 */
 		class PathItem extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** The type of path. */
 			public kind: Adobe.Photoshop.PathKind;

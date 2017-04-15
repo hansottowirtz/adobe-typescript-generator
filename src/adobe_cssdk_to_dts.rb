@@ -4,6 +4,7 @@ require 'nokogiri'
 require 'parallel'
 require 'pry'
 require 'ruby-progressbar'
+require 'pathname'
 require_relative './doc'
 require_relative './doc_tag'
 require_relative './documentable'
@@ -23,11 +24,11 @@ require_relative './util'
 module AdobeCssdkToDts
   class << self
     def pwd
-       Dir.pwd
+      Pathname.new Dir.pwd
     end
 
     def root
-       File.expand_path('..', __dir__)
+       Pathname.new File.expand_path('..', __dir__)
     end
 
     def config
@@ -65,7 +66,7 @@ module AdobeCssdkToDts
     end
 
     def convert(path)
-      absolute_path = File.expand_path(path, root)
+      absolute_path = Pathname.new File.expand_path(path, root)
       Convertor.new(absolute_path).convert
     end
   end

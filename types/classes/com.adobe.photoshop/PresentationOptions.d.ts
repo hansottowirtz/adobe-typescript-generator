@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** options for the PDF presentation command */
 		class PresentationOptions extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** auto advance when viewing ( default: true ) */
 			public autoAdvance: boolean;

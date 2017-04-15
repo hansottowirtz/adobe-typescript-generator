@@ -1,7 +1,8 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
+		/** The copyright status of the document. */
 		class CopyrightedType extends Adobe.CsawlibPhotoshop.PhotoshopEnumBase {
 			/** The document is copyrighted. */
 			public static readonly COPYRIGHTEDWORK: Adobe.Photoshop.CopyrightedType;

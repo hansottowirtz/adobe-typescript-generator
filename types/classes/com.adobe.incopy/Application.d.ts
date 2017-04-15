@@ -1,4 +1,4 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -689,7 +689,7 @@ declare namespace Adobe {
 			 * sure the files in the folder are correctly organized.
 			 * @param {File} ucfFileParam - The destination UCF file. Will 
 			 * be overwritten if it already exists.
-			 * @param {string} mimeMediaTypeParam - 
+			 * @param {string} mimeMediaTypeParam
 			 */
 			public packageUCF(sourceFolderParam: File, ucfFileParam: File, mimeMediaTypeParam: string): void;
 			/**

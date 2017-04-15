@@ -1,7 +1,11 @@
-/// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.csawlib.photoshop/index.d.ts"/>
+/// <reference path="../../namespaces/com.adobe.csawlib.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace CsawlibPhotoshop {
+		/**
+		 *  Base for Photoshop classes, which encapsulates host object 
+		 * and all interaction with the host through the HBAPI. 
+		 */
 		class PhotoshopHostObject extends Adobe.Csawlib.CSHostObject {
 			public readonly parent: any;
 			/** Constructor */
