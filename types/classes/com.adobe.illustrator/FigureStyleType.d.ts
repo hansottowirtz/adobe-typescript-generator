@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class FigureStyleType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -14,7 +15,7 @@ declare namespace Adobe {
 			/** Tabular oldstyle. */
 			public static readonly TABULAROLDSTYLE: Adobe.Illustrator.FigureStyleType;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class EPSPostScriptLevelEnum extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -8,7 +9,7 @@ declare namespace Adobe {
 			/** PostScript Level 3. */
 			public static readonly LEVEL3: Adobe.Illustrator.EPSPostScriptLevelEnum;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

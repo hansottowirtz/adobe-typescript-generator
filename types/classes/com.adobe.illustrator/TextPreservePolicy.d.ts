@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class TextPreservePolicy extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -10,7 +11,7 @@ declare namespace Adobe {
 			/** Preserve the appearance of text by rasterizing it. */
 			public static readonly RASTERIZETEXT: Adobe.Illustrator.TextPreservePolicy;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

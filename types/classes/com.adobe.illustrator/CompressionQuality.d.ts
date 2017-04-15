@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class CompressionQuality extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -44,7 +45,7 @@ declare namespace Adobe {
 			public static readonly ZIP4BIT: Adobe.Illustrator.CompressionQuality;
 			public static readonly ZIP8BIT: Adobe.Illustrator.CompressionQuality;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

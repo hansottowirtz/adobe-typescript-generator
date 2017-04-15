@@ -1,7 +1,11 @@
 class DocUntangler
   def initialize(doc)
-    if a = doc.css('.inheritanceList a')[0]
-      superklass_name = Util.extract_type(a, a.text.strip)
+    inheritanceList = doc.css('.inheritanceList')[0]
+    if a = inheritanceList.css('a')[0]
+      superklass_name = Util.extract_type_from_a(a, a.text.strip)
+    else
+      #inheritanceList.xpath('')[0]
+      superklass_name = Types.get(Util.extract_type_from_dots(inheritanceList.xpath('.//text()')[1].text.strip))
     end
     signature = doc.css('.classSignature')[0].text
     md = signature.strip.gsub(/ +/, ' ').match(/^(public) ?(dynamic)? ?class (\w+)$/)

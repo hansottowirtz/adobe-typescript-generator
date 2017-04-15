@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class FlashExportVersion extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -22,7 +23,7 @@ declare namespace Adobe {
 			/** SWF Version 9. */
 			public static readonly FLASHVERSION9: Adobe.Illustrator.FlashExportVersion;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

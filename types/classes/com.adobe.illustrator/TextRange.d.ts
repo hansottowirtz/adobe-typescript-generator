@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class TextRange extends Adobe.CsawlibIllustrator.IllustratorHostObject {
@@ -37,17 +38,35 @@ declare namespace Adobe {
 			public readonly textSelection: any;
 			/** All the words in this text range. */
 			public readonly words: Adobe.Illustrator.Words;
-			/** Change the capitalization of text. */
-			public changeCaseTo(_type: CaseChangeType): void;
+			/**
+			 * Change the capitalization of text.
+			 * @param {Adobe.Illustrator.CaseChangeType} _type - The type 
+			 * of case.
+			 */
+			public changeCaseTo(_type: Adobe.Illustrator.CaseChangeType): void;
 			/** Deselect the text range. */
 			public deSelect(): void;
-			/** create a duplicate of the object */
-			public duplicate(relativeObject: any, insertionLocation: ElementPlacement): Adobe.Illustrator.TextRange;
-			/** move the object */
-			public move(relativeObject: any, insertionLocation: ElementPlacement): void;
+			/**
+			 * create a duplicate of the object
+			 * @param {any} relativeObject - 
+			 * @param {Adobe.Illustrator.ElementPlacement} 
+			 * insertionLocation - ( default: ElementPlacement.INSIDE )
+			 */
+			public duplicate(relativeObject: any, insertionLocation: Adobe.Illustrator.ElementPlacement): Adobe.Illustrator.TextRange;
+			/**
+			 * move the object
+			 * @param {any} relativeObject - 
+			 * @param {Adobe.Illustrator.ElementPlacement} 
+			 * insertionLocation - 
+			 */
+			public move(relativeObject: any, insertionLocation: Adobe.Illustrator.ElementPlacement): void;
 			/** delete the object */
 			public remove(): void;
-			/** Select the text range. */
+			/**
+			 * Select the text range.
+			 * @param {boolean} addToDocument - Whether to add the text 
+			 * range to the document text selection. ( default: false )
+			 */
 			public select(addToDocument: boolean): void;
 		}
 	}

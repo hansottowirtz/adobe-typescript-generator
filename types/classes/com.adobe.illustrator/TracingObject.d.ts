@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class TracingObject extends Adobe.CsawlibIllustrator.IllustratorHostObject {
@@ -16,7 +17,11 @@ declare namespace Adobe {
 			public readonly tracingOptions: Adobe.Illustrator.TracingOptions;
 			/** The number of colors used in the tracing result. */
 			public readonly usedColorCount: number;
-			/** Expand the tracing to paths. Deletes this tracing object. */
+			/**
+			 * Expand the tracing to paths. Deletes this tracing object.
+			 * @param {boolean} viewed - Expand as viewed with the raster 
+			 * and vector view modes. ( default: false )
+			 */
 			public expandTracing(viewed: boolean): Adobe.Illustrator.GroupItem;
 			/**
 			 * Release the source artwork for the tracing object. Deletes 

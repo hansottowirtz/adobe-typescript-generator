@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PhotoshopCompatibility extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -8,7 +9,7 @@ declare namespace Adobe {
 			/** Photoshop version 8. */
 			public static readonly PHOTOSHOP8: Adobe.Illustrator.PhotoshopCompatibility;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

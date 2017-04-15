@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class Document extends Adobe.CsawlibIllustrator.IllustratorHostObject {
@@ -148,27 +149,60 @@ declare namespace Adobe {
 			public XMPString: string;
 			/** Activate the first window associated with the document. */
 			public activate(): void;
-			/** Close the specified document(s) */
-			public close(saving: SaveOptions): void;
+			/**
+			 * Close the specified document(s)
+			 * @param {Adobe.Illustrator.SaveOptions} saving - Specifies 
+			 * whether changes should be saved before closing.
+			 */
+			public close(saving: Adobe.Illustrator.SaveOptions): void;
 			/**
 			 * Converts the coordinate system of a single point from one 
 			 * coordinate system to another.
+			 * @param {any[]} coordinate - The Coordinate to convert.
+			 * @param {Adobe.Illustrator.CoordinateSystem} source - The 
+			 * source coordinate system.
+			 * @param {Adobe.Illustrator.CoordinateSystem} destination - 
+			 * The destination coordinate system.
 			 */
-			public convertCoordinate(coordinate: any[], source: CoordinateSystem, destination: CoordinateSystem): any[];
-			/** Export the specified document(s) */
-			public exportFile(exportFile: File, exportFormat: ExportType, options: any): void;
-			/** Save all PDF presets to a file. */
-			public exportPDFPreset(file: File): void;
-			/** saves all perspective grid presets to a file */
-			public exportPerspectiveGridPreset(file: File): void;
-			/** Export the current print setting to the preset file. */
-			public exportPrintPreset(file: File): void;
+			public convertCoordinate(coordinate: any[], source: Adobe.Illustrator.CoordinateSystem, destination: Adobe.Illustrator.CoordinateSystem): any[];
+			/**
+			 * Export the specified document(s)
+			 * @param {Adobe.Flash.Filesystem.File} exportFile - The file 
+			 * to export the document to.
+			 * @param {Adobe.Illustrator.ExportType} exportFormat - The 
+			 * file type to export the document as.
+			 * @param {any} options - Options for the file type specified.
+			 */
+			public exportFile(exportFile: Adobe.Flash.Filesystem.File, exportFormat: Adobe.Illustrator.ExportType, options: any): void;
+			/**
+			 * Save all PDF presets to a file.
+			 * @param {Adobe.Flash.Filesystem.File} file - File to export 
+			 * to.
+			 */
+			public exportPDFPreset(file: Adobe.Flash.Filesystem.File): void;
+			/**
+			 * saves all perspective grid presets to a file
+			 * @param {Adobe.Flash.Filesystem.File} file - file to export 
+			 * to
+			 */
+			public exportPerspectiveGridPreset(file: Adobe.Flash.Filesystem.File): void;
+			/**
+			 * Export the current print setting to the preset file.
+			 * @param {Adobe.Flash.Filesystem.File} file - File to export 
+			 * to.
+			 */
+			public exportPrintPreset(file: Adobe.Flash.Filesystem.File): void;
 			/**
 			 * Save datasets into an XML library. The datasets contain 
 			 * variables and their associated dynamic data.
+			 * @param {Adobe.Flash.Filesystem.File} file - File spec to 
+			 * export to.
 			 */
-			public exportVariables(file: File): void;
-			/** Change the artboard to selected art bounds. */
+			public exportVariables(file: Adobe.Flash.Filesystem.File): void;
+			/**
+			 * Change the artboard to selected art bounds.
+			 * @param {number} index - The index of the artboard to update.
+			 */
 			public fitArtboardToSelectedArt(index: number): boolean;
 			/**
 			 * Gets the active plane of the active perspective grid of the 
@@ -184,55 +218,105 @@ declare namespace Adobe {
 			 * Capture the artwork content inside the clip bound as raster 
 			 * image, and write out the captured image data into the target 
 			 * image file.
+			 * @param {Adobe.Flash.Filesystem.File} imageFile - The file to 
+			 * which the captured image should be written.
+			 * @param {any[]} clipBounds - The rectangular region of the 
+			 * artwork for image capture. If the parameter is omitted, the 
+			 * entire artwork bound is captured.
+			 * @param {Adobe.Illustrator.ImageCaptureOptions} options - 
+			 * Describes the image capture options.
 			 */
-			public imageCapture(imageFile: File, clipBounds: any[], options: ImageCaptureOptions): void;
-			/** Load the character styles from the Illustrator file. */
-			public importCharacterStyles(fileSpec: File): void;
-			/** Load the paragraph styles from the Illustrator file. */
-			public importParagraphStyles(fileSpec: File): void;
-			/** Load all PDF presets from a file. */
-			public importPDFPreset(fileSpec: File, replacingPreset: boolean): void;
+			public imageCapture(imageFile: Adobe.Flash.Filesystem.File, clipBounds: any[], options: Adobe.Illustrator.ImageCaptureOptions): void;
+			/**
+			 * Load the character styles from the Illustrator file.
+			 * @param {Adobe.Flash.Filesystem.File} fileSpec - File spec to 
+			 * import from.
+			 */
+			public importCharacterStyles(fileSpec: Adobe.Flash.Filesystem.File): void;
+			/**
+			 * Load the paragraph styles from the Illustrator file.
+			 * @param {Adobe.Flash.Filesystem.File} fileSpec - File spec to 
+			 * import from.
+			 */
+			public importParagraphStyles(fileSpec: Adobe.Flash.Filesystem.File): void;
+			/**
+			 * Load all PDF presets from a file.
+			 * @param {Adobe.Flash.Filesystem.File} fileSpec - File to 
+			 * import from.
+			 * @param {boolean} replacingPreset - Should existing editable 
+			 * presets be replaced? ( default: false )
+			 */
+			public importPDFPreset(fileSpec: Adobe.Flash.Filesystem.File, replacingPreset: boolean): void;
 			/**
 			 * loads mentioned perspective grid preset, if preset name is 
 			 * specified, else loads all(if no preset name is specified) 
 			 * presets, from the specified file
+			 * @param {Adobe.Flash.Filesystem.File} fileSpec - file to 
+			 * import from
+			 * @param {string} perspectivePreset - name of perspective grid 
+			 * preset. ( default:  )
 			 */
-			public importPerspectiveGridPreset(fileSpec: File, perspectivePreset: string): void;
+			public importPerspectiveGridPreset(fileSpec: Adobe.Flash.Filesystem.File, perspectivePreset: string): void;
 			/**
 			 * Apply the named print preset from the file to the current 
 			 * print setting.
+			 * @param {string} printPreset - The name of a print preset to 
+			 * import.
+			 * @param {Adobe.Flash.Filesystem.File} fileSpec - File to 
+			 * import from.
 			 */
-			public importPrintPreset(printPreset: string, fileSpec: File): void;
+			public importPrintPreset(printPreset: string, fileSpec: Adobe.Flash.Filesystem.File): void;
 			/**
 			 * Import a library containing datasets, variables and their 
 			 * associated dynamic data. Importing variables will overwrite 
 			 * existing variables and datasets.
+			 * @param {Adobe.Flash.Filesystem.File} fileSpec - File spec to 
+			 * import from.
 			 */
-			public importVariables(fileSpec: File): void;
-			/** Print the document. */
-			public print(options: PrintOptions): void;
+			public importVariables(fileSpec: Adobe.Flash.Filesystem.File): void;
+			/**
+			 * Print the document.
+			 * @param {Adobe.Illustrator.PrintOptions} options - Print 
+			 * options.
+			 */
+			public print(options: Adobe.Illustrator.PrintOptions): void;
 			/**
 			 * Rasterize the source art(s) within the specified clip 
 			 * bounds. The source art(s) are disposed as a result of the 
 			 * rasterization.
+			 * @param {any} sourceArt - The page item(s) to be rasterized.
+			 * @param {any[]} clipBounds - The rectangular region of the 
+			 * artwork for the rasterization. If the parameter is omitted, 
+			 * the bounds of the source art(s) is used instead.
+			 * @param {Adobe.Illustrator.RasterizeOptions} options - 
+			 * Describes the rasterization options.
 			 */
-			public rasterize(sourceArt: any, clipBounds: any[], options: RasterizeOptions): Adobe.Illustrator.PageItem;
+			public rasterize(sourceArt: any, clipBounds: any[], options: Adobe.Illustrator.RasterizeOptions): Adobe.Illustrator.PageItem;
 			/** Save the document. */
 			public save(): void;
-			/** Save the document with specific save options. */
-			public saveAs(saveIn: File, options: any): void;
+			/**
+			 * Save the document with specific save options.
+			 * @param {Adobe.Flash.Filesystem.File} saveIn - The file to 
+			 * save the document in.
+			 * @param {any} options - Options for the file type specified.
+			 */
+			public saveAs(saveIn: Adobe.Flash.Filesystem.File, options: any): void;
 			/** Select art objects in active artboard. */
 			public selectObjectsOnActiveArtboard(): boolean;
 			/**
 			 * Selects a predefined preset to define grid for the current 
 			 * document.
+			 * @param {string} perspectivePreset - name of perspective grid 
+			 * preset.
 			 */
 			public selectPerspectivePreset(perspectivePreset: string): boolean;
 			/**
 			 * Sets the active perspective plane for the active grid of the 
 			 * document.
+			 * @param {Adobe.Illustrator.PerspectiveGridPlaneType} 
+			 * perspectiveGridPlane - Type of perspective grid plane.
 			 */
-			public setPerspectiveActivePlane(perspectiveGridPlane: PerspectiveGridPlaneType): boolean;
+			public setPerspectiveActivePlane(perspectiveGridPlane: Adobe.Illustrator.PerspectiveGridPlaneType): boolean;
 			/**
 			 * Shows the current active perspective grid for the document, 
 			 * if no active perspective grid then shows the default 
@@ -242,8 +326,12 @@ declare namespace Adobe {
 			/**
 			 * Capture the current document window to the target TIFF image 
 			 * file.
+			 * @param {Adobe.Flash.Filesystem.File} imageFile - The TIFF 
+			 * file to which the captured image should be written.
+			 * @param {any[]} windowSize - The size to make the window 
+			 * before capture.
 			 */
-			public windowCapture(imageFile: File, windowSize: any[]): void;
+			public windowCapture(imageFile: Adobe.Flash.Filesystem.File, windowSize: any[]): void;
 		}
 	}
 }

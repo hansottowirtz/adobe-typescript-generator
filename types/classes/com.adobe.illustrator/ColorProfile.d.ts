@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class ColorProfile extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -14,7 +15,7 @@ declare namespace Adobe {
 			/** All profiles removed (embedProfile == false) */
 			public static readonly None: Adobe.Illustrator.ColorProfile;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

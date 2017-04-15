@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PrinterColorMode extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -10,7 +11,7 @@ declare namespace Adobe {
 			/** Grayscale printer. */
 			public static readonly GRAYSCALEPRINTER: Adobe.Illustrator.PrinterColorMode;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

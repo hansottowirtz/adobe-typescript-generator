@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PrintPosition extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -22,7 +23,7 @@ declare namespace Adobe {
 			/** Translate to the top right of media. */
 			public static readonly TRANSLATETOPRIGHT: Adobe.Illustrator.PrintPosition;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class Preferences extends Adobe.CsawlibIllustrator.IllustratorHostObject {
@@ -13,37 +14,60 @@ declare namespace Adobe {
 			/**
 			 * Retrieve the value of the application preference key as 
 			 * boolean.
+			 * @param {string} key - The preference key.
 			 */
 			public getBooleanPreference(key: string): boolean;
 			/**
 			 * Retrieve the value of the application preference key as 
 			 * integer.
+			 * @param {string} key - The preference key.
 			 */
 			public getIntegerPreference(key: string): number;
 			/**
 			 * Retrieve the value of the application preference key as real 
 			 * number.
+			 * @param {string} key - The preference key.
 			 */
 			public getRealPreference(key: string): number;
 			/**
 			 * Retrieve the value of the application preference key as 
 			 * string type.
+			 * @param {string} key - The preference key.
 			 */
 			public getStringPreference(key: string): string;
-			/** Delete the application preference key. */
+			/**
+			 * Delete the application preference key.
+			 * @param {string} key - The preference key.
+			 */
 			public removePreference(key: string): void;
-			/** Set the value of the application preference key as boolean. */
+			/**
+			 * Set the value of the application preference key as boolean.
+			 * @param {string} key - The preference key.
+			 * @param {boolean} value - The boolean value of the preference 
+			 * key.
+			 */
 			public setBooleanPreference(key: string, value: boolean): void;
-			/** Set the value of the application preference key as integer. */
+			/**
+			 * Set the value of the application preference key as integer.
+			 * @param {string} key - The preference key.
+			 * @param {number} value - The boolean value of the preference 
+			 * key.
+			 */
 			public setIntegerPreference(key: string, value: number): void;
 			/**
 			 * Set the value of the application preference key as real 
 			 * number.
+			 * @param {string} key - The preference key.
+			 * @param {number} value - The real value of the preference 
+			 * key.
 			 */
 			public setRealPreference(key: string, value: number): void;
 			/**
 			 * Set the value of the application preference key as string 
 			 * type.
+			 * @param {string} key - The preference key.
+			 * @param {string} value - The string value of the preference 
+			 * key.
 			 */
 			public setStringPreference(key: string, value: string): void;
 		}

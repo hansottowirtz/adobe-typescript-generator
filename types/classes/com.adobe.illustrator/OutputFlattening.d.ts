@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class OutputFlattening extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -7,7 +8,7 @@ declare namespace Adobe {
 			/** Discard transparency. */
 			public static readonly PRESERVEPATHS: Adobe.Illustrator.OutputFlattening;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

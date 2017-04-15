@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class Transformation extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -24,7 +25,7 @@ declare namespace Adobe {
 			/** Transform relative to the object's top right corner. */
 			public static readonly TOPRIGHT: Adobe.Illustrator.Transformation;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

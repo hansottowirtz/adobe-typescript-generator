@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PrintColorIntent extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -12,7 +13,7 @@ declare namespace Adobe {
 			/** Saturation color intent. */
 			public static readonly SATURATIONINTENT: Adobe.Illustrator.PrintColorIntent;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

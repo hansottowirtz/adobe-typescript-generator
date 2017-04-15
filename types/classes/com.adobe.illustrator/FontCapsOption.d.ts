@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class FontCapsOption extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -12,7 +13,7 @@ declare namespace Adobe {
 			/** Small caps. */
 			public static readonly SMALLCAPS: Adobe.Illustrator.FontCapsOption;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

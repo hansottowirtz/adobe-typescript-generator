@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class FiltersPreservePolicy extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -10,7 +11,7 @@ declare namespace Adobe {
 			/** Preserve the appearance of filters by rasterizing it. */
 			public static readonly RASTERIZEFILTERS: Adobe.Illustrator.FiltersPreservePolicy;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

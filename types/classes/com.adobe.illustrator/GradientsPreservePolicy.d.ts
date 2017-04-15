@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class GradientsPreservePolicy extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -8,7 +9,7 @@ declare namespace Adobe {
 			/** Preserve the apperance of gradients by rasterizing it. */
 			public static readonly RASTERIZEGRADIENTS: Adobe.Illustrator.GradientsPreservePolicy;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class AutoCADRasterFormat extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -6,7 +7,7 @@ declare namespace Adobe {
 			public static readonly JPEG: Adobe.Illustrator.AutoCADRasterFormat;
 			public static readonly PNG: Adobe.Illustrator.AutoCADRasterFormat;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

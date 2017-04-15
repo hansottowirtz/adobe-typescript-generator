@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class JavaScriptExecutionMode extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -16,7 +17,7 @@ declare namespace Adobe {
 			/** Show the JavaScript debugger is a runtime error occurs. */
 			public static readonly OnRuntimeError: Adobe.Illustrator.JavaScriptExecutionMode;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

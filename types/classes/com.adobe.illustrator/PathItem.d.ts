@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PathItem extends Adobe.Illustrator.PageItem {
@@ -53,6 +54,8 @@ declare namespace Adobe {
 			/**
 			 * Set the path using the provided array of path point (x, y) 
 			 * coordinate pairs.
+			 * @param {any} pathPoints - Array of (x, y) coordinate pairs 
+			 * for the path points.
 			 */
 			public setEntirePath(pathPoints: any): void;
 		}

@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class ColorDitherMethod extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -9,7 +10,7 @@ declare namespace Adobe {
 			public static readonly NOREDUCTION: Adobe.Illustrator.ColorDitherMethod;
 			public static readonly PATTERNDITHER: Adobe.Illustrator.ColorDitherMethod;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

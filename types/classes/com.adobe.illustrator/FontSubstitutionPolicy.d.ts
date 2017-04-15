@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class FontSubstitutionPolicy extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -10,7 +11,7 @@ declare namespace Adobe {
 			/** Substitute tint font. */
 			public static readonly SUBSTITUTETINT: Adobe.Illustrator.FontSubstitutionPolicy;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

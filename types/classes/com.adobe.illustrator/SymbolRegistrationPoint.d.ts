@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class SymbolRegistrationPoint extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -22,7 +23,7 @@ declare namespace Adobe {
 			/** top right point of symbol bounding box */
 			public static readonly SYMBOLTOPRIGHTPOINT: Adobe.Illustrator.SymbolRegistrationPoint;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

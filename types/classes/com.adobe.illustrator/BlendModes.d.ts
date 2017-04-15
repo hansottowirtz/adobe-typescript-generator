@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class BlendModes extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -20,7 +21,7 @@ declare namespace Adobe {
 			public static readonly SCREEN: Adobe.Illustrator.BlendModes;
 			public static readonly SOFTLIGHT: Adobe.Illustrator.BlendModes;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

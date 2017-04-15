@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class ColorConversion extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -16,7 +17,7 @@ declare namespace Adobe {
 			/** Preserves color data as is. */
 			public static readonly None: Adobe.Illustrator.ColorConversion;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

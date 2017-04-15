@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class Compatibility extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -14,7 +15,7 @@ declare namespace Adobe {
 			public static readonly ILLUSTRATOR9: Adobe.Illustrator.Compatibility;
 			public static readonly JAPANESEVERSION3: Adobe.Illustrator.Compatibility;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

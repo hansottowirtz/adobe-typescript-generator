@@ -18,7 +18,6 @@ class Package
     dependencies_path = "#{AdobeCssdkToDts.root}/types/dependencies/#{@name}/dependencies.d.ts"
     if File.file? dependencies_path
       File.open(path, 'a') do |f|
-        f.flock(File::LOCK_EX)
         f.write "/// <reference path=\"#{dependencies_path}\"/>\n"
       end
     end
@@ -30,7 +29,6 @@ class Package
 
   def write(klass)
     File.open(path, 'a') do |f|
-      f.flock(File::LOCK_EX)
       f.write "/// <reference path=\"#{klass.path}\"/>\n"
     end
   end

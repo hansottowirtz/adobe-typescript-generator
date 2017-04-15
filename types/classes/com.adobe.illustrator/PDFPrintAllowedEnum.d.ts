@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PDFPrintAllowedEnum extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -14,7 +15,7 @@ declare namespace Adobe {
 			/** Printing allowed none - 40bit. */
 			public static readonly PRINT40NONE: Adobe.Illustrator.PDFPrintAllowedEnum;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

@@ -3,6 +3,7 @@ require 'httparty'
 require 'nokogiri'
 require 'parallel'
 require 'pry'
+require 'ruby-progressbar'
 require_relative './doc'
 require_relative './doc_tag'
 require_relative './documentable'
@@ -37,13 +38,29 @@ module AdobeCssdkToDts
       Downloader.download(config, "#{root}/html")
     end
 
-    def convert_all
-      paths = Dir["#{root}/html/classes/**/*.html"]
+    def convert_all(selector = nil)
+      paths = Dir["#{root}/html/classes/**/*.html"].shuffle
+       if selector && !selector.empty?
+        paths.select! do |path|
+          path.include?(selector) ||
+          path.include?('com.adobe.csawlib/') ||
+          path.include?('com.adobe.csawlib.misc/')
+        end
+      end
+
       # Parallel.each(paths, progress: true) do |path|
       #   convert(path)
       # end
+      progressbar = ProgressBar.create(
+        total: paths.length,
+        # format: "%a %b\u{15E7}%i %p%% %t",
+        format: "%a %b\u{02A6}%i %p%% %t",
+        progress_mark: ' ',
+        remainder_mark: "\u{FF65}"
+      )
       paths.each do |path|
         convert(path)
+        progressbar.increment
       end
     end
 

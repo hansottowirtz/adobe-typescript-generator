@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class TracingOptions extends Adobe.CsawlibIllustrator.IllustratorHostObject {
@@ -57,11 +58,15 @@ declare namespace Adobe {
 			public viewRaster: Adobe.Illustrator.ViewRasterType;
 			/** The vector visualization mode. */
 			public viewVector: Adobe.Illustrator.ViewVectorType;
-			/** Load options from preset. */
+			/**
+			 * Load options from preset.
+			 * @param {string} presetName - The name of the preset.
+			 */
 			public loadFromPreset(presetName: string): boolean;
 			/**
 			 * Store options to a preset. Will overwrite an existing 
 			 * (unlocked) preset if names match.
+			 * @param {string} presetName - The name of the preset.
 			 */
 			public storeToPreset(presetName: string): boolean;
 		}

@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PerspectiveGridPlaneType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -12,7 +13,7 @@ declare namespace Adobe {
 			/** Perspective Grid Right Plane Type. */
 			public static readonly RIGHTPLANE: Adobe.Illustrator.PerspectiveGridPlaneType;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

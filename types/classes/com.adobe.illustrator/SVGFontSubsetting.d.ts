@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class SVGFontSubsetting extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -12,7 +13,7 @@ declare namespace Adobe {
 			/** Use system fonts. */
 			public static readonly None: Adobe.Illustrator.SVGFontSubsetting;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

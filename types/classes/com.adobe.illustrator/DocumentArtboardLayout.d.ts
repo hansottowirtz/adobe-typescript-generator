@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class DocumentArtboardLayout extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -23,7 +24,7 @@ declare namespace Adobe {
 			/** Arrange artboards in a single row. */
 			public static readonly Row: Adobe.Illustrator.DocumentArtboardLayout;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

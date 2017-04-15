@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class SVGDTDVersion extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -16,7 +17,7 @@ declare namespace Adobe {
 			/** SVG Tiny 1.2. */
 			public static readonly SVGTINY1_2: Adobe.Illustrator.SVGDTDVersion;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

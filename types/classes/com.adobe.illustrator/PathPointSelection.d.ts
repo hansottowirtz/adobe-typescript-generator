@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PathPointSelection extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -14,7 +15,7 @@ declare namespace Adobe {
 			/** Right direction point selected. */
 			public static readonly RIGHTDIRECTION: Adobe.Illustrator.PathPointSelection;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

@@ -17,7 +17,7 @@ class Klass < Documentable
     c = Chunk.new
     c.puts 'class '
     c.print @name
-    if @superklass_name
+    if @superklass_name && @superklass_name != 'any'
       c.print " extends #{@superklass_name}"
     end
     c.print ' {'

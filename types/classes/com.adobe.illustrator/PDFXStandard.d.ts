@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class PDFXStandard extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -40,7 +41,7 @@ declare namespace Adobe {
 			/** The user isn't complying with any PDF standard. */
 			public static readonly PDFXNONE: Adobe.Illustrator.PDFXStandard;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

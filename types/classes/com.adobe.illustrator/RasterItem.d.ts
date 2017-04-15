@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class RasterItem extends Adobe.Illustrator.PageItem {
@@ -31,8 +32,12 @@ declare namespace Adobe {
 			public readonly status: Adobe.Illustrator.RasterLinkState;
 			/** Is the raster art transparent? */
 			public readonly transparent: boolean;
-			/** Colorize the RasterItem with a CMYK or RGB Color. */
-			public colorize(rasterColor: Color): void;
+			/**
+			 * Colorize the RasterItem with a CMYK or RGB Color.
+			 * @param {Adobe.Illustrator.Color} rasterColor - The color to 
+			 * use for coloring the TIFF image.
+			 */
+			public colorize(rasterColor: Adobe.Illustrator.Color): void;
 			/**
 			 * Trace this raster object using default options. Reorders 
 			 * this raster to the source art.

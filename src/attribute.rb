@@ -77,6 +77,10 @@ class Attribute < Documentable
     c
   end
 
+  def doc_tags
+    if method? then @arguments.collect(&:doc_tag) else [] end
+  end
+
   def chunk
     Chunk.join(doc, declaration)
   end

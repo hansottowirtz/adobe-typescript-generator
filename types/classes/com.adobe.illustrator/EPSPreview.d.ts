@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class EPSPreview extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -16,7 +17,7 @@ declare namespace Adobe {
 			/** Transparent color PC preview (8 or later) */
 			public static readonly TRANSPARENTCOLORTIFF: Adobe.Illustrator.EPSPreview;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

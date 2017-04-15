@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class ColorType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -11,7 +12,7 @@ declare namespace Adobe {
 			public static readonly RGB: Adobe.Illustrator.ColorType;
 			public static readonly SPOT: Adobe.Illustrator.ColorType;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

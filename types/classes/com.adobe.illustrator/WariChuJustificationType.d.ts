@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class WariChuJustificationType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
@@ -12,7 +13,7 @@ declare namespace Adobe {
 			public static readonly WARICHUFULLJUSTIFYLASTLINELEFT: Adobe.Illustrator.WariChuJustificationType;
 			public static readonly WARICHUFULLJUSTIFYLASTLINERIGHT: Adobe.Illustrator.WariChuJustificationType;
 			/** Constructor */
-			public constructor(ho: HostObject, _enum: number);
+			public constructor();
 		}
 	}
 }

@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class TextPath extends Adobe.CsawlibIllustrator.IllustratorHostObject {
@@ -68,7 +69,11 @@ declare namespace Adobe {
 			public top: number;
 			/** The width of the text path. ( 0.0 - 16348.0 ) */
 			public width: number;
-			/** Set the path using the provided array of anchor points. */
+			/**
+			 * Set the path using the provided array of anchor points.
+			 * @param {any} pathPoints - Array of anchor values for the 
+			 * path points.
+			 */
 			public setEntirePath(pathPoints: any): void;
 		}
 	}

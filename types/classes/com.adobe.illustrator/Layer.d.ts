@@ -1,4 +1,5 @@
 /// <reference path="/Users/otto/Code/projects/adobe-cssdk-to-dts/types/namespaces/com.adobe.illustrator/index.d.ts"/>
+
 declare namespace Adobe {
 	namespace Illustrator {
 		class Layer extends Adobe.CsawlibIllustrator.IllustratorHostObject {
@@ -61,12 +62,21 @@ declare namespace Adobe {
 			public visible: boolean;
 			/** The drawing order of the layer. */
 			public readonly zOrderPosition: number;
-			/** move the object */
-			public move(relativeObject: any, insertionLocation: ElementPlacement): void;
+			/**
+			 * move the object
+			 * @param {any} relativeObject - 
+			 * @param {Adobe.Illustrator.ElementPlacement} 
+			 * insertionLocation - 
+			 */
+			public move(relativeObject: any, insertionLocation: Adobe.Illustrator.ElementPlacement): void;
 			/** delete the object */
 			public remove(): void;
-			/** Arranges the layer relative to other layers. */
-			public zOrder(zOrderCmd: ZOrderMethod): void;
+			/**
+			 * Arranges the layer relative to other layers.
+			 * @param {Adobe.Illustrator.ZOrderMethod} zOrderCmd - How to 
+			 * arrange the layer.
+			 */
+			public zOrder(zOrderCmd: Adobe.Illustrator.ZOrderMethod): void;
 		}
 	}
 }
