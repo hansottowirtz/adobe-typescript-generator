@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new GotoLastPageBehavior.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new GotoLastPageBehavior (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.GotoLastPageBehavior;
@@ -24,27 +24,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoLastPageBehavior with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.GotoLastPageBehavior;
 			/**
 			 * Returns the GotoLastPageBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.GotoLastPageBehavior;
 			/**
 			 * Returns the GotoLastPageBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.GotoLastPageBehavior;
 			/**
 			 * Returns the GotoLastPageBehaviors within the specified 
 			 * range.
-			 * @param {any} fromParam - The GotoLastPageBehavior, index, or 
+			 * @param {any} fromParam The GotoLastPageBehavior, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * GotoLastPageBehavior, Long Integer or String.
-			 * @param {any} toParam - The GotoLastPageBehavior, index, or 
+			 * @param {any} toParam The GotoLastPageBehavior, index, or 
 			 * name at the end of the range. Can accept: 
 			 * GotoLastPageBehavior, Long Integer or String.
 			 */
@@ -56,7 +56,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoLastPageBehavior whose index follows the 
 			 * specified GotoLastPageBehavior in the collection.
-			 * @param {GotoLastPageBehavior} objParam - The 
+			 * @param {GotoLastPageBehavior} objParam The 
 			 * GotoLastPageBehavior whose index comes before the desired 
 			 * GotoLastPageBehavior. 
 			 */
@@ -74,7 +74,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoLastPageBehavior with the index previous to 
 			 * the specified index.
-			 * @param {GotoLastPageBehavior} objParam - The index of the 
+			 * @param {GotoLastPageBehavior} objParam The index of the 
 			 * GotoLastPageBehavior that follows the desired 
 			 * GotoLastPageBehavior.
 			 */

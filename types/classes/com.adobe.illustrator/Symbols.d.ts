@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -8,11 +8,11 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * create a symbol
-			 * @param {Adobe.Illustrator.PageItem} sourceArt - the art item 
+			 * @param {Adobe.Illustrator.PageItem} sourceArt the art item 
 			 * from which to make this symbol
 			 * @param {Adobe.Illustrator.SymbolRegistrationPoint} 
-			 * registrationPoint - the symbol registration point. ( 
-			 * default: SymbolRegistrationPoint.SYMBOLCENTERPOINT )
+			 * registrationPoint the symbol registration point. ( default: 
+			 * SymbolRegistrationPoint.SYMBOLCENTERPOINT )
 			 */
 			public add(sourceArt: Adobe.Illustrator.PageItem, registrationPoint: Adobe.Illustrator.SymbolRegistrationPoint): Adobe.Illustrator.Symbol;
 			/**

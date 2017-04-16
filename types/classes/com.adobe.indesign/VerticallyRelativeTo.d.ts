@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -20,6 +20,27 @@ declare namespace Adobe {
 			 * of the text or table column.
 			 */
 			public static readonly columnEdge: Adobe.Indesign.VerticallyRelativeTo;
+			/** Align the anchored object to the bottom of the embox. */
+			public static readonly EMBOX_BOTTOM: Adobe.Indesign.VerticallyRelativeTo;
+			/** Align the anchored object to the middle of the embox. */
+			public static readonly EMBOX_MIDDLE: Adobe.Indesign.VerticallyRelativeTo;
+			/** Align the anchored object to the top of the embox. */
+			public static readonly EMBOX_TOP: Adobe.Indesign.VerticallyRelativeTo;
+			/**
+			 * Alias for EMBOX_BOTTOM. Align the anchored object to the 
+			 * bottom of the embox.
+			 */
+			public static readonly emboxBottom: Adobe.Indesign.VerticallyRelativeTo;
+			/**
+			 * Alias for EMBOX_MIDDLE. Align the anchored object to the 
+			 * middle of the embox.
+			 */
+			public static readonly emboxMiddle: Adobe.Indesign.VerticallyRelativeTo;
+			/**
+			 * Alias for EMBOX_TOP. Align the anchored object to the top of 
+			 * the embox.
+			 */
+			public static readonly emboxTop: Adobe.Indesign.VerticallyRelativeTo;
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/**
 			 * Align the anchored object to the top of the tallest letters 

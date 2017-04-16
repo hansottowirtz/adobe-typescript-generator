@@ -12,7 +12,7 @@ class Attribute < Documentable
     @name = name
     @kind = kind
     @readonly = readonly
-    @description = description.gsub(/ *\r\n\t\t */, ' ').strip unless description.empty?
+    @description = description
     @type = type
     @override = override
     @static = static
@@ -83,5 +83,9 @@ class Attribute < Documentable
 
   def chunk
     Chunk.join(doc, declaration)
+  end
+
+  def const_chunk
+    Chunk.join(doc, "const #{@name}: #{@type};")
   end
 end

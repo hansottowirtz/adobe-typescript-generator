@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -35,7 +35,7 @@ declare namespace Adobe {
 			/** custom paper's minimum width offset */
 			public minPaperWidthOffset: number;
 			/** the list of supported paper sizes */
-			public paperSizes: any;
+			public paperSizes: any[];
 			/** the PostScript level */
 			public postScriptLevel: Adobe.Illustrator.PrinterPostScriptLevelEnum;
 			/** the printer type */

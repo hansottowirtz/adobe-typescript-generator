@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="IDScriptingEventAdapter,com.adobe.cshostadapter.IDScriptingEventAdapter,addEventListener,addEventListener,addEventListener,addEventListenerToObject,addEventListenerToObject,createAppEvent,createAppEvent,createAppEvent,dispatchToEventAdapter,getInstance,getInstance,getInstance,getInstance,listEvents,pingPlugIn,removeEventListener,removeEventListener,removeEventListener,removeEventListenerFromObject,removeEventListenerFromObject"><title>com.adobe.cshostadapter.IDScriptingEventAdapter</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'IDScriptingEventAdapter - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/adobe/cshostadapter/IDScriptingEventAdapter.html&amp;com/adobe/cshostadapter/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">IDScriptingEventAdapter</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("IDScriptingEventAdapter"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.adobe.cshostadapter</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  IDScriptingEventAdapter</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">IDScriptingEventAdapter  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>This class provides APIs for registering and unregistering 
+	 Actionscript-based event listeners for InDesign events.</p>
+	 
+	              <p>The InDesign CSAW Library currently only allows the adding of event 
+	 listeners written in JavaScript. This class enables listeners to be 
+	 registered in pure Actionscript, by abstracting over the process of 
+	 defining JavaScript listener functions.</p>
+	 
+	              <p>This class should not be constructed directly. Instead, use the 
+	 <code>getInstance</code> method to obtain a reference to the singleton
+	 IDScriptingEventAdapter instance.</p>
+	 
+	              <p>Use the <code>addEventListener</code> and 
+	 <code>removeEventListener</code> methods to add or remove event 
+	 listeners to the root application object of the InDesign scripting DOM.</p>  
+	 
+	              <p>For example, to add a "new document" listener: </p>
+	 
+	              <p>
+                  <code>IDScriptingEventAdapter.getInstance().addEventListener(Event.AFTER_NEW, listener);</code>
+               </p>
+	 
+	              <p>where <code>listener</code> has the following method signature: </p>
+	 
+	              <p>
+                  <code>function listener(event:com.adobe.indesign.Event):void</code>
+               </p>
+	 
+	              <p>When a new document is opened, the listener function will be called, 
+	 parameterised an Event object representing the event which triggered the 
+	 call.</p> 
+	 
+	              <p>See <code>com.adobe.indesign.Event</code> and its subclasses in the 
+	 InDesign CSAW Library for other allowable event types.</p>
+	 
+	              <p>Use the <code>addEventListenerToObject</code> and 
+	 <code>removeEventListenerFromObject</code> functions to add or remove 
+	 event listeners to and from particular InDesign objects. For example, 
+	 to add a "document closed" listener to a document: </p> 
+	 
+	              <p>
+                  <code>var doc:Document = InDesign.app.activeDocument; 
+	 IDScriptingEventAdapter.getInstance().addEventListenerToObject(DocumentEvent.AFTER_CLOSE, listener, doc);</code>
+               </p>
+	 
+	              <p>Note that listeners registered through this class are called 
+	 synchronously: InDesign will not continue to execute until all listeners 
+	 for an event have completed execution.</p>
+	 
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addEventListener()" class="signatureLink">addEventListener</a>(eventType:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">[override] 
+		 Adds a listener for the specified event to the application object
+		 at the root of the InDesign scripting DOM.
+		 
+		 See com.adobe.indesign.Event and its subclasses for 
+		 allowable event types.
+		 
+		 If useCapture is set to true, the event may be handled by event listeners 
+		 registered to scripting objects above the target object of the event during 
+		 the capturing phase of event propagation.</div></td><td class="summaryTableOwnerCol">IDScriptingEventAdapter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addEventListenerToObject()" class="signatureLink">addEventListenerToObject</a>(eventType:String, listener:Function, idObject:CSHostObject, useCapture:Boolean = false):EventListener</div><div class="summaryTableDescription">
+		 Adds a listener for the specified event to the specified InDesign 
+		 object.</div></td><td class="summaryTableOwnerCol">IDScriptingEventAdapter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getInstance()" class="signatureLink">getInstance</a>():<a href="../../../com/adobe/cshostadapter/IDScriptingEventAdapter.html">IDScriptingEventAdapter</a></div><div class="summaryTableDescription">[static] 
+		 Returns the IDScriptingEventAdapter instance.</div></td><td class="summaryTableOwnerCol">IDScriptingEventAdapter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeEventListener()" class="signatureLink">removeEventListener</a>(eventType:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">[override] 
+		 Removes the specified listener for the specified event from the 
+		 application object at the root of the InDesign scripting DOM.
+		 
+		 </div></td><td class="summaryTableOwnerCol">IDScriptingEventAdapter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeEventListenerFromObject()" class="signatureLink">removeEventListenerFromObject</a>(eventType:String, listener:Function, idObject:CSHostObject, useCapture:Boolean = false):Boolean</div><div class="summaryTableDescription">
+		 Removes the specified listener for the specified event from the 
+		 given InDesign object.
+		 
+		 Returns true if the event listener was removed 
+		 successfully, else returns false.</div></td><td class="summaryTableOwnerCol">IDScriptingEventAdapter</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addEventListener()"></a><a name="addEventListener(String,Function,Boolean,int,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code>override public function addEventListener(eventType:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</code><p></p><p></p><p>
+		 <p>Adds a listener for the specified event to the application object
+		 at the root of the InDesign scripting DOM.</p>
+		 
+		 <p>See <code>com.adobe.indesign.Event</code> and its subclasses for 
+		 allowable event types.</p>
+		 
+		 <p>If useCapture is set to true, the event may be handled by event listeners 
+		 registered to scripting objects above the target object of the event during 
+		 the capturing phase of event propagation. This means an event listener on 
+		 the application, for example, can respond to a document event before an 
+		 eventListener is triggered.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">eventType</span>:String</code> &mdash; The unique string identifier of the event to listen for
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener function that processes the event 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; True to allow the event to be handled in the capture
+		 phase of event propogation 
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">priority</span>:int</code> (default = <code>0</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useWeakReference</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></p></div><a name="addEventListenerToObject()"></a><a name="addEventListenerToObject(String,Function,com.adobe.csawlib.CSHostObject,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addEventListenerToObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addEventListenerToObject(eventType:String, listener:Function, idObject:CSHostObject, useCapture:Boolean = false):EventListener</code><p></p><p></p><p>
+		 <p>Adds a listener for the specified event to the specified InDesign 
+		 object. Returns an <code>com.adobe.indesign.EventListener</code> 
+		 instance representing the added event listener.</p>
+		 
+		 <p>See <code>com.adobe.indesign.Event</code> and its subclasses for 
+		 allowable event types.</p>
+		 
+		 <p>The idObject parameter must be an InDesign CSAWLib class instance 
+		 to which event listeners can be added. For example, an instance of 
+		 <code>com.adobe.indesign.Document</code>. If idObject is <code>null</code>, 
+		 the event listener is added to the application object at the root of 
+		 the InDesign scripting DOM.</p>
+		 
+		 <p>If useCapture is set to true, the event may be handled by event listeners 
+		 registered to scripting objects above the target object of the event during 
+		 the capturing phase of event propagation. This means an event listener on 
+		 the application, for example, can respond to a document event before an 
+		 eventListener is triggered.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">eventType</span>:String</code> &mdash; The unique string identifier of the event to listen for
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener function that processes the event 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">idObject</span>:CSHostObject</code> &mdash; The InDesign object to add the event listener to
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; True to allow the event to be handled in the capture
+		 phase of event propogation
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>EventListener</code> &mdash; An <code>EventListener</code> representing the added event listener 
+		 
+		 </td></tr></table></div><a name="getInstance()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getInstance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function getInstance():<a href="../../../com/adobe/cshostadapter/IDScriptingEventAdapter.html">IDScriptingEventAdapter</a></code><p></p><p></p><p>
+		 Returns the IDScriptingEventAdapter instance.
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../com/adobe/cshostadapter/IDScriptingEventAdapter.html">IDScriptingEventAdapter</a></code> &mdash; the IDScriptingEventAdapter instance
+		 </td></tr></table></div><a name="removeEventListener()"></a><a name="removeEventListener(String,Function,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>override public function removeEventListener(eventType:String, listener:Function, useCapture:Boolean = false):void</code><p></p><p></p><p>
+		 <p>Removes the specified listener for the specified event from the 
+		 application object at the root of the InDesign scripting DOM.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">eventType</span>:String</code> &mdash; The unique string identifier of the event to stop listening for
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener function to stop listening with
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Whether the useCapture option was specified when the listener
+		 was added
+		 </td></tr></table></p></div><a name="removeEventListenerFromObject()"></a><a name="removeEventListenerFromObject(String,Function,com.adobe.csawlib.CSHostObject,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeEventListenerFromObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeEventListenerFromObject(eventType:String, listener:Function, idObject:CSHostObject, useCapture:Boolean = false):Boolean</code><p></p><p></p><p>
+		 <p>Removes the specified listener for the specified event from the 
+		 given InDesign object.</p>
+		 
+		 <p>Returns <code>true</code> if the event listener was removed 
+		 successfully, else returns <code>false</code>. Failure may occur if
+		 for example a listener is removed without ever being added.</p>
+		 
+		 <p>If idObject is <code>null</code>, the event listener is removed 
+		 from the application object at the root of the InDesign scripting 
+		 DOM.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">eventType</span>:String</code> &mdash; The unique string identifier of the event to stop listening for
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The listener function to stop listening with
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">idObject</span>:CSHostObject</code> &mdash; Whether the useCapture option was specified when the listener
+		 was added
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the event listener was removed successfully
+		 </td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright © 2010 Adobe Systems Inc. All Rights Reserved.</footer><br/>Thu May 13 2010, 08:12 PM +01:00  </center></div></body></html><!--Copyright © 2010 Adobe Systems Inc. All Rights Reserved.<br/>Thu May 13 2010, 08:12 PM +01:00  -->

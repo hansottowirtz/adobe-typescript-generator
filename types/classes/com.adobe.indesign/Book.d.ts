@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,6 +15,8 @@ declare namespace Adobe {
 			public automaticPagination: boolean;
 			/** A collection of book content objects. */
 			public readonly bookContents: Adobe.Indesign.BookContents;
+			/** EPub export preference settings. */
+			public readonly epubExportPreferences: Adobe.Indesign.EPubExportPreference;
 			/** A collection of event listeners. */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
 			/** A collection of events. */
@@ -105,56 +107,56 @@ declare namespace Adobe {
 			public synchronizeTrapStyle: boolean;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerBook(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Close the Book
-			 * @param {SaveOptions} savingParam - Whether to save changes 
+			 * @param {SaveOptions} savingParam Whether to save changes 
 			 * before closing the Book (Optional)
-			 * @param {File} savingInParam - The file in which to save the 
+			 * @param {File} savingInParam The file in which to save the 
 			 * Book (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version (Optional)
-			 * @param {boolean} forceSaveParam - Forcibly save a version 
+			 * @param {boolean} forceSaveParam Forcibly save a version 
 			 * (Optional)
 			 */
 			public close(savingParam: SaveOptions, savingInParam: File, versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Exports the book to a file.
-			 * @param {any} formatParam - The export format, specified as 
-			 * an enumeration value or as an extension that appears in the 
+			 * @param {any} formatParam The export format, specified as an 
+			 * enumeration value or as an extension that appears in the 
 			 * Save as type or Format menu in the Export dialog. Can 
 			 * accept: ExportFormat enumerator or String.
-			 * @param {File} toParam - The file to which to export the 
-			 * book. (Optional)
-			 * @param {boolean} showingOptionsParam - Used to specify if 
-			 * the PDF Export Options Dialog needs to be shown or not 
+			 * @param {File} toParam The file to which to export the book. 
 			 * (Optional)
-			 * @param {PDFExportPreset} usingParam - Used to specify the 
+			 * @param {boolean} showingOptionsParam Used to specify if the 
+			 * PDF Export Options Dialog needs to be shown or not 
+			 * (Optional)
+			 * @param {PDFExportPreset} usingParam Used to specify the 
 			 * presets for the export which can be the object of the preset 
 			 * type, enumeration for existing presets or user defined 
 			 * presets, or a string naming the preset to be used, but in 
 			 * case Showing Options is true, the preset specified in the 
 			 * Export Dialog will over ride this parameter (Optional)
-			 * @param {any[]} whichDocumentsParam - Used to specify a list 
-			 * of book content references, from the current book, where the 
+			 * @param {any[]} whichDocumentsParam Used to specify a list of 
+			 * book content references, from the current book, where the 
 			 * list may contain duplicate entries and if the list is not 
 			 * specified then the entire book contents shall be exported 
 			 * (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public exportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, whichDocumentsParam: any[], versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -165,59 +167,59 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Packages the document.
-			 * @param {File} toParam - The folder, alias, or path in which 
-			 * to place the packaged files.
-			 * @param {boolean} copyingFontsParam - If true, copies fonts 
+			 * @param {File} toParam The folder, alias, or path in which to 
+			 * place the packaged files.
+			 * @param {boolean} copyingFontsParam If true, copies fonts 
 			 * used in the document to the package folder.
-			 * @param {boolean} copyingLinkedGraphicsParam - If true, 
-			 * copies linked graphics files to the package folder.
-			 * @param {boolean} copyingProfilesParam - If true, copies 
-			 * color profiles to the package folder.
-			 * @param {boolean} updatingGraphicsParam - If true, updates 
+			 * @param {boolean} copyingLinkedGraphicsParam If true, copies 
+			 * linked graphics files to the package folder.
+			 * @param {boolean} copyingProfilesParam If true, copies color 
+			 * profiles to the package folder.
+			 * @param {boolean} updatingGraphicsParam If true, updates 
 			 * graphics links to the package folder. 
-			 * @param {boolean} includingHiddenLayersParam - If true, 
-			 * copies fonts and links from hidden layers to the package.
-			 * @param {boolean} ignorePreflightErrorsParam - If true, 
-			 * ignores preflight errors and proceeds with the packaging. If 
-			 * false, cancels the packaging when errors exist.
-			 * @param {boolean} creatingReportParam - If true, creates a 
+			 * @param {boolean} includingHiddenLayersParam If true, copies 
+			 * fonts and links from hidden layers to the package.
+			 * @param {boolean} ignorePreflightErrorsParam If true, ignores 
+			 * preflight errors and proceeds with the packaging. If false, 
+			 * cancels the packaging when errors exist.
+			 * @param {boolean} creatingReportParam If true, creates a 
 			 * package report that includes printing instructions, print 
 			 * settings, lists of fonts, links and required inks, and other 
 			 * information.
-			 * @param {string} versionCommentsParam - The comments for the 
+			 * @param {string} versionCommentsParam The comments for the 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public packageForPrint(toParam: File, copyingFontsParam: boolean, copyingLinkedGraphicsParam: boolean, copyingProfilesParam: boolean, updatingGraphicsParam: boolean, includingHiddenLayersParam: boolean, ignorePreflightErrorsParam: boolean, creatingReportParam: boolean, versionCommentsParam: string, forceSaveParam: boolean): boolean;
 			/**
 			 * Preflight a book and optionally save the resulting report.
-			 * @param {File} toParam - The preflight report to save to. 
+			 * @param {File} toParam The preflight report to save to. 
 			 * (Optional)
-			 * @param {boolean} autoOpenParam - If true, automatically open 
+			 * @param {boolean} autoOpenParam If true, automatically open 
 			 * the report after creation. (Optional)
 			 */
 			public preflight(toParam: File, autoOpenParam: boolean): void;
 			/**
 			 * Prints the Book(s).
-			 * @param {boolean} printDialogParam - Whether to invoke the 
+			 * @param {boolean} printDialogParam Whether to invoke the 
 			 * print dialog (Optional)
-			 * @param {any} usingParam - Printer preset to use. Can accept: 
+			 * @param {any} usingParam Printer preset to use. Can accept: 
 			 * PrinterPresetTypes enumerator or PrinterPreset. (Optional)
 			 */
 			public print(printDialogParam: boolean, usingParam: any): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerBook(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -225,13 +227,13 @@ declare namespace Adobe {
 			public repaginate(): void;
 			/**
 			 * Saves the book.
-			 * @param {File} toParam - The file path. Note: Required only 
-			 * if the book has not been previously saved. If the book has 
+			 * @param {File} toParam The file path. Note: Required only if 
+			 * the book has not been previously saved. If the book has 
 			 * previously been saved, specifying a path saves a copy and 
 			 * closes the original book. (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public save(toParam: File, versionCommentsParam: string, forceSaveParam: boolean): void;

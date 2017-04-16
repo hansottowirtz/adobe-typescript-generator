@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new DialogColumn.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new DialogColumn (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.DialogColumn;
@@ -21,23 +21,23 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.DialogColumn;
 			/**
 			 * Returns the DialogColumn with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.DialogColumn;
 			/**
 			 * Returns the DialogColumn with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.DialogColumn;
 			/**
 			 * Returns the DialogColumns within the specified range.
-			 * @param {any} fromParam - The DialogColumn, index, or name at 
+			 * @param {any} fromParam The DialogColumn, index, or name at 
 			 * the beginning of the range. Can accept: DialogColumn, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The DialogColumn, index, or name at 
-			 * the end of the range. Can accept: DialogColumn, Long Integer 
-			 * or String.
+			 * @param {any} toParam The DialogColumn, index, or name at the 
+			 * end of the range. Can accept: DialogColumn, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last DialogColumn in the collection. */
@@ -47,8 +47,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the DialogColumn whose index follows the specified 
 			 * DialogColumn in the collection.
-			 * @param {DialogColumn} objParam - The DialogColumn whose 
-			 * index comes before the desired DialogColumn. 
+			 * @param {DialogColumn} objParam The DialogColumn whose index 
+			 * comes before the desired DialogColumn. 
 			 */
 			public nextItem(objParam: DialogColumn): Adobe.Indesign.DialogColumn;
 			/**
@@ -64,8 +64,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the DialogColumn with the index previous to the 
 			 * specified index.
-			 * @param {DialogColumn} objParam - The index of the 
-			 * DialogColumn that follows the desired DialogColumn.
+			 * @param {DialogColumn} objParam The index of the DialogColumn 
+			 * that follows the desired DialogColumn.
 			 */
 			public previousItem(objParam: DialogColumn): Adobe.Indesign.DialogColumn;
 		}

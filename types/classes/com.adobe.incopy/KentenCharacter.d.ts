@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {

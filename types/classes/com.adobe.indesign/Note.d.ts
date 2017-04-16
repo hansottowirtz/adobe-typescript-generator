@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -68,10 +68,10 @@ declare namespace Adobe {
 			public readonly words: Adobe.Indesign.Words;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerNote(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -79,7 +79,7 @@ declare namespace Adobe {
 			public convertToText(): void;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -90,15 +90,15 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Moves the note to the specified location.
-			 * @param {LocationOptions} toParam - The new location relative 
+			 * @param {LocationOptions} toParam The new location relative 
 			 * to the reference object or within the containing object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. 
 			 * Can accept: Text or Story. (Optional)
 			 */
@@ -107,10 +107,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerNote(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

@@ -1,18 +1,18 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** A point on a path. */
+		/** A point on a path */
 		class PathPoint extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** The position (coordinates) of the anchor point. */
+			/** the position (coordinates) of the anchor point */
 			public anchor: any[];
-			/** Location of the left direction point (in position) */
+			/** location of the left direction point (in position) */
 			public leftDirection: any[];
-			/** The type of point: smooth/corner. */
+			/** the type of point: smooth/corner */
 			public pointType: Adobe.Illustrator.PointType;
-			/** Location of the right direction point (out position) */
+			/** location of the right direction point (out position) */
 			public rightDirection: any[];
-			/** The path point selected state. */
+			/** the path point selected state */
 			public selected: Adobe.Illustrator.PathPointSelection;
 			/** delete the object */
 			public remove(): void;

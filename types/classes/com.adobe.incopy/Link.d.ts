@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -130,28 +130,28 @@ declare namespace Adobe {
 			public readonly versionState: Adobe.Incopy.VersionState;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerLink(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Check in to Version Cue.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version (Optional)
-			 * @param {boolean} forceSaveParam - Forcibly save a version 
+			 * @param {boolean} forceSaveParam Forcibly save a version 
 			 * (Optional)
 			 */
 			public checkIn(versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Copies the link file to the specified location.
-			 * @param {File} toParam - The file or folder to which to copy 
+			 * @param {File} toParam The file or folder to which to copy 
 			 * the file.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public copyLink(toParam: File, versionCommentsParam: string, forceSaveParam: boolean): void;
@@ -162,7 +162,7 @@ declare namespace Adobe {
 			public editOriginal(): void;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -173,22 +173,22 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Points the link to a new source file.
-			 * @param {any} toParam - The full path name of the new source 
+			 * @param {any} toParam The full path name of the new source 
 			 * file. Can accept: File or String.
 			 */
 			public relink(toParam: any): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerLink(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -208,11 +208,11 @@ declare namespace Adobe {
 			 * a link to the original source file; if a folder is 
 			 * specified, copies the file to the folder and creates a link 
 			 * to the copied file.
-			 * @param {File} toParam - The folder to which to copy the 
+			 * @param {File} toParam The folder to which to copy the 
 			 * unembedded file. (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public unembed(toParam: File, versionCommentsParam: string, forceSaveParam: boolean): void;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -400,38 +400,38 @@ declare namespace Adobe {
 			public writingDirection: Adobe.Incopy.HorizontalOrVertical;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerColumn(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
@@ -442,25 +442,25 @@ declare namespace Adobe {
 			public createOutlines(): any;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -471,7 +471,7 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Merges the cells.
-			 * @param {any} withParam - The cell(s) to merge with. Can 
+			 * @param {any} withParam The cell(s) to merge with. Can 
 			 * accept: Cell, Row or Column. (Optional)
 			 */
 			public merge(withParam: any): Adobe.Incopy.Cell;
@@ -482,9 +482,9 @@ declare namespace Adobe {
 			 * Columns have a uniform size. Note: The maximum or minimum 
 			 * height or width specified for some of the cells in the range 
 			 * may prevent them from being exactly even.
-			 * @param {HorizontalOrVertical} usingParam - The direction in 
+			 * @param {HorizontalOrVertical} usingParam The direction in 
 			 * which to redistribute.
-			 * @param {any} thruParam - The last Column in the range. Can 
+			 * @param {any} thruParam The last Column in the range. Can 
 			 * accept: Cell, Column or Row. (Optional)
 			 */
 			public redistribute(usingParam: HorizontalOrVertical, thruParam: any): void;
@@ -492,16 +492,16 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerColumn(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Splits the cell along the specified axis.
-			 * @param {HorizontalOrVertical} usingParam - The direction in 
+			 * @param {HorizontalOrVertical} usingParam The direction in 
 			 * which to split the cell.
 			 */
 			public split(usingParam: HorizontalOrVertical): void;

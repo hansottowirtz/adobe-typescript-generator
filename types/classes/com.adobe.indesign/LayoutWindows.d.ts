@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,23 +15,23 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.LayoutWindow;
 			/**
 			 * Returns the LayoutWindow with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.LayoutWindow;
 			/**
 			 * Returns the LayoutWindow with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.LayoutWindow;
 			/**
 			 * Returns the LayoutWindows within the specified range.
-			 * @param {any} fromParam - The LayoutWindow, index, or name at 
+			 * @param {any} fromParam The LayoutWindow, index, or name at 
 			 * the beginning of the range. Can accept: LayoutWindow, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The LayoutWindow, index, or name at 
-			 * the end of the range. Can accept: LayoutWindow, Long Integer 
-			 * or String.
+			 * @param {any} toParam The LayoutWindow, index, or name at the 
+			 * end of the range. Can accept: LayoutWindow, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last LayoutWindow in the collection. */
@@ -41,8 +41,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the LayoutWindow whose index follows the specified 
 			 * LayoutWindow in the collection.
-			 * @param {LayoutWindow} objParam - The LayoutWindow whose 
-			 * index comes before the desired LayoutWindow. 
+			 * @param {LayoutWindow} objParam The LayoutWindow whose index 
+			 * comes before the desired LayoutWindow. 
 			 */
 			public nextItem(objParam: LayoutWindow): Adobe.Indesign.LayoutWindow;
 			/**
@@ -58,8 +58,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the LayoutWindow with the index previous to the 
 			 * specified index.
-			 * @param {LayoutWindow} objParam - The index of the 
-			 * LayoutWindow that follows the desired LayoutWindow.
+			 * @param {LayoutWindow} objParam The index of the LayoutWindow 
+			 * that follows the desired LayoutWindow.
 			 */
 			public previousItem(objParam: LayoutWindow): Adobe.Indesign.LayoutWindow;
 		}

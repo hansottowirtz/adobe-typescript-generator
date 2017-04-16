@@ -1,44 +1,78 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
+		/**
+		 * Adobe Bridge creates MenuElement instances for each of the 
+		 * existing menu elements, and you can create additional 
+		 * instances to extend the existing menus. A script can execute 
+		 * a menu command using app.document.chooseMenuItem().Existing 
+		 * menu elements that can be extended have predefined 
+		 * identifiers, listed in the Adobe Bridge JavaScript 
+		 * Reference. Not all existing menu elements can be extended. 
+		 * You can only add a new menu or command before or after an 
+		 * existing menu or command, which you must specify using the 
+		 * predefined unique identifier. Use the create() static 
+		 * function to create new menu items, rather than the new 
+		 * operator. This function behaves correctly if a menu item 
+		 * with the same name already exists.
+		 */
 		class MenuElement extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
+			/**
+			 * When true, the Alt modifier key was pressed when the item 
+			 * was selected.
+			 */
 			public readonly altDown: boolean;
-			/** This is not a Property Description. */
+			/** Whether the menu item can be checked. */
 			public readonly canBeChecked: boolean;
-			/** This is not a Property Description. */
+			/** Whether the item is checked. */
 			public checked: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * When true, the Command modifier key was pressed when the 
+			 * item was selected.
+			 */
 			public readonly cmdDown: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * When true, the Control modifier key was pressed when the 
+			 * item was selected.
+			 */
 			public readonly ctrlDown: boolean;
-			/** This is not a Property Description. */
+			/** Whether the menu or item is enabled. */
 			public enabled: boolean;
-			/** This is not a Property Description. */
+			/** A unique identifier for the element. */
 			public readonly id: string;
-			/** This is not a Property Description. */
+			/**
+			 * A string describing the location of the new menu element, 
+			 * with respect to existing menu elements.
+			 */
 			public readonly location: string;
-			/** This is not a Property Description. */
+			/**
+			 * When true, the Option modifier key was pressed when the item 
+			 * was selected.
+			 */
 			public readonly optionDown: boolean;
-			/** This is not a Property Description. */
+			/** Whether there is a separator after this item. */
 			public separatorAfter: boolean;
-			/** This is not a Property Description. */
+			/** Whether there is a separator before this item. */
 			public separatorBefore: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * When true, the Shift modifier key was pressed when the item 
+			 * was selected.
+			 */
 			public readonly shiftDown: boolean;
-			/** This is not a Property Description. */
+			/** The displayed label text, a localizable string. */
 			public text: string;
-			/** This is not a Property Description. */
+			/** The type of menu element, a menu or command. */
 			public readonly type: string;
-			/** This is not a Method Description. */
 			public constructor();
 			/**
-			 * This is not a Method Description.
-			 * @param {string} _type - 
-			 * @param {string} text - 
-			 * @param {string} location - 
-			 * @param {string} id - 
+			 * Adds a new menu to the menu bar, a new submenu to an 
+			 * existing menu, or a new command to an existing menu or 
+			 * submenu.
+			 * @param {string} _type 
+			 * @param {string} text 
+			 * @param {string} location 
+			 * @param {string} id 
 			 */
 			public create(_type: string, text: string, location: string, id: string): Adobe.Bridge.MenuElement;
 			/**
@@ -46,13 +80,13 @@ declare namespace Adobe {
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} id - 
+			 * Retrieves a menu element object using its unique identifier.
+			 * @param {string} id 
 			 */
 			public find(id: string): Adobe.Bridge.MenuElement;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} id - 
+			 * Removes a script-defined menu or menu item.
+			 * @param {string} id 
 			 */
 			public remove(id: string): void;
 		}

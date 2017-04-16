@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new CheckboxControl.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new CheckboxControl (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.CheckboxControl;
@@ -22,22 +22,22 @@ declare namespace Adobe {
 			/**
 			 * Returns the CheckboxControl with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.CheckboxControl;
 			/**
 			 * Returns the CheckboxControl with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.CheckboxControl;
 			/**
 			 * Returns the CheckboxControls within the specified range.
-			 * @param {any} fromParam - The CheckboxControl, index, or name 
+			 * @param {any} fromParam The CheckboxControl, index, or name 
 			 * at the beginning of the range. Can accept: CheckboxControl, 
 			 * Long Integer or String.
-			 * @param {any} toParam - The CheckboxControl, index, or name 
-			 * at the end of the range. Can accept: CheckboxControl, Long 
+			 * @param {any} toParam The CheckboxControl, index, or name at 
+			 * the end of the range. Can accept: CheckboxControl, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -48,8 +48,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the CheckboxControl whose index follows the 
 			 * specified CheckboxControl in the collection.
-			 * @param {CheckboxControl} objParam - The CheckboxControl 
-			 * whose index comes before the desired CheckboxControl. 
+			 * @param {CheckboxControl} objParam The CheckboxControl whose 
+			 * index comes before the desired CheckboxControl. 
 			 */
 			public nextItem(objParam: CheckboxControl): Adobe.Indesign.CheckboxControl;
 			/**
@@ -65,7 +65,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the CheckboxControl with the index previous to the 
 			 * specified index.
-			 * @param {CheckboxControl} objParam - The index of the 
+			 * @param {CheckboxControl} objParam The index of the 
 			 * CheckboxControl that follows the desired CheckboxControl.
 			 */
 			public previousItem(objParam: CheckboxControl): Adobe.Indesign.CheckboxControl;

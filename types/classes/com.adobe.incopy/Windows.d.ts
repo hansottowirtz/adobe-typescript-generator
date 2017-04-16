@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new Window.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Window (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.Window;
@@ -21,21 +21,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Window;
 			/**
 			 * Returns the Window with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Window;
 			/**
 			 * Returns the Window with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Window;
 			/**
 			 * Returns the Windows within the specified range.
-			 * @param {any} fromParam - The Window, index, or name at the 
+			 * @param {any} fromParam The Window, index, or name at the 
 			 * beginning of the range. Can accept: Window, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Window, index, or name at the end 
+			 * @param {any} toParam The Window, index, or name at the end 
 			 * of the range. Can accept: Window, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -46,8 +46,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Window whose index follows the specified Window 
 			 * in the collection.
-			 * @param {Window} objParam - The Window whose index comes 
-			 * before the desired Window. 
+			 * @param {Window} objParam The Window whose index comes before 
+			 * the desired Window. 
 			 */
 			public nextItem(objParam: Window): Adobe.Incopy.Window;
 			/**
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Window with the index previous to the specified 
 			 * index.
-			 * @param {Window} objParam - The index of the Window that 
+			 * @param {Window} objParam The index of the Window that 
 			 * follows the desired Window.
 			 */
 			public previousItem(objParam: Window): Adobe.Incopy.Window;

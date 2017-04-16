@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -19,27 +19,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the ShowHideFieldsBehavior with the specified index 
 			 * or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.ShowHideFieldsBehavior;
 			/**
 			 * Returns the ShowHideFieldsBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.ShowHideFieldsBehavior;
 			/**
 			 * Returns the ShowHideFieldsBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.ShowHideFieldsBehavior;
 			/**
 			 * Returns the ShowHideFieldsBehaviors within the specified 
 			 * range.
-			 * @param {any} fromParam - The ShowHideFieldsBehavior, index, 
-			 * or name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The ShowHideFieldsBehavior, index, or 
+			 * name at the beginning of the range. Can accept: 
 			 * ShowHideFieldsBehavior, Long Integer or String.
-			 * @param {any} toParam - The ShowHideFieldsBehavior, index, or 
+			 * @param {any} toParam The ShowHideFieldsBehavior, index, or 
 			 * name at the end of the range. Can accept: 
 			 * ShowHideFieldsBehavior, Long Integer or String.
 			 */
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ShowHideFieldsBehavior whose index follows the 
 			 * specified ShowHideFieldsBehavior in the collection.
-			 * @param {ShowHideFieldsBehavior} objParam - The 
+			 * @param {ShowHideFieldsBehavior} objParam The 
 			 * ShowHideFieldsBehavior whose index comes before the desired 
 			 * ShowHideFieldsBehavior. 
 			 */
@@ -71,7 +71,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ShowHideFieldsBehavior with the index previous 
 			 * to the specified index.
-			 * @param {ShowHideFieldsBehavior} objParam - The index of the 
+			 * @param {ShowHideFieldsBehavior} objParam The index of the 
 			 * ShowHideFieldsBehavior that follows the desired 
 			 * ShowHideFieldsBehavior.
 			 */

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -8,7 +8,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * a color sampler
-			 * @param {any[]} position - position of origin (unit value)
+			 * @param {any[]} position position of origin (unit value)
 			 */
 			public add(position: any[]): Adobe.Photoshop.ColorSampler;
 			/**

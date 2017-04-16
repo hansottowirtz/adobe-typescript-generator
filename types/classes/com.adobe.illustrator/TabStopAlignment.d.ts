@@ -1,8 +1,7 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** The tab alignment. */
 		class TabStopAlignment extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly Center: Adobe.Illustrator.TabStopAlignment;
 			public static readonly Decimal: Adobe.Illustrator.TabStopAlignment;

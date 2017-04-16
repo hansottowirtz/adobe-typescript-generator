@@ -1,25 +1,27 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
 		class Color extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
+			/** Degree of opacity when the color is composited. */
 			public alpha: number;
-			/** This is not a Property Description. */
+			/** Blue component value. */
 			public blue: number;
-			/** This is not a Property Description. */
+			/** Green component value. */
 			public green: number;
-			/** This is not a Property Description. */
+			/** The color expressed as a 32-bit ARGB value. */
 			public number: number;
-			/** This is not a Property Description. */
+			/** Red component value. */
 			public red: number;
-			/** This is not a Method Description. */
 			public constructor();
 			/**
 			 * @param {any[]} args
 			 */
 			protected createWithArgs(args: any[]): void;
-			/** This is not a Method Description. */
+			/**
+			 * Retrieves the hexadecimal value of this color, including the 
+			 * alpha channel.
+			 */
 			public toString(): string;
 		}
 	}

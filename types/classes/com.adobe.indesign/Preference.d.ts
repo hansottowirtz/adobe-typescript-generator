@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -13,25 +13,26 @@ declare namespace Adobe {
 			 */
 			public readonly isValid: boolean;
 			/**
-			 * The parent of the Preference (a Application, Document, 
-			 * XmlStory, Spread, FindChangeTransparencySetting, 
+			 * The parent of the Preference (a Application, Document, Book, 
+			 * DataMerge, XmlStory, Spread, FindChangeTransparencySetting, 
 			 * FindChangeStrokeTransparencySetting, 
 			 * FindChangeFillTransparencySetting, 
-			 * FindChangeContentTransparencySetting, MultiStateObject, 
-			 * Button, FormField, Sound, Movie, MediaItem, EPSText, 
-			 * Polygon, GraphicLine, Rectangle, Oval, SplineItem, 
-			 * ImportedPage, PICT, WMF, PDF, EPS, Image, Graphic, Group, 
-			 * TextFrame, PageItem, PageItemDefault, TransparencySetting, 
-			 * StrokeTransparencySetting, FillTransparencySetting, 
-			 * ContentTransparencySetting, FindObjectPreference, 
-			 * ChangeObjectPreference, Story, TextVariable, 
-			 * TextWrapPreference, Page, Book, Link, ObjectStyle, 
+			 * FindChangeContentTransparencySetting, HtmlItem, 
+			 * SignatureField, TextBox, RadioButton, ListBox, ComboBox, 
+			 * CheckBox, MultiStateObject, Button, FormField, Sound, Movie, 
+			 * MediaItem, EPSText, Polygon, GraphicLine, Rectangle, Oval, 
+			 * SplineItem, ImportedPage, PICT, WMF, PDF, EPS, Image, 
+			 * Graphic, Group, TextFrame, PageItem, PageItemDefault, 
+			 * TransparencySetting, StrokeTransparencySetting, 
+			 * FillTransparencySetting, ContentTransparencySetting, 
+			 * FindObjectPreference, ChangeObjectPreference, Story, 
+			 * TextVariable, TextWrapPreference, Page, Link, ObjectStyle, 
 			 * MasterSpread, NamedGrid, TextDefault, ParagraphStyle, 
 			 * InsertionPoint, TextStyleRange, Paragraph, TextColumn, Line, 
 			 * Word, Character, Text, FindTextPreference, 
 			 * ChangeTextPreference, FindGrepPreference, 
-			 * ChangeGrepPreference, FindTransliteratePreference, 
-			 * ChangeTransliteratePreference or DataMerge).
+			 * ChangeGrepPreference, FindTransliteratePreference or 
+			 * ChangeTransliteratePreference).
 			 */
 			public readonly parent: any;
 			/**
@@ -41,10 +42,10 @@ declare namespace Adobe {
 			public properties: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -55,10 +56,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -39,10 +39,10 @@ declare namespace Adobe {
 			 * PDF/X-3:2003 standard.
 			 */
 			public static readonly pdfx32003Standard: Adobe.Indesign.PDFXStandards;
-			/** PDFX42007 standard is used. */
-			public static readonly PDFX42007_STANDARD: Adobe.Indesign.PDFXStandards;
-			/** Alias for PDFX42007_STANDARD. PDFX42007 standard is used. */
-			public static readonly pdfx42007Standard: Adobe.Indesign.PDFXStandards;
+			/** PDFX42010 standard is used. */
+			public static readonly PDFX42010_STANDARD: Adobe.Indesign.PDFXStandards;
+			/** Alias for PDFX42010_STANDARD. PDFX42010 standard is used. */
+			public static readonly pdfx42010Standard: Adobe.Indesign.PDFXStandards;
 			/** Constructor */
 			public constructor();
 		}

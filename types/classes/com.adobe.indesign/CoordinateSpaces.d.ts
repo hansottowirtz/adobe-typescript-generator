@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -8,6 +8,10 @@ declare namespace Adobe {
 			public static readonly INNER_COORDINATES: Adobe.Indesign.CoordinateSpaces;
 			/** Alias for INNER_COORDINATES. Inner coordinates */
 			public static readonly innerCoordinates: Adobe.Indesign.CoordinateSpaces;
+			/** Page coordinates. */
+			public static readonly PAGE_COORDINATES: Adobe.Indesign.CoordinateSpaces;
+			/** Alias for PAGE_COORDINATES. Page coordinates. */
+			public static readonly pageCoordinates: Adobe.Indesign.CoordinateSpaces;
 			/** Parent coordinates */
 			public static readonly PARENT_COORDINATES: Adobe.Indesign.CoordinateSpaces;
 			/** Alias for PARENT_COORDINATES. Parent coordinates */

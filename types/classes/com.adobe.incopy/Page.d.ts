@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,6 +7,8 @@ declare namespace Adobe {
 			public readonly allGraphics: any;
 			/** Lists all page items contained by the Page. */
 			public readonly allPageItems: any;
+			/** The alternate layout section to which the page belongs. */
+			public readonly appliedAlternateLayout: Adobe.Incopy.Section;
 			/**
 			 * The master spread applied to the Page. Can also accept: 
 			 * NothingEnum enumerator.
@@ -23,6 +25,10 @@ declare namespace Adobe {
 			public readonly bounds: any;
 			/** A collection of buttons. */
 			public readonly buttons: Adobe.Incopy.Buttons;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Incopy.CheckBoxes;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Incopy.ComboBoxes;
 			/** The sequential number of the page within the document. */
 			public readonly documentOffset: number;
 			/** EPSTexts */
@@ -50,6 +56,10 @@ declare namespace Adobe {
 			public readonly isValid: boolean;
 			/** A property that can be set to any string. */
 			public label: string;
+			/** layout rule */
+			public readonly layoutRule: Adobe.Incopy.LayoutRuleOptions;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Incopy.ListBoxes;
 			/** Margin preference settings. */
 			public readonly marginPreferences: Adobe.Incopy.MarginPreference;
 			/**
@@ -68,6 +78,8 @@ declare namespace Adobe {
 			public readonly multiStateObjects: Adobe.Incopy.MultiStateObjects;
 			/** The name of the Page. */
 			public readonly name: string;
+			/** optional page for HTML5 pagination */
+			public readonly optionalPage: boolean;
 			/** A collection of ellipses. */
 			public readonly ovals: Adobe.Incopy.Ovals;
 			/**
@@ -87,6 +99,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Incopy.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Incopy.Rectangles;
 			/**
@@ -94,27 +108,35 @@ declare namespace Adobe {
 			 * within the spread.
 			 */
 			public readonly side: Adobe.Incopy.PageSideOptions;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Incopy.SignatureFields;
+			/** snapshot blending mode */
+			public readonly snapshotBlendingMode: Adobe.Incopy.SnapshotBlendingModes;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Incopy.SplineItems;
 			/**
-			 * The order in which the focus moves to different buttons in 
-			 * the PDF when the tab key is pressed.
+			 * The order in which the focus moves to different form fields 
+			 * in the PDF when the tab key is pressed. Can return: Array of 
+			 * Buttons, CheckBoxes, ComboBoxes, ListBoxes, RadioButtons, 
+			 * TextBoxes or SignatureFields.
 			 */
 			public tabOrder: any;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Incopy.TextBoxes;
 			/** A collection of text frames. */
 			public readonly textFrames: Adobe.Incopy.TextFrames;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPage(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -125,29 +147,29 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPage(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Get the coordinates of the given location in the specified 
 			 * coordinate system.
-			 * @param {any} locationParam - The location requested. Can 
+			 * @param {any} locationParam The location requested. Can 
 			 * accept: Array of 2 Reals, AnchorPoint enumerator or Array of 
 			 * Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint 
 			 * enumerators, BoundingBoxLimits enumerators or Long Integers.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use.
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -158,7 +180,7 @@ declare namespace Adobe {
 			public toSpecifier(): string;
 			/**
 			 * Get the transformation values of the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
 			 */
 			public transformValuesOf(inParam: CoordinateSpaces): any;

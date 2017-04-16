@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new DashedStrokeStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new DashedStrokeStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.DashedStrokeStyle;
@@ -22,26 +22,26 @@ declare namespace Adobe {
 			/**
 			 * Returns the DashedStrokeStyle with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.DashedStrokeStyle;
 			/**
 			 * Returns the DashedStrokeStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.DashedStrokeStyle;
 			/**
 			 * Returns the DashedStrokeStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.DashedStrokeStyle;
 			/**
 			 * Returns the DashedStrokeStyles within the specified range.
-			 * @param {any} fromParam - The DashedStrokeStyle, index, or 
-			 * name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The DashedStrokeStyle, index, or name 
+			 * at the beginning of the range. Can accept: 
 			 * DashedStrokeStyle, Long Integer or String.
-			 * @param {any} toParam - The DashedStrokeStyle, index, or name 
+			 * @param {any} toParam The DashedStrokeStyle, index, or name 
 			 * at the end of the range. Can accept: DashedStrokeStyle, Long 
 			 * Integer or String.
 			 */
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DashedStrokeStyle whose index follows the 
 			 * specified DashedStrokeStyle in the collection.
-			 * @param {DashedStrokeStyle} objParam - The DashedStrokeStyle 
+			 * @param {DashedStrokeStyle} objParam The DashedStrokeStyle 
 			 * whose index comes before the desired DashedStrokeStyle. 
 			 */
 			public nextItem(objParam: DashedStrokeStyle): Adobe.Indesign.DashedStrokeStyle;
@@ -70,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DashedStrokeStyle with the index previous to the 
 			 * specified index.
-			 * @param {DashedStrokeStyle} objParam - The index of the 
+			 * @param {DashedStrokeStyle} objParam The index of the 
 			 * DashedStrokeStyle that follows the desired 
 			 * DashedStrokeStyle.
 			 */

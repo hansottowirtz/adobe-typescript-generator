@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="PSEventAdapter,com.adobe.cshostadapter.PSEventAdapter,addEventListener,addEventListener,addEventListener,addEventListenerToObject,addEventListenerToObject,createAppEvent,createAppEvent,createAppEvent,dispatchToEventAdapter,getInstance,getInstance,getInstance,getInstance,listEvents,pingPlugIn,removeEventListener,removeEventListener,removeEventListener,removeEventListenerFromObject,removeEventListenerFromObject"><title>com.adobe.cshostadapter.PSEventAdapter</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'PSEventAdapter - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/adobe/cshostadapter/PSEventAdapter.html&amp;com/adobe/cshostadapter/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">PSEventAdapter</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PSEventAdapter"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.adobe.cshostadapter</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  PSEventAdapter</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">PSEventAdapter  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../../com/adobe/cshostadapter/EventAdapter.html">EventAdapter</a> <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.events.EventDispatcher</td></tr></table><p></p><p></p><p></p>
+	              <p>This class provides APIs for registering and unregistering event 
+	 listeners for Photoshop events. It requires the PSHostAdapter Photoshop 
+	 plugin to be installed in the host application in order for its method
+	 calls to have any effect.</p>
+	 
+	              <p>Use the <code>addEventListener</code> and <code>removeEventListener</code>
+	 methods to add and remove event listeners for Photoshop events. Specify
+	 the unique code for a Photoshop event to the <code>addEventListener</code> 
+	 function to start listening for it.</p> 
+	 
+	              <p>Photoshop events are identified either by a "char ID" or a "string ID".
+	 Char IDs statically map to a particular event code. String IDs map 
+	 dynamically to a code which varies across Photoshop runtimes.</p>
+	 
+	              
+	 
+	              <p>The <code>PSEvent</code> class provides a set of constants representing
+	 the codes for events defined by char IDs. For example, to listen for the 
+	 opening of a document in Photoshop, use:</p>
+	 
+	              <p>
+                  <code>PSEventAdapter.getInstance().addEventListener(PSEvent.OPEN, listener);</code>
+               </p>
+	 
+	              <p>where <code>listener</code> is a method with the following signature:</p>
+	 
+	              <p>
+                  <code>function listener(event:PSEvent)</code>
+               </p>	
+	 
+	              <p>When a document is opened in Photoshop, a <code>PSEvent</code> 
+	 instance with type <code>PSEvent.OPEN</code> will be dispatched.</p>
+	 
+	              
+	 
+	              <p>To listen for an event with a String ID, firstly obtain the event's
+	 runtime code. This is possible using the <code>Applicaton.stringIDToTypeID</code> 
+	 method provided in the Photoshop CSAW Library. For example: </p>
+	 
+	              <p>
+                  <code>var code:Number = Photoshop.app.stringIDToTypeID("some_event_name");</code>
+               </p>
+	 
+	              <p>Then convert the code to a String and call 
+	 <code>addEventListener</code>: </p>
+	 
+	              <p>
+                  <code>var codeAsString:String = code.toString();
+	 PSEventAdapter.getInstance().addEventListener(codeAsString, listener);</code>
+               </p> 
+	 
+	              
+	 
+	              <p>To determine which events correspond to which user interactions, it is 
+	 recommended to use the Photoshop ScriptListener plug-in. See the 
+	 Product-specific guide for Photoshop provided with ExtensionBuilder for 
+	 details on how to use the ScriptListener plug-in.</p> 
+	  
+	           <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><div class="showHideLinks"><div id="hideInheritedMethod" class="hideInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(false,'Method');"><img class="showHideLinkImage" src="../../../images/expanded.gif"> Hide Inherited Public Methods</a></div><div id="showInheritedMethod" class="showInheritedMethod"><a class="showHideLink" href="#methodSummary" onclick="javascript:setInheritedVisible(true,'Method');"><img class="showHideLinkImage" src="../../../images/collapsed.gif"> Show Inherited Public Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#PSEventAdapter()" class="signatureLink">PSEventAdapter</a>()</div><div class="summaryTableDescription">
+		 Constructs a new PSEventAdapter instance.</div></td><td class="summaryTableOwnerCol">PSEventAdapter</td></tr><tr class="hideInheritedMethod"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../../com/adobe/cshostadapter/EventAdapter.html#addEventListener()" class="signatureLink">addEventListener</a>(eventType:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div><div class="summaryTableDescription">[override] 
+		 Registers a listener for the specified event, so that the 
+		 listener receives notification of the event.
+		 
+		 The set of allowed values for eventType varies depending on which 
+		 Creative Suite application is being targeted.</div></td><td class="summaryTableOwnerCol"><a href="../../../com/adobe/cshostadapter/EventAdapter.html">EventAdapter</a></td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getInstance()" class="signatureLink">getInstance</a>():<a href="../../../com/adobe/cshostadapter/PSEventAdapter.html">PSEventAdapter</a></div><div class="summaryTableDescription">[static] 
+		 Returns the PSEventAdapter instance.
+		 
+		 </div></td><td class="summaryTableOwnerCol">PSEventAdapter</td></tr><tr class="hideInheritedMethod"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../../com/adobe/cshostadapter/EventAdapter.html#listEvents()" class="signatureLink">listEvents</a>(responseHandler:Function):void</div><div class="summaryTableDescription">
+		 Obtains a list of the events for which the host adapter plug-in is 
+		 currently listening. 
+		 
+		 A ListEventsEvent is dispatched to responseHandler when the list of 
+		 events is received from the host adapter plug-in.
+		  
+		 This method provides a means of checking whether an event listener was 
+		 successfully added or removed by the host adapter plug-in.
+		 
+		 </div></td><td class="summaryTableOwnerCol"><a href="../../../com/adobe/cshostadapter/EventAdapter.html">EventAdapter</a></td></tr><tr class="hideInheritedMethod"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../../com/adobe/cshostadapter/EventAdapter.html#pingPlugIn()" class="signatureLink">pingPlugIn</a>(responseHandler:Function, timeout:Number = 5000):void</div><div class="summaryTableDescription">
+		 Sends a 'ping' message to the host adapter plug-in and dispatches the response
+		 to the specified handler. 
+		 
+		 A PingEvent is dispatched to responseHandler either when a response 
+		 is received from the plug-in or after the specified timeout period.
+		  
+		 This method provides a means of checking whether the required host adapter 
+		 plug-in has been loaded by the host application, and therefore whether 
+		 this library can be used to register event listeners.
+		 
+		 </div></td><td class="summaryTableOwnerCol"><a href="../../../com/adobe/cshostadapter/EventAdapter.html">EventAdapter</a></td></tr><tr class="hideInheritedMethod"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../../com/adobe/cshostadapter/EventAdapter.html#removeEventListener()" class="signatureLink">removeEventListener</a>(eventType:String, listener:Function, useCapture:Boolean = false):void</div><div class="summaryTableDescription">[override] 
+		 Removes an event listener for the specified event.
+		 
+		 If no matching listener is registered with this event adapter, 
+		 a call to this method has no effect.
+		 
+		 </div></td><td class="summaryTableOwnerCol"><a href="../../../com/adobe/cshostadapter/EventAdapter.html">EventAdapter</a></td></tr></table></div><a name="protectedMethodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Protected Methods </div><div class="showHideLinks"><div id="hideInheritedProtectedMethod" class="hideInheritedProtectedMethod"><a class="showHideLink" href="#protectedMethodSummary" onclick="javascript:setInheritedVisible(false,'ProtectedMethod');"><img class="showHideLinkImage" src="../../../images/expanded.gif"> Show Inherited Protected Methods</a></div><div id="showInheritedProtectedMethod" class="showInheritedProtectedMethod"><a class="showHideLink" href="#protectedMethodSummary" onclick="javascript:setInheritedVisible(true,'ProtectedMethod');"><img class="showHideLinkImage" src="../../../images/collapsed.gif"> Show Inherited Protected Methods</a></div></div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProtectedMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#createAppEvent()" class="signatureLink">createAppEvent</a>(event:CSXSEvent):Event</div><div class="summaryTableDescription">[override] </div></td><td class="summaryTableOwnerCol">PSEventAdapter</td></tr><tr class="hideInheritedProtectedMethod"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img src="../../../images/inheritedSummary.gif" alt="Inherited" title="Inherited" class="inheritedSummaryImage"></td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="../../../com/adobe/cshostadapter/EventAdapter.html#dispatchToEventAdapter()" class="signatureLink">dispatchToEventAdapter</a>(type:String, payload:String):void</div><div class="summaryTableDescription">[static] 
+		 Helper method for subclasses which dispatches a CSXS event with the 
+		 specified type and XML payload.
+		 
+		 </div></td><td class="summaryTableOwnerCol"><a href="../../../com/adobe/cshostadapter/EventAdapter.html">EventAdapter</a></td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="PSEventAdapter()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">PSEventAdapter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function PSEventAdapter()</code><p></p><p>
+		 <p>Constructs a new PSEventAdapter instance. Do not call this 
+		 constructor directly. Instead, call the <code>getInstance</code> 
+		 function to obtain a reference to the singleton PSEventAdapter 
+		 object.</p> 
+		 
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="createAppEvent()"></a><a name="createAppEvent(com.adobe.csxs.events.CSXSEvent)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">createAppEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code>override protected function createAppEvent(event:CSXSEvent):Event</code><p></p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:CSXSEvent</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Event</code></td></tr></table></div><a name="getInstance()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getInstance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function getInstance():<a href="../../../com/adobe/cshostadapter/PSEventAdapter.html">PSEventAdapter</a></code><p></p><p></p><p>
+		 <p>Returns the PSEventAdapter instance.</p>
+		 
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../com/adobe/cshostadapter/PSEventAdapter.html">PSEventAdapter</a></code> &mdash; the PSEventAdapter instance
+		 </td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Copyright © 2010 Adobe Systems Inc. All Rights Reserved.</footer><br/>Thu May 13 2010, 08:12 PM +01:00  </center></div></body></html><!--Copyright © 2010 Adobe Systems Inc. All Rights Reserved.<br/>Thu May 13 2010, 08:12 PM +01:00  -->

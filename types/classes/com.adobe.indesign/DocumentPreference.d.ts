@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -22,6 +22,11 @@ declare namespace Adobe {
 			public columnGuideColor: any;
 			/** If true, locks column guides. */
 			public columnGuideLocked: boolean;
+			/**
+			 * If true, the document A-master has primary text frames when 
+			 * a new document is created.
+			 */
+			public createPrimaryTextFrame: boolean;
 			/**
 			 * The amount to offset the bottom document bleed. Note: To set 
 			 * the bleed bottom offset, document bleed uniform size must be 
@@ -74,8 +79,6 @@ declare namespace Adobe {
 			 * Reals (0 - 255) or UIColors enumerator.
 			 */
 			public marginGuideColor: any;
-			/** If true, the document A-master has auto textframes. */
-			public masterTextFrame: boolean;
 			/** If true, overprints black when saving the document. */
 			public overprintBlack: boolean;
 			/** The placement of the page binding. */
@@ -140,10 +143,10 @@ declare namespace Adobe {
 			public startPageNumber: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerDocumentPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -154,10 +157,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerDocumentPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

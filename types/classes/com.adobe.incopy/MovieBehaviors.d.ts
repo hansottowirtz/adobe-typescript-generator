@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.MovieBehavior;
 			/**
 			 * Returns the MovieBehavior with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.MovieBehavior;
 			/**
 			 * Returns the MovieBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.MovieBehavior;
 			/**
 			 * Returns the MovieBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.MovieBehavior;
 			/**
 			 * Returns the MovieBehaviors within the specified range.
-			 * @param {any} fromParam - The MovieBehavior, index, or name 
-			 * at the beginning of the range. Can accept: MovieBehavior, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The MovieBehavior, index, or name at 
+			 * @param {any} fromParam The MovieBehavior, index, or name at 
+			 * the beginning of the range. Can accept: MovieBehavior, Long 
+			 * Integer or String.
+			 * @param {any} toParam The MovieBehavior, index, or name at 
 			 * the end of the range. Can accept: MovieBehavior, Long 
 			 * Integer or String.
 			 */
@@ -46,7 +46,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MovieBehavior whose index follows the specified 
 			 * MovieBehavior in the collection.
-			 * @param {MovieBehavior} objParam - The MovieBehavior whose 
+			 * @param {MovieBehavior} objParam The MovieBehavior whose 
 			 * index comes before the desired MovieBehavior. 
 			 */
 			public nextItem(objParam: MovieBehavior): Adobe.Incopy.MovieBehavior;
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MovieBehavior with the index previous to the 
 			 * specified index.
-			 * @param {MovieBehavior} objParam - The index of the 
+			 * @param {MovieBehavior} objParam The index of the 
 			 * MovieBehavior that follows the desired MovieBehavior.
 			 */
 			public previousItem(objParam: MovieBehavior): Adobe.Incopy.MovieBehavior;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -65,6 +65,8 @@ declare namespace Adobe {
 			public readonly cells: Adobe.Indesign.Cells;
 			/** A collection of changes. */
 			public readonly changes: Adobe.Indesign.Changes;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Indesign.CheckBoxes;
 			/** The number of columns. */
 			public columnCount: number;
 			/**
@@ -74,6 +76,8 @@ declare namespace Adobe {
 			public columnFillsPriority: boolean;
 			/** A collection of table columns. */
 			public readonly columns: Adobe.Indesign.Columns;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Indesign.ComboBoxes;
 			/**
 			 * The contents to place in cells, specified as an array whose 
 			 * first item populates the top left cell and whose second item 
@@ -326,6 +330,8 @@ declare namespace Adobe {
 			public leftBorderStrokeType: Adobe.Indesign.StrokeStyle;
 			/** The stroke weight of the left border stroke. */
 			public leftBorderStrokeWeight: any;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Indesign.ListBoxes;
 			/** A collection of multi-state objects. */
 			public readonly multiStateObjects: Adobe.Indesign.MultiStateObjects;
 			/**
@@ -356,6 +362,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Indesign.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Indesign.Rectangles;
 			/**
@@ -397,6 +405,8 @@ declare namespace Adobe {
 			public rightBorderStrokeWeight: any;
 			/** A collection of table rows. */
 			public readonly rows: Adobe.Indesign.Rows;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Indesign.SignatureFields;
 			/**
 			 * The number of columns on the left side of the table to skip 
 			 * before applying the column fill color. Note: Valid when 
@@ -629,6 +639,8 @@ declare namespace Adobe {
 			public strokeOrder: Adobe.Indesign.StrokeOrderTypes;
 			/** The direction of the the table */
 			public tableDirection: Adobe.Indesign.TableDirectionOptions;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Indesign.TextBoxes;
 			/** A collection of text frames. */
 			public readonly textFrames: Adobe.Indesign.TextFrames;
 			/** A collection of text variable instances. */
@@ -673,10 +685,10 @@ declare namespace Adobe {
 			public width: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerTable(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -688,28 +700,28 @@ declare namespace Adobe {
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
@@ -719,15 +731,15 @@ declare namespace Adobe {
 			public convertBulletsAndNumberingToText(): void;
 			/**
 			 * Converts the table to text.
-			 * @param {string} columnSeparatorParam - The character to 
-			 * insert between the each column's content in the converted 
-			 * text. Note: Can be defined as any single character, such as 
-			 * a letter, number, or punctuation mark, or by typing a space 
-			 * or tab. Use the actual character rather than its name, such 
-			 * as ',' rather than 'Comma'. Precede double or single quotes 
-			 * or a backslash with an extra backslash as an escape 
-			 * character. For paragraphs, use ^p. (Optional)
-			 * @param {string} rowSeparatorParam - The character to use to 
+			 * @param {string} columnSeparatorParam The character to insert 
+			 * between the each column's content in the converted text. 
+			 * Note: Can be defined as any single character, such as a 
+			 * letter, number, or punctuation mark, or by typing a space or 
+			 * tab. Use the actual character rather than its name, such as 
+			 * ',' rather than 'Comma'. Precede double or single quotes or 
+			 * a backslash with an extra backslash as an escape character. 
+			 * For paragraphs, use ^p. (Optional)
+			 * @param {string} rowSeparatorParam The character to use to 
 			 * separate each row's content in the converted text. Note: Can 
 			 * be defined as any single character, such as a letter, 
 			 * number, or punctuation mark, or by typing a space or tab. 
@@ -743,37 +755,37 @@ declare namespace Adobe {
 			 * that has no internal spaces or detached parts, the polygon 
 			 * contains only a single path. Note: To determine whether a 
 			 * font allows the creation of outlines, see allow outlines.
-			 * @param {boolean} deleteOriginalParam - If true, deletes the 
+			 * @param {boolean} deleteOriginalParam If true, deletes the 
 			 * original text. If false, creates the outlines as separate 
 			 * object(s) on top of the text.  (Optional)
 			 */
 			public createOutlines(deleteOriginalParam: boolean): any;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -785,14 +797,14 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Associates the page item with the specified XML element 
 			 * while preserving existing content.
-			 * @param {XMLElement} usingParam - The XML element.
+			 * @param {XMLElement} usingParam The XML element.
 			 */
 			public markup(usingParam: XMLElement): void;
 			/** Recomposes the text in the Table. */
@@ -801,16 +813,16 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerTable(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Selects the object.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the Table in relation to previously 
 			 * selected objects. (Optional)
 			 */

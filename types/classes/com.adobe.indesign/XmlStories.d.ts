@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,28 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.XmlStory;
 			/**
 			 * Returns the XmlStory with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.XmlStory;
 			/**
 			 * Returns the XmlStory with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.XmlStory;
 			/**
 			 * Returns the XmlStory with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.XmlStory;
 			/**
 			 * Returns the XmlStories within the specified range.
-			 * @param {any} fromParam - The XmlStory, index, or name at the 
+			 * @param {any} fromParam The XmlStory, index, or name at the 
 			 * beginning of the range. Can accept: XmlStory, Long Integer 
 			 * or String.
-			 * @param {any} toParam - The XmlStory, index, or name at the 
-			 * end of the range. Can accept: XmlStory, Long Integer or 
-			 * String.
+			 * @param {any} toParam The XmlStory, index, or name at the end 
+			 * of the range. Can accept: XmlStory, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last XmlStory in the collection. */
@@ -46,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the XmlStory whose index follows the specified 
 			 * XmlStory in the collection.
-			 * @param {XmlStory} objParam - The XmlStory whose index comes 
+			 * @param {XmlStory} objParam The XmlStory whose index comes 
 			 * before the desired XmlStory. 
 			 */
 			public nextItem(objParam: XmlStory): Adobe.Indesign.XmlStory;
@@ -63,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the XmlStory with the index previous to the 
 			 * specified index.
-			 * @param {XmlStory} objParam - The index of the XmlStory that 
+			 * @param {XmlStory} objParam The index of the XmlStory that 
 			 * follows the desired XmlStory.
 			 */
 			public previousItem(objParam: XmlStory): Adobe.Indesign.XmlStory;

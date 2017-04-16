@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -6,6 +6,10 @@ declare namespace Adobe {
 		class PlaceGun extends Adobe.Incopy.Preference {
 			/** A collection of buttons. */
 			public readonly buttons: Adobe.Incopy.Buttons;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Incopy.CheckBoxes;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Incopy.ComboBoxes;
 			/** A collection of EPS files. */
 			public readonly epss: Adobe.Incopy.EPSs;
 			/** EPSTexts */
@@ -37,6 +41,8 @@ declare namespace Adobe {
 			 * objects.
 			 */
 			public readonly isValid: boolean;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Incopy.ListBoxes;
 			/**
 			 * Whether the place gun is currently loaded with content for 
 			 * placing.
@@ -65,10 +71,16 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Incopy.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Incopy.Rectangles;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Incopy.SignatureFields;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Incopy.SplineItems;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Incopy.TextBoxes;
 			/** A collection of text frames. */
 			public readonly textFrames: Adobe.Incopy.TextFrames;
 			/** A collection of WMF graphics. */
@@ -77,10 +89,10 @@ declare namespace Adobe {
 			public abortPlaceGun(): void;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPlaceGun(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -91,27 +103,27 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Load the place gun with one or more files.
-			 * @param {any} fileNameParam - One or more files to place. Can 
+			 * @param {any} fileNameParam One or more files to place. Can 
 			 * accept: File or Array of Files.
-			 * @param {boolean} showingOptionsParam - Whether to display 
-			 * the import options dialog (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {boolean} showingOptionsParam Whether to display the 
+			 * import options dialog (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the placed object(s) (Optional)
 			 */
 			public loadPlaceGun(fileNameParam: any, showingOptionsParam: boolean, withPropertiesParam: any): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPlaceGun(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Rotate the contents of the place gun.
-			 * @param {RotationDirection} directionParam - Which direction 
-			 * to rotate the contents (Optional)
+			 * @param {RotationDirection} directionParam Which direction to 
+			 * rotate the contents (Optional)
 			 */
 			public rotate(directionParam: RotationDirection): void;
 			/** Retrieves the object specifier. */

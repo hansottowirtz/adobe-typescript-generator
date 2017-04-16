@@ -23,7 +23,7 @@ class Argument
     else
       text = "{#{@type}} #{@name}"
     end
-    text << " - #{@description}" if @description
+    text << " #{@description}" if @description
     DocTag.new('param', text)
   end
 end

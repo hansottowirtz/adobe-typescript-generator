@@ -1,14 +1,14 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** A gradient. */
+		/** A gradient */
 		class Gradient extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** The stops in this gradient. */
+			/** The stops in this gradient */
 			public readonly gradientStops: Adobe.Illustrator.GradientStops;
-			/** The gradient's name. */
+			/** the gradient's name */
 			public name: string;
-			/** The gradient type. */
+			/** the gradient type */
 			public type: Adobe.Illustrator.GradientType;
 			/** delete the object */
 			public remove(): void;

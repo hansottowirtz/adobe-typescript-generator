@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,16 +7,16 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new FormField
-			 * @param {Layer} layerParam - The layer on which to create the 
+			 * @param {Layer} layerParam The layer on which to create the 
 			 * FormField. (Optional)
-			 * @param {LocationOptions} atParam - The location at which to 
+			 * @param {LocationOptions} atParam The location at which to 
 			 * insert the FormField relative to the reference object or 
 			 * within the container object. (Optional)
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the at parameter is before or after. Can 
 			 * accept: Document, Spread, MasterSpread, Page, Layer or 
 			 * PageItem. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new FormField (Optional)
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Indesign.FormField;
@@ -30,26 +30,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.FormField;
 			/**
 			 * Returns the FormField with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.FormField;
 			/**
 			 * Returns the FormField with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.FormField;
 			/**
 			 * Returns the FormField with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.FormField;
 			/**
 			 * Returns the FormFields within the specified range.
-			 * @param {any} fromParam - The FormField, index, or name at 
-			 * the beginning of the range. Can accept: FormField, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The FormField, index, or name at the 
+			 * @param {any} fromParam The FormField, index, or name at the 
+			 * beginning of the range. Can accept: FormField, Long Integer 
+			 * or String.
+			 * @param {any} toParam The FormField, index, or name at the 
 			 * end of the range. Can accept: FormField, Long Integer or 
 			 * String.
 			 */
@@ -61,8 +61,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the FormField whose index follows the specified 
 			 * FormField in the collection.
-			 * @param {FormField} objParam - The FormField whose index 
-			 * comes before the desired FormField. 
+			 * @param {FormField} objParam The FormField whose index comes 
+			 * before the desired FormField. 
 			 */
 			public nextItem(objParam: FormField): Adobe.Indesign.FormField;
 			/**
@@ -78,8 +78,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the FormField with the index previous to the 
 			 * specified index.
-			 * @param {FormField} objParam - The index of the FormField 
-			 * that follows the desired FormField.
+			 * @param {FormField} objParam The index of the FormField that 
+			 * follows the desired FormField.
 			 */
 			public previousItem(objParam: FormField): Adobe.Indesign.FormField;
 		}

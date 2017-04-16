@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -6,7 +6,7 @@ declare namespace Adobe {
 		class Channels extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** number of elements in the collection */
 			public readonly length: number;
-			/** Create a Channel */
+			/** create a new object */
 			public add(): Adobe.Photoshop.Channel;
 			/**
 			 * Get the first element in the collection with the provided 

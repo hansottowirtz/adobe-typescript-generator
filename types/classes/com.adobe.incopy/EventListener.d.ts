@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -33,7 +33,8 @@ declare namespace Adobe {
 			 * CellStyleGroup, CellStyle, TableStyleGroup, ConditionSet, 
 			 * HiddenText, Condition, AssignedStory, Assignment, 
 			 * NumberingList, Dialog, Swatch, Color, Tint, Gradient, 
-			 * MixedInkGroup, MixedInk, Behavior, GotoPageBehavior, 
+			 * MixedInkGroup, MixedInk, Behavior, SubmitFormBehavior, 
+			 * PrintFormBehavior, ClearFormBehavior, GotoPageBehavior, 
 			 * GotoAnchorBehavior, SoundBehavior, ViewZoomBehavior, 
 			 * GotoStateBehavior, GotoPreviousStateBehavior, 
 			 * GotoNextStateBehavior, OpenFileBehavior, AnimationBehavior, 
@@ -49,23 +50,25 @@ declare namespace Adobe {
 			 * ParagraphStyleGroup, TextVariableInstance, Footnote, XMLTag, 
 			 * Note, TableStyle, TextPath, Link, Section, MojikumiTable, 
 			 * KinsokuTable, Guide, LanguageWithVendors, Language, 
-			 * PageItem, FormField, MultiStateObject, Button, MediaItem, 
-			 * Sound, Movie, EPSText, SplineItem, Polygon, GraphicLine, 
-			 * Rectangle, Oval, Graphic, ImportedPage, PICT, WMF, PDF, EPS, 
-			 * Image, Group, TextFrame, MasterSpread, TrapPreset, Ink, 
-			 * DocumentPreset, Page, Spread, Layer, CharacterStyle, 
-			 * ParagraphStyle, Story, XmlStory, IDBasedObject, DialogRow, 
-			 * DialogColumn, Widget, BorderPanel, MeasurementEditbox, 
-			 * MeasurementCombobox, RealCombobox, AngleEditbox, 
-			 * PercentEditbox, RealEditbox, PercentCombobox, AngleCombobox, 
-			 * EnablingGroup, IntegerCombobox, IntegerEditbox, 
-			 * RadiobuttonControl, RadiobuttonGroup, CheckboxControl, 
-			 * Dropdown, StaticText, TextEditbox, BackgroundTask, State, 
-			 * XMLItem, DTD, XMLInstruction, XMLComment, XMLElement, Table, 
-			 * Cell, IdleTask, StrokeStyle, GraphicLayer, NonIDBasedObject, 
-			 * Panel, Window, NavigationPoint, BuildingBlock, 
-			 * IndexingSortOption, TextMacro, MenuElement, MenuSeparator, 
-			 * MenuItem, Submenu, Menu, TextVariable, ValidationError, 
+			 * PageItem, HtmlItem, FormField, SignatureField, TextBox, 
+			 * RadioButton, ListBox, ComboBox, CheckBox, MultiStateObject, 
+			 * Button, MediaItem, Sound, Movie, EPSText, SplineItem, 
+			 * Polygon, GraphicLine, Rectangle, Oval, Graphic, 
+			 * ImportedPage, PICT, WMF, PDF, EPS, Image, Group, TextFrame, 
+			 * MasterSpread, TrapPreset, Ink, DocumentPreset, Page, Spread, 
+			 * Layer, CharacterStyle, ParagraphStyle, Story, XmlStory, 
+			 * IDBasedObject, DialogRow, DialogColumn, Widget, BorderPanel, 
+			 * MeasurementEditbox, MeasurementCombobox, RealCombobox, 
+			 * AngleEditbox, PercentEditbox, RealEditbox, PercentCombobox, 
+			 * AngleCombobox, EnablingGroup, IntegerCombobox, 
+			 * IntegerEditbox, RadiobuttonControl, RadiobuttonGroup, 
+			 * CheckboxControl, Dropdown, StaticText, TextEditbox, 
+			 * BackgroundTask, State, XMLItem, DTD, XMLInstruction, 
+			 * XMLComment, XMLElement, Table, Cell, IdleTask, StrokeStyle, 
+			 * GraphicLayer, NonIDBasedObject, Panel, Window, 
+			 * NavigationPoint, BuildingBlock, IndexingSortOption, 
+			 * TextMacro, MenuElement, MenuSeparator, MenuItem, Submenu, 
+			 * Menu, StyleExportTagMap, TextVariable, ValidationError, 
 			 * XMLExportMap, XMLImportMap, XMLAttribute, Row, Column, 
 			 * Change, RootObject, Document, Application, Preference, 
 			 * ConditionalTextPreference, NumberingRestartPolicy, Bullet, 
@@ -94,9 +97,9 @@ declare namespace Adobe {
 			 * FindChangeTextOption, ScriptArg, ScriptPreference, PlaceGun, 
 			 * StrokeFillProxySetting, ImportedPageAttribute, 
 			 * AutoCorrectPreference, SpellPreference, 
-			 * DictionaryPreference, MojikumiUiPreference, ContourOption, 
-			 * TextWrapPreference, TextEditingPreference, 
-			 * FrameFittingOption, PageItemDefault, 
+			 * DictionaryPreference, FontLockingPreference, 
+			 * MojikumiUiPreference, ContourOption, TextWrapPreference, 
+			 * TextEditingPreference, FrameFittingOption, PageItemDefault, 
 			 * PDFLayoutExportPreference, PDFGalleyExportPreference, 
 			 * IMEPreference, GraphicLayerOption, ClippingPathSettings, 
 			 * ImageIOPreference, ImagePreference, ToolBox, ViewPreference, 
@@ -117,7 +120,7 @@ declare namespace Adobe {
 			public properties: any;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -128,8 +131,8 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/** Deletes the EventListener. */

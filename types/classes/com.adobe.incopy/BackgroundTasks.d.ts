@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.BackgroundTask;
 			/**
 			 * Returns the BackgroundTask with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.BackgroundTask;
 			/**
 			 * Returns the BackgroundTask with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.BackgroundTask;
 			/**
 			 * Returns the BackgroundTask with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.BackgroundTask;
 			/**
 			 * Returns the BackgroundTasks within the specified range.
-			 * @param {any} fromParam - The BackgroundTask, index, or name 
-			 * at the beginning of the range. Can accept: BackgroundTask, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The BackgroundTask, index, or name at 
+			 * @param {any} fromParam The BackgroundTask, index, or name at 
+			 * the beginning of the range. Can accept: BackgroundTask, Long 
+			 * Integer or String.
+			 * @param {any} toParam The BackgroundTask, index, or name at 
 			 * the end of the range. Can accept: BackgroundTask, Long 
 			 * Integer or String.
 			 */
@@ -46,7 +46,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the BackgroundTask whose index follows the specified 
 			 * BackgroundTask in the collection.
-			 * @param {BackgroundTask} objParam - The BackgroundTask whose 
+			 * @param {BackgroundTask} objParam The BackgroundTask whose 
 			 * index comes before the desired BackgroundTask. 
 			 */
 			public nextItem(objParam: BackgroundTask): Adobe.Incopy.BackgroundTask;
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the BackgroundTask with the index previous to the 
 			 * specified index.
-			 * @param {BackgroundTask} objParam - The index of the 
+			 * @param {BackgroundTask} objParam The index of the 
 			 * BackgroundTask that follows the desired BackgroundTask.
 			 */
 			public previousItem(objParam: BackgroundTask): Adobe.Incopy.BackgroundTask;

@@ -1,16 +1,12 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
-		/**
-		 * A version of the document stored automatically (and added to 
-		 * the history states collection, which preserves the document 
-		 * state each time the document is changed).
-		 */
+		/** A history state for the document */
 		class HistoryState extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** The history state name. */
+			/** the history state's name */
 			public readonly name: string;
-			/** If true, the history state is a snapshot. */
+			/** is the history state a snapshot? */
 			public readonly snapshot: boolean;
 		}
 	}

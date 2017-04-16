@@ -1,2 +1,3 @@
-/// <reference path="../../namespaces/com.adobe.csawlib.misc/index.d.ts"/>
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib.misc/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>

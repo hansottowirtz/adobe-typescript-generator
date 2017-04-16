@@ -1,9 +1,13 @@
 module Util
   class << self
-    def extract_type_from_a(a, org_type)
+    def extract_type_from_a(a, org_type, package_name = nil)
       href = a['href']
-      md = href.match /(?:\.\.\/)+com\/adobe\/([\w\/]+)\/#{org_type}.html/
-      namespaces = md[1].split('/').collect(&:capitalize).join
+      md = href.match /(?:(?:\.\.\/)+com\/adobe\/([\w\/]+)\/)?#{org_type}.html(?:#(?:\w+))?/
+      if md[1]
+        namespaces = md[1].split('/').collect(&:capitalize).join
+      else
+        namespaces = package_name.match(/com.adobe.(.+)/)[1].split('.').collect(&:capitalize).join
+      end
       "Adobe.#{namespaces}.#{org_type}"
     end
 

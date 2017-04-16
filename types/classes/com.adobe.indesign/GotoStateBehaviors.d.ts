@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new GotoStateBehavior.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new GotoStateBehavior (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.GotoStateBehavior;
@@ -22,26 +22,26 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoStateBehavior with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.GotoStateBehavior;
 			/**
 			 * Returns the GotoStateBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.GotoStateBehavior;
 			/**
 			 * Returns the GotoStateBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.GotoStateBehavior;
 			/**
 			 * Returns the GotoStateBehaviors within the specified range.
-			 * @param {any} fromParam - The GotoStateBehavior, index, or 
-			 * name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The GotoStateBehavior, index, or name 
+			 * at the beginning of the range. Can accept: 
 			 * GotoStateBehavior, Long Integer or String.
-			 * @param {any} toParam - The GotoStateBehavior, index, or name 
+			 * @param {any} toParam The GotoStateBehavior, index, or name 
 			 * at the end of the range. Can accept: GotoStateBehavior, Long 
 			 * Integer or String.
 			 */
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoStateBehavior whose index follows the 
 			 * specified GotoStateBehavior in the collection.
-			 * @param {GotoStateBehavior} objParam - The GotoStateBehavior 
+			 * @param {GotoStateBehavior} objParam The GotoStateBehavior 
 			 * whose index comes before the desired GotoStateBehavior. 
 			 */
 			public nextItem(objParam: GotoStateBehavior): Adobe.Indesign.GotoStateBehavior;
@@ -70,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoStateBehavior with the index previous to the 
 			 * specified index.
-			 * @param {GotoStateBehavior} objParam - The index of the 
+			 * @param {GotoStateBehavior} objParam The index of the 
 			 * GotoStateBehavior that follows the desired 
 			 * GotoStateBehavior.
 			 */

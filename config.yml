@@ -1,3 +1,13 @@
 urls:
-  root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.0/docs/WebHelp/references/csawlib
-  classes: all-classes.html
+  csha-2.1:
+    root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/2.1/docs/WebHelp/references/cshalib
+  # csxs-2.1:
+  #   root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/2.1/docs/WebHelp/references/csxslib
+  csaw-1.0:
+    root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.0/docs/WebHelp/references/csawlib
+  csaw-1.5:
+    root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.5/docs/WebHelp/references/csawlib
+  csaw-2.1:
+    root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/2.1/docs/WebHelp/references/csawlib
+  awsi-2.1:
+    root: http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/2.1/docs/WebHelp/references/awsi

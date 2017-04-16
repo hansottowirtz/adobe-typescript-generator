@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new NestedGrepStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new NestedGrepStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.NestedGrepStyle;
@@ -22,17 +22,17 @@ declare namespace Adobe {
 			/**
 			 * Returns the NestedGrepStyle with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.NestedGrepStyle;
 			/**
 			 * Returns the NestedGrepStyles within the specified range.
-			 * @param {any} fromParam - The NestedGrepStyle, index, or name 
+			 * @param {any} fromParam The NestedGrepStyle, index, or name 
 			 * at the beginning of the range. Can accept: NestedGrepStyle, 
 			 * Long Integer or String.
-			 * @param {any} toParam - The NestedGrepStyle, index, or name 
-			 * at the end of the range. Can accept: NestedGrepStyle, Long 
+			 * @param {any} toParam The NestedGrepStyle, index, or name at 
+			 * the end of the range. Can accept: NestedGrepStyle, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -43,8 +43,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the NestedGrepStyle whose index follows the 
 			 * specified NestedGrepStyle in the collection.
-			 * @param {NestedGrepStyle} objParam - The NestedGrepStyle 
-			 * whose index comes before the desired NestedGrepStyle. 
+			 * @param {NestedGrepStyle} objParam The NestedGrepStyle whose 
+			 * index comes before the desired NestedGrepStyle. 
 			 */
 			public nextItem(objParam: NestedGrepStyle): Adobe.Incopy.NestedGrepStyle;
 			/**
@@ -60,7 +60,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the NestedGrepStyle with the index previous to the 
 			 * specified index.
-			 * @param {NestedGrepStyle} objParam - The index of the 
+			 * @param {NestedGrepStyle} objParam The index of the 
 			 * NestedGrepStyle that follows the desired NestedGrepStyle.
 			 */
 			public previousItem(objParam: NestedGrepStyle): Adobe.Incopy.NestedGrepStyle;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -32,19 +32,19 @@ declare namespace Adobe {
 			public removedWords: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerUserDictionary(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Adds the specified words to the specified list in the 
 			 * dictionary.
-			 * @param {any[]} addedWordsParam - The words to add.
-			 * @param {boolean} removedListParam - If true, adds the words 
-			 * to the removed words list. If false or unspecified, adds the 
+			 * @param {any[]} addedWordsParam The words to add.
+			 * @param {boolean} removedListParam If true, adds the words to 
+			 * the removed words list. If false or unspecified, adds the 
 			 * words to the added words list. (Optional)
 			 */
 			public addWord(addedWordsParam: any[], removedListParam: boolean): void;
@@ -55,19 +55,19 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerUserDictionary(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Removes the specified words from the specified list in the 
 			 * dictionary.
-			 * @param {any[]} removedWordsParam - The words to remove.
-			 * @param {boolean} removedListParam - If true, removes the 
-			 * words from the removed words list. If false or unspecified, 
+			 * @param {any[]} removedWordsParam The words to remove.
+			 * @param {boolean} removedListParam If true, removes the words 
+			 * from the removed words list. If false or unspecified, 
 			 * removes the words from the added words list. (Optional)
 			 */
 			public removeWord(removedWordsParam: any[], removedListParam: boolean): void;

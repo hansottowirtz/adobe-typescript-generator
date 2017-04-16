@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -47,22 +47,22 @@ declare namespace Adobe {
 			public readonly verticalTranslation: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerTransformationMatrix(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Multiply the transformation matrix by another.
-			 * @param {TransformationMatrix} withMatrixParam - The right 
-			 * hand matrix factor
+			 * @param {TransformationMatrix} withMatrixParam The right hand 
+			 * matrix factor
 			 */
 			public catenateMatrix(withMatrixParam: TransformationMatrix): Adobe.Incopy.TransformationMatrix;
 			/**
 			 * Multiply the point by the matrix.
-			 * @param {any[]} pointParam - The point to transform
+			 * @param {any[]} pointParam The point to transform
 			 */
 			public changeCoordinates(pointParam: any[]): any;
 			/**
@@ -74,36 +74,36 @@ declare namespace Adobe {
 			public invertMatrix(): Adobe.Incopy.TransformationMatrix;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerTransformationMatrix(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Rotate the transformation matrix.
-			 * @param {number} byAngleParam - The counterclockwise rotation 
+			 * @param {number} byAngleParam The counterclockwise rotation 
 			 * angle (Optional)
-			 * @param {number} byCosineParam - The cosine of the desired 
+			 * @param {number} byCosineParam The cosine of the desired 
 			 * rotation (Optional)
-			 * @param {number} bySineParam - The sine of the desired 
-			 * rotation (Optional)
+			 * @param {number} bySineParam The sine of the desired rotation 
+			 * (Optional)
 			 */
 			public rotateMatrix(byAngleParam: number, byCosineParam: number, bySineParam: number): Adobe.Incopy.TransformationMatrix;
 			/**
 			 * Scale the transformation matrix.
-			 * @param {number} horizontallyByParam - The horizontal scale 
+			 * @param {number} horizontallyByParam The horizontal scale 
 			 * factor (Optional)
-			 * @param {number} verticallyByParam - The vertical scale 
-			 * factor (Optional)
+			 * @param {number} verticallyByParam The vertical scale factor 
+			 * (Optional)
 			 */
 			public scaleMatrix(horizontallyByParam: number, verticallyByParam: number): Adobe.Incopy.TransformationMatrix;
 			/**
 			 * Shear the transformation matrix.
-			 * @param {number} byAngleParam - The horizontal shear angle 
+			 * @param {number} byAngleParam The horizontal shear angle 
 			 * (Optional)
-			 * @param {number} bySlopeParam - The horizontal shear slope 
+			 * @param {number} bySlopeParam The horizontal shear slope 
 			 * (Optional)
 			 */
 			public shearMatrix(byAngleParam: number, bySlopeParam: number): Adobe.Incopy.TransformationMatrix;
@@ -111,9 +111,9 @@ declare namespace Adobe {
 			public toSpecifier(): string;
 			/**
 			 * Translate the transformation matrix.
-			 * @param {number} horizontallyByParam - The horizontal 
+			 * @param {number} horizontallyByParam The horizontal 
 			 * translation distance (Optional)
-			 * @param {number} verticallyByParam - The vertical translation 
+			 * @param {number} verticallyByParam The vertical translation 
 			 * distance (Optional)
 			 */
 			public translateMatrix(horizontallyByParam: number, verticallyByParam: number): Adobe.Incopy.TransformationMatrix;

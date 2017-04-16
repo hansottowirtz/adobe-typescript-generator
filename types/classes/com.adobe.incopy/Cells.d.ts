@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,27 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Cell;
 			/**
 			 * Returns the Cell with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Cell;
 			/**
 			 * Returns the Cell with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Cell;
 			/**
 			 * Returns the Cell with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Cell;
 			/**
 			 * Returns the Cells within the specified range.
-			 * @param {any} fromParam - The Cell, index, or name at the 
+			 * @param {any} fromParam The Cell, index, or name at the 
 			 * beginning of the range. Can accept: Cell, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Cell, index, or name at the end 
-			 * of the range. Can accept: Cell, Long Integer or String.
+			 * @param {any} toParam The Cell, index, or name at the end of 
+			 * the range. Can accept: Cell, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Cell in the collection. */
@@ -45,8 +45,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Cell whose index follows the specified Cell in 
 			 * the collection.
-			 * @param {Cell} objParam - The Cell whose index comes before 
-			 * the desired Cell. 
+			 * @param {Cell} objParam The Cell whose index comes before the 
+			 * desired Cell. 
 			 */
 			public nextItem(objParam: Cell): Adobe.Incopy.Cell;
 			/**
@@ -62,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Cell with the index previous to the specified 
 			 * index.
-			 * @param {Cell} objParam - The index of the Cell that follows 
+			 * @param {Cell} objParam The index of the Cell that follows 
 			 * the desired Cell.
 			 */
 			public previousItem(objParam: Cell): Adobe.Incopy.Cell;

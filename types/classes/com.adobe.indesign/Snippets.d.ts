@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,28 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Snippet;
 			/**
 			 * Returns the Snippet with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Snippet;
 			/**
 			 * Returns the Snippet with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Snippet;
 			/**
 			 * Returns the Snippet with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Snippet;
 			/**
 			 * Returns the Snippets within the specified range.
-			 * @param {any} fromParam - The Snippet, index, or name at the 
+			 * @param {any} fromParam The Snippet, index, or name at the 
 			 * beginning of the range. Can accept: Snippet, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Snippet, index, or name at the 
-			 * end of the range. Can accept: Snippet, Long Integer or 
-			 * String.
+			 * @param {any} toParam The Snippet, index, or name at the end 
+			 * of the range. Can accept: Snippet, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Snippet in the collection. */
@@ -46,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Snippet whose index follows the specified 
 			 * Snippet in the collection.
-			 * @param {Snippet} objParam - The Snippet whose index comes 
+			 * @param {Snippet} objParam The Snippet whose index comes 
 			 * before the desired Snippet. 
 			 */
 			public nextItem(objParam: Snippet): Adobe.Indesign.Snippet;
@@ -63,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Snippet with the index previous to the specified 
 			 * index.
-			 * @param {Snippet} objParam - The index of the Snippet that 
+			 * @param {Snippet} objParam The index of the Snippet that 
 			 * follows the desired Snippet.
 			 */
 			public previousItem(objParam: Snippet): Adobe.Indesign.Snippet;

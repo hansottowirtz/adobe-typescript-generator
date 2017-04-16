@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -60,6 +60,10 @@ declare namespace Adobe {
 			public static readonly INDIA_TAMIL: Adobe.Indesign.LanguageAndRegion;
 			/** Alias for INDIA_TAMIL. India: Tamil */
 			public static readonly indiaTamil: Adobe.Indesign.LanguageAndRegion;
+			/** Alias for INDIC. Indic */
+			public static readonly indic: Adobe.Indesign.LanguageAndRegion;
+			/** Indic */
+			public static readonly INDIC: Adobe.Indesign.LanguageAndRegion;
 			/** Israel: Hebrew */
 			public static readonly ISRAEL_HEBREW: Adobe.Indesign.LanguageAndRegion;
 			/** Alias for ISRAEL_HEBREW. Israel: Hebrew */

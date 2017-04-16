@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -14,8 +14,8 @@ declare namespace Adobe {
 			 * @param {string} nameParam
 			 */
 			public getByName(nameParam: string): Adobe.Illustrator.Swatch;
-			/** Get selected swatches in the document. */
-			public getSelected(): any;
+			/** get selected swatches in the document */
+			public getSelected(): any[];
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx

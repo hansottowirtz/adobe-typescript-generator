@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,16 +7,16 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new TextFrame
-			 * @param {Layer} layerParam - The layer on which to create the 
+			 * @param {Layer} layerParam The layer on which to create the 
 			 * TextFrame. (Optional)
-			 * @param {LocationOptions} atParam - The location at which to 
+			 * @param {LocationOptions} atParam The location at which to 
 			 * insert the TextFrame relative to the reference object or 
 			 * within the container object. (Optional)
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the at parameter is before or after. Can 
 			 * accept: Document, Spread, MasterSpread, Page, Layer or 
 			 * PageItem. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TextFrame (Optional)
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Indesign.TextFrame;
@@ -30,26 +30,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.TextFrame;
 			/**
 			 * Returns the TextFrame with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.TextFrame;
 			/**
 			 * Returns the TextFrame with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.TextFrame;
 			/**
 			 * Returns the TextFrame with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.TextFrame;
 			/**
 			 * Returns the TextFrames within the specified range.
-			 * @param {any} fromParam - The TextFrame, index, or name at 
-			 * the beginning of the range. Can accept: TextFrame, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The TextFrame, index, or name at the 
+			 * @param {any} fromParam The TextFrame, index, or name at the 
+			 * beginning of the range. Can accept: TextFrame, Long Integer 
+			 * or String.
+			 * @param {any} toParam The TextFrame, index, or name at the 
 			 * end of the range. Can accept: TextFrame, Long Integer or 
 			 * String.
 			 */
@@ -61,8 +61,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextFrame whose index follows the specified 
 			 * TextFrame in the collection.
-			 * @param {TextFrame} objParam - The TextFrame whose index 
-			 * comes before the desired TextFrame. 
+			 * @param {TextFrame} objParam The TextFrame whose index comes 
+			 * before the desired TextFrame. 
 			 */
 			public nextItem(objParam: TextFrame): Adobe.Indesign.TextFrame;
 			/**
@@ -78,8 +78,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextFrame with the index previous to the 
 			 * specified index.
-			 * @param {TextFrame} objParam - The index of the TextFrame 
-			 * that follows the desired TextFrame.
+			 * @param {TextFrame} objParam The index of the TextFrame that 
+			 * follows the desired TextFrame.
 			 */
 			public previousItem(objParam: TextFrame): Adobe.Indesign.TextFrame;
 		}

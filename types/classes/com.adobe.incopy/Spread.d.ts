@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -21,6 +21,10 @@ declare namespace Adobe {
 			public readonly appliedMaster: Adobe.Incopy.MasterSpread;
 			/** A collection of buttons. */
 			public readonly buttons: Adobe.Incopy.Buttons;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Incopy.CheckBoxes;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Incopy.ComboBoxes;
 			/** EPSTexts */
 			public readonly epstexts: Adobe.Incopy.EPSTexts;
 			/** A collection of event listeners. */
@@ -48,6 +52,8 @@ declare namespace Adobe {
 			public readonly isValid: boolean;
 			/** A property that can be set to any string. */
 			public label: string;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Incopy.ListBoxes;
 			/** A collection of multi-state objects. */
 			public readonly multiStateObjects: Adobe.Incopy.MultiStateObjects;
 			/**
@@ -74,24 +80,30 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Incopy.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Incopy.Rectangles;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Incopy.SignatureFields;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Incopy.SplineItems;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Incopy.TextBoxes;
 			/** A collection of text frames. */
 			public readonly textFrames: Adobe.Incopy.TextFrames;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerSpread(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -102,29 +114,29 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerSpread(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Get the coordinates of the given location in the specified 
 			 * coordinate system.
-			 * @param {any} locationParam - The location requested. Can 
+			 * @param {any} locationParam The location requested. Can 
 			 * accept: Array of 2 Reals, AnchorPoint enumerator or Array of 
 			 * Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint 
 			 * enumerators, BoundingBoxLimits enumerators or Long Integers.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use.
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -135,16 +147,16 @@ declare namespace Adobe {
 			public toSpecifier(): string;
 			/**
 			 * Transform the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
-			 * @param {any} fromParam - The temporary origin during the 
+			 * @param {any} fromParam The temporary origin during the 
 			 * transformation. Can accept: Array of 2 Reals, AnchorPoint 
 			 * enumerator or Array of Arrays of 2 Reals, CoordinateSpaces 
 			 * enumerators, AnchorPoint enumerators, BoundingBoxLimits 
 			 * enumerators or Long Integers.
-			 * @param {any} withMatrixParam - Transform matrix. Can accept: 
+			 * @param {any} withMatrixParam Transform matrix. Can accept: 
 			 * Array of 6 Reals or TransformationMatrix.
-			 * @param {any} replacingCurrentParam - Transform components to 
+			 * @param {any} replacingCurrentParam Transform components to 
 			 * consider; providing this optional parameter causes the 
 			 * target's existing transform components to be replaced with 
 			 * new values.  Without this parameter, the given matrix is 
@@ -152,7 +164,7 @@ declare namespace Adobe {
 			 * the effect of the two. Can accept: MatrixContent enumerator, 
 			 * Array of MatrixContent enumerators or Long Integer. 
 			 * (Optional)
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler based origin is interpreted using ruler units rather 
 			 * than points. The default value is false. This parameter has 
 			 * no effect unless the reference point is specified relative 
@@ -161,7 +173,7 @@ declare namespace Adobe {
 			public transform(inParam: CoordinateSpaces, fromParam: any, withMatrixParam: any, replacingCurrentParam: any, consideringRulerUnitsParam: boolean): void;
 			/**
 			 * Get the transformation values of the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
 			 */
 			public transformValuesOf(inParam: CoordinateSpaces): any;

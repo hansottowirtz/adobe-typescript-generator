@@ -1,8 +1,7 @@
-/// <reference path="../../namespaces/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
-		/**   */
 		class TypeConUtils {
 			/**
 			 * Encapsulate calls to getDefinitionByName with optional 

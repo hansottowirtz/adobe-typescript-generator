@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,10 +7,10 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new book content object.
-			 * @param {File} fullNameParam - The full path name of the new 
+			 * @param {File} fullNameParam The full path name of the new 
 			 * book content object.
 			 * @param {number} atParam
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new BookContent (Optional)
 			 */
 			public add(fullNameParam: File, atParam: number, withPropertiesParam: any): Adobe.Indesign.BookContent;
@@ -24,28 +24,28 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.BookContent;
 			/**
 			 * Returns the BookContent with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.BookContent;
 			/**
 			 * Returns the BookContent with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.BookContent;
 			/**
 			 * Returns the BookContent with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.BookContent;
 			/**
 			 * Returns the BookContents within the specified range.
-			 * @param {any} fromParam - The BookContent, index, or name at 
+			 * @param {any} fromParam The BookContent, index, or name at 
 			 * the beginning of the range. Can accept: BookContent, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The BookContent, index, or name at 
-			 * the end of the range. Can accept: BookContent, Long Integer 
-			 * or String.
+			 * @param {any} toParam The BookContent, index, or name at the 
+			 * end of the range. Can accept: BookContent, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last BookContent in the collection. */
@@ -55,7 +55,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the BookContent whose index follows the specified 
 			 * BookContent in the collection.
-			 * @param {BookContent} objParam - The BookContent whose index 
+			 * @param {BookContent} objParam The BookContent whose index 
 			 * comes before the desired BookContent. 
 			 */
 			public nextItem(objParam: BookContent): Adobe.Indesign.BookContent;
@@ -72,7 +72,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the BookContent with the index previous to the 
 			 * specified index.
-			 * @param {BookContent} objParam - The index of the BookContent 
+			 * @param {BookContent} objParam The index of the BookContent 
 			 * that follows the desired BookContent.
 			 */
 			public previousItem(objParam: BookContent): Adobe.Indesign.BookContent;

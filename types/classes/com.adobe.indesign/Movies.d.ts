@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,16 +7,16 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new Movie
-			 * @param {Layer} layerParam - The layer on which to create the 
+			 * @param {Layer} layerParam The layer on which to create the 
 			 * Movie. (Optional)
-			 * @param {LocationOptions} atParam - The location at which to 
+			 * @param {LocationOptions} atParam The location at which to 
 			 * insert the Movie relative to the reference object or within 
 			 * the container object. (Optional)
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the at parameter is before or after. Can 
 			 * accept: Document, Spread, MasterSpread, Page, Layer or 
 			 * PageItem. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Movie (Optional)
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Indesign.Movie;
@@ -30,27 +30,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Movie;
 			/**
 			 * Returns the Movie with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Movie;
 			/**
 			 * Returns the Movie with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Movie;
 			/**
 			 * Returns the Movie with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Movie;
 			/**
 			 * Returns the Movies within the specified range.
-			 * @param {any} fromParam - The Movie, index, or name at the 
+			 * @param {any} fromParam The Movie, index, or name at the 
 			 * beginning of the range. Can accept: Movie, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Movie, index, or name at the end 
-			 * of the range. Can accept: Movie, Long Integer or String.
+			 * @param {any} toParam The Movie, index, or name at the end of 
+			 * the range. Can accept: Movie, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Movie in the collection. */
@@ -60,7 +60,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Movie whose index follows the specified Movie in 
 			 * the collection.
-			 * @param {Movie} objParam - The Movie whose index comes before 
+			 * @param {Movie} objParam The Movie whose index comes before 
 			 * the desired Movie. 
 			 */
 			public nextItem(objParam: Movie): Adobe.Indesign.Movie;
@@ -77,8 +77,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Movie with the index previous to the specified 
 			 * index.
-			 * @param {Movie} objParam - The index of the Movie that 
-			 * follows the desired Movie.
+			 * @param {Movie} objParam The index of the Movie that follows 
+			 * the desired Movie.
 			 */
 			public previousItem(objParam: Movie): Adobe.Indesign.Movie;
 		}

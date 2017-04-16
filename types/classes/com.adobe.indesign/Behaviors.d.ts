@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,28 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Behavior;
 			/**
 			 * Returns the Behavior with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Behavior;
 			/**
 			 * Returns the Behavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Behavior;
 			/**
 			 * Returns the Behavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Behavior;
 			/**
 			 * Returns the Behaviors within the specified range.
-			 * @param {any} fromParam - The Behavior, index, or name at the 
+			 * @param {any} fromParam The Behavior, index, or name at the 
 			 * beginning of the range. Can accept: Behavior, Long Integer 
 			 * or String.
-			 * @param {any} toParam - The Behavior, index, or name at the 
-			 * end of the range. Can accept: Behavior, Long Integer or 
-			 * String.
+			 * @param {any} toParam The Behavior, index, or name at the end 
+			 * of the range. Can accept: Behavior, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Behavior in the collection. */
@@ -46,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Behavior whose index follows the specified 
 			 * Behavior in the collection.
-			 * @param {Behavior} objParam - The Behavior whose index comes 
+			 * @param {Behavior} objParam The Behavior whose index comes 
 			 * before the desired Behavior. 
 			 */
 			public nextItem(objParam: Behavior): Adobe.Indesign.Behavior;
@@ -63,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Behavior with the index previous to the 
 			 * specified index.
-			 * @param {Behavior} objParam - The index of the Behavior that 
+			 * @param {Behavior} objParam The index of the Behavior that 
 			 * follows the desired Behavior.
 			 */
 			public previousItem(objParam: Behavior): Adobe.Indesign.Behavior;

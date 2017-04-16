@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new NavigationPoint.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new NavigationPoint (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.NavigationPoint;
@@ -22,27 +22,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the NavigationPoint with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.NavigationPoint;
 			/**
 			 * Returns the NavigationPoint with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.NavigationPoint;
 			/**
 			 * Returns the NavigationPoint with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.NavigationPoint;
 			/**
 			 * Returns the NavigationPoints within the specified range.
-			 * @param {any} fromParam - The NavigationPoint, index, or name 
+			 * @param {any} fromParam The NavigationPoint, index, or name 
 			 * at the beginning of the range. Can accept: NavigationPoint, 
 			 * Long Integer or String.
-			 * @param {any} toParam - The NavigationPoint, index, or name 
-			 * at the end of the range. Can accept: NavigationPoint, Long 
+			 * @param {any} toParam The NavigationPoint, index, or name at 
+			 * the end of the range. Can accept: NavigationPoint, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -53,8 +53,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the NavigationPoint whose index follows the 
 			 * specified NavigationPoint in the collection.
-			 * @param {NavigationPoint} objParam - The NavigationPoint 
-			 * whose index comes before the desired NavigationPoint. 
+			 * @param {NavigationPoint} objParam The NavigationPoint whose 
+			 * index comes before the desired NavigationPoint. 
 			 */
 			public nextItem(objParam: NavigationPoint): Adobe.Incopy.NavigationPoint;
 			/**
@@ -70,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the NavigationPoint with the index previous to the 
 			 * specified index.
-			 * @param {NavigationPoint} objParam - The index of the 
+			 * @param {NavigationPoint} objParam The index of the 
 			 * NavigationPoint that follows the desired NavigationPoint.
 			 */
 			public previousItem(objParam: NavigationPoint): Adobe.Incopy.NavigationPoint;

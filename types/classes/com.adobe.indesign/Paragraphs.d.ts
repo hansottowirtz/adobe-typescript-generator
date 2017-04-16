@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,16 +15,16 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Paragraph;
 			/**
 			 * Returns the Paragraph with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Paragraph;
 			/**
 			 * Returns the Paragraphs within the specified range.
-			 * @param {any} fromParam - The Paragraph, index, or name at 
-			 * the beginning of the range. Can accept: Paragraph, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The Paragraph, index, or name at the 
+			 * @param {any} fromParam The Paragraph, index, or name at the 
+			 * beginning of the range. Can accept: Paragraph, Long Integer 
+			 * or String.
+			 * @param {any} toParam The Paragraph, index, or name at the 
 			 * end of the range. Can accept: Paragraph, Long Integer or 
 			 * String.
 			 */
@@ -36,8 +36,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Paragraph whose index follows the specified 
 			 * Paragraph in the collection.
-			 * @param {Paragraph} objParam - The Paragraph whose index 
-			 * comes before the desired Paragraph. 
+			 * @param {Paragraph} objParam The Paragraph whose index comes 
+			 * before the desired Paragraph. 
 			 */
 			public nextItem(objParam: Paragraph): Adobe.Indesign.Paragraph;
 			/**
@@ -53,8 +53,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Paragraph with the index previous to the 
 			 * specified index.
-			 * @param {Paragraph} objParam - The index of the Paragraph 
-			 * that follows the desired Paragraph.
+			 * @param {Paragraph} objParam The index of the Paragraph that 
+			 * follows the desired Paragraph.
 			 */
 			public previousItem(objParam: Paragraph): Adobe.Indesign.Paragraph;
 		}

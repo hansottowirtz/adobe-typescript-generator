@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,12 +7,12 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new mixed ink swatch.
-			 * @param {any} inkListParam - The inks to mix. Note: Must 
+			 * @param {any} inkListParam The inks to mix. Note: Must 
 			 * contain at least two process inks and one spot ink. Can 
 			 * accept: Array of Inks or MixedInkGroup.
-			 * @param {any[]} inkPercentagesParam - The percent to use of 
+			 * @param {any[]} inkPercentagesParam The percent to use of 
 			 * each ink in the ink list. (Range: 0 to 100 for each ink)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new MixedInk (Optional)
 			 */
 			public add(inkListParam: any, inkPercentagesParam: any[], withPropertiesParam: any): Adobe.Indesign.MixedInk;
@@ -26,28 +26,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.MixedInk;
 			/**
 			 * Returns the MixedInk with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.MixedInk;
 			/**
 			 * Returns the MixedInk with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.MixedInk;
 			/**
 			 * Returns the MixedInk with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.MixedInk;
 			/**
 			 * Returns the MixedInks within the specified range.
-			 * @param {any} fromParam - The MixedInk, index, or name at the 
+			 * @param {any} fromParam The MixedInk, index, or name at the 
 			 * beginning of the range. Can accept: MixedInk, Long Integer 
 			 * or String.
-			 * @param {any} toParam - The MixedInk, index, or name at the 
-			 * end of the range. Can accept: MixedInk, Long Integer or 
-			 * String.
+			 * @param {any} toParam The MixedInk, index, or name at the end 
+			 * of the range. Can accept: MixedInk, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last MixedInk in the collection. */
@@ -57,7 +56,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MixedInk whose index follows the specified 
 			 * MixedInk in the collection.
-			 * @param {MixedInk} objParam - The MixedInk whose index comes 
+			 * @param {MixedInk} objParam The MixedInk whose index comes 
 			 * before the desired MixedInk. 
 			 */
 			public nextItem(objParam: MixedInk): Adobe.Indesign.MixedInk;
@@ -74,7 +73,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MixedInk with the index previous to the 
 			 * specified index.
-			 * @param {MixedInk} objParam - The index of the MixedInk that 
+			 * @param {MixedInk} objParam The index of the MixedInk that 
 			 * follows the desired MixedInk.
 			 */
 			public previousItem(objParam: MixedInk): Adobe.Indesign.MixedInk;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -191,24 +191,23 @@ declare namespace Adobe {
 			public readonly transparencySettings: Adobe.Indesign.TransparencySetting;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPageItemDefault(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Applies the specified object style.
-			 * @param {ObjectStyle} usingParam - The object style to apply.
-			 * @param {boolean} clearingOverridesParam - If true, clears 
-			 * the PageItemDefault's existing attributes before applying 
-			 * the style. (Optional)
+			 * @param {ObjectStyle} usingParam The object style to apply.
+			 * @param {boolean} clearingOverridesParam If true, clears the 
+			 * PageItemDefault's existing attributes before applying the 
+			 * style. (Optional)
 			 * @param {boolean} 
-			 * clearingOverridesThroughRootObjectStyleParam - If true, 
-			 * clears attributes and formatting applied to the 
-			 * PageItemDefault that are not defined in the object style. 
-			 * (Optional)
+			 * clearingOverridesThroughRootObjectStyleParam If true, clears 
+			 * attributes and formatting applied to the PageItemDefault 
+			 * that are not defined in the object style. (Optional)
 			 */
 			public applyObjectStyle(usingParam: ObjectStyle, clearingOverridesParam: boolean, clearingOverridesThroughRootObjectStyleParam: boolean): void;
 			/** Clear overrides for object style */
@@ -220,10 +219,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPageItemDefault(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

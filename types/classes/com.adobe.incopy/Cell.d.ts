@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -65,6 +65,8 @@ declare namespace Adobe {
 			public readonly changes: Adobe.Incopy.Changes;
 			/** A collection of characters. */
 			public readonly characters: Adobe.Incopy.Characters;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Incopy.CheckBoxes;
 			/**
 			 * If true, clips the cell's content to width and height of the 
 			 * cell.
@@ -74,6 +76,8 @@ declare namespace Adobe {
 			public readonly columns: Adobe.Incopy.Columns;
 			/** The number of columns that the object spans. */
 			public readonly columnSpan: number;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Incopy.ComboBoxes;
 			/**
 			 * The text contents. For rows or columns, when specified as a 
 			 * string, the sting populates each cell in the row or column; 
@@ -292,6 +296,8 @@ declare namespace Adobe {
 			public leftInset: any;
 			/** A collection of lines. */
 			public readonly lines: Adobe.Incopy.Lines;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Incopy.ListBoxes;
 			/**
 			 * The maximum height to which cells in the Cell may grow. 
 			 * Note: The maximum height cannot be exceeded even when auto 
@@ -353,6 +359,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Incopy.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Incopy.Rectangles;
 			/**
@@ -402,12 +410,16 @@ declare namespace Adobe {
 			public readonly rowSpan: number;
 			/** The row type. */
 			public rowType: Adobe.Incopy.RowTypes;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Incopy.SignatureFields;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Incopy.SplineItems;
 			/** Indicates where to start the row. */
 			public startRow: Adobe.Incopy.StartParagraph;
 			/** A collection of tables. */
 			public readonly tables: Adobe.Incopy.Tables;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Incopy.TextBoxes;
 			/** A collection of text columns. */
 			public readonly textColumns: Adobe.Incopy.TextColumns;
 			/** A collection of text frames. */
@@ -471,10 +483,10 @@ declare namespace Adobe {
 			public writingDirection: Adobe.Incopy.HorizontalOrVertical;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerCell(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -486,35 +498,35 @@ declare namespace Adobe {
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Clear Cell Style Overrides
 			 * @param {boolean} clearingOverridesThroughRootCellStyleParam 
-			 * - If true, clears all overrides, whether or not they are 
+			 * If true, clears all overrides, whether or not they are 
 			 * defined in the underlying cell style (Optional)
 			 */
 			public clearCellStyleOverrides(clearingOverridesThroughRootCellStyleParam: boolean): void;
@@ -527,30 +539,30 @@ declare namespace Adobe {
 			public createOutlines(): any;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -562,13 +574,13 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Merges the cells.
-			 * @param {any} withParam - The cell(s) to merge with. Can 
+			 * @param {any} withParam The cell(s) to merge with. Can 
 			 * accept: Cell, Row or Column. (Optional)
 			 */
 			public merge(withParam: any): Adobe.Incopy.Cell;
@@ -578,16 +590,16 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerCell(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Splits the cell along the specified axis.
-			 * @param {HorizontalOrVertical} usingParam - The direction in 
+			 * @param {HorizontalOrVertical} usingParam The direction in 
 			 * which to split the cell.
 			 */
 			public split(usingParam: HorizontalOrVertical): void;

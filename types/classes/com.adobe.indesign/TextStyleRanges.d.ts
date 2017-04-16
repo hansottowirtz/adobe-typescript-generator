@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,16 +15,16 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.TextStyleRange;
 			/**
 			 * Returns the TextStyleRange with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.TextStyleRange;
 			/**
 			 * Returns the TextStyleRanges within the specified range.
-			 * @param {any} fromParam - The TextStyleRange, index, or name 
-			 * at the beginning of the range. Can accept: TextStyleRange, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The TextStyleRange, index, or name at 
+			 * @param {any} fromParam The TextStyleRange, index, or name at 
+			 * the beginning of the range. Can accept: TextStyleRange, Long 
+			 * Integer or String.
+			 * @param {any} toParam The TextStyleRange, index, or name at 
 			 * the end of the range. Can accept: TextStyleRange, Long 
 			 * Integer or String.
 			 */
@@ -36,7 +36,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextStyleRange whose index follows the specified 
 			 * TextStyleRange in the collection.
-			 * @param {TextStyleRange} objParam - The TextStyleRange whose 
+			 * @param {TextStyleRange} objParam The TextStyleRange whose 
 			 * index comes before the desired TextStyleRange. 
 			 */
 			public nextItem(objParam: TextStyleRange): Adobe.Indesign.TextStyleRange;
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextStyleRange with the index previous to the 
 			 * specified index.
-			 * @param {TextStyleRange} objParam - The index of the 
+			 * @param {TextStyleRange} objParam The index of the 
 			 * TextStyleRange that follows the desired TextStyleRange.
 			 */
 			public previousItem(objParam: TextStyleRange): Adobe.Indesign.TextStyleRange;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new Condition.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Condition (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.Condition;
@@ -21,26 +21,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Condition;
 			/**
 			 * Returns the Condition with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Condition;
 			/**
 			 * Returns the Condition with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Condition;
 			/**
 			 * Returns the Condition with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Condition;
 			/**
 			 * Returns the Conditions within the specified range.
-			 * @param {any} fromParam - The Condition, index, or name at 
-			 * the beginning of the range. Can accept: Condition, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The Condition, index, or name at the 
+			 * @param {any} fromParam The Condition, index, or name at the 
+			 * beginning of the range. Can accept: Condition, Long Integer 
+			 * or String.
+			 * @param {any} toParam The Condition, index, or name at the 
 			 * end of the range. Can accept: Condition, Long Integer or 
 			 * String.
 			 */
@@ -52,8 +52,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Condition whose index follows the specified 
 			 * Condition in the collection.
-			 * @param {Condition} objParam - The Condition whose index 
-			 * comes before the desired Condition. 
+			 * @param {Condition} objParam The Condition whose index comes 
+			 * before the desired Condition. 
 			 */
 			public nextItem(objParam: Condition): Adobe.Incopy.Condition;
 			/**
@@ -69,8 +69,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Condition with the index previous to the 
 			 * specified index.
-			 * @param {Condition} objParam - The index of the Condition 
-			 * that follows the desired Condition.
+			 * @param {Condition} objParam The index of the Condition that 
+			 * follows the desired Condition.
 			 */
 			public previousItem(objParam: Condition): Adobe.Incopy.Condition;
 		}

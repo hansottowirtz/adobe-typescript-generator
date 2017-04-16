@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -30,6 +30,17 @@ declare namespace Adobe {
 			 * previously selected objects.
 			 */
 			public static readonly replaceWith: Adobe.Indesign.SelectionOptions;
+			/**
+			 * Sets the key object. At least 2 objects must be selected, 
+			 * and the key object specified must be one of them.
+			 */
+			public static readonly SET_KEY: Adobe.Indesign.SelectionOptions;
+			/**
+			 * Alias for SET_KEY. Sets the key object. At least 2 objects 
+			 * must be selected, and the key object specified must be one 
+			 * of them.
+			 */
+			public static readonly setKey: Adobe.Indesign.SelectionOptions;
 			/** Constructor */
 			public constructor();
 		}

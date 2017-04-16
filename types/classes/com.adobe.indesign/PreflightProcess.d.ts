@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -48,10 +48,10 @@ declare namespace Adobe {
 			public readonly targetObject: Adobe.Indesign.Document;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPreflightProcess(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -64,17 +64,17 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPreflightProcess(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Saves a report of the completed preflight process.
-			 * @param {File} toParam - The preflight report to save to.
-			 * @param {boolean} autoOpenParam - If true, automatically open 
+			 * @param {File} toParam The preflight report to save to.
+			 * @param {boolean} autoOpenParam If true, automatically open 
 			 * the report after creation. (Optional)
 			 */
 			public saveReport(toParam: File, autoOpenParam: boolean): void;
@@ -84,7 +84,7 @@ declare namespace Adobe {
 			 * Waits for the process to finish, up to an optional maximum 
 			 * amount of time. No other processes get cycles during this 
 			 * time.
-			 * @param {number} waitTimeParam - The maximum time to wait, in 
+			 * @param {number} waitTimeParam The maximum time to wait, in 
 			 * seconds; if omitted, waits until completion no matter how 
 			 * long it takes. (Optional)
 			 */

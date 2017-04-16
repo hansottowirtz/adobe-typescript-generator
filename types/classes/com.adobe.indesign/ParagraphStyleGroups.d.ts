@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new ParagraphStyleGroup.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ParagraphStyleGroup (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.ParagraphStyleGroup;
@@ -22,28 +22,28 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphStyleGroup with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.ParagraphStyleGroup;
 			/**
 			 * Returns the ParagraphStyleGroup with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.ParagraphStyleGroup;
 			/**
 			 * Returns the ParagraphStyleGroup with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.ParagraphStyleGroup;
 			/**
 			 * Returns the ParagraphStyleGroups within the specified range.
-			 * @param {any} fromParam - The ParagraphStyleGroup, index, or 
+			 * @param {any} fromParam The ParagraphStyleGroup, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * ParagraphStyleGroup, Long Integer or String.
-			 * @param {any} toParam - The ParagraphStyleGroup, index, or 
-			 * name at the end of the range. Can accept: 
-			 * ParagraphStyleGroup, Long Integer or String.
+			 * @param {any} toParam The ParagraphStyleGroup, index, or name 
+			 * at the end of the range. Can accept: ParagraphStyleGroup, 
+			 * Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last ParagraphStyleGroup in the collection. */
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphStyleGroup whose index follows the 
 			 * specified ParagraphStyleGroup in the collection.
-			 * @param {ParagraphStyleGroup} objParam - The 
+			 * @param {ParagraphStyleGroup} objParam The 
 			 * ParagraphStyleGroup whose index comes before the desired 
 			 * ParagraphStyleGroup. 
 			 */
@@ -71,7 +71,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphStyleGroup with the index previous to 
 			 * the specified index.
-			 * @param {ParagraphStyleGroup} objParam - The index of the 
+			 * @param {ParagraphStyleGroup} objParam The index of the 
 			 * ParagraphStyleGroup that follows the desired 
 			 * ParagraphStyleGroup.
 			 */

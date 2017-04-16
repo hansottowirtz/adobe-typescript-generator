@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -46,8 +46,9 @@ declare namespace Adobe {
 			/**
 			 * The parent of the AnchoredObjectSetting (a Application, 
 			 * Document, EPSText, SplineItem, Polygon, GraphicLine, 
-			 * Rectangle, Oval, Group, TextFrame, Button, FormField or 
-			 * MultiStateObject).
+			 * Rectangle, Oval, Group, TextFrame, Button, FormField, 
+			 * SignatureField, TextBox, RadioButton, ListBox, ComboBox, 
+			 * CheckBox or MultiStateObject).
 			 */
 			public readonly parent: any;
 			/**
@@ -78,10 +79,10 @@ declare namespace Adobe {
 			public verticalReferencePoint: Adobe.Incopy.VerticallyRelativeTo;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerAnchoredObjectSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -90,14 +91,22 @@ declare namespace Adobe {
 			 * references.
 			 */
 			public getElements(): any;
+			/**
+			 * Inserts the anchored object into specified story.
+			 * @param {InsertionPoint} storyOffsetParam The location within 
+			 * the story, specified as an insertion point.
+			 * @param {AnchorPosition} anchoredPositionParam The position 
+			 * of the anchored object relative to the anchor. (Optional)
+			 */
+			public insertAnchoredObject(storyOffsetParam: InsertionPoint, anchoredPositionParam: AnchorPosition): void;
 			/** Releases the anchored object from its associated text. */
 			public releaseAnchoredObject(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerAnchoredObjectSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

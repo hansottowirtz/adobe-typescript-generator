@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,11 +7,11 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a data merge image placeholder.
-			 * @param {PageItem} placeholderParam - The page item on which 
-			 * to place the placeholder.
-			 * @param {DataMergeField} fieldParam - The data merge field to 
+			 * @param {PageItem} placeholderParam The page item on which to 
+			 * place the placeholder.
+			 * @param {DataMergeField} fieldParam The data merge field to 
 			 * insert.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new DataMergeImagePlaceholder (Optional)
 			 */
 			public add(placeholderParam: PageItem, fieldParam: DataMergeField, withPropertiesParam: any): Adobe.Indesign.DataMergeImagePlaceholder;
@@ -32,17 +32,17 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeImagePlaceholder with the specified 
 			 * index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.DataMergeImagePlaceholder;
 			/**
 			 * Returns the DataMergeImagePlaceholders within the specified 
 			 * range.
-			 * @param {any} fromParam - The DataMergeImagePlaceholder, 
-			 * index, or name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The DataMergeImagePlaceholder, index, 
+			 * or name at the beginning of the range. Can accept: 
 			 * DataMergeImagePlaceholder, Long Integer or String.
-			 * @param {any} toParam - The DataMergeImagePlaceholder, index, 
+			 * @param {any} toParam The DataMergeImagePlaceholder, index, 
 			 * or name at the end of the range. Can accept: 
 			 * DataMergeImagePlaceholder, Long Integer or String.
 			 */
@@ -60,7 +60,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeImagePlaceholder whose index follows 
 			 * the specified DataMergeImagePlaceholder in the collection.
-			 * @param {DataMergeImagePlaceholder} objParam - The 
+			 * @param {DataMergeImagePlaceholder} objParam The 
 			 * DataMergeImagePlaceholder whose index comes before the 
 			 * desired DataMergeImagePlaceholder. 
 			 */
@@ -78,8 +78,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeImagePlaceholder with the index 
 			 * previous to the specified index.
-			 * @param {DataMergeImagePlaceholder} objParam - The index of 
-			 * the DataMergeImagePlaceholder that follows the desired 
+			 * @param {DataMergeImagePlaceholder} objParam The index of the 
+			 * DataMergeImagePlaceholder that follows the desired 
 			 * DataMergeImagePlaceholder.
 			 */
 			public previousItem(objParam: DataMergeImagePlaceholder): Adobe.Indesign.DataMergeImagePlaceholder;

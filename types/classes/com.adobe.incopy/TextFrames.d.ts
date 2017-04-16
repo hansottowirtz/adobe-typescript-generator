@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.TextFrame;
 			/**
 			 * Returns the TextFrame with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.TextFrame;
 			/**
 			 * Returns the TextFrame with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.TextFrame;
 			/**
 			 * Returns the TextFrame with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.TextFrame;
 			/**
 			 * Returns the TextFrames within the specified range.
-			 * @param {any} fromParam - The TextFrame, index, or name at 
-			 * the beginning of the range. Can accept: TextFrame, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The TextFrame, index, or name at the 
+			 * @param {any} fromParam The TextFrame, index, or name at the 
+			 * beginning of the range. Can accept: TextFrame, Long Integer 
+			 * or String.
+			 * @param {any} toParam The TextFrame, index, or name at the 
 			 * end of the range. Can accept: TextFrame, Long Integer or 
 			 * String.
 			 */
@@ -46,8 +46,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextFrame whose index follows the specified 
 			 * TextFrame in the collection.
-			 * @param {TextFrame} objParam - The TextFrame whose index 
-			 * comes before the desired TextFrame. 
+			 * @param {TextFrame} objParam The TextFrame whose index comes 
+			 * before the desired TextFrame. 
 			 */
 			public nextItem(objParam: TextFrame): Adobe.Incopy.TextFrame;
 			/**
@@ -63,8 +63,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextFrame with the index previous to the 
 			 * specified index.
-			 * @param {TextFrame} objParam - The index of the TextFrame 
-			 * that follows the desired TextFrame.
+			 * @param {TextFrame} objParam The index of the TextFrame that 
+			 * follows the desired TextFrame.
 			 */
 			public previousItem(objParam: TextFrame): Adobe.Incopy.TextFrame;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -60,6 +60,10 @@ declare namespace Adobe {
 			public static readonly INDIA_TAMIL: Adobe.Incopy.LanguageAndRegion;
 			/** Alias for INDIA_TAMIL. India: Tamil */
 			public static readonly indiaTamil: Adobe.Incopy.LanguageAndRegion;
+			/** Alias for INDIC. Indic */
+			public static readonly indic: Adobe.Incopy.LanguageAndRegion;
+			/** Indic */
+			public static readonly INDIC: Adobe.Incopy.LanguageAndRegion;
 			/** Israel: Hebrew */
 			public static readonly ISRAEL_HEBREW: Adobe.Incopy.LanguageAndRegion;
 			/** Alias for ISRAEL_HEBREW. Israel: Hebrew */

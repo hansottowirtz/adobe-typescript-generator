@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -40,38 +40,38 @@ declare namespace Adobe {
 			 */
 			public getProperty(): number;
 			/**
-			 * @param {number} desiredClass - ID of class
+			 * @param {number} desiredClass ID of class
 			 */
 			public putClass(desiredClass: number): void;
 			/**
-			 * @param {number} desiredClass - ID of class
-			 * @param {number} enumType - Type of enumeration
-			 * @param {number} value - enumeration value
+			 * @param {number} desiredClass ID of class
+			 * @param {number} enumType Type of enumeration
+			 * @param {number} value enumeration value
 			 */
 			public putEnumerated(desiredClass: number, enumType: number, value: number): void;
 			/**
-			 * @param {number} desiredClass - ID of class
-			 * @param {number} value - 
+			 * @param {number} desiredClass ID of class
+			 * @param {number} value 
 			 */
 			public putIdentifier(desiredClass: number, value: number): void;
 			/**
-			 * @param {number} desiredClass - ID of class
-			 * @param {number} value - 
+			 * @param {number} desiredClass ID of class
+			 * @param {number} value 
 			 */
 			public putIndex(desiredClass: number, value: number): void;
 			/**
-			 * @param {number} desiredClass - ID of class
-			 * @param {string} value - 
+			 * @param {number} desiredClass ID of class
+			 * @param {string} value 
 			 */
 			public putName(desiredClass: number, value: string): void;
 			/**
-			 * @param {number} desiredClass - ID of class
-			 * @param {number} value - 
+			 * @param {number} desiredClass ID of class
+			 * @param {number} value 
 			 */
 			public putOffset(desiredClass: number, value: number): void;
 			/**
-			 * @param {number} desiredClass - ID of class
-			 * @param {number} value - 
+			 * @param {number} desiredClass ID of class
+			 * @param {number} value 
 			 */
 			public putProperty(desiredClass: number, value: number): void;
 		}

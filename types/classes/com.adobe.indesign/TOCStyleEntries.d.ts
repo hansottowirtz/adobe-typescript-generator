@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Adds a TOC style entry.
-			 * @param {string} styleNameParam - The paragraph style to 
+			 * @param {string} styleNameParam The paragraph style to 
 			 * include as TOC entries in the TOC. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TOCStyleEntry (Optional)
 			 */
 			public add(styleNameParam: string, withPropertiesParam: any): Adobe.Indesign.TOCStyleEntry;
@@ -23,21 +23,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.TOCStyleEntry;
 			/**
 			 * Returns the TOCStyleEntry with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.TOCStyleEntry;
 			/**
 			 * Returns the TOCStyleEntry with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.TOCStyleEntry;
 			/**
 			 * Returns the TOCStyleEntries within the specified range.
-			 * @param {any} fromParam - The TOCStyleEntry, index, or name 
-			 * at the beginning of the range. Can accept: TOCStyleEntry, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The TOCStyleEntry, index, or name at 
+			 * @param {any} fromParam The TOCStyleEntry, index, or name at 
+			 * the beginning of the range. Can accept: TOCStyleEntry, Long 
+			 * Integer or String.
+			 * @param {any} toParam The TOCStyleEntry, index, or name at 
 			 * the end of the range. Can accept: TOCStyleEntry, Long 
 			 * Integer or String.
 			 */
@@ -49,7 +49,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TOCStyleEntry whose index follows the specified 
 			 * TOCStyleEntry in the collection.
-			 * @param {TOCStyleEntry} objParam - The TOCStyleEntry whose 
+			 * @param {TOCStyleEntry} objParam The TOCStyleEntry whose 
 			 * index comes before the desired TOCStyleEntry. 
 			 */
 			public nextItem(objParam: TOCStyleEntry): Adobe.Indesign.TOCStyleEntry;
@@ -66,7 +66,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TOCStyleEntry with the index previous to the 
 			 * specified index.
-			 * @param {TOCStyleEntry} objParam - The index of the 
+			 * @param {TOCStyleEntry} objParam The index of the 
 			 * TOCStyleEntry that follows the desired TOCStyleEntry.
 			 */
 			public previousItem(objParam: TOCStyleEntry): Adobe.Indesign.TOCStyleEntry;

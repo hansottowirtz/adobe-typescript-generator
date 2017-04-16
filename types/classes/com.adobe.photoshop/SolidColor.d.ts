@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -19,9 +19,10 @@ declare namespace Adobe {
 			/** return an rgb representation of the color */
 			public rgb: Adobe.Photoshop.RGBColor;
 			/**
-			 * Compares two colors.
-			 * @param {Adobe.Photoshop.SolidColor} color - Another color to 
-			 * compare with.
+			 * return true if the provided color is visually equal to this 
+			 * color
+			 * @param {Adobe.Photoshop.SolidColor} color color to compare 
+			 * to
 			 */
 			public isEqual(color: Adobe.Photoshop.SolidColor): boolean;
 		}

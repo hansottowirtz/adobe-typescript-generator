@@ -1,8 +1,7 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** The Burasagari type. */
 		class BurasagariTypeEnum extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			public static readonly Forced: Adobe.Illustrator.BurasagariTypeEnum;

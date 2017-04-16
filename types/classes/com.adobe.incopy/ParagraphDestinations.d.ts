@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,11 +7,11 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new paragraph destination.
-			 * @param {Text} destinationParam - The text or insertion point 
+			 * @param {Text} destinationParam The text or insertion point 
 			 * inside the paragraph that the cross reference points to. The 
 			 * insertion point is always adjusted to the beginning of the 
 			 * paragraph.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ParagraphDestination (Optional)
 			 */
 			public add(destinationParam: Text, withPropertiesParam: any): Adobe.Incopy.ParagraphDestination;
@@ -28,27 +28,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphDestination with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.ParagraphDestination;
 			/**
 			 * Returns the ParagraphDestination with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.ParagraphDestination;
 			/**
 			 * Returns the ParagraphDestination with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.ParagraphDestination;
 			/**
 			 * Returns the ParagraphDestinations within the specified 
 			 * range.
-			 * @param {any} fromParam - The ParagraphDestination, index, or 
+			 * @param {any} fromParam The ParagraphDestination, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * ParagraphDestination, Long Integer or String.
-			 * @param {any} toParam - The ParagraphDestination, index, or 
+			 * @param {any} toParam The ParagraphDestination, index, or 
 			 * name at the end of the range. Can accept: 
 			 * ParagraphDestination, Long Integer or String.
 			 */
@@ -60,7 +60,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphDestination whose index follows the 
 			 * specified ParagraphDestination in the collection.
-			 * @param {ParagraphDestination} objParam - The 
+			 * @param {ParagraphDestination} objParam The 
 			 * ParagraphDestination whose index comes before the desired 
 			 * ParagraphDestination. 
 			 */
@@ -78,7 +78,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphDestination with the index previous to 
 			 * the specified index.
-			 * @param {ParagraphDestination} objParam - The index of the 
+			 * @param {ParagraphDestination} objParam The index of the 
 			 * ParagraphDestination that follows the desired 
 			 * ParagraphDestination.
 			 */

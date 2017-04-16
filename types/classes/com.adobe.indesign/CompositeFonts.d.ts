@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new CompositeFont.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new CompositeFont (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.CompositeFont;
@@ -21,26 +21,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.CompositeFont;
 			/**
 			 * Returns the CompositeFont with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.CompositeFont;
 			/**
 			 * Returns the CompositeFont with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.CompositeFont;
 			/**
 			 * Returns the CompositeFont with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.CompositeFont;
 			/**
 			 * Returns the CompositeFonts within the specified range.
-			 * @param {any} fromParam - The CompositeFont, index, or name 
-			 * at the beginning of the range. Can accept: CompositeFont, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The CompositeFont, index, or name at 
+			 * @param {any} fromParam The CompositeFont, index, or name at 
+			 * the beginning of the range. Can accept: CompositeFont, Long 
+			 * Integer or String.
+			 * @param {any} toParam The CompositeFont, index, or name at 
 			 * the end of the range. Can accept: CompositeFont, Long 
 			 * Integer or String.
 			 */
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the CompositeFont whose index follows the specified 
 			 * CompositeFont in the collection.
-			 * @param {CompositeFont} objParam - The CompositeFont whose 
+			 * @param {CompositeFont} objParam The CompositeFont whose 
 			 * index comes before the desired CompositeFont. 
 			 */
 			public nextItem(objParam: CompositeFont): Adobe.Indesign.CompositeFont;
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the CompositeFont with the index previous to the 
 			 * specified index.
-			 * @param {CompositeFont} objParam - The index of the 
+			 * @param {CompositeFont} objParam The index of the 
 			 * CompositeFont that follows the desired CompositeFont.
 			 */
 			public previousItem(objParam: CompositeFont): Adobe.Indesign.CompositeFont;

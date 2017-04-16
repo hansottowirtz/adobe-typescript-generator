@@ -1,115 +1,97 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
+		/**
+		 * The preference properties listed here are the static 
+		 * properties. Additional dynamic properties reflect the 
+		 * prefereences that can be viewed in and controlled by 
+		 * Preferences dialog. Some existing preferences can be set or 
+		 * read by setting or retrieving the associated property value. 
+		 * Not all existing preferences are available in the scripting 
+		 * environment. Those that are available are listed in the 
+		 * Adobe Bridge JavaScript Reference. Preference values do not 
+		 * take effect until Adobe Bridge application is restarted.You 
+		 * can set certain preference values for the current session 
+		 * only. That is, the changes take effect immediately, but do 
+		 * not persist across sessions. The next time the Adobe Bridge 
+		 * application is restarted, the global preference value is 
+		 * used.A script can create a new preference by simply 
+		 * referencing a new property name in this object. New 
+		 * preferences must be of the type String, Number, or Boolean. 
+		 * Composite types (such as Rect and Point) are retrieved as 
+		 * String objects.Access the Preferences object through the 
+		 * app.preferences property.
+		 */
 		class Preferences extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
 			public AccentColor: string;
-			/** This is not a Property Description. */
 			public AudioAutoLoop: boolean;
-			/** This is not a Property Description. */
 			public AudioAutoPlay: boolean;
-			/** This is not a Property Description. */
 			public AutoExportCaches: boolean;
-			/** This is not a Property Description. */
 			public BackgroundColor: number;
-			/** This is not a Property Description. */
 			public CacheDirectory: string;
-			/** This is not a Property Description. */
 			public CacheSize: number;
-			/** This is not a Property Description. */
 			public CompactThumbSize: number;
-			/** This is not a Property Description. */
 			public DetailsViewThumbSize: number;
-			/** This is not a Property Description. */
 			public ExportCacheToFolder: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * A set of metadata properties to be displayed beneath a 
+			 * thumbnail icon.
+			 */
 			public extraMetadata: any[];
-			/** This is not a Property Description. */
 			public FileSize: number;
-			/** This is not a Property Description. */
 			public HideEmptyFields: boolean;
-			/** This is not a Property Description. */
 			public HideUnknownOpeners: boolean;
-			/** This is not a Property Description. */
 			public ImageBackdrop: number;
-			/** This is not a Property Description. */
 			public Keyboard: string;
-			/** This is not a Property Description. */
 			public KeywordAutoParent: boolean;
-			/** This is not a Property Description. */
 			public KeywordInputDelimiters: any[];
-			/** This is not a Property Description. */
 			public KeywordOutputDelimiter: string;
-			/** This is not a Property Description. */
 			public KeywordReadHierarchical: boolean;
-			/** This is not a Property Description. */
 			public KeywordWriteHierarchical: boolean;
-			/** This is not a Property Description. */
 			public Label1: string;
-			/** This is not a Property Description. */
 			public Label2: string;
-			/** This is not a Property Description. */
 			public Label3: string;
-			/** This is not a Property Description. */
 			public Label4: string;
-			/** This is not a Property Description. */
 			public Label5: string;
-			/** This is not a Property Description. */
 			public LabelCtrlKey: boolean;
-			/** This is not a Property Description. */
 			public Language: string;
-			/** This is not a Property Description. */
 			public ListViewThumbSize: number;
-			/** This is not a Property Description. */
 			public ModClickToLoupe: boolean;
-			/** This is not a Property Description. */
 			public MRUCount: number;
-			/** This is not a Property Description. */
 			public MRUCount_2_0: number;
-			/** This is not a Property Description. */
 			public PreferencePanel: number;
-			/** This is not a Property Description. */
 			public ShowCameraRawInterface: boolean;
-			/** This is not a Property Description. */
 			public ShowLabels: boolean;
-			/** This is not a Property Description. */
+			/** Whether to show thumbnail name beneath thumbnail icons. */
 			public showName: boolean;
-			/** This is not a Property Description. */
 			public ShowPlacard: boolean;
-			/** This is not a Property Description. */
 			public ShowToolTips: boolean;
-			/** This is not a Property Description. */
 			public StackFrameRate: number;
-			/** This is not a Property Description. */
 			public ThrottleDelayGoodChildren: number;
-			/** This is not a Property Description. */
 			public ThrottleDelayNewChildren: number;
-			/** This is not a Property Description. */
 			public ThrottleLongDelayGoodChildren: number;
-			/** This is not a Property Description. */
+			/** The quality of thumbnail image to generate. */
 			public thumbnailQuality: string;
-			/** This is not a Property Description. */
 			public ThumbnailQuality: string;
-			/** This is not a Property Description. */
 			public ThumbnailViewThumbSize: number;
-			/** This is not a Property Description. */
 			public UIBrightness: number;
-			/** This is not a Property Description. */
 			public UseHighQualityPreviews: boolean;
-			/** This is not a Property Description. */
 			public UseLocalCaches: boolean;
-			/** This is not a Property Description. */
 			public UseSoftwareRendering: boolean;
-			/** This is not a Property Description. */
 			public VideoAutoLoop: boolean;
-			/** This is not a Property Description. */
 			public VideoAutoPlay: boolean;
-			/** This is not a Method Description. */
+			/**
+			 * Removes script-created keys and values from the Adobe Bridge 
+			 * preferences, or resets preferences.
+			 */
 			public clear(): void;
-			/** This is not a Method Description. */
+			/** Resets file type associations to their default values. */
 			public resetFileAssociations(): void;
-			/** This is not a Method Description. */
+			/**
+			 * Resets "Do not show again" settings to false for all warning 
+			 * dialogs.
+			 */
 			public resetWarningDialogs(): void;
 		}
 	}

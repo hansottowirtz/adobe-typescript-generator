@@ -1,81 +1,77 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
-		/** Print settings for a document. */
+		/** Print settings for a document */
 		class DocumentPrintSettings extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** Currently selected printer. */
+			/** currently selected printer */
 			public activePrinter: string;
-			/** Background color of page. */
+			/** background color of page */
 			public backgroundColor: Adobe.Photoshop.SolidColor;
-			/** Bleed width. */
-			public bleedWidth: string;
-			/** Description field from File Info. */
+			/** bleed width */
+			public bleedWidth: any;
+			/** Description field from File Info */
 			public caption: boolean;
-			/** Print center crop marks. */
+			/** Print center crop marks */
 			public centerCropMarks: boolean;
-			/** Print color calibration bars. */
+			/** Print color calibration bars */
 			public colorBars: boolean;
-			/** Color handling. */
+			/** color handling */
 			public colorHandling: Adobe.Photoshop.PrintColorHandling;
-			/** Number of copies. */
+			/** number of copies */
 			public copies: number;
-			/** Print corner crop marks. */
+			/** Print corner crop marks */
 			public cornerCropMarks: boolean;
-			/** Position of image when printing. */
+			/** Position of image when printing */
 			public readonly docPosition: Adobe.Photoshop.DocPositionStyle;
-			/** Flip the image horizontally. */
+			/** Flip the image horizontally */
 			public flip: boolean;
-			/** Print a hard proof. */
+			/** Print a hard proof */
 			public hardProof: boolean;
 			public interpolate: boolean;
-			/** Prints the document title. */
+			/** Prints the document title */
 			public labels: boolean;
-			/** Map blacks. */
+			/** Map blacks */
 			public mapBlack: boolean;
-			/** Invert the image colors. */
+			/** Invert the image colors */
 			public negative: boolean;
-			/** X position of image on page. */
-			public readonly posX: string;
-			/** Y position of image on page. */
-			public readonly posY: string;
-			/** Width of the print border. */
-			public printBorder: string;
+			/** x position of image on page */
+			public readonly posX: any;
+			/** y position of image on page */
+			public readonly posY: any;
+			/** width of the print border */
+			public printBorder: any;
 			/** name of printer */
 			public printerName: string;
-			/** List of available printers. */
+			/** list of available printers */
 			public readonly printers: any[];
 			/**
-			 * Color space for printer. Can be nothing (meaning same as 
-			 * source); 'Working RGB', 'Working CMYK', 'Working Gray', 'Lab 
-			 * Color' (meaning one of the working spaces or Lab color); or 
-			 * a string specifying a specific colorspace (default is same 
-			 * as source).
+			 * color space for printer. Can be nothing (meaning same as 
+			 * source) or a string specifying a specific color profile
 			 */
 			public printSpace: string;
-			/** Print registration marks. */
+			/** Print registration marks */
 			public registrationMarks: boolean;
 			/**
 			 * Color conversion intent when print space is different from 
-			 * the source space.
+			 * the source space
 			 */
 			public renderIntent: Adobe.Photoshop.Intent;
-			/** Scale of image on page. */
+			/** scale of image on page */
 			public readonly scale: number;
-			/** Include vector data. */
+			/** Include vector data */
 			public vectorData: boolean;
 			/**
-			 * Set the position of the image on the page.
-			 * @param {Adobe.Photoshop.DocPositionStyle} docPosition - 
+			 * Set the position of the image on the page
+			 * @param {Adobe.Photoshop.DocPositionStyle} docPosition 
 			 * Position of the image on page when printing. Can be 
-			 * centered, scale to fit, or user defined.
-			 * @param {string} posX - X position of image on page.
-			 * @param {string} posY - Y position of image on page.
-			 * @param {number} scale - Position of the image on page when 
-			 * printing. Can be centered, scale to fit, or user defined. ( 
-			 * default: 100.0 )
+			 * centered, scale to fit, or user defined
+			 * @param {any} posX x position of image on page
+			 * @param {any} posY y position of image on page
+			 * @param {number} scale scale of image on page ( default: 
+			 * 100.0 )
 			 */
-			public setPagePosition(docPosition: Adobe.Photoshop.DocPositionStyle, posX: string, posY: string, scale: number): void;
+			public setPagePosition(docPosition: Adobe.Photoshop.DocPositionStyle, posX: any, posY: any, scale: number): void;
 		}
 	}
 }

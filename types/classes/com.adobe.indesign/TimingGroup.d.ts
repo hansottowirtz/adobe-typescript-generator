@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -31,10 +31,10 @@ declare namespace Adobe {
 			public readonly timingTargets: Adobe.Indesign.TimingTargets;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerTimingGroup(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -45,9 +45,9 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Moves the timing group or target to the specified location.
-			 * @param {LocationOptions} toParam - The location in relation 
-			 * to the reference object or within the containing object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {LocationOptions} toParam The location in relation to 
+			 * the reference object or within the containing object.
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. . 
 			 * Can accept: TimingGroup, TimingTarget or TimingList. 
 			 * (Optional)
@@ -57,10 +57,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerTimingGroup(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -41,10 +41,10 @@ declare namespace Adobe {
 			public properties: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPreflightProfile(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			public duplicate(): Adobe.Indesign.PreflightProfile;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -63,26 +63,25 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/** Deletes the PreflightProfile. */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPreflightProfile(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Saves this preflight profile to a InDesign preflight profile 
 			 * file.
-			 * @param {File} toParam - The preflight profile file to save 
-			 * to.
+			 * @param {File} toParam The preflight profile file to save to.
 			 */
 			public save(toParam: File): void;
 			/** Retrieves the object specifier. */
@@ -92,7 +91,7 @@ declare namespace Adobe {
 			/**
 			 * Update the preflight profile by copying from another 
 			 * profile.
-			 * @param {any} usingParam - The preflight profile to copy. Can 
+			 * @param {any} usingParam The preflight profile to copy. Can 
 			 * accept: String or PreflightProfile. (Optional)
 			 */
 			public update(usingParam: any): void;

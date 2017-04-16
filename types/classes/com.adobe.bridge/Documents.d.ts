@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {

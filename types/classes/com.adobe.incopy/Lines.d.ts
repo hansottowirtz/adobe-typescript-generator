@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,17 +15,17 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Line;
 			/**
 			 * Returns the Line with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Line;
 			/**
 			 * Returns the Lines within the specified range.
-			 * @param {any} fromParam - The Line, index, or name at the 
+			 * @param {any} fromParam The Line, index, or name at the 
 			 * beginning of the range. Can accept: Line, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Line, index, or name at the end 
-			 * of the range. Can accept: Line, Long Integer or String.
+			 * @param {any} toParam The Line, index, or name at the end of 
+			 * the range. Can accept: Line, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Line in the collection. */
@@ -35,8 +35,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Line whose index follows the specified Line in 
 			 * the collection.
-			 * @param {Line} objParam - The Line whose index comes before 
-			 * the desired Line. 
+			 * @param {Line} objParam The Line whose index comes before the 
+			 * desired Line. 
 			 */
 			public nextItem(objParam: Line): Adobe.Incopy.Line;
 			/**
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Line with the index previous to the specified 
 			 * index.
-			 * @param {Line} objParam - The index of the Line that follows 
+			 * @param {Line} objParam The index of the Line that follows 
 			 * the desired Line.
 			 */
 			public previousItem(objParam: Line): Adobe.Incopy.Line;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			/** number of elements in the collection */
 			public readonly length: number;
 			/**
-			 * Create text frames from all legacy text items. The original 
+			 * create text frames from all legacy text items. The original 
 			 * legacy text items will be deleted.
 			 */
 			public convertToNative(): boolean;

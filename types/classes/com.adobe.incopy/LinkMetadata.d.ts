@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -53,18 +53,18 @@ declare namespace Adobe {
 			public readonly serverURL: string;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerLinkMetadata(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Counts the number of items in the container.
-			 * @param {string} namespaceParam - The namespace of the 
+			 * @param {string} namespaceParam The namespace of the 
 			 * container.
-			 * @param {string} pathParam - The path to the container.
+			 * @param {string} pathParam The path to the container.
 			 */
 			public countContainer(namespaceParam: string, pathParam: string): number;
 			/**
@@ -75,17 +75,17 @@ declare namespace Adobe {
 			/**
 			 * Gets the XMP property value associated with the specified 
 			 * path.
-			 * @param {string} namespaceParam - The namespace of the 
+			 * @param {string} namespaceParam The namespace of the 
 			 * property.
-			 * @param {string} pathParam - The specified path.
+			 * @param {string} pathParam The specified path.
 			 */
 			public getProperty(namespaceParam: string, pathParam: string): string;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerLinkMetadata(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

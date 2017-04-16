@@ -1,0 +1,16 @@
+/// <reference path="../../classes/com.adobe.premiere/App.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/Csxs.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/CsxsCSReview.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/CsxsResourceCentral.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/Document.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/Project.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/ProjectItem.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/ProjectItemCollection.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/ProjectItemType.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/Sequence.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/SequenceCollection.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/Time.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/Track.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/TrackCollection.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/TrackItem.d.ts"/>
+/// <reference path="../../classes/com.adobe.premiere/TrackItemCollection.d.ts"/>

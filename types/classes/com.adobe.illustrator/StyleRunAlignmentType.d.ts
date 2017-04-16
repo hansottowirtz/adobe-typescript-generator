@@ -1,8 +1,7 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** The style run alignment. */
 		class StyleRunAlignmentType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly bottom: Adobe.Illustrator.StyleRunAlignmentType;
 			public static readonly center: Adobe.Illustrator.StyleRunAlignmentType;

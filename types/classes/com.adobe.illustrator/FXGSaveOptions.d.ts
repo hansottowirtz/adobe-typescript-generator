@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -15,10 +15,10 @@ declare namespace Adobe {
 			 */
 			public artboardRange: string;
 			/**
-			 * choose to clip content to the active artboard ( default: 
-			 * true )
+			 * the policy used by FXG to expand blends ( default: 
+			 * BlendsExpandPolicy.AUTOMATICALLYCONVERTBLENDS )
 			 */
-			public clipContent: boolean;
+			public blendsPolicy: Adobe.Illustrator.BlendsExpandPolicy;
 			/**
 			 * choose to downsample the linked images(72ppi) ( default: 
 			 * false )
@@ -31,7 +31,7 @@ declare namespace Adobe {
 			public filtersPolicy: Adobe.Illustrator.FiltersPreservePolicy;
 			/**
 			 * the policy used by FXG to preserve gradients ( default: 
-			 * GradientsPreservePolicy.KEEPGRADIENTSEDITABLE )
+			 * GradientsPreservePolicy.AUTOMATICALLYCONVERTGRADIENTS )
 			 */
 			public gradientsPolicy: Adobe.Illustrator.GradientsPreservePolicy;
 			/** choose to include metadata (XMP) ( default: false ) */
@@ -50,12 +50,12 @@ declare namespace Adobe {
 			public saveMultipleArtboards: boolean;
 			/**
 			 * the policy used by FXG to preserve text ( default: 
-			 * TextPreservePolicy.KEEPTEXTEDITABLE )
+			 * TextPreservePolicy.AUTOMATICALLYCONVERTTEXT )
 			 */
 			public textPolicy: Adobe.Illustrator.TextPreservePolicy;
 			/**
 			 * the version of the FXG file format to create ( default: 
-			 * FXGVersion.VERSION1PT0 )
+			 * FXGVersion.VERSION2PT0 )
 			 */
 			public version: Adobe.Illustrator.FXGVersion;
 		}

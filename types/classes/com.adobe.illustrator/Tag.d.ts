@@ -1,12 +1,12 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** A tag associated with a piece of artwork. */
+		/** A tag associated with a piece of artwork */
 		class Tag extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** The tag's name. */
+			/** The tag's name */
 			public name: string;
-			/** The data stored in this tag. */
+			/** the data stored in this tag */
 			public value: string;
 			/** delete the object */
 			public remove(): void;

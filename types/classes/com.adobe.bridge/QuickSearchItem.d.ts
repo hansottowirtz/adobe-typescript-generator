@@ -1,13 +1,10 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
 		class QuickSearchItem extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
 			public displayName: string;
-			/** This is not a Property Description. */
 			public valueName: string;
-			/** This is not a Method Description. */
 			public constructor();
 			/**
 			 * @param {any[]} args

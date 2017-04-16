@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -42,6 +42,24 @@ declare namespace Adobe {
 			 * applied to. Can return: Boolean or NothingEnum enumerator.
 			 */
 			public applyToMasterPageOnly: any;
+			/**
+			 * The reference point for auto sizing of text frame. Reference 
+			 * point is automatically adjusted to the suitable value 
+			 * depending on the auto-sizing type value. As an example, top 
+			 * left reference point becomes top center for height only 
+			 * dimension. Can return: AutoSizingReferenceEnum enumerator or 
+			 * NothingEnum enumerator.
+			 */
+			public autoSizingReferencePoint: any;
+			/**
+			 * Auto-sizing type of text frame. Based on type, reference 
+			 * value is automatically adjusted. For example, for height 
+			 * only type, top-left reference point becomes top-center. 
+			 * Recommended to change auto-sizing type, after setting other 
+			 * auto-sizing attributes. Can return: AutoSizingTypeEnum 
+			 * enumerator or NothingEnum enumerator.
+			 */
+			public autoSizingType: any;
 			/**
 			 * The grid line color, specified either as an array of three 
 			 * doubles, each in the range 0 to 255 and representing R, G, 
@@ -240,6 +258,16 @@ declare namespace Adobe {
 			 * - 8640 points) or NothingEnum enumerator.
 			 */
 			public minimumFirstBaselineOffset: any;
+			/**
+			 * The minimum height for auto-sizing of the text frame. Can 
+			 * return: Unit or NothingEnum enumerator.
+			 */
+			public minimumHeightForAutoSizing: any;
+			/**
+			 * The minimum width for auto-sizing of the text frame. Can 
+			 * return: Unit or NothingEnum enumerator.
+			 */
+			public minimumWidthForAutoSizing: any;
 			/**
 			 * The limit of the ratio of stroke width to miter length 
 			 * before a miter (pointed) join becomes a bevel (squared-off) 
@@ -469,6 +497,23 @@ declare namespace Adobe {
 			 */
 			public useFixedColumnWidth: any;
 			/**
+			 * If true, minimum height value is used during the auto-sizing 
+			 * of text frame. . Can return: Boolean or NothingEnum 
+			 * enumerator.
+			 */
+			public useMinimumHeightForAutoSizing: any;
+			/**
+			 * If true, minimum width value is used during the auto-sizing 
+			 * of text frame. . Can return: Boolean or NothingEnum 
+			 * enumerator.
+			 */
+			public useMinimumWidthForAutoSizing: any;
+			/**
+			 * If true, line-breaks are not introduced after auto sizing. . 
+			 * Can return: Boolean or NothingEnum enumerator.
+			 */
+			public useNoLineBreaksForAutoSizing: any;
+			/**
 			 * If true, the text wrap path has been explicitly modified by 
 			 * the user. Can return: Boolean or NothingEnum enumerator.
 			 */
@@ -494,10 +539,10 @@ declare namespace Adobe {
 			public verticalThreshold: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerFindObjectPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -508,10 +553,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerFindObjectPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

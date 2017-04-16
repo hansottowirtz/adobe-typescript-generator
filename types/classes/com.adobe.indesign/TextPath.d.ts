@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -119,67 +119,67 @@ declare namespace Adobe {
 			public readonly words: Adobe.Indesign.Words;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerTextPath(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -191,18 +191,18 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/** Deletes the TextPath. */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerTextPath(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

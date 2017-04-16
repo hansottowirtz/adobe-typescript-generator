@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -35,6 +35,8 @@ declare namespace Adobe {
 			 * bubbles. This event is not cancelable.
 			 */
 			public static readonly AFTER_PLACE: string;
+			/** The list of all articles this page item is part of */
+			public readonly allArticles: any;
 			/** Lists all graphics contained by the ImportedPage. */
 			public readonly allGraphics: any;
 			/** If true, the master page item can be overridden. */
@@ -155,6 +157,11 @@ declare namespace Adobe {
 			public gradientStrokeStart: any;
 			/** Graphic layer option settings. */
 			public readonly graphicLayerOptions: Adobe.Indesign.GraphicLayerOption;
+			/**
+			 * The left margin, width, and right margin constraints this 
+			 * item is subject to when using the object-based layout rule.
+			 */
+			public horizontalLayoutConstraints: any;
 			/** The horizontal scaling applied to the ImportedPage. */
 			public horizontalScale: number;
 			/** The unique ID of the ImportedPage. */
@@ -181,6 +188,8 @@ declare namespace Adobe {
 			public label: string;
 			/** The arrowhead applied to the start of the path. */
 			public leftLineEnd: Adobe.Indesign.ArrowHead;
+			/** Linked Page Item options */
+			public readonly linkedPageItemOptions: Adobe.Indesign.LinkedPageItemOption;
 			/** Display performance options for the ImportedPage. */
 			public localDisplaySetting: Adobe.Indesign.DisplaySettingOptions;
 			/** If true, the ImportedPage is locked. */
@@ -325,6 +334,11 @@ declare namespace Adobe {
 			public topRightCornerRadius: any;
 			/** Transparency settings. */
 			public readonly transparencySettings: Adobe.Indesign.TransparencySetting;
+			/**
+			 * The top margin, height, and bottom margin constraints this 
+			 * item is subject to when using the object-based layout rule.
+			 */
+			public verticalLayoutConstraints: any;
 			/** The vertical scaling applied to the ImportedPage. */
 			public verticalScale: number;
 			/** If true, the ImportedPage is visible. */
@@ -338,39 +352,39 @@ declare namespace Adobe {
 			public visibleBounds: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerImportedPage(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Applies the specified object style.
-			 * @param {ObjectStyle} usingParam - The object style to apply.
-			 * @param {boolean} clearingOverridesParam - If true, clears 
-			 * the ImportedPage's existing attributes before applying the 
+			 * @param {ObjectStyle} usingParam The object style to apply.
+			 * @param {boolean} clearingOverridesParam If true, clears the 
+			 * ImportedPage's existing attributes before applying the 
 			 * style. (Optional)
 			 * @param {boolean} 
-			 * clearingOverridesThroughRootObjectStyleParam - If true, 
-			 * clears attributes and formatting applied to the ImportedPage 
-			 * that are not defined in the object style. (Optional)
+			 * clearingOverridesThroughRootObjectStyleParam If true, clears 
+			 * attributes and formatting applied to the ImportedPage that 
+			 * are not defined in the object style. (Optional)
 			 */
 			public applyObjectStyle(usingParam: ObjectStyle, clearingOverridesParam: boolean, clearingOverridesThroughRootObjectStyleParam: boolean): void;
 			/**
 			 * asynchronously exports the object(s) to a file.
-			 * @param {any} formatParam - The export format, specified as 
-			 * an enumeration value or as an extension that appears in the 
+			 * @param {any} formatParam The export format, specified as an 
+			 * enumeration value or as an extension that appears in the 
 			 * Save as type or Format menu in the Export dialog. Can 
 			 * accept: ExportFormat enumerator or String.
-			 * @param {File} toParam - The path to the export file.
-			 * @param {boolean} showingOptionsParam - If true, displays the 
+			 * @param {File} toParam The path to the export file.
+			 * @param {boolean} showingOptionsParam If true, displays the 
 			 * export options dialog. (Optional)
-			 * @param {PDFExportPreset} usingParam - The export style. 
+			 * @param {PDFExportPreset} usingParam The export style. 
 			 * (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public asynchronousExportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, versionCommentsParam: string, forceSaveParam: boolean): Adobe.Indesign.BackgroundTask;
@@ -382,7 +396,7 @@ declare namespace Adobe {
 			/**
 			 * Finds objects that match the find what value and replace the 
 			 * objects with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeObject(reverseOrderParam: boolean): any;
@@ -395,15 +409,32 @@ declare namespace Adobe {
 			 */
 			public clearTransformations(): void;
 			/**
+			 * Duplicate an object and place it into the target page item.
+			 * @param {any[]} pageItemsParam One or more page items to 
+			 * place or load
+			 * @param {boolean} linkPageItemsParam Whether to link 
+			 * pageItems in content placer (if true it will override link 
+			 * stories value) (Optional)
+			 * @param {boolean} linkStoriesParam Whether to link stories in 
+			 * content placer (only applicable for single story, pageItem 
+			 * links will also be created in case of more than one item) 
+			 * (Optional)
+			 * @param {boolean} mapStylesParam Whether to map styles in 
+			 * content placer (Optional)
+			 * @param {boolean} showingOptionsParam Whether to display the 
+			 * link options dialog (Optional)
+			 */
+			public contentPlace(pageItemsParam: any[], linkPageItemsParam: boolean, linkStoriesParam: boolean, mapStylesParam: boolean, showingOptionsParam: boolean): any;
+			/**
 			 * Converts the ImportedPage to a different shape.
-			 * @param {ConvertShapeOptions} givenParam - The ImportedPage's 
+			 * @param {ConvertShapeOptions} givenParam The ImportedPage's 
 			 * new shape.
-			 * @param {number} numberOfSidesParam - The number of sides for 
+			 * @param {number} numberOfSidesParam The number of sides for 
 			 * the resulting polygon. (Range: 3 to 100) (Optional)
-			 * @param {number} insetPercentageParam - The star inset 
+			 * @param {number} insetPercentageParam The star inset 
 			 * percentage for the resulting polygon. (Range: 0.0 to 100.0)  
 			 * (Optional)
-			 * @param {any} cornerRadiusParam - The corner radius of the 
+			 * @param {any} cornerRadiusParam The corner radius of the 
 			 * resulting rectangle. (Optional)
 			 */
 			public convertShape(givenParam: ConvertShapeOptions, numberOfSidesParam: number, insetPercentageParam: number, cornerRadiusParam: any): void;
@@ -415,60 +446,60 @@ declare namespace Adobe {
 			/**
 			 * Duplicates the ImportedPage at the specified location or 
 			 * offset.
-			 * @param {any} toParam - The location of the new ImportedPage, 
+			 * @param {any} toParam The location of the new ImportedPage, 
 			 * specified in coordinates in the format [x, y]. Can accept: 
 			 * Array of 2 Units, Spread, Page or Layer. (Optional)
-			 * @param {any[]} byParam - Amount by which to offset the new 
+			 * @param {any[]} byParam Amount by which to offset the new 
 			 * ImportedPage from the original ImportedPage's position. 
 			 * (Optional)
 			 */
 			public duplicate(toParam: any, byParam: any[]): Adobe.Indesign.PageItem;
 			/**
 			 * Exports the object(s) to a file.
-			 * @param {any} formatParam - The export format, specified as 
-			 * an enumeration value or as an extension that appears in the 
+			 * @param {any} formatParam The export format, specified as an 
+			 * enumeration value or as an extension that appears in the 
 			 * Save as type or Format menu in the Export dialog. Can 
 			 * accept: ExportFormat enumerator or String.
-			 * @param {File} toParam - The path to the export file.
-			 * @param {boolean} showingOptionsParam - If true, displays the 
+			 * @param {File} toParam The path to the export file.
+			 * @param {boolean} showingOptionsParam If true, displays the 
 			 * export options dialog. (Optional)
-			 * @param {PDFExportPreset} usingParam - The export style. 
+			 * @param {PDFExportPreset} usingParam The export style. 
 			 * (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public exportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Exports the ImportedPage for the web.
-			 * @param {File} toParam - The full path name of the exported 
+			 * @param {File} toParam The full path name of the exported 
 			 * file.
 			 */
 			public exportForWeb(toParam: File): any;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds objects that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findObject(reverseOrderParam: boolean): any;
 			/**
 			 * Applies the specified fit option to content in a frame.
-			 * @param {FitOptions} givenParam - The fit option to use.
+			 * @param {FitOptions} givenParam The fit option to use.
 			 */
 			public fit(givenParam: FitOptions): void;
 			/**
 			 * Flips the ImportedPage.
-			 * @param {Flip} givenParam - The axis around which to flip the 
+			 * @param {Flip} givenParam The axis around which to flip the 
 			 * ImportedPage.
-			 * @param {any} aroundParam - The point around which to flip 
-			 * the ImportedPage. Can accept: Array of 2 Units or 
-			 * AnchorPoint enumerator. (Optional)
+			 * @param {any} aroundParam The point around which to flip the 
+			 * ImportedPage. Can accept: Array of 2 Units or AnchorPoint 
+			 * enumerator. (Optional)
 			 */
 			public flipItem(givenParam: Flip, aroundParam: any): void;
 			/**
@@ -479,75 +510,75 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Associates the page item with the specified XML element 
 			 * while preserving existing content.
-			 * @param {XMLElement} usingParam - The XML element.
+			 * @param {XMLElement} usingParam The XML element.
 			 */
 			public markup(usingParam: XMLElement): void;
 			/**
 			 * Moves the ImportedPage to a new location. Note: Either the 
 			 * 'to' or 'by' parameter is required; if both parameters are 
 			 * defined, only the to value is used.
-			 * @param {any} toParam - The new location of the 
-			 * ImportedPage,in the format (x, y). Can accept: Array of 2 
-			 * Units, Spread, Page or Layer. (Optional)
-			 * @param {any[]} byParam - The amount (in measurement units) 
-			 * to move the ImportedPage relative to its current position, 
-			 * in the format (x, y). (Optional)
+			 * @param {any} toParam The new location of the ImportedPage,in 
+			 * the format (x, y). Can accept: Array of 2 Units, Spread, 
+			 * Page or Layer. (Optional)
+			 * @param {any[]} byParam The amount (in measurement units) to 
+			 * move the ImportedPage relative to its current position, in 
+			 * the format (x, y). (Optional)
 			 */
 			public move(toParam: any, byParam: any[]): void;
 			/**
 			 * Overrides a master page item and places the item on the 
 			 * document page as a new object.
-			 * @param {Page} destinationPageParam - The document page that 
+			 * @param {Page} destinationPageParam The document page that 
 			 * contains the master page item to override.
 			 */
 			public override(destinationPageParam: Page): any;
 			/**
 			 * Places the file.
-			 * @param {File} fileNameParam - The file to place
-			 * @param {boolean} showingOptionsParam - Whether to display 
-			 * the import options dialog (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {File} fileNameParam The file to place
+			 * @param {boolean} showingOptionsParam Whether to display the 
+			 * import options dialog (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the placed object(s) (Optional)
 			 */
 			public place(fileNameParam: File, showingOptionsParam: boolean, withPropertiesParam: any): any;
 			/**
 			 * Places XML content into the specified object. Note: Replaces 
 			 * any existing content.
-			 * @param {XMLElement} usingParam - The XML element whose 
-			 * content you want to place.
+			 * @param {XMLElement} usingParam The XML element whose content 
+			 * you want to place.
 			 */
 			public placeXML(usingParam: XMLElement): void;
 			/**
 			 * Apply an item's scaling to its content if possible.
-			 * @param {any[]} toParam - The scale factors to be left on the 
+			 * @param {any[]} toParam The scale factors to be left on the 
 			 * item.  The default is {1.0, 1.0}. (Optional)
 			 */
 			public redefineScaling(toParam: any[]): void;
 			/**
 			 * Move the bounding box of the page item
-			 * @param {any} inParam - The bounding box to resize. Can 
-			 * accept: CoordinateSpaces enumerator or Ordered array 
-			 * containing coordinateSpace:CoordinateSpaces enumerator, 
+			 * @param {any} inParam The bounding box to resize. Can accept: 
+			 * CoordinateSpaces enumerator or Ordered array containing 
+			 * coordinateSpace:CoordinateSpaces enumerator, 
 			 * boundsKind:BoundingBoxLimits enumerator.
-			 * @param {any[]} opposingCornersParam - Opposing corners of 
-			 * new bounding box in the given coordinate space
+			 * @param {any[]} opposingCornersParam Opposing corners of new 
+			 * bounding box in the given coordinate space
 			 */
 			public reframe(inParam: any, opposingCornersParam: any[]): void;
 			/** Deletes the ImportedPage. */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerImportedPage(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -558,12 +589,11 @@ declare namespace Adobe {
 			public removeOverride(): void;
 			/**
 			 * Resize the page item.
-			 * @param {any} inParam - The bounding box to resize. Can 
-			 * accept: CoordinateSpaces enumerator, BoundingBoxLimits 
-			 * enumerator or Ordered array containing 
-			 * coordinateSpace:CoordinateSpaces enumerator, 
-			 * boundsKind:BoundingBoxLimits enumerator.
-			 * @param {any} fromParam - The transform origin. Legal 
+			 * @param {any} inParam The bounding box to resize. Can accept: 
+			 * CoordinateSpaces enumerator, BoundingBoxLimits enumerator or 
+			 * Ordered array containing coordinateSpace:CoordinateSpaces 
+			 * enumerator, boundsKind:BoundingBoxLimits enumerator.
+			 * @param {any} fromParam The transform origin. Legal 
 			 * specifications: relative to bounding box: anchor | {anchor | 
 			 * {x,y}, bounds kind [, coordinate space]}; relative to 
 			 * coordinate space: {x,y} | {{x,y}[, coordinate space]}; 
@@ -572,9 +602,9 @@ declare namespace Adobe {
 			 * or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, 
 			 * AnchorPoint enumerators, BoundingBoxLimits enumerators or 
 			 * Long Integers.
-			 * @param {ResizeMethods} byParam - How the current dimensions 
+			 * @param {ResizeMethods} byParam How the current dimensions 
 			 * are affected by the given values
-			 * @param {any[]} valuesParam - The width and height values. 
+			 * @param {any[]} valuesParam The width and height values. 
 			 * Legal dimensions specifications: {x, y [, coordinate 
 			 * space]}, {x, resize constraint [, coordinate space]}, or 
 			 * {resize constraint, y [, coordinate space]}; where x and y 
@@ -583,11 +613,11 @@ declare namespace Adobe {
 			 * ignored for the 'current dimensions times' resize method). 
 			 * Can accept: Array of Reals, ResizeConstraints enumerators or 
 			 * CoordinateSpaces enumerators.
-			 * @param {boolean} resizeIndividuallyParam - If false and 
+			 * @param {boolean} resizeIndividuallyParam If false and 
 			 * multiple page items are targeted, the new dimensions are 
 			 * attained only by moving the individual items rather than 
 			 * resizing them. (Optional)
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -597,13 +627,13 @@ declare namespace Adobe {
 			/**
 			 * Get the coordinates of the given location in the specified 
 			 * coordinate system.
-			 * @param {any} locationParam - The location requested. Can 
+			 * @param {any} locationParam The location requested. Can 
 			 * accept: Array of 2 Reals, AnchorPoint enumerator or Array of 
 			 * Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint 
 			 * enumerators, BoundingBoxLimits enumerators or Long Integers.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use.
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -612,16 +642,16 @@ declare namespace Adobe {
 			public resolve(locationParam: any, inParam: CoordinateSpaces, consideringRulerUnitsParam: boolean): any;
 			/**
 			 * Selects the object.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the ImportedPage in relation to 
 			 * previously selected objects. (Optional)
 			 */
 			public select(existingSelectionParam: SelectionOptions): void;
 			/**
 			 * Stores the object in the specified library.
-			 * @param {Library} usingParam - The library in which to store 
+			 * @param {Library} usingParam The library in which to store 
 			 * the object.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ImportedPage (Optional)
 			 */
 			public store(usingParam: Library, withPropertiesParam: any): Adobe.Indesign.Asset;
@@ -629,16 +659,16 @@ declare namespace Adobe {
 			public toSpecifier(): string;
 			/**
 			 * Transform the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
-			 * @param {any} fromParam - The temporary origin during the 
+			 * @param {any} fromParam The temporary origin during the 
 			 * transformation. Can accept: Array of 2 Reals, AnchorPoint 
 			 * enumerator or Array of Arrays of 2 Reals, CoordinateSpaces 
 			 * enumerators, AnchorPoint enumerators, BoundingBoxLimits 
 			 * enumerators or Long Integers.
-			 * @param {any} withMatrixParam - Transform matrix. Can accept: 
+			 * @param {any} withMatrixParam Transform matrix. Can accept: 
 			 * Array of 6 Reals or TransformationMatrix.
-			 * @param {any} replacingCurrentParam - Transform components to 
+			 * @param {any} replacingCurrentParam Transform components to 
 			 * consider; providing this optional parameter causes the 
 			 * target's existing transform components to be replaced with 
 			 * new values.  Without this parameter, the given matrix is 
@@ -646,7 +676,7 @@ declare namespace Adobe {
 			 * the effect of the two. Can accept: MatrixContent enumerator, 
 			 * Array of MatrixContent enumerators or Long Integer. 
 			 * (Optional)
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler based origin is interpreted using ruler units rather 
 			 * than points. The default value is false. This parameter has 
 			 * no effect unless the reference point is specified relative 
@@ -682,7 +712,7 @@ declare namespace Adobe {
 			public transformSequenceAgainIndividually(): any;
 			/**
 			 * Get the transformation values of the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
 			 */
 			public transformValuesOf(inParam: CoordinateSpaces): any;

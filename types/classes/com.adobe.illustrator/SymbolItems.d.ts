@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -8,8 +8,8 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * an instance of a symbol item
-			 * @param {Adobe.Illustrator.Symbol} _symbol - the symbol to 
-			 * make an instance of
+			 * @param {Adobe.Illustrator.Symbol} _symbol the symbol to make 
+			 * an instance of
 			 */
 			public add(_symbol: Adobe.Illustrator.Symbol): Adobe.Illustrator.SymbolItem;
 			/**

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,6 +7,8 @@ declare namespace Adobe {
 			public readonly allGraphics: any;
 			/** Lists all page items contained by the Page. */
 			public readonly allPageItems: any;
+			/** The alternate layout section to which the page belongs. */
+			public readonly appliedAlternateLayout: Adobe.Indesign.Section;
 			/**
 			 * The master spread applied to the Page. Can also accept: 
 			 * NothingEnum enumerator.
@@ -23,6 +25,10 @@ declare namespace Adobe {
 			public readonly bounds: any;
 			/** A collection of buttons. */
 			public readonly buttons: Adobe.Indesign.Buttons;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Indesign.CheckBoxes;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Indesign.ComboBoxes;
 			/** The sequential number of the page within the document. */
 			public readonly documentOffset: number;
 			/** EPSTexts */
@@ -55,6 +61,10 @@ declare namespace Adobe {
 			public readonly isValid: boolean;
 			/** A property that can be set to any string. */
 			public label: string;
+			/** layout rule */
+			public layoutRule: Adobe.Indesign.LayoutRuleOptions;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Indesign.ListBoxes;
 			/** Margin preference settings. */
 			public readonly marginPreferences: Adobe.Indesign.MarginPreference;
 			/**
@@ -73,6 +83,8 @@ declare namespace Adobe {
 			public readonly multiStateObjects: Adobe.Indesign.MultiStateObjects;
 			/** The name of the Page. */
 			public readonly name: string;
+			/** optional page for HTML5 pagination */
+			public optionalPage: boolean;
 			/** A collection of ellipses. */
 			public readonly ovals: Adobe.Indesign.Ovals;
 			/**
@@ -100,6 +112,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Indesign.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Indesign.Rectangles;
 			/**
@@ -107,24 +121,60 @@ declare namespace Adobe {
 			 * within the spread.
 			 */
 			public readonly side: Adobe.Indesign.PageSideOptions;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Indesign.SignatureFields;
+			/** snapshot blending mode */
+			public snapshotBlendingMode: Adobe.Indesign.SnapshotBlendingModes;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Indesign.SplineItems;
 			/**
-			 * The order in which the focus moves to different buttons in 
-			 * the PDF when the tab key is pressed.
+			 * The order in which the focus moves to different form fields 
+			 * in the PDF when the tab key is pressed. Can return: Array of 
+			 * Buttons, CheckBoxes, ComboBoxes, ListBoxes, RadioButtons, 
+			 * TextBoxes or SignatureFields.
 			 */
 			public tabOrder: any;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Indesign.TextBoxes;
 			/** A collection of text frames. */
 			public readonly textFrames: Adobe.Indesign.TextFrames;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPage(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
+			/**
+			 * Duplicate an object and place it into the target.
+			 * @param {any[]} pageItemsParam One or more page items to 
+			 * place or load
+			 * @param {boolean} linkPageItemsParam Whether to link 
+			 * pageItems in content placer (if true it will override link 
+			 * stories value) (Optional)
+			 * @param {boolean} linkStoriesParam Whether to link stories in 
+			 * content placer (only applicable for single story, pageItem 
+			 * links will also be created in case of more than one item) 
+			 * (Optional)
+			 * @param {boolean} mapStylesParam Whether to map styles in 
+			 * content placer (Optional)
+			 * @param {any[]} placePointParam The point at which to place 
+			 * (Optional)
+			 * @param {Layer} destinationLayerParam The layer on which to 
+			 * place (Optional)
+			 * @param {boolean} showingOptionsParam Whether to display the 
+			 * link options dialog (Optional)
+			 */
+			public contentPlace(pageItemsParam: any[], linkPageItemsParam: boolean, linkStoriesParam: boolean, mapStylesParam: boolean, placePointParam: any[], destinationLayerParam: Layer, showingOptionsParam: boolean): any;
+			/** Delete all layout snapshots for this Page. */
+			public deleteAllLayoutSnapshots(): void;
+			/**
+			 * Delete the snapshot of the layout for the current Page size 
+			 * and shape.
+			 */
+			public deleteLayoutSnapshot(): void;
 			/**
 			 * Detaches an overridden master page item from the master 
 			 * page.
@@ -132,17 +182,17 @@ declare namespace Adobe {
 			public detach(): void;
 			/**
 			 * Duplicates the page.
-			 * @param {LocationOptions} toParam - The location at which to 
+			 * @param {LocationOptions} toParam The location at which to 
 			 * place the duplicate page relative to the reference object or 
 			 * within the document or spread.  (Optional)
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to value specifies before or after. Can 
 			 * accept: Page or Spread. (Optional)
 			 */
 			public duplicate(toParam: LocationOptions, referenceParam: any): Adobe.Indesign.Page;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -153,66 +203,79 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Moves the page.
-			 * @param {LocationOptions} toParam - The new location of the 
+			 * @param {LocationOptions} toParam The new location of the 
 			 * page relative to the reference object or within the document 
 			 * or spread.  (Optional)
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter value specifies before or 
 			 * after. Can accept: Page or Spread. (Optional)
-			 * @param {BindingOptions} bindingParam - The location of the 
+			 * @param {BindingOptions} bindingParam The location of the 
 			 * binding spine in spreads. (Optional)
 			 */
 			public move(toParam: LocationOptions, referenceParam: any, bindingParam: BindingOptions): Adobe.Indesign.Page;
 			/**
 			 * Places the file.
-			 * @param {File} fileNameParam - The file to place
-			 * @param {any[]} placePointParam - The point at which to place 
+			 * @param {File} fileNameParam The file to place
+			 * @param {any[]} placePointParam The point at which to place 
 			 * (Optional)
-			 * @param {Layer} destinationLayerParam - The layer on which to 
+			 * @param {Layer} destinationLayerParam The layer on which to 
 			 * place (Optional)
-			 * @param {boolean} showingOptionsParam - Whether to display 
-			 * the import options dialog (Optional)
-			 * @param {boolean} autoflowingParam - Whether to autoflow 
-			 * placed text (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {boolean} showingOptionsParam Whether to display the 
+			 * import options dialog (Optional)
+			 * @param {boolean} autoflowingParam Whether to autoflow placed 
+			 * text (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the placed object(s) (Optional)
 			 */
 			public place(fileNameParam: File, placePointParam: any[], destinationLayerParam: Layer, showingOptionsParam: boolean, autoflowingParam: boolean, withPropertiesParam: any): any;
 			/**
+			 * Deprecated: Use contentPlace method. Original Description: 
+			 * Create a linked story and place it into the target.
+			 * @param {Story} parentStoryParam The story to place and link 
+			 * from.
+			 * @param {any[]} placePointParam The point at which to place 
+			 * (Optional)
+			 * @param {Layer} destinationLayerParam The layer on which to 
+			 * place (Optional)
+			 * @param {boolean} showingOptionsParam Whether to display the 
+			 * link options dialog (Optional)
+			 */
+			public placeAndLink(parentStoryParam: Story, placePointParam: any[], destinationLayerParam: Layer, showingOptionsParam: boolean): Adobe.Indesign.Story;
+			/**
 			 * Places the XML element onto a page. If the place point is 
 			 * above an existing page item, place the XML element into the 
 			 * page item.
-			 * @param {XMLElement} usingParam - The XML element to place.
-			 * @param {any[]} placePointParam - The point at which to place 
+			 * @param {XMLElement} usingParam The XML element to place.
+			 * @param {any[]} placePointParam The point at which to place 
 			 * the object, specified in the format [x, y].
-			 * @param {boolean} autoflowingParam - If true, autoflows 
-			 * placed text. (Optional)
+			 * @param {boolean} autoflowingParam If true, autoflows placed 
+			 * text. (Optional)
 			 */
 			public placeXML(usingParam: XMLElement, placePointParam: any[], autoflowingParam: boolean): Adobe.Indesign.PageItem;
 			/**
 			 * Move the bounding box of the page item
-			 * @param {any} inParam - The bounding box to resize. Can 
-			 * accept: CoordinateSpaces enumerator or Ordered array 
-			 * containing coordinateSpace:CoordinateSpaces enumerator, 
+			 * @param {any} inParam The bounding box to resize. Can accept: 
+			 * CoordinateSpaces enumerator or Ordered array containing 
+			 * coordinateSpace:CoordinateSpaces enumerator, 
 			 * boundsKind:BoundingBoxLimits enumerator.
-			 * @param {any[]} opposingCornersParam - Opposing corners of 
-			 * new bounding box in the given coordinate space
+			 * @param {any[]} opposingCornersParam Opposing corners of new 
+			 * bounding box in the given coordinate space
 			 */
 			public reframe(inParam: any, opposingCornersParam: any[]): void;
 			/** Deletes the Page. */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPage(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -223,12 +286,11 @@ declare namespace Adobe {
 			public removeOverride(): void;
 			/**
 			 * Resize the page item.
-			 * @param {any} inParam - The bounding box to resize. Can 
-			 * accept: CoordinateSpaces enumerator, BoundingBoxLimits 
-			 * enumerator or Ordered array containing 
-			 * coordinateSpace:CoordinateSpaces enumerator, 
-			 * boundsKind:BoundingBoxLimits enumerator.
-			 * @param {any} fromParam - The transform origin. Legal 
+			 * @param {any} inParam The bounding box to resize. Can accept: 
+			 * CoordinateSpaces enumerator, BoundingBoxLimits enumerator or 
+			 * Ordered array containing coordinateSpace:CoordinateSpaces 
+			 * enumerator, boundsKind:BoundingBoxLimits enumerator.
+			 * @param {any} fromParam The transform origin. Legal 
 			 * specifications: relative to bounding box: anchor | {anchor | 
 			 * {x,y}, bounds kind [, coordinate space]}; relative to 
 			 * coordinate space: {x,y} | {{x,y}[, coordinate space]}; 
@@ -237,9 +299,9 @@ declare namespace Adobe {
 			 * or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, 
 			 * AnchorPoint enumerators, BoundingBoxLimits enumerators or 
 			 * Long Integers.
-			 * @param {ResizeMethods} byParam - How the current dimensions 
+			 * @param {ResizeMethods} byParam How the current dimensions 
 			 * are affected by the given values
-			 * @param {any[]} valuesParam - The width and height values. 
+			 * @param {any[]} valuesParam The width and height values. 
 			 * Legal dimensions specifications: {x, y [, coordinate 
 			 * space]}, {x, resize constraint [, coordinate space]}, or 
 			 * {resize constraint, y [, coordinate space]}; where x and y 
@@ -248,11 +310,11 @@ declare namespace Adobe {
 			 * ignored for the 'current dimensions times' resize method). 
 			 * Can accept: Array of Reals, ResizeConstraints enumerators or 
 			 * CoordinateSpaces enumerators.
-			 * @param {boolean} resizeIndividuallyParam - If false and 
+			 * @param {boolean} resizeIndividuallyParam If false and 
 			 * multiple page items are targeted, the new dimensions are 
 			 * attained only by moving the individual items rather than 
 			 * resizing them. (Optional)
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -262,13 +324,13 @@ declare namespace Adobe {
 			/**
 			 * Get the coordinates of the given location in the specified 
 			 * coordinate system.
-			 * @param {any} locationParam - The location requested. Can 
+			 * @param {any} locationParam The location requested. Can 
 			 * accept: Array of 2 Reals, AnchorPoint enumerator or Array of 
 			 * Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint 
 			 * enumerators, BoundingBoxLimits enumerators or Long Integers.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use.
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -277,7 +339,7 @@ declare namespace Adobe {
 			public resolve(locationParam: any, inParam: CoordinateSpaces, consideringRulerUnitsParam: boolean): any;
 			/**
 			 * Selects the object.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the Page in relation to previously 
 			 * selected objects. (Optional)
 			 */
@@ -285,26 +347,30 @@ declare namespace Adobe {
 			/**
 			 * Replaces the content of XML element with content imported 
 			 * from a file.
-			 * @param {string} usingParam - The file path to the import 
-			 * file.
-			 * @param {string} relativeBasePathParam - Base path used to 
+			 * @param {string} usingParam The file path to the import file.
+			 * @param {string} relativeBasePathParam Base path used to 
 			 * resolve relative paths. (Optional)
 			 */
 			public setContent(usingParam: string, relativeBasePathParam: string): Adobe.Indesign.PageItem;
+			/**
+			 * Create a snapshot of the layout for the current Page size 
+			 * and shape.
+			 */
+			public snapshotCurrentLayout(): void;
 			/** Retrieves the object specifier. */
 			public toSpecifier(): string;
 			/**
 			 * Transform the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
-			 * @param {any} fromParam - The temporary origin during the 
+			 * @param {any} fromParam The temporary origin during the 
 			 * transformation. Can accept: Array of 2 Reals, AnchorPoint 
 			 * enumerator or Array of Arrays of 2 Reals, CoordinateSpaces 
 			 * enumerators, AnchorPoint enumerators, BoundingBoxLimits 
 			 * enumerators or Long Integers.
-			 * @param {any} withMatrixParam - Transform matrix. Can accept: 
+			 * @param {any} withMatrixParam Transform matrix. Can accept: 
 			 * Array of 6 Reals or TransformationMatrix.
-			 * @param {any} replacingCurrentParam - Transform components to 
+			 * @param {any} replacingCurrentParam Transform components to 
 			 * consider; providing this optional parameter causes the 
 			 * target's existing transform components to be replaced with 
 			 * new values.  Without this parameter, the given matrix is 
@@ -312,7 +378,7 @@ declare namespace Adobe {
 			 * the effect of the two. Can accept: MatrixContent enumerator, 
 			 * Array of MatrixContent enumerators or Long Integer. 
 			 * (Optional)
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler based origin is interpreted using ruler units rather 
 			 * than points. The default value is false. This parameter has 
 			 * no effect unless the reference point is specified relative 
@@ -321,7 +387,7 @@ declare namespace Adobe {
 			public transform(inParam: CoordinateSpaces, fromParam: any, withMatrixParam: any, replacingCurrentParam: any, consideringRulerUnitsParam: boolean): void;
 			/**
 			 * Get the transformation values of the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
 			 */
 			public transformValuesOf(inParam: CoordinateSpaces): any;

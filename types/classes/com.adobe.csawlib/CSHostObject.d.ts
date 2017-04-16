@@ -1,10 +1,10 @@
-/// <reference path="../../namespaces/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
 		/**
-		 *  Base for all our wrapper classes, which encapsulates host 
-		 * object and all interaction with the host through the HBAPI. 
+		 * Base for all our wrapper classes, which encapsulates host 
+		 * object and all interaction with the host through the HBAPI.
 		 */
 		class CSHostObject extends Adobe.Flash.Utils.Proxy {
 			/** Getter for the delegate */

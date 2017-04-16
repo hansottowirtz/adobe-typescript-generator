@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,14 +7,14 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a data merge text placeholder.
-			 * @param {Story} parentStoryParam - The story in which to 
-			 * insert the placeholder.
-			 * @param {any} storyOffsetParam - The position within the 
-			 * story at which to insert the placeholder, specified as an 
-			 * offset number or an insertion point. Can accept: 
-			 * InsertionPoint or Long Integer.
-			 * @param {DataMergeField} fieldParam - The field to insert.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {Story} parentStoryParam The story in which to insert 
+			 * the placeholder.
+			 * @param {any} storyOffsetParam The position within the story 
+			 * at which to insert the placeholder, specified as an offset 
+			 * number or an insertion point. Can accept: InsertionPoint or 
+			 * Long Integer.
+			 * @param {DataMergeField} fieldParam The field to insert.
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new DataMergeTextPlaceholder (Optional)
 			 */
 			public add(parentStoryParam: Story, storyOffsetParam: any, fieldParam: DataMergeField, withPropertiesParam: any): Adobe.Indesign.DataMergeTextPlaceholder;
@@ -35,18 +35,18 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeTextPlaceholder with the specified 
 			 * index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.DataMergeTextPlaceholder;
 			/**
 			 * Returns the DataMergeTextPlaceholders within the specified 
 			 * range.
-			 * @param {any} fromParam - The DataMergeTextPlaceholder, 
-			 * index, or name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The DataMergeTextPlaceholder, index, 
+			 * or name at the beginning of the range. Can accept: 
 			 * DataMergeTextPlaceholder, Long Integer or String.
-			 * @param {any} toParam - The DataMergeTextPlaceholder, index, 
-			 * or name at the end of the range. Can accept: 
+			 * @param {any} toParam The DataMergeTextPlaceholder, index, or 
+			 * name at the end of the range. Can accept: 
 			 * DataMergeTextPlaceholder, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -62,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeTextPlaceholder whose index follows the 
 			 * specified DataMergeTextPlaceholder in the collection.
-			 * @param {DataMergeTextPlaceholder} objParam - The 
+			 * @param {DataMergeTextPlaceholder} objParam The 
 			 * DataMergeTextPlaceholder whose index comes before the 
 			 * desired DataMergeTextPlaceholder. 
 			 */
@@ -80,8 +80,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeTextPlaceholder with the index previous 
 			 * to the specified index.
-			 * @param {DataMergeTextPlaceholder} objParam - The index of 
-			 * the DataMergeTextPlaceholder that follows the desired 
+			 * @param {DataMergeTextPlaceholder} objParam The index of the 
+			 * DataMergeTextPlaceholder that follows the desired 
 			 * DataMergeTextPlaceholder.
 			 */
 			public previousItem(objParam: DataMergeTextPlaceholder): Adobe.Indesign.DataMergeTextPlaceholder;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.SplineItem;
 			/**
 			 * Returns the SplineItem with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.SplineItem;
 			/**
 			 * Returns the SplineItem with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.SplineItem;
 			/**
 			 * Returns the SplineItem with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.SplineItem;
 			/**
 			 * Returns the SplineItems within the specified range.
-			 * @param {any} fromParam - The SplineItem, index, or name at 
-			 * the beginning of the range. Can accept: SplineItem, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The SplineItem, index, or name at the 
+			 * @param {any} fromParam The SplineItem, index, or name at the 
+			 * beginning of the range. Can accept: SplineItem, Long Integer 
+			 * or String.
+			 * @param {any} toParam The SplineItem, index, or name at the 
 			 * end of the range. Can accept: SplineItem, Long Integer or 
 			 * String.
 			 */
@@ -46,7 +46,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the SplineItem whose index follows the specified 
 			 * SplineItem in the collection.
-			 * @param {SplineItem} objParam - The SplineItem whose index 
+			 * @param {SplineItem} objParam The SplineItem whose index 
 			 * comes before the desired SplineItem. 
 			 */
 			public nextItem(objParam: SplineItem): Adobe.Indesign.SplineItem;
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the SplineItem with the index previous to the 
 			 * specified index.
-			 * @param {SplineItem} objParam - The index of the SplineItem 
+			 * @param {SplineItem} objParam The index of the SplineItem 
 			 * that follows the desired SplineItem.
 			 */
 			public previousItem(objParam: SplineItem): Adobe.Indesign.SplineItem;

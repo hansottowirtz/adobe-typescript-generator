@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.MixedInkGroup;
 			/**
 			 * Returns the MixedInkGroup with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.MixedInkGroup;
 			/**
 			 * Returns the MixedInkGroup with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.MixedInkGroup;
 			/**
 			 * Returns the MixedInkGroup with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.MixedInkGroup;
 			/**
 			 * Returns the MixedInkGroups within the specified range.
-			 * @param {any} fromParam - The MixedInkGroup, index, or name 
-			 * at the beginning of the range. Can accept: MixedInkGroup, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The MixedInkGroup, index, or name at 
+			 * @param {any} fromParam The MixedInkGroup, index, or name at 
+			 * the beginning of the range. Can accept: MixedInkGroup, Long 
+			 * Integer or String.
+			 * @param {any} toParam The MixedInkGroup, index, or name at 
 			 * the end of the range. Can accept: MixedInkGroup, Long 
 			 * Integer or String.
 			 */
@@ -46,7 +46,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MixedInkGroup whose index follows the specified 
 			 * MixedInkGroup in the collection.
-			 * @param {MixedInkGroup} objParam - The MixedInkGroup whose 
+			 * @param {MixedInkGroup} objParam The MixedInkGroup whose 
 			 * index comes before the desired MixedInkGroup. 
 			 */
 			public nextItem(objParam: MixedInkGroup): Adobe.Incopy.MixedInkGroup;
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MixedInkGroup with the index previous to the 
 			 * specified index.
-			 * @param {MixedInkGroup} objParam - The index of the 
+			 * @param {MixedInkGroup} objParam The index of the 
 			 * MixedInkGroup that follows the desired MixedInkGroup.
 			 */
 			public previousItem(objParam: MixedInkGroup): Adobe.Incopy.MixedInkGroup;

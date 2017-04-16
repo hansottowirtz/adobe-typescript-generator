@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,27 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.PICT;
 			/**
 			 * Returns the PICT with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.PICT;
 			/**
 			 * Returns the PICT with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.PICT;
 			/**
 			 * Returns the PICT with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.PICT;
 			/**
 			 * Returns the PICTs within the specified range.
-			 * @param {any} fromParam - The PICT, index, or name at the 
+			 * @param {any} fromParam The PICT, index, or name at the 
 			 * beginning of the range. Can accept: PICT, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The PICT, index, or name at the end 
-			 * of the range. Can accept: PICT, Long Integer or String.
+			 * @param {any} toParam The PICT, index, or name at the end of 
+			 * the range. Can accept: PICT, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last PICT in the collection. */
@@ -45,8 +45,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the PICT whose index follows the specified PICT in 
 			 * the collection.
-			 * @param {PICT} objParam - The PICT whose index comes before 
-			 * the desired PICT. 
+			 * @param {PICT} objParam The PICT whose index comes before the 
+			 * desired PICT. 
 			 */
 			public nextItem(objParam: PICT): Adobe.Incopy.PICT;
 			/**
@@ -62,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PICT with the index previous to the specified 
 			 * index.
-			 * @param {PICT} objParam - The index of the PICT that follows 
+			 * @param {PICT} objParam The index of the PICT that follows 
 			 * the desired PICT.
 			 */
 			public previousItem(objParam: PICT): Adobe.Incopy.PICT;

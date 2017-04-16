@@ -1,11 +1,13 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** An artboard object. */
+		/** an artboard object */
 		class Artboard extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** Size and position of artboard. */
+			/** size and position of artboard */
 			public artboardRect: any[];
+			/** The name of the artboard */
+			public name: string;
 			/**
 			 * Ruler origin of artboard.It is relative to left-bottom 
 			 * corner of the Artboard.
@@ -13,12 +15,12 @@ declare namespace Adobe {
 			public rulerOrigin: any[];
 			/**
 			 * Pixel aspect ratio, used in ruler visualization if the units 
-			 * are pixels. ( 0.1 - 10.0 )
+			 * are pixels ( 0.1 - 10.0 )
 			 */
 			public rulerPAR: number;
-			/** Show center mark. */
+			/** Show center mark */
 			public showCenter: boolean;
-			/** Show cross hairs. */
+			/** Show cross hairs */
 			public showCrossHairs: boolean;
 			/** Show title and action safe areas (for video) */
 			public showSafeAreas: boolean;

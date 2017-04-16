@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,22 +15,22 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Event;
 			/**
 			 * Returns the Event with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Event;
 			/**
 			 * Returns the Event with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Event;
 			/**
 			 * Returns the Events within the specified range.
-			 * @param {any} fromParam - The Event, index, or name at the 
+			 * @param {any} fromParam The Event, index, or name at the 
 			 * beginning of the range. Can accept: Event, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Event, index, or name at the end 
-			 * of the range. Can accept: Event, Long Integer or String.
+			 * @param {any} toParam The Event, index, or name at the end of 
+			 * the range. Can accept: Event, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Event in the collection. */
@@ -40,7 +40,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Event whose index follows the specified Event in 
 			 * the collection.
-			 * @param {Event} objParam - The Event whose index comes before 
+			 * @param {Event} objParam The Event whose index comes before 
 			 * the desired Event. 
 			 */
 			public nextItem(objParam: Event): Adobe.Incopy.Event;
@@ -57,8 +57,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Event with the index previous to the specified 
 			 * index.
-			 * @param {Event} objParam - The index of the Event that 
-			 * follows the desired Event.
+			 * @param {Event} objParam The index of the Event that follows 
+			 * the desired Event.
 			 */
 			public previousItem(objParam: Event): Adobe.Incopy.Event;
 		}

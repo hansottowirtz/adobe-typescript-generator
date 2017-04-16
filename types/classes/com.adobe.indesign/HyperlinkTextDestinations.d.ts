@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new hyperlink text destination.
-			 * @param {Text} destinationParam - The text or insertion point 
+			 * @param {Text} destinationParam The text or insertion point 
 			 * location that the hyperlink points to.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new HyperlinkTextDestination (Optional)
 			 */
 			public add(destinationParam: Text, withPropertiesParam: any): Adobe.Indesign.HyperlinkTextDestination;
@@ -30,29 +30,29 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyperlinkTextDestination with the specified 
 			 * index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.HyperlinkTextDestination;
 			/**
 			 * Returns the HyperlinkTextDestination with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.HyperlinkTextDestination;
 			/**
 			 * Returns the HyperlinkTextDestination with the specified 
 			 * name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.HyperlinkTextDestination;
 			/**
 			 * Returns the HyperlinkTextDestinations within the specified 
 			 * range.
-			 * @param {any} fromParam - The HyperlinkTextDestination, 
-			 * index, or name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The HyperlinkTextDestination, index, 
+			 * or name at the beginning of the range. Can accept: 
 			 * HyperlinkTextDestination, Long Integer or String.
-			 * @param {any} toParam - The HyperlinkTextDestination, index, 
-			 * or name at the end of the range. Can accept: 
+			 * @param {any} toParam The HyperlinkTextDestination, index, or 
+			 * name at the end of the range. Can accept: 
 			 * HyperlinkTextDestination, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -68,7 +68,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyperlinkTextDestination whose index follows the 
 			 * specified HyperlinkTextDestination in the collection.
-			 * @param {HyperlinkTextDestination} objParam - The 
+			 * @param {HyperlinkTextDestination} objParam The 
 			 * HyperlinkTextDestination whose index comes before the 
 			 * desired HyperlinkTextDestination. 
 			 */
@@ -86,8 +86,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyperlinkTextDestination with the index previous 
 			 * to the specified index.
-			 * @param {HyperlinkTextDestination} objParam - The index of 
-			 * the HyperlinkTextDestination that follows the desired 
+			 * @param {HyperlinkTextDestination} objParam The index of the 
+			 * HyperlinkTextDestination that follows the desired 
 			 * HyperlinkTextDestination.
 			 */
 			public previousItem(objParam: HyperlinkTextDestination): Adobe.Indesign.HyperlinkTextDestination;

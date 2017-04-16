@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new SoundBehavior.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new SoundBehavior (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.SoundBehavior;
@@ -21,26 +21,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.SoundBehavior;
 			/**
 			 * Returns the SoundBehavior with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.SoundBehavior;
 			/**
 			 * Returns the SoundBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.SoundBehavior;
 			/**
 			 * Returns the SoundBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.SoundBehavior;
 			/**
 			 * Returns the SoundBehaviors within the specified range.
-			 * @param {any} fromParam - The SoundBehavior, index, or name 
-			 * at the beginning of the range. Can accept: SoundBehavior, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The SoundBehavior, index, or name at 
+			 * @param {any} fromParam The SoundBehavior, index, or name at 
+			 * the beginning of the range. Can accept: SoundBehavior, Long 
+			 * Integer or String.
+			 * @param {any} toParam The SoundBehavior, index, or name at 
 			 * the end of the range. Can accept: SoundBehavior, Long 
 			 * Integer or String.
 			 */
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the SoundBehavior whose index follows the specified 
 			 * SoundBehavior in the collection.
-			 * @param {SoundBehavior} objParam - The SoundBehavior whose 
+			 * @param {SoundBehavior} objParam The SoundBehavior whose 
 			 * index comes before the desired SoundBehavior. 
 			 */
 			public nextItem(objParam: SoundBehavior): Adobe.Indesign.SoundBehavior;
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the SoundBehavior with the index previous to the 
 			 * specified index.
-			 * @param {SoundBehavior} objParam - The index of the 
+			 * @param {SoundBehavior} objParam The index of the 
 			 * SoundBehavior that follows the desired SoundBehavior.
 			 */
 			public previousItem(objParam: SoundBehavior): Adobe.Indesign.SoundBehavior;

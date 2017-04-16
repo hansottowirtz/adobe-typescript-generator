@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,12 +7,12 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Create a new mapping
-			 * @param {any} markupTagParam - The tag to map. Can accept: 
+			 * @param {any} markupTagParam The tag to map. Can accept: 
 			 * XMLTag or String.
-			 * @param {any} mappedStyleParam - the mapped style. Can 
-			 * accept: ParagraphStyle, CharacterStyle, TableStyle, 
-			 * CellStyle or String.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} mappedStyleParam the mapped style. Can accept: 
+			 * ParagraphStyle, CharacterStyle, TableStyle, CellStyle or 
+			 * String.
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new XMLImportMap (Optional)
 			 */
 			public add(markupTagParam: any, mappedStyleParam: any, withPropertiesParam: any): Adobe.Indesign.XMLImportMap;
@@ -26,18 +26,18 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.XMLImportMap;
 			/**
 			 * Returns the XMLImportMap with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.XMLImportMap;
 			/**
 			 * Returns the XMLImportMaps within the specified range.
-			 * @param {any} fromParam - The XMLImportMap, index, or name at 
+			 * @param {any} fromParam The XMLImportMap, index, or name at 
 			 * the beginning of the range. Can accept: XMLImportMap, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The XMLImportMap, index, or name at 
-			 * the end of the range. Can accept: XMLImportMap, Long Integer 
-			 * or String.
+			 * @param {any} toParam The XMLImportMap, index, or name at the 
+			 * end of the range. Can accept: XMLImportMap, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last XMLImportMap in the collection. */
@@ -47,8 +47,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the XMLImportMap whose index follows the specified 
 			 * XMLImportMap in the collection.
-			 * @param {XMLImportMap} objParam - The XMLImportMap whose 
-			 * index comes before the desired XMLImportMap. 
+			 * @param {XMLImportMap} objParam The XMLImportMap whose index 
+			 * comes before the desired XMLImportMap. 
 			 */
 			public nextItem(objParam: XMLImportMap): Adobe.Indesign.XMLImportMap;
 			/**
@@ -64,8 +64,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the XMLImportMap with the index previous to the 
 			 * specified index.
-			 * @param {XMLImportMap} objParam - The index of the 
-			 * XMLImportMap that follows the desired XMLImportMap.
+			 * @param {XMLImportMap} objParam The index of the XMLImportMap 
+			 * that follows the desired XMLImportMap.
 			 */
 			public previousItem(objParam: XMLImportMap): Adobe.Indesign.XMLImportMap;
 		}

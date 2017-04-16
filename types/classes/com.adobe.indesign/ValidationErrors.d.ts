@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -16,17 +16,17 @@ declare namespace Adobe {
 			/**
 			 * Returns the ValidationError with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.ValidationError;
 			/**
 			 * Returns the ValidationErrors within the specified range.
-			 * @param {any} fromParam - The ValidationError, index, or name 
+			 * @param {any} fromParam The ValidationError, index, or name 
 			 * at the beginning of the range. Can accept: ValidationError, 
 			 * Long Integer or String.
-			 * @param {any} toParam - The ValidationError, index, or name 
-			 * at the end of the range. Can accept: ValidationError, Long 
+			 * @param {any} toParam The ValidationError, index, or name at 
+			 * the end of the range. Can accept: ValidationError, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -37,8 +37,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the ValidationError whose index follows the 
 			 * specified ValidationError in the collection.
-			 * @param {ValidationError} objParam - The ValidationError 
-			 * whose index comes before the desired ValidationError. 
+			 * @param {ValidationError} objParam The ValidationError whose 
+			 * index comes before the desired ValidationError. 
 			 */
 			public nextItem(objParam: ValidationError): Adobe.Indesign.ValidationError;
 			/**
@@ -54,7 +54,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ValidationError with the index previous to the 
 			 * specified index.
-			 * @param {ValidationError} objParam - The index of the 
+			 * @param {ValidationError} objParam The index of the 
 			 * ValidationError that follows the desired ValidationError.
 			 */
 			public previousItem(objParam: ValidationError): Adobe.Indesign.ValidationError;

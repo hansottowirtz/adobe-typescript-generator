@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,27 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Asset;
 			/**
 			 * Returns the Asset with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Asset;
 			/**
 			 * Returns the Asset with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Asset;
 			/**
 			 * Returns the Asset with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Asset;
 			/**
 			 * Returns the Assets within the specified range.
-			 * @param {any} fromParam - The Asset, index, or name at the 
+			 * @param {any} fromParam The Asset, index, or name at the 
 			 * beginning of the range. Can accept: Asset, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Asset, index, or name at the end 
-			 * of the range. Can accept: Asset, Long Integer or String.
+			 * @param {any} toParam The Asset, index, or name at the end of 
+			 * the range. Can accept: Asset, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Asset in the collection. */
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Asset whose index follows the specified Asset in 
 			 * the collection.
-			 * @param {Asset} objParam - The Asset whose index comes before 
+			 * @param {Asset} objParam The Asset whose index comes before 
 			 * the desired Asset. 
 			 */
 			public nextItem(objParam: Asset): Adobe.Indesign.Asset;
@@ -62,8 +62,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Asset with the index previous to the specified 
 			 * index.
-			 * @param {Asset} objParam - The index of the Asset that 
-			 * follows the desired Asset.
+			 * @param {Asset} objParam The index of the Asset that follows 
+			 * the desired Asset.
 			 */
 			public previousItem(objParam: Asset): Adobe.Indesign.Asset;
 		}

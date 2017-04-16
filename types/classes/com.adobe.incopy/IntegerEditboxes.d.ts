@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new IntegerEditbox.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new IntegerEditbox (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.IntegerEditbox;
@@ -21,21 +21,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.IntegerEditbox;
 			/**
 			 * Returns the IntegerEditbox with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.IntegerEditbox;
 			/**
 			 * Returns the IntegerEditbox with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.IntegerEditbox;
 			/**
 			 * Returns the IntegerEditboxes within the specified range.
-			 * @param {any} fromParam - The IntegerEditbox, index, or name 
-			 * at the beginning of the range. Can accept: IntegerEditbox, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The IntegerEditbox, index, or name at 
+			 * @param {any} fromParam The IntegerEditbox, index, or name at 
+			 * the beginning of the range. Can accept: IntegerEditbox, Long 
+			 * Integer or String.
+			 * @param {any} toParam The IntegerEditbox, index, or name at 
 			 * the end of the range. Can accept: IntegerEditbox, Long 
 			 * Integer or String.
 			 */
@@ -47,7 +47,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the IntegerEditbox whose index follows the specified 
 			 * IntegerEditbox in the collection.
-			 * @param {IntegerEditbox} objParam - The IntegerEditbox whose 
+			 * @param {IntegerEditbox} objParam The IntegerEditbox whose 
 			 * index comes before the desired IntegerEditbox. 
 			 */
 			public nextItem(objParam: IntegerEditbox): Adobe.Incopy.IntegerEditbox;
@@ -64,7 +64,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the IntegerEditbox with the index previous to the 
 			 * specified index.
-			 * @param {IntegerEditbox} objParam - The index of the 
+			 * @param {IntegerEditbox} objParam The index of the 
 			 * IntegerEditbox that follows the desired IntegerEditbox.
 			 */
 			public previousItem(objParam: IntegerEditbox): Adobe.Incopy.IntegerEditbox;

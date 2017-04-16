@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
@@ -12,9 +12,9 @@ declare namespace Adobe {
 			public getItem(qualifiedClassName: string): Adobe.Csawlib.CSEnumSharedCache;
 			/**
 			 * @param {string} qualifiedClassName
-			 * @param {CSEnumSharedCache} csenumCache
+			 * @param {Adobe.Csawlib.CSEnumSharedCache} csenumCache
 			 */
-			public putItem(qualifiedClassName: string, csenumCache: CSEnumSharedCache): void;
+			public putItem(qualifiedClassName: string, csenumCache: Adobe.Csawlib.CSEnumSharedCache): void;
 		}
 	}
 }

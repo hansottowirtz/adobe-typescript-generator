@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,12 +7,12 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Adds a new target item.
-			 * @param {any} dynamicTargetParam - A page item target that is 
+			 * @param {any} dynamicTargetParam A page item target that is 
 			 * an animation, media, or mso. Can accept: PageItem, Graphic, 
 			 * Behavior or MediaItem.
-			 * @param {number} delaySecondsParam - The time delay in 
-			 * seconds for a target. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {number} delaySecondsParam The time delay in seconds 
+			 * for a target. (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TimingTarget (Optional)
 			 */
 			public add(dynamicTargetParam: any, delaySecondsParam: number, withPropertiesParam: any): Adobe.Indesign.TimingTarget;
@@ -26,18 +26,18 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.TimingTarget;
 			/**
 			 * Returns the TimingTarget with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.TimingTarget;
 			/**
 			 * Returns the TimingTargets within the specified range.
-			 * @param {any} fromParam - The TimingTarget, index, or name at 
+			 * @param {any} fromParam The TimingTarget, index, or name at 
 			 * the beginning of the range. Can accept: TimingTarget, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The TimingTarget, index, or name at 
-			 * the end of the range. Can accept: TimingTarget, Long Integer 
-			 * or String.
+			 * @param {any} toParam The TimingTarget, index, or name at the 
+			 * end of the range. Can accept: TimingTarget, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last TimingTarget in the collection. */
@@ -47,8 +47,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the TimingTarget whose index follows the specified 
 			 * TimingTarget in the collection.
-			 * @param {TimingTarget} objParam - The TimingTarget whose 
-			 * index comes before the desired TimingTarget. 
+			 * @param {TimingTarget} objParam The TimingTarget whose index 
+			 * comes before the desired TimingTarget. 
 			 */
 			public nextItem(objParam: TimingTarget): Adobe.Indesign.TimingTarget;
 			/**
@@ -64,8 +64,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the TimingTarget with the index previous to the 
 			 * specified index.
-			 * @param {TimingTarget} objParam - The index of the 
-			 * TimingTarget that follows the desired TimingTarget.
+			 * @param {TimingTarget} objParam The index of the TimingTarget 
+			 * that follows the desired TimingTarget.
 			 */
 			public previousItem(objParam: TimingTarget): Adobe.Indesign.TimingTarget;
 		}

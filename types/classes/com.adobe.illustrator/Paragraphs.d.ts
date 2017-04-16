@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -8,14 +8,14 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * create a text art item
-			 * @param {string} contents - the text string
-			 * @param {any} relativeObject - 
+			 * @param {string} contents the text string
+			 * @param {any} relativeObject 
 			 * @param {Adobe.Illustrator.ElementPlacement} 
-			 * insertionLocation - ( default: ElementPlacement.INSIDE )
+			 * insertionLocation ( default: ElementPlacement.INSIDE )
 			 */
 			public add(contents: string, relativeObject: any, insertionLocation: Adobe.Illustrator.ElementPlacement): Adobe.Illustrator.TextRange;
 			/**
-			 * @param {string} contents - the text string
+			 * @param {string} contents the text string
 			 */
 			public addBefore(contents: string): Adobe.Illustrator.TextRange;
 			/**

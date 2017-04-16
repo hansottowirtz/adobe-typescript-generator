@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -19,27 +19,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoNextStateBehavior with the specified index 
 			 * or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.GotoNextStateBehavior;
 			/**
 			 * Returns the GotoNextStateBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.GotoNextStateBehavior;
 			/**
 			 * Returns the GotoNextStateBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.GotoNextStateBehavior;
 			/**
 			 * Returns the GotoNextStateBehaviors within the specified 
 			 * range.
-			 * @param {any} fromParam - The GotoNextStateBehavior, index, 
-			 * or name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The GotoNextStateBehavior, index, or 
+			 * name at the beginning of the range. Can accept: 
 			 * GotoNextStateBehavior, Long Integer or String.
-			 * @param {any} toParam - The GotoNextStateBehavior, index, or 
+			 * @param {any} toParam The GotoNextStateBehavior, index, or 
 			 * name at the end of the range. Can accept: 
 			 * GotoNextStateBehavior, Long Integer or String.
 			 */
@@ -51,7 +51,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoNextStateBehavior whose index follows the 
 			 * specified GotoNextStateBehavior in the collection.
-			 * @param {GotoNextStateBehavior} objParam - The 
+			 * @param {GotoNextStateBehavior} objParam The 
 			 * GotoNextStateBehavior whose index comes before the desired 
 			 * GotoNextStateBehavior. 
 			 */
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoNextStateBehavior with the index previous to 
 			 * the specified index.
-			 * @param {GotoNextStateBehavior} objParam - The index of the 
+			 * @param {GotoNextStateBehavior} objParam The index of the 
 			 * GotoNextStateBehavior that follows the desired 
 			 * GotoNextStateBehavior.
 			 */

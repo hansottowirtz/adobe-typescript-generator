@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -11,6 +11,10 @@ declare namespace Adobe {
 			 * the objects.
 			 */
 			public static readonly itemBounds: Adobe.Indesign.AlignDistributeBounds;
+			/** Align or distribute to a key object. */
+			public static readonly KEY_OBJECT: Adobe.Indesign.AlignDistributeBounds;
+			/** Alias for KEY_OBJECT. Align or distribute to a key object. */
+			public static readonly keyObject: Adobe.Indesign.AlignDistributeBounds;
 			/** Align or distribute to the margins of the page. */
 			public static readonly MARGIN_BOUNDS: Adobe.Indesign.AlignDistributeBounds;
 			/**

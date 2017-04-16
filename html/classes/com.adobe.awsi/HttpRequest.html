@@ -1,0 +1,1203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="HttpRequest,com.adobe.awsi.HttpRequest,DELETE,GET,HEAD,POST,PUT,headers,httpLibrary,uri,beforePerform,cancel,getHeader,getHeaders,getHttpLibrary,getOption,getOptions,getParam,getParams,getReturnsBinary,getValidateUTF8Responses,get_EndPoint,get_method,get_path,handleResponse,interpolate,onError,onSuccess,perform,return_response,setHeader,setHeaders,setHttpLibrary,setOption,setParam,setParameterParam,setReturnsBinary,setValidateUTF8Responses,set_endPoint,set_method,set_path" name="keywords">
+<title>com.adobe.awsi.HttpRequest</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'HttpRequest - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?com/adobe/awsi/HttpRequest.html&amp;com/adobe/awsi/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;HttpRequest</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class HttpRequest"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.adobe.awsi</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class HttpRequest</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">HttpRequest <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  <p>A class for making HTTP requests to a specified target. It allows
+  various request attributes to be specified:
+  <ul>
+  <li>HTTP method to use (e.g. GET/POST)</li>
+  <li>HTTP request headers and parameters</li>
+  <li>End point and path to target</li>
+  <li>HTTP library implementation to perform the request</li>
+  </ul>
+  </p>
+  <p>The class abstracts over the process common to many Adobe
+  Web Services of interpolating parameters into request end points 
+  and paths.</p>
+  
+  <p>Parameters not interpolated into the end point or path are sent 
+  as HTTP parameters with the request.</p>
+    <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a><a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#headers">headers</a> : Object<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#httpLibrary">httpLibrary</a> : <a href="../awsi/AbstractHttpLibrary.html">AbstractHttpLibrary</a>
+<div class="summaryTableDescription">
+   Determines which HttpLibrary to use for sending requests and receiving responses
+   </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#uri">uri</a> : String<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#HttpRequest()">HttpRequest</a>(method:String, endPoint:String, path:String)</div>
+<div class="summaryTableDescription">
+      
+      Constructs an HTTP request object which will be performed using the
+      specified HTTP method, targeting the specified end point server and path.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#cancel()">cancel</a>():void</div>
+<div class="summaryTableDescription">
+   Used for cancelling the request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#get_EndPoint()">get_EndPoint</a>():String</div>
+<div class="summaryTableDescription">
+      Returns the URL, including any port number, of the server to which 
+      this request will be made.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#get_method()">get_method</a>():String</div>
+<div class="summaryTableDescription">
+      Returns the HTTP method which which this request will be performed
+      </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#get_path()">get_path</a>():String</div>
+<div class="summaryTableDescription">
+      Returns the path on the end point to which this request will be made.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getHeader()">getHeader</a>(name:String):String</div>
+<div class="summaryTableDescription">
+      Returns the value of the specified HTTP header which will be sent 
+      with this request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getHeaders()">getHeaders</a>():Object</div>
+<div class="summaryTableDescription">
+   Adds all the relevant headers to the filteredHeaders Object.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getHttpLibrary()">getHttpLibrary</a>():<a href="../awsi/AbstractHttpLibrary.html">AbstractHttpLibrary</a>
+</div>
+<div class="summaryTableDescription">
+      Returns the HTTP library to be used for executing requests.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getOption()">getOption</a>(key:String):Object</div>
+<div class="summaryTableDescription">
+      Returns the value of the specified option.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getOptions()">getOptions</a>():Object</div>
+<div class="summaryTableDescription">
+      Returns an Object containing key value pairs of additional options used as part of sending a request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getParam()">getParam</a>(name:String):<a href="../awsi/Parameter.html">Parameter</a>
+</div>
+<div class="summaryTableDescription">
+      Returns the value of the parameter of the specified name.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getParams()">getParams</a>():Object</div>
+<div class="summaryTableDescription">
+   Adds all the relevant parameters to the filteredParams Object.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getReturnsBinary()">getReturnsBinary</a>():Boolean</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getValidateUTF8Responses()">getValidateUTF8Responses</a>():Boolean</div>
+<div class="summaryTableDescription">
+   Returns <code>true</code> if responses will be verified as UTF-8 encoded
+   </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#perform()">perform</a>(onComplete:Function = null, uniqueId:Object = null):void</div>
+<div class="summaryTableDescription">
+      Performs the HTTP request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#set_endPoint()">set_endPoint</a>(endPoint:String):void</div>
+<div class="summaryTableDescription">
+      Sets the URL to which this request will be made.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#set_method()">set_method</a>(method:String):void</div>
+<div class="summaryTableDescription">
+      Specifies the HTTP method with which to perform this request
+      </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#set_path()">set_path</a>(path:String):void</div>
+<div class="summaryTableDescription">
+      Specifies the path on this request's end point to which this request 
+      will be made.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setHeader()">setHeader</a>(name:String, value:String):void</div>
+<div class="summaryTableDescription">
+      Specifies an HTTP header name/value pair to be sent with
+      this request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setHeaders()">setHeaders</a>(heads:Object):void</div>
+<div class="summaryTableDescription">
+      Adds each of the entries in the given map to the HTTP headers
+      which will be sent with this request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setHttpLibrary()">setHttpLibrary</a>(library:<a href="AbstractHttpLibrary.html">AbstractHttpLibrary</a>):void</div>
+<div class="summaryTableDescription">
+      Specifies an instance of the HttpLibrary implementation 
+      to use for performing HTTP requests.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setOption()">setOption</a>(key:String, value:Object):void</div>
+<div class="summaryTableDescription">
+   Sets additional information to be used by the request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setParam()">setParam</a>(name:String, value:Object):void</div>
+<div class="summaryTableDescription">
+      Specifies a parameter to be sent with this request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setReturnsBinary()">setReturnsBinary</a>(returnsBinary:Boolean):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setValidateUTF8Responses()">setValidateUTF8Responses</a>(verify:Boolean):void</div>
+<div class="summaryTableDescription">
+   Sets whether to verify responses as UTF-8 encoded
+   </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#beforePerform()">beforePerform</a>():void</div>
+<div class="summaryTableDescription"> 
+      This method may be overridden by subclasses which wish to 
+      execute some action immediately before the HTTP client library
+      performs this request.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#handleResponse()">handleResponse</a>(onComplete:Function):void</div>
+<div class="summaryTableDescription">
+   Sets listeners for <code>HttpEvent.REQ_COMPLETE</code> and <code>HttpEvent.REQ_ERROR</code> events
+   </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#interpolate()">interpolate</a>(interpolatePath:String):String</div>
+<div class="summaryTableDescription">
+   Returns a new path with parameters that have been indicated with {param}
+   being replaced by their value.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onError()">onError</a>(event:<a href="HttpEvent.html">HttpEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Entered when <code>HttpEvent.REQ_ERROR</code> has been dispatched.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onSuccess()">onSuccess</a>(event:<a href="HttpEvent.html">HttpEvent</a>):void</div>
+<div class="summaryTableDescription">
+   Entered when <code>HttpEvent.REQ_COMPLETE</code> has been dispatched.</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#return_response()">return_response</a>(resp:Object):void</div>
+<div class="summaryTableDescription">
+   Removes the listeners for <code>HttpEvent.REQ_COMPLETE</code> and <code>HttpEvent.REQ_ERROR</code> events and
+   returns the HttpResponse object to the onComplete function
+   </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setParameterParam()">setParameterParam</a>(name:String, value:<a href="Parameter.html">Parameter</a>):void</div>
+<div class="summaryTableDescription">
+   Adds the <code>Parameter</code> object to the params map
+   </div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DELETE">DELETE</a> : String = "DELETE"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#GET">GET</a> : String = "GET"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#HEAD">HEAD</a> : String = "HEAD"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#POST">POST</a> : String = "POST"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PUT">PUT</a> : String = "PUT"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">HttpRequest</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="headers"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">headers</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var headers:Object</code>
+</div>
+<a name="httpLibrary"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">httpLibrary</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var httpLibrary:<a href="../awsi/AbstractHttpLibrary.html">AbstractHttpLibrary</a></code><p>
+   Determines which HttpLibrary to use for sending requests and receiving responses
+   </p><p>The default value is <code>FlexHttpClientLib</code>.</p>
+</div>
+<a name="uri"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">uri</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var uri:String</code>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="HttpRequest()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">HttpRequest</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function HttpRequest(method:String, endPoint:String, path:String)</code><p>
+      
+      Constructs an HTTP request object which will be performed using the
+      specified HTTP method, targeting the specified end point server and path.
+      
+      Together, the end point and path should represent a complete target for
+      the HTTP request being constructed:
+      <ul>
+      <li>The end point represents the URL of the server to which the request
+      should be made. It may include the port number to use. For example, 
+      "http://www.myserver.com:80"</li>
+      <li>The path specifies the location on the end point to which the request
+      should be made. Typically it begins with a forward-slash ('/'). For
+      example, "/myservice"</li>
+      </ul>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">method</span>:String</code> &mdash;  the <code>HTTPMethodType</code> to use (e.g. GET)
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">endPoint</span>:String</code> &mdash;  the end point to target
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">path</span>:String</code> &mdash;   the path on the specified end point
+      </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="beforePerform()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">beforePerform</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function beforePerform():void</code><p> 
+      This method may be overridden by subclasses which wish to 
+      execute some action immediately before the HTTP client library
+      performs this request.
+      
+      It is called after the {</p></div>
+<a name="cancel()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">cancel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function cancel():void</code><p>
+   Used for cancelling the request.  This will call the HTTPLibrary and close/cancel the request connection.
+   </p></div>
+<a name="get_EndPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">get_EndPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function get_EndPoint():String</code><p>
+      Returns the URL, including any port number, of the server to which 
+      this request will be made. For example, http://www.myserver.com:80.
+      
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; the server URL
+      </td>
+</tr>
+</table>
+</div>
+<a name="get_method()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">get_method</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function get_method():String</code><p>
+      Returns the HTTP method which which this request will be performed
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;  the HTTP method type which will be performed
+      </td>
+</tr>
+</table>
+</div>
+<a name="get_path()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">get_path</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function get_path():String</code><p>
+      Returns the path on the end point to which this request will be made. For
+      example, "/myservice"
+      
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; the path to which this request will be made
+      </td>
+</tr>
+</table>
+</div>
+<a name="getHeader()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getHeader</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getHeader(name:String):String</code><p>
+      Returns the value of the specified HTTP header which will be sent 
+      with this request.
+      If no such header exists, returns null.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash;  the HTTP header name
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;   the HTTP header value
+      </td>
+</tr>
+</table>
+</div>
+<a name="getHeaders()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getHeaders</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getHeaders():Object</code><p>
+   Adds all the relevant headers to the filteredHeaders Object.  It is initially set to null
+   so the client library can detect if there are any valid headers.  As it is not an array it is difficult
+   to detect if the object is empty except by toString();
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; Object containing the headers to be included in the request
+   </td>
+</tr>
+</table>
+</div>
+<a name="getHttpLibrary()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getHttpLibrary</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getHttpLibrary():<a href="../awsi/AbstractHttpLibrary.html">AbstractHttpLibrary</a></code><p>
+      Returns the HTTP library to be used for executing requests.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../awsi/AbstractHttpLibrary.html">AbstractHttpLibrary</a></code> &mdash; 
+                        the HTTP library to be used for executing requests
+      
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getOption()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getOption</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getOption(key:String):Object</code><p>
+      Returns the value of the specified option.
+      If no such option exists, it returns null.
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash;  the option name
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash;   the option value
+      </td>
+</tr>
+</table>
+</div>
+<a name="getOptions()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getOptions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getOptions():Object</code><p>
+      Returns an Object containing key value pairs of additional options used as part of sending a request.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; a map of key/value pairs of additional entries required for processing the request but not included in the packet.
+      </td>
+</tr>
+</table>
+</div>
+<a name="getParam()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getParam</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getParam(name:String):<a href="../awsi/Parameter.html">Parameter</a></code><p>
+      Returns the value of the parameter of the specified name.
+      If no parameter with the given name exists, it returns null.
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; a parameter name
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../awsi/Parameter.html">Parameter</a></code> &mdash; 
+                         the corresponding <code>Parameter</code> object
+      
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getParams()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getParams</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getParams():Object</code><p>
+   Adds all the relevant parameters to the filteredParams Object.  It is initially set to null
+   so the client library can detect if there are any valid parameters to process.  As it is not an array it is difficult
+   to detect if the object is empty except by toString();
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; Object contains the parameters to be included in the request
+   </td>
+</tr>
+</table>
+</div>
+<a name="getReturnsBinary()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getReturnsBinary</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getReturnsBinary():Boolean</code>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code></td>
+</tr>
+</table>
+</div>
+<a name="getValidateUTF8Responses()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getValidateUTF8Responses</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getValidateUTF8Responses():Boolean</code><p>
+   Returns <code>true</code> if responses will be verified as UTF-8 encoded
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if responses will be verified as UTF-8 encoded
+   </td>
+</tr>
+</table>
+</div>
+<a name="handleResponse()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">handleResponse</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function handleResponse(onComplete:Function):void</code><p>
+   Sets listeners for <code>HttpEvent.REQ_COMPLETE</code> and <code>HttpEvent.REQ_ERROR</code> events
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">onComplete</span>:Function</code> &mdash; the function to return the received <code>HttpResponse</code> object to.
+   </td>
+</tr>
+</table>
+</div>
+<a name="interpolate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">interpolate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function interpolate(interpolatePath:String):String</code><p>
+   Returns a new path with parameters that have been indicated with {param}
+   being replaced by their value. Matching parameters are removed from the
+   parameter map. A special case currently exists for the {.format} term. 
+   It will be mapped to the _format parameter. We may wish to generalize this
+   so that any . prefixed placholder gets substituted with its _ prefixed
+   equivalent parameter.
+      === Example
+   var params = {version: "v1.0", _format: "xml", other: "value"};
+   var path = "/{version}/albums{.format}";
+   interpolate(path, params) will return "/v1.0/albums.xml" 
+   Params will then be {other: "value"}
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">interpolatePath</span>:String</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<a name="onError()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onError</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function onError(event:<a href="HttpEvent.html">HttpEvent</a>):void</code><p>
+   Entered when <code>HttpEvent.REQ_ERROR</code> has been dispatched.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:<a href="HttpEvent.html">HttpEvent</a></code></td>
+</tr>
+</table>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>event</b></code> &mdash; type <code>HttpEvent.REQ_ERROR</code></td>
+</tr>
+</table>
+</div>
+<a name="onSuccess()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onSuccess</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function onSuccess(event:<a href="HttpEvent.html">HttpEvent</a>):void</code><p>
+   Entered when <code>HttpEvent.REQ_COMPLETE</code> has been dispatched.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:<a href="HttpEvent.html">HttpEvent</a></code></td>
+</tr>
+</table>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>event</b></code> &mdash; type <code>HttpEvent.REQ_COMPLETE</code></td>
+</tr>
+</table>
+</div>
+<a name="perform()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">perform</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function perform(onComplete:Function = null, uniqueId:Object = null):void</code><p>
+      Performs the HTTP request.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">onComplete</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; The function to return the <code>HttpResponse</code> object
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">uniqueId</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; A unique Id to include in all events dispatched as part of the request 
+      </td>
+</tr>
+</table>
+</div>
+<a name="return_response()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">return_response</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function return_response(resp:Object):void</code><p>
+   Removes the listeners for <code>HttpEvent.REQ_COMPLETE</code> and <code>HttpEvent.REQ_ERROR</code> events and
+   returns the HttpResponse object to the onComplete function
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">resp</span>:Object</code> &mdash; the result of the Http request
+   </td>
+</tr>
+</table>
+</div>
+<a name="set_endPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">set_endPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function set_endPoint(endPoint:String):void</code><p>
+      Sets the URL to which this request will be made. The URL should include
+      any port number. For example, "http://www.myserver.com:80".
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">endPoint</span>:String</code> &mdash; the server URL
+      </td>
+</tr>
+</table>
+</div>
+<a name="set_method()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">set_method</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function set_method(method:String):void</code><p>
+      Specifies the HTTP method with which to perform this request
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">method</span>:String</code> &mdash;  the HTTP method to use to perform this request
+      </td>
+</tr>
+</table>
+</div>
+<a name="set_path()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">set_path</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function set_path(path:String):void</code><p>
+      Specifies the path on this request's end point to which this request 
+      will be made. For example, "/myservice". The path will be appended to 
+      this request's endpoint to give a complete target for the HTTP request.
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">path</span>:String</code> &mdash; the path on the end point to which this request will be made 
+      </td>
+</tr>
+</table>
+</div>
+<a name="setHeader()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setHeader</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setHeader(name:String, value:String):void</code><p>
+      Specifies an HTTP header name/value pair to be sent with
+      this request.
+      
+      If value is <code>null</code>, any existing HTTP header with the
+      specified name will be removed from the request. 
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name of the HTTP header
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; the value of the HTTP header
+      </td>
+</tr>
+</table>
+</div>
+<a name="setHeaders()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setHeaders</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setHeaders(heads:Object):void</code><p>
+      Adds each of the entries in the given map to the HTTP headers
+      which will be sent with this request.
+      
+      The keys in the headers map should represent the HTTP header names,
+      and the values, the corresponding HTTP header values. 
+      
+      Calling this method has the same effect as calling 
+      {</p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">heads</span>:Object</code> &mdash; the HTTP headers to add to this request
+      </td>
+</tr>
+</table>
+</div>
+<a name="setHttpLibrary()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setHttpLibrary</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setHttpLibrary(library:<a href="AbstractHttpLibrary.html">AbstractHttpLibrary</a>):void</code><p>
+      Specifies an instance of the HttpLibrary implementation 
+      to use for performing HTTP requests.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">library</span>:<a href="AbstractHttpLibrary.html">AbstractHttpLibrary</a></code> &mdash; the HTTP library to use
+      </td>
+</tr>
+</table>
+</div>
+<a name="setOption()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setOption</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setOption(key:String, value:Object):void</code><p>
+   Sets additional information to be used by the request.  For example, when
+   using the <code>FlexHttpClientLib</code> additional option keys include:
+   <ul>
+   <li>unique_id - Attaches this to all events dispatched in the HttpLibrary and is returned to the onComplete function when the request is complete.</li>
+   <li>timeout - Sets the timeout limit for the request.  The default is 90000 milliseconds</li>
+   <li>debug - If set to <code>true</code> debug output will be passed to the AwsiTracer class.</li>
+   </ul>
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:Object</code></td>
+</tr>
+</table>
+</div>
+<a name="setParam()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setParam</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setParam(name:String, value:Object):void</code><p>
+      Specifies a parameter to be sent with this request.
+      Objects can be of type Parameter or one of the following String, FileByteArray, ByteArray or FileReference which
+      are wrapped in StringParameter, FileByteArrayParameter, ByteArrayParameter or FileReferenceParameter
+      respectively and then added to this HTTP request.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name of the parameter
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:Object</code> &mdash; the parameter value
+      </td>
+</tr>
+</table>
+</div>
+<a name="setParameterParam()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setParameterParam</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function setParameterParam(name:String, value:<a href="Parameter.html">Parameter</a>):void</code><p>
+   Adds the <code>Parameter</code> object to the params map
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; name of the parameter
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="Parameter.html">Parameter</a></code></td>
+</tr>
+</table>
+</div>
+<a name="setReturnsBinary()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setReturnsBinary</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setReturnsBinary(returnsBinary:Boolean):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">returnsBinary</span>:Boolean</code></td>
+</tr>
+</table>
+</div>
+<a name="setValidateUTF8Responses()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setValidateUTF8Responses</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setValidateUTF8Responses(verify:Boolean):void</code><p>
+   Sets whether to verify responses as UTF-8 encoded
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">verify</span>:Boolean</code> &mdash; Whether to verify responses as UTF-8 encoded
+   </td>
+</tr>
+</table>
+</div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="DELETE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DELETE</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DELETE:String = "DELETE"</code>
+</div>
+<a name="GET"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">GET</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const GET:String = "GET"</code>
+</div>
+<a name="HEAD"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">HEAD</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const HEAD:String = "HEAD"</code>
+</div>
+<a name="POST"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">POST</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const POST:String = "POST"</code>
+</div>
+<a name="PUT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PUT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PUT:String = "PUT"</code>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

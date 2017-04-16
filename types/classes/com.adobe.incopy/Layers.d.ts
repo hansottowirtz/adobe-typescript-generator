@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,27 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Layer;
 			/**
 			 * Returns the Layer with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Layer;
 			/**
 			 * Returns the Layer with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Layer;
 			/**
 			 * Returns the Layer with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Layer;
 			/**
 			 * Returns the Layers within the specified range.
-			 * @param {any} fromParam - The Layer, index, or name at the 
+			 * @param {any} fromParam The Layer, index, or name at the 
 			 * beginning of the range. Can accept: Layer, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Layer, index, or name at the end 
-			 * of the range. Can accept: Layer, Long Integer or String.
+			 * @param {any} toParam The Layer, index, or name at the end of 
+			 * the range. Can accept: Layer, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Layer in the collection. */
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Layer whose index follows the specified Layer in 
 			 * the collection.
-			 * @param {Layer} objParam - The Layer whose index comes before 
+			 * @param {Layer} objParam The Layer whose index comes before 
 			 * the desired Layer. 
 			 */
 			public nextItem(objParam: Layer): Adobe.Incopy.Layer;
@@ -62,8 +62,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Layer with the index previous to the specified 
 			 * index.
-			 * @param {Layer} objParam - The index of the Layer that 
-			 * follows the desired Layer.
+			 * @param {Layer} objParam The index of the Layer that follows 
+			 * the desired Layer.
 			 */
 			public previousItem(objParam: Layer): Adobe.Incopy.Layer;
 		}

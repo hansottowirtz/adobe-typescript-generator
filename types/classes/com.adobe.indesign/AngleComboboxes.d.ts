@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new AngleCombobox.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new AngleCombobox (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.AngleCombobox;
@@ -21,21 +21,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.AngleCombobox;
 			/**
 			 * Returns the AngleCombobox with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.AngleCombobox;
 			/**
 			 * Returns the AngleCombobox with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.AngleCombobox;
 			/**
 			 * Returns the AngleComboboxes within the specified range.
-			 * @param {any} fromParam - The AngleCombobox, index, or name 
-			 * at the beginning of the range. Can accept: AngleCombobox, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The AngleCombobox, index, or name at 
+			 * @param {any} fromParam The AngleCombobox, index, or name at 
+			 * the beginning of the range. Can accept: AngleCombobox, Long 
+			 * Integer or String.
+			 * @param {any} toParam The AngleCombobox, index, or name at 
 			 * the end of the range. Can accept: AngleCombobox, Long 
 			 * Integer or String.
 			 */
@@ -47,7 +47,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the AngleCombobox whose index follows the specified 
 			 * AngleCombobox in the collection.
-			 * @param {AngleCombobox} objParam - The AngleCombobox whose 
+			 * @param {AngleCombobox} objParam The AngleCombobox whose 
 			 * index comes before the desired AngleCombobox. 
 			 */
 			public nextItem(objParam: AngleCombobox): Adobe.Indesign.AngleCombobox;
@@ -64,7 +64,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the AngleCombobox with the index previous to the 
 			 * specified index.
-			 * @param {AngleCombobox} objParam - The index of the 
+			 * @param {AngleCombobox} objParam The index of the 
 			 * AngleCombobox that follows the desired AngleCombobox.
 			 */
 			public previousItem(objParam: AngleCombobox): Adobe.Indesign.AngleCombobox;

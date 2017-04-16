@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new PercentEditbox.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new PercentEditbox (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.PercentEditbox;
@@ -21,21 +21,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.PercentEditbox;
 			/**
 			 * Returns the PercentEditbox with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.PercentEditbox;
 			/**
 			 * Returns the PercentEditbox with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.PercentEditbox;
 			/**
 			 * Returns the PercentEditboxes within the specified range.
-			 * @param {any} fromParam - The PercentEditbox, index, or name 
-			 * at the beginning of the range. Can accept: PercentEditbox, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The PercentEditbox, index, or name at 
+			 * @param {any} fromParam The PercentEditbox, index, or name at 
+			 * the beginning of the range. Can accept: PercentEditbox, Long 
+			 * Integer or String.
+			 * @param {any} toParam The PercentEditbox, index, or name at 
 			 * the end of the range. Can accept: PercentEditbox, Long 
 			 * Integer or String.
 			 */
@@ -47,7 +47,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PercentEditbox whose index follows the specified 
 			 * PercentEditbox in the collection.
-			 * @param {PercentEditbox} objParam - The PercentEditbox whose 
+			 * @param {PercentEditbox} objParam The PercentEditbox whose 
 			 * index comes before the desired PercentEditbox. 
 			 */
 			public nextItem(objParam: PercentEditbox): Adobe.Incopy.PercentEditbox;
@@ -64,7 +64,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PercentEditbox with the index previous to the 
 			 * specified index.
-			 * @param {PercentEditbox} objParam - The index of the 
+			 * @param {PercentEditbox} objParam The index of the 
 			 * PercentEditbox that follows the desired PercentEditbox.
 			 */
 			public previousItem(objParam: PercentEditbox): Adobe.Incopy.PercentEditbox;

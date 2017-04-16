@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new tint swatch.
-			 * @param {Color} baseColorParam - The color that the tint is 
+			 * @param {Color} baseColorParam The color that the tint is 
 			 * based upon.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Tint (Optional)
 			 */
 			public add(baseColorParam: Color, withPropertiesParam: any): Adobe.Incopy.Tint;
@@ -23,27 +23,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Tint;
 			/**
 			 * Returns the Tint with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Tint;
 			/**
 			 * Returns the Tint with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Tint;
 			/**
 			 * Returns the Tint with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Tint;
 			/**
 			 * Returns the Tints within the specified range.
-			 * @param {any} fromParam - The Tint, index, or name at the 
+			 * @param {any} fromParam The Tint, index, or name at the 
 			 * beginning of the range. Can accept: Tint, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Tint, index, or name at the end 
-			 * of the range. Can accept: Tint, Long Integer or String.
+			 * @param {any} toParam The Tint, index, or name at the end of 
+			 * the range. Can accept: Tint, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Tint in the collection. */
@@ -53,8 +53,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Tint whose index follows the specified Tint in 
 			 * the collection.
-			 * @param {Tint} objParam - The Tint whose index comes before 
-			 * the desired Tint. 
+			 * @param {Tint} objParam The Tint whose index comes before the 
+			 * desired Tint. 
 			 */
 			public nextItem(objParam: Tint): Adobe.Incopy.Tint;
 			/**
@@ -70,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Tint with the index previous to the specified 
 			 * index.
-			 * @param {Tint} objParam - The index of the Tint that follows 
+			 * @param {Tint} objParam The index of the Tint that follows 
 			 * the desired Tint.
 			 */
 			public previousItem(objParam: Tint): Adobe.Incopy.Tint;

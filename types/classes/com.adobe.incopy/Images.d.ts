@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,27 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Image;
 			/**
 			 * Returns the Image with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Image;
 			/**
 			 * Returns the Image with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Image;
 			/**
 			 * Returns the Image with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Image;
 			/**
 			 * Returns the Images within the specified range.
-			 * @param {any} fromParam - The Image, index, or name at the 
+			 * @param {any} fromParam The Image, index, or name at the 
 			 * beginning of the range. Can accept: Image, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Image, index, or name at the end 
-			 * of the range. Can accept: Image, Long Integer or String.
+			 * @param {any} toParam The Image, index, or name at the end of 
+			 * the range. Can accept: Image, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Image in the collection. */
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Image whose index follows the specified Image in 
 			 * the collection.
-			 * @param {Image} objParam - The Image whose index comes before 
+			 * @param {Image} objParam The Image whose index comes before 
 			 * the desired Image. 
 			 */
 			public nextItem(objParam: Image): Adobe.Incopy.Image;
@@ -62,8 +62,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Image with the index previous to the specified 
 			 * index.
-			 * @param {Image} objParam - The index of the Image that 
-			 * follows the desired Image.
+			 * @param {Image} objParam The index of the Image that follows 
+			 * the desired Image.
 			 */
 			public previousItem(objParam: Image): Adobe.Incopy.Image;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -62,10 +62,10 @@ declare namespace Adobe {
 			public userName: string;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerAssignment(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -73,17 +73,17 @@ declare namespace Adobe {
 			public cancelPackage(): void;
 			/**
 			 * Creates an assignment package.
-			 * @param {File} filePathParam - The full path name of the 
+			 * @param {File} filePathParam The full path name of the 
 			 * assignment package file.
-			 * @param {boolean} submitParam - If true, submits assigned 
+			 * @param {boolean} submitParam If true, submits assigned 
 			 * stories before packaging the assignment. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Assignment (Optional)
 			 */
 			public createPackage(filePathParam: File, submitParam: boolean, withPropertiesParam: any): File;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -94,18 +94,18 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/** Deletes the assignment and its file. */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerAssignment(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -113,9 +113,9 @@ declare namespace Adobe {
 			public toSpecifier(): string;
 			/**
 			 * Updates the assignment file.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public update(versionCommentsParam: string, forceSaveParam: boolean): void;

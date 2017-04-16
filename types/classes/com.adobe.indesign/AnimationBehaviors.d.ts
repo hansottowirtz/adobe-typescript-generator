@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new AnimationBehavior.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new AnimationBehavior (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.AnimationBehavior;
@@ -22,26 +22,26 @@ declare namespace Adobe {
 			/**
 			 * Returns the AnimationBehavior with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.AnimationBehavior;
 			/**
 			 * Returns the AnimationBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.AnimationBehavior;
 			/**
 			 * Returns the AnimationBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.AnimationBehavior;
 			/**
 			 * Returns the AnimationBehaviors within the specified range.
-			 * @param {any} fromParam - The AnimationBehavior, index, or 
-			 * name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The AnimationBehavior, index, or name 
+			 * at the beginning of the range. Can accept: 
 			 * AnimationBehavior, Long Integer or String.
-			 * @param {any} toParam - The AnimationBehavior, index, or name 
+			 * @param {any} toParam The AnimationBehavior, index, or name 
 			 * at the end of the range. Can accept: AnimationBehavior, Long 
 			 * Integer or String.
 			 */
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the AnimationBehavior whose index follows the 
 			 * specified AnimationBehavior in the collection.
-			 * @param {AnimationBehavior} objParam - The AnimationBehavior 
+			 * @param {AnimationBehavior} objParam The AnimationBehavior 
 			 * whose index comes before the desired AnimationBehavior. 
 			 */
 			public nextItem(objParam: AnimationBehavior): Adobe.Indesign.AnimationBehavior;
@@ -70,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the AnimationBehavior with the index previous to the 
 			 * specified index.
-			 * @param {AnimationBehavior} objParam - The index of the 
+			 * @param {AnimationBehavior} objParam The index of the 
 			 * AnimationBehavior that follows the desired 
 			 * AnimationBehavior.
 			 */

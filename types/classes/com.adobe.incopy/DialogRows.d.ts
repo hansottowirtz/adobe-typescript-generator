@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new DialogRow.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new DialogRow (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.DialogRow;
@@ -21,21 +21,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.DialogRow;
 			/**
 			 * Returns the DialogRow with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.DialogRow;
 			/**
 			 * Returns the DialogRow with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.DialogRow;
 			/**
 			 * Returns the DialogRows within the specified range.
-			 * @param {any} fromParam - The DialogRow, index, or name at 
-			 * the beginning of the range. Can accept: DialogRow, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The DialogRow, index, or name at the 
+			 * @param {any} fromParam The DialogRow, index, or name at the 
+			 * beginning of the range. Can accept: DialogRow, Long Integer 
+			 * or String.
+			 * @param {any} toParam The DialogRow, index, or name at the 
 			 * end of the range. Can accept: DialogRow, Long Integer or 
 			 * String.
 			 */
@@ -47,8 +47,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the DialogRow whose index follows the specified 
 			 * DialogRow in the collection.
-			 * @param {DialogRow} objParam - The DialogRow whose index 
-			 * comes before the desired DialogRow. 
+			 * @param {DialogRow} objParam The DialogRow whose index comes 
+			 * before the desired DialogRow. 
 			 */
 			public nextItem(objParam: DialogRow): Adobe.Incopy.DialogRow;
 			/**
@@ -64,8 +64,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the DialogRow with the index previous to the 
 			 * specified index.
-			 * @param {DialogRow} objParam - The index of the DialogRow 
-			 * that follows the desired DialogRow.
+			 * @param {DialogRow} objParam The index of the DialogRow that 
+			 * follows the desired DialogRow.
 			 */
 			public previousItem(objParam: DialogRow): Adobe.Incopy.DialogRow;
 		}

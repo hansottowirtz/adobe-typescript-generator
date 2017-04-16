@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -27,6 +27,10 @@ declare namespace Adobe {
 			 * Reals (0 - 255) or UIColors enumerator.
 			 */
 			public guideColor: any;
+			/** The type of the guide. */
+			public guideType: Adobe.Indesign.GuideTypeOptions;
+			/** The zone of the guide. */
+			public guideZone: any;
 			/** The unique ID of the Guide. */
 			public readonly id: number;
 			/** The index of the Guide within its containing object. */
@@ -83,10 +87,10 @@ declare namespace Adobe {
 			public viewThreshold: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerGuide(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -99,7 +103,7 @@ declare namespace Adobe {
 			public duplicate(): Adobe.Indesign.Guide;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -110,25 +114,24 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Moves the guide to a new location. Note: Either the to or 
 			 * the by parameter is required; if both parameters are 
 			 * defined, only the to value is used.
-			 * @param {any[]} toParam - The new location of the guide, in 
-			 * the format [x, y]. (Optional)
-			 * @param {any[]} byParam - The amount to move the guide 
-			 * relative to its current position, in the format [x, y]. 
-			 * (Optional)
+			 * @param {any[]} toParam The new location of the guide, in the 
+			 * format [x, y]. (Optional)
+			 * @param {any[]} byParam The amount to move the guide relative 
+			 * to its current position, in the format [x, y]. (Optional)
 			 */
 			public move(toParam: any[], byParam: any[]): void;
 			/**
 			 * Overrides a master page item and places the item on the 
 			 * document page as a new object.
-			 * @param {Page} destinationPageParam - The document page that 
+			 * @param {Page} destinationPageParam The document page that 
 			 * contains the master page item to override.
 			 */
 			public override(destinationPageParam: Page): any;
@@ -136,10 +139,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerGuide(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -149,14 +152,36 @@ declare namespace Adobe {
 			 */
 			public removeOverride(): void;
 			/**
+			 * Get the coordinates of the given location in the specified 
+			 * coordinate system.
+			 * @param {any} locationParam The location requested. Can 
+			 * accept: Array of 2 Reals, AnchorPoint enumerator or Array of 
+			 * Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint 
+			 * enumerators, BoundingBoxLimits enumerators or Long Integers.
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
+			 * use.
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
+			 * ruler location is interpreted using ruler units rather than 
+			 * points. The default value is false. This parameter has no 
+			 * effect unless the reference point is specified relative to a 
+			 * page. (Optional)
+			 */
+			public resolve(locationParam: any, inParam: CoordinateSpaces, consideringRulerUnitsParam: boolean): any;
+			/**
 			 * Selects the object.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the Guide in relation to previously 
 			 * selected objects. (Optional)
 			 */
 			public select(existingSelectionParam: SelectionOptions): void;
 			/** Retrieves the object specifier. */
 			public toSpecifier(): string;
+			/**
+			 * Get the transformation values of the page item.
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
+			 * use
+			 */
+			public transformValuesOf(inParam: CoordinateSpaces): any;
 		}
 	}
 }

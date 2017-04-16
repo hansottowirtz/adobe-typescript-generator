@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -15,7 +15,7 @@ declare namespace Adobe {
 			 */
 			public convertSpotColors: boolean;
 			/** the list of inks for color separation */
-			public inkList: any;
+			public inkList: any[];
 			/** whether to overprint in black ( default: false ) */
 			public overPrintBlack: boolean;
 		}

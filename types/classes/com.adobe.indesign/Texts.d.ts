@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,17 +15,17 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Text;
 			/**
 			 * Returns the Text with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Text;
 			/**
 			 * Returns the Texts within the specified range.
-			 * @param {any} fromParam - The Text, index, or name at the 
+			 * @param {any} fromParam The Text, index, or name at the 
 			 * beginning of the range. Can accept: Text, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Text, index, or name at the end 
-			 * of the range. Can accept: Text, Long Integer or String.
+			 * @param {any} toParam The Text, index, or name at the end of 
+			 * the range. Can accept: Text, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Text in the collection. */
@@ -35,8 +35,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Text whose index follows the specified Text in 
 			 * the collection.
-			 * @param {Text} objParam - The Text whose index comes before 
-			 * the desired Text. 
+			 * @param {Text} objParam The Text whose index comes before the 
+			 * desired Text. 
 			 */
 			public nextItem(objParam: Text): Adobe.Indesign.Text;
 			/**
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Text with the index previous to the specified 
 			 * index.
-			 * @param {Text} objParam - The index of the Text that follows 
+			 * @param {Text} objParam The index of the Text that follows 
 			 * the desired Text.
 			 */
 			public previousItem(objParam: Text): Adobe.Indesign.Text;

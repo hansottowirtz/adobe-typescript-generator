@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,22 +15,22 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Menu;
 			/**
 			 * Returns the Menu with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Menu;
 			/**
 			 * Returns the Menu with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Menu;
 			/**
 			 * Returns the Menus within the specified range.
-			 * @param {any} fromParam - The Menu, index, or name at the 
+			 * @param {any} fromParam The Menu, index, or name at the 
 			 * beginning of the range. Can accept: Menu, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Menu, index, or name at the end 
-			 * of the range. Can accept: Menu, Long Integer or String.
+			 * @param {any} toParam The Menu, index, or name at the end of 
+			 * the range. Can accept: Menu, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Menu in the collection. */
@@ -40,8 +40,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Menu whose index follows the specified Menu in 
 			 * the collection.
-			 * @param {Menu} objParam - The Menu whose index comes before 
-			 * the desired Menu. 
+			 * @param {Menu} objParam The Menu whose index comes before the 
+			 * desired Menu. 
 			 */
 			public nextItem(objParam: Menu): Adobe.Indesign.Menu;
 			/**
@@ -57,7 +57,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Menu with the index previous to the specified 
 			 * index.
-			 * @param {Menu} objParam - The index of the Menu that follows 
+			 * @param {Menu} objParam The index of the Menu that follows 
 			 * the desired Menu.
 			 */
 			public previousItem(objParam: Menu): Adobe.Indesign.Menu;

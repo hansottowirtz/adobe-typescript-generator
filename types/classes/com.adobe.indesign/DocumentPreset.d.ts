@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -9,6 +9,11 @@ declare namespace Adobe {
 			public columnCount: number;
 			/** The distance between columns. */
 			public columnGutter: any;
+			/**
+			 * If true, the document A-master has primary text frames when 
+			 * a new document is created.
+			 */
+			public createPrimaryTextFrame: boolean;
 			/**
 			 * The amount to offset the bottom document bleed. Note: To set 
 			 * the bleed bottom offset, document bleed uniform size must be 
@@ -65,8 +70,6 @@ declare namespace Adobe {
 			public label: string;
 			/** The left edge of the DocumentPreset. */
 			public left: any;
-			/** If true, the document A-master has auto textframes. */
-			public masterTextFrame: boolean;
 			/** The name of the DocumentPreset. */
 			public name: string;
 			/** The height of the page. */
@@ -117,10 +120,10 @@ declare namespace Adobe {
 			public top: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerDocumentPreset(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -128,7 +131,7 @@ declare namespace Adobe {
 			public duplicate(): Adobe.Indesign.DocumentPreset;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -139,18 +142,18 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/** Deletes the DocumentPreset. */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerDocumentPreset(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

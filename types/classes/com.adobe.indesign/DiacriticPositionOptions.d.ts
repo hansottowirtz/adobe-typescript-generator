@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -18,8 +18,15 @@ declare namespace Adobe {
 			public static readonly mediumPosition: Adobe.Indesign.DiacriticPositionOptions;
 			/** OpenType position */
 			public static readonly OPENTYPE_POSITION: Adobe.Indesign.DiacriticPositionOptions;
+			/** OpenType position from baseline */
+			public static readonly OPENTYPE_POSITION_FROM_BASELINE: Adobe.Indesign.DiacriticPositionOptions;
 			/** Alias for OPENTYPE_POSITION. OpenType position */
 			public static readonly opentypePosition: Adobe.Indesign.DiacriticPositionOptions;
+			/**
+			 * Alias for OPENTYPE_POSITION_FROM_BASELINE. OpenType position 
+			 * from baseline
+			 */
+			public static readonly opentypePositionFromBaseline: Adobe.Indesign.DiacriticPositionOptions;
 			/** Tight position */
 			public static readonly TIGHT_POSITION: Adobe.Indesign.DiacriticPositionOptions;
 			/** Alias for TIGHT_POSITION. Tight position */

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Ink;
 			/**
 			 * Returns the Ink with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Ink;
 			/**
 			 * Returns the Ink with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Ink;
 			/**
 			 * Returns the Ink with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Ink;
 			/**
 			 * Returns the Inks within the specified range.
-			 * @param {any} fromParam - The Ink, index, or name at the 
+			 * @param {any} fromParam The Ink, index, or name at the 
 			 * beginning of the range. Can accept: Ink, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Ink, index, or name at the end of 
+			 * @param {any} toParam The Ink, index, or name at the end of 
 			 * the range. Can accept: Ink, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Ink whose index follows the specified Ink in the 
 			 * collection.
-			 * @param {Ink} objParam - The Ink whose index comes before the 
+			 * @param {Ink} objParam The Ink whose index comes before the 
 			 * desired Ink. 
 			 */
 			public nextItem(objParam: Ink): Adobe.Incopy.Ink;
@@ -62,8 +62,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Ink with the index previous to the specified 
 			 * index.
-			 * @param {Ink} objParam - The index of the Ink that follows 
-			 * the desired Ink.
+			 * @param {Ink} objParam The index of the Ink that follows the 
+			 * desired Ink.
 			 */
 			public previousItem(objParam: Ink): Adobe.Incopy.Ink;
 		}

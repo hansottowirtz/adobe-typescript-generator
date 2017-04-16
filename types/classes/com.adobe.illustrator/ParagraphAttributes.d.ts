@@ -1,84 +1,84 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** Properties of a paragraph. */
+		/** properties of a paragraph */
 		class ParagraphAttributes extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** Auto leading amount (in percentage) */
+			/** auto leading amount (in percentage) */
 			public autoLeadingAmount: number;
-			/** Is BunriKinshi enabled? */
+			/** is BunriKinshi enabled? */
 			public bunriKinshi: boolean;
-			/** The Burasagari type. */
+			/** the Burasagari type */
 			public burasagariType: Adobe.Illustrator.BurasagariTypeEnum;
-			/** Desired glyph scaling expressed as a percentage. */
+			/** desired glyph scaling expressed as a percentage */
 			public desiredGlyphScaling: number;
-			/** Desired letter spacing expressed as a percentage. */
+			/** desired letter spacing expressed as a percentage */
 			public desiredLetterSpacing: number;
-			/** Desired word spacing expressed as a percentage. */
+			/** desired word spacing expressed as a percentage */
 			public desiredWordSpacing: number;
 			/**
-			 * Whether to enable every line composer (as opposed to single 
+			 * whether to enable every line composer (as opposed to single 
 			 * line composer)?
 			 */
 			public everyLineComposer: boolean;
-			/** First line left indent expressed in points. */
+			/** first line left indent expressed in points */
 			public firstLineIndent: number;
-			/** Is hyphenation enabled for the capitalized words? */
+			/** is hyphenation enabled for the capitalized words? */
 			public hyphenateCapitalizedWords: boolean;
-			/** Is hyphenation enabled for the paragraph? */
+			/** is hyphenation enabled for the paragraph? */
 			public hyphenation: boolean;
 			/**
-			 * Hyphenation preference scale for better spacing (0) or fewer 
+			 * hyphenation preference scale for better spacing (0) or fewer 
 			 * hyphens (1) ( 0.0 - 1.0 )
 			 */
 			public hyphenationPreference: number;
-			/** Size of the hyphenation zone. */
+			/** size of the hyphenation zone */
 			public hyphenationZone: number;
-			/** Paragraph justification. */
+			/** paragraph justification */
 			public justification: Adobe.Illustrator.Justification;
-			/** The Kinsoku Shori name. */
+			/** the Kinsoku Shori name */
 			public kinsoku: string;
-			/** The preferred Kinsoku order. */
+			/** the preferred Kinsoku order */
 			public kinsokuOrder: Adobe.Illustrator.KinsokuOrderEnum;
-			/** Is KurikaeshiMojiShori enabled? */
+			/** is KurikaeshiMojiShori enabled? */
 			public kurikaeshiMojiShori: boolean;
-			/** Auto leading type. */
+			/** auto leading type */
 			public leadingType: Adobe.Illustrator.AutoLeadingType;
-			/** Left indent of margin expressed in points. */
+			/** left indent of margin expressed in points */
 			public leftIndent: number;
-			/** Maximum number of consecutive hypenated lines. */
+			/** maximum number of consecutive hypenated lines */
 			public maximumConsecutiveHyphens: number;
-			/** Maximum glyph scaling expressed as a percentage. */
+			/** maximum glyph scaling expressed as a percentage */
 			public maximumGlyphScaling: number;
-			/** Maximum letter spacing expressed as a percentage. */
+			/** maximum letter spacing expressed as a percentage */
 			public maximumLetterSpacing: number;
-			/** Maximum word spacing expressed as a percentage. */
+			/** maximum word spacing expressed as a percentage */
 			public maximumWordSpacing: number;
-			/** Minimum number of characters after a hyphen. */
+			/** minimum number of characters after a hyphen */
 			public minimumAfterHyphen: number;
-			/** Minimum number of characters before a hyphen. */
+			/** minimum number of characters before a hyphen */
 			public minimumBeforeHyphen: number;
-			/** Minimum glyph scaling expressed as a percentage. */
+			/** minimum glyph scaling expressed as a percentage */
 			public minimumGlyphScaling: number;
-			/** Minimum hyphenated word size. */
+			/** minimum hyphenated word size */
 			public minimumHyphenatedWordSize: number;
-			/** Minimum letter spacing expressed as a percentage. */
+			/** minimum letter spacing expressed as a percentage */
 			public minimumLetterSpacing: number;
-			/** Minimum word spacing expressed as a percentage. */
+			/** minimum word spacing expressed as a percentage */
 			public minimumWordSpacing: number;
-			/** The Mojikumi name. */
+			/** the Mojikumi name */
 			public mojikumi: string;
-			/** Right indent of margin expressed in points. */
+			/** right indent of margin expressed in points */
 			public rightIndent: number;
-			/** Is Roman hanging punctuation enabled? */
+			/** is Roman hanging punctuation enabled? */
 			public romanHanging: boolean;
-			/** Single word justification. */
+			/** single word justification */
 			public singleWordJustification: Adobe.Illustrator.Justification;
-			/** Spacing after paragraph in points. */
+			/** spacing after paragraph in points */
 			public spaceAfter: number;
-			/** Spacing before paragraph in points. */
+			/** spacing before paragraph in points */
 			public spaceBefore: number;
-			/** Tab stop settings. */
+			/** tab stop settings */
 			public tabStops: any[];
 		}
 	}

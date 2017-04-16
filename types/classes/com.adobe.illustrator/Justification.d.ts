@@ -1,8 +1,7 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** The paragraph alignment. */
 		class Justification extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
 			public static readonly CENTER: Adobe.Illustrator.Justification;
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;

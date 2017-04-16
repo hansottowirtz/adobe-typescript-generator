@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -8,14 +8,14 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * a notifier
-			 * @param {string} event - id of the event, four characters or 
-			 * a unique string
-			 * @param {Adobe.Flash.Filesystem.File} eventFile - file to 
-			 * execute when the event occurs
-			 * @param {string} eventClass - class id of the event, four 
+			 * @param {string} event id of the event, four characters or a 
+			 * unique string
+			 * @param {File} eventFile file to execute when the event 
+			 * occurs
+			 * @param {string} eventClass class id of the event, four 
 			 * characters or a unique string
 			 */
-			public add(event: string, eventFile: Adobe.Flash.Filesystem.File, eventClass: string): Adobe.Photoshop.Notifier;
+			public add(event: string, eventFile: File, eventClass: string): Adobe.Photoshop.Notifier;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx

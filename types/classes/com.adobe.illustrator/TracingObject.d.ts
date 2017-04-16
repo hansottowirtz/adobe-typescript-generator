@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -6,10 +6,6 @@ declare namespace Adobe {
 		class TracingObject extends Adobe.CsawlibIllustrator.IllustratorHostObject {
 			/** The number of anchors in the tracing result. */
 			public readonly anchorCount: number;
-			/** The number of areas in the tracing result. */
-			public readonly areaCount: number;
-			/** The resolution of the source image (in pixels per inch). */
-			public readonly imageResolution: number;
 			/** The number of paths in the tracing result. */
 			public readonly pathCount: number;
 			/** The source art used when creating a new tracing object. */
@@ -19,13 +15,13 @@ declare namespace Adobe {
 			/** The number of colors used in the tracing result. */
 			public readonly usedColorCount: number;
 			/**
-			 * Expand the tracing to paths. Deletes this tracing object.
-			 * @param {boolean} viewed - Expand as viewed with the raster 
-			 * and vector view modes. ( default: false )
+			 * Expand the tracing to paths.  Deletes this tracing object.
+			 * @param {boolean} viewed expand as viewed with the raster and 
+			 * vector view modes. ( default: false )
 			 */
 			public expandTracing(viewed: boolean): Adobe.Illustrator.GroupItem;
 			/**
-			 * Release the source artwork for the tracing object. Deletes 
+			 * Release the source artwork for the tracing object.  Deletes 
 			 * this tracing object.
 			 */
 			public releaseTracing(): Adobe.Illustrator.PageItem;

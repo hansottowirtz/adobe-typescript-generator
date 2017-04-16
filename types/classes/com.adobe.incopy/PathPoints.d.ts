@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,16 +15,16 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.PathPoint;
 			/**
 			 * Returns the PathPoint with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.PathPoint;
 			/**
 			 * Returns the PathPoints within the specified range.
-			 * @param {any} fromParam - The PathPoint, index, or name at 
-			 * the beginning of the range. Can accept: PathPoint, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The PathPoint, index, or name at the 
+			 * @param {any} fromParam The PathPoint, index, or name at the 
+			 * beginning of the range. Can accept: PathPoint, Long Integer 
+			 * or String.
+			 * @param {any} toParam The PathPoint, index, or name at the 
 			 * end of the range. Can accept: PathPoint, Long Integer or 
 			 * String.
 			 */
@@ -36,8 +36,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the PathPoint whose index follows the specified 
 			 * PathPoint in the collection.
-			 * @param {PathPoint} objParam - The PathPoint whose index 
-			 * comes before the desired PathPoint. 
+			 * @param {PathPoint} objParam The PathPoint whose index comes 
+			 * before the desired PathPoint. 
 			 */
 			public nextItem(objParam: PathPoint): Adobe.Incopy.PathPoint;
 			/**
@@ -53,8 +53,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the PathPoint with the index previous to the 
 			 * specified index.
-			 * @param {PathPoint} objParam - The index of the PathPoint 
-			 * that follows the desired PathPoint.
+			 * @param {PathPoint} objParam The index of the PathPoint that 
+			 * follows the desired PathPoint.
 			 */
 			public previousItem(objParam: PathPoint): Adobe.Incopy.PathPoint;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new GotoPageBehavior.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new GotoPageBehavior (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.GotoPageBehavior;
@@ -22,27 +22,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPageBehavior with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.GotoPageBehavior;
 			/**
 			 * Returns the GotoPageBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.GotoPageBehavior;
 			/**
 			 * Returns the GotoPageBehavior with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.GotoPageBehavior;
 			/**
 			 * Returns the GotoPageBehaviors within the specified range.
-			 * @param {any} fromParam - The GotoPageBehavior, index, or 
-			 * name at the beginning of the range. Can accept: 
-			 * GotoPageBehavior, Long Integer or String.
-			 * @param {any} toParam - The GotoPageBehavior, index, or name 
-			 * at the end of the range. Can accept: GotoPageBehavior, Long 
+			 * @param {any} fromParam The GotoPageBehavior, index, or name 
+			 * at the beginning of the range. Can accept: GotoPageBehavior, 
+			 * Long Integer or String.
+			 * @param {any} toParam The GotoPageBehavior, index, or name at 
+			 * the end of the range. Can accept: GotoPageBehavior, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPageBehavior whose index follows the 
 			 * specified GotoPageBehavior in the collection.
-			 * @param {GotoPageBehavior} objParam - The GotoPageBehavior 
+			 * @param {GotoPageBehavior} objParam The GotoPageBehavior 
 			 * whose index comes before the desired GotoPageBehavior. 
 			 */
 			public nextItem(objParam: GotoPageBehavior): Adobe.Indesign.GotoPageBehavior;
@@ -70,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPageBehavior with the index previous to the 
 			 * specified index.
-			 * @param {GotoPageBehavior} objParam - The index of the 
+			 * @param {GotoPageBehavior} objParam The index of the 
 			 * GotoPageBehavior that follows the desired GotoPageBehavior.
 			 */
 			public previousItem(objParam: GotoPageBehavior): Adobe.Indesign.GotoPageBehavior;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -554,6 +554,11 @@ declare namespace Adobe {
 			/** Paragraph justification. */
 			public paragraphJustification: Adobe.Incopy.ParagraphJustificationOptions;
 			/**
+			 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 
+			 * 3 is long
+			 */
+			public paragraphKashidaWidth: number;
+			/**
 			 * The parent of the ParagraphStyle (a Document, Application or 
 			 * ParagraphStyleGroup).
 			 */
@@ -913,6 +918,8 @@ declare namespace Adobe {
 			public strokeTint: number;
 			/** The stroke weight applied to the characters of the text. */
 			public strokeWeight: any;
+			/** A collection of style export tag maps. */
+			public readonly styleExportTagMaps: Adobe.Incopy.StyleExportTagMaps;
 			/**
 			 * A list of the tab stops in the paragraph. Can return: Array 
 			 * of Arrays of Property Name/Value Pairs.
@@ -1019,10 +1026,10 @@ declare namespace Adobe {
 			public yOffsetDiacritic: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerParagraphStyle(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -1032,7 +1039,7 @@ declare namespace Adobe {
 			public duplicate(): Adobe.Incopy.ParagraphStyle;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -1043,15 +1050,15 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Moves the style to the specified location.
-			 * @param {LocationOptions} toParam - The location relative to 
+			 * @param {LocationOptions} toParam The location relative to 
 			 * the reference object or within the containing object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. 
 			 * Can accept: ParagraphStyle, ParagraphStyleGroup, 
 			 * CharacterStyle, CharacterStyleGroup, CellStyle, 
@@ -1061,16 +1068,16 @@ declare namespace Adobe {
 			public move(toParam: LocationOptions, referenceParam: any): Adobe.Incopy.ParagraphStyle;
 			/**
 			 * Deletes the style.
-			 * @param {ParagraphStyle} replacingWithParam - The style to 
+			 * @param {ParagraphStyle} replacingWithParam The style to 
 			 * apply in place of the deleted style. (Optional)
 			 */
 			public remove(replacingWithParam: ParagraphStyle): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerParagraphStyle(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

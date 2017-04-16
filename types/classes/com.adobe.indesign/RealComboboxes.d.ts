@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new RealCombobox.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new RealCombobox (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.RealCombobox;
@@ -21,23 +21,23 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.RealCombobox;
 			/**
 			 * Returns the RealCombobox with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.RealCombobox;
 			/**
 			 * Returns the RealCombobox with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.RealCombobox;
 			/**
 			 * Returns the RealComboboxes within the specified range.
-			 * @param {any} fromParam - The RealCombobox, index, or name at 
+			 * @param {any} fromParam The RealCombobox, index, or name at 
 			 * the beginning of the range. Can accept: RealCombobox, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The RealCombobox, index, or name at 
-			 * the end of the range. Can accept: RealCombobox, Long Integer 
-			 * or String.
+			 * @param {any} toParam The RealCombobox, index, or name at the 
+			 * end of the range. Can accept: RealCombobox, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last RealCombobox in the collection. */
@@ -47,8 +47,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the RealCombobox whose index follows the specified 
 			 * RealCombobox in the collection.
-			 * @param {RealCombobox} objParam - The RealCombobox whose 
-			 * index comes before the desired RealCombobox. 
+			 * @param {RealCombobox} objParam The RealCombobox whose index 
+			 * comes before the desired RealCombobox. 
 			 */
 			public nextItem(objParam: RealCombobox): Adobe.Indesign.RealCombobox;
 			/**
@@ -64,8 +64,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the RealCombobox with the index previous to the 
 			 * specified index.
-			 * @param {RealCombobox} objParam - The index of the 
-			 * RealCombobox that follows the desired RealCombobox.
+			 * @param {RealCombobox} objParam The index of the RealCombobox 
+			 * that follows the desired RealCombobox.
 			 */
 			public previousItem(objParam: RealCombobox): Adobe.Indesign.RealCombobox;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -136,8 +136,12 @@ declare namespace Adobe {
 			public readonly characterStyleGroups: Adobe.Incopy.CharacterStyleGroups;
 			/** A collection of character styles. */
 			public readonly characterStyles: Adobe.Incopy.CharacterStyles;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Incopy.CheckBoxes;
 			/** A collection of colors. */
 			public readonly colors: Adobe.Incopy.Colors;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Incopy.ComboBoxes;
 			/** Conditional text preferences. */
 			public readonly conditionalTextPreferences: Adobe.Incopy.ConditionalTextPreference;
 			/** A collection of conditions for conditional text. */
@@ -241,6 +245,8 @@ declare namespace Adobe {
 			public readonly layers: Adobe.Incopy.Layers;
 			/** A collection of links. */
 			public readonly links: Adobe.Incopy.Links;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Incopy.ListBoxes;
 			/** Margin preference settings. */
 			public readonly marginPreferences: Adobe.Incopy.MarginPreference;
 			/** A collection of master spreads. */
@@ -299,6 +305,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Incopy.RadioButtons;
 			/** If true, the Document is read-only. */
 			public readonly readOnly: boolean;
 			/** If true, the Document was recovered. */
@@ -318,6 +326,8 @@ declare namespace Adobe {
 			 * NothingEnum enumerator.
 			 */
 			public selection: any;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Incopy.SignatureFields;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Incopy.SplineItems;
 			/** A collection of spreads. */
@@ -334,6 +344,8 @@ declare namespace Adobe {
 			public readonly tableStyleGroups: Adobe.Incopy.TableStyleGroups;
 			/** A collection of table styles. */
 			public readonly tableStyles: Adobe.Incopy.TableStyles;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Incopy.TextBoxes;
 			/** Text default settings. */
 			public readonly textDefaults: Adobe.Incopy.TextDefault;
 			/** Text frame preference settings. */
@@ -395,10 +407,10 @@ declare namespace Adobe {
 			public readonly xmlViewPreferences: Adobe.Incopy.XMLViewPreference;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerDocument(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -407,55 +419,55 @@ declare namespace Adobe {
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds objects that match the find what value and replace the 
 			 * objects with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeObject(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Check in to Version Cue.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version (Optional)
-			 * @param {boolean} forceSaveParam - Forcibly save a version 
+			 * @param {boolean} forceSaveParam Forcibly save a version 
 			 * (Optional)
 			 */
 			public checkIn(versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Close the Document
-			 * @param {SaveOptions} savingParam - Whether to save changes 
+			 * @param {SaveOptions} savingParam Whether to save changes 
 			 * before closing the Document (Optional)
-			 * @param {File} savingInParam - The file in which to save the 
+			 * @param {File} savingInParam The file in which to save the 
 			 * Document (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version (Optional)
-			 * @param {boolean} forceSaveParam - Forcibly save a version 
+			 * @param {boolean} forceSaveParam Forcibly save a version 
 			 * (Optional)
 			 */
 			public close(savingParam: SaveOptions, savingInParam: File, versionCommentsParam: string, forceSaveParam: boolean): void;
@@ -463,51 +475,51 @@ declare namespace Adobe {
 			public deleteUnusedTags(): void;
 			/**
 			 * Exports the object(s) to a file.
-			 * @param {any} formatParam - The export format, specified as 
-			 * an enumeration value or as an extension that appears in the 
+			 * @param {any} formatParam The export format, specified as an 
+			 * enumeration value or as an extension that appears in the 
 			 * Save as type or Format menu in the Export dialog. Can 
 			 * accept: ExportFormat enumerator or String.
-			 * @param {File} toParam - The path to the export file.
-			 * @param {boolean} showingOptionsParam - If true, displays the 
+			 * @param {File} toParam The path to the export file.
+			 * @param {boolean} showingOptionsParam If true, displays the 
 			 * export options dialog. (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public exportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds objects that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findObject(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -519,73 +531,73 @@ declare namespace Adobe {
 			/**
 			 * Imports a process color swatch from a preloaded Adobe color 
 			 * book.
-			 * @param {string} nameParam - The process color to load.
+			 * @param {string} nameParam The process color to load.
 			 */
 			public importAdobeSwatchbookProcessColor(nameParam: string): Adobe.Incopy.Color;
 			/**
 			 * Imports a spot color swatch from an Adobe color book.
-			 * @param {string} nameParam - The spot color to load.
+			 * @param {string} nameParam The spot color to load.
 			 */
 			public importAdobeSwatchbookSpotColor(nameParam: string): Adobe.Incopy.Color;
 			/**
 			 * Imports a DTD to use for validation.
-			 * @param {File} fromParam - The path to the DTD file.
+			 * @param {File} fromParam The path to the DTD file.
 			 */
 			public importDtd(fromParam: File): void;
 			/**
 			 * Imports the cross reference formats from specified file.
-			 * @param {File} fromParam - The file whose formats to import.
+			 * @param {File} fromParam The file whose formats to import.
 			 */
 			public importFormats(fromParam: File): void;
 			/**
 			 * Imports the specified styles.
-			 * @param {ImportFormat} formatParam - The types of styles to 
+			 * @param {ImportFormat} formatParam The types of styles to 
 			 * import.
-			 * @param {File} fromParam - The file containing the styles you 
+			 * @param {File} fromParam The file containing the styles you 
 			 * want to import.
-			 * @param {GlobalClashResolutionStrategy} globalStrategyParam - 
+			 * @param {GlobalClashResolutionStrategy} globalStrategyParam 
 			 * The resolution strategy to employ for imported styles that 
 			 * have the same names as existing styles. (Optional)
 			 */
 			public importStyles(formatParam: ImportFormat, fromParam: File, globalStrategyParam: GlobalClashResolutionStrategy): void;
 			/**
 			 * Imports the specified XML file into an InDesign document.
-			 * @param {File} fromParam - The XML file.
+			 * @param {File} fromParam The XML file.
 			 */
 			public importXML(fromParam: File): void;
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Load conditions from the specified file.
-			 * @param {File} fromParam - The path to the file that contains 
+			 * @param {File} fromParam The path to the file that contains 
 			 * the conditions.
-			 * @param {boolean} loadConditionSetsParam - If true, load the 
+			 * @param {boolean} loadConditionSetsParam If true, load the 
 			 * condition sets as well. (Optional)
 			 */
 			public loadConditions(fromParam: File, loadConditionSetsParam: boolean): void;
 			/**
 			 * Load masterpages from an InDesign file.
-			 * @param {File} fromParam - The InDesign file to load the 
+			 * @param {File} fromParam The InDesign file to load the 
 			 * masters from.
 			 * @param {GlobalClashResolutionStrategyForMasterPage} 
-			 * globalStrategyForMasterPageParam - the global clash 
-			 * resolution strategy for load master page (Optional)
+			 * globalStrategyForMasterPageParam the global clash resolution 
+			 * strategy for load master page (Optional)
 			 */
 			public loadMasters(fromParam: File, globalStrategyForMasterPageParam: GlobalClashResolutionStrategyForMasterPage): void;
 			/**
 			 * Load swatches from the specified file.
-			 * @param {File} fromParam - The swatch file or InDesign 
+			 * @param {File} fromParam The swatch file or InDesign 
 			 * document.
 			 */
 			public loadSwatches(fromParam: File): void;
 			/**
 			 * Loads a set of XML markup tags from the specified file.
-			 * @param {File} fromParam - The path to the file that contains 
+			 * @param {File} fromParam The path to the file that contains 
 			 * the tags.
 			 */
 			public loadXMLTags(fromParam: File): void;
@@ -594,22 +606,8 @@ declare namespace Adobe {
 			/** Auto style the document based on the tag to style mappings */
 			public mapXMLTagsToStyles(): void;
 			/**
-			 * Place the Buzzword document.
-			 * @param {string} fileurlsParam - Url strings to the buzzword 
-			 * files seperated by space.
-			 * @param {boolean} showingOptionsParam - Whether to display 
-			 * the import options dialog. (Optional)
-			 * @param {boolean} createLinkParam - Whether to create a link 
-			 * for the placed file. (Optional)
-			 * @param {boolean} replaceSelectedParam - Whether to replace 
-			 * the selected item. (Optional)
-			 * @param {boolean} applyGridParam - Whether to apply grid 
-			 * format for placed story. (Optional)
-			 */
-			public placeBuzzword(fileurlsParam: string, showingOptionsParam: boolean, createLinkParam: boolean, replaceSelectedParam: boolean, applyGridParam: boolean): void;
-			/**
 			 * Prints the Document(s).
-			 * @param {boolean} printDialogParam - Whether to invoke the 
+			 * @param {boolean} printDialogParam Whether to invoke the 
 			 * print dialog (Optional)
 			 */
 			public print(printDialogParam: boolean): void;
@@ -619,10 +617,10 @@ declare namespace Adobe {
 			public redo(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerDocument(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -633,55 +631,55 @@ declare namespace Adobe {
 			public revert(): boolean;
 			/**
 			 * Reverts to the version of the document in Version Cue.
-			 * @param {boolean} forceRevertParam - Forcibly reverts to the 
+			 * @param {boolean} forceRevertParam Forcibly reverts to the 
 			 * project version. (Optional)
 			 */
 			public revertToProject(forceRevertParam: boolean): void;
 			/**
 			 * Saves the document.
-			 * @param {File} toParam - The file path. Note: Required only 
-			 * if the document has not been previously saved. If the 
-			 * document has previously been saved, specifying a path saves 
-			 * a copy and closes the original document. (Optional)
-			 * @param {SaveFileType} fileTypeParam - The file type. 
+			 * @param {File} toParam The file path. Note: Required only if 
+			 * the document has not been previously saved. If the document 
+			 * has previously been saved, specifying a path saves a copy 
+			 * and closes the original document. (Optional)
+			 * @param {SaveFileType} fileTypeParam The file type. 
 			 * (Optional)
 			 */
 			public save(toParam: File, fileTypeParam: SaveFileType): Adobe.Incopy.Document;
 			/**
 			 * Save a copy of the document
-			 * @param {File} toParam - The path for the copy. Note: Leaves 
+			 * @param {File} toParam The path for the copy. Note: Leaves 
 			 * the original document open and does not open the copy. 
 			 * (Optional)
-			 * @param {SaveFileType} fileTypeParam - The file type. 
+			 * @param {SaveFileType} fileTypeParam The file type. 
 			 * (Optional)
 			 */
 			public saveACopy(toParam: File, fileTypeParam: SaveFileType): void;
 			/**
 			 * Saves the specified swatch(es) to a swatchbook file.
-			 * @param {File} toParam - The swatchbook file to save to.
-			 * @param {any[]} swatchListParam - The swatch(es) to save.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {File} toParam The swatchbook file to save to.
+			 * @param {any[]} swatchListParam The swatch(es) to save.
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public saveSwatches(toParam: File, swatchListParam: any[], versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Saves a set of tags to an external file.
-			 * @param {File} toParam - The full path to the file in which 
-			 * to save the tags.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {File} toParam The full path to the file in which to 
+			 * save the tags.
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public saveXMLTags(toParam: File, versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Selects the specified object(s).
-			 * @param {any} selectableItemsParam - The objects to select. 
-			 * Can accept: Object, Array of Objects, NothingEnum enumerator 
-			 * or SelectAll enumerator.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {any} selectableItemsParam The objects to select. Can 
+			 * accept: Object, Array of Objects, NothingEnum enumerator or 
+			 * SelectAll enumerator.
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the Document in relation to previously 
 			 * selected objects. (Optional)
 			 */
@@ -689,9 +687,9 @@ declare namespace Adobe {
 			/**
 			 * Synchronizes the file with the Version Cue project.
 			 * @param {SyncConflictResolution} syncConflictResolutionParam 
-			 * - The conflict resolution method to use during 
+			 * The conflict resolution method to use during 
 			 * synchronization. (Optional)
-			 * @param {string} versionCommentsParam - The comments that 
+			 * @param {string} versionCommentsParam The comments that 
 			 * describe the version. (Optional)
 			 */
 			public synchronizeWithVersionCue(syncConflictResolutionParam: SyncConflictResolution, versionCommentsParam: string): Adobe.Incopy.VersionCueSyncStatus;

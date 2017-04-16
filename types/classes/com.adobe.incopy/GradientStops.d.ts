@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,18 +15,18 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.GradientStop;
 			/**
 			 * Returns the GradientStop with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.GradientStop;
 			/**
 			 * Returns the GradientStops within the specified range.
-			 * @param {any} fromParam - The GradientStop, index, or name at 
+			 * @param {any} fromParam The GradientStop, index, or name at 
 			 * the beginning of the range. Can accept: GradientStop, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The GradientStop, index, or name at 
-			 * the end of the range. Can accept: GradientStop, Long Integer 
-			 * or String.
+			 * @param {any} toParam The GradientStop, index, or name at the 
+			 * end of the range. Can accept: GradientStop, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last GradientStop in the collection. */
@@ -36,8 +36,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the GradientStop whose index follows the specified 
 			 * GradientStop in the collection.
-			 * @param {GradientStop} objParam - The GradientStop whose 
-			 * index comes before the desired GradientStop. 
+			 * @param {GradientStop} objParam The GradientStop whose index 
+			 * comes before the desired GradientStop. 
 			 */
 			public nextItem(objParam: GradientStop): Adobe.Incopy.GradientStop;
 			/**
@@ -53,8 +53,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the GradientStop with the index previous to the 
 			 * specified index.
-			 * @param {GradientStop} objParam - The index of the 
-			 * GradientStop that follows the desired GradientStop.
+			 * @param {GradientStop} objParam The index of the GradientStop 
+			 * that follows the desired GradientStop.
 			 */
 			public previousItem(objParam: GradientStop): Adobe.Incopy.GradientStop;
 		}

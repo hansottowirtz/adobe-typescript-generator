@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,16 +15,16 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.DataMergeField;
 			/**
 			 * Returns the DataMergeField with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.DataMergeField;
 			/**
 			 * Returns the DataMergeFields within the specified range.
-			 * @param {any} fromParam - The DataMergeField, index, or name 
-			 * at the beginning of the range. Can accept: DataMergeField, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The DataMergeField, index, or name at 
+			 * @param {any} fromParam The DataMergeField, index, or name at 
+			 * the beginning of the range. Can accept: DataMergeField, Long 
+			 * Integer or String.
+			 * @param {any} toParam The DataMergeField, index, or name at 
 			 * the end of the range. Can accept: DataMergeField, Long 
 			 * Integer or String.
 			 */
@@ -36,7 +36,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeField whose index follows the specified 
 			 * DataMergeField in the collection.
-			 * @param {DataMergeField} objParam - The DataMergeField whose 
+			 * @param {DataMergeField} objParam The DataMergeField whose 
 			 * index comes before the desired DataMergeField. 
 			 */
 			public nextItem(objParam: DataMergeField): Adobe.Indesign.DataMergeField;
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DataMergeField with the index previous to the 
 			 * specified index.
-			 * @param {DataMergeField} objParam - The index of the 
+			 * @param {DataMergeField} objParam The index of the 
 			 * DataMergeField that follows the desired DataMergeField.
 			 */
 			public previousItem(objParam: DataMergeField): Adobe.Indesign.DataMergeField;

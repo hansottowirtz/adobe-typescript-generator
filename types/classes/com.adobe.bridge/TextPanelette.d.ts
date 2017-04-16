@@ -1,17 +1,23 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
+		/**
+		 * It differs from the ThumbnailPanelette object in that it 
+		 * does not display the thumbnail icon, only the related 
+		 * text.The text can be static, or can be obtained dynamically 
+		 * from the associated thumbnail at display time, using 
+		 * panelette markup syntax.
+		 */
 		class TextPanelette extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
+			/** A set of two-element arrays in the format [key, value]. */
 			public keyValuePairs: any[];
-			/** This is not a Property Description. */
+			/** The unique, identifying name of this subpanel. */
 			public name: string;
-			/** This is not a Property Description. */
+			/** The nodes corresponding to the key-value pairs. */
 			public thumbnails: any[];
-			/** This is not a Property Description. */
+			/** Localizable text shown in the subpanel header bar. */
 			public titleMarkup: string;
-			/** This is not a Method Description. */
 			public constructor();
 			/**
 			 * @param {any[]} args

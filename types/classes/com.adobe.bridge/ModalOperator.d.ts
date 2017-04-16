@@ -1,9 +1,10 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
 		/**
-		 * An independant node-handling operation with its own user 
+		 * See ProgressOperator for details of Operator objects.An 
+		 * independant node-handling operation with its own user 
 		 * interface.See ProgressOperator for details of Operator 
 		 * objects.
 		 */

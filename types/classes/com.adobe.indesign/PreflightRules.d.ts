@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.PreflightRule;
 			/**
 			 * Returns the PreflightRule with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.PreflightRule;
 			/**
 			 * Returns the PreflightRule with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.PreflightRule;
 			/**
 			 * Returns the PreflightRule with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.PreflightRule;
 			/**
 			 * Returns the PreflightRules within the specified range.
-			 * @param {any} fromParam - The PreflightRule, index, or name 
-			 * at the beginning of the range. Can accept: PreflightRule, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The PreflightRule, index, or name at 
+			 * @param {any} fromParam The PreflightRule, index, or name at 
+			 * the beginning of the range. Can accept: PreflightRule, Long 
+			 * Integer or String.
+			 * @param {any} toParam The PreflightRule, index, or name at 
 			 * the end of the range. Can accept: PreflightRule, Long 
 			 * Integer or String.
 			 */
@@ -46,7 +46,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PreflightRule whose index follows the specified 
 			 * PreflightRule in the collection.
-			 * @param {PreflightRule} objParam - The PreflightRule whose 
+			 * @param {PreflightRule} objParam The PreflightRule whose 
 			 * index comes before the desired PreflightRule. 
 			 */
 			public nextItem(objParam: PreflightRule): Adobe.Indesign.PreflightRule;
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PreflightRule with the index previous to the 
 			 * specified index.
-			 * @param {PreflightRule} objParam - The index of the 
+			 * @param {PreflightRule} objParam The index of the 
 			 * PreflightRule that follows the desired PreflightRule.
 			 */
 			public previousItem(objParam: PreflightRule): Adobe.Indesign.PreflightRule;

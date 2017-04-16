@@ -1,11 +1,11 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		/** Preference */
 		class GeneralPreference extends Adobe.Incopy.Preference {
 			/** If true, application bar is shown. */
-			public applicationBarShown: boolean;
+			public readonly applicationBarShown: boolean;
 			/** If true, panel drawers close automatically. */
 			public autoCollapseIconPanels: boolean;
 			/**
@@ -21,6 +21,11 @@ declare namespace Adobe {
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
 			/** A collection of events. */
 			public readonly events: Adobe.Incopy.Events;
+			/**
+			 * Controls whether or not to highlight object under selection 
+			 * tool.
+			 */
+			public highlightObjectUnderSelectionTool: boolean;
 			/** If true, include a preview image when saving the document */
 			public includePreview: boolean;
 			/**
@@ -42,6 +47,11 @@ declare namespace Adobe {
 			 * in the Place icon.
 			 */
 			public placeCursorUsesThumbnails: boolean;
+			/**
+			 * The pages to create preview images for. Note: Valid when 
+			 * include preview is true.
+			 */
+			public previewPages: Adobe.Incopy.PreviewPagesOptions;
 			/** The size of the preview image. */
 			public previewSize: Adobe.Incopy.PreviewSizeOptions;
 			/**
@@ -56,13 +66,13 @@ declare namespace Adobe {
 			/** Tool tip behavior. */
 			public toolTips: Adobe.Incopy.ToolTipOptions;
 			/** If true, application lives in a frame. */
-			public useApplicationFrame: boolean;
+			public readonly useApplicationFrame: boolean;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerGeneralPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -73,10 +83,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerGeneralPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

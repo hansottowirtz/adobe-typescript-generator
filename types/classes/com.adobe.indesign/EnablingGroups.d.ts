@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new EnablingGroup.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new EnablingGroup (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.EnablingGroup;
@@ -21,21 +21,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.EnablingGroup;
 			/**
 			 * Returns the EnablingGroup with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.EnablingGroup;
 			/**
 			 * Returns the EnablingGroup with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.EnablingGroup;
 			/**
 			 * Returns the EnablingGroups within the specified range.
-			 * @param {any} fromParam - The EnablingGroup, index, or name 
-			 * at the beginning of the range. Can accept: EnablingGroup, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The EnablingGroup, index, or name at 
+			 * @param {any} fromParam The EnablingGroup, index, or name at 
+			 * the beginning of the range. Can accept: EnablingGroup, Long 
+			 * Integer or String.
+			 * @param {any} toParam The EnablingGroup, index, or name at 
 			 * the end of the range. Can accept: EnablingGroup, Long 
 			 * Integer or String.
 			 */
@@ -47,7 +47,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the EnablingGroup whose index follows the specified 
 			 * EnablingGroup in the collection.
-			 * @param {EnablingGroup} objParam - The EnablingGroup whose 
+			 * @param {EnablingGroup} objParam The EnablingGroup whose 
 			 * index comes before the desired EnablingGroup. 
 			 */
 			public nextItem(objParam: EnablingGroup): Adobe.Indesign.EnablingGroup;
@@ -64,7 +64,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the EnablingGroup with the index previous to the 
 			 * specified index.
-			 * @param {EnablingGroup} objParam - The index of the 
+			 * @param {EnablingGroup} objParam The index of the 
 			 * EnablingGroup that follows the desired EnablingGroup.
 			 */
 			public previousItem(objParam: EnablingGroup): Adobe.Indesign.EnablingGroup;

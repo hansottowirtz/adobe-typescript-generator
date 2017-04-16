@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -8,7 +8,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * create a named character style
-			 * @param {string} name - the character style name
+			 * @param {string} name the character style name
 			 */
 			public add(name: string): Adobe.Illustrator.CharacterStyle;
 			/**

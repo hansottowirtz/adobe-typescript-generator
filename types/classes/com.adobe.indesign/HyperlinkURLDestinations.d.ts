@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new hyperlink URL destination.
-			 * @param {string} destinationParam - The URL that the 
-			 * hyperlink points to. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {string} destinationParam The URL that the hyperlink 
+			 * points to. (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new HyperlinkURLDestination (Optional)
 			 */
 			public add(destinationParam: string, withPropertiesParam: any): Adobe.Indesign.HyperlinkURLDestination;
@@ -29,28 +29,28 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyperlinkURLDestination with the specified index 
 			 * or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.HyperlinkURLDestination;
 			/**
 			 * Returns the HyperlinkURLDestination with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.HyperlinkURLDestination;
 			/**
 			 * Returns the HyperlinkURLDestination with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.HyperlinkURLDestination;
 			/**
 			 * Returns the HyperlinkURLDestinations within the specified 
 			 * range.
-			 * @param {any} fromParam - The HyperlinkURLDestination, index, 
+			 * @param {any} fromParam The HyperlinkURLDestination, index, 
 			 * or name at the beginning of the range. Can accept: 
 			 * HyperlinkURLDestination, Long Integer or String.
-			 * @param {any} toParam - The HyperlinkURLDestination, index, 
-			 * or name at the end of the range. Can accept: 
+			 * @param {any} toParam The HyperlinkURLDestination, index, or 
+			 * name at the end of the range. Can accept: 
 			 * HyperlinkURLDestination, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -64,7 +64,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyperlinkURLDestination whose index follows the 
 			 * specified HyperlinkURLDestination in the collection.
-			 * @param {HyperlinkURLDestination} objParam - The 
+			 * @param {HyperlinkURLDestination} objParam The 
 			 * HyperlinkURLDestination whose index comes before the desired 
 			 * HyperlinkURLDestination. 
 			 */
@@ -82,7 +82,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyperlinkURLDestination with the index previous 
 			 * to the specified index.
-			 * @param {HyperlinkURLDestination} objParam - The index of the 
+			 * @param {HyperlinkURLDestination} objParam The index of the 
 			 * HyperlinkURLDestination that follows the desired 
 			 * HyperlinkURLDestination.
 			 */

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -11,6 +11,18 @@ declare namespace Adobe {
 			/** Represents all color values using CYMK color space. */
 			public static readonly CMYK: Adobe.Indesign.PDFColorSpace;
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
+			/**
+			 * Alias for GRAY. Converts all color values to high-quality 
+			 * black-and-white images. Gray levels of the converted objects 
+			 * represent the luminosity of the original objects.
+			 */
+			public static readonly gray: Adobe.Indesign.PDFColorSpace;
+			/**
+			 * Converts all color values to high-quality black-and-white 
+			 * images. Gray levels of the converted objects represent the 
+			 * luminosity of the original objects.
+			 */
+			public static readonly GRAY: Adobe.Indesign.PDFColorSpace;
 			/** Repurposes CMYK colors. */
 			public static readonly REPURPOSE_CMYK: Adobe.Indesign.PDFColorSpace;
 			/** Repurposes RGB colors. */

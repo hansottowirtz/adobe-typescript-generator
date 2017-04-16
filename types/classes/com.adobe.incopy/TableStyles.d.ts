@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new TableStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TableStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.TableStyle;
@@ -21,26 +21,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.TableStyle;
 			/**
 			 * Returns the TableStyle with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.TableStyle;
 			/**
 			 * Returns the TableStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.TableStyle;
 			/**
 			 * Returns the TableStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.TableStyle;
 			/**
 			 * Returns the TableStyles within the specified range.
-			 * @param {any} fromParam - The TableStyle, index, or name at 
-			 * the beginning of the range. Can accept: TableStyle, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The TableStyle, index, or name at the 
+			 * @param {any} fromParam The TableStyle, index, or name at the 
+			 * beginning of the range. Can accept: TableStyle, Long Integer 
+			 * or String.
+			 * @param {any} toParam The TableStyle, index, or name at the 
 			 * end of the range. Can accept: TableStyle, Long Integer or 
 			 * String.
 			 */
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TableStyle whose index follows the specified 
 			 * TableStyle in the collection.
-			 * @param {TableStyle} objParam - The TableStyle whose index 
+			 * @param {TableStyle} objParam The TableStyle whose index 
 			 * comes before the desired TableStyle. 
 			 */
 			public nextItem(objParam: TableStyle): Adobe.Incopy.TableStyle;
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TableStyle with the index previous to the 
 			 * specified index.
-			 * @param {TableStyle} objParam - The index of the TableStyle 
+			 * @param {TableStyle} objParam The index of the TableStyle 
 			 * that follows the desired TableStyle.
 			 */
 			public previousItem(objParam: TableStyle): Adobe.Incopy.TableStyle;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,23 +15,22 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.XMLItem;
 			/**
 			 * Returns the XMLItem with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.XMLItem;
 			/**
 			 * Returns the XMLItem with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.XMLItem;
 			/**
 			 * Returns the XMLItems within the specified range.
-			 * @param {any} fromParam - The XMLItem, index, or name at the 
+			 * @param {any} fromParam The XMLItem, index, or name at the 
 			 * beginning of the range. Can accept: XMLItem, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The XMLItem, index, or name at the 
-			 * end of the range. Can accept: XMLItem, Long Integer or 
-			 * String.
+			 * @param {any} toParam The XMLItem, index, or name at the end 
+			 * of the range. Can accept: XMLItem, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last XMLItem in the collection. */
@@ -41,7 +40,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the XMLItem whose index follows the specified 
 			 * XMLItem in the collection.
-			 * @param {XMLItem} objParam - The XMLItem whose index comes 
+			 * @param {XMLItem} objParam The XMLItem whose index comes 
 			 * before the desired XMLItem. 
 			 */
 			public nextItem(objParam: XMLItem): Adobe.Incopy.XMLItem;
@@ -58,7 +57,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the XMLItem with the index previous to the specified 
 			 * index.
-			 * @param {XMLItem} objParam - The index of the XMLItem that 
+			 * @param {XMLItem} objParam The index of the XMLItem that 
 			 * follows the desired XMLItem.
 			 */
 			public previousItem(objParam: XMLItem): Adobe.Incopy.XMLItem;

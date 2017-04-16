@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -16,7 +16,7 @@ declare namespace Adobe {
 			public artboardRange: string;
 			/**
 			 * what Illustrator file format version to create ( default: 
-			 * Compatibility.ILLUSTRATOR15 )
+			 * Compatibility.ILLUSTRATOR16 )
 			 */
 			public compatibility: Adobe.Illustrator.Compatibility;
 			/**

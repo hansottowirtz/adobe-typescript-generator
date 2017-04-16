@@ -1,8 +1,12 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class Section extends Adobe.Csawlib.CSHostObject {
+			/** The alternate layout name for a set of pages. */
+			public readonly alternateLayout: string;
+			/** The number of pages in the alternate layout section. */
+			public readonly alternateLayoutLength: number;
 			/**
 			 * If true, continues page numbers sequentially from the 
 			 * previous section.
@@ -49,6 +53,16 @@ declare namespace Adobe {
 			public readonly pageNumberStyle: any;
 			/** The start page for the section. */
 			public readonly pageStart: Adobe.Incopy.Page;
+			/**
+			 * The pagination option for this section for adding and 
+			 * removing pages in HTML5.
+			 */
+			public readonly pagination: Adobe.Incopy.PaginationOption;
+			/**
+			 * The master to apply when pages are added in HTML5. Can also 
+			 * accept: NothingEnum enumerator.
+			 */
+			public readonly paginationMaster: Adobe.Incopy.MasterSpread;
 			/** The parent of the Section (a Document). */
 			public readonly parent: Adobe.Incopy.Document;
 			/**
@@ -64,16 +78,16 @@ declare namespace Adobe {
 			public sectionPrefix: string;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerSection(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -84,16 +98,16 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerSection(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -42,10 +42,10 @@ declare namespace Adobe {
 			public rightDirection: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerPathPoint(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -58,9 +58,9 @@ declare namespace Adobe {
 			 * Join this path point to another path point. The two points 
 			 * must be end points and their paths combined into a single 
 			 * path on a single page item.
-			 * @param {PathPoint} referenceParam - The reference object. 
-			 * The path point to join to
-			 * @param {JoinOptions} givenParam - The join option to use. 
+			 * @param {PathPoint} referenceParam The reference object. The 
+			 * path point to join to
+			 * @param {JoinOptions} givenParam The join option to use. 
 			 * (Optional)
 			 */
 			public join(referenceParam: PathPoint, givenParam: JoinOptions): void;
@@ -68,10 +68,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerPathPoint(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

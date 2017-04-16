@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -16,6 +16,10 @@ declare namespace Adobe {
 			public readonly baseName: string;
 			/** A collection of buttons. */
 			public readonly buttons: Adobe.Incopy.Buttons;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Incopy.CheckBoxes;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Incopy.ComboBoxes;
 			/** EPSTexts */
 			public readonly epstexts: Adobe.Incopy.EPSTexts;
 			/** A collection of event listeners. */
@@ -43,6 +47,8 @@ declare namespace Adobe {
 			public readonly isValid: boolean;
 			/** A property that can be set to any string. */
 			public label: string;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Incopy.ListBoxes;
 			/** A collection of multi-state objects. */
 			public readonly multiStateObjects: Adobe.Incopy.MultiStateObjects;
 			/** The name of the MasterSpread. */
@@ -64,28 +70,40 @@ declare namespace Adobe {
 			/** A collection of polygons. */
 			public readonly polygons: Adobe.Incopy.Polygons;
 			/**
+			 * The primary text frame through which text flows on the 
+			 * MasterSpread. Must be a text frame or a type on a path 
+			 * spline. Can also accept: NothingEnum enumerator.
+			 */
+			public readonly primaryTextFrame: Adobe.Incopy.PageItem;
+			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Incopy.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Incopy.Rectangles;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Incopy.SignatureFields;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Incopy.SplineItems;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Incopy.TextBoxes;
 			/** A collection of text frames. */
 			public readonly textFrames: Adobe.Incopy.TextFrames;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerMasterSpread(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -96,16 +114,16 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerMasterSpread(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

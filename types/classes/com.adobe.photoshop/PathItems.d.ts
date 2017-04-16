@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -8,12 +8,12 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * create a new path item
-			 * @param {string} name - name for the new path
-			 * @param {any} entirePath - all of the sub paths, including 
+			 * @param {string} name name for the new path
+			 * @param {any[]} entirePath all of the sub paths, including 
 			 * operation, and the path points, including path closed 
 			 * parameter
 			 */
-			public add(name: string, entirePath: any): Adobe.Photoshop.PathItem;
+			public add(name: string, entirePath: any[]): Adobe.Photoshop.PathItem;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -25,7 +25,7 @@ declare namespace Adobe {
 			 * a list of layers to be included as the static background in 
 			 * all exported Flash frames
 			 */
-			public backgroundLayers: any;
+			public backgroundLayers: any[];
 			/**
 			 * controls how the blend art objects are animated when export 
 			 * to Flash frames ( default: 

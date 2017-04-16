@@ -1,16 +1,16 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
-		/** An installed font. */
+		/** An installed font */
 		class TextFont extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** The font family. */
+			/** the font's family */
 			public readonly family: string;
-			/** The font name. */
+			/** The font's text face name */
 			public readonly name: string;
-			/** The PostScript name of the font. */
+			/** the font's PostScript name */
 			public readonly postScriptName: string;
-			/** The font style. */
+			/** the font's style name */
 			public readonly style: string;
 		}
 	}

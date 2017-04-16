@@ -1,8 +1,8 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** Non-native artwork item. */
+		/** Non-native artwork item */
 		class NonNativeItem extends Adobe.Illustrator.PageItem {
 			
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new object libary.
-			 * @param {File} fullNameParam - The library's path and file 
+			 * @param {File} fullNameParam The library's path and file 
 			 * name.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Library (Optional)
 			 */
 			public add(fullNameParam: File, withPropertiesParam: any): Adobe.Indesign.Library;
@@ -23,23 +23,22 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Library;
 			/**
 			 * Returns the Library with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Library;
 			/**
 			 * Returns the Library with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Library;
 			/**
 			 * Returns the Libraries within the specified range.
-			 * @param {any} fromParam - The Library, index, or name at the 
+			 * @param {any} fromParam The Library, index, or name at the 
 			 * beginning of the range. Can accept: Library, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Library, index, or name at the 
-			 * end of the range. Can accept: Library, Long Integer or 
-			 * String.
+			 * @param {any} toParam The Library, index, or name at the end 
+			 * of the range. Can accept: Library, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Library in the collection. */
@@ -49,7 +48,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Library whose index follows the specified 
 			 * Library in the collection.
-			 * @param {Library} objParam - The Library whose index comes 
+			 * @param {Library} objParam The Library whose index comes 
 			 * before the desired Library. 
 			 */
 			public nextItem(objParam: Library): Adobe.Indesign.Library;
@@ -66,7 +65,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Library with the index previous to the specified 
 			 * index.
-			 * @param {Library} objParam - The index of the Library that 
+			 * @param {Library} objParam The index of the Library that 
 			 * follows the desired Library.
 			 */
 			public previousItem(objParam: Library): Adobe.Indesign.Library;

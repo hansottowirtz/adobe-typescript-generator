@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,6 +7,17 @@ declare namespace Adobe {
 			public static readonly ansi: Adobe.Indesign.TextImportCharacterSet;
 			/** The ANSI character set. */
 			public static readonly ANSI: Adobe.Indesign.TextImportCharacterSet;
+			/** The Arabic ASMO character set. */
+			public static readonly ARABIC_ASMO: Adobe.Indesign.TextImportCharacterSet;
+			/** The Arabic ASMO transparent character set. */
+			public static readonly ARABIC_ASMO_TRANSPARENT: Adobe.Indesign.TextImportCharacterSet;
+			/** Alias for ARABIC_ASMO. The Arabic ASMO character set. */
+			public static readonly arabicAsmo: Adobe.Indesign.TextImportCharacterSet;
+			/**
+			 * Alias for ARABIC_ASMO_TRANSPARENT. The Arabic ASMO 
+			 * transparent character set.
+			 */
+			public static readonly arabicAsmoTransparent: Adobe.Indesign.TextImportCharacterSet;
 			/** The Central European (ISO) character set. */
 			public static readonly CENTRALEUROPEAN_ISO: Adobe.Indesign.TextImportCharacterSet;
 			/**
@@ -64,6 +75,8 @@ declare namespace Adobe {
 			public static readonly ksc5601: Adobe.Indesign.TextImportCharacterSet;
 			/** The KSC5601 character set. */
 			public static readonly KSC5601: Adobe.Indesign.TextImportCharacterSet;
+			/** The Macintosh Arabic character set. */
+			public static readonly MACINTOSH_ARABIC: Adobe.Indesign.TextImportCharacterSet;
 			/** The Macintosh CE (Cantral European) character set. */
 			public static readonly MACINTOSH_CE: Adobe.Indesign.TextImportCharacterSet;
 			/** The Macintosh Croatian character set. */
@@ -72,6 +85,10 @@ declare namespace Adobe {
 			public static readonly MACINTOSH_CYRILLIC: Adobe.Indesign.TextImportCharacterSet;
 			/** The Macintosh Greek character set. */
 			public static readonly MACINTOSH_GREEK: Adobe.Indesign.TextImportCharacterSet;
+			/** The Macintosh Greek (Shared caps) character set. */
+			public static readonly MACINTOSH_GREEK_SHARED_CAPS: Adobe.Indesign.TextImportCharacterSet;
+			/** The Macintosh Hebrew character set. */
+			public static readonly MACINTOSH_HEBREW: Adobe.Indesign.TextImportCharacterSet;
 			/** The Macintosh Icelandic character set. */
 			public static readonly MACINTOSH_ICELANDIC: Adobe.Indesign.TextImportCharacterSet;
 			/** The Macintosh Roman character set. */
@@ -80,6 +97,11 @@ declare namespace Adobe {
 			public static readonly MACINTOSH_ROMANIAN: Adobe.Indesign.TextImportCharacterSet;
 			/** The Macintosh Turkish character set. */
 			public static readonly MACINTOSH_TURKISH: Adobe.Indesign.TextImportCharacterSet;
+			/**
+			 * Alias for MACINTOSH_ARABIC. The Macintosh Arabic character 
+			 * set.
+			 */
+			public static readonly macintoshArabic: Adobe.Indesign.TextImportCharacterSet;
 			/**
 			 * Alias for MACINTOSH_CE. The Macintosh CE (Cantral European) 
 			 * character set.
@@ -100,6 +122,16 @@ declare namespace Adobe {
 			 * set.
 			 */
 			public static readonly macintoshGreek: Adobe.Indesign.TextImportCharacterSet;
+			/**
+			 * Alias for MACINTOSH_GREEK_SHARED_CAPS. The Macintosh Greek 
+			 * (Shared caps) character set.
+			 */
+			public static readonly macintoshGreekSharedCaps: Adobe.Indesign.TextImportCharacterSet;
+			/**
+			 * Alias for MACINTOSH_HEBREW. The Macintosh Hebrew character 
+			 * set.
+			 */
+			public static readonly macintoshHebrew: Adobe.Indesign.TextImportCharacterSet;
 			/**
 			 * Alias for MACINTOSH_ICELANDIC. The Macintosh Icelandic 
 			 * character set.
@@ -147,6 +179,8 @@ declare namespace Adobe {
 			public static readonly utf8: Adobe.Indesign.TextImportCharacterSet;
 			/** The Unicode UTF8 character set. */
 			public static readonly UTF8: Adobe.Indesign.TextImportCharacterSet;
+			/** The Windows Arabic character set. */
+			public static readonly WINDOWS_ARABIC: Adobe.Indesign.TextImportCharacterSet;
 			/** Tthe Windows Baltic character set. */
 			public static readonly WINDOWS_BALTIC: Adobe.Indesign.TextImportCharacterSet;
 			/** The Windows CE (Central European) character set. */
@@ -157,8 +191,12 @@ declare namespace Adobe {
 			public static readonly WINDOWS_EE: Adobe.Indesign.TextImportCharacterSet;
 			/** The Windows Greek character set. */
 			public static readonly WINDOWS_GREEK: Adobe.Indesign.TextImportCharacterSet;
+			/** The Windows Hebrew character set. */
+			public static readonly WINDOWS_HEBREW: Adobe.Indesign.TextImportCharacterSet;
 			/** The Windows Turkish character set. */
 			public static readonly WINDOWS_TURKISH: Adobe.Indesign.TextImportCharacterSet;
+			/** Alias for WINDOWS_ARABIC. The Windows Arabic character set. */
+			public static readonly windowsArabic: Adobe.Indesign.TextImportCharacterSet;
 			/**
 			 * Alias for WINDOWS_BALTIC. Tthe Windows Baltic character set.
 			 */
@@ -180,6 +218,8 @@ declare namespace Adobe {
 			public static readonly windowsEe: Adobe.Indesign.TextImportCharacterSet;
 			/** Alias for WINDOWS_GREEK. The Windows Greek character set. */
 			public static readonly windowsGreek: Adobe.Indesign.TextImportCharacterSet;
+			/** Alias for WINDOWS_HEBREW. The Windows Hebrew character set. */
+			public static readonly windowsHebrew: Adobe.Indesign.TextImportCharacterSet;
 			/**
 			 * Alias for WINDOWS_TURKISH. The Windows Turkish character 
 			 * set.

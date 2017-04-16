@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new TrapPreset.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TrapPreset (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.TrapPreset;
@@ -21,26 +21,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.TrapPreset;
 			/**
 			 * Returns the TrapPreset with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.TrapPreset;
 			/**
 			 * Returns the TrapPreset with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.TrapPreset;
 			/**
 			 * Returns the TrapPreset with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.TrapPreset;
 			/**
 			 * Returns the TrapPresets within the specified range.
-			 * @param {any} fromParam - The TrapPreset, index, or name at 
-			 * the beginning of the range. Can accept: TrapPreset, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The TrapPreset, index, or name at the 
+			 * @param {any} fromParam The TrapPreset, index, or name at the 
+			 * beginning of the range. Can accept: TrapPreset, Long Integer 
+			 * or String.
+			 * @param {any} toParam The TrapPreset, index, or name at the 
 			 * end of the range. Can accept: TrapPreset, Long Integer or 
 			 * String.
 			 */
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TrapPreset whose index follows the specified 
 			 * TrapPreset in the collection.
-			 * @param {TrapPreset} objParam - The TrapPreset whose index 
+			 * @param {TrapPreset} objParam The TrapPreset whose index 
 			 * comes before the desired TrapPreset. 
 			 */
 			public nextItem(objParam: TrapPreset): Adobe.Indesign.TrapPreset;
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TrapPreset with the index previous to the 
 			 * specified index.
-			 * @param {TrapPreset} objParam - The index of the TrapPreset 
+			 * @param {TrapPreset} objParam The index of the TrapPreset 
 			 * that follows the desired TrapPreset.
 			 */
 			public previousItem(objParam: TrapPreset): Adobe.Indesign.TrapPreset;

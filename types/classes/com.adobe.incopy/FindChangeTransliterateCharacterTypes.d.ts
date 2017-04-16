@@ -1,9 +1,17 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class FindChangeTransliterateCharacterTypes extends Adobe.Csawlib.CSEnumBase {
+			/** Arabic Indic(hindi) digits. */
+			public static readonly ARABIC_INDIC_DIGITS: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
+			/** Alias for ARABIC_INDIC_DIGITS. Arabic Indic(hindi) digits. */
+			public static readonly arabicIndicDigits: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
+			/** Farsi digits. */
+			public static readonly FARSI_DIGITS: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
+			/** Alias for FARSI_DIGITS. Farsi digits. */
+			public static readonly farsiDigits: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
 			/** Full-width hiragana. */
 			public static readonly FULL_WIDTH_HIRAGANA: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
 			/** Full-width katakana. */
@@ -30,6 +38,13 @@ declare namespace Adobe {
 			 * symbols.
 			 */
 			public static readonly halfWidthRomanSymbols: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
+			/** Western Arabic digits (0, 1, 2, 3, ...). */
+			public static readonly WESTERN_ARABIC_DIGITS: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
+			/**
+			 * Alias for WESTERN_ARABIC_DIGITS. Western Arabic digits (0, 
+			 * 1, 2, 3, ...).
+			 */
+			public static readonly westernArabicDigits: Adobe.Incopy.FindChangeTransliterateCharacterTypes;
 			/** Constructor */
 			public constructor();
 		}

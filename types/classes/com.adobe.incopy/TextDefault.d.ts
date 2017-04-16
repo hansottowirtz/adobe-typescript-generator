@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -541,6 +541,11 @@ declare namespace Adobe {
 			public paragraphGyoudori: boolean;
 			/** Paragraph justification. */
 			public paragraphJustification: Adobe.Incopy.ParagraphJustificationOptions;
+			/**
+			 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 
+			 * 3 is long
+			 */
+			public paragraphKashidaWidth: number;
 			/** The parent of the TextDefault (a Application or Document). */
 			public readonly parent: any;
 			/** The text size. */
@@ -996,10 +1001,10 @@ declare namespace Adobe {
 			public yOffsetDiacritic: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerTextDefault(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -1010,10 +1015,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerTextDefault(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new MotionPreset.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new MotionPreset (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.MotionPreset;
@@ -21,28 +21,28 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.MotionPreset;
 			/**
 			 * Returns the MotionPreset with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.MotionPreset;
 			/**
 			 * Returns the MotionPreset with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.MotionPreset;
 			/**
 			 * Returns the MotionPreset with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.MotionPreset;
 			/**
 			 * Returns the MotionPresets within the specified range.
-			 * @param {any} fromParam - The MotionPreset, index, or name at 
+			 * @param {any} fromParam The MotionPreset, index, or name at 
 			 * the beginning of the range. Can accept: MotionPreset, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The MotionPreset, index, or name at 
-			 * the end of the range. Can accept: MotionPreset, Long Integer 
-			 * or String.
+			 * @param {any} toParam The MotionPreset, index, or name at the 
+			 * end of the range. Can accept: MotionPreset, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last MotionPreset in the collection. */
@@ -52,8 +52,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the MotionPreset whose index follows the specified 
 			 * MotionPreset in the collection.
-			 * @param {MotionPreset} objParam - The MotionPreset whose 
-			 * index comes before the desired MotionPreset. 
+			 * @param {MotionPreset} objParam The MotionPreset whose index 
+			 * comes before the desired MotionPreset. 
 			 */
 			public nextItem(objParam: MotionPreset): Adobe.Indesign.MotionPreset;
 			/**
@@ -69,8 +69,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the MotionPreset with the index previous to the 
 			 * specified index.
-			 * @param {MotionPreset} objParam - The index of the 
-			 * MotionPreset that follows the desired MotionPreset.
+			 * @param {MotionPreset} objParam The index of the MotionPreset 
+			 * that follows the desired MotionPreset.
 			 */
 			public previousItem(objParam: MotionPreset): Adobe.Indesign.MotionPreset;
 		}

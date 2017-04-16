@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new CharacterStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new CharacterStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.CharacterStyle;
@@ -21,26 +21,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.CharacterStyle;
 			/**
 			 * Returns the CharacterStyle with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.CharacterStyle;
 			/**
 			 * Returns the CharacterStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.CharacterStyle;
 			/**
 			 * Returns the CharacterStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.CharacterStyle;
 			/**
 			 * Returns the CharacterStyles within the specified range.
-			 * @param {any} fromParam - The CharacterStyle, index, or name 
-			 * at the beginning of the range. Can accept: CharacterStyle, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The CharacterStyle, index, or name at 
+			 * @param {any} fromParam The CharacterStyle, index, or name at 
+			 * the beginning of the range. Can accept: CharacterStyle, Long 
+			 * Integer or String.
+			 * @param {any} toParam The CharacterStyle, index, or name at 
 			 * the end of the range. Can accept: CharacterStyle, Long 
 			 * Integer or String.
 			 */
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the CharacterStyle whose index follows the specified 
 			 * CharacterStyle in the collection.
-			 * @param {CharacterStyle} objParam - The CharacterStyle whose 
+			 * @param {CharacterStyle} objParam The CharacterStyle whose 
 			 * index comes before the desired CharacterStyle. 
 			 */
 			public nextItem(objParam: CharacterStyle): Adobe.Incopy.CharacterStyle;
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the CharacterStyle with the index previous to the 
 			 * specified index.
-			 * @param {CharacterStyle} objParam - The index of the 
+			 * @param {CharacterStyle} objParam The index of the 
 			 * CharacterStyle that follows the desired CharacterStyle.
 			 */
 			public previousItem(objParam: CharacterStyle): Adobe.Incopy.CharacterStyle;

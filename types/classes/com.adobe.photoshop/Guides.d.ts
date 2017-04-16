@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -8,12 +8,12 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * a guide
-			 * @param {Adobe.Photoshop.Direction} direction - indicates 
+			 * @param {Adobe.Photoshop.Direction} direction indicates 
 			 * whether the guide is vertical or horizontal
-			 * @param {string} coordinate - location of the guide from 
-			 * origin of image
+			 * @param {any} coordinate location of the guide from origin of 
+			 * image
 			 */
-			public add(direction: Adobe.Photoshop.Direction, coordinate: string): Adobe.Photoshop.Guide;
+			public add(direction: Adobe.Photoshop.Direction, coordinate: any): Adobe.Photoshop.Guide;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx

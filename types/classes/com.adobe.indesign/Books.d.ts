@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new book.
-			 * @param {File} fullNameParam - The full path name of the new 
+			 * @param {File} fullNameParam The full path name of the new 
 			 * book file, including the book file extension '.indb'.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Book (Optional)
 			 */
 			public add(fullNameParam: File, withPropertiesParam: any): Adobe.Indesign.Book;
@@ -23,22 +23,22 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Book;
 			/**
 			 * Returns the Book with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Book;
 			/**
 			 * Returns the Book with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Book;
 			/**
 			 * Returns the Books within the specified range.
-			 * @param {any} fromParam - The Book, index, or name at the 
+			 * @param {any} fromParam The Book, index, or name at the 
 			 * beginning of the range. Can accept: Book, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Book, index, or name at the end 
-			 * of the range. Can accept: Book, Long Integer or String.
+			 * @param {any} toParam The Book, index, or name at the end of 
+			 * the range. Can accept: Book, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Book in the collection. */
@@ -48,8 +48,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Book whose index follows the specified Book in 
 			 * the collection.
-			 * @param {Book} objParam - The Book whose index comes before 
-			 * the desired Book. 
+			 * @param {Book} objParam The Book whose index comes before the 
+			 * desired Book. 
 			 */
 			public nextItem(objParam: Book): Adobe.Indesign.Book;
 			/**
@@ -65,7 +65,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Book with the index previous to the specified 
 			 * index.
-			 * @param {Book} objParam - The index of the Book that follows 
+			 * @param {Book} objParam The index of the Book that follows 
 			 * the desired Book.
 			 */
 			public previousItem(objParam: Book): Adobe.Indesign.Book;

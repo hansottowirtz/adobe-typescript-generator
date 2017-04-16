@@ -1,81 +1,81 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
-		/** A text path item. */
+		/** A text path item */
 		class TextPath extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** The area of this path in square points. */
+			/** the area of this path in square points */
 			public readonly area: number;
-			/** The mode used when compositing an object. */
+			/** the mode used when compositing an object */
 			public blendingMode: Adobe.Illustrator.BlendModes;
-			/** Should this be used as a clipping path? */
+			/** should this be used as a clipping path? */
 			public clipping: boolean;
-			/** Is this path closed? */
+			/** is this path closed? */
 			public closed: boolean;
-			/** Can the text path be modified. */
+			/** can the text path be modified */
 			public readonly editable: boolean;
-			/** Should the even-odd rule be used to determine insideness? */
+			/** should the even-odd rule be used to determine insideness? */
 			public evenodd: boolean;
-			/** Fill color. */
+			/** fill color */
 			public fillColor: Adobe.Illustrator.Color;
-			/** Should the path be filled? */
+			/** should the path be filled? */
 			public filled: boolean;
-			/** Will art beneath a filled object be overprinted? */
+			/** will art beneath a filled object be overprinted? */
 			public fillOverprint: boolean;
-			/** Is this path a guide object? */
+			/** is this path a guide object? */
 			public guides: boolean;
-			/** The height of the text path. ( 0.0 - 16348.0 ) */
+			/** the height of the text path ( 0.0 - 16348.0 ) */
 			public height: number;
-			/** The left position of the text path. */
+			/** the left position of the text path */
 			public left: number;
-			/** Note assigned to the path. */
+			/** Note assigned to the path */
 			public note: string;
 			/**
-			 * The object's opacity (between 0.0 and 100.0) ( 0.0 - 100.0 )
+			 * the object's opacity (between 0.0 and 100.0) ( 0.0 - 100.0 )
 			 */
 			public opacity: number;
 			public readonly pathPoints: Adobe.Illustrator.PathPoints;
-			/** The polarity the path. */
+			/** the polarity the path */
 			public polarity: Adobe.Illustrator.PolarityValues;
-			/** The position of the top left corner of the text path. */
+			/** the position of the top left corner of the text path */
 			public position: any[];
-			/** The resolution of the path. */
+			/** The resolution of the path */
 			public resolution: number;
-			/** All the selected points in the path. */
+			/** all the selected points in the path */
 			public readonly selectedPathPoints: any[];
-			/** Type of line capping. */
+			/** type of line capping */
 			public strokeCap: Adobe.Illustrator.StrokeCap;
-			/** Stroke color. */
+			/** stroke color */
 			public strokeColor: Adobe.Illustrator.Color;
-			/** Should the path be stroked? */
+			/** should the path be stroked? */
 			public stroked: boolean;
-			/** Dash lengths (set to {} for a solid line) */
+			/** dash lengths (set to {} for a solid line) */
 			public strokeDashes: any[];
 			/**
-			 * The default distance into the dash pattern at which the 
-			 * pattern should be started.
+			 * the default distance into the dash pattern at which the 
+			 * pattern should be started
 			 */
 			public strokeDashOffset: number;
-			/** Type of joints. */
+			/** type of joints */
 			public strokeJoin: Adobe.Illustrator.StrokeJoin;
 			/**
-			 * Whether a join is mitered (pointed) or beveled (squared-off)
+			 * whether a join is mitered (pointed) or beveled (squared-off)
 			 */
 			public strokeMiterLimit: number;
-			/** Will art beneath a stroked object be overprinted? */
+			/** will art beneath a stroked object be overprinted? */
 			public strokeOverprint: boolean;
-			/** Width of stroke. */
+			/** width of stroke */
 			public strokeWidth: number;
-			/** The top position of the text path. */
+			/** the top position of the text path */
 			public top: number;
-			/** The width of the text path. ( 0.0 - 16348.0 ) */
+			/** the width of the text path ( 0.0 - 16348.0 ) */
 			public width: number;
 			/**
-			 * Set the path using the provided array of anchor points.
-			 * @param {any} pathPoints - Array of anchor values for the 
-			 * path points.
+			 * Set the path using the provided array of anchor points
+			 * @param {any[]} pathPoints Array of anchor values for the 
+			 * path points
 			 */
-			public setEntirePath(pathPoints: any): void;
+			public setEntirePath(pathPoints: any[]): void;
 		}
 	}
 }

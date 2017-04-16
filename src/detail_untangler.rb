@@ -1,6 +1,7 @@
 class DetailUntangler
-  PROPERTY_REGEX = /^public (?:(static) )?function get (\w+)\(\):(\w+|\*)$/
-  CONSTANT_REGEX = /^public static const (\w+):(\w+|\*) = (\w+)$/
+  PROPERTY_GET_REGEX = /^public (?:(static) )?function get (\w+)\(\):(\w+|\*)$/
+  PROPERTY_SET_REGEX = /^public (?:(static) )?function set (\w+)\((?:\w+):(\w+|\*)\):void$/
+  CONSTANT_REGEX = /^public static const (\w+):(\w+|\*) = (.+)$/
   METHOD_REGEX = /^(?:(override) )?(?:(protected|public|flash_proxy) )?(?:(static) )?function (\w+)\(((?:(?:\w+): ?(?:\w+|\*) ?(?:= (?:[\w\d\.\/-]+))?,? ?)*)(?:, ?\.{3} ?(\w+))?\)(?:: ?(\w+|\*))?$/
   ARGUMENT_REGEX = /(?:(\w+): ?(\w+|\*) ?(?:= ([\w\d\.\/-]+))?,? ?)/
   ARGUMENT_TR_REGEX = /(\w+):(\w+|\*)(?: \(default = ([\w\d\.]+)\))?(?: [-—] \(([\w\.]+|\*)\) (.+))?/
@@ -9,30 +10,35 @@ class DetailUntangler
     @name = header.css('.detailHeaderName')[0].text
     @kind = header.css('.detailHeaderType')[0].text.downcase
     if !['property', 'method', 'constructor', 'constant'].include?(@kind)
-      binding.pry
       raise "no property or method: #{@kind}"
     end
     @description = body.css('p')
       .collect{|par| par.xpath('text()').text.strip}
       .reject(&:empty?)
       .join("\n")
+      .gsub(/ *\r\n\t\t */, ' ').strip
+    @description = nil if @description.empty?
 
     implementation = body.css('code')[0].text.strip
     @readonly = false
 
     case @kind
     when 'property'
+      @readonly = body.text.include?('[read-only]')
+      @writeonly = body.text.include?('[write-only]')
       s = body.xpath("//text()[. = ' Implementation ']")[0] # .next_sibling.next_sibling.text
-      text = body.css('code')[1].text.gsub(/\A\p{Space}*/, '').strip
-      md = PROPERTY_REGEX.match(text)
+      code = body.css('> code')[1]
+      binding.pry if !code
+      text = code.text.gsub(/\A\p{Space}*/, '').strip
+      regex = if @writeonly then PROPERTY_SET_REGEX else PROPERTY_GET_REGEX end
+      md = regex.match(text)
+      binding.pry if !md
       @access_modifier = 'public'
       @static = !!md[1]
       org_type = md[3]
-      @readonly = body.text.include?('[read-only]')
-      # binding.pry if @name == 'PLACEATEND'
     when 'constant'
-      const_regex = /^public static const (\w+):(\w+|\*) = (\w+)$/
       md = CONSTANT_REGEX.match(implementation)
+      binding.pry if !md
       @name = md[1]
       @type = md[2]
     when 'method', 'constructor'
@@ -56,7 +62,7 @@ class DetailUntangler
         trs.each do |tr|
           text = tr.text
           next if text == "\u00A0"
-          if text == '... args'
+          if text.match /\.{3} ?args/
             @args << Argument.new('...args', 'any[]')
             next
           end
@@ -75,9 +81,11 @@ class DetailUntangler
     else
       @type = Types.get(org_type)
     end
+
+    @attribute = Attribute.new(@name, @kind, @readonly, @description, @type, @override, @static, @access_modifier, @args)
   end
 
-  def to_attribute
-    Attribute.new(@name, @kind, @readonly, @description, @type, @override, @static, @access_modifier, @args)
+  def attribute
+    @attribute
   end
 end

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -22,28 +22,28 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPreviousStateBehavior with the specified 
 			 * index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.GotoPreviousStateBehavior;
 			/**
 			 * Returns the GotoPreviousStateBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.GotoPreviousStateBehavior;
 			/**
 			 * Returns the GotoPreviousStateBehavior with the specified 
 			 * name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.GotoPreviousStateBehavior;
 			/**
 			 * Returns the GotoPreviousStateBehaviors within the specified 
 			 * range.
-			 * @param {any} fromParam - The GotoPreviousStateBehavior, 
-			 * index, or name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The GotoPreviousStateBehavior, index, 
+			 * or name at the beginning of the range. Can accept: 
 			 * GotoPreviousStateBehavior, Long Integer or String.
-			 * @param {any} toParam - The GotoPreviousStateBehavior, index, 
+			 * @param {any} toParam The GotoPreviousStateBehavior, index, 
 			 * or name at the end of the range. Can accept: 
 			 * GotoPreviousStateBehavior, Long Integer or String.
 			 */
@@ -61,7 +61,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPreviousStateBehavior whose index follows 
 			 * the specified GotoPreviousStateBehavior in the collection.
-			 * @param {GotoPreviousStateBehavior} objParam - The 
+			 * @param {GotoPreviousStateBehavior} objParam The 
 			 * GotoPreviousStateBehavior whose index comes before the 
 			 * desired GotoPreviousStateBehavior. 
 			 */
@@ -79,8 +79,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPreviousStateBehavior with the index 
 			 * previous to the specified index.
-			 * @param {GotoPreviousStateBehavior} objParam - The index of 
-			 * the GotoPreviousStateBehavior that follows the desired 
+			 * @param {GotoPreviousStateBehavior} objParam The index of the 
+			 * GotoPreviousStateBehavior that follows the desired 
 			 * GotoPreviousStateBehavior.
 			 */
 			public previousItem(objParam: GotoPreviousStateBehavior): Adobe.Incopy.GotoPreviousStateBehavior;

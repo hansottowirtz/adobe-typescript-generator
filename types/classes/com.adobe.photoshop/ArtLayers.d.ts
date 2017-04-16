@@ -1,11 +1,11 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
 		class ArtLayers extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
 			/** number of elements in the collection */
 			public readonly length: number;
-			/** Create an Art Layer */
+			/** create a new object */
 			public add(): Adobe.Photoshop.ArtLayer;
 			/**
 			 * Get the first element in the collection with the provided 

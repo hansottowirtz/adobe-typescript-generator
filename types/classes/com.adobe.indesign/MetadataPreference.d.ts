@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -53,19 +53,19 @@ declare namespace Adobe {
 			public readonly serverURL: string;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerMetadataPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Uses metadata from the specified external file to define any 
 			 * undefined metadata properties in the document.
-			 * @param {File} fromParam - The path to the external file that 
+			 * @param {File} fromParam The path to the external file that 
 			 * contains the metadata.
-			 * @param {boolean} affectAllParam - If true, also replaces 
+			 * @param {boolean} affectAllParam If true, also replaces 
 			 * existing metadata with data from the external file. If 
 			 * false, does not replace existing metadata. Note: Defaults to 
 			 * false. (Optional)
@@ -73,21 +73,21 @@ declare namespace Adobe {
 			public append(fromParam: File, affectAllParam: boolean): void;
 			/**
 			 * Counts the number of items in the container.
-			 * @param {string} namespaceParam - The namespace of the 
+			 * @param {string} namespaceParam The namespace of the 
 			 * container.
-			 * @param {string} pathParam - The path to the container.
+			 * @param {string} pathParam The path to the container.
 			 */
 			public countContainer(namespaceParam: string, pathParam: string): number;
 			/**
 			 * Creates an empty container.
-			 * @param {string} namespaceParam - The namespace of the 
+			 * @param {string} namespaceParam The namespace of the 
 			 * container.
-			 * @param {string} pathParam - The path to the container.
-			 * @param {number} indexParam - The index of the item within 
-			 * the container. Specified values must be 1 or greater. To 
-			 * append the item to the end of the index and allow the next 
+			 * @param {string} pathParam The path to the container.
+			 * @param {number} indexParam The index of the item within the 
+			 * container. Specified values must be 1 or greater. To append 
+			 * the item to the end of the index and allow the next 
 			 * available value to be assigned, use 0. (Optional)
-			 * @param {ContainerType} containerParam - The container type. 
+			 * @param {ContainerType} containerParam The container type. 
 			 * Note: Required when the new item is the first item added to 
 			 * the container. (Optional)
 			 */
@@ -100,40 +100,40 @@ declare namespace Adobe {
 			/**
 			 * Gets the XMP property value associated with the specified 
 			 * path.
-			 * @param {string} namespaceParam - The namespace of the 
+			 * @param {string} namespaceParam The namespace of the 
 			 * property.
-			 * @param {string} pathParam - The specified path.
+			 * @param {string} pathParam The specified path.
 			 */
 			public getProperty(namespaceParam: string, pathParam: string): string;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerMetadataPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Replaces the current metadata in the document with metadata 
 			 * from the specified file.
-			 * @param {File} usingParam - The full path to the file that 
+			 * @param {File} usingParam The full path to the file that 
 			 * contains the replacement metadata.
-			 * @param {boolean} affectAllParam - If true, treats all 
+			 * @param {boolean} affectAllParam If true, treats all 
 			 * properties as external. Note: Defaults to false. (Optional)
 			 */
 			public replace(usingParam: File, affectAllParam: boolean): void;
 			/**
 			 * Saves the metadata in the document to an external file.
-			 * @param {File} toParam - The path to the external file. 
+			 * @param {File} toParam The path to the external file. 
 			 */
 			public save(toParam: File): void;
 			/**
 			 * Sets the XMP property associated with the specified path.
-			 * @param {string} namespaceParam - The namespace of the 
+			 * @param {string} namespaceParam The namespace of the 
 			 * property.
-			 * @param {string} pathParam - The specified path(s).
-			 * @param {string} valueParam - The value to assign to the 
+			 * @param {string} pathParam The specified path(s).
+			 * @param {string} valueParam The value to assign to the 
 			 * property. Note: To remove the property, pass an empty 
 			 * string.
 			 */

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new StripedStrokeStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new StripedStrokeStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.StripedStrokeStyle;
@@ -22,28 +22,28 @@ declare namespace Adobe {
 			/**
 			 * Returns the StripedStrokeStyle with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.StripedStrokeStyle;
 			/**
 			 * Returns the StripedStrokeStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.StripedStrokeStyle;
 			/**
 			 * Returns the StripedStrokeStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.StripedStrokeStyle;
 			/**
 			 * Returns the StripedStrokeStyles within the specified range.
-			 * @param {any} fromParam - The StripedStrokeStyle, index, or 
+			 * @param {any} fromParam The StripedStrokeStyle, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * StripedStrokeStyle, Long Integer or String.
-			 * @param {any} toParam - The StripedStrokeStyle, index, or 
-			 * name at the end of the range. Can accept: 
-			 * StripedStrokeStyle, Long Integer or String.
+			 * @param {any} toParam The StripedStrokeStyle, index, or name 
+			 * at the end of the range. Can accept: StripedStrokeStyle, 
+			 * Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last StripedStrokeStyle in the collection. */
@@ -53,9 +53,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the StripedStrokeStyle whose index follows the 
 			 * specified StripedStrokeStyle in the collection.
-			 * @param {StripedStrokeStyle} objParam - The 
-			 * StripedStrokeStyle whose index comes before the desired 
-			 * StripedStrokeStyle. 
+			 * @param {StripedStrokeStyle} objParam The StripedStrokeStyle 
+			 * whose index comes before the desired StripedStrokeStyle. 
 			 */
 			public nextItem(objParam: StripedStrokeStyle): Adobe.Indesign.StripedStrokeStyle;
 			/**
@@ -71,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the StripedStrokeStyle with the index previous to 
 			 * the specified index.
-			 * @param {StripedStrokeStyle} objParam - The index of the 
+			 * @param {StripedStrokeStyle} objParam The index of the 
 			 * StripedStrokeStyle that follows the desired 
 			 * StripedStrokeStyle.
 			 */

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,28 +15,28 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.StrokeStyle;
 			/**
 			 * Returns the StrokeStyle with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.StrokeStyle;
 			/**
 			 * Returns the StrokeStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.StrokeStyle;
 			/**
 			 * Returns the StrokeStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.StrokeStyle;
 			/**
 			 * Returns the StrokeStyles within the specified range.
-			 * @param {any} fromParam - The StrokeStyle, index, or name at 
+			 * @param {any} fromParam The StrokeStyle, index, or name at 
 			 * the beginning of the range. Can accept: StrokeStyle, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The StrokeStyle, index, or name at 
-			 * the end of the range. Can accept: StrokeStyle, Long Integer 
-			 * or String.
+			 * @param {any} toParam The StrokeStyle, index, or name at the 
+			 * end of the range. Can accept: StrokeStyle, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last StrokeStyle in the collection. */
@@ -46,7 +46,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the StrokeStyle whose index follows the specified 
 			 * StrokeStyle in the collection.
-			 * @param {StrokeStyle} objParam - The StrokeStyle whose index 
+			 * @param {StrokeStyle} objParam The StrokeStyle whose index 
 			 * comes before the desired StrokeStyle. 
 			 */
 			public nextItem(objParam: StrokeStyle): Adobe.Indesign.StrokeStyle;
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the StrokeStyle with the index previous to the 
 			 * specified index.
-			 * @param {StrokeStyle} objParam - The index of the StrokeStyle 
+			 * @param {StrokeStyle} objParam The index of the StrokeStyle 
 			 * that follows the desired StrokeStyle.
 			 */
 			public previousItem(objParam: StrokeStyle): Adobe.Indesign.StrokeStyle;

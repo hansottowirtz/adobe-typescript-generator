@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new ImportedPage.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ImportedPage (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.ImportedPage;
@@ -21,28 +21,28 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.ImportedPage;
 			/**
 			 * Returns the ImportedPage with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.ImportedPage;
 			/**
 			 * Returns the ImportedPage with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.ImportedPage;
 			/**
 			 * Returns the ImportedPage with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.ImportedPage;
 			/**
 			 * Returns the ImportedPages within the specified range.
-			 * @param {any} fromParam - The ImportedPage, index, or name at 
+			 * @param {any} fromParam The ImportedPage, index, or name at 
 			 * the beginning of the range. Can accept: ImportedPage, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The ImportedPage, index, or name at 
-			 * the end of the range. Can accept: ImportedPage, Long Integer 
-			 * or String.
+			 * @param {any} toParam The ImportedPage, index, or name at the 
+			 * end of the range. Can accept: ImportedPage, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last ImportedPage in the collection. */
@@ -52,8 +52,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the ImportedPage whose index follows the specified 
 			 * ImportedPage in the collection.
-			 * @param {ImportedPage} objParam - The ImportedPage whose 
-			 * index comes before the desired ImportedPage. 
+			 * @param {ImportedPage} objParam The ImportedPage whose index 
+			 * comes before the desired ImportedPage. 
 			 */
 			public nextItem(objParam: ImportedPage): Adobe.Indesign.ImportedPage;
 			/**
@@ -69,8 +69,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the ImportedPage with the index previous to the 
 			 * specified index.
-			 * @param {ImportedPage} objParam - The index of the 
-			 * ImportedPage that follows the desired ImportedPage.
+			 * @param {ImportedPage} objParam The index of the ImportedPage 
+			 * that follows the desired ImportedPage.
 			 */
 			public previousItem(objParam: ImportedPage): Adobe.Indesign.ImportedPage;
 		}

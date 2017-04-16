@@ -1,194 +1,165 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
-		/** The selected area of the document or layer. */
+		/** The selection of the document */
 		class Selection extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** The bounding rectangle of the entire selection. */
+			/** bounding rectangle of the entire selection */
 			public readonly bounds: any[];
-			/** If true, the bounding rectangle a solid rectangle. */
+			/** is the bounding rectangle a solid rectangle */
 			public readonly solid: boolean;
-			/** Clears the selection and does not copy it to the clipboard. */
+			/** clear selection */
 			public clear(): void;
 			/**
-			 * Contracts the selection.
-			 * @param {string} by - The amount to contract the selection.
+			 * contracts the selection
+			 * @param {any} by distance to contract the selection by (unit 
+			 * value)
 			 */
-			public contract(by: string): void;
+			public contract(by: any): void;
 			/**
-			 * Copies the selection to the clipboard.
-			 * @param {boolean} merge - If true the copy includes all 
-			 * visible layers. If false, copies only from the current 
-			 * layer.
+			 * copy selection to the clipboard
+			 * @param {boolean} merge if true the copy includes all visible 
+			 * layers. If false the copy only copies from the current layer
 			 */
 			public copy(merge: boolean): void;
-			/** Cuts the current selection to the clipboard. */
+			/** cut current selection to the clipboard */
 			public cut(): void;
-			/** Deselects the current selection. */
 			public deselect(): void;
 			/**
-			 * Expands the selection.
-			 * @param {string} by - The amount to expand the selection.
+			 * expand selection
+			 * @param {any} by distance to expand the selection by (unit 
+			 * value)
 			 */
-			public expand(by: string): void;
+			public expand(by: any): void;
 			/**
-			 * Feathers the edges of the selection.
-			 * @param {string} by - The amount to feather the edge.
+			 * feather edges of selection
+			 * @param {any} by amount to feather the edge by (unit value)
 			 */
-			public feather(by: string): void;
+			public feather(by: any): void;
 			/**
-			 * Fills the selection.
-			 * @param {any} fillType - The color or history state with 
-			 * which to fill the object.
-			 * @param {Adobe.Photoshop.ColorBlendMode} mode - The color 
-			 * blend mode. ( default: ColorBlendMode.NORMAL )
-			 * @param {number} opacity - The opacity as a percentage. 
-			 * Range: 1 to 100. ( default: 100 )
-			 * @param {boolean} preserveTransparency - If true, perserves 
-			 * transparencies.
+			 * fills the selection
+			 * @param {any} fillType a color or a history state
+			 * @param {Adobe.Photoshop.ColorBlendMode} mode ( default: 
+			 * ColorBlendMode.NORMAL )
+			 * @param {number} opacity ( default: 100 )
+			 * @param {boolean} preserveTransparency 
 			 */
 			public fill(fillType: any, mode: Adobe.Photoshop.ColorBlendMode, opacity: number, preserveTransparency: boolean): void;
 			/**
-			 * Grows the selection to include all adjacent pixels falling 
-			 * within the specified tolerance range.
-			 * @param {number} tolerance - The tolerance range. Range: 0 to 
-			 * 255. ( 0 - 255 )
-			 * @param {boolean} antiAlias - If true, anti-aliasing is used.
+			 * grow selection to include all adjacent pixels falling within 
+			 * the specified tolerance range
+			 * @param {number} tolerance ( 0 - 255 )
+			 * @param {boolean} antiAlias 
 			 */
 			public grow(tolerance: number, antiAlias: boolean): void;
-			/** Inverts the selection. */
+			/** invert the selection */
 			public invert(): void;
 			/**
-			 * Loads the selection from the specified channel.
-			 * @param {Adobe.Photoshop.Channel} _from - The channel to load 
-			 * the selection from.
-			 * @param {Adobe.Photoshop.SelectionType} combination - How to 
-			 * combine the channel contents with the existing selection. ( 
+			 * load the selection from a channel
+			 * @param {Adobe.Photoshop.Channel} _from the channel to load 
+			 * the selection from
+			 * @param {Adobe.Photoshop.SelectionType} combination how to 
+			 * combine the channel contents with the existing selection ( 
 			 * default: SelectionType.REPLACE )
-			 * @param {boolean} inverting - If true, selects the inverse of 
-			 * the channel contents. ( default: false )
+			 * @param {boolean} inverting select the inverse of the channel 
+			 * contents? ( default: false )
 			 */
 			public load(_from: Adobe.Photoshop.Channel, combination: Adobe.Photoshop.SelectionType, inverting: boolean): void;
 			/**
-			 * Makes this selection item the workpath for this document.
-			 * @param {number} tolerance - The tolerance in pixels.
+			 * make this selection item the work path for this document
+			 * @param {number} tolerance tolerance in pixels
 			 */
 			public makeWorkPath(tolerance: number): void;
 			/**
-			 * Resizes the selected area to the specified dimensions and 
-			 * anchor position.
-			 * @param {number} horizontal - The amount to scale the 
-			 * selection horizontally (as a percentage). ( default: 100.0 )
-			 * @param {number} vertical - The amount to scale the selection 
-			 * vertically (as a percentage). ( default: 100.0 )
-			 * @param {Adobe.Photoshop.AnchorPosition} anchor - The point 
-			 * to scale around. ( default: AnchorPosition.MIDDLECENTER )
+			 * @param {number} horizontal percentage ( default: 100.0 )
+			 * @param {number} vertical percentage ( default: 100.0 )
+			 * @param {Adobe.Photoshop.AnchorPosition} anchor point to 
+			 * scale about ( default: AnchorPosition.MIDDLECENTER )
 			 */
 			public resize(horizontal: number, vertical: number, anchor: Adobe.Photoshop.AnchorPosition): void;
 			/**
-			 * Scales the boundary of the selection.
-			 * @param {number} horizontal - The amount to scale the object 
-			 * horizontally (as a percentage). ( default: 100.0 )
-			 * @param {number} vertical - The amount to scale the object 
-			 * vertically (as a percentage). ( default: 100.0 )
-			 * @param {Adobe.Photoshop.AnchorPosition} anchor - The point 
-			 * to scale around. ( default: AnchorPosition.MIDDLECENTER )
+			 * scale the boundary of selection
+			 * @param {number} horizontal percentage ( default: 100.0 )
+			 * @param {number} vertical percentage ( default: 100.0 )
+			 * @param {Adobe.Photoshop.AnchorPosition} anchor point to 
+			 * scale about ( default: AnchorPosition.MIDDLECENTER )
 			 */
 			public resizeBoundary(horizontal: number, vertical: number, anchor: Adobe.Photoshop.AnchorPosition): void;
 			/**
-			 * Rotates the object.
-			 * @param {number} angle - The number of degrees to rotate the 
-			 * object.
-			 * @param {Adobe.Photoshop.AnchorPosition} anchor - The point 
-			 * to rotate about. ( default: AnchorPosition.MIDDLECENTER )
+			 * @param {number} angle 
+			 * @param {Adobe.Photoshop.AnchorPosition} anchor point to 
+			 * rotate about ( default: AnchorPosition.MIDDLECENTER )
 			 */
 			public rotate(angle: number, anchor: Adobe.Photoshop.AnchorPosition): void;
 			/**
-			 * Rotates the boundary of the selection.
-			 * @param {number} angle - The rotation angle (in degrees)
-			 * @param {Adobe.Photoshop.AnchorPosition} anchor - The point 
-			 * to rotate about. ( default: AnchorPosition.MIDDLECENTER )
+			 * rotates the boundary of selection
+			 * @param {number} angle 
+			 * @param {Adobe.Photoshop.AnchorPosition} anchor point to 
+			 * rotate about ( default: AnchorPosition.MIDDLECENTER )
 			 */
 			public rotateBoundary(angle: number, anchor: Adobe.Photoshop.AnchorPosition): void;
 			/**
-			 * Selects the specified region.
-			 * @param {any} region - Array of x and y coordinates that 
-			 * describe the corners of the selection, in the format [[x1, 
-			 * y1], [x2,y2],[x3, y3], [x4,y4]]
-			 * @param {Adobe.Photoshop.SelectionType} _type - The method 
-			 * for combining the new selection with the existing selection. 
-			 * ( default: SelectionType.REPLACE )
-			 * @param {number} feather - The feather amount. ( default: 0.0 
-			 * )
-			 * @param {boolean} antiAlias - If true, anti-aliasing is used. 
-			 * ( default: true )
+			 * @param {any[]} region list of corners of the selection (in 
+			 * pixels)
+			 * @param {Adobe.Photoshop.SelectionType} _type how to combine 
+			 * the new selection with the existing selection ( default: 
+			 * SelectionType.REPLACE )
+			 * @param {number} feather feather amount ( default: 0.0 )
+			 * @param {boolean} antiAlias whether to use antialiasing ( 
+			 * default: true )
 			 */
-			public select(region: any, _type: Adobe.Photoshop.SelectionType, feather: number, antiAlias: boolean): void;
-			/** Selects the entire layer. */
+			public select(region: any[], _type: Adobe.Photoshop.SelectionType, feather: number, antiAlias: boolean): void;
 			public selectAll(): void;
 			/**
-			 * Selects the selection border only (in the specified width); 
-			 * subsequent actions do not affect the selected area within 
-			 * the borders.
-			 * @param {string} width - The width of the border selection.
+			 * select the border of the selection
+			 * @param {any} width width of border selection (unit value)
 			 */
-			public selectBorder(width: string): void;
+			public selectBorder(width: any): void;
 			/**
-			 * Grows the selection to include pixels throughout the image 
-			 * falling within the tolerance range.
-			 * @param {number} tolerance - The tolerance range. Range: 0 to 
-			 * 255.
-			 * @param {boolean} antiAlias - If true, anti-aliasing is used.
+			 * grow selection to include pixels throughout the image 
+			 * falling within the tolerance range
+			 * @param {number} tolerance 
+			 * @param {boolean} antiAlias 
 			 */
 			public similar(tolerance: number, antiAlias: boolean): void;
 			/**
-			 * Cleans up stray pixels left inside or outside a color-based 
-			 * selection (within the radius specified in pixels).
-			 * @param {number} radius - The sample radius in pixels. Range: 
-			 * 0 to 100. ( 0 - 100 )
+			 * @param {number} radius sample radius in pixels ( 0 - 100 )
 			 */
 			public smooth(radius: number): void;
 			/**
-			 * Saves the selection as a channel.
-			 * @param {Adobe.Photoshop.Channel} into - The channel to save 
-			 * the selection to.
-			 * @param {Adobe.Photoshop.SelectionType} combination - How to 
-			 * add the selection to the existing contents of the channel. ( 
+			 * save the selection as a channel
+			 * @param {Adobe.Photoshop.Channel} into the channel to save 
+			 * the selection to
+			 * @param {Adobe.Photoshop.SelectionType} combination how to 
+			 * add the selection to the existing contents of the channel ( 
 			 * default: SelectionType.REPLACE )
 			 */
 			public store(into: Adobe.Photoshop.Channel, combination: Adobe.Photoshop.SelectionType): void;
 			/**
-			 * Strokes the selection.
-			 * @param {any} strokeColor - The color to stroke the selection 
-			 * with.
-			 * @param {number} width - The stroke width.
-			 * @param {Adobe.Photoshop.StrokeLocation} location - The 
-			 * stroke location. ( default: StrokeLocation.CENTER )
-			 * @param {Adobe.Photoshop.ColorBlendMode} mode - The color 
-			 * blend mode. ( default: ColorBlendMode.NORMAL )
-			 * @param {number} opacity - The opacity of the stroke color as 
-			 * a percentage. Range: 1 to 100. ( default: 100 )
-			 * @param {boolean} preserveTransparency - If true, preserves 
-			 * transparency.
+			 * strokes the selection
+			 * @param {any} strokeColor color to stroke selection with
+			 * @param {number} width width of stroke (in pixels)
+			 * @param {Adobe.Photoshop.StrokeLocation} location ( default: 
+			 * StrokeLocation.CENTER )
+			 * @param {Adobe.Photoshop.ColorBlendMode} mode ( default: 
+			 * ColorBlendMode.NORMAL )
+			 * @param {number} opacity ( default: 100 )
+			 * @param {boolean} preserveTransparency 
 			 */
 			public stroke(strokeColor: any, width: number, location: Adobe.Photoshop.StrokeLocation, mode: Adobe.Photoshop.ColorBlendMode, opacity: number, preserveTransparency: boolean): void;
 			/**
-			 * Moves the object relative to its current position.
-			 * @param {string} deltaX - The amount to move the object 
-			 * horizontally.
-			 * @param {string} deltaY - The amount to move the object 
-			 * vertically.
+			 * moves the position relative to its current position
+			 * @param {any} deltaX horizontal transformation (unit value)
+			 * @param {any} deltaY vertical transformation (unit value)
 			 */
-			public translate(deltaX: string, deltaY: string): void;
+			public translate(deltaX: any, deltaY: any): void;
 			/**
-			 * Moves the boundary of selection relative to its current 
-			 * position.
-			 * @param {string} deltaX - The amount to move the object 
-			 * horizontally.
-			 * @param {string} deltaY - The amount to move the object 
-			 * vertically.
+			 * moves the boundary of selection relative to its current 
+			 * position
+			 * @param {any} deltaX horizontal transformation (unit value)
+			 * @param {any} deltaY vertical transformation (unit value)
 			 */
-			public translateBoundary(deltaX: string, deltaY: string): void;
+			public translateBoundary(deltaX: any, deltaY: any): void;
 		}
 	}
 }

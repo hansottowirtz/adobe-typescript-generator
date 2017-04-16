@@ -1,8 +1,8 @@
-/// <reference path="../../namespaces/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
-		/**  A logging target that uses LocalConnection   */
+		/** A logging target that uses LocalConnection */
 		class CSLoggerConnectionTarget extends Adobe.Mx.Logging.Targets.LineFormattedTarget {
 			/** Constructor. */
 			public constructor();

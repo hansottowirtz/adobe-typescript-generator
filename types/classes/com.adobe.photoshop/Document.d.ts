@@ -1,30 +1,33 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
-		/**
-		 * The active containment object for the layers and all other 
-		 * objects in the script; the basic canvas for the file.
-		 */
+		/** A document */
 		class Document extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** The selected channels. */
+			/** selected channels for document */
 			public activeChannels: any[];
-			/** The history state to use with the history brush. */
+			/**
+			 * the current history state to use with the history brush for 
+			 * this document
+			 */
 			public activeHistoryBrushSource: Adobe.Photoshop.HistoryState;
-			/** The current history state for this document. */
+			/** the current history state for this document */
 			public activeHistoryState: Adobe.Photoshop.HistoryState;
-			/** The selected layer. */
+			/** selected layer for document */
 			public activeLayer: Adobe.Photoshop.Layer;
-			/** The art layers collection in the document. */
+			/** the top level art layers in this document */
 			public readonly artLayers: Adobe.Photoshop.ArtLayers;
-			/** The background layer for the document. */
+			/**
+			 * The background layer for the document. Only valid for 
+			 * documents that have a background layer
+			 */
 			public readonly backgroundLayer: Adobe.Photoshop.ArtLayer;
-			/** The number of bits per channel. */
+			/** number of bits per channel */
 			public bitsPerChannel: Adobe.Photoshop.BitsPerChannelType;
-			/** The channels collection in this document. */
+			/** the channels in this document */
 			public readonly channels: Adobe.Photoshop.Channels;
 			/**
-			 * The name of the color profile. Valid only when no value is 
+			 * Name of color profile for document. Valid when no value is 
 			 * specified for color profile kind (to indicate a custom color 
 			 * profile).
 			 */
@@ -36,255 +39,241 @@ declare namespace Adobe {
 			 * profile name.
 			 */
 			public colorProfileType: Adobe.Photoshop.ColorProfile;
-			/** The current color samplers associated with the document. */
+			/** the current color samplers associated with this document */
 			public readonly colorSamplers: Adobe.Photoshop.ColorSamplers;
-			/** The color component channels for this document. */
+			/** all color component channels for this document */
 			public readonly componentChannels: any[];
-			/** The current count items in the document. */
+			/** the current count items */
 			public readonly countItems: Adobe.Photoshop.CountItems;
-			/** The full path name of the document. */
+			/** full path name of document */
 			public readonly fullName: File;
 			/** the guides in this document */
 			public readonly guides: Adobe.Photoshop.Guides;
-			/** The height of the document. */
-			public readonly height: string;
+			/** height of document (unit value) */
+			public readonly height: any;
 			/**
-			 * A histogram showing the number of pixels at each color 
-			 * intensity level for the composite channel. Valid only when 
-			 * 'mode' = RGB, CMYK, or indexed.
+			 * a histogram of values for the composite document (only for 
+			 * RGB, CMYK and 'Indexed colors' documents)
 			 */
 			public readonly histogram: any[];
-			/** The history states collection in this document. */
+			/** the history states associated with this document */
 			public readonly historyStates: Adobe.Photoshop.HistoryStates;
-			/** Metadata about the document. */
+			/** the unique ID of this document */
+			public readonly id: number;
+			/** document information */
 			public readonly info: Adobe.Photoshop.DocumentInfo;
-			/** The layer comps collection in this document. */
+			/** the layer comps associated with this document */
 			public readonly layerComps: Adobe.Photoshop.LayerComps;
-			/** The layers collection in the document. */
+			/** the top level layers in this document */
 			public readonly layers: Adobe.Photoshop.Layers;
-			/** The layer sets collection in the document. */
+			/** the top level layer sets in this document */
 			public readonly layerSets: Adobe.Photoshop.LayerSets;
-			/** If true, the document is a workgroup document. */
+			/** is the document a workgroup document? */
 			public readonly managed: boolean;
-			/** The measurement scale of the document. */
+			/** The measurement scale of the document */
 			public readonly measurementScale: Adobe.Photoshop.MeasurementScale;
-			/** The color profile. */
+			/** document mode */
 			public readonly mode: Adobe.Photoshop.DocumentMode;
-			/** The document name. */
+			/** the document's name */
 			public readonly name: string;
-			/** The path to the document. */
+			/** the path of the document */
 			public readonly path: File;
-			/** The path items collection in this document. */
+			/** the art paths associated with this document */
 			public readonly pathItems: Adobe.Photoshop.PathItems;
-			/**
-			 * The (custom) pixel aspect ratio of the document. Range: 
-			 * 0.100 to 10.000.
-			 */
+			/** the pixel aspect ration of the document */
 			public pixelAspectRatio: number;
-			/** Document print settings. */
+			/** document print settings */
 			public readonly printSettings: Adobe.Photoshop.DocumentPrintSettings;
-			/** If true, the document is in Quick Mask mode. */
+			/** is the document in the quick mask mode? */
 			public quickMaskMode: boolean;
-			/** The resolution of the document (in pixels per inch) */
+			/** the resolution of the document (in pixels per inch) */
 			public readonly resolution: number;
-			/** If true, the document been saved since the last change. */
+			/** has the document been saved since last change? */
 			public readonly saved: boolean;
-			/** The selected area of the document. */
+			/** the document's selection */
 			public readonly selection: Adobe.Photoshop.Selection;
-			/** The width of the document. */
-			public readonly width: string;
-			/**
-			 * The XMP properties of the document. The Camera RAW settings 
-			 * are stored here.
-			 */
+			/** width of document (unit value) */
+			public readonly width: any;
+			/** XMP metadata associated with the document */
 			public readonly xmpMetadata: Adobe.Photoshop.XmpMetadata;
 			/**
-			 * Counts the objects in the document.
-			 * @param {Adobe.Photoshop.Channel} channel - The channel to 
-			 * use for counting.
-			 * @param {number} threshold - Threshold to use for counting. 
-			 * Range: 0 to 255. ( 0 - 255 )
+			 * automatically counts the objects in an image
+			 * @param {Adobe.Photoshop.Channel} channel channel to use for 
+			 * counting
+			 * @param {number} threshold threshold to use for counting 
+			 * (range: 0-255) ( 0 - 255 )
 			 */
 			public autoCount(channel: Adobe.Photoshop.Channel, threshold: number): void;
 			/**
-			 * Changes the mode of the document.
-			 * @param {Adobe.Photoshop.ChangeMode} destinationMode - The 
-			 * mode to change to.
-			 * @param {Adobe.Photoshop.DocumentConversionOptions} options - 
-			 * Options for changing the mode.
+			 * change the mode of the document
+			 * @param {Adobe.Photoshop.ChangeMode} destinationMode name of 
+			 * mode to change to
+			 * @param {Adobe.Photoshop.DocumentConversionOptions} options 
+			 * options for changing the mode
 			 */
 			public changeMode(destinationMode: Adobe.Photoshop.ChangeMode, options: Adobe.Photoshop.DocumentConversionOptions): void;
 			/**
-			 * Closes the document.
-			 * @param {Adobe.Photoshop.SaveOptions} saving - Specifies 
-			 * whether changes should be saved before closing. ( default: 
+			 * close the document
+			 * @param {Adobe.Photoshop.SaveOptions} saving specifies 
+			 * whether changes should be saved before closing ( default: 
 			 * SaveOptions.PROMPTTOSAVECHANGES )
 			 */
 			public close(saving: Adobe.Photoshop.SaveOptions): void;
 			/**
-			 * Converts the document from using one color profile to using 
-			 * another.
-			 * @param {string} destinationProfile - The color profile to 
-			 * convert to. Either a string specifying a color profile, one 
-			 * of the working color spaces, or Lab color.
-			 * @param {Adobe.Photoshop.Intent} intent - The conversion 
-			 * intent.
-			 * @param {boolean} blackPointCompensation - If true, black 
-			 * point compensation is used.
-			 * @param {boolean} dither - If true, dither is used. ( 
-			 * default: true )
+			 * convert the document from using one color profile to using 
+			 * an other
+			 * @param {string} destinationProfile name of color profile to 
+			 * convert to. Either a string specifying a specific color 
+			 * profile or 'Working RGB', 'Working CMYK', 'Working Gray', 
+			 * 'Lab Color' meaning one of the working color spaces or Lab 
+			 * color
+			 * @param {Adobe.Photoshop.Intent} intent conversion intent
+			 * @param {boolean} blackPointCompensation use black point 
+			 * compensation?
+			 * @param {boolean} dither use dither? ( default: true )
 			 */
 			public convertProfile(destinationProfile: string, intent: Adobe.Photoshop.Intent, blackPointCompensation: boolean, dither: boolean): void;
 			/**
-			 * Crops the document.
-			 * @param {any[]} bounds - The area to crop.
-			 * @param {number} angle - The angle of cropping bounds. ( 
-			 * default: 0.0 )
-			 * @param {string} width - The width of the resulting document.
-			 * @param {string} height - The height of the resulting 
-			 * document.
+			 * crop the document
+			 * @param {any[]} bounds area to crop (unit value)
+			 * @param {number} angle angle of cropping bounds ( default: 
+			 * 0.0 )
+			 * @param {any} width width of resulting document (unit value)
+			 * @param {any} height height of resulting document (unit 
+			 * value)
 			 */
-			public crop(bounds: any[], angle: number, width: string, height: string): void;
+			public crop(bounds: any[], angle: number, width: any, height: any): void;
 			/**
-			 * Duplicate this object.
-			 * @param {string} name - The name of the new document.
-			 * @param {boolean} mergeLayersOnly - If ture, duplicates 
-			 * merged layers only.
+			 * duplicate this document with parameters
+			 * @param {string} name name for the new document
+			 * @param {boolean} mergeLayersOnly duplicate merged layers 
+			 * only
 			 */
 			public duplicate(name: string, mergeLayersOnly: boolean): Adobe.Photoshop.Document;
 			/**
-			 * Exports the document.
-			 * @param {Adobe.Flash.Filesystem.File} exportIn - The file to 
-			 * export to.
-			 * @param {Adobe.Photoshop.ExportType} exportAs - The type of 
-			 * export. ( default: ExportType.ILLUSTRATORPATHS )
-			 * @param {Adobe.Photoshop.ExportOptions} options - Options for 
-			 * the specified export type.
+			 * @param {File} exportIn the file to export to
+			 * @param {Adobe.Photoshop.ExportType} exportAs the type of 
+			 * export ( default: ExportType.ILLUSTRATORPATHS )
+			 * @param {Adobe.Photoshop.ExportOptions} options options for 
+			 * the export type specified
 			 */
-			public exportDocument(exportIn: Adobe.Flash.Filesystem.File, exportAs: Adobe.Photoshop.ExportType, options: Adobe.Photoshop.ExportOptions): void;
-			/** Flattens all layers. */
+			public exportDocument(exportIn: File, exportAs: Adobe.Photoshop.ExportType, options: Adobe.Photoshop.ExportOptions): void;
+			/** Flattens all visible layers in the document. */
 			public flatten(): void;
 			/**
-			 * Flips the canvas horizontally or vertically.
-			 * @param {Adobe.Photoshop.Direction} direction - The direction 
-			 * in which to flip the canvas.
+			 * flip the canvas horizontally or vertically
+			 * @param {Adobe.Photoshop.Direction} direction which way to 
+			 * flip the canvas
 			 */
 			public flipCanvas(direction: Adobe.Photoshop.Direction): void;
 			/**
-			 * Imports annotations into the document.
-			 * @param {Adobe.Flash.Filesystem.File} file - The document to 
-			 * import annotations from.
+			 * import annotations into the document
+			 * @param {File} file document to import annotations from
 			 */
-			public importAnnotations(file: Adobe.Flash.Filesystem.File): void;
-			/** Flattens all visible layers in the document. */
+			public importAnnotations(file: File): void;
+			/** flatten all visible layers in the document */
 			public mergeVisibleLayers(): void;
 			/**
-			 * Pastes contents of the clipboard into the document.
-			 * @param {boolean} intoSelection - If true, contents are 
-			 * pasted into the current selection. ( default: false )
+			 * paste contents of clipboard into the document
+			 * @param {boolean} intoSelection should contents be pasted 
+			 * into the current selection? ( default: false )
 			 */
 			public paste(intoSelection: boolean): Adobe.Photoshop.ArtLayer;
 			/**
-			 * Prints the document.
-			 * @param {Adobe.Photoshop.SourceSpaceType} sourceSpace - The 
-			 * color space for the source. ( default: 
-			 * SourceSpaceType.DOCUMENT )
-			 * @param {string} printSpace - The color space for the 
-			 * printer. Can be "nothing" (meaning same as source); one of 
-			 * the working spaces or Lab color; or a string specifying a 
-			 * color space. Default: nothing.
-			 * @param {Adobe.Photoshop.Intent} intent - The color 
-			 * conversion intent. ( default: Intent.RELATIVECOLORIMETRIC )
-			 * @param {boolean} blackPointCompensation - If true, black 
-			 * point compensation is used. ( default: true )
+			 * print the document
+			 * @param {Adobe.Photoshop.SourceSpaceType} sourceSpace color 
+			 * space for source ( default: SourceSpaceType.DOCUMENT )
+			 * @param {string} printSpace color space for printer. Can be 
+			 * nothing (meaning same as source) or a string specifying a 
+			 * specific color profile
+			 * @param {Adobe.Photoshop.Intent} intent if the print space is 
+			 * different from the source space, this argument will be used 
+			 * as the color conversion intent ( default: 
+			 * Intent.RELATIVECOLORIMETRIC )
+			 * @param {boolean} blackPointCompensation if the print space 
+			 * is different from the source space, this argument indicates 
+			 * if the color conversion should use black point compensation 
+			 * ( default: true )
 			 */
 			public print(sourceSpace: Adobe.Photoshop.SourceSpaceType, printSpace: string, intent: Adobe.Photoshop.Intent, blackPointCompensation: boolean): void;
-			/** Print one copy of the document. */
+			/** print one copy of the document */
 			public printOneCopy(): void;
-			/** Rasterizes all layers. */
+			/** rasterize all layers */
 			public rasterizeAllLayers(): void;
 			/**
-			 * Records the measurements of document.
-			 * @param {Adobe.Photoshop.MeasurementSource} source - The 
-			 * source of the measurements to record.
-			 * @param {any} dataPoints - An array of identifiers of data 
-			 * points to record. Any data points not appropriate for the 
-			 * specified source are ignored.
+			 * record measurements of document
+			 * @param {Adobe.Photoshop.MeasurementSource} source source of 
+			 * the measurements to record
+			 * @param {any[]} dataPoints array of identifiers of data 
+			 * points to record.  Any data points not appropriate for the 
+			 * specified source will be ignored
 			 */
-			public recordMeasurements(source: Adobe.Photoshop.MeasurementSource, dataPoints: any): void;
+			public recordMeasurements(source: Adobe.Photoshop.MeasurementSource, dataPoints: any[]): void;
 			/**
-			 * Changes the size of the canvas.
-			 * @param {string} width - The desired width of the canvas.
-			 * @param {string} height - The desired height of the canvas.
-			 * @param {Adobe.Photoshop.AnchorPosition} anchor - The anchor 
-			 * point to resize around. ( default: 
-			 * AnchorPosition.MIDDLECENTER )
+			 * change the size of the canvas
+			 * @param {any} width desired width of canvas (unit value)
+			 * @param {any} height desired height of canvas (unit value)
+			 * @param {Adobe.Photoshop.AnchorPosition} anchor anchor to 
+			 * resize around ( default: AnchorPosition.MIDDLECENTER )
 			 */
-			public resizeCanvas(width: string, height: string, anchor: Adobe.Photoshop.AnchorPosition): void;
+			public resizeCanvas(width: any, height: any, anchor: Adobe.Photoshop.AnchorPosition): void;
 			/**
-			 * Changes the size of the image.
-			 * @param {string} width - The desired width of the image.
-			 * @param {string} height - The desired height of the image.
-			 * @param {number} resolution - The resolution (in pixels per 
-			 * inch)
-			 * @param {Adobe.Photoshop.ResampleMethod} resampleMethod - The 
-			 * downsample method. ( default: ResampleMethod.BICUBIC )
+			 * change the size of the image
+			 * @param {any} width desired width of image (unit value)
+			 * @param {any} height desired height of image (unit value)
+			 * @param {number} resolution (in pixels per inch)
+			 * @param {Adobe.Photoshop.ResampleMethod} resampleMethod what 
+			 * method should be used for resampling pixels ( default: 
+			 * ResampleMethod.BICUBIC )
 			 */
-			public resizeImage(width: string, height: string, resolution: number, resampleMethod: Adobe.Photoshop.ResampleMethod): void;
-			/** Expands the document to show clipped sections. */
+			public resizeImage(width: any, height: any, resolution: number, resampleMethod: Adobe.Photoshop.ResampleMethod): void;
+			/** expand document to show clipped sections */
 			public revealAll(): void;
 			/**
-			 * Rotates the canvas.
-			 * @param {number} angle - The number of degrees to rotate. A 
-			 * positive angle rotates the canvas clockwise; a negative 
-			 * value rotates the canvas counter-clockwise.
+			 * rotate canvas of document
+			 * @param {number} angle number of degrees to rotate. A 
+			 * positive angle will rotate the canvas clockwise; a negative 
+			 * value will rotate the canvas counter-clockwise
 			 */
 			public rotateCanvas(angle: number): void;
-			/** Saves the document. */
+			/** save the document */
 			public save(): void;
 			/**
-			 * Saves the document with the specified save options.
-			 * @param {Adobe.Flash.Filesystem.File} saveIn - The file to 
-			 * save to, specified as a string containing the full file path 
-			 * or an alias. If not specified, the document is saved to its 
-			 * existing file.
-			 * @param {any} options - Options for the specified file type.
-			 * @param {boolean} asCopy - Saves the document as a copy, 
-			 * leaving the original open.
-			 * @param {Adobe.Photoshop.Extension} extensionType - Appends 
-			 * the specified extension to the file name.
+			 * save the document with specific save options
+			 * @param {File} saveIn the file to save the document in
+			 * @param {any} options either a 'SaveDocumentType' value or a 
+			 * save options object
+			 * @param {boolean} asCopy save as copy leaving original open
+			 * @param {Adobe.Photoshop.Extension} extensionType append an 
+			 * extension to the document name
 			 */
-			public saveAs(saveIn: Adobe.Flash.Filesystem.File, options: any, asCopy: boolean, extensionType: Adobe.Photoshop.Extension): void;
-			/** Splits the channels of the document. */
-			public splitChannels(): any;
+			public saveAs(saveIn: File, options: any, asCopy: boolean, extensionType: Adobe.Photoshop.Extension): void;
+			/** split channels of the document */
+			public splitChannels(): any[];
 			/**
-			 * Provides a single history state for the entire script. 
-			 * Allows a single undo for all actions taken in the script.
-			 * @param {string} historyString - The string to use for the 
-			 * history state.
-			 * @param {string} javaScriptString - A string of JavaScript 
-			 * code to execute during the suspension of history.
+			 * Combine multiple history states into one
+			 * @param {string} historyString String to use for the history 
+			 * state
+			 * @param {string} javaScriptString JavaScriptString to execute 
+			 * during the suspension of history
 			 */
 			public suspendHistory(historyString: string, javaScriptString: string): void;
 			/**
-			 * Applies trapping to a CMYK document. Valid only when 'mode' 
-			 * = CMYK.
-			 * @param {number} width - The trap width in pixels.
+			 * apply trap to a CMYK document
+			 * @param {number} width trap width in pixels
 			 */
 			public trap(width: number): void;
 			/**
-			 * Trims the transparent area around the image on the specified 
-			 * sides of the canvas.
-			 * @param {Adobe.Photoshop.TrimType} _type - The color or type 
-			 * of pixels to base the trim on. ( default: TrimType.TOPLEFT )
-			 * @param {boolean} top - If true, trims away the top of the 
-			 * document. ( default: true )
-			 * @param {boolean} left - If true, trims away the left of the 
-			 * document. ( default: true )
-			 * @param {boolean} bottom - If true, trims away the bottom of 
-			 * the document. ( default: true )
-			 * @param {boolean} right - If true, trims away the right of 
-			 * the document. ( default: true )
+			 * @param {Adobe.Photoshop.TrimType} _type color or type of 
+			 * pixels to base trim on ( default: TrimType.TOPLEFT )
+			 * @param {boolean} top trim away top of document ( default: 
+			 * true )
+			 * @param {boolean} left trim away left of document ( default: 
+			 * true )
+			 * @param {boolean} bottom trim away bottom of document ( 
+			 * default: true )
+			 * @param {boolean} right trim away right of document ( 
+			 * default: true )
 			 */
 			public trim(_type: Adobe.Photoshop.TrimType, top: boolean, left: boolean, bottom: boolean, right: boolean): void;
 		}

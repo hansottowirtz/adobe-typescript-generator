@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -19,6 +19,10 @@ declare namespace Adobe {
 			public static readonly jpeg: Adobe.Incopy.ImageConversion;
 			/** Uses JPEG format for all images. */
 			public static readonly JPEG: Adobe.Incopy.ImageConversion;
+			/** Alias for PNG. Uses PNG format for all images. */
+			public static readonly png: Adobe.Incopy.ImageConversion;
+			/** Uses PNG format for all images. */
+			public static readonly PNG: Adobe.Incopy.ImageConversion;
 			/** Constructor */
 			public constructor();
 		}

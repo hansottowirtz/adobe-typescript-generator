@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -10,6 +10,10 @@ declare namespace Adobe {
 			public static readonly BEFORE_PLACE: string;
 			/** A collection of buttons. */
 			public readonly buttons: Adobe.Indesign.Buttons;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Indesign.CheckBoxes;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Indesign.ComboBoxes;
 			/** A collection of EPS files. */
 			public readonly epss: Adobe.Indesign.EPSs;
 			/** EPSTexts */
@@ -45,6 +49,8 @@ declare namespace Adobe {
 			public readonly isValid: boolean;
 			/** A property that can be set to any string. */
 			public label: string;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Indesign.ListBoxes;
 			/** A collection of multi-state objects. */
 			public readonly multiStateObjects: Adobe.Indesign.MultiStateObjects;
 			/**
@@ -73,26 +79,32 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Indesign.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Indesign.Rectangles;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Indesign.SignatureFields;
 			/** The spline items collection. */
 			public readonly splineItems: Adobe.Indesign.SplineItems;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Indesign.TextBoxes;
 			/** A collection of text frames. */
 			public readonly textFrames: Adobe.Indesign.TextFrames;
 			/** A collection of WMF graphics. */
 			public readonly wmfs: Adobe.Indesign.WMFs;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerSnippet(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -103,18 +115,18 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/** Deletes the Snippet. */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerSnippet(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

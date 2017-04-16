@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new IntegerCombobox.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new IntegerCombobox (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.IntegerCombobox;
@@ -22,22 +22,22 @@ declare namespace Adobe {
 			/**
 			 * Returns the IntegerCombobox with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.IntegerCombobox;
 			/**
 			 * Returns the IntegerCombobox with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.IntegerCombobox;
 			/**
 			 * Returns the IntegerComboboxes within the specified range.
-			 * @param {any} fromParam - The IntegerCombobox, index, or name 
+			 * @param {any} fromParam The IntegerCombobox, index, or name 
 			 * at the beginning of the range. Can accept: IntegerCombobox, 
 			 * Long Integer or String.
-			 * @param {any} toParam - The IntegerCombobox, index, or name 
-			 * at the end of the range. Can accept: IntegerCombobox, Long 
+			 * @param {any} toParam The IntegerCombobox, index, or name at 
+			 * the end of the range. Can accept: IntegerCombobox, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -48,8 +48,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the IntegerCombobox whose index follows the 
 			 * specified IntegerCombobox in the collection.
-			 * @param {IntegerCombobox} objParam - The IntegerCombobox 
-			 * whose index comes before the desired IntegerCombobox. 
+			 * @param {IntegerCombobox} objParam The IntegerCombobox whose 
+			 * index comes before the desired IntegerCombobox. 
 			 */
 			public nextItem(objParam: IntegerCombobox): Adobe.Incopy.IntegerCombobox;
 			/**
@@ -65,7 +65,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the IntegerCombobox with the index previous to the 
 			 * specified index.
-			 * @param {IntegerCombobox} objParam - The index of the 
+			 * @param {IntegerCombobox} objParam The index of the 
 			 * IntegerCombobox that follows the desired IntegerCombobox.
 			 */
 			public previousItem(objParam: IntegerCombobox): Adobe.Incopy.IntegerCombobox;

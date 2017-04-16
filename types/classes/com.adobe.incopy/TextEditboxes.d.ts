@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new TextEditbox.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TextEditbox (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.TextEditbox;
@@ -21,23 +21,23 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.TextEditbox;
 			/**
 			 * Returns the TextEditbox with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.TextEditbox;
 			/**
 			 * Returns the TextEditbox with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.TextEditbox;
 			/**
 			 * Returns the TextEditboxes within the specified range.
-			 * @param {any} fromParam - The TextEditbox, index, or name at 
+			 * @param {any} fromParam The TextEditbox, index, or name at 
 			 * the beginning of the range. Can accept: TextEditbox, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The TextEditbox, index, or name at 
-			 * the end of the range. Can accept: TextEditbox, Long Integer 
-			 * or String.
+			 * @param {any} toParam The TextEditbox, index, or name at the 
+			 * end of the range. Can accept: TextEditbox, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last TextEditbox in the collection. */
@@ -47,7 +47,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextEditbox whose index follows the specified 
 			 * TextEditbox in the collection.
-			 * @param {TextEditbox} objParam - The TextEditbox whose index 
+			 * @param {TextEditbox} objParam The TextEditbox whose index 
 			 * comes before the desired TextEditbox. 
 			 */
 			public nextItem(objParam: TextEditbox): Adobe.Incopy.TextEditbox;
@@ -64,7 +64,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextEditbox with the index previous to the 
 			 * specified index.
-			 * @param {TextEditbox} objParam - The index of the TextEditbox 
+			 * @param {TextEditbox} objParam The index of the TextEditbox 
 			 * that follows the desired TextEditbox.
 			 */
 			public previousItem(objParam: TextEditbox): Adobe.Incopy.TextEditbox;

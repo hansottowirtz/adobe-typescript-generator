@@ -1,11 +1,11 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** Preference */
 		class GeneralPreference extends Adobe.Indesign.Preference {
 			/** If true, application bar is shown. */
-			public applicationBarShown: boolean;
+			public readonly applicationBarShown: boolean;
 			/** If true, panel drawers close automatically. */
 			public autoCollapseIconPanels: boolean;
 			/**
@@ -18,6 +18,13 @@ declare namespace Adobe {
 			 * the number of glyphs the font contains.
 			 */
 			public completeFontDownloadGlyphLimit: number;
+			/** Enable the creation of links on content place */
+			public createLinksOnContentPlace: boolean;
+			/**
+			 * When using a custom monitor resolution, what is the value of 
+			 * that resolution in pixels per inch
+			 */
+			public customMonitorPpi: number;
 			/** If true, floating windows can be docked by user as tabs. */
 			public enableFloatingWindowDocking: boolean;
 			/** Controls whether or not multi-touch gestures are enabled. */
@@ -26,6 +33,16 @@ declare namespace Adobe {
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
 			/** A collection of events. */
 			public readonly events: Adobe.Indesign.Events;
+			/**
+			 * Controls whether or not to greek vector graphics when 
+			 * dragging at high quality.
+			 */
+			public greekVectorGraphicsOnDrag: boolean;
+			/**
+			 * Controls whether or not to highlight object under selection 
+			 * tool.
+			 */
+			public highlightObjectUnderSelectionTool: boolean;
 			/** If true, includes a preview in saved documents. */
 			public includePreview: boolean;
 			/**
@@ -33,6 +50,10 @@ declare namespace Adobe {
 			 * objects.
 			 */
 			public readonly isValid: boolean;
+			/** The value of the system reported main monitor resolution */
+			public readonly mainMonitorPpi: number;
+			/** Enable the mapping of styles on content place */
+			public mapStylesOnContentPlace: boolean;
 			/**
 			 * Controls whether page items move when a page is repositioned 
 			 * from the UI. The option/alt key temporarily reverses this 
@@ -60,6 +81,11 @@ declare namespace Adobe {
 			 * locked item. When this is off, only position is locked.
 			 */
 			public preventSelectingLockedItems: boolean;
+			/**
+			 * The pages to create preview images for. Note: Valid when 
+			 * include preview is true.
+			 */
+			public previewPages: Adobe.Indesign.PreviewPagesOptions;
 			/** The preview size. Note: Valid when include preview is true. */
 			public previewSize: Adobe.Indesign.PreviewSizeOptions;
 			/**
@@ -68,10 +94,20 @@ declare namespace Adobe {
 			 */
 			public properties: any;
 			/**
+			 * Controls whether or not the anchor object adornment is 
+			 * shown.
+			 */
+			public showAnchorObjectAdornment: boolean;
+			/**
 			 * Controls whether or not the content grabber adornment is 
 			 * shown.
 			 */
 			public showContentGrabber: boolean;
+			/**
+			 * Show the conveyor on content collector or content placer 
+			 * tool activation
+			 */
+			public showConveyor: boolean;
 			/**
 			 * Controls whether or not the live corners grabber adornment 
 			 * is shown.
@@ -95,13 +131,18 @@ declare namespace Adobe {
 			/** Tool tip behavior. */
 			public toolTips: Adobe.Indesign.ToolTipOptions;
 			/** If true, application lives in a frame. */
-			public useApplicationFrame: boolean;
+			public readonly useApplicationFrame: boolean;
+			/**
+			 * Enable the use of a custom monitor resolution in pixels per 
+			 * inch as opposed to querying the system settings
+			 */
+			public useCustomMonitorResolution: boolean;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerGeneralPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -112,10 +153,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerGeneralPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

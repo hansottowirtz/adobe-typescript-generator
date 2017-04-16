@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,13 +7,13 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new assignment.
-			 * @param {File} filePathParam - The full path name of the new 
+			 * @param {File} filePathParam The full path name of the new 
 			 * assignment.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Assignment (Optional)
 			 */
 			public add(filePathParam: File, versionCommentsParam: string, forceSaveParam: boolean, withPropertiesParam: any): Adobe.Indesign.Assignment;
@@ -27,26 +27,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Assignment;
 			/**
 			 * Returns the Assignment with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Assignment;
 			/**
 			 * Returns the Assignment with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Assignment;
 			/**
 			 * Returns the Assignment with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Assignment;
 			/**
 			 * Returns the Assignments within the specified range.
-			 * @param {any} fromParam - The Assignment, index, or name at 
-			 * the beginning of the range. Can accept: Assignment, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The Assignment, index, or name at the 
+			 * @param {any} fromParam The Assignment, index, or name at the 
+			 * beginning of the range. Can accept: Assignment, Long Integer 
+			 * or String.
+			 * @param {any} toParam The Assignment, index, or name at the 
 			 * end of the range. Can accept: Assignment, Long Integer or 
 			 * String.
 			 */
@@ -58,7 +58,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Assignment whose index follows the specified 
 			 * Assignment in the collection.
-			 * @param {Assignment} objParam - The Assignment whose index 
+			 * @param {Assignment} objParam The Assignment whose index 
 			 * comes before the desired Assignment. 
 			 */
 			public nextItem(objParam: Assignment): Adobe.Indesign.Assignment;
@@ -75,7 +75,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Assignment with the index previous to the 
 			 * specified index.
-			 * @param {Assignment} objParam - The index of the Assignment 
+			 * @param {Assignment} objParam The index of the Assignment 
 			 * that follows the desired Assignment.
 			 */
 			public previousItem(objParam: Assignment): Adobe.Indesign.Assignment;

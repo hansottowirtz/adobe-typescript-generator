@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new ParagraphStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ParagraphStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.ParagraphStyle;
@@ -21,26 +21,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.ParagraphStyle;
 			/**
 			 * Returns the ParagraphStyle with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.ParagraphStyle;
 			/**
 			 * Returns the ParagraphStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.ParagraphStyle;
 			/**
 			 * Returns the ParagraphStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.ParagraphStyle;
 			/**
 			 * Returns the ParagraphStyles within the specified range.
-			 * @param {any} fromParam - The ParagraphStyle, index, or name 
-			 * at the beginning of the range. Can accept: ParagraphStyle, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The ParagraphStyle, index, or name at 
+			 * @param {any} fromParam The ParagraphStyle, index, or name at 
+			 * the beginning of the range. Can accept: ParagraphStyle, Long 
+			 * Integer or String.
+			 * @param {any} toParam The ParagraphStyle, index, or name at 
 			 * the end of the range. Can accept: ParagraphStyle, Long 
 			 * Integer or String.
 			 */
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphStyle whose index follows the specified 
 			 * ParagraphStyle in the collection.
-			 * @param {ParagraphStyle} objParam - The ParagraphStyle whose 
+			 * @param {ParagraphStyle} objParam The ParagraphStyle whose 
 			 * index comes before the desired ParagraphStyle. 
 			 */
 			public nextItem(objParam: ParagraphStyle): Adobe.Indesign.ParagraphStyle;
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ParagraphStyle with the index previous to the 
 			 * specified index.
-			 * @param {ParagraphStyle} objParam - The index of the 
+			 * @param {ParagraphStyle} objParam The index of the 
 			 * ParagraphStyle that follows the desired ParagraphStyle.
 			 */
 			public previousItem(objParam: ParagraphStyle): Adobe.Indesign.ParagraphStyle;

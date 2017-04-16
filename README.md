@@ -5,6 +5,8 @@
 - override modifier
 - Every method has 'function' in implementation
 - /^(override)? ?(protected|public|flash_proxy) ?(static)? function (\w+)\((?:(\w+): ?(\w+|\*) ?(?:= ([\w\d\.\/-]+))?,? ?)*(?: \.{3} ?(\w+))?\)(?:: ?(\w+|\*))?$/
+- http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.5/docs/WebHelp/suitesdk.htm
+- http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/2.1/docs/WebHelp/references/XMPASLib/XMP_API_Summary.htm
 
 # Setup
 

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -39,10 +39,10 @@ declare namespace Adobe {
 			public visible: boolean;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerLibraryPanel(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -53,19 +53,19 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerLibraryPanel(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Selects the specified object(s).
-			 * @param {any} selectableItemsParam - The objects to select. 
-			 * Can accept: Object, Array of Objects, NothingEnum enumerator 
-			 * or SelectAll enumerator.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {any} selectableItemsParam The objects to select. Can 
+			 * accept: Object, Array of Objects, NothingEnum enumerator or 
+			 * SelectAll enumerator.
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the LibraryPanel in relation to 
 			 * previously selected objects. (Optional)
 			 */

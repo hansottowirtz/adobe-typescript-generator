@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,15 +7,15 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new action.
-			 * @param {string} titleParam - The name of the 
-			 * ScriptMenuAction for display in the user interface. The 
-			 * title includes any ampersand characters (&), which are used 
-			 * to tell the Windows OS to underline the following character 
-			 * in the name for use with the Alt key to navigate to a menu 
-			 * item. Double ampersands are used to display an actual 
-			 * ampersand character in the name. The Mac OS ignores and 
-			 * removes the extra ampersand characters. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {string} titleParam The name of the ScriptMenuAction 
+			 * for display in the user interface. The title includes any 
+			 * ampersand characters (&), which are used to tell the Windows 
+			 * OS to underline the following character in the name for use 
+			 * with the Alt key to navigate to a menu item. Double 
+			 * ampersands are used to display an actual ampersand character 
+			 * in the name. The Mac OS ignores and removes the extra 
+			 * ampersand characters. (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ScriptMenuAction (Optional)
 			 */
 			public add(titleParam: string, withPropertiesParam: any): Adobe.Incopy.ScriptMenuAction;
@@ -30,27 +30,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the ScriptMenuAction with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.ScriptMenuAction;
 			/**
 			 * Returns the ScriptMenuAction with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.ScriptMenuAction;
 			/**
 			 * Returns the ScriptMenuAction with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.ScriptMenuAction;
 			/**
 			 * Returns the ScriptMenuActions within the specified range.
-			 * @param {any} fromParam - The ScriptMenuAction, index, or 
-			 * name at the beginning of the range. Can accept: 
-			 * ScriptMenuAction, Long Integer or String.
-			 * @param {any} toParam - The ScriptMenuAction, index, or name 
-			 * at the end of the range. Can accept: ScriptMenuAction, Long 
+			 * @param {any} fromParam The ScriptMenuAction, index, or name 
+			 * at the beginning of the range. Can accept: ScriptMenuAction, 
+			 * Long Integer or String.
+			 * @param {any} toParam The ScriptMenuAction, index, or name at 
+			 * the end of the range. Can accept: ScriptMenuAction, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -61,7 +61,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ScriptMenuAction whose index follows the 
 			 * specified ScriptMenuAction in the collection.
-			 * @param {ScriptMenuAction} objParam - The ScriptMenuAction 
+			 * @param {ScriptMenuAction} objParam The ScriptMenuAction 
 			 * whose index comes before the desired ScriptMenuAction. 
 			 */
 			public nextItem(objParam: ScriptMenuAction): Adobe.Incopy.ScriptMenuAction;
@@ -78,7 +78,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ScriptMenuAction with the index previous to the 
 			 * specified index.
-			 * @param {ScriptMenuAction} objParam - The index of the 
+			 * @param {ScriptMenuAction} objParam The index of the 
 			 * ScriptMenuAction that follows the desired ScriptMenuAction.
 			 */
 			public previousItem(objParam: ScriptMenuAction): Adobe.Incopy.ScriptMenuAction;

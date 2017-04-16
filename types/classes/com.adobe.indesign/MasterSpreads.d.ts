@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new master spread.
-			 * @param {number} pagesPerSpreadParam - The number of pages to 
+			 * @param {number} pagesPerSpreadParam The number of pages to 
 			 * include in the master spread. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new MasterSpread (Optional)
 			 */
 			public add(pagesPerSpreadParam: number, withPropertiesParam: any): Adobe.Indesign.MasterSpread;
@@ -23,28 +23,28 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.MasterSpread;
 			/**
 			 * Returns the MasterSpread with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.MasterSpread;
 			/**
 			 * Returns the MasterSpread with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.MasterSpread;
 			/**
 			 * Returns the MasterSpread with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.MasterSpread;
 			/**
 			 * Returns the MasterSpreads within the specified range.
-			 * @param {any} fromParam - The MasterSpread, index, or name at 
+			 * @param {any} fromParam The MasterSpread, index, or name at 
 			 * the beginning of the range. Can accept: MasterSpread, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The MasterSpread, index, or name at 
-			 * the end of the range. Can accept: MasterSpread, Long Integer 
-			 * or String.
+			 * @param {any} toParam The MasterSpread, index, or name at the 
+			 * end of the range. Can accept: MasterSpread, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last MasterSpread in the collection. */
@@ -54,8 +54,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the MasterSpread whose index follows the specified 
 			 * MasterSpread in the collection.
-			 * @param {MasterSpread} objParam - The MasterSpread whose 
-			 * index comes before the desired MasterSpread. 
+			 * @param {MasterSpread} objParam The MasterSpread whose index 
+			 * comes before the desired MasterSpread. 
 			 */
 			public nextItem(objParam: MasterSpread): Adobe.Indesign.MasterSpread;
 			/**
@@ -71,8 +71,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the MasterSpread with the index previous to the 
 			 * specified index.
-			 * @param {MasterSpread} objParam - The index of the 
-			 * MasterSpread that follows the desired MasterSpread.
+			 * @param {MasterSpread} objParam The index of the MasterSpread 
+			 * that follows the desired MasterSpread.
 			 */
 			public previousItem(objParam: MasterSpread): Adobe.Indesign.MasterSpread;
 		}

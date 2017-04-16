@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -8,25 +8,25 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * a document
-			 * @param {string} width - width of the document (unit value)
-			 * @param {string} height - height of the document (unit value)
-			 * @param {number} resolution - Resolution of the document (in 
+			 * @param {any} width width of the document (unit value)
+			 * @param {any} height height of the document (unit value)
+			 * @param {number} resolution Resolution of the document (in 
 			 * pixels per inch) ( default: 72.0 )
-			 * @param {string} name - name of document
-			 * @param {Adobe.Photoshop.NewDocumentMode} mode - document 
-			 * mode (Bitmap, Grayscale, RGB, CMYK or Lab) ( default: 
+			 * @param {string} name name of document
+			 * @param {Adobe.Photoshop.NewDocumentMode} mode document mode 
+			 * (Bitmap, Grayscale, RGB, CMYK or Lab) ( default: 
 			 * NewDocumentMode.RGB )
-			 * @param {Adobe.Photoshop.DocumentFill} initialFill - Initial 
+			 * @param {Adobe.Photoshop.DocumentFill} initialFill Initial 
 			 * fill of the document ( default: DocumentFill.WHITE )
-			 * @param {number} pixelAspectRatio - Initial pixel aspect 
-			 * ratio of the document ( default: 1.0 )
-			 * @param {Adobe.Photoshop.BitsPerChannelType} bitsPerChannel - 
+			 * @param {number} pixelAspectRatio Initial pixel aspect ratio 
+			 * of the document ( default: 1.0 )
+			 * @param {Adobe.Photoshop.BitsPerChannelType} bitsPerChannel 
 			 * number of bits per channel ( default: 
 			 * BitsPerChannelType.EIGHT )
-			 * @param {string} colorProfileName - name of color profile for 
+			 * @param {string} colorProfileName name of color profile for 
 			 * document
 			 */
-			public add(width: string, height: string, resolution: number, name: string, mode: Adobe.Photoshop.NewDocumentMode, initialFill: Adobe.Photoshop.DocumentFill, pixelAspectRatio: number, bitsPerChannel: Adobe.Photoshop.BitsPerChannelType, colorProfileName: string): Adobe.Photoshop.Document;
+			public add(width: any, height: any, resolution: number, name: string, mode: Adobe.Photoshop.NewDocumentMode, initialFill: Adobe.Photoshop.DocumentFill, pixelAspectRatio: number, bitsPerChannel: Adobe.Photoshop.BitsPerChannelType, colorProfileName: string): Adobe.Photoshop.Document;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.

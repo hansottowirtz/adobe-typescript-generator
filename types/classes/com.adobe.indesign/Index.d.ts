@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -38,10 +38,10 @@ declare namespace Adobe {
 			public readonly topics: Adobe.Indesign.Topics;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerIndex(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -49,30 +49,30 @@ declare namespace Adobe {
 			 * Makes the initial letter for the specified index topic or 
 			 * group of index topics upper case.
 			 * @param {IndexCapitalizationOptions} 
-			 * capitalizationOptionParam - The entry or entries to 
+			 * capitalizationOptionParam The entry or entries to 
 			 * capitalize. (Optional)
 			 */
 			public capitalize(capitalizationOptionParam: IndexCapitalizationOptions): void;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Generates a new index story.
-			 * @param {any} onParam - The spread or page on which to place 
+			 * @param {any} onParam The spread or page on which to place 
 			 * the story. Can accept: Page, Spread or MasterSpread. 
 			 * (Optional)
-			 * @param {any[]} placePointParam - The coordinates of the 
-			 * upper left corner of the story bounding box, in the format 
-			 * [x, y]. (Optional)
-			 * @param {Layer} destinationLayerParam - The layer on which to 
+			 * @param {any[]} placePointParam The coordinates of the upper 
+			 * left corner of the story bounding box, in the format [x, y]. 
+			 * (Optional)
+			 * @param {Layer} destinationLayerParam The layer on which to 
 			 * place the story. (Optional)
-			 * @param {boolean} autoflowingParam - If true, allows the 
-			 * story to flow onto subsequent pages if the story does not 
-			 * fit on the specified page. If no subsequent pages exist in 
-			 * the document, creates the necessary pages. (Optional)
-			 * @param {boolean} includeOversetParam - If true, includes 
+			 * @param {boolean} autoflowingParam If true, allows the story 
+			 * to flow onto subsequent pages if the story does not fit on 
+			 * the specified page. If no subsequent pages exist in the 
+			 * document, creates the necessary pages. (Optional)
+			 * @param {boolean} includeOversetParam If true, includes 
 			 * topics in overset text in the story.  (Optional)
 			 */
 			public generate(onParam: any, placePointParam: any[], destinationLayerParam: Layer, autoflowingParam: boolean, includeOversetParam: boolean): any;
@@ -83,23 +83,23 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Imports a list of index topics.
-			 * @param {File} fromParam - The file from which to import the 
+			 * @param {File} fromParam The file from which to import the 
 			 * topics.
 			 */
 			public importTopics(fromParam: File): void;
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerIndex(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

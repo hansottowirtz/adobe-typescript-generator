@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -22,10 +22,10 @@ declare namespace Adobe {
 			public properties: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerScriptArg(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -33,7 +33,7 @@ declare namespace Adobe {
 			public clear(): void;
 			/**
 			 * Gets the value of a script argument.
-			 * @param {string} nameParam - The name of the script argument.
+			 * @param {string} nameParam The name of the script argument.
 			 */
 			public get(nameParam: string): string;
 			/**
@@ -43,20 +43,20 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Gets the value of a script argument.
-			 * @param {string} nameParam - The name of the script argument.
+			 * @param {string} nameParam The name of the script argument.
 			 */
 			public getValue(nameParam: string): string;
 			/**
 			 * Verifies whether the script argument is defined.
-			 * @param {string} nameParam - The name of the script argument.
+			 * @param {string} nameParam The name of the script argument.
 			 */
 			public isDefined(nameParam: string): boolean;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerScriptArg(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -66,14 +66,14 @@ declare namespace Adobe {
 			public save(): void;
 			/**
 			 * Sets the value of a script argument.
-			 * @param {string} nameParam - The name of the script argument.
-			 * @param {string} valueParam - The value.
+			 * @param {string} nameParam The name of the script argument.
+			 * @param {string} valueParam The value.
 			 */
 			public set(nameParam: string, valueParam: string): void;
 			/**
 			 * Sets the value of a script argument.
-			 * @param {string} nameParam - The name of the script argument.
-			 * @param {string} valueParam - The value.
+			 * @param {string} nameParam The name of the script argument.
+			 * @param {string} valueParam The value.
 			 */
 			public setValue(nameParam: string, valueParam: string): void;
 			/** Retrieves the object specifier. */

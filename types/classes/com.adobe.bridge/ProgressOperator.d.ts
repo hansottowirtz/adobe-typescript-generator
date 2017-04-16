@@ -1,30 +1,28 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
 		/**
-		 * A lengthy node-handling operation that can report its 
-		 * progress and be interrupted or canceled.When implementing a 
-		 * node-handling extension, you must define certain methods for 
-		 * a node-handler’s ExtensionHandler and ExtensionModel to 
-		 * create and return an Operator object, which actually 
-		 * implements the operation. The model method returns 
-		 * immediately. To start the operation, your node handler (or 
-		 * Adobe Bridge) passes the returned Operator object to 
-		 * app.enqueueOperation(). This in turn calls the start() 
-		 * method defined in the object. This object encapsulates an 
-		 * operation that performs a background task, while Adobe 
-		 * Bridge displays a Progress bar. It can do so incrementally, 
-		 * periodically notifying Adobe Bridge of the current status. 
-		 * For this object, the start() method should spawn a thread to 
-		 * perform the operation and return immediately. Adobe Bridge 
-		 * displays a Progress bar, and resumes activity on the main 
-		 * thread. When the background thread updates the status in any 
-		 * way that affects the display, it must pass this object to 
-		 * app.operationChanged(). Adobe Bridge queries this object in 
-		 * order to update the Progress dialog or display the Adobe 
-		 * Bridge-supplied error handling or resolution conflict 
-		 * dialogs.
+		 * When implementing a node-handling extension, you must define 
+		 * certain methods for a node-handler’s ExtensionHandler and 
+		 * ExtensionModel to create and return an Operator object, 
+		 * which actually implements the operation. The model method 
+		 * returns immediately. To start the operation, your node 
+		 * handler (or Adobe Bridge) passes the returned Operator 
+		 * object to app.enqueueOperation(). This in turn calls the 
+		 * start() method defined in the object. This object 
+		 * encapsulates an operation that performs a background task, 
+		 * while Adobe Bridge displays a Progress bar. It can do so 
+		 * incrementally, periodically notifying Adobe Bridge of the 
+		 * current status. For this object, the start() method should 
+		 * spawn a thread to perform the operation and return 
+		 * immediately. Adobe Bridge displays a Progress bar, and 
+		 * resumes activity on the main thread. When the background 
+		 * thread updates the status in any way that affects the 
+		 * display, it must pass this object to app.operationChanged(). 
+		 * Adobe Bridge queries this object in order to update the 
+		 * Progress dialog or display the Adobe Bridge-supplied error 
+		 * handling or resolution conflict dialogs.
 		 */
 		class ProgressOperator extends Adobe.Csawlib.CSHostObject {
 			/**

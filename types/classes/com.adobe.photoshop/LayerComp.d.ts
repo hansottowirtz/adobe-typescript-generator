@@ -1,31 +1,28 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
-		/**
-		 * A snapshot of a state of the layers in a document (can be 
-		 * used to view different page layouts or compostions).
-		 */
+		/** A layer composition in a document */
 		class LayerComp extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** If true, uses layer appearance (layer styles) settings. */
+			/** use layer appearance */
 			public appearance: boolean;
-			/** The description of the layer comp. */
+			/** the description of the layer comp */
 			public comment: any;
-			/** The name of the layer comp. */
+			/** the name of the layer comp */
 			public name: string;
-			/** If true, uses layer position. */
+			/** use layer position */
 			public position: boolean;
-			/** If true, the layer comp is currently selected. */
+			/** the layer comp is currently selected */
 			public readonly selected: boolean;
-			/** If true, the layer comp is visible. */
+			/** use layer visibility */
 			public visibility: boolean;
-			/** Applies the layer comp to the document. */
+			/** apply the layer comp to the document */
 			public apply(): void;
-			/** Recaptures the current layer state(s) for this layer comp. */
+			/** recapture the current layer state(s) for this layer comp */
 			public recapture(): void;
 			/** delete the object */
 			public remove(): void;
-			/** Resets the layer comp state to the document state. */
+			/** reset the layer comp state to the document state */
 			public resetFromComp(): void;
 		}
 	}

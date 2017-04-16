@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new DottedStrokeStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new DottedStrokeStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.DottedStrokeStyle;
@@ -22,26 +22,26 @@ declare namespace Adobe {
 			/**
 			 * Returns the DottedStrokeStyle with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.DottedStrokeStyle;
 			/**
 			 * Returns the DottedStrokeStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.DottedStrokeStyle;
 			/**
 			 * Returns the DottedStrokeStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.DottedStrokeStyle;
 			/**
 			 * Returns the DottedStrokeStyles within the specified range.
-			 * @param {any} fromParam - The DottedStrokeStyle, index, or 
-			 * name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The DottedStrokeStyle, index, or name 
+			 * at the beginning of the range. Can accept: 
 			 * DottedStrokeStyle, Long Integer or String.
-			 * @param {any} toParam - The DottedStrokeStyle, index, or name 
+			 * @param {any} toParam The DottedStrokeStyle, index, or name 
 			 * at the end of the range. Can accept: DottedStrokeStyle, Long 
 			 * Integer or String.
 			 */
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DottedStrokeStyle whose index follows the 
 			 * specified DottedStrokeStyle in the collection.
-			 * @param {DottedStrokeStyle} objParam - The DottedStrokeStyle 
+			 * @param {DottedStrokeStyle} objParam The DottedStrokeStyle 
 			 * whose index comes before the desired DottedStrokeStyle. 
 			 */
 			public nextItem(objParam: DottedStrokeStyle): Adobe.Indesign.DottedStrokeStyle;
@@ -70,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the DottedStrokeStyle with the index previous to the 
 			 * specified index.
-			 * @param {DottedStrokeStyle} objParam - The index of the 
+			 * @param {DottedStrokeStyle} objParam The index of the 
 			 * DottedStrokeStyle that follows the desired 
 			 * DottedStrokeStyle.
 			 */

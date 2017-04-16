@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,11 +7,11 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new XML element.
-			 * @param {any} markupTagParam - The XML tag used to identify 
-			 * the element. Can accept: String or XMLTag.
-			 * @param {any} xmlContentParam - The content to be marked up. 
+			 * @param {any} markupTagParam The XML tag used to identify the 
+			 * element. Can accept: String or XMLTag.
+			 * @param {any} xmlContentParam The content to be marked up. 
 			 * Can accept: Text, Image, Story, Table or Cell. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new XMLElement (Optional)
 			 */
 			public add(markupTagParam: any, xmlContentParam: any, withPropertiesParam: any): Adobe.Incopy.XMLElement;
@@ -25,21 +25,21 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.XMLElement;
 			/**
 			 * Returns the XMLElement with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.XMLElement;
 			/**
 			 * Returns the XMLElement with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.XMLElement;
 			/**
 			 * Returns the XMLElements within the specified range.
-			 * @param {any} fromParam - The XMLElement, index, or name at 
-			 * the beginning of the range. Can accept: XMLElement, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The XMLElement, index, or name at the 
+			 * @param {any} fromParam The XMLElement, index, or name at the 
+			 * beginning of the range. Can accept: XMLElement, Long Integer 
+			 * or String.
+			 * @param {any} toParam The XMLElement, index, or name at the 
 			 * end of the range. Can accept: XMLElement, Long Integer or 
 			 * String.
 			 */
@@ -51,7 +51,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the XMLElement whose index follows the specified 
 			 * XMLElement in the collection.
-			 * @param {XMLElement} objParam - The XMLElement whose index 
+			 * @param {XMLElement} objParam The XMLElement whose index 
 			 * comes before the desired XMLElement. 
 			 */
 			public nextItem(objParam: XMLElement): Adobe.Incopy.XMLElement;
@@ -68,7 +68,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the XMLElement with the index previous to the 
 			 * specified index.
-			 * @param {XMLElement} objParam - The index of the XMLElement 
+			 * @param {XMLElement} objParam The index of the XMLElement 
 			 * that follows the desired XMLElement.
 			 */
 			public previousItem(objParam: XMLElement): Adobe.Incopy.XMLElement;

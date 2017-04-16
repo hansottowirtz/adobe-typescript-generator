@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,27 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Link;
 			/**
 			 * Returns the Link with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Link;
 			/**
 			 * Returns the Link with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Link;
 			/**
 			 * Returns the Link with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Link;
 			/**
 			 * Returns the Links within the specified range.
-			 * @param {any} fromParam - The Link, index, or name at the 
+			 * @param {any} fromParam The Link, index, or name at the 
 			 * beginning of the range. Can accept: Link, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Link, index, or name at the end 
-			 * of the range. Can accept: Link, Long Integer or String.
+			 * @param {any} toParam The Link, index, or name at the end of 
+			 * the range. Can accept: Link, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Link in the collection. */
@@ -45,8 +45,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Link whose index follows the specified Link in 
 			 * the collection.
-			 * @param {Link} objParam - The Link whose index comes before 
-			 * the desired Link. 
+			 * @param {Link} objParam The Link whose index comes before the 
+			 * desired Link. 
 			 */
 			public nextItem(objParam: Link): Adobe.Indesign.Link;
 			/**
@@ -62,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Link with the index previous to the specified 
 			 * index.
-			 * @param {Link} objParam - The index of the Link that follows 
+			 * @param {Link} objParam The index of the Link that follows 
 			 * the desired Link.
 			 */
 			public previousItem(objParam: Link): Adobe.Indesign.Link;

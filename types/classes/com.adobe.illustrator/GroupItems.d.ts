@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -10,10 +10,10 @@ declare namespace Adobe {
 			public add(): Adobe.Illustrator.GroupItem;
 			/**
 			 * create a group item from a vector graphics file
-			 * @param {Adobe.Flash.Filesystem.File} imageFile - the vector 
-			 * graphics file to be embedded
+			 * @param {File} imageFile the vector graphics file to be 
+			 * embedded
 			 */
-			public createFromFile(imageFile: Adobe.Flash.Filesystem.File): Adobe.Illustrator.GroupItem;
+			public createFromFile(imageFile: File): Adobe.Illustrator.GroupItem;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.

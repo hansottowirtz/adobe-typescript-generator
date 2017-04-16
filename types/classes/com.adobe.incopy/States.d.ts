@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,27 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.State;
 			/**
 			 * Returns the State with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.State;
 			/**
 			 * Returns the State with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.State;
 			/**
 			 * Returns the State with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.State;
 			/**
 			 * Returns the States within the specified range.
-			 * @param {any} fromParam - The State, index, or name at the 
+			 * @param {any} fromParam The State, index, or name at the 
 			 * beginning of the range. Can accept: State, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The State, index, or name at the end 
-			 * of the range. Can accept: State, Long Integer or String.
+			 * @param {any} toParam The State, index, or name at the end of 
+			 * the range. Can accept: State, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last State in the collection. */
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the State whose index follows the specified State in 
 			 * the collection.
-			 * @param {State} objParam - The State whose index comes before 
+			 * @param {State} objParam The State whose index comes before 
 			 * the desired State. 
 			 */
 			public nextItem(objParam: State): Adobe.Incopy.State;
@@ -62,8 +62,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the State with the index previous to the specified 
 			 * index.
-			 * @param {State} objParam - The index of the State that 
-			 * follows the desired State.
+			 * @param {State} objParam The index of the State that follows 
+			 * the desired State.
 			 */
 			public previousItem(objParam: State): Adobe.Incopy.State;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,13 +7,13 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Adds a new preflight process.
-			 * @param {Document} targetObjectParam - The document the 
-			 * process should inspect.
-			 * @param {PreflightProfile} appliedProfileParam - The 
-			 * preflight profile that should be used.
-			 * @param {PreflightOption} preflightOptionsParam - The 
-			 * preflight options that should be used. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {Document} targetObjectParam The document the process 
+			 * should inspect.
+			 * @param {PreflightProfile} appliedProfileParam The preflight 
+			 * profile that should be used.
+			 * @param {PreflightOption} preflightOptionsParam The preflight 
+			 * options that should be used. (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new PreflightProcess (Optional)
 			 */
 			public add(targetObjectParam: Document, appliedProfileParam: PreflightProfile, preflightOptionsParam: PreflightOption, withPropertiesParam: any): Adobe.Indesign.PreflightProcess;
@@ -28,17 +28,17 @@ declare namespace Adobe {
 			/**
 			 * Returns the PreflightProcess with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.PreflightProcess;
 			/**
 			 * Returns the PreflightProcesses within the specified range.
-			 * @param {any} fromParam - The PreflightProcess, index, or 
-			 * name at the beginning of the range. Can accept: 
-			 * PreflightProcess, Long Integer or String.
-			 * @param {any} toParam - The PreflightProcess, index, or name 
-			 * at the end of the range. Can accept: PreflightProcess, Long 
+			 * @param {any} fromParam The PreflightProcess, index, or name 
+			 * at the beginning of the range. Can accept: PreflightProcess, 
+			 * Long Integer or String.
+			 * @param {any} toParam The PreflightProcess, index, or name at 
+			 * the end of the range. Can accept: PreflightProcess, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -49,7 +49,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PreflightProcess whose index follows the 
 			 * specified PreflightProcess in the collection.
-			 * @param {PreflightProcess} objParam - The PreflightProcess 
+			 * @param {PreflightProcess} objParam The PreflightProcess 
 			 * whose index comes before the desired PreflightProcess. 
 			 */
 			public nextItem(objParam: PreflightProcess): Adobe.Indesign.PreflightProcess;
@@ -66,7 +66,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PreflightProcess with the index previous to the 
 			 * specified index.
-			 * @param {PreflightProcess} objParam - The index of the 
+			 * @param {PreflightProcess} objParam The index of the 
 			 * PreflightProcess that follows the desired PreflightProcess.
 			 */
 			public previousItem(objParam: PreflightProcess): Adobe.Indesign.PreflightProcess;

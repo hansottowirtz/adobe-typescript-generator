@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -8,6 +8,14 @@ declare namespace Adobe {
 			public static readonly EPS_TYPE: Adobe.Indesign.ExportFormat;
 			/** Alias for EPS_TYPE. Exports to EPS format. */
 			public static readonly epsType: Adobe.Indesign.ExportFormat;
+			/** Alias for EPUB. Exports to EPub format. */
+			public static readonly epub: Adobe.Indesign.ExportFormat;
+			/** Exports to EPub format. */
+			public static readonly EPUB: Adobe.Indesign.ExportFormat;
+			/** Alias for HTML. Exports to XHTML format. */
+			public static readonly html: Adobe.Indesign.ExportFormat;
+			/** Exports to XHTML format. */
+			public static readonly HTML: Adobe.Indesign.ExportFormat;
 			/** Exports to InCopy markup (ICML) format. */
 			public static readonly INCOPY_MARKUP: Adobe.Indesign.ExportFormat;
 			/**

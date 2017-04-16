@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -16,28 +16,28 @@ declare namespace Adobe {
 			/**
 			 * Returns the LanguageWithVendors with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.LanguageWithVendors;
 			/**
 			 * Returns the LanguageWithVendors with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.LanguageWithVendors;
 			/**
 			 * Returns the LanguageWithVendors with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.LanguageWithVendors;
 			/**
 			 * Returns the LanguagesWithVendors within the specified range.
-			 * @param {any} fromParam - The LanguageWithVendors, index, or 
+			 * @param {any} fromParam The LanguageWithVendors, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * LanguageWithVendors, Long Integer or String.
-			 * @param {any} toParam - The LanguageWithVendors, index, or 
-			 * name at the end of the range. Can accept: 
-			 * LanguageWithVendors, Long Integer or String.
+			 * @param {any} toParam The LanguageWithVendors, index, or name 
+			 * at the end of the range. Can accept: LanguageWithVendors, 
+			 * Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last LanguageWithVendors in the collection. */
@@ -47,7 +47,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the LanguageWithVendors whose index follows the 
 			 * specified LanguageWithVendors in the collection.
-			 * @param {LanguageWithVendors} objParam - The 
+			 * @param {LanguageWithVendors} objParam The 
 			 * LanguageWithVendors whose index comes before the desired 
 			 * LanguageWithVendors. 
 			 */
@@ -65,7 +65,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the LanguageWithVendors with the index previous to 
 			 * the specified index.
-			 * @param {LanguageWithVendors} objParam - The index of the 
+			 * @param {LanguageWithVendors} objParam The index of the 
 			 * LanguageWithVendors that follows the desired 
 			 * LanguageWithVendors.
 			 */

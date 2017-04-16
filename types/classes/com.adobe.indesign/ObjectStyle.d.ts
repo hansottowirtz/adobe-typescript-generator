@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -68,6 +68,11 @@ declare namespace Adobe {
 			 * corner options.
 			 */
 			public enableStrokeAndCornerOptions: boolean;
+			/**
+			 * If true, the object style will apply auto-sizing text frame 
+			 * options.
+			 */
+			public enableTextFrameAutoSizingOptions: boolean;
 			/**
 			 * If true, the object style will apply baseline text frame 
 			 * options.
@@ -257,10 +262,10 @@ declare namespace Adobe {
 			public readonly transparencySettings: Adobe.Indesign.TransparencySetting;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerObjectStyle(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -268,7 +273,7 @@ declare namespace Adobe {
 			public duplicate(): Adobe.Indesign.ObjectStyle;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -279,15 +284,15 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Moves the ObjectStyle to the specified location.
-			 * @param {LocationOptions} toParam - The new location relative 
+			 * @param {LocationOptions} toParam The new location relative 
 			 * to the reference object or within the container object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter is before or after. Can 
 			 * accept: ObjectStyle, ObjectStyleGroup, Document or 
 			 * Application. (Optional)
@@ -295,16 +300,16 @@ declare namespace Adobe {
 			public move(toParam: LocationOptions, referenceParam: any): Adobe.Indesign.ObjectStyle;
 			/**
 			 * Deletes the style.
-			 * @param {ObjectStyle} replacingWithParam - The style to apply 
+			 * @param {ObjectStyle} replacingWithParam The style to apply 
 			 * in place of the deleted style. (Optional)
 			 */
 			public remove(replacingWithParam: ObjectStyle): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerObjectStyle(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

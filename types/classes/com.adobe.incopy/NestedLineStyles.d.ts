@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new NestedLineStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new NestedLineStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.NestedLineStyle;
@@ -22,17 +22,17 @@ declare namespace Adobe {
 			/**
 			 * Returns the NestedLineStyle with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.NestedLineStyle;
 			/**
 			 * Returns the NestedLineStyles within the specified range.
-			 * @param {any} fromParam - The NestedLineStyle, index, or name 
+			 * @param {any} fromParam The NestedLineStyle, index, or name 
 			 * at the beginning of the range. Can accept: NestedLineStyle, 
 			 * Long Integer or String.
-			 * @param {any} toParam - The NestedLineStyle, index, or name 
-			 * at the end of the range. Can accept: NestedLineStyle, Long 
+			 * @param {any} toParam The NestedLineStyle, index, or name at 
+			 * the end of the range. Can accept: NestedLineStyle, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -43,8 +43,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the NestedLineStyle whose index follows the 
 			 * specified NestedLineStyle in the collection.
-			 * @param {NestedLineStyle} objParam - The NestedLineStyle 
-			 * whose index comes before the desired NestedLineStyle. 
+			 * @param {NestedLineStyle} objParam The NestedLineStyle whose 
+			 * index comes before the desired NestedLineStyle. 
 			 */
 			public nextItem(objParam: NestedLineStyle): Adobe.Incopy.NestedLineStyle;
 			/**
@@ -60,7 +60,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the NestedLineStyle with the index previous to the 
 			 * specified index.
-			 * @param {NestedLineStyle} objParam - The index of the 
+			 * @param {NestedLineStyle} objParam The index of the 
 			 * NestedLineStyle that follows the desired NestedLineStyle.
 			 */
 			public previousItem(objParam: NestedLineStyle): Adobe.Incopy.NestedLineStyle;

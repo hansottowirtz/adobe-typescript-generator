@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -102,6 +102,8 @@ declare namespace Adobe {
 			public readonly buttons: Adobe.Indesign.Buttons;
 			/** The capitalization scheme. */
 			public capitalization: Adobe.Indesign.Capitalization;
+			/** A collection of cell style mappings. */
+			public readonly cellStyleMappings: Adobe.Indesign.CellStyleMappings;
 			/** A collection of changes. */
 			public readonly changes: Adobe.Indesign.Changes;
 			/**
@@ -118,11 +120,17 @@ declare namespace Adobe {
 			public characterRotation: number;
 			/** A collection of characters. */
 			public readonly characters: Adobe.Indesign.Characters;
+			/** A collection of char style mappings. */
+			public readonly charStyleMappings: Adobe.Indesign.CharStyleMappings;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Indesign.CheckBoxes;
 			/**
 			 * If true, uses grid tracking to track non-Roman characters in 
 			 * CJK grids.
 			 */
 			public cjkGridTracking: boolean;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Indesign.ComboBoxes;
 			/** The text composer to use to compose the text. */
 			public composer: string;
 			/**
@@ -467,6 +475,10 @@ declare namespace Adobe {
 			public ligatures: boolean;
 			/** A collection of lines. */
 			public readonly lines: Adobe.Indesign.Lines;
+			/** Linked story options */
+			public readonly linkedStoryOptions: Adobe.Indesign.LinkedStoryOption;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Indesign.ListBoxes;
 			/** The lock state. */
 			public readonly lockState: Adobe.Indesign.LockStateValues;
 			/**
@@ -631,8 +643,15 @@ declare namespace Adobe {
 			public paragraphGyoudori: boolean;
 			/** Paragraph justification. */
 			public paragraphJustification: Adobe.Indesign.ParagraphJustificationOptions;
+			/**
+			 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 
+			 * 3 is long
+			 */
+			public paragraphKashidaWidth: number;
 			/** A collection of paragraphs. */
 			public readonly paragraphs: Adobe.Indesign.Paragraphs;
+			/** A collection of para style mappings. */
+			public readonly paraStyleMappings: Adobe.Indesign.ParaStyleMappings;
 			/** The parent of the XmlStory (a Document). */
 			public readonly parent: any;
 			/** The text size. */
@@ -650,6 +669,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Indesign.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Indesign.Rectangles;
 			/**
@@ -901,6 +922,8 @@ declare namespace Adobe {
 			public shataiDegreeAngle: number;
 			/** The amount (as a percentage) of shatai obliquing to apply. */
 			public shataiMagnification: number;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Indesign.SignatureFields;
 			/** The alignment to use for lines that contain a single word. */
 			public singleWordJustification: Adobe.Indesign.SingleWordJustification;
 			/** The skew angle of the XmlStory. */
@@ -1005,6 +1028,8 @@ declare namespace Adobe {
 			public readonly styleOverridden: boolean;
 			/** A collection of tables. */
 			public readonly tables: Adobe.Indesign.Tables;
+			/** A collection of table style mappings. */
+			public readonly tableStyleMappings: Adobe.Indesign.TableStyleMappings;
 			/**
 			 * A list of the tab stops in the paragraph. Can return: Array 
 			 * of Arrays of Property Name/Value Pairs.
@@ -1024,6 +1049,8 @@ declare namespace Adobe {
 			 * text.
 			 */
 			public tatechuyokoYOffset: number;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Indesign.TextBoxes;
 			/** A collection of text columns. */
 			public readonly textColumns: Adobe.Indesign.TextColumns;
 			/**
@@ -1130,66 +1157,66 @@ declare namespace Adobe {
 			public yOffsetDiacritic: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerXmlStory(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * asynchronously exports the object(s) to a file.
-			 * @param {any} formatParam - The export format, specified as 
-			 * an enumeration value or as an extension that appears in the 
+			 * @param {any} formatParam The export format, specified as an 
+			 * enumeration value or as an extension that appears in the 
 			 * Save as type or Format menu in the Export dialog. Can 
 			 * accept: ExportFormat enumerator or String.
-			 * @param {File} toParam - The path to the export file.
-			 * @param {boolean} showingOptionsParam - If true, displays the 
+			 * @param {File} toParam The path to the export file.
+			 * @param {boolean} showingOptionsParam If true, displays the 
 			 * export options dialog. (Optional)
-			 * @param {PDFExportPreset} usingParam - The export style. 
+			 * @param {PDFExportPreset} usingParam The export style. 
 			 * (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public asynchronousExportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, versionCommentsParam: string, forceSaveParam: boolean): Adobe.Indesign.BackgroundTask;
 			/**
 			 * Sets the case of the text.
-			 * @param {ChangecaseMode} usingParam - The text case option.
+			 * @param {ChangecaseMode} usingParam The text case option.
 			 */
 			public changecase(usingParam: ChangecaseMode): void;
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Clears the specified types of override.
-			 * @param {OverrideType} overridesToClearParam - The types of 
+			 * @param {OverrideType} overridesToClearParam The types of 
 			 * override to clear. (Optional)
 			 */
 			public clearOverrides(overridesToClearParam: OverrideType): void;
@@ -1201,16 +1228,16 @@ declare namespace Adobe {
 			 * that has no internal spaces or detached parts, the polygon 
 			 * contains only a single path. Note: To determine whether a 
 			 * font allows the creation of outlines, see allow outlines.
-			 * @param {boolean} deleteOriginalParam - If true, deletes the 
+			 * @param {boolean} deleteOriginalParam If true, deletes the 
 			 * original text. If false, creates the outlines as separate 
 			 * object(s) on top of the text.  (Optional)
 			 */
 			public createOutlines(deleteOriginalParam: boolean): any;
 			/**
 			 * Duplicates the text in the specified location.
-			 * @param {LocationOptions} toParam - The location relative to 
+			 * @param {LocationOptions} toParam The location relative to 
 			 * the reference object or within the containing object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. 
 			 * Can accept: Text, Story, Cell, Row, Column, Table or 
 			 * PageItem. (Optional)
@@ -1218,30 +1245,30 @@ declare namespace Adobe {
 			public duplicate(toParam: LocationOptions, referenceParam: any): Adobe.Indesign.Text;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -1253,16 +1280,16 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerXmlStory(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.EPS;
 			/**
 			 * Returns the EPS with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.EPS;
 			/**
 			 * Returns the EPS with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.EPS;
 			/**
 			 * Returns the EPS with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.EPS;
 			/**
 			 * Returns the EPSs within the specified range.
-			 * @param {any} fromParam - The EPS, index, or name at the 
+			 * @param {any} fromParam The EPS, index, or name at the 
 			 * beginning of the range. Can accept: EPS, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The EPS, index, or name at the end of 
+			 * @param {any} toParam The EPS, index, or name at the end of 
 			 * the range. Can accept: EPS, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the EPS whose index follows the specified EPS in the 
 			 * collection.
-			 * @param {EPS} objParam - The EPS whose index comes before the 
+			 * @param {EPS} objParam The EPS whose index comes before the 
 			 * desired EPS. 
 			 */
 			public nextItem(objParam: EPS): Adobe.Indesign.EPS;
@@ -62,8 +62,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the EPS with the index previous to the specified 
 			 * index.
-			 * @param {EPS} objParam - The index of the EPS that follows 
-			 * the desired EPS.
+			 * @param {EPS} objParam The index of the EPS that follows the 
+			 * desired EPS.
 			 */
 			public previousItem(objParam: EPS): Adobe.Indesign.EPS;
 		}

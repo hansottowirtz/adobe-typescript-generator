@@ -6,8 +6,10 @@ class Chunk
     puts(line) if line
   end
 
-  def puts(line)
-    line.split("\n").each { |l| @lines << l }
+  def puts(line = '')
+    a = line.split("\n")
+    a = [''] if a.empty?
+    a.each { |l| @lines << l }
     self
   end
 

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new AngleEditbox.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new AngleEditbox (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.AngleEditbox;
@@ -21,23 +21,23 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.AngleEditbox;
 			/**
 			 * Returns the AngleEditbox with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.AngleEditbox;
 			/**
 			 * Returns the AngleEditbox with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.AngleEditbox;
 			/**
 			 * Returns the AngleEditboxes within the specified range.
-			 * @param {any} fromParam - The AngleEditbox, index, or name at 
+			 * @param {any} fromParam The AngleEditbox, index, or name at 
 			 * the beginning of the range. Can accept: AngleEditbox, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The AngleEditbox, index, or name at 
-			 * the end of the range. Can accept: AngleEditbox, Long Integer 
-			 * or String.
+			 * @param {any} toParam The AngleEditbox, index, or name at the 
+			 * end of the range. Can accept: AngleEditbox, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last AngleEditbox in the collection. */
@@ -47,8 +47,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the AngleEditbox whose index follows the specified 
 			 * AngleEditbox in the collection.
-			 * @param {AngleEditbox} objParam - The AngleEditbox whose 
-			 * index comes before the desired AngleEditbox. 
+			 * @param {AngleEditbox} objParam The AngleEditbox whose index 
+			 * comes before the desired AngleEditbox. 
 			 */
 			public nextItem(objParam: AngleEditbox): Adobe.Incopy.AngleEditbox;
 			/**
@@ -64,8 +64,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the AngleEditbox with the index previous to the 
 			 * specified index.
-			 * @param {AngleEditbox} objParam - The index of the 
-			 * AngleEditbox that follows the desired AngleEditbox.
+			 * @param {AngleEditbox} objParam The index of the AngleEditbox 
+			 * that follows the desired AngleEditbox.
 			 */
 			public previousItem(objParam: AngleEditbox): Adobe.Incopy.AngleEditbox;
 		}

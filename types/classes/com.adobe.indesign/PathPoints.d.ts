@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new PathPoint.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new PathPoint (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.PathPoint;
@@ -21,16 +21,16 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.PathPoint;
 			/**
 			 * Returns the PathPoint with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.PathPoint;
 			/**
 			 * Returns the PathPoints within the specified range.
-			 * @param {any} fromParam - The PathPoint, index, or name at 
-			 * the beginning of the range. Can accept: PathPoint, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The PathPoint, index, or name at the 
+			 * @param {any} fromParam The PathPoint, index, or name at the 
+			 * beginning of the range. Can accept: PathPoint, Long Integer 
+			 * or String.
+			 * @param {any} toParam The PathPoint, index, or name at the 
 			 * end of the range. Can accept: PathPoint, Long Integer or 
 			 * String.
 			 */
@@ -42,8 +42,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the PathPoint whose index follows the specified 
 			 * PathPoint in the collection.
-			 * @param {PathPoint} objParam - The PathPoint whose index 
-			 * comes before the desired PathPoint. 
+			 * @param {PathPoint} objParam The PathPoint whose index comes 
+			 * before the desired PathPoint. 
 			 */
 			public nextItem(objParam: PathPoint): Adobe.Indesign.PathPoint;
 			/**
@@ -59,8 +59,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the PathPoint with the index previous to the 
 			 * specified index.
-			 * @param {PathPoint} objParam - The index of the PathPoint 
-			 * that follows the desired PathPoint.
+			 * @param {PathPoint} objParam The index of the PathPoint that 
+			 * follows the desired PathPoint.
 			 */
 			public previousItem(objParam: PathPoint): Adobe.Indesign.PathPoint;
 		}

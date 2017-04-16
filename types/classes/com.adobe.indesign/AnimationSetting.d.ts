@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -54,11 +54,12 @@ declare namespace Adobe {
 			 */
 			public opacityArray: any;
 			/**
-			 * The parent of the AnimationSetting (a PageItem, FormField, 
-			 * MultiStateObject, Button, MediaItem, Sound, Movie, EPSText, 
-			 * SplineItem, Polygon, GraphicLine, Rectangle, Oval, Graphic, 
-			 * ImportedPage, PICT, WMF, PDF, EPS, Image, Group or 
-			 * TextFrame).
+			 * The parent of the AnimationSetting (a PageItem, HtmlItem, 
+			 * FormField, SignatureField, TextBox, RadioButton, ListBox, 
+			 * ComboBox, CheckBox, MultiStateObject, Button, MediaItem, 
+			 * Sound, Movie, EPSText, SplineItem, Polygon, GraphicLine, 
+			 * Rectangle, Oval, Graphic, ImportedPage, PICT, WMF, PDF, EPS, 
+			 * Image, Group or TextFrame).
 			 */
 			public readonly parent: any;
 			/** The number of times this animation plays. */
@@ -100,10 +101,10 @@ declare namespace Adobe {
 			public transformOffsets: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerAnimationSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -114,24 +115,24 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerAnimationSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Save this motion preset as custom preset.
-			 * @param {string} nameParam - The name for the new motion 
+			 * @param {string} nameParam The name for the new motion 
 			 * preset.
 			 */
 			public save(nameParam: string): Adobe.Indesign.MotionPreset;
 			/**
 			 * Save a copy of this motion preset to a InDesign motion 
 			 * preset file.
-			 * @param {File} toParam - The Flash motion preset file to 
-			 * export to.
+			 * @param {File} toParam The Flash motion preset file to export 
+			 * to.
 			 */
 			public saveACopy(toParam: File): void;
 			/** Retrieves the object specifier. */

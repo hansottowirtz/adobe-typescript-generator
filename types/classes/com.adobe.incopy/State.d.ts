@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -48,7 +48,10 @@ declare namespace Adobe {
 			 * group), regardless of type.
 			 */
 			public readonly pageItems: Adobe.Incopy.PageItems;
-			/** The parent of the State (a Button or MultiStateObject). */
+			/**
+			 * The parent of the State (a Button, MultiStateObject, 
+			 * CheckBox or RadioButton).
+			 */
 			public readonly parent: any;
 			/** A collection of PDF files. */
 			public readonly pdfs: Adobe.Incopy.PDFs;
@@ -79,10 +82,10 @@ declare namespace Adobe {
 			public readonly wmfs: Adobe.Incopy.WMFs;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerState(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -95,10 +98,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerState(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

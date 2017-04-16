@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -22,29 +22,29 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPreviousViewBehavior with the specified 
 			 * index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.GotoPreviousViewBehavior;
 			/**
 			 * Returns the GotoPreviousViewBehavior with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.GotoPreviousViewBehavior;
 			/**
 			 * Returns the GotoPreviousViewBehavior with the specified 
 			 * name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.GotoPreviousViewBehavior;
 			/**
 			 * Returns the GotoPreviousViewBehaviors within the specified 
 			 * range.
-			 * @param {any} fromParam - The GotoPreviousViewBehavior, 
-			 * index, or name at the beginning of the range. Can accept: 
+			 * @param {any} fromParam The GotoPreviousViewBehavior, index, 
+			 * or name at the beginning of the range. Can accept: 
 			 * GotoPreviousViewBehavior, Long Integer or String.
-			 * @param {any} toParam - The GotoPreviousViewBehavior, index, 
-			 * or name at the end of the range. Can accept: 
+			 * @param {any} toParam The GotoPreviousViewBehavior, index, or 
+			 * name at the end of the range. Can accept: 
 			 * GotoPreviousViewBehavior, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -60,7 +60,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPreviousViewBehavior whose index follows the 
 			 * specified GotoPreviousViewBehavior in the collection.
-			 * @param {GotoPreviousViewBehavior} objParam - The 
+			 * @param {GotoPreviousViewBehavior} objParam The 
 			 * GotoPreviousViewBehavior whose index comes before the 
 			 * desired GotoPreviousViewBehavior. 
 			 */
@@ -78,8 +78,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the GotoPreviousViewBehavior with the index previous 
 			 * to the specified index.
-			 * @param {GotoPreviousViewBehavior} objParam - The index of 
-			 * the GotoPreviousViewBehavior that follows the desired 
+			 * @param {GotoPreviousViewBehavior} objParam The index of the 
+			 * GotoPreviousViewBehavior that follows the desired 
 			 * GotoPreviousViewBehavior.
 			 */
 			public previousItem(objParam: GotoPreviousViewBehavior): Adobe.Incopy.GotoPreviousViewBehavior;

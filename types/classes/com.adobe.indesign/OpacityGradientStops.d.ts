@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new OpacityGradientStop.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new OpacityGradientStop (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.OpacityGradientStop;
@@ -22,18 +22,18 @@ declare namespace Adobe {
 			/**
 			 * Returns the OpacityGradientStop with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.OpacityGradientStop;
 			/**
 			 * Returns the OpacityGradientStops within the specified range.
-			 * @param {any} fromParam - The OpacityGradientStop, index, or 
+			 * @param {any} fromParam The OpacityGradientStop, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * OpacityGradientStop, Long Integer or String.
-			 * @param {any} toParam - The OpacityGradientStop, index, or 
-			 * name at the end of the range. Can accept: 
-			 * OpacityGradientStop, Long Integer or String.
+			 * @param {any} toParam The OpacityGradientStop, index, or name 
+			 * at the end of the range. Can accept: OpacityGradientStop, 
+			 * Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last OpacityGradientStop in the collection. */
@@ -43,7 +43,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the OpacityGradientStop whose index follows the 
 			 * specified OpacityGradientStop in the collection.
-			 * @param {OpacityGradientStop} objParam - The 
+			 * @param {OpacityGradientStop} objParam The 
 			 * OpacityGradientStop whose index comes before the desired 
 			 * OpacityGradientStop. 
 			 */
@@ -61,7 +61,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the OpacityGradientStop with the index previous to 
 			 * the specified index.
-			 * @param {OpacityGradientStop} objParam - The index of the 
+			 * @param {OpacityGradientStop} objParam The index of the 
 			 * OpacityGradientStop that follows the desired 
 			 * OpacityGradientStop.
 			 */

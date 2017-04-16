@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,18 +15,18 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.MenuElement;
 			/**
 			 * Returns the MenuElement with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.MenuElement;
 			/**
 			 * Returns the MenuElements within the specified range.
-			 * @param {any} fromParam - The MenuElement, index, or name at 
+			 * @param {any} fromParam The MenuElement, index, or name at 
 			 * the beginning of the range. Can accept: MenuElement, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The MenuElement, index, or name at 
-			 * the end of the range. Can accept: MenuElement, Long Integer 
-			 * or String.
+			 * @param {any} toParam The MenuElement, index, or name at the 
+			 * end of the range. Can accept: MenuElement, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last MenuElement in the collection. */
@@ -36,7 +36,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MenuElement whose index follows the specified 
 			 * MenuElement in the collection.
-			 * @param {MenuElement} objParam - The MenuElement whose index 
+			 * @param {MenuElement} objParam The MenuElement whose index 
 			 * comes before the desired MenuElement. 
 			 */
 			public nextItem(objParam: MenuElement): Adobe.Indesign.MenuElement;
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the MenuElement with the index previous to the 
 			 * specified index.
-			 * @param {MenuElement} objParam - The index of the MenuElement 
+			 * @param {MenuElement} objParam The index of the MenuElement 
 			 * that follows the desired MenuElement.
 			 */
 			public previousItem(objParam: MenuElement): Adobe.Indesign.MenuElement;

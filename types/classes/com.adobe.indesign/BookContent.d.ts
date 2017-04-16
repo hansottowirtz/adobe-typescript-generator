@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -44,16 +44,16 @@ declare namespace Adobe {
 			public readonly status: Adobe.Indesign.BookContentStatus;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerBookContent(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
@@ -64,15 +64,15 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Moves the book content object.
-			 * @param {LocationOptions} toParam - The location relative to 
+			 * @param {LocationOptions} toParam The location relative to 
 			 * the reference object or within the book. (Optional)
-			 * @param {BookContent} referenceParam - The reference object. 
+			 * @param {BookContent} referenceParam The reference object. 
 			 * Note: Required when the to parameter specifies before or 
 			 * after. (Optional)
 			 */
@@ -80,9 +80,9 @@ declare namespace Adobe {
 			/**
 			 * Preflight a book content object and optionally save the 
 			 * resulting report.
-			 * @param {File} toParam - The preflight report to save to. 
+			 * @param {File} toParam The preflight report to save to. 
 			 * (Optional)
-			 * @param {boolean} autoOpenParam - If true, automatically open 
+			 * @param {boolean} autoOpenParam If true, automatically open 
 			 * the report after creation. (Optional)
 			 */
 			public preflight(toParam: File, autoOpenParam: boolean): void;
@@ -90,10 +90,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerBookContent(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
@@ -101,8 +101,8 @@ declare namespace Adobe {
 			 * Replaces a book content object with a new file. Note: If the 
 			 * new file replaces the current style source document, the new 
 			 * file becomes the style source document.
-			 * @param {File} usingParam - The full path name of the new 
-			 * book content object.
+			 * @param {File} usingParam The full path name of the new book 
+			 * content object.
 			 */
 			public replace(usingParam: File): Adobe.Indesign.BookContent;
 			/**

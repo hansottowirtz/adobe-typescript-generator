@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -110,11 +110,15 @@ declare namespace Adobe {
 			public characterRotation: number;
 			/** A collection of characters. */
 			public readonly characters: Adobe.Indesign.Characters;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Indesign.CheckBoxes;
 			/**
 			 * If true, uses grid tracking to track non-Roman characters in 
 			 * CJK grids.
 			 */
 			public cjkGridTracking: boolean;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Indesign.ComboBoxes;
 			/** The text composer to use to compose the text. */
 			public composer: string;
 			/**
@@ -458,6 +462,8 @@ declare namespace Adobe {
 			public ligatures: boolean;
 			/** A collection of lines. */
 			public readonly lines: Adobe.Indesign.Lines;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Indesign.ListBoxes;
 			/**
 			 * The maximum width (as a percentage) of individual 
 			 * characters. (Range: 50 to 200)
@@ -613,6 +619,11 @@ declare namespace Adobe {
 			public paragraphGyoudori: boolean;
 			/** Paragraph justification. */
 			public paragraphJustification: Adobe.Indesign.ParagraphJustificationOptions;
+			/**
+			 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 
+			 * 3 is long
+			 */
+			public paragraphKashidaWidth: number;
 			/** A collection of paragraphs. */
 			public readonly paragraphs: Adobe.Indesign.Paragraphs;
 			/**
@@ -644,6 +655,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Indesign.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Indesign.Rectangles;
 			/**
@@ -895,6 +908,8 @@ declare namespace Adobe {
 			public shataiDegreeAngle: number;
 			/** The amount (as a percentage) of shatai obliquing to apply. */
 			public shataiMagnification: number;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Indesign.SignatureFields;
 			/** The alignment to use for lines that contain a single word. */
 			public singleWordJustification: Adobe.Indesign.SingleWordJustification;
 			/** The skew angle of the Word. */
@@ -1011,6 +1026,8 @@ declare namespace Adobe {
 			 * text.
 			 */
 			public tatechuyokoYOffset: number;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Indesign.TextBoxes;
 			/** A collection of text columns. */
 			public readonly textColumns: Adobe.Indesign.TextColumns;
 			/** A collection of text frames. */
@@ -1110,48 +1127,48 @@ declare namespace Adobe {
 			public yOffsetDiacritic: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerWord(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Apply a character style.
-			 * @param {CharacterStyle} usingParam - The character style to 
+			 * @param {CharacterStyle} usingParam The character style to 
 			 * apply.
 			 */
 			public applyCharacterStyle(usingParam: CharacterStyle): void;
 			/**
 			 * Apply one or more conditions.
-			 * @param {any[]} usingParam - The condition(s) to apply
-			 * @param {boolean} removeExistingParam - If true, remove 
+			 * @param {any[]} usingParam The condition(s) to apply
+			 * @param {boolean} removeExistingParam If true, remove 
 			 * existing conditions. (Optional)
 			 */
 			public applyConditions(usingParam: any[], removeExistingParam: boolean): void;
 			/**
 			 * Apply a paragraph style.
-			 * @param {ParagraphStyle} usingParam - The paragraph style to 
+			 * @param {ParagraphStyle} usingParam The paragraph style to 
 			 * apply.
-			 * @param {boolean} clearingOverridesParam - If true, clear any 
+			 * @param {boolean} clearingOverridesParam If true, clear any 
 			 * text attributes before applying the style. (Optional)
 			 */
 			public applyParagraphStyle(usingParam: ParagraphStyle, clearingOverridesParam: boolean): void;
 			/**
 			 * asynchronously exports the object(s) to a file.
-			 * @param {any} formatParam - The export format, specified as 
-			 * an enumeration value or as an extension that appears in the 
+			 * @param {any} formatParam The export format, specified as an 
+			 * enumeration value or as an extension that appears in the 
 			 * Save as type or Format menu in the Export dialog. Can 
 			 * accept: ExportFormat enumerator or String.
-			 * @param {File} toParam - The path to the export file.
-			 * @param {boolean} showingOptionsParam - If true, displays the 
+			 * @param {File} toParam The path to the export file.
+			 * @param {boolean} showingOptionsParam If true, displays the 
 			 * export options dialog. (Optional)
-			 * @param {PDFExportPreset} usingParam - The export style. 
+			 * @param {PDFExportPreset} usingParam The export style. 
 			 * (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public asynchronousExportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, versionCommentsParam: string, forceSaveParam: boolean): Adobe.Indesign.BackgroundTask;
@@ -1162,40 +1179,40 @@ declare namespace Adobe {
 			public autoTag(): void;
 			/**
 			 * Sets the case of the text.
-			 * @param {ChangecaseMode} usingParam - The text case option.
+			 * @param {ChangecaseMode} usingParam The text case option.
 			 */
 			public changecase(usingParam: ChangecaseMode): void;
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Clears the specified types of override.
-			 * @param {OverrideType} overridesToClearParam - The types of 
+			 * @param {OverrideType} overridesToClearParam The types of 
 			 * override to clear. (Optional)
 			 */
 			public clearOverrides(overridesToClearParam: OverrideType): void;
@@ -1205,11 +1222,11 @@ declare namespace Adobe {
 			public convertToNote(): Adobe.Indesign.Note;
 			/**
 			 * Converts the text to a table.
-			 * @param {string} columnSeparatorParam - The character that 
+			 * @param {string} columnSeparatorParam The character that 
 			 * starts a new column in the new table. (Optional)
-			 * @param {string} rowSeparatorParam - The character starts a 
-			 * new row in the new table. (Optional)
-			 * @param {number} numberOfColumnsParam - The number of columns 
+			 * @param {string} rowSeparatorParam The character starts a new 
+			 * row in the new table. (Optional)
+			 * @param {number} numberOfColumnsParam The number of columns 
 			 * in the table. Note: Valid only when the column and row 
 			 * separator characters are the same. (Optional)
 			 */
@@ -1220,16 +1237,16 @@ declare namespace Adobe {
 			 * that has no internal spaces or detached parts, the polygon 
 			 * contains only a single path. Note: To determine whether a 
 			 * font allows the creation of outlines, see allow outlines.
-			 * @param {boolean} deleteOriginalParam - If true, deletes the 
+			 * @param {boolean} deleteOriginalParam If true, deletes the 
 			 * original text. If false, creates the outlines as separate 
 			 * object(s) on top of the text.  (Optional)
 			 */
 			public createOutlines(deleteOriginalParam: boolean): any;
 			/**
 			 * Duplicates the text in the specified location.
-			 * @param {LocationOptions} toParam - The location relative to 
+			 * @param {LocationOptions} toParam The location relative to 
 			 * the reference object or within the containing object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. 
 			 * Can accept: Text, Story, Cell, Row, Column, Table or 
 			 * PageItem. (Optional)
@@ -1237,49 +1254,49 @@ declare namespace Adobe {
 			public duplicate(toParam: LocationOptions, referenceParam: any): Adobe.Indesign.Text;
 			/**
 			 * Exports the object(s) to a file.
-			 * @param {any} formatParam - The export format, specified as 
-			 * an enumeration value or as an extension that appears in the 
+			 * @param {any} formatParam The export format, specified as an 
+			 * enumeration value or as an extension that appears in the 
 			 * Save as type or Format menu in the Export dialog. Can 
 			 * accept: ExportFormat enumerator or String.
-			 * @param {File} toParam - The path to the export file.
-			 * @param {boolean} showingOptionsParam - If true, displays the 
+			 * @param {File} toParam The path to the export file.
+			 * @param {boolean} showingOptionsParam If true, displays the 
 			 * export options dialog. (Optional)
-			 * @param {PDFExportPreset} usingParam - The export style. 
+			 * @param {PDFExportPreset} usingParam The export style. 
 			 * (Optional)
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public exportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds hyperlink sources that intersecting with specified 
 			 * text range.
-			 * @param {RangeSortOrder} sortOrderParam - The sort order of 
+			 * @param {RangeSortOrder} sortOrderParam The sort order of 
 			 * found ranges. (Optional)
 			 */
 			public findHyperlinks(sortOrderParam: RangeSortOrder): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -1291,14 +1308,14 @@ declare namespace Adobe {
 			/**
 			 * Associates the page item with the specified XML element 
 			 * while preserving existing content.
-			 * @param {XMLElement} usingParam - The XML element.
+			 * @param {XMLElement} usingParam The XML element.
 			 */
 			public markup(usingParam: XMLElement): void;
 			/**
 			 * Moves the text to the specified location.
-			 * @param {LocationOptions} toParam - The location relative to 
+			 * @param {LocationOptions} toParam The location relative to 
 			 * the reference object or within the containing object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. 
 			 * Can accept: Text, Story, Cell, Row, Column, Table or 
 			 * PageItem. (Optional)
@@ -1306,10 +1323,10 @@ declare namespace Adobe {
 			public move(toParam: LocationOptions, referenceParam: any): Adobe.Indesign.Text;
 			/**
 			 * Places the file.
-			 * @param {File} fileNameParam - The file to place
-			 * @param {boolean} showingOptionsParam - Whether to display 
-			 * the import options dialog (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {File} fileNameParam The file to place
+			 * @param {boolean} showingOptionsParam Whether to display the 
+			 * import options dialog (Optional)
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the placed object(s) (Optional)
 			 */
 			public place(fileNameParam: File, showingOptionsParam: boolean, withPropertiesParam: any): any;
@@ -1319,16 +1336,16 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerWord(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Selects the object.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the Word in relation to previously 
 			 * selected objects. (Optional)
 			 */

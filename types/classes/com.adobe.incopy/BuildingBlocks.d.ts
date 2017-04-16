@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,16 +7,15 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new cross reference building block.
-			 * @param {BuildingBlockTypes} blockTypeParam - Type of the 
+			 * @param {BuildingBlockTypes} blockTypeParam Type of the 
 			 * building block.
-			 * @param {CharacterStyle} appliedCharacterStyleParam - 
-			 * Character style to be applied to the building block. 
+			 * @param {CharacterStyle} appliedCharacterStyleParam Character 
+			 * style to be applied to the building block. (Optional)
+			 * @param {string} customTextParam Building block custom text. 
+			 * Currently this is only useful in custom string building 
+			 * block. It is ignored for other types of building blocks. 
 			 * (Optional)
-			 * @param {string} customTextParam - Building block custom 
-			 * text. Currently this is only useful in custom string 
-			 * building block. It is ignored for other types of building 
-			 * blocks. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new BuildingBlock (Optional)
 			 */
 			public add(blockTypeParam: BuildingBlockTypes, appliedCharacterStyleParam: CharacterStyle, customTextParam: string, withPropertiesParam: any): Adobe.Incopy.BuildingBlock;
@@ -30,16 +29,16 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.BuildingBlock;
 			/**
 			 * Returns the BuildingBlock with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.BuildingBlock;
 			/**
 			 * Returns the BuildingBlocks within the specified range.
-			 * @param {any} fromParam - The BuildingBlock, index, or name 
-			 * at the beginning of the range. Can accept: BuildingBlock, 
-			 * Long Integer or String.
-			 * @param {any} toParam - The BuildingBlock, index, or name at 
+			 * @param {any} fromParam The BuildingBlock, index, or name at 
+			 * the beginning of the range. Can accept: BuildingBlock, Long 
+			 * Integer or String.
+			 * @param {any} toParam The BuildingBlock, index, or name at 
 			 * the end of the range. Can accept: BuildingBlock, Long 
 			 * Integer or String.
 			 */
@@ -51,7 +50,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the BuildingBlock whose index follows the specified 
 			 * BuildingBlock in the collection.
-			 * @param {BuildingBlock} objParam - The BuildingBlock whose 
+			 * @param {BuildingBlock} objParam The BuildingBlock whose 
 			 * index comes before the desired BuildingBlock. 
 			 */
 			public nextItem(objParam: BuildingBlock): Adobe.Incopy.BuildingBlock;
@@ -68,7 +67,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the BuildingBlock with the index previous to the 
 			 * specified index.
-			 * @param {BuildingBlock} objParam - The index of the 
+			 * @param {BuildingBlock} objParam The index of the 
 			 * BuildingBlock that follows the desired BuildingBlock.
 			 */
 			public previousItem(objParam: BuildingBlock): Adobe.Incopy.BuildingBlock;

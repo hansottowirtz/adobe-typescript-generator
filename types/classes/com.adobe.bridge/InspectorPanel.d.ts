@@ -1,40 +1,70 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
+		/**
+		 * Your script defines what kind of related information to 
+		 * display, and how to display it. The panel serves as a frame 
+		 * and parent for subpanels that actually display the 
+		 * information. Subpanels are represented by members of the 
+		 * Panelette Base Class contained in this parent panel.Register 
+		 * a inspection panel that you create to make it available to 
+		 * Adobe Bridge, using app.registerInspectorPanel().To turn the 
+		 * display of registered inspection panels on or off in a 
+		 * particular browser window, set 
+		 * Document.displayInspectorView.
+		 */
 		class InspectorPanel extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
+			/** Whether to display this panel. */
 			public displayInInspector: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * The localized title string to display in the panel's tab 
+			 * header.
+			 */
 			public readonly displayTitle: string;
-			/** This is not a Property Description. */
+			/**
+			 * The unique menu identifier of a script-defined flyout menu 
+			 * for this panel.
+			 */
 			public readonly flyoutMenuId: string;
-			/** This is not a Property Description. */
+			/** When true, the panel is minimized or iconified. */
 			public minimized: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * A collection of panelettes contained in this panel, in 
+			 * display order.
+			 */
 			public readonly panelettes: any[];
-			/** This is not a Property Description. */
+			/**
+			 * The preferred default position of this tabbed panel in the 
+			 * Inspector, relative to other panels.
+			 */
 			public sortPosition: number;
-			/** This is not a Property Description. */
+			/** The title text of this panel, displayed in the tab header. */
 			public title: string;
-			/** This is not a Property Description. */
+			/**
+			 * When true, the majority of this panel is visible on the 
+			 * screen.
+			 */
 			public readonly visible: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * When true, this panel occupies the entire available 
+			 * horizontal space.
+			 */
 			public wide: boolean;
-			/** This is not a Method Description. */
 			public constructor();
 			/**
 			 * @param {any[]} args
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
-			 * This is not a Method Description.
-			 * @param {any} panelette - 
+			 * Registers a script-defined panelette as a member of this 
+			 * panel, adding it to panelettes list.
+			 * @param {any} panelette 
 			 */
 			public registerPanelette(panelette: any): boolean;
 			/**
-			 * This is not a Method Description.
-			 * @param {any} panelette - 
+			 * Removes a member panelette from this panel.
+			 * @param {any} panelette 
 			 */
 			public unregisterPanelette(panelette: any): boolean;
 		}

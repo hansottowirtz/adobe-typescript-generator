@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -696,6 +696,11 @@ declare namespace Adobe {
 			 * enumerator.
 			 */
 			public paragraphJustification: any;
+			/**
+			 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 
+			 * 3 is long. Can return: Real or NothingEnum enumerator.
+			 */
+			public paragraphKashidaWidth: any;
 			/** The parent of the ChangeGrepPreference (a Application). */
 			public readonly parent: any;
 			/** The text size. Can return: Unit or NothingEnum enumerator. */
@@ -1190,10 +1195,10 @@ declare namespace Adobe {
 			public yOffsetDiacritic: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerChangeGrepPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -1204,10 +1209,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerChangeGrepPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

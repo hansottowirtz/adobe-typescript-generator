@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new TabStop.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TabStop (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Incopy.TabStop;
@@ -21,18 +21,17 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.TabStop;
 			/**
 			 * Returns the TabStop with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.TabStop;
 			/**
 			 * Returns the TabStops within the specified range.
-			 * @param {any} fromParam - The TabStop, index, or name at the 
+			 * @param {any} fromParam The TabStop, index, or name at the 
 			 * beginning of the range. Can accept: TabStop, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The TabStop, index, or name at the 
-			 * end of the range. Can accept: TabStop, Long Integer or 
-			 * String.
+			 * @param {any} toParam The TabStop, index, or name at the end 
+			 * of the range. Can accept: TabStop, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last TabStop in the collection. */
@@ -42,7 +41,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TabStop whose index follows the specified 
 			 * TabStop in the collection.
-			 * @param {TabStop} objParam - The TabStop whose index comes 
+			 * @param {TabStop} objParam The TabStop whose index comes 
 			 * before the desired TabStop. 
 			 */
 			public nextItem(objParam: TabStop): Adobe.Incopy.TabStop;
@@ -59,7 +58,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TabStop with the index previous to the specified 
 			 * index.
-			 * @param {TabStop} objParam - The index of the TabStop that 
+			 * @param {TabStop} objParam The index of the TabStop that 
 			 * follows the desired TabStop.
 			 */
 			public previousItem(objParam: TabStop): Adobe.Incopy.TabStop;

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.PDF;
 			/**
 			 * Returns the PDF with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.PDF;
 			/**
 			 * Returns the PDF with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.PDF;
 			/**
 			 * Returns the PDF with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.PDF;
 			/**
 			 * Returns the PDFs within the specified range.
-			 * @param {any} fromParam - The PDF, index, or name at the 
+			 * @param {any} fromParam The PDF, index, or name at the 
 			 * beginning of the range. Can accept: PDF, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The PDF, index, or name at the end of 
+			 * @param {any} toParam The PDF, index, or name at the end of 
 			 * the range. Can accept: PDF, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PDF whose index follows the specified PDF in the 
 			 * collection.
-			 * @param {PDF} objParam - The PDF whose index comes before the 
+			 * @param {PDF} objParam The PDF whose index comes before the 
 			 * desired PDF. 
 			 */
 			public nextItem(objParam: PDF): Adobe.Incopy.PDF;
@@ -62,8 +62,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the PDF with the index previous to the specified 
 			 * index.
-			 * @param {PDF} objParam - The index of the PDF that follows 
-			 * the desired PDF.
+			 * @param {PDF} objParam The index of the PDF that follows the 
+			 * desired PDF.
 			 */
 			public previousItem(objParam: PDF): Adobe.Incopy.PDF;
 		}

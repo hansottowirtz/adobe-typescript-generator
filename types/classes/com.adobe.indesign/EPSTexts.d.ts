@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,28 +15,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.EPSText;
 			/**
 			 * Returns the EPSText with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.EPSText;
 			/**
 			 * Returns the EPSText with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.EPSText;
 			/**
 			 * Returns the EPSText with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.EPSText;
 			/**
 			 * Returns the EPSTexts within the specified range.
-			 * @param {any} fromParam - The EPSText, index, or name at the 
+			 * @param {any} fromParam The EPSText, index, or name at the 
 			 * beginning of the range. Can accept: EPSText, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The EPSText, index, or name at the 
-			 * end of the range. Can accept: EPSText, Long Integer or 
-			 * String.
+			 * @param {any} toParam The EPSText, index, or name at the end 
+			 * of the range. Can accept: EPSText, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last EPSText in the collection. */
@@ -46,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the EPSText whose index follows the specified 
 			 * EPSText in the collection.
-			 * @param {EPSText} objParam - The EPSText whose index comes 
+			 * @param {EPSText} objParam The EPSText whose index comes 
 			 * before the desired EPSText. 
 			 */
 			public nextItem(objParam: EPSText): Adobe.Indesign.EPSText;
@@ -63,7 +62,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the EPSText with the index previous to the specified 
 			 * index.
-			 * @param {EPSText} objParam - The index of the EPSText that 
+			 * @param {EPSText} objParam The index of the EPSText that 
 			 * follows the desired EPSText.
 			 */
 			public previousItem(objParam: EPSText): Adobe.Indesign.EPSText;

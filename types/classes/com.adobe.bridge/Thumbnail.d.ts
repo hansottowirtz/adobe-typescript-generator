@@ -1,74 +1,132 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
+		/**
+		 * Thumbnail objects can represent:Files and folders in the 
+		 * local file system. URLsNavigation nodes of types defined by 
+		 * a node-handling extension. A thumbnail's applicable node 
+		 * handler determines how nodes are displayed when that 
+		 * thumbnail is selected. The Content pane can show thumbnail 
+		 * icons. CAUTION: When a script accesses the properties of a 
+		 * Thumbnail object, some properties of the object may not be 
+		 * immediately available. To ensure the object contains current 
+		 * data, set app.synchronousMode to true before accessing 
+		 * properties.
+		 */
 		class Thumbnail extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
+			/**
+			 * If the value of type is alias, the kind of target this 
+			 * thumbnail represents.
+			 */
 			public readonly aliasType: string;
-			/** This is not a Property Description. */
+			/** The node children of this container node. */
 			public readonly children: any[];
-			/** This is not a Property Description. */
+			/** When true, the node is a container. */
 			public readonly container: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * Provides access to the core node-data sets defined by the 
+			 * default node handler.
+			 */
 			public readonly core: Adobe.Bridge.Infoset;
-			/** This is not a Property Description. */
+			/**
+			 * Date the referenced file or folder was created, if it can be 
+			 * determined.
+			 */
 			public readonly creationDate: string;
-			/** This is not a Property Description. */
+			/** DEPRECATED. Do not use. */
 			public displayMode: string;
-			/** This is not a Property Description. */
+			/** DEPRECATED. Do not use. */
 			public displayPath: string;
-			/** This is not a Property Description. */
+			/**
+			 * For a file or folder, whether the resource for this node 
+			 * exists on the local disk.
+			 */
 			public readonly exists: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * All of the ExtensionHandler objects that could handle this 
+			 * node.
+			 */
 			public readonly extensions: any[];
-			/** This is not a Property Description. */
+			/**
+			 * Whether this thumbnail is associated with a file that 
+			 * contains embedded metadata.
+			 */
 			public readonly hasMetadata: boolean;
-			/** This is not a Property Description. */
+			/** Whether this thumbnail is displayable. */
 			public readonly hidden: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * The path to the operating-system icon image file for this 
+			 * node, when it represents a web page.
+			 */
 			public iconPath: string;
-			/** This is not a Property Description. */
+			/** The label string for this thumbnail. */
 			public label: string;
-			/** This is not a Property Description. */
+			/**
+			 * Date the referenced file or folder was last modified, if it 
+			 * can be determined.
+			 */
 			public readonly lastModifiedDate: string;
-			/** This is not a Property Description. */
+			/**
+			 * Whether the thumbnail is associated with a local file-system 
+			 * object or a Version Cue node (which can have both a local 
+			 * and remote replica).
+			 */
 			public readonly location: string;
-			/** This is not a Property Description. */
+			/**
+			 * Whether this node represents a read-only file in Windows, or 
+			 * a file that has been locked in the Finder in Mac OS.
+			 */
 			public readonly locked: boolean;
-			/** This is not a Property Description. */
+			/**
+			 * The Metadata object associated with this thumbnail, if it 
+			 * supports embedded metadata.
+			 */
 			public metadata: any;
-			/** This is not a Property Description. */
+			/** The referenced file’s MIME type, if it can be determined. */
 			public readonly mimeType: string;
-			/** This is not a Property Description. */
+			/** The ExtensionModel object associated with this node. */
 			public readonly model: any;
-			/** This is not a Property Description. */
+			/** The label displayed for the thumbnail. */
 			public name: string;
-			/** This is not a Property Description. */
+			/** The Thumbnail object for the parent node of this thumbnail. */
 			public readonly parent: Adobe.Bridge.Thumbnail;
-			/** This is not a Property Description. */
+			/** DEPRECATED. Use spec or uri instead. */
 			public readonly path: string;
-			/** This is not a Property Description. */
+			/** The rating value for this thumbnail. */
 			public rating: number;
-			/** This is not a Property Description. */
+			/**
+			 * The angle of rotation for the icon image of this node, in 
+			 * degrees.
+			 */
 			public rotation: number;
-			/** This is not a Property Description. */
+			/**
+			 * A  File or Folder object for this thumbnail’s referenced 
+			 * node.
+			 */
 			public readonly spec: File;
-			/** This is not a Property Description. */
+			/**
+			 * Waits for confirmation of a valid value to return the 
+			 * Metadata object associated with this thumbnail, if any.
+			 */
 			public synchronousMetadata: any;
-			/** This is not a Property Description. */
+			/** The type of node this thumbnail references. */
 			public readonly type: string;
-			/** This is not a Property Description. */
+			/**
+			 * The full Bridge URI ( unique resource identifier) for this 
+			 * thumbnail.
+			 */
 			public readonly uri: string;
-			/** This is not a Method Description. */
 			public constructor();
 			/**
-			 * This is not a Method Description.
-			 * @param {Thumbnail} thumbnail - 
+			 * DEPRECATED. Do not use.
+			 * @param {Thumbnail} thumbnail 
 			 */
 			public add(thumbnail: Thumbnail): void;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} path - 
+			 * Creates a new Thumbnail object that references the same node 
+			 * as this one.
+			 * @param {string} path 
 			 */
 			public copyTo(path: string): boolean;
 			/**
@@ -76,44 +134,57 @@ declare namespace Adobe {
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
-			 * This is not a Method Description.
-			 * @param {Thumbnail} thumbnail - 
+			 * DEPRECATED. Do not use.
+			 * @param {Thumbnail} thumbnail 
 			 */
 			public insert(thumbnail: Thumbnail): void;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} path - 
+			 * Changes the parent of this thumbnail.
+			 * @param {string} path 
 			 */
 			public moveTo(path: string): boolean;
-			/** This is not a Method Description. */
+			/**
+			 * Launches the file referenced by this thumbnail in the 
+			 * appropriate application (such as Photoshop for JPEG files).
+			 */
 			public open(): boolean;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} appPath - 
+			 * Launches the file referenced by this thumbnail in the 
+			 * specified application.
+			 * @param {string} appPath 
 			 */
 			public openWith(appPath: string): boolean;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} infoset - 
+			 * Refreshes an associated information set or sets to reflect 
+			 * the current state of this node’s referenced file or folder.
+			 * @param {string} infoset 
 			 */
 			public refresh(infoset: string): boolean;
 			/**
-			 * This is not a Method Description.
-			 * @param {Function} callback - 
+			 * Registers a callback function that is executed whenever a 
+			 * node-data value in this thumbnail changes.
+			 * @param {Function} callback 
 			 */
 			public registerInterest(callback: Function): void;
-			/** This is not a Method Description. */
+			/** Deletes this Thumbnail object. */
 			public remove(): void;
-			/** This is not a Method Description. */
+			/**
+			 * If the value of type is alias, retrieves a Thumbnail object 
+			 * for the target of the alias.
+			 */
 			public resolve(): Adobe.Bridge.Thumbnail;
-			/** This is not a Method Description. */
+			/**
+			 * Opens the platform-specific native file browser, displays 
+			 * and selects the file or folder for this thumbnail.
+			 */
 			public revealInSystemBrowser(): void;
 			/**
-			 * This is not a Method Description.
-			 * @param {Function} callback - 
+			 * Removes a callback function from the list of callbacks 
+			 * registered for this thumbnail.
+			 * @param {Function} callback 
 			 */
 			public unregisterInterest(callback: Function): void;
-			/** This is not a Method Description. */
+			/** Re-enumerates the children of a container node. */
 			public verifyExternalChanges(): void;
 		}
 	}

@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new PDFExportPreset.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new PDFExportPreset (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.PDFExportPreset;
@@ -22,22 +22,22 @@ declare namespace Adobe {
 			/**
 			 * Returns the PDFExportPreset with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.PDFExportPreset;
 			/**
 			 * Returns the PDFExportPreset with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.PDFExportPreset;
 			/**
 			 * Returns the PDFExportPresets within the specified range.
-			 * @param {any} fromParam - The PDFExportPreset, index, or name 
+			 * @param {any} fromParam The PDFExportPreset, index, or name 
 			 * at the beginning of the range. Can accept: PDFExportPreset, 
 			 * Long Integer or String.
-			 * @param {any} toParam - The PDFExportPreset, index, or name 
-			 * at the end of the range. Can accept: PDFExportPreset, Long 
+			 * @param {any} toParam The PDFExportPreset, index, or name at 
+			 * the end of the range. Can accept: PDFExportPreset, Long 
 			 * Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -48,8 +48,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the PDFExportPreset whose index follows the 
 			 * specified PDFExportPreset in the collection.
-			 * @param {PDFExportPreset} objParam - The PDFExportPreset 
-			 * whose index comes before the desired PDFExportPreset. 
+			 * @param {PDFExportPreset} objParam The PDFExportPreset whose 
+			 * index comes before the desired PDFExportPreset. 
 			 */
 			public nextItem(objParam: PDFExportPreset): Adobe.Indesign.PDFExportPreset;
 			/**
@@ -65,7 +65,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the PDFExportPreset with the index previous to the 
 			 * specified index.
-			 * @param {PDFExportPreset} objParam - The index of the 
+			 * @param {PDFExportPreset} objParam The index of the 
 			 * PDFExportPreset that follows the desired PDFExportPreset.
 			 */
 			public previousItem(objParam: PDFExportPreset): Adobe.Indesign.PDFExportPreset;

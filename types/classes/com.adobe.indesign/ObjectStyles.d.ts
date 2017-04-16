@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,7 +7,7 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new ObjectStyle.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ObjectStyle (Optional)
 			 */
 			public add(withPropertiesParam: any): Adobe.Indesign.ObjectStyle;
@@ -21,28 +21,28 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.ObjectStyle;
 			/**
 			 * Returns the ObjectStyle with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.ObjectStyle;
 			/**
 			 * Returns the ObjectStyle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.ObjectStyle;
 			/**
 			 * Returns the ObjectStyle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.ObjectStyle;
 			/**
 			 * Returns the ObjectStyles within the specified range.
-			 * @param {any} fromParam - The ObjectStyle, index, or name at 
+			 * @param {any} fromParam The ObjectStyle, index, or name at 
 			 * the beginning of the range. Can accept: ObjectStyle, Long 
 			 * Integer or String.
-			 * @param {any} toParam - The ObjectStyle, index, or name at 
-			 * the end of the range. Can accept: ObjectStyle, Long Integer 
-			 * or String.
+			 * @param {any} toParam The ObjectStyle, index, or name at the 
+			 * end of the range. Can accept: ObjectStyle, Long Integer or 
+			 * String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last ObjectStyle in the collection. */
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ObjectStyle whose index follows the specified 
 			 * ObjectStyle in the collection.
-			 * @param {ObjectStyle} objParam - The ObjectStyle whose index 
+			 * @param {ObjectStyle} objParam The ObjectStyle whose index 
 			 * comes before the desired ObjectStyle. 
 			 */
 			public nextItem(objParam: ObjectStyle): Adobe.Indesign.ObjectStyle;
@@ -69,7 +69,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the ObjectStyle with the index previous to the 
 			 * specified index.
-			 * @param {ObjectStyle} objParam - The index of the ObjectStyle 
+			 * @param {ObjectStyle} objParam The index of the ObjectStyle 
 			 * that follows the desired ObjectStyle.
 			 */
 			public previousItem(objParam: ObjectStyle): Adobe.Indesign.ObjectStyle;

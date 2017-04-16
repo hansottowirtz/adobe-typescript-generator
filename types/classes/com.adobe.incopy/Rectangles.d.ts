@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -15,26 +15,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Incopy.Rectangle;
 			/**
 			 * Returns the Rectangle with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.Rectangle;
 			/**
 			 * Returns the Rectangle with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Rectangle;
 			/**
 			 * Returns the Rectangle with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Rectangle;
 			/**
 			 * Returns the Rectangles within the specified range.
-			 * @param {any} fromParam - The Rectangle, index, or name at 
-			 * the beginning of the range. Can accept: Rectangle, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The Rectangle, index, or name at the 
+			 * @param {any} fromParam The Rectangle, index, or name at the 
+			 * beginning of the range. Can accept: Rectangle, Long Integer 
+			 * or String.
+			 * @param {any} toParam The Rectangle, index, or name at the 
 			 * end of the range. Can accept: Rectangle, Long Integer or 
 			 * String.
 			 */
@@ -46,8 +46,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Rectangle whose index follows the specified 
 			 * Rectangle in the collection.
-			 * @param {Rectangle} objParam - The Rectangle whose index 
-			 * comes before the desired Rectangle. 
+			 * @param {Rectangle} objParam The Rectangle whose index comes 
+			 * before the desired Rectangle. 
 			 */
 			public nextItem(objParam: Rectangle): Adobe.Incopy.Rectangle;
 			/**
@@ -63,8 +63,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Rectangle with the index previous to the 
 			 * specified index.
-			 * @param {Rectangle} objParam - The index of the Rectangle 
-			 * that follows the desired Rectangle.
+			 * @param {Rectangle} objParam The index of the Rectangle that 
+			 * follows the desired Rectangle.
 			 */
 			public previousItem(objParam: Rectangle): Adobe.Incopy.Rectangle;
 		}

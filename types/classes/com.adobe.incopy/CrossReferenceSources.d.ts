@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,11 +7,11 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new cross reference text source.
-			 * @param {Text} sourceParam - The text or insertion point to 
+			 * @param {Text} sourceParam The text or insertion point to 
 			 * create the source.
-			 * @param {CrossReferenceFormat} appliedFormatParam - Format 
-			 * used for cross reference source.
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {CrossReferenceFormat} appliedFormatParam Format used 
+			 * for cross reference source.
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new CrossReferenceSource (Optional)
 			 */
 			public add(sourceParam: Text, appliedFormatParam: CrossReferenceFormat, withPropertiesParam: any): Adobe.Incopy.CrossReferenceSource;
@@ -28,27 +28,27 @@ declare namespace Adobe {
 			/**
 			 * Returns the CrossReferenceSource with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Incopy.CrossReferenceSource;
 			/**
 			 * Returns the CrossReferenceSource with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.CrossReferenceSource;
 			/**
 			 * Returns the CrossReferenceSource with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.CrossReferenceSource;
 			/**
 			 * Returns the CrossReferenceSources within the specified 
 			 * range.
-			 * @param {any} fromParam - The CrossReferenceSource, index, or 
+			 * @param {any} fromParam The CrossReferenceSource, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * CrossReferenceSource, Long Integer or String.
-			 * @param {any} toParam - The CrossReferenceSource, index, or 
+			 * @param {any} toParam The CrossReferenceSource, index, or 
 			 * name at the end of the range. Can accept: 
 			 * CrossReferenceSource, Long Integer or String.
 			 */
@@ -60,7 +60,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the CrossReferenceSource whose index follows the 
 			 * specified CrossReferenceSource in the collection.
-			 * @param {CrossReferenceSource} objParam - The 
+			 * @param {CrossReferenceSource} objParam The 
 			 * CrossReferenceSource whose index comes before the desired 
 			 * CrossReferenceSource. 
 			 */
@@ -78,7 +78,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the CrossReferenceSource with the index previous to 
 			 * the specified index.
-			 * @param {CrossReferenceSource} objParam - The index of the 
+			 * @param {CrossReferenceSource} objParam The index of the 
 			 * CrossReferenceSource that follows the desired 
 			 * CrossReferenceSource.
 			 */

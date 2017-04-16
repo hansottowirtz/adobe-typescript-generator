@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -18,22 +18,22 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyphenationException with the specified index or 
 			 * name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.HyphenationException;
 			/**
 			 * Returns the HyphenationException with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.HyphenationException;
 			/**
 			 * Returns the HyphenationExceptions within the specified 
 			 * range.
-			 * @param {any} fromParam - The HyphenationException, index, or 
+			 * @param {any} fromParam The HyphenationException, index, or 
 			 * name at the beginning of the range. Can accept: 
 			 * HyphenationException, Long Integer or String.
-			 * @param {any} toParam - The HyphenationException, index, or 
+			 * @param {any} toParam The HyphenationException, index, or 
 			 * name at the end of the range. Can accept: 
 			 * HyphenationException, Long Integer or String.
 			 */
@@ -45,7 +45,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyphenationException whose index follows the 
 			 * specified HyphenationException in the collection.
-			 * @param {HyphenationException} objParam - The 
+			 * @param {HyphenationException} objParam The 
 			 * HyphenationException whose index comes before the desired 
 			 * HyphenationException. 
 			 */
@@ -63,7 +63,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the HyphenationException with the index previous to 
 			 * the specified index.
-			 * @param {HyphenationException} objParam - The index of the 
+			 * @param {HyphenationException} objParam The index of the 
 			 * HyphenationException that follows the desired 
 			 * HyphenationException.
 			 */

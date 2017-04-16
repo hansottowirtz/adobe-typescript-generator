@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -116,11 +116,15 @@ declare namespace Adobe {
 			public characterRotation: number;
 			/** A collection of characters. */
 			public readonly characters: Adobe.Incopy.Characters;
+			/** A collection of checkboxes. */
+			public readonly checkBoxes: Adobe.Incopy.CheckBoxes;
 			/**
 			 * If true, uses grid tracking to track non-Roman characters in 
 			 * CJK grids.
 			 */
 			public cjkGridTracking: boolean;
+			/** A collection of comboboxes. */
+			public readonly comboBoxes: Adobe.Incopy.ComboBoxes;
 			/** The text composer to use to compose the text. */
 			public composer: string;
 			/**
@@ -464,6 +468,8 @@ declare namespace Adobe {
 			public ligatures: boolean;
 			/** A collection of lines. */
 			public readonly lines: Adobe.Incopy.Lines;
+			/** A collection of listboxes. */
+			public readonly listBoxes: Adobe.Incopy.ListBoxes;
 			/** The lock state. */
 			public readonly lockState: Adobe.Incopy.LockStateValues;
 			/**
@@ -630,6 +636,11 @@ declare namespace Adobe {
 			public paragraphGyoudori: boolean;
 			/** Paragraph justification. */
 			public paragraphJustification: Adobe.Incopy.ParagraphJustificationOptions;
+			/**
+			 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 
+			 * 3 is long
+			 */
+			public paragraphKashidaWidth: number;
 			/** A collection of paragraphs. */
 			public readonly paragraphs: Adobe.Incopy.Paragraphs;
 			/** The parent of the XmlStory (a Document). */
@@ -649,6 +660,8 @@ declare namespace Adobe {
 			 * same time.
 			 */
 			public properties: any;
+			/** A collection of radio buttons. */
+			public readonly radioButtons: Adobe.Incopy.RadioButtons;
 			/** A collection of rectangles. */
 			public readonly rectangles: Adobe.Incopy.Rectangles;
 			/**
@@ -900,6 +913,8 @@ declare namespace Adobe {
 			public shataiDegreeAngle: number;
 			/** The amount (as a percentage) of shatai obliquing to apply. */
 			public shataiMagnification: number;
+			/** A collection of signature fields. */
+			public readonly signatureFields: Adobe.Incopy.SignatureFields;
 			/** The alignment to use for lines that contain a single word. */
 			public singleWordJustification: Adobe.Incopy.SingleWordJustification;
 			/** The skew angle of the XmlStory. */
@@ -1023,6 +1038,8 @@ declare namespace Adobe {
 			 * text.
 			 */
 			public tatechuyokoYOffset: number;
+			/** A collection of text boxes. */
+			public readonly textBoxes: Adobe.Incopy.TextBoxes;
 			/** A collection of text columns. */
 			public readonly textColumns: Adobe.Incopy.TextColumns;
 			/**
@@ -1129,49 +1146,49 @@ declare namespace Adobe {
 			public yOffsetDiacritic: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerXmlStory(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Sets the case of the text.
-			 * @param {ChangecaseMode} usingParam - The text case option.
+			 * @param {ChangecaseMode} usingParam The text case option.
 			 */
 			public changecase(usingParam: ChangecaseMode): void;
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Clears the specified types of override.
-			 * @param {OverrideType} overridesToClearParam - The types of 
+			 * @param {OverrideType} overridesToClearParam The types of 
 			 * override to clear. (Optional)
 			 */
 			public clearOverrides(overridesToClearParam: OverrideType): void;
@@ -1184,9 +1201,9 @@ declare namespace Adobe {
 			public createOutlines(): any;
 			/**
 			 * Duplicates the text in the specified location.
-			 * @param {LocationOptions} toParam - The location relative to 
+			 * @param {LocationOptions} toParam The location relative to 
 			 * the reference object or within the containing object.
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. 
 			 * Can accept: Text, Story, Cell, Row, Column, Table or 
 			 * PageItem. (Optional)
@@ -1194,30 +1211,30 @@ declare namespace Adobe {
 			public duplicate(toParam: LocationOptions, referenceParam: any): Adobe.Incopy.Text;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
@@ -1229,16 +1246,16 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerXmlStory(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

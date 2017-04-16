@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -41,10 +41,10 @@ declare namespace Adobe {
 			public readonly topics: Adobe.Indesign.Topics;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerTopic(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
@@ -52,7 +52,7 @@ declare namespace Adobe {
 			 * Makes the initial letter for the specified index topic or 
 			 * group of index topics upper case.
 			 * @param {IndexCapitalizationOptions} 
-			 * capitalizationOptionParam - The entry or entries to 
+			 * capitalizationOptionParam The entry or entries to 
 			 * capitalize. (Optional)
 			 */
 			public capitalize(capitalizationOptionParam: IndexCapitalizationOptions): void;
@@ -65,10 +65,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerTopic(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

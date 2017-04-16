@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -19,6 +19,10 @@ declare namespace Adobe {
 			public static readonly jpeg: Adobe.Indesign.ImageConversion;
 			/** Uses JPEG format for all images. */
 			public static readonly JPEG: Adobe.Indesign.ImageConversion;
+			/** Alias for PNG. Uses PNG format for all images. */
+			public static readonly png: Adobe.Indesign.ImageConversion;
+			/** Uses PNG format for all images. */
+			public static readonly PNG: Adobe.Indesign.ImageConversion;
 			/** Constructor */
 			public constructor();
 		}

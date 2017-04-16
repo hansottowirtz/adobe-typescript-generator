@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -196,6 +196,8 @@ declare namespace Adobe {
 			 * enumerator.
 			 */
 			public findTransliteratePreferences: Adobe.Incopy.FindTransliteratePreference;
+			/** Font locking preference settings. */
+			public readonly fontLockingPreferences: Adobe.Incopy.FontLockingPreference;
 			/** A collection of fonts. */
 			public readonly fonts: Adobe.Incopy.Fonts;
 			/** Footnote option settings. */
@@ -430,10 +432,10 @@ declare namespace Adobe {
 			public activate(): void;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerApplication(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -441,19 +443,19 @@ declare namespace Adobe {
 			 * Applies the specified menu customization set. An empty 
 			 * string will reset all menus and colorization (Show Full 
 			 * Menus). No string will apply the default menu set.
-			 * @param {string} nameParam - The menu customization set. 
+			 * @param {string} nameParam The menu customization set. 
 			 * (Optional)
 			 */
 			public applyMenuCustomization(nameParam: string): void;
 			/**
 			 * Applies the specified shortcut set file. No string will 
 			 * apply the default shortcut set.
-			 * @param {string} nameParam - The shortcut set. (Optional)
+			 * @param {string} nameParam The shortcut set. (Optional)
 			 */
 			public applyShortcutSet(nameParam: string): void;
 			/**
 			 * Applies the specified workspace.
-			 * @param {string} nameParam - The workspace. (Optional)
+			 * @param {string} nameParam The workspace. (Optional)
 			 */
 			public applyWorkspace(nameParam: string): void;
 			/** Cancels all the background tasks. */
@@ -463,35 +465,35 @@ declare namespace Adobe {
 			/**
 			 * Finds glyphs that match the find what value and replaces the 
 			 * glyphs with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds objects that match the find what value and replace the 
 			 * objects with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeObject(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value and replaces the 
 			 * text with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value and 
 			 * replaces the text with the change character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
@@ -507,63 +509,62 @@ declare namespace Adobe {
 			public cut(): void;
 			/**
 			 * Deletes the specified find/change query.
-			 * @param {string} queryNameParam - The query to delete.
-			 * @param {SearchModes} searchModeParam - The search mode.
+			 * @param {string} queryNameParam The query to delete.
+			 * @param {SearchModes} searchModeParam The search mode.
 			 */
 			public deleteFindChangeQuery(queryNameParam: string, searchModeParam: SearchModes): void;
 			/** Deletes unused XML markup tags. */
 			public deleteUnusedTags(): void;
 			/**
 			 * Generate Code Via DommyDumper
-			 * @param {string} dommytemplateinputfolderParam - Holds path 
-			 * to template folder as string
-			 * @param {string} dommycodeoutputfolderParam - Holds path to 
+			 * @param {string} dommytemplateinputfolderParam Holds path to 
+			 * template folder as string
+			 * @param {string} dommycodeoutputfolderParam Holds path to 
 			 * code output folder as string
 			 */
 			public dommygeneratecode(dommytemplateinputfolderParam: string, dommycodeoutputfolderParam: string): void;
 			/**
 			 * Executes the script in the specified language as a single 
 			 * transaction.
-			 * @param {any} scriptParam - The script to execute. Can 
-			 * accept: File, String or JavaScript Function.
-			 * @param {ScriptLanguage} languageParam - The language of the 
+			 * @param {any} scriptParam The script to execute. Can accept: 
+			 * File, String or JavaScript Function.
+			 * @param {ScriptLanguage} languageParam The language of the 
 			 * script to execute. If not specified, uses the language used 
 			 * to call this method. (Optional)
-			 * @param {any[]} withArgumentsParam - An array of arguments 
+			 * @param {any[]} withArgumentsParam An array of arguments 
 			 * passed to the script. (Optional)
-			 * @param {UndoModes} undoModeParam - How to undo this script. 
+			 * @param {UndoModes} undoModeParam How to undo this script. 
 			 * (Optional)
-			 * @param {string} undoNameParam - The name of the undo step 
-			 * for entire script undo mode. (Optional)
+			 * @param {string} undoNameParam The name of the undo step for 
+			 * entire script undo mode. (Optional)
 			 */
 			public doScript(scriptParam: any, languageParam: ScriptLanguage, withArgumentsParam: any[], undoModeParam: UndoModes, undoNameParam: string): any;
 			/**
 			 * Dumps memory allocations from all marks in the specified 
 			 * range.
-			 * @param {number} fromParam - The first mark in the range.
-			 * @param {number} toParam - The last mark in the range.
+			 * @param {any[]} fromParam The first mark in the range.
+			 * @param {any[]} toParam The last mark in the range.
 			 */
-			public dumpBetweenMemoryMarks(fromParam: number, toParam: number): void;
+			public dumpBetweenMemoryMarks(fromParam: any[], toParam: any[]): void;
 			/**
 			 * Dumps memory allocations from the specified mark.
-			 * @param {number} fromParam - The mark from which to dump 
-			 * memory.
+			 * @param {any[]} fromParam The mark from which to dump memory.
 			 */
-			public dumpFromMemoryMark(fromParam: number): void;
+			public dumpFromMemoryMark(fromParam: any[]): void;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds glyphs that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGlyph(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
@@ -571,33 +572,33 @@ declare namespace Adobe {
 			 * Returns the locale-independent string(s) from the internal 
 			 * string localization database that correspond to the 
 			 * specified string (in the current locale).
-			 * @param {string} forParam - The string to search for.
+			 * @param {string} forParam The string to search for.
 			 */
 			public findKeyStrings(forParam: string): any;
 			/**
 			 * Finds objects that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findObject(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Generate schema for IDML.
-			 * @param {File} toParam - The folder path of the schema.
-			 * @param {boolean} packageFormatParam - If true, generate 
-			 * schema for package format (multiple files). Default value is 
-			 * false. (Optional)
+			 * @param {File} toParam The folder path of the schema.
+			 * @param {boolean} packageFormatParam If true, generate schema 
+			 * for package format (multiple files). Default value is false. 
+			 * (Optional)
 			 */
 			public generateIDMLSchema(toParam: File, packageFormatParam: boolean): void;
 			/**
@@ -608,21 +609,21 @@ declare namespace Adobe {
 			/**
 			 * Imports a process color swatch from a preloaded Adobe color 
 			 * book.
-			 * @param {string} nameParam - The process color to load.
+			 * @param {string} nameParam The process color to load.
 			 */
 			public importAdobeSwatchbookProcessColor(nameParam: string): Adobe.Incopy.Color;
 			/**
 			 * Imports a spot color swatch from an Adobe color book.
-			 * @param {string} nameParam - The spot color to load.
+			 * @param {string} nameParam The spot color to load.
 			 */
 			public importAdobeSwatchbookSpotColor(nameParam: string): Adobe.Incopy.Color;
 			/**
 			 * Imports the specified styles.
-			 * @param {ImportFormat} formatParam - The types of styles to 
+			 * @param {ImportFormat} formatParam The types of styles to 
 			 * import.
-			 * @param {File} fromParam - The file containing the styles you 
+			 * @param {File} fromParam The file containing the styles you 
 			 * want to import.
-			 * @param {GlobalClashResolutionStrategy} globalStrategyParam - 
+			 * @param {GlobalClashResolutionStrategy} globalStrategyParam 
 			 * The resolution strategy to employ for imported styles that 
 			 * have the same names as existing styles. (Optional)
 			 */
@@ -630,33 +631,33 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Load conditions from the specified file.
-			 * @param {File} fromParam - The path to the file that contains 
+			 * @param {File} fromParam The path to the file that contains 
 			 * the conditions.
-			 * @param {boolean} loadConditionSetsParam - If true, load the 
+			 * @param {boolean} loadConditionSetsParam If true, load the 
 			 * condition sets as well. (Optional)
 			 */
 			public loadConditions(fromParam: File, loadConditionSetsParam: boolean): void;
 			/**
 			 * Loads the specified find/change query.
-			 * @param {string} queryNameParam - The query to load.
-			 * @param {SearchModes} searchModeParam - The search mode.
+			 * @param {string} queryNameParam The query to load.
+			 * @param {SearchModes} searchModeParam The search mode.
 			 */
 			public loadFindChangeQuery(queryNameParam: string, searchModeParam: SearchModes): void;
 			/**
 			 * Load swatches from the specified file.
-			 * @param {File} fromParam - The swatch file or InDesign 
+			 * @param {File} fromParam The swatch file or InDesign 
 			 * document.
 			 */
 			public loadSwatches(fromParam: File): void;
 			/**
 			 * Loads a set of XML markup tags from the specified file.
-			 * @param {File} fromParam - The path to the file that contains 
+			 * @param {File} fromParam The path to the file that contains 
 			 * the tags.
 			 */
 			public loadXMLTags(fromParam: File): void;
@@ -664,31 +665,31 @@ declare namespace Adobe {
 			public memoryStatistics(): any;
 			/**
 			 * Mount a Version Cue project.
-			 * @param {string} serverURLParam - The URL of the Version Cue 
+			 * @param {string} serverURLParam The URL of the Version Cue 
 			 * server containing the project
-			 * @param {string} projectNameParam - The name of the Version 
-			 * Cue project to mount
+			 * @param {string} projectNameParam The name of the Version Cue 
+			 * project to mount
 			 */
 			public mountProject(serverURLParam: string, projectNameParam: string): void;
 			/**
 			 * Opens the specified document.
-			 * @param {any} fromParam - The file path(s) to the document. 
-			 * Can accept: File or Array of Files.
-			 * @param {boolean} showingWindowParam - If true, opens the 
+			 * @param {any} fromParam The file path(s) to the document. Can 
+			 * accept: File or Array of Files.
+			 * @param {boolean} showingWindowParam If true, opens the 
 			 * document in a window. If false, the document is opened but 
 			 * is not displayed in a window. (Optional)
-			 * @param {OpenOptions} openOptionParam - How to open the 
+			 * @param {OpenOptions} openOptionParam How to open the 
 			 * document. (Optional)
 			 */
 			public open(fromParam: any, showingWindowParam: boolean, openOptionParam: OpenOptions): any;
 			/**
 			 * Package a folder into a UCF file.
-			 * @param {File} sourceFolderParam - The folder to be packaged 
+			 * @param {File} sourceFolderParam The folder to be packaged 
 			 * into an IDML file. Does not validate structure of the folder 
 			 * pursuant to the IDML spec. Caller is responsible for making 
 			 * sure the files in the folder are correctly organized.
-			 * @param {File} ucfFileParam - The destination UCF file. Will 
-			 * be overwritten if it already exists.
+			 * @param {File} ucfFileParam The destination UCF file. Will be 
+			 * overwritten if it already exists.
 			 * @param {string} mimeMediaTypeParam
 			 */
 			public packageUCF(sourceFolderParam: File, ucfFileParam: File, mimeMediaTypeParam: string): void;
@@ -715,33 +716,33 @@ declare namespace Adobe {
 			public pasteWithoutFormatting(): void;
 			/**
 			 * Gets the current value of the specified performance metric.
-			 * @param {any} forParam - The status to get from InDesign. Can 
+			 * @param {any} forParam The status to get from InDesign. Can 
 			 * accept: Long Integer or PerformanceMetricOptions enumerator.
 			 */
 			public performanceMetric(forParam: any): any;
 			/**
 			 * Gets the long name of the specified performance metric.
-			 * @param {any} forParam - The status to get from InDesign. Can 
+			 * @param {any} forParam The status to get from InDesign. Can 
 			 * accept: Long Integer or PerformanceMetricOptions enumerator.
 			 */
 			public performanceMetricLongName(forParam: any): string;
 			/**
 			 * Gets the short name of the specified performance metric.
-			 * @param {any} forParam - The status to get from InDesign. Can 
+			 * @param {any} forParam The status to get from InDesign. Can 
 			 * accept: Long Integer or PerformanceMetricOptions enumerator.
 			 */
 			public performanceMetricShortName(forParam: any): string;
 			/**
 			 * Prints the specified file(s).
-			 * @param {any} fromParam - One or more file paths. Can accept: 
+			 * @param {any} fromParam One or more file paths. Can accept: 
 			 * File or Array of Files.
-			 * @param {boolean} printDialogParam - Whether to invoke the 
+			 * @param {boolean} printDialogParam Whether to invoke the 
 			 * print dialog (Optional)
 			 */
 			public print(fromParam: any, printDialogParam: boolean): void;
 			/**
 			 * Quits the application.
-			 * @param {SaveOptions} savingParam - The option to use for 
+			 * @param {SaveOptions} savingParam The option to use for 
 			 * saving changes to open documents before quitting. (Optional)
 			 */
 			public quit(savingParam: SaveOptions): void;
@@ -749,52 +750,52 @@ declare namespace Adobe {
 			public redo(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerApplication(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Saves the specified find/change query.
-			 * @param {string} queryNameParam - The query to save.
-			 * @param {SearchModes} searchModeParam - The search mode.
+			 * @param {string} queryNameParam The query to save.
+			 * @param {SearchModes} searchModeParam The search mode.
 			 */
 			public saveFindChangeQuery(queryNameParam: string, searchModeParam: SearchModes): void;
 			/**
 			 * Saves the specified swatch(es) to a swatchbook file.
-			 * @param {File} toParam - The swatchbook file to save to.
-			 * @param {any[]} swatchListParam - The swatch(es) to save.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {File} toParam The swatchbook file to save to.
+			 * @param {any[]} swatchListParam The swatch(es) to save.
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public saveSwatches(toParam: File, swatchListParam: any[], versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Saves a set of tags to an external file.
-			 * @param {File} toParam - The full path to the file in which 
-			 * to save the tags.
-			 * @param {string} versionCommentsParam - The comment for this 
+			 * @param {File} toParam The full path to the file in which to 
+			 * save the tags.
+			 * @param {string} versionCommentsParam The comment for this 
 			 * version. (Optional)
-			 * @param {boolean} forceSaveParam - If true, forcibly saves a 
+			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
 			 */
 			public saveXMLTags(toParam: File, versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Selects the specified object(s).
-			 * @param {any} selectableItemsParam - The objects to select. 
-			 * Can accept: Object, Array of Objects, NothingEnum enumerator 
-			 * or SelectAll enumerator.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {any} selectableItemsParam The objects to select. Can 
+			 * accept: Object, Array of Objects, NothingEnum enumerator or 
+			 * SelectAll enumerator.
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the Application in relation to 
 			 * previously selected objects. (Optional)
 			 */
 			public select(selectableItemsParam: any, existingSelectionParam: SelectionOptions): void;
 			/**
 			 * Sets the application's preferences.
-			 * @param {any} applicationPreferencesParam - The IDML defaults 
+			 * @param {any} applicationPreferencesParam The IDML defaults 
 			 * file or enumeration. Can accept: File or LanguageAndRegion 
 			 * enumerator.
 			 */
@@ -808,46 +809,19 @@ declare namespace Adobe {
 			/**
 			 * Translates a key string into localized form based on current 
 			 * application locale.
-			 * @param {string} forParam - The key string to translate
+			 * @param {string} forParam The key string to translate
 			 */
 			public translateKeyString(forParam: string): string;
 			/** Undoes the last action. */
 			public undo(): void;
 			/**
 			 * Unpackage a UCF file into a folder structure.
-			 * @param {File} ucfFileParam - The UCF file to be unpackaged.
-			 * @param {File} destinationFolderParam - The folder where you 
+			 * @param {File} ucfFileParam The UCF file to be unpackaged.
+			 * @param {File} destinationFolderParam The folder where you 
 			 * would like the UCF file unpackaged to. Will be created if it 
 			 * does not exist.
 			 */
 			public unpackageUCF(ucfFileParam: File, destinationFolderParam: File): void;
-			/**
-			 * Update the link resource info of buzzword link.
-			 * @param {string} docIdParam - Buzzword document id for the 
-			 * link resource to be updated.
-			 * @param {LinkStatus} statusParam - new status of the link.
-			 * @param {string} statusInfoParam - Customized status info 
-			 * string for Buzzword link. (Optional)
-			 * @param {string} titleParam - Document title for Buzzword 
-			 * link. (Optional)
-			 * @param {string} docVersionParam - Buzzword document version. 
-			 * (Optional)
-			 * @param {string} contentVersionParam - Buzzword document 
-			 * content version (Optional)
-			 * @param {number} modYearParam - the modification year for the 
-			 * Buzzword document (Optional)
-			 * @param {number} modMonthParam - the modification month for 
-			 * the Buzzword document (Optional)
-			 * @param {number} modDayParam - the modification day for the 
-			 * Buzzword document (Optional)
-			 * @param {number} modHourParam - the modification hour for the 
-			 * Buzzword document (Optional)
-			 * @param {number} modMinuteParam - the modification minute for 
-			 * the Buzzword document (Optional)
-			 * @param {number} modSecondParam - the modification second for 
-			 * the Buzzword document (Optional)
-			 */
-			public updateBuzzwordLinkInfo(docIdParam: string, statusParam: LinkStatus, statusInfoParam: string, titleParam: string, docVersionParam: string, contentVersionParam: string, modYearParam: number, modMonthParam: number, modDayParam: number, modHourParam: number, modMinuteParam: number, modSecondParam: number): string;
 			/** Forces a check for new fonts in the various Fonts folders. */
 			public updateFonts(): void;
 			/** Waits for all the background tasks to finish. */

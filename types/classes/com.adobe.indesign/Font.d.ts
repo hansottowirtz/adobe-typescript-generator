@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -63,17 +63,17 @@ declare namespace Adobe {
 			public readonly writingScript: number;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerFont(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Checks whether the font supports the specified OpenType 
 			 * feature.
-			 * @param {any} usingParam - The OpenType feature to check for, 
+			 * @param {any} usingParam The OpenType feature to check for, 
 			 * specified either as an OpenType feature or a string. Can 
 			 * accept: OpenTypeFeature enumerator or String.
 			 */
@@ -81,10 +81,10 @@ declare namespace Adobe {
 			/**
 			 * Create a copy of the font with just enough information to 
 			 * render the list of characters given.
-			 * @param {string} charactersForSubsetParam - String with all 
-			 * the characters used in the resulting font.
-			 * @param {File} fontDestinationParam - File location for the 
-			 * new font.
+			 * @param {string} charactersForSubsetParam String with all the 
+			 * characters used in the resulting font.
+			 * @param {File} fontDestinationParam File location for the new 
+			 * font.
 			 */
 			public createSubsetFont(charactersForSubsetParam: string, fontDestinationParam: File): void;
 			/**
@@ -94,10 +94,10 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerFont(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

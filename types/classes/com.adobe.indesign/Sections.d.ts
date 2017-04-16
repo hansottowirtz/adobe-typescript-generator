@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,9 +7,9 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new section.
-			 * @param {Page} referenceParam - The page on which the section 
+			 * @param {Page} referenceParam The page on which the section 
 			 * begins. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Section (Optional)
 			 */
 			public add(referenceParam: Page, withPropertiesParam: any): Adobe.Indesign.Section;
@@ -23,28 +23,27 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Section;
 			/**
 			 * Returns the Section with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Section;
 			/**
 			 * Returns the Section with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Section;
 			/**
 			 * Returns the Section with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Section;
 			/**
 			 * Returns the Sections within the specified range.
-			 * @param {any} fromParam - The Section, index, or name at the 
+			 * @param {any} fromParam The Section, index, or name at the 
 			 * beginning of the range. Can accept: Section, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Section, index, or name at the 
-			 * end of the range. Can accept: Section, Long Integer or 
-			 * String.
+			 * @param {any} toParam The Section, index, or name at the end 
+			 * of the range. Can accept: Section, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
 			/** Returns the last Section in the collection. */
@@ -54,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Section whose index follows the specified 
 			 * Section in the collection.
-			 * @param {Section} objParam - The Section whose index comes 
+			 * @param {Section} objParam The Section whose index comes 
 			 * before the desired Section. 
 			 */
 			public nextItem(objParam: Section): Adobe.Indesign.Section;
@@ -71,7 +70,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Section with the index previous to the specified 
 			 * index.
-			 * @param {Section} objParam - The index of the Section that 
+			 * @param {Section} objParam The index of the Section that 
 			 * follows the desired Section.
 			 */
 			public previousItem(objParam: Section): Adobe.Indesign.Section;

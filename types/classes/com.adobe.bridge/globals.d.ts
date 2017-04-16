@@ -1,23 +1,25 @@
-/// <reference path="../../namespaces/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
 		class globals extends Adobe.Csawlib.CSHostObject {
-			/** This is not a Property Description. */
+			/** The application object. */
 			public app: Adobe.Bridge.App;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} message - 
+			 * Displays a platform-standard dialog containing a short 
+			 * message and an OK button.
+			 * @param {string} message 
 			 */
 			public alert(message: string): void;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} message - 
+			 * Displays a platform-standard dialog containing a short 
+			 * message and two buttons labeled Yes and No.
+			 * @param {string} message 
 			 */
 			public confirm(message: string): boolean;
 			/**
-			 * This is not a Method Description.
-			 * @param {string} message - 
+			 * Displays a modal dialog that returns the user’s text input.
+			 * @param {string} message 
 			 */
 			public prompt(message: string): string;
 		}

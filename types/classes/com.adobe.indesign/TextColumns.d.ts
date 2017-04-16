@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -15,16 +15,16 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.TextColumn;
 			/**
 			 * Returns the TextColumn with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.TextColumn;
 			/**
 			 * Returns the TextColumns within the specified range.
-			 * @param {any} fromParam - The TextColumn, index, or name at 
-			 * the beginning of the range. Can accept: TextColumn, Long 
-			 * Integer or String.
-			 * @param {any} toParam - The TextColumn, index, or name at the 
+			 * @param {any} fromParam The TextColumn, index, or name at the 
+			 * beginning of the range. Can accept: TextColumn, Long Integer 
+			 * or String.
+			 * @param {any} toParam The TextColumn, index, or name at the 
 			 * end of the range. Can accept: TextColumn, Long Integer or 
 			 * String.
 			 */
@@ -36,7 +36,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextColumn whose index follows the specified 
 			 * TextColumn in the collection.
-			 * @param {TextColumn} objParam - The TextColumn whose index 
+			 * @param {TextColumn} objParam The TextColumn whose index 
 			 * comes before the desired TextColumn. 
 			 */
 			public nextItem(objParam: TextColumn): Adobe.Indesign.TextColumn;
@@ -53,7 +53,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the TextColumn with the index previous to the 
 			 * specified index.
-			 * @param {TextColumn} objParam - The index of the TextColumn 
+			 * @param {TextColumn} objParam The index of the TextColumn 
 			 * that follows the desired TextColumn.
 			 */
 			public previousItem(objParam: TextColumn): Adobe.Indesign.TextColumn;

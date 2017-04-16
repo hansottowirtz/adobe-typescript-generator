@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -48,7 +48,10 @@ declare namespace Adobe {
 			 * group), regardless of type.
 			 */
 			public readonly pageItems: Adobe.Indesign.PageItems;
-			/** The parent of the State (a Button or MultiStateObject). */
+			/**
+			 * The parent of the State (a Button, MultiStateObject, 
+			 * CheckBox or RadioButton).
+			 */
 			public readonly parent: any;
 			/** A collection of PDF files. */
 			public readonly pdfs: Adobe.Indesign.PDFs;
@@ -79,17 +82,17 @@ declare namespace Adobe {
 			public readonly wmfs: Adobe.Indesign.WMFs;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerState(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Adds page items to this state.
-			 * @param {any[]} pageitemsParam - One or more page items to 
-			 * add to this state.
+			 * @param {any[]} pageitemsParam One or more page items to add 
+			 * to this state.
 			 */
 			public addItemsToState(pageitemsParam: any[]): void;
 			/**
@@ -99,8 +102,8 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Moves the state to a new position in its parent collection.
-			 * @param {number} newPositionParam - the index to move the 
-			 * state to in its parent collection
+			 * @param {number} newPositionParam the index to move the state 
+			 * to in its parent collection
 			 */
 			public move(newPositionParam: number): void;
 			/**
@@ -112,10 +115,10 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerState(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;

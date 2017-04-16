@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,16 +7,16 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * Creates a new Button
-			 * @param {Layer} layerParam - The layer on which to create the 
+			 * @param {Layer} layerParam The layer on which to create the 
 			 * Button. (Optional)
-			 * @param {LocationOptions} atParam - The location at which to 
+			 * @param {LocationOptions} atParam The location at which to 
 			 * insert the Button relative to the reference object or within 
 			 * the container object. (Optional)
-			 * @param {any} referenceParam - The reference object. Note: 
+			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the at parameter is before or after. Can 
 			 * accept: Document, Spread, MasterSpread, Page, Layer or 
 			 * PageItem. (Optional)
-			 * @param {any} withPropertiesParam - Initial values for 
+			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Button (Optional)
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Indesign.Button;
@@ -30,26 +30,26 @@ declare namespace Adobe {
 			public firstItem(): Adobe.Indesign.Button;
 			/**
 			 * Returns the Button with the specified index or name.
-			 * @param {any} indexParam - The index or name. Can accept: 
-			 * Long Integer or String.
+			 * @param {any} indexParam The index or name. Can accept: Long 
+			 * Integer or String.
 			 */
 			public item(indexParam: any): Adobe.Indesign.Button;
 			/**
 			 * Returns the Button with the specified ID.
-			 * @param {number} idParam - The ID.
+			 * @param {number} idParam The ID.
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.Button;
 			/**
 			 * Returns the Button with the specified name.
-			 * @param {string} nameParam - The name.
+			 * @param {string} nameParam The name.
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.Button;
 			/**
 			 * Returns the Buttons within the specified range.
-			 * @param {any} fromParam - The Button, index, or name at the 
+			 * @param {any} fromParam The Button, index, or name at the 
 			 * beginning of the range. Can accept: Button, Long Integer or 
 			 * String.
-			 * @param {any} toParam - The Button, index, or name at the end 
+			 * @param {any} toParam The Button, index, or name at the end 
 			 * of the range. Can accept: Button, Long Integer or String.
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
@@ -60,8 +60,8 @@ declare namespace Adobe {
 			/**
 			 * Returns the Button whose index follows the specified Button 
 			 * in the collection.
-			 * @param {Button} objParam - The Button whose index comes 
-			 * before the desired Button. 
+			 * @param {Button} objParam The Button whose index comes before 
+			 * the desired Button. 
 			 */
 			public nextItem(objParam: Button): Adobe.Indesign.Button;
 			/**
@@ -77,7 +77,7 @@ declare namespace Adobe {
 			/**
 			 * Returns the Button with the index previous to the specified 
 			 * index.
-			 * @param {Button} objParam - The index of the Button that 
+			 * @param {Button} objParam The index of the Button that 
 			 * follows the desired Button.
 			 */
 			public previousItem(objParam: Button): Adobe.Indesign.Button;

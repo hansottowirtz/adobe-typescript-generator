@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -163,6 +163,11 @@ declare namespace Adobe {
 			public readonly graphics: Adobe.Incopy.Graphics;
 			/** A collection of groups. */
 			public readonly groups: Adobe.Incopy.Groups;
+			/**
+			 * The left margin, width, and right margin constraints this 
+			 * item is subject to when using the object-based layout rule.
+			 */
+			public readonly horizontalLayoutConstraints: any;
 			/** The horizontal scaling applied to the MultiStateObject. */
 			public readonly horizontalScale: number;
 			/** The unique ID of the MultiStateObject. */
@@ -349,6 +354,11 @@ declare namespace Adobe {
 			 * to the top right corner of rectangular shapes
 			 */
 			public readonly topRightCornerRadius: any;
+			/**
+			 * The top margin, height, and bottom margin constraints this 
+			 * item is subject to when using the object-based layout rule.
+			 */
+			public readonly verticalLayoutConstraints: any;
 			/** The vertical scaling applied to the MultiStateObject. */
 			public readonly verticalScale: number;
 			/** If true, the MultiStateObject is visible. */
@@ -364,10 +374,10 @@ declare namespace Adobe {
 			public readonly wmfs: Adobe.Incopy.WMFs;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerMultiStateObject(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
@@ -379,7 +389,7 @@ declare namespace Adobe {
 			/**
 			 * Finds objects that match the find what value and replace the 
 			 * objects with the change to value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public changeObject(reverseOrderParam: boolean): any;
@@ -391,31 +401,31 @@ declare namespace Adobe {
 			public clearTransformations(): void;
 			/**
 			 * Converts the MultiStateObject to a different shape.
-			 * @param {ConvertShapeOptions} givenParam - The 
+			 * @param {ConvertShapeOptions} givenParam The 
 			 * MultiStateObject's new shape.
-			 * @param {number} numberOfSidesParam - The number of sides for 
+			 * @param {number} numberOfSidesParam The number of sides for 
 			 * the resulting polygon. (Range: 3 to 100) (Optional)
-			 * @param {number} insetPercentageParam - The star inset 
+			 * @param {number} insetPercentageParam The star inset 
 			 * percentage for the resulting polygon. (Range: 0.0 to 100.0)  
 			 * (Optional)
-			 * @param {any} cornerRadiusParam - The corner radius of the 
+			 * @param {any} cornerRadiusParam The corner radius of the 
 			 * resulting rectangle. (Optional)
 			 */
 			public convertShape(givenParam: ConvertShapeOptions, numberOfSidesParam: number, insetPercentageParam: number, cornerRadiusParam: any): void;
 			/**
 			 * Gets the label value associated with the specified key.
-			 * @param {string} keyParam - The key.
+			 * @param {string} keyParam The key.
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Finds objects that match the find what value.
-			 * @param {boolean} reverseOrderParam - If true, returns the 
+			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
 			 */
 			public findObject(reverseOrderParam: boolean): any;
 			/**
 			 * Applies the specified fit option to content in a frame.
-			 * @param {FitOptions} givenParam - The fit option to use.
+			 * @param {FitOptions} givenParam The fit option to use.
 			 */
 			public fit(givenParam: FitOptions): void;
 			/**
@@ -426,50 +436,49 @@ declare namespace Adobe {
 			/**
 			 * Sets the label to the value associated with the specified 
 			 * key.
-			 * @param {string} keyParam - The key.
-			 * @param {string} valueParam - The value.
+			 * @param {string} keyParam The key.
+			 * @param {string} valueParam The value.
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Places XML content into the specified object. Note: Replaces 
 			 * any existing content.
-			 * @param {XMLElement} usingParam - The XML element whose 
-			 * content you want to place.
+			 * @param {XMLElement} usingParam The XML element whose content 
+			 * you want to place.
 			 */
 			public placeXML(usingParam: XMLElement): void;
 			/**
 			 * Apply an item's scaling to its content if possible.
-			 * @param {any[]} toParam - The scale factors to be left on the 
+			 * @param {any[]} toParam The scale factors to be left on the 
 			 * item.  The default is {1.0, 1.0}. (Optional)
 			 */
 			public redefineScaling(toParam: any[]): void;
 			/**
 			 * Move the bounding box of the page item
-			 * @param {any} inParam - The bounding box to resize. Can 
-			 * accept: CoordinateSpaces enumerator or Ordered array 
-			 * containing coordinateSpace:CoordinateSpaces enumerator, 
+			 * @param {any} inParam The bounding box to resize. Can accept: 
+			 * CoordinateSpaces enumerator or Ordered array containing 
+			 * coordinateSpace:CoordinateSpaces enumerator, 
 			 * boundsKind:BoundingBoxLimits enumerator.
-			 * @param {any[]} opposingCornersParam - Opposing corners of 
-			 * new bounding box in the given coordinate space
+			 * @param {any[]} opposingCornersParam Opposing corners of new 
+			 * bounding box in the given coordinate space
 			 */
 			public reframe(inParam: any, opposingCornersParam: any[]): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerMultiStateObject(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Resize the page item.
-			 * @param {any} inParam - The bounding box to resize. Can 
-			 * accept: CoordinateSpaces enumerator, BoundingBoxLimits 
-			 * enumerator or Ordered array containing 
-			 * coordinateSpace:CoordinateSpaces enumerator, 
-			 * boundsKind:BoundingBoxLimits enumerator.
-			 * @param {any} fromParam - The transform origin. Legal 
+			 * @param {any} inParam The bounding box to resize. Can accept: 
+			 * CoordinateSpaces enumerator, BoundingBoxLimits enumerator or 
+			 * Ordered array containing coordinateSpace:CoordinateSpaces 
+			 * enumerator, boundsKind:BoundingBoxLimits enumerator.
+			 * @param {any} fromParam The transform origin. Legal 
 			 * specifications: relative to bounding box: anchor | {anchor | 
 			 * {x,y}, bounds kind [, coordinate space]}; relative to 
 			 * coordinate space: {x,y} | {{x,y}[, coordinate space]}; 
@@ -478,9 +487,9 @@ declare namespace Adobe {
 			 * or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, 
 			 * AnchorPoint enumerators, BoundingBoxLimits enumerators or 
 			 * Long Integers.
-			 * @param {ResizeMethods} byParam - How the current dimensions 
+			 * @param {ResizeMethods} byParam How the current dimensions 
 			 * are affected by the given values
-			 * @param {any[]} valuesParam - The width and height values. 
+			 * @param {any[]} valuesParam The width and height values. 
 			 * Legal dimensions specifications: {x, y [, coordinate 
 			 * space]}, {x, resize constraint [, coordinate space]}, or 
 			 * {resize constraint, y [, coordinate space]}; where x and y 
@@ -489,11 +498,11 @@ declare namespace Adobe {
 			 * ignored for the 'current dimensions times' resize method). 
 			 * Can accept: Array of Reals, ResizeConstraints enumerators or 
 			 * CoordinateSpaces enumerators.
-			 * @param {boolean} resizeIndividuallyParam - If false and 
+			 * @param {boolean} resizeIndividuallyParam If false and 
 			 * multiple page items are targeted, the new dimensions are 
 			 * attained only by moving the individual items rather than 
 			 * resizing them. (Optional)
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -503,13 +512,13 @@ declare namespace Adobe {
 			/**
 			 * Get the coordinates of the given location in the specified 
 			 * coordinate system.
-			 * @param {any} locationParam - The location requested. Can 
+			 * @param {any} locationParam The location requested. Can 
 			 * accept: Array of 2 Reals, AnchorPoint enumerator or Array of 
 			 * Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint 
 			 * enumerators, BoundingBoxLimits enumerators or Long Integers.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use.
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler location is interpreted using ruler units rather than 
 			 * points. The default value is false. This parameter has no 
 			 * effect unless the reference point is specified relative to a 
@@ -520,16 +529,16 @@ declare namespace Adobe {
 			public toSpecifier(): string;
 			/**
 			 * Transform the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
-			 * @param {any} fromParam - The temporary origin during the 
+			 * @param {any} fromParam The temporary origin during the 
 			 * transformation. Can accept: Array of 2 Reals, AnchorPoint 
 			 * enumerator or Array of Arrays of 2 Reals, CoordinateSpaces 
 			 * enumerators, AnchorPoint enumerators, BoundingBoxLimits 
 			 * enumerators or Long Integers.
-			 * @param {any} withMatrixParam - Transform matrix. Can accept: 
+			 * @param {any} withMatrixParam Transform matrix. Can accept: 
 			 * Array of 6 Reals or TransformationMatrix.
-			 * @param {any} replacingCurrentParam - Transform components to 
+			 * @param {any} replacingCurrentParam Transform components to 
 			 * consider; providing this optional parameter causes the 
 			 * target's existing transform components to be replaced with 
 			 * new values.  Without this parameter, the given matrix is 
@@ -537,7 +546,7 @@ declare namespace Adobe {
 			 * the effect of the two. Can accept: MatrixContent enumerator, 
 			 * Array of MatrixContent enumerators or Long Integer. 
 			 * (Optional)
-			 * @param {boolean} consideringRulerUnitsParam - If true then a 
+			 * @param {boolean} consideringRulerUnitsParam If true then a 
 			 * ruler based origin is interpreted using ruler units rather 
 			 * than points. The default value is false. This parameter has 
 			 * no effect unless the reference point is specified relative 
@@ -546,7 +555,7 @@ declare namespace Adobe {
 			public transform(inParam: CoordinateSpaces, fromParam: any, withMatrixParam: any, replacingCurrentParam: any, consideringRulerUnitsParam: boolean): void;
 			/**
 			 * Get the transformation values of the page item.
-			 * @param {CoordinateSpaces} inParam - The coordinate space to 
+			 * @param {CoordinateSpaces} inParam The coordinate space to 
 			 * use
 			 */
 			public transformValuesOf(inParam: CoordinateSpaces): any;

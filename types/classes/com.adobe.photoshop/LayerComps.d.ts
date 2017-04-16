@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -8,13 +8,13 @@ declare namespace Adobe {
 			public readonly length: number;
 			/**
 			 * a layer comp
-			 * @param {string} name - name of layer comp
-			 * @param {string} comment - comment of the layer comp
-			 * @param {boolean} appearance - remember layer appearance, 
-			 * layer style, for this layer comp ( default: false )
-			 * @param {boolean} position - remember layer position for this 
+			 * @param {string} name name of layer comp
+			 * @param {string} comment comment of the layer comp
+			 * @param {boolean} appearance remember layer appearance, layer 
+			 * style, for this layer comp ( default: false )
+			 * @param {boolean} position remember layer position for this 
 			 * layer comp ( default: false )
-			 * @param {boolean} visibility - remember layer visibility for 
+			 * @param {boolean} visibility remember layer visibility for 
 			 * this layer comp ( default: true )
 			 */
 			public add(name: string, comment: string, appearance: boolean, position: boolean, visibility: boolean): Adobe.Photoshop.LayerComp;

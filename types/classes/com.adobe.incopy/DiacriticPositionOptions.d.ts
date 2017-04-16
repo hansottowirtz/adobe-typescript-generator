@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -18,8 +18,15 @@ declare namespace Adobe {
 			public static readonly mediumPosition: Adobe.Incopy.DiacriticPositionOptions;
 			/** OpenType position */
 			public static readonly OPENTYPE_POSITION: Adobe.Incopy.DiacriticPositionOptions;
+			/** OpenType position from baseline */
+			public static readonly OPENTYPE_POSITION_FROM_BASELINE: Adobe.Incopy.DiacriticPositionOptions;
 			/** Alias for OPENTYPE_POSITION. OpenType position */
 			public static readonly opentypePosition: Adobe.Incopy.DiacriticPositionOptions;
+			/**
+			 * Alias for OPENTYPE_POSITION_FROM_BASELINE. OpenType position 
+			 * from baseline
+			 */
+			public static readonly opentypePositionFromBaseline: Adobe.Incopy.DiacriticPositionOptions;
 			/** Tight position */
 			public static readonly TIGHT_POSITION: Adobe.Incopy.DiacriticPositionOptions;
 			/** Alias for TIGHT_POSITION. Tight position */

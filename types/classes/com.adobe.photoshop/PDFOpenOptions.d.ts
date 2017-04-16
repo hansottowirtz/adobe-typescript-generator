@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -19,7 +19,7 @@ declare namespace Adobe {
 			 * DEPRECATED, no longer used in CS2  ( height of image (unit 
 			 * value) )
 			 */
-			public height: string;
+			public height: any;
 			/** the document mode */
 			public mode: Adobe.Photoshop.OpenDocumentMode;
 			/** name of the new document */
@@ -39,7 +39,7 @@ declare namespace Adobe {
 			 * DEPRECATED, no longer used in CS2  ( width of image (unit 
 			 * value) )
 			 */
-			public width: string;
+			public width: any;
 		}
 	}
 }

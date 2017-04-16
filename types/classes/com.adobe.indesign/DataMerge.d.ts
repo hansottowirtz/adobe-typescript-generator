@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -31,19 +31,19 @@ declare namespace Adobe {
 			public properties: any;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerDataMerge(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Merges records and exports to PDF.
-			 * @param {File} toParam - The path of exported PDF file.
-			 * @param {PDFExportPreset} usingParam - The PDF export style 
-			 * to use. (Optional)
-			 * @param {File} outputOversetReportFileParam - The path to the 
+			 * @param {File} toParam The path of exported PDF file.
+			 * @param {PDFExportPreset} usingParam The PDF export style to 
+			 * use. (Optional)
+			 * @param {File} outputOversetReportFileParam The path to the 
 			 * file in which to store the overset report. (Optional)
 			 */
 			public exportFile(toParam: File, usingParam: PDFExportPreset, outputOversetReportFileParam: File): void;
@@ -54,7 +54,7 @@ declare namespace Adobe {
 			public getElements(): any;
 			/**
 			 * Merges records and produces an optional overset report.
-			 * @param {File} outputOversetReportFileParam - The path to the 
+			 * @param {File} outputOversetReportFileParam The path to the 
 			 * file in which to store the overset report. (Optional)
 			 */
 			public mergeRecords(outputOversetReportFileParam: File): void;
@@ -62,16 +62,16 @@ declare namespace Adobe {
 			public removeDataSource(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerDataMerge(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Specifies the file to use as the data source.
-			 * @param {File} dataSourceFileParam - The path to the data 
+			 * @param {File} dataSourceFileParam The path to the data 
 			 * source file.
 			 */
 			public selectDataSource(dataSourceFileParam: File): void;

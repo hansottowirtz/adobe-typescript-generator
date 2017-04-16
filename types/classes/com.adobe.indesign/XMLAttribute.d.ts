@@ -1,4 +1,4 @@
-/// <reference path="../../namespaces/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -27,20 +27,20 @@ declare namespace Adobe {
 			public value: string;
 			/**
 			 * Adds an event listener.
-			 * @param {string} eventTypeParam - The event type.
-			 * @param {any} handlerParam - The event handler. Can accept: 
+			 * @param {string} eventTypeParam The event type.
+			 * @param {any} handlerParam The event handler. Can accept: 
 			 * File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public addEventListenerXMLAttribute(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Converts the XML attribute to a child element of its parent 
 			 * element.
-			 * @param {XMLElementLocation} locatedParam - The location of 
-			 * the new XML element within the parent XML element of the XML 
+			 * @param {XMLElementLocation} locatedParam The location of the 
+			 * new XML element within the parent XML element of the XML 
 			 * attribute. (Optional)
-			 * @param {XMLTag} markupTagParam - The XML tag to apply to the 
+			 * @param {XMLTag} markupTagParam The XML tag to apply to the 
 			 * new XML element. (Optional)
 			 */
 			public convertToElement(locatedParam: XMLElementLocation, markupTagParam: XMLTag): Adobe.Indesign.XMLElement;
@@ -53,16 +53,16 @@ declare namespace Adobe {
 			public remove(): void;
 			/**
 			 * Removes the event listener.
-			 * @param {string} eventTypeParam - The registered event type.
-			 * @param {any} handlerParam - The registered event handler. 
-			 * Can accept: File or JavaScript Function.
-			 * @param {boolean} capturesParam - This parameter is obsolete. 
+			 * @param {string} eventTypeParam The registered event type.
+			 * @param {any} handlerParam The registered event handler. Can 
+			 * accept: File or JavaScript Function.
+			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
 			 */
 			public removeEventListenerXMLAttribute(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
 			 * Selects the object.
-			 * @param {SelectionOptions} existingSelectionParam - The 
+			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the XMLAttribute in relation to 
 			 * previously selected objects. (Optional)
 			 */
