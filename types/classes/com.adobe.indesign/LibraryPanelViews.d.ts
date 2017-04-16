@@ -1,22 +1,53 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class LibraryPanelViews extends Adobe.Csawlib.CSEnumBase {
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
-			/** Large thumbnail view */
+			/**
+			 * Large thumbnail view
+			 * @type {Adobe.Indesign.LibraryPanelViews}
+			 * @readonly
+			 */
 			public static readonly LARGE_THUMBNAIL_VIEW: Adobe.Indesign.LibraryPanelViews;
-			/** Alias for LARGE_THUMBNAIL_VIEW. Large thumbnail view */
+			/**
+			 * Alias for LARGE_THUMBNAIL_VIEW. Large thumbnail view
+			 * @type {Adobe.Indesign.LibraryPanelViews}
+			 * @readonly
+			 */
 			public static readonly largeThumbnailView: Adobe.Indesign.LibraryPanelViews;
-			/** List view */
+			/**
+			 * List view
+			 * @type {Adobe.Indesign.LibraryPanelViews}
+			 * @readonly
+			 */
 			public static readonly LIST_VIEW: Adobe.Indesign.LibraryPanelViews;
-			/** Alias for LIST_VIEW. List view */
+			/**
+			 * Alias for LIST_VIEW. List view
+			 * @type {Adobe.Indesign.LibraryPanelViews}
+			 * @readonly
+			 */
 			public static readonly listView: Adobe.Indesign.LibraryPanelViews;
-			/** Thumbnail view */
+			/**
+			 * Thumbnail view
+			 * @type {Adobe.Indesign.LibraryPanelViews}
+			 * @readonly
+			 */
 			public static readonly THUMBNAIL_VIEW: Adobe.Indesign.LibraryPanelViews;
-			/** Alias for THUMBNAIL_VIEW. Thumbnail view */
+			/**
+			 * Alias for THUMBNAIL_VIEW. Thumbnail view
+			 * @type {Adobe.Indesign.LibraryPanelViews}
+			 * @readonly
+			 */
 			public static readonly thumbnailView: Adobe.Indesign.LibraryPanelViews;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

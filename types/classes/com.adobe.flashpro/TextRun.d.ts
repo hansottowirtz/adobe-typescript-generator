@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -7,11 +7,15 @@ declare namespace Adobe {
 		 * the attribute that match the TextAttrs.
 		 */
 		class TextRun extends Adobe.Csawlib.CSHostObject {
-			/** The text contained in this TextRun object. */
+			/**
+			 * The text contained in this TextRun object.
+			 * @type {string}
+			 */
 			public characters: string;
 			/**
 			 * TextAttrs object containing the attributes of this run of 
 			 * text.
+			 * @type {Adobe.Flashpro.TextAttrs}
 			 */
 			public textAttrs: Adobe.Flashpro.TextAttrs;
 		}

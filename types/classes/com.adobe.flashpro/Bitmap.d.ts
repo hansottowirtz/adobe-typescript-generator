@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -8,9 +8,17 @@ declare namespace Adobe {
 		 * properties, the following properties are available:
 		 */
 		class Bitmap extends Adobe.Flashpro.Instance {
-			/** The width of the bitmap in pixels. */
+			/**
+			 * The width of the bitmap in pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly hPixels: number;
-			/** the height of the bitmap in pixels. */
+			/**
+			 * the height of the bitmap in pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly vPixels: number;
 			/**
 			 * This allows the user to do bitmap effects by getting the 
@@ -20,6 +28,7 @@ declare namespace Adobe {
 			 * Note: The byte array is meaningful only when referenced by 
 			 * an External Library. Typically only used when creating n 
 			 * extensible tool or effect.
+			 * @returns {any}
 			 */
 			public getBits(): any;
 			/**
@@ -36,6 +45,7 @@ declare namespace Adobe {
 			 * depth are integers, bits is a byte array.  cTab is required 
 			 * only for bitmaps with bit depth 8 or less and is an array of 
 			 * string values of the form "#rrggbb"
+			 * @returns {void}
 			 */
 			public setBits(bitmap: Bitmap): void;
 		}

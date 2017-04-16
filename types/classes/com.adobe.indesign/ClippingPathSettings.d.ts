@@ -1,26 +1,43 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** Preference */
 		class ClippingPathSettings extends Adobe.Indesign.Preference {
-			/** A list of the alpha channels stored in the graphic. */
+			/**
+			 * A list of the alpha channels stored in the graphic.
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly alphaChannelPathNames: any;
 			/**
 			 * The name of the Photoshop path or alpha channel to use as a 
 			 * clipping path.
+			 * @type {string}
 			 */
 			public appliedPathName: string;
-			/** The clipping path type. */
+			/**
+			 * The clipping path type.
+			 * @type {Adobe.Indesign.ClippingPathType}
+			 */
 			public clippingType: Adobe.Indesign.ClippingPathType;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * If true, creates interior clipping paths within the 
 			 * surrounding clipping path. Note: Valid only when clipping 
 			 * type is alpha channel or detect edges.
+			 * @type {boolean}
 			 */
 			public includeInsideEdges: boolean;
 			/**
@@ -29,33 +46,51 @@ declare namespace Adobe {
 			 * -10000 to 10000; picas: -833p4 to 833p4; inches: -138.8889 
 			 * to 138.8889; mm: -3527.778 to 3527.778; cm: -352.7778 to 
 			 * 352.7778; ciceros: -781c11.889 to 781c11.889)
+			 * @type {any}
 			 */
 			public insetFrame: any;
-			/** If true, inverts the clipping path. */
+			/**
+			 * If true, inverts the clipping path.
+			 * @type {boolean}
+			 */
 			public invertPath: boolean;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * The parent of the ClippingPathSettings (a Image, EPS, WMF, 
 			 * PICT, PDF or ImportedPage).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
-			/** A collection of paths. */
+			/**
+			 * A collection of paths.
+			 * @type {Adobe.Indesign.Paths}
+			 * @readonly
+			 */
 			public readonly paths: Adobe.Indesign.Paths;
-			/** A list of the clipping paths stored in the graphic. */
+			/**
+			 * A list of the clipping paths stored in the graphic.
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly photoshopPathNames: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * If true, truncates the clipping path at the edge of the 
 			 * frame containing the graphic. Note: Valid only when clipping 
 			 * type is alpha channel or detect edges.
+			 * @type {boolean}
 			 */
 			public restrictToFrame: boolean;
 			/**
@@ -64,6 +99,7 @@ declare namespace Adobe {
 			 * than) the threshold value are clipped (obscured). (Range: 0 
 			 * to 255) Note: Valid only when clipping type is detect edges 
 			 * or alpha channel.
+			 * @type {number}
 			 */
 			public threshold: number;
 			/**
@@ -71,6 +107,7 @@ declare namespace Adobe {
 			 * the threshold value before the pixel is obscured by the 
 			 * clipping path. (Range: 0 to 10) Note: Valid only when 
 			 * clipping type is detect edges or alpha channel.
+			 * @type {number}
 			 */
 			public tolerance: number;
 			/**
@@ -78,6 +115,7 @@ declare namespace Adobe {
 			 * create the clipping path. If false, calculates the clipping 
 			 * path based on screen-display resolution. Note: Valid only 
 			 * when clipping type is detect edges.
+			 * @type {boolean}
 			 */
 			public useHighResolutionImage: boolean;
 			/**
@@ -87,13 +125,18 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerClippingPathSettings(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
-			/** Converts the clipping path to a frame. */
+			/**
+			 * Converts the clipping path to a frame.
+			 * @returns {Adobe.Indesign.PageItem}
+			 */
 			public convertToFrame(): Adobe.Indesign.PageItem;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -103,9 +146,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerClippingPathSettings(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

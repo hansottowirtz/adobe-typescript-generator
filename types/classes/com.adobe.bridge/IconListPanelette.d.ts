@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -8,19 +8,33 @@ declare namespace Adobe {
 		 * markup syntax.
 		 */
 		class IconListPanelette extends Adobe.Csawlib.CSHostObject {
+			/**
+			 * @type {any[]}
+			 */
 			public keyValuePairs: any[];
-			/** The unique, identifying name of this subpanel. */
+			/**
+			 * The unique, identifying name of this subpanel.
+			 * @type {string}
+			 */
 			public name: string;
 			/**
 			 * A collection of two-member arrays describing the rows to 
 			 * display in the panelette.
+			 * @type {any[]}
 			 */
 			public rows: any[];
-			/** Localizable text shown in the subpanel header bar. */
+			/**
+			 * Localizable text shown in the subpanel header bar.
+			 * @type {string}
+			 */
 			public titleMarkup: string;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 		}

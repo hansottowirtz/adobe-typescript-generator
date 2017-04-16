@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.awsi/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.awsi/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Awsi {

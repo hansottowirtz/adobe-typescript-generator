@@ -1,10 +1,13 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
 		/** object which represents the Output Panel */
 		class OutputPanel extends Adobe.Csawlib.CSHostObject {
-			/** Clears the contents of the Output Panel */
+			/**
+			 * Clears the contents of the Output Panel
+			 * @returns {void}
+			 */
 			public clear(): void;
 			/**
 			 * Saves the contents of the Output Panel to a local text file, 
@@ -21,6 +24,7 @@ declare namespace Adobe {
 			 * @param {boolean} useSystemEncoding Save the output panel 
 			 * text using the system encoding instead of UTF8, and without 
 			 * the Byte Order Mark characters at the start of the text.
+			 * @returns {void}
 			 */
 			public save(fileURI: string, bAppendToFile: boolean, useSystemEncoding: boolean): void;
 			/**
@@ -29,6 +33,7 @@ declare namespace Adobe {
 			 * visible.  (Duplicates functionality in fl.trace, but present 
 			 * here as well for consistency reasons.)
 			 * @param {string} message 
+			 * @returns {void}
 			 */
 			public trace(message: string): void;
 		}

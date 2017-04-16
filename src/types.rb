@@ -9,6 +9,9 @@ module Types
     'Object' => 'any',
     'int' => 'number',
     'Class' => 'any',
+    'ILogger' => 'Adobe.Flex.ILogger',
+    'LogEvent' => 'Adobe.Flex.LogEvent',
+    'HostObject' => 'Adobe.Flex.HostObject',
     'CSEnumSharedCache' => 'Adobe.Csawlib.CSEnumSharedCache',
     'CSHostObject' => 'Adobe.Csawlib.CSHostObject'
   }

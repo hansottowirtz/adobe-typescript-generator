@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -12,17 +12,23 @@ declare namespace Adobe {
 			/**
 			 * An integer specifying the depth of the tool in the popup. 
 			 * Used only when creating extensible tools.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly depth: number;
 			/**
 			 * An integer specifying the resource ID of the tool. 
 			 * Extensible tools have an iconID of -1. Used only when 
 			 * creating extensible tools.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly iconID: number;
 			/**
 			 * An integer specifying the position of the tool in the 
 			 * toolbar. Used only when creating extensible tools.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly position: number;
 			/**
@@ -33,6 +39,7 @@ declare namespace Adobe {
 			 * (see setPI method). Used only when creating extensible 
 			 * tools.
 			 * @param {boolean} enable 
+			 * @returns {void}
 			 */
 			public enablePIControl(control: string, enable: boolean): void;
 			/**
@@ -42,6 +49,7 @@ declare namespace Adobe {
 			 * tools
 			 * @param {string} file Name of the png file to use as the 
 			 * icon. PNG file must be placed in tools directory.
+			 * @returns {void}
 			 */
 			public setIcon(file: string): void;
 			/**
@@ -49,6 +57,7 @@ declare namespace Adobe {
 			 * Used only when creating extensible tools.
 			 * @param {string} menuStr String to appear in the popup menu 
 			 * for the tool.
+			 * @returns {void}
 			 */
 			public setMenuString(menuStr: string): void;
 			/**
@@ -57,6 +66,7 @@ declare namespace Adobe {
 			 * Used only when creating extensible tools.
 			 * @param {string} xmlFile Name of the xml file that has the 
 			 * description of the tool's options.
+			 * @returns {void}
 			 */
 			public setOptionsFile(xmlFile: string): void;
 			/**
@@ -66,6 +76,7 @@ declare namespace Adobe {
 			 * specified. Used only when creating extensible tools.
 			 * @param {string} pi The property inspector to invoke for this 
 			 * tool
+			 * @returns {void}
 			 */
 			public setPI(pi: string): void;
 			/**
@@ -73,6 +84,7 @@ declare namespace Adobe {
 			 * configuration of the toolbar. The name is used only by the 
 			 * xml layout file. Used only when creating extensible tools.
 			 * @param {string} name The name of the tool
+			 * @returns {void}
 			 */
 			public setToolName(name: string): void;
 			/**
@@ -80,6 +92,7 @@ declare namespace Adobe {
 			 * stationary over the tool icon. Used only when creating 
 			 * extensible tools.
 			 * @param {string} toolTip The tooltip to use for the tool.
+			 * @returns {void}
 			 */
 			public setToolTip(toolTip: string): void;
 			/**
@@ -91,6 +104,7 @@ declare namespace Adobe {
 			 * tools.
 			 * @param {boolean} show True to show the control, false to 
 			 * hide the control.
+			 * @returns {void}
 			 */
 			public showPIControl(control: string, show: boolean): void;
 			/**
@@ -100,6 +114,7 @@ declare namespace Adobe {
 			 * creating extensible tools.
 			 * @param {boolean} show true to show the handles, false not 
 			 * to.
+			 * @returns {void}
 			 */
 			public showTransformHandles(show: boolean): void;
 		}

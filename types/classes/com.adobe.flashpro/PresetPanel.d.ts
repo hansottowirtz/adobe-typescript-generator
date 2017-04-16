@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -10,6 +10,8 @@ declare namespace Adobe {
 			/**
 			 * An array of presetItem objects in the Preset Panel. Each 
 			 * object represents either a folder or a preset.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly items: any[];
 			/**
@@ -28,6 +30,7 @@ declare namespace Adobe {
 			 * preset will NOT be added, and this function will return 
 			 * false. If successful, the new preset will be selected in the 
 			 * panel.
+			 * @returns {boolean}
 			 */
 			public addNewItem(namePath: string): boolean;
 			/**
@@ -42,6 +45,7 @@ declare namespace Adobe {
 			 * Returns a Boolean: true if successful, false otherwise.
 			 * @param {string} namePath the path within the preset panel of 
 			 * the preset to be applied.
+			 * @returns {boolean}
 			 */
 			public applyPreset(namePath: string): boolean;
 			/**
@@ -50,6 +54,7 @@ declare namespace Adobe {
 			 * currently selected in the Presets panel will be deleted.
 			 * @param {string} folderPath This is the folder name inclusive 
 			 * of its path within the Preset Panel.
+			 * @returns {boolean}
 			 */
 			public deleteFolder(folderPath: string): boolean;
 			/**
@@ -63,6 +68,7 @@ declare namespace Adobe {
 			 * path within the Preset Panel. If argument is not supplied or 
 			 * is empty, all currently selected items in the Preset panel 
 			 * will be deleted.
+			 * @returns {boolean}
 			 */
 			public deleteItem(namePath: string): boolean;
 			/**
@@ -79,6 +85,7 @@ declare namespace Adobe {
 			 * folderPath is not supplied or is empty, any folders 
 			 * currently selected in the Panel will be expanded or closed 
 			 * based on the bExpand parameter and bRecurse parameters.
+			 * @returns {boolean}
 			 */
 			public expandFolder(bExpand: boolean, bRecurseNestedParents: boolean, namePath: string): boolean;
 			/**
@@ -90,6 +97,7 @@ declare namespace Adobe {
 			 * the current selection is used. If nothing is selected, or 
 			 * multiple items in the panel are selected, or a folder is 
 			 * selected, this method will fail.
+			 * @returns {boolean}
 			 */
 			public exportItem(URI: string, namePath: string): boolean;
 			/**
@@ -101,11 +109,13 @@ declare namespace Adobe {
 			 * @param {string} namePath This is the item inclusive of its 
 			 * path within the Preset Panel. If argument is not supplied, 
 			 * the target becomes based upon current selection.
+			 * @returns {number}
 			 */
 			public findItemIndex(namePath: string): number;
 			/**
 			 * Gets the currently selected item(s). Returns an array of 
 			 * items that are selected in the presets panel.
+			 * @returns {any[]}
 			 */
 			public getSelectedItems(): any[];
 			/**
@@ -117,6 +127,7 @@ declare namespace Adobe {
 			 * path within the Preset Panel. If argument is not supplied, a 
 			 * default name is provided [Preset n] and the preset is added 
 			 * to the top level of Custom Presets in the panel.
+			 * @returns {boolean}
 			 */
 			public importItem(URI: string, namePath: string): boolean;
 			/**
@@ -137,6 +148,7 @@ declare namespace Adobe {
 			 * @param {string} namePath This is the item inclusive of its 
 			 * path within the Preset Panel. If argument is not supplied, 
 			 * the target becomes based upon current selection.
+			 * @returns {boolean}
 			 */
 			public moveToFolder(folderPath: string, namePath: string): boolean;
 			/**
@@ -145,6 +157,7 @@ declare namespace Adobe {
 			 * of its path within the Preset Panel. If arg is not provided, 
 			 * a default name will be supplied [untitled folder n] and the 
 			 * folder will be added at the root of the Custom Presets.
+			 * @returns {boolean}
 			 */
 			public newFolder(folderPath: string): boolean;
 			/**
@@ -155,6 +168,7 @@ declare namespace Adobe {
 			 * cannot be renamed.
 			 * @param {string} name This is the new item name exclusive of 
 			 * its path within the Preset Panel.
+			 * @returns {boolean}
 			 */
 			public renameItem(name: string): boolean;
 			/**
@@ -173,6 +187,7 @@ declare namespace Adobe {
 			 * @param {boolean} bSelect Allows to switch between selecting 
 			 * or deselecting an item. It is optional and the default value 
 			 * is true (select).
+			 * @returns {boolean}
 			 */
 			public selectItem(namePath: string, bReplaceCurrentSelection: boolean, bSelect: boolean): boolean;
 		}

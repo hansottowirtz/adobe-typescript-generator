@@ -1,48 +1,89 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** Preference */
 		class ObjectStyleObjectEffectsCategorySettings extends Adobe.Indesign.Preference {
-			/** If true, the object style will apply bevel emboss. */
+			/**
+			 * If true, the object style will apply bevel emboss.
+			 * @type {boolean}
+			 */
 			public enableBevelEmboss: boolean;
 			/**
 			 * If true, the object style will apply directional feathering.
+			 * @type {boolean}
 			 */
 			public enableDirectionalFeather: boolean;
-			/** If true, the object style will apply drop shadows. */
+			/**
+			 * If true, the object style will apply drop shadows.
+			 * @type {boolean}
+			 */
 			public enableDropShadow: boolean;
-			/** If true, the object style will apply feathering. */
+			/**
+			 * If true, the object style will apply feathering.
+			 * @type {boolean}
+			 */
 			public enableFeather: boolean;
-			/** If true, the object style will apply gradient feathering. */
+			/**
+			 * If true, the object style will apply gradient feathering.
+			 * @type {boolean}
+			 */
 			public enableGradientFeather: boolean;
-			/** If true, the object style will apply inner glow. */
+			/**
+			 * If true, the object style will apply inner glow.
+			 * @type {boolean}
+			 */
 			public enableInnerGlow: boolean;
-			/** If true, the object style will apply inner shadows. */
+			/**
+			 * If true, the object style will apply inner shadows.
+			 * @type {boolean}
+			 */
 			public enableInnerShadow: boolean;
-			/** If true, the object style will apply outer glow. */
+			/**
+			 * If true, the object style will apply outer glow.
+			 * @type {boolean}
+			 */
 			public enableOuterGlow: boolean;
-			/** If true, the object style will apply satin. */
+			/**
+			 * If true, the object style will apply satin.
+			 * @type {boolean}
+			 */
 			public enableSatin: boolean;
-			/** If true, the object style will apply transparency settings. */
+			/**
+			 * If true, the object style will apply transparency settings.
+			 * @type {boolean}
+			 */
 			public enableTransparency: boolean;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * The parent of the ObjectStyleObjectEffectsCategorySettings 
 			 * (a ObjectStyle).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -52,11 +93,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerObjectStyleObjectEffectsCategorySettings(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -66,9 +109,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerObjectStyleObjectEffectsCategorySettings(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

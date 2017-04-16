@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -13,16 +13,19 @@ declare namespace Adobe {
 			 * "32kbps", "48kbps", "56kbps", "64kbps", "80kbps", "112kbps", 
 			 * "128kbps", "160kbps". Only available for the "MP3" 
 			 * compression type.  Undefined for other compression types.
+			 * @type {string}
 			 */
 			public bitRate: string;
 			/**
 			 * Acceptable values are "2 bit", "3 bit", "4 bit", "5 bit" 
 			 * when the type of compression is "ADPCM".
+			 * @type {string}
 			 */
 			public bits: string;
 			/**
 			 * Acceptable values are "Default", "ADPCM", "MP3", "Raw", 
 			 * "Speech"
+			 * @type {string}
 			 */
 			public compressionType: string;
 			/**
@@ -31,6 +34,7 @@ declare namespace Adobe {
 			 * compression types. For MP3 compression type, if the bitRate 
 			 * is less than 20kbps, this property is ignored and forced to 
 			 * true.
+			 * @type {boolean}
 			 */
 			public convertStereoToMono: boolean;
 			/**
@@ -40,6 +44,8 @@ declare namespace Adobe {
 			 * January 1, 1970, and the last modified date of the original 
 			 * file when the file was imported to the library, or 
 			 * '00000000' if the file doesn't exist.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly fileLastModifiedDate: string;
 			/**
@@ -48,42 +54,60 @@ declare namespace Adobe {
 			 * is incremented every time the bitmap item is imported. 
 			 * Selecting the Update button from the Sound Properties dialog 
 			 * will trigger an import, for example.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly lastModifiedDate: string;
 			/**
 			 * Compression type for the original imported sound file. Value 
 			 * is 'RAW' or 'MP3' depending on wheter the original imported 
 			 * sound was an MP3 or not.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly originalCompressionType: string;
 			/**
 			 * Acceptable values are "Fast", "Medium", "Best". Only 
 			 * available for MP3 compression type.
+			 * @type {string}
 			 */
 			public quality: string;
 			/**
 			 * Acceptable values are "5 kHz", "11 kHz", "22 kHz", "44 kHz". 
 			 * Only available for "ADPCM", "Raw" and "Speech" compression 
 			 * types.
+			 * @type {string}
 			 */
 			public sampleRate: string;
-			/** Original file at sourceFilePath exists */
+			/**
+			 * Original file at sourceFilePath exists
+			 * @type {boolean}
+			 * @readonly
+			 */
 			public readonly sourceFileExists: boolean;
 			/**
 			 * Original file at sourceFilePath has not been modified since 
 			 * it was last imported
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly sourceFileIsCurrent: boolean;
-			/** File URI of sound file that was originally imported */
+			/**
+			 * File URI of sound file that was originally imported
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly sourceFilePath: string;
 			/**
 			 * If TRUE, MP3 sounds are downsampled to 8kHz before 
 			 * publishing.
+			 * @type {boolean}
 			 */
 			public use8kSampleRate: boolean;
 			/**
 			 * If TRUE, all other properties are ignored and the imported 
 			 * MP3 quality is used.
+			 * @type {boolean}
 			 */
 			public useImportedMP3Quality: boolean;
 			/**
@@ -98,6 +122,7 @@ declare namespace Adobe {
 			 * to MP3.)
 			 * @param {string} fileURI File URI for the exported sound 
 			 * file.
+			 * @returns {boolean}
 			 */
 			public exportToFile(fileURI: string): boolean;
 		}

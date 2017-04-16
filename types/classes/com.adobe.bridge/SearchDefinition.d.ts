@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -21,28 +21,39 @@ declare namespace Adobe {
 			/**
 			 * A collection of possible SearchCriteria objects to use for 
 			 * this search.
+			 * @type {any[]}
 			 */
 			public criteriaList: any[];
 			/**
 			 * If non-zero, the Find dialog offers choices to limit the 
 			 * result set to certain sizes, and the choice defaults to this 
 			 * value.
+			 * @type {number}
 			 */
 			public defaultResultsLimit: number;
+			/**
+			 * @type {any[]}
+			 */
 			public quickSearchMenuItems: any[];
 			/**
 			 * A set of Rank objects to use only if the search can limit 
 			 * results.
+			 * @type {any[]}
 			 */
 			public ranks: any[];
 			/**
 			 * A set of scopes used to extend or limit the scope of the 
 			 * search.
+			 * @type {any[]}
 			 */
 			public scopeSpecifiers: any[];
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 		}

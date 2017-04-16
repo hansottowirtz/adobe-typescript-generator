@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -6,23 +6,50 @@ declare namespace Adobe {
 			/**
 			 * Uses JPEG compression and automatically determines the best 
 			 * quality type.
+			 * @type {Adobe.Indesign.PDFRasterCompressionOptions}
+			 * @readonly
 			 */
 			public static readonly AUTOMATIC_COMPRESSION: Adobe.Indesign.PDFRasterCompressionOptions;
 			/**
 			 * Alias for AUTOMATIC_COMPRESSION. Uses JPEG compression and 
 			 * automatically determines the best quality type.
+			 * @type {Adobe.Indesign.PDFRasterCompressionOptions}
+			 * @readonly
 			 */
 			public static readonly automaticCompression: Adobe.Indesign.PDFRasterCompressionOptions;
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
-			/** Uses JPEG compression. */
+			/**
+			 * Uses JPEG compression.
+			 * @type {Adobe.Indesign.PDFRasterCompressionOptions}
+			 * @readonly
+			 */
 			public static readonly JPEG_COMPRESSION: Adobe.Indesign.PDFRasterCompressionOptions;
-			/** Alias for JPEG_COMPRESSION. Uses JPEG compression. */
+			/**
+			 * Alias for JPEG_COMPRESSION. Uses JPEG compression.
+			 * @type {Adobe.Indesign.PDFRasterCompressionOptions}
+			 * @readonly
+			 */
 			public static readonly jpegCompression: Adobe.Indesign.PDFRasterCompressionOptions;
-			/** Uses the best quality type. */
+			/**
+			 * Uses the best quality type.
+			 * @type {Adobe.Indesign.PDFRasterCompressionOptions}
+			 * @readonly
+			 */
 			public static readonly LOSSLESS_COMPRESSION: Adobe.Indesign.PDFRasterCompressionOptions;
-			/** Alias for LOSSLESS_COMPRESSION. Uses the best quality type. */
+			/**
+			 * Alias for LOSSLESS_COMPRESSION. Uses the best quality type.
+			 * @type {Adobe.Indesign.PDFRasterCompressionOptions}
+			 * @readonly
+			 */
 			public static readonly losslessCompression: Adobe.Indesign.PDFRasterCompressionOptions;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

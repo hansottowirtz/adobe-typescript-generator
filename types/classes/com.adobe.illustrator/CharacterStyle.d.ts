@@ -1,12 +1,19 @@
-/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
 		/** a named style that remembers character attributes */
 		class CharacterStyle extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** the character properties for the text range */
+			/**
+			 * the character properties for the text range
+			 * @type {Adobe.Illustrator.CharacterAttributes}
+			 * @readonly
+			 */
 			public readonly characterAttributes: Adobe.Illustrator.CharacterAttributes;
-			/** the character style's name */
+			/**
+			 * the character style's name
+			 * @type {string}
+			 */
 			public name: string;
 			/**
 			 * Apply the character style to text object(s)
@@ -14,9 +21,13 @@ declare namespace Adobe {
 			 * to
 			 * @param {boolean} clearingOverrides whether to clear any text 
 			 * attributes before apply the style ( default: false )
+			 * @returns {void}
 			 */
 			public applyTo(textItem: any, clearingOverrides: boolean): void;
-			/** delete the object */
+			/**
+			 * delete the object
+			 * @returns {void}
+			 */
 			public remove(): void;
 		}
 	}

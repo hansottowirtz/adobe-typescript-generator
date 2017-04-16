@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -16,6 +16,7 @@ declare namespace Adobe {
 			 * expressed as a file:// URL
 			 * @param {string} copyURL the location where you save the 
 			 * copied file, expressed as a file:// URL.
+			 * @returns {boolean}
 			 */
 			public copy(OriginalURL: string, copyURL: string): boolean;
 			/**
@@ -24,6 +25,7 @@ declare namespace Adobe {
 			 * otherwise.
 			 * @param {string} folderURL The argument is the location of 
 			 * the folder you want to create, expressed as a file:// URL.
+			 * @returns {boolean}
 			 */
 			public createFolder(folderURL: string): boolean;
 			/**
@@ -31,6 +33,7 @@ declare namespace Adobe {
 			 * if the file exists, false otherwise.
 			 * @param {string} fileURL The argument is the file you are 
 			 * looking for, expressed as a file:// URL.
+			 * @returns {boolean}
 			 */
 			public exists(fileURL: string): boolean;
 			/**
@@ -46,6 +49,7 @@ declare namespace Adobe {
 			 * @param {string} fileURL The argument is the file or folder 
 			 * for which you want to get attributes, expressed as a file:// 
 			 * URL.
+			 * @returns {string}
 			 */
 			public getAttributes(fileURL: string): string;
 			/**
@@ -58,6 +62,7 @@ declare namespace Adobe {
 			 * @param {string} fileURL The argument is the file for which 
 			 * you are checking the creation time, expressed as a file:// 
 			 * URL.
+			 * @returns {string}
 			 */
 			public getCreationDate(fileURL: string): string;
 			/**
@@ -68,6 +73,7 @@ declare namespace Adobe {
 			 * @param {string} fileURL The fileURL argument, which is 
 			 * expressed as a file:// URL, is the file for which you are 
 			 * checking the creation time.
+			 * @returns {any}
 			 */
 			public getCreationDateObj(fileURL: string): any;
 			/**
@@ -80,12 +86,14 @@ declare namespace Adobe {
 			 * @param {string} fileURL The argument is the file for which 
 			 * you are checking the last modified time, expressed as a 
 			 * file:// URL.
+			 * @returns {string}
 			 */
 			public getModificationDate(fileURL: string): string;
 			/**
 			 * @param {string} fileURL The fileURL argument, which is 
 			 * expressed as a file:// URL, is the file for which you are 
 			 * checking the creation time.
+			 * @returns {string}
 			 */
 			public getModificationDateObj(fileURL: string): string;
 			/**
@@ -95,6 +103,7 @@ declare namespace Adobe {
 			 * @param {string} fileURL The fileURL argument, which is 
 			 * expressed as a file:// URL, is the file for which you are 
 			 * checking the size.
+			 * @returns {number}
 			 */
 			public getSize(fileURL: string): number;
 			/**
@@ -107,11 +116,13 @@ declare namespace Adobe {
 			 * @param {string} constraint Must be either "files" (return 
 			 * only files) or "directories" (return only directories). If 
 			 * omitted, the function returns both files and directories.
+			 * @returns {any[]}
 			 */
 			public listFolder(folderURL: string, constraint: string): any[];
 			/**
 			 * Returns a platform-independent URI given a platform specific 
 			 * path
+			 * @returns {string}
 			 */
 			public platformPathToURI(): string;
 			/**
@@ -120,6 +131,7 @@ declare namespace Adobe {
 			 * null if the read fails.
 			 * @param {string} fileURL The argument is the file you want to 
 			 * read, expressed as a file:// URL.
+			 * @returns {string}
 			 */
 			public read(fileURL: string): string;
 			/**
@@ -129,6 +141,7 @@ declare namespace Adobe {
 			 * operation succeeded, false otherwise.
 			 * @param {string} fileURL The argument is the file you want to 
 			 * remove, expressed as a file:// URL.
+			 * @returns {boolean}
 			 */
 			public remove(fileURL: string): boolean;
 			/**
@@ -142,11 +155,13 @@ declare namespace Adobe {
 			 * system-level attributes for the file that is identified by 
 			 * the fileURL argument. The following table describes valid 
 			 * attribute values and their meaning:
+			 * @returns {boolean}
 			 */
 			public setAttributes(fileURL: string, strAttrs: string): boolean;
 			/**
 			 * Returns a platform-specific file path given a file URI path.
 			 * @param {string} fileURI 
+			 * @returns {string}
 			 */
 			public uriToPlatformPath(fileURI: string): string;
 			/**
@@ -161,6 +176,7 @@ declare namespace Adobe {
 			 * @param {string} mode The third argument, if supplied, must 
 			 * be "append" . If this argument is omitted, the contents of 
 			 * the file are overwritten by the string.
+			 * @returns {boolean}
 			 */
 			public write(fileURL: string, text: string, mode: string): boolean;
 		}

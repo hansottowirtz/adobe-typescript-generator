@@ -1,31 +1,49 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** Preference */
 		class GridPrintingPreference extends Adobe.Indesign.Preference {
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * If true, displays frame (story) grids in the printed or 
 			 * exported document.
+			 * @type {boolean}
 			 */
 			public frameGridPrinting: boolean;
-			/** The stroke weight (in points) of the frame grid. */
+			/**
+			 * The stroke weight (in points) of the frame grid.
+			 * @type {number}
+			 */
 			public frameGridStrokeWeight: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * If true, displays layout grids in the printed or exported 
 			 * document.
+			 * @type {boolean}
 			 */
 			public layoutGridPrinting: boolean;
-			/** The stroke weight (in points) of the layout grid. */
+			/**
+			 * The stroke weight (in points) of the layout grid.
+			 * @type {number}
+			 */
 			public layoutGridStrokeWeight: number;
 			/**
 			 * If true, displays page items other than text, frame grids, 
@@ -33,16 +51,25 @@ declare namespace Adobe {
 			 * information on printing and exporting text and grids, see 
 			 * text printing, frame grid printing, and layout grid 
 			 * printing.
+			 * @type {boolean}
 			 */
 			public pageItemPrinting: boolean;
-			/** The parent of the GridPrintingPreference (a Application). */
+			/**
+			 * The parent of the GridPrintingPreference (a Application).
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
-			/** If true, displays text in the printed or exported document. */
+			/**
+			 * If true, displays text in the printed or exported document.
+			 * @type {boolean}
+			 */
 			public textPrinting: boolean;
 			/**
 			 * Adds an event listener.
@@ -51,11 +78,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerGridPrintingPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -65,9 +94,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerGridPrintingPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

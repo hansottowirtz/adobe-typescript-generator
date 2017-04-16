@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -15,27 +15,32 @@ declare namespace Adobe {
 			 * called.
 			 * @param {string} ASvar This argument is a string which 
 			 * matches the name of an ActionScript variable.
+			 * @returns {string}
 			 */
 			public getClassForObject(ASvar: string): string;
 			/**
 			 * returns true if the Actions Panel is in assist mode, false 
 			 * otherwise.
+			 * @returns {boolean}
 			 */
 			public getScriptAssistMode(): boolean;
 			/**
 			 * returns a string representing the currently selected 
 			 * characters in the Actions Panel.
+			 * @returns {string}
 			 */
 			public getSelectedText(): string;
 			/**
 			 * method which returns all the characters of the Actions Panel 
 			 * as a string.
+			 * @returns {string}
 			 */
 			public getText(): string;
 			/**
 			 * method which returns the selection state in the 
 			 * actionsPanel. If no code is selected in the Actions Panel, 
 			 * then this method will return false, true otherwise.
+			 * @returns {boolean}
 			 */
 			public hasSelection(): boolean;
 			/**
@@ -43,6 +48,7 @@ declare namespace Adobe {
 			 * characters in the string argument.
 			 * @param {string} text string of characters with which to 
 			 * replace selected text.
+			 * @returns {void}
 			 */
 			public replaceSelectedText(text: string): void;
 			/**
@@ -51,6 +57,7 @@ declare namespace Adobe {
 			 * @param {boolean} bool a value of true or false is required. 
 			 * True sets the actions panel to Script Assist Mode, false 
 			 * will set it to Expert Mode.
+			 * @returns {boolean}
 			 */
 			public setScriptAssistMode(bool: boolean): boolean;
 			/**
@@ -60,6 +67,7 @@ declare namespace Adobe {
 			 * index of the first character of a span in the actions Panel.
 			 * @param {number} endIndex zero-based number representing 
 			 * index of the last character of a span in the actions Panel.
+			 * @returns {boolean}
 			 */
 			public setSelection(startIndex: number, endIndex: number): boolean;
 			/**
@@ -67,12 +75,14 @@ declare namespace Adobe {
 			 * string represented by the method's text argument.
 			 * @param {string} text string which represents characters to 
 			 * be added to the Actions Panel.
+			 * @returns {void}
 			 */
 			public setText(text: string): void;
 			/**
 			 * Forces the Actions panel to update based on the current 
 			 * selection on stage (version < AS3) or the current selected 
 			 * timeline frame.
+			 * @returns {void}
 			 */
 			public updateFromStageSelection(): void;
 		}

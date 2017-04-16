@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -6,82 +6,125 @@ declare namespace Adobe {
 			/**
 			 * The top-edge or right-edge baseline of the em box is aligned 
 			 * to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly ABOVE_RIGHT_EM_BOX_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * The ideographic character face box top-edge or right-edge 
 			 * baseline is aligned to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly ABOVE_RIGHT_ICF_BOX_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for ABOVE_RIGHT_EM_BOX_TEXT_ALIGNMENT. The top-edge or 
 			 * right-edge baseline of the em box is aligned to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly aboveRightEmBoxTextAlignment: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for ABOVE_RIGHT_ICF_BOX_TEXT_ALIGNMENT. The 
 			 * ideographic character face box top-edge or right-edge 
 			 * baseline is aligned to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly aboveRightIcfBoxTextAlignment: Adobe.Incopy.TextTypeAlignments;
-			/** Aligns the ascender to the path (not the path's stroke). */
+			/**
+			 * Aligns the ascender to the path (not the path's stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
+			 */
 			public static readonly ASCENDER_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for ASCENDER_TEXT_ALIGNMENT. Aligns the ascender to 
 			 * the path (not the path's stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly ascenderTextAlignment: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * The text baseline is aligned to the path (not the path's 
 			 * stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly BASELINE_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for BASELINE_TEXT_ALIGNMENT. The text baseline is 
 			 * aligned to the path (not the path's stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly baselineTextAlignment: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * The bottom-edge or left-edge baseline of the em box is 
 			 * aligned to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly BELOW_LEFT_EM_BOX_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * The ideographic character face box bottom-edge or left-edge 
 			 * baseline is aligned to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly BELOW_LEFT_ICF_BOX_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for BELOW_LEFT_EM_BOX_TEXT_ALIGNMENT. The bottom-edge 
 			 * or left-edge baseline of the em box is aligned to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly belowLeftEmBoxTextAlignment: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for BELOW_LEFT_ICF_BOX_TEXT_ALIGNMENT. The ideographic 
 			 * character face box bottom-edge or left-edge baseline is 
 			 * aligned to the path.
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly belowLeftIcfBoxTextAlignment: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Aligns the midpoint between the ascender and the descender 
 			 * to the path (not the path's stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly CENTER_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for CENTER_TEXT_ALIGNMENT. Aligns the midpoint between 
 			 * the ascender and the descender to the path (not the path's 
 			 * stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly centerTextAlignment: Adobe.Incopy.TextTypeAlignments;
-			/** Aligns descender to the path (not the path's stroke). */
+			/**
+			 * Aligns descender to the path (not the path's stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
+			 */
 			public static readonly DESCENDER_TEXT_ALIGNMENT: Adobe.Incopy.TextTypeAlignments;
 			/**
 			 * Alias for DESCENDER_TEXT_ALIGNMENT. Aligns descender to the 
 			 * path (not the path's stroke).
+			 * @type {Adobe.Incopy.TextTypeAlignments}
+			 * @readonly
 			 */
 			public static readonly descenderTextAlignment: Adobe.Incopy.TextTypeAlignments;
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

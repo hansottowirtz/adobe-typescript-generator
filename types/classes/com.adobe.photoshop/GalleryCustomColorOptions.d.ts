@@ -1,20 +1,38 @@
-/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
 		/** Options for the web photo gallery colors */
 		class GalleryCustomColorOptions extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** active link color */
+			/**
+			 * active link color
+			 * @type {Adobe.Photoshop.RGBColor}
+			 */
 			public activeLinkColor: Adobe.Photoshop.RGBColor;
-			/** background color */
+			/**
+			 * background color
+			 * @type {Adobe.Photoshop.RGBColor}
+			 */
 			public backgroundColor: Adobe.Photoshop.RGBColor;
-			/** banner color */
+			/**
+			 * banner color
+			 * @type {Adobe.Photoshop.RGBColor}
+			 */
 			public bannerColor: Adobe.Photoshop.RGBColor;
-			/** link color */
+			/**
+			 * link color
+			 * @type {Adobe.Photoshop.RGBColor}
+			 */
 			public linkColor: Adobe.Photoshop.RGBColor;
-			/** text color */
+			/**
+			 * text color
+			 * @type {Adobe.Photoshop.RGBColor}
+			 */
 			public textColor: Adobe.Photoshop.RGBColor;
-			/** visited link color */
+			/**
+			 * visited link color
+			 * @type {Adobe.Photoshop.RGBColor}
+			 */
 			public visitedLinkColor: Adobe.Photoshop.RGBColor;
 		}
 	}

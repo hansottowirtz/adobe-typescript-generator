@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -12,6 +12,7 @@ declare namespace Adobe {
 			 * Makes the current XMLUI dialog exit with an "accept" state.  
 			 * Identical to the user clicking the OK button.  This is the 
 			 * JSAPI equivalent of the XMLUI.accept() API in ActionScript
+			 * @returns {void}
 			 */
 			public accept(): void;
 			/**
@@ -19,6 +20,7 @@ declare namespace Adobe {
 			 * Identical to the user clicking the Cancel button.  This is 
 			 * the JSAPI equivalent of the XMLUI.cancel() API in 
 			 * ActionScript
+			 * @returns {void}
 			 */
 			public cancel(): void;
 			/**
@@ -26,6 +28,7 @@ declare namespace Adobe {
 			 * XMLUI dialog.  This is the JSAPI equivalent of the 
 			 * XMLUI.get() API in ActionScript
 			 * @param {string} name Name of XMLUI property to retrieve
+			 * @returns {string}
 			 */
 			public get(name: string): string;
 			/**
@@ -33,6 +36,7 @@ declare namespace Adobe {
 			 * control) for the control matching the property passed as a 
 			 * parameter
 			 * @param {string} name the xml control property name
+			 * @returns {any}
 			 */
 			public getControlItemElement(name: string): any;
 			/**
@@ -40,6 +44,7 @@ declare namespace Adobe {
 			 * false is disabled
 			 * @param {string} name name of the object to get the enabled 
 			 * state of
+			 * @returns {boolean}
 			 */
 			public getEnabled(name: string): boolean;
 			/**
@@ -47,6 +52,7 @@ declare namespace Adobe {
 			 * visible or invisible (hidden)
 			 * @param {string} controlID controlID for the object to get 
 			 * the visible setting for
+			 * @returns {boolean}
 			 */
 			public getVisible(controlID: string): boolean;
 			/**
@@ -55,6 +61,7 @@ declare namespace Adobe {
 			 * XMLUI.set() API in ActionScript
 			 * @param {string} name Name of XMLUI property to modify
 			 * @param {string} value Value to set XMLUI property to
+			 * @returns {void}
 			 */
 			public set(name: string, value: string): void;
 			/**
@@ -65,6 +72,7 @@ declare namespace Adobe {
 			 * @param {any} elementItem a JSObj which has a "label" string 
 			 * and a "value" string. If "value" string does not exist then 
 			 * "value " is set to "label" string
+			 * @returns {string}
 			 */
 			public setControlItemElement(name: string, elementItem: any): string;
 			/**
@@ -74,6 +82,7 @@ declare namespace Adobe {
 			 * @param {any} elementItemArray an array of JSObjs where the 
 			 * JSObjs and a "label" string and a "value" string. If "value" 
 			 * string is blank then it is set to "label" string.
+			 * @returns {void}
 			 */
 			public setControlItemElements(name: string, elementItemArray: any): void;
 			/**
@@ -82,6 +91,7 @@ declare namespace Adobe {
 			 * @param {string} name name of the object to be 
 			 * enabled/disabled
 			 * @param {boolean} enable true param enables control
+			 * @returns {void}
 			 */
 			public setEnabled(name: string, enable: boolean): void;
 			/**
@@ -91,6 +101,7 @@ declare namespace Adobe {
 			 * @param {boolean} visible a boolean that if set to true will 
 			 * make the object visible and if false with make the object 
 			 * invisible (hidden)
+			 * @returns {void}
 			 */
 			public setVisible(controlID: string, visible: boolean): void;
 		}

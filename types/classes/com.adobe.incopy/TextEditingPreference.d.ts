@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -7,43 +7,63 @@ declare namespace Adobe {
 			/**
 			 * If true, allows text to be dragged and dropped in the story 
 			 * editor or galley view.
+			 * @type {boolean}
 			 */
 			public allowDragAndDropTextInStory: boolean;
 			/**
 			 * If true, allows text to be dragged and dropped on a layout 
 			 * page.
+			 * @type {boolean}
 			 */
 			public dragAndDropTextInLayout: boolean;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Incopy.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Incopy.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Incopy.Events;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** The parent of the TextEditingPreference (a Application). */
+			/**
+			 * The parent of the TextEditingPreference (a Application).
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * If true, a single click (with the Type tool) converts 
 			 * non-text frames to text frames.
+			 * @type {boolean}
 			 */
 			public singleClickConvertsFramesToTextFrames: boolean;
 			/**
 			 * If true, automatically adjusts spacing among words and 
 			 * between words and punctuation marks when cutting and pasting 
 			 * text.
+			 * @type {boolean}
 			 */
 			public smartCutAndPaste: boolean;
 			/**
 			 * If true, a triple click selects a line of text. If false, a 
 			 * triple click selects a paragraph.
+			 * @type {boolean}
 			 */
 			public tripleClickSelectsLine: boolean;
 			/**
@@ -53,11 +73,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Incopy.EventListener}
 			 */
 			public addEventListenerTextEditingPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -67,9 +89,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerTextEditingPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

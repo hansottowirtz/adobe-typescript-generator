@@ -1,39 +1,70 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** Preference */
 		class LayoutAdjustmentPreference extends Adobe.Indesign.Preference {
-			/** If true, allows graphics to be resized. */
+			/**
+			 * If true, allows graphics to be resized.
+			 * @type {boolean}
+			 */
 			public allowGraphicsToResize: boolean;
-			/** If true, allows ruler guides to move. */
+			/**
+			 * If true, allows ruler guides to move.
+			 * @type {boolean}
+			 */
 			public allowRulerGuidesToMove: boolean;
-			/** If true, layout adjustment is enabled. */
+			/**
+			 * If true, layout adjustment is enabled.
+			 * @type {boolean}
+			 */
 			public enableLayoutAdjustment: boolean;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
-			/** If true, ignores object or layer locks. */
+			/**
+			 * If true, ignores object or layer locks.
+			 * @type {boolean}
+			 */
 			public ignoreObjectOrLayerLocks: boolean;
-			/** If true, ignores ruler guide alignments. */
+			/**
+			 * If true, ignores ruler guide alignments.
+			 * @type {boolean}
+			 */
 			public ignoreRulerGuideAlignments: boolean;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * The parent of the LayoutAdjustmentPreference (a Application 
 			 * or Document).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
-			/** The range within which an object snaps to guides. */
+			/**
+			 * The range within which an object snaps to guides.
+			 * @type {any}
+			 */
 			public snapZone: any;
 			/**
 			 * Adds an event listener.
@@ -42,11 +73,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerLayoutAdjustmentPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -56,9 +89,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerLayoutAdjustmentPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

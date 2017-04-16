@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -13,6 +13,8 @@ declare namespace Adobe {
 			/**
 			 * Returns an integer representing the number of points in the 
 			 * path.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly nPts: number;
 			/**
@@ -28,6 +30,7 @@ declare namespace Adobe {
 			 * @param {number} y y position of the third control point.
 			 * @param {number} x4 x position of the fourth control point.
 			 * @param {number} y4 y position of the fourth control point.
+			 * @returns {void}
 			 */
 			public addCubicCurve(xAnchor: number, yAnchor: number, x1: number, y1: number, x2: number, y: number, x4: number, y4: number): void;
 			/**
@@ -45,6 +48,7 @@ declare namespace Adobe {
 			 * point.
 			 * @param {number} yAnchor1 y position of the third control 
 			 * point.
+			 * @returns {void}
 			 */
 			public addCurve(xAnchor0: number, yAnchor0: number, xCtrl: number, yCtrl: number, xAnchor1: number, yAnchor1: number): void;
 			/**
@@ -52,17 +56,20 @@ declare namespace Adobe {
 			 * creating extensible tools.
 			 * @param {number} x x position of the point.
 			 * @param {number} y y position of the point.
+			 * @returns {void}
 			 */
 			public addPoint(x: number, y: number): void;
 			/**
 			 * Removes all points from the path. Typically used only when 
 			 * creating extensible tools.
+			 * @returns {void}
 			 */
 			public clear(): void;
 			/**
 			 * Appends a point at the location of the first point of the 
 			 * path. If the path has no points no points are added. 
 			 * Typically used only when creating extensible tools.
+			 * @returns {void}
 			 */
 			public close(): void;
 			/**
@@ -83,9 +90,13 @@ declare namespace Adobe {
 			 * @param {boolean} useEvenOddFillMode 
 			 * @param {any} jsFrame jsFrame is the destination/parent of 
 			 * the shape
+			 * @returns {void}
 			 */
 			public makeShape(bSupressFill: boolean, bSupressStroke: boolean, recalcFill: boolean, recalcStroke: boolean, forceFillForCompoundPath: boolean, useEvenOddFillMode: boolean, jsFrame: any): void;
-			/** Starts a new contour in the path. */
+			/**
+			 * Starts a new contour in the path.
+			 * @returns {void}
+			 */
 			public newContour(): void;
 		}
 	}

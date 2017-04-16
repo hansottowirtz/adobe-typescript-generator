@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -8,7 +8,10 @@ declare namespace Adobe {
 		 * available:
 		 */
 		class BitmapItem extends Adobe.Flashpro.LibraryItem {
-			/** TRUE to allow smoothing. FALSE otherwise */
+			/**
+			 * TRUE to allow smoothing. FALSE otherwise
+			 * @type {boolean}
+			 */
 			public allowSmoothing: boolean;
 			/**
 			 * Values accepted: "photo" or "lossless".
@@ -16,6 +19,7 @@ declare namespace Adobe {
 			 * (if 'useImportedJPEGQuality' is false) or the default 
 			 * document quality (if 'useImportedJPEGQuality' is true).
 			 * "lossless" corresponds to GIF/PNG.
+			 * @type {string}
 			 */
 			public compressionType: string;
 			/**
@@ -25,6 +29,8 @@ declare namespace Adobe {
 			 * January 1, 1970, and the last modified date of the original 
 			 * file when the file was imported to the library, or 
 			 * '00000000' if the file doesn't exist.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly fileLastModifiedDate: string;
 			/**
@@ -33,9 +39,15 @@ declare namespace Adobe {
 			 * decide if they should export the bitmap item as a PNG 
 			 * instead of a JPEG using the bitmapItem.exportToFile() 
 			 * function.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly hasValidAlphaLayer: boolean;
-			/** The width of the bitmap in pixels. */
+			/**
+			 * The width of the bitmap in pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly hPixels: number;
 			/**
 			 * Returns the modification date of the bitmap item as a 
@@ -43,43 +55,62 @@ declare namespace Adobe {
 			 * is incremented every time the bitmap item is imported. 
 			 * Selecting the Update button from the Bitmap Properties 
 			 * dialog will trigger an import, for example.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly lastModifiedDate: string;
 			/**
 			 * Compression type for the original imported bitmap. Value is 
 			 * 'photo' or 'lossless' depending on wheter the original 
 			 * imported bitmap was a JPEG or not.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly originalCompressionType: string;
 			/**
 			 * To use the default document quality, specify -1, otherwise a 
 			 * value from 0 to 100. Only available for JPEG compression.
+			 * @type {number}
 			 */
 			public quality: number;
 			/**
 			 * Original file at sourceFilePath exists. False if file is not 
 			 * found.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly sourceFileExists: boolean;
 			/**
 			 * Original file at sourceFilePath has not been modified since 
 			 * it was last imported.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly sourceFileIsCurrent_: boolean;
 			/**
 			 * File URI of image file that was originally imported. If Item 
 			 * is not a Bitmap returns empty string.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly sourceFilePath: string;
-			/** Flag indicates if deblocking is enabled or not. */
+			/**
+			 * Flag indicates if deblocking is enabled or not.
+			 * @type {boolean}
+			 */
 			public useDeblocking: boolean;
 			/**
 			 * To use the default imported JPEG quality, specify true, 
 			 * otherwise specify false. Only available for JPEG 
 			 * compression.
+			 * @type {boolean}
 			 */
 			public useImportedJPEGQuality: boolean;
-			/** the height of the bitmap in pixels. */
+			/**
+			 * the height of the bitmap in pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly vPixels: number;
 			/**
 			 * This method exports a PNG or JPEG file.
@@ -87,6 +118,7 @@ declare namespace Adobe {
 			 * file.
 			 * @param {number} quality This determines the quality of the 
 			 * exported image file. It's a number from 0-100.
+			 * @returns {boolean}
 			 */
 			public exportToFile(fileURI: string, quality: number): boolean;
 		}

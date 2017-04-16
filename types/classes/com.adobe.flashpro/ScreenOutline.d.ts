@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -15,14 +15,21 @@ declare namespace Adobe {
 			/**
 			 * A screen object currently selected in Outline Display pane 
 			 * and has focus on stage.
+			 * @type {any}
 			 */
 			public currentScreen_: any;
 			/**
 			 * A screen object which represents the parent of all screens. 
 			 * The first screen in the screen outline.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly rootScreen: any;
-			/** The array of top level Screens contained in the document. */
+			/**
+			 * The array of top level Screens contained in the document.
+			 * @type {any[]}
+			 * @readonly
+			 */
 			public readonly screens: any[];
 			/**
 			 * Insert all of the screens or a named screen and it's 
@@ -32,6 +39,7 @@ declare namespace Adobe {
 			 * @param {string} screenName if screenName present, copy that 
 			 * screen and it's children. If not present, copy whole 
 			 * document.
+			 * @returns {void}
 			 */
 			public copyScreenFromFile(fileURI: string, screenName: string): void;
 			/**
@@ -39,6 +47,7 @@ declare namespace Adobe {
 			 * the screen currently selected.
 			 * @param {string} screenName The name of screen to be deleted. 
 			 * If empty, the currently selected screen will be removed.
+			 * @returns {void}
 			 */
 			public deleteScreen(screenName: string): void;
 			/**
@@ -48,11 +57,13 @@ declare namespace Adobe {
 			 * @param {string} screenName The string value such as 
 			 * 'myScreen' the screen name. After it is duplicated, 
 			 * duplicated screen name will be default name as 'Screen n'.
+			 * @returns {boolean}
 			 */
 			public duplicateScreen(screenName: string): boolean;
 			/**
 			 * Returns an array of screen object which are currently 
 			 * selected in Outline Display pane.
+			 * @returns {any[]}
 			 */
 			public getSelectedScreens(): any[];
 			/**
@@ -69,6 +80,7 @@ declare namespace Adobe {
 			 * to attach to the new nested screen. The screen type and 
 			 * classname will be set for this screen. If empty, the type 
 			 * will be inherited from the parent.
+			 * @returns {any}
 			 */
 			public insertNestedScreen(name: string, referenceScreen: string, screenTypeName: string): any;
 			/**
@@ -87,6 +99,7 @@ declare namespace Adobe {
 			 * @param {string} screenTypeName The name of the screen type 
 			 * to attach to the new screen. The screen type and classname 
 			 * will be set for this screen
+			 * @returns {any}
 			 */
 			public insertScreen(name: string, referenceScreen: string, screenTypeName: string): any;
 			/**
@@ -99,6 +112,7 @@ declare namespace Adobe {
 			 * @param {string} position Where to move the screen. 
 			 * Acceptable values are 
 			 * 'before','after','firstChild','lastChild'.
+			 * @returns {boolean}
 			 */
 			public moveScreen(screenToMove: string, referenceScreen: string, position: string): boolean;
 			/**
@@ -111,12 +125,14 @@ declare namespace Adobe {
 			 * screen.
 			 * @param {boolean} bDisplayError If this flag is set, an error 
 			 * will be displayed. this argument is false by default.
+			 * @returns {boolean}
 			 */
 			public renameScreen(newScreenName: string, oldScreenName: string, bDisplayError: boolean): boolean;
 			/**
 			 * Sets which screen to be selected in Outline pane. This 
 			 * screen will be focused on stage.
 			 * @param {string} name The name of the screen.
+			 * @returns {void}
 			 */
 			public setCurrentScreen(name: string): void;
 			/**
@@ -125,6 +141,7 @@ declare namespace Adobe {
 			 * @param {string} property The property to set
 			 * @param {any} value The new value for the property. The type 
 			 * of value depends on the acceptable values for property.
+			 * @returns {void}
 			 */
 			public setScreenProperty(property: string, value: any): void;
 			/**
@@ -136,6 +153,7 @@ declare namespace Adobe {
 			 * @param {boolean} bReplaceCurrentSelection 
 			 * bReplaceCurrentSelection for erasing current selection. This 
 			 * argument value is true by default.
+			 * @returns {void}
 			 */
 			public setSelectedScreens(selection: any, bReplaceCurrentSelection: boolean): void;
 			/**
@@ -145,6 +163,7 @@ declare namespace Adobe {
 			 * @param {boolean} bReplaceCurrentSelection 
 			 * bReplaceCurrentSelection for erasing current selection. This 
 			 * argument value is true by default.
+			 * @returns {void}
 			 */
 			public setSelectedScreens2(screenName: string, bReplaceCurrentSelection: boolean): void;
 		}

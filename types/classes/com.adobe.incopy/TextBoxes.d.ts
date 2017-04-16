@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class TextBoxes extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new TextBox
@@ -18,30 +22,46 @@ declare namespace Adobe {
 			 * PageItem. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TextBox (Optional)
+			 * @returns {Adobe.Incopy.TextBox}
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Incopy.TextBox;
-			/** Returns any TextBox in the collection. */
+			/**
+			 * Returns any TextBox in the collection.
+			 * @returns {Adobe.Incopy.TextBox}
+			 */
 			public anyItem(): Adobe.Incopy.TextBox;
-			/** Displays the number of elements in the TextBox. */
+			/**
+			 * Displays the number of elements in the TextBox.
+			 * @returns {number}
+			 */
 			public count(): number;
-			/** Returns every TextBox in the collection. */
+			/**
+			 * Returns every TextBox in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first TextBox in the collection. */
+			/**
+			 * Returns the first TextBox in the collection.
+			 * @returns {Adobe.Incopy.TextBox}
+			 */
 			public firstItem(): Adobe.Incopy.TextBox;
 			/**
 			 * Returns the TextBox with the specified index or name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Incopy.TextBox}
 			 */
 			public item(indexParam: any): Adobe.Incopy.TextBox;
 			/**
 			 * Returns the TextBox with the specified ID.
 			 * @param {number} idParam The ID.
+			 * @returns {Adobe.Incopy.TextBox}
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.TextBox;
 			/**
 			 * Returns the TextBox with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Incopy.TextBox}
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.TextBox;
 			/**
@@ -51,27 +71,37 @@ declare namespace Adobe {
 			 * String.
 			 * @param {any} toParam The TextBox, index, or name at the end 
 			 * of the range. Can accept: TextBox, Long Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last TextBox in the collection. */
+			/**
+			 * Returns the last TextBox in the collection.
+			 * @returns {Adobe.Incopy.TextBox}
+			 */
 			public lastItem(): Adobe.Incopy.TextBox;
-			/** Returns the middle TextBox in the collection. */
+			/**
+			 * Returns the middle TextBox in the collection.
+			 * @returns {Adobe.Incopy.TextBox}
+			 */
 			public middleItem(): Adobe.Incopy.TextBox;
 			/**
 			 * Returns the TextBox whose index follows the specified 
 			 * TextBox in the collection.
 			 * @param {TextBox} objParam The TextBox whose index comes 
 			 * before the desired TextBox. 
+			 * @returns {Adobe.Incopy.TextBox}
 			 */
 			public nextItem(objParam: TextBox): Adobe.Incopy.TextBox;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -79,6 +109,7 @@ declare namespace Adobe {
 			 * index.
 			 * @param {TextBox} objParam The index of the TextBox that 
 			 * follows the desired TextBox.
+			 * @returns {Adobe.Incopy.TextBox}
 			 */
 			public previousItem(objParam: TextBox): Adobe.Incopy.TextBox;
 		}

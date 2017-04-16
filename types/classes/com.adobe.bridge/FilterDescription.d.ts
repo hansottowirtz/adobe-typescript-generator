@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -29,37 +29,55 @@ declare namespace Adobe {
 			/**
 			 * The set of allowed values for the XMP property, if it has a 
 			 * closed value list.
+			 * @type {any[]}
 			 */
 			public closedValueList: any[];
 			/**
 			 * A localized name for this filter, shown in the heading line 
 			 * for this filter in the Filter pane.
+			 * @type {string}
 			 */
 			public displayName: string;
 			/**
 			 * The data type of filter-property value, used in sorting the 
 			 * list of values.
+			 * @type {string}
 			 */
 			public filterType: string;
 			/**
 			 * The name of the node property to use as a filter, as defined 
 			 * in the InfosetMemberDescription object.
+			 * @type {string}
 			 */
 			public infosetMember: string;
 			/**
 			 * When true, only one of the filter values can be set at a 
 			 * time.
+			 * @type {boolean}
 			 */
 			public isExclusive: boolean;
-			/** The unique identifying name of the filter. */
+			/**
+			 * The unique identifying name of the filter.
+			 * @type {string}
+			 */
 			public name: string;
-			/** The namespace of the XMP property used as a filter. */
+			/**
+			 * The namespace of the XMP property used as a filter.
+			 * @type {string}
+			 */
 			public xmpNamespace: string;
-			/** The key name of the XMP property used as a filter. */
+			/**
+			 * The key name of the XMP property used as a filter.
+			 * @type {string}
+			 */
 			public xmpProperty: string;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 		}

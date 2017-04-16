@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.csawlib.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace CsawlibPhotoshop {
@@ -6,9 +6,17 @@ declare namespace Adobe {
 		 * The class Photoshop provides access to the global class of 
 		 * the package com.adobe.photoshop
 		 */
-		namespace Photoshop {
-			const app: Adobe.Photoshop.Application;
-			const rootHostObject: HostObject;
+		class Photoshop {
+			/**
+			 * @type {Adobe.Photoshop.Application}
+			 * @readonly
+			 */
+			public static readonly app: Adobe.Photoshop.Application;
+			/**
+			 * @type {Adobe.Flex.HostObject}
+			 * @readonly
+			 */
+			public static readonly rootHostObject: Adobe.Flex.HostObject;
 		}
 	}
 }

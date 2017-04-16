@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -6,17 +6,20 @@ declare namespace Adobe {
 			/**
 			 * The minimum amount (as a percentage) of black ink required 
 			 * before the black width setting is applied. (Range: 0 to 100)
+			 * @type {number}
 			 */
 			public blackColorThreshold: number;
 			/**
 			 * The neutral density value at or above which an ink is 
 			 * considered black. (Range: .001 to 10)
+			 * @type {number}
 			 */
 			public blackDensity: number;
 			/**
 			 * The black width. (Range depends on unit. For points: 0.0 to 
 			 * 8.0; picas: 0p0 to 0p8; inches: 0 to 0.1111; mm: 0 to 2.822; 
 			 * cm: 0 to .2822; ciceros: 0c0 to 0c7.507)
+			 * @type {any}
 			 */
 			public blackWidth: any;
 			/**
@@ -24,6 +27,7 @@ declare namespace Adobe {
 			 * abutting colors are used to reduce the trap color. (Range: 0 
 			 * to 100) Note: 0% makes a trap whose neutral density is equal 
 			 * to the neutral density of the darker color.
+			 * @type {number}
 			 */
 			public colorReduction: number;
 			/**
@@ -31,51 +35,88 @@ declare namespace Adobe {
 			 * involving solid black. (Range depends on unit. For points: 
 			 * 0.0 to 8.0; picas: 0p0 to 0p8; inches: 0 to 0.1111; mm: 0 to 
 			 * 2.822; cm: 0 to .2822; ciceros: 0c0 to 0c7.507)
+			 * @type {any}
 			 */
 			public defaultTrapWidth: any;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Incopy.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Incopy.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Incopy.Events;
-			/** The unique ID of the TrapPreset. */
+			/**
+			 * The unique ID of the TrapPreset.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
 			/**
 			 * The trap placement between vector objects and bitmap images.
+			 * @type {Adobe.Incopy.TrapImagePlacementTypes}
 			 */
 			public imagePlacement: Adobe.Incopy.TrapImagePlacementTypes;
 			/**
 			 * If true, turns on trapping along the boundary of overlapping 
 			 * or abutting bitmap images.
+			 * @type {boolean}
 			 */
 			public imagesToImages: boolean;
-			/** The index of the TrapPreset within its containing object. */
+			/**
+			 * The index of the TrapPreset within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
 			/**
 			 * If true, turns on trapping among colors within individual 
 			 * bitmap images.
+			 * @type {boolean}
 			 */
 			public internalImages: boolean;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** A property that can be set to any string. */
+			/**
+			 * A property that can be set to any string.
+			 * @type {string}
+			 */
 			public label: string;
-			/** The name of the TrapPreset. */
+			/**
+			 * The name of the TrapPreset.
+			 * @type {string}
+			 */
 			public name: string;
-			/** If true, ensures that vector objects overlap bitmap images. */
+			/**
+			 * If true, ensures that vector objects overlap bitmap images.
+			 * @type {boolean}
+			 */
 			public objectsToImages: boolean;
 			/**
 			 * If true, ensures that one-bit images trap to abutting 
 			 * objects.
+			 * @type {boolean}
 			 */
 			public oneBitImages: boolean;
-			/** The parent of the TrapPreset (a Application or Document). */
+			/**
+			 * The parent of the TrapPreset (a Application or Document).
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -83,16 +124,24 @@ declare namespace Adobe {
 			 * densities of abutting colors at which the trap is moved from 
 			 * the darker side of a color edge toward the centerline. 
 			 * (Range: 0 to 100)
+			 * @type {number}
 			 */
 			public slidingTrapThreshold: number;
 			/**
 			 * The amount (as a percentage) that components of abutting 
 			 * colors must vary before a trap is created. (Range: 1 to 100)
+			 * @type {number}
 			 */
 			public stepThreshold: number;
-			/** The shape to use at the intersection of three-way traps. */
+			/**
+			 * The shape to use at the intersection of three-way traps.
+			 * @type {Adobe.Incopy.TrapEndTypes}
+			 */
 			public trapEnd: Adobe.Incopy.TrapEndTypes;
-			/** The join type of the trap preset. */
+			/**
+			 * The join type of the trap preset.
+			 * @type {Adobe.Incopy.EndJoin}
+			 */
 			public trapJoin: Adobe.Incopy.EndJoin;
 			/**
 			 * Adds an event listener.
@@ -101,18 +150,24 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Incopy.EventListener}
 			 */
 			public addEventListenerTrapPreset(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
-			/** Duplicates the TrapPreset. */
+			/**
+			 * Duplicates the TrapPreset.
+			 * @returns {Adobe.Incopy.TrapPreset}
+			 */
 			public duplicate(): Adobe.Incopy.TrapPreset;
 			/**
 			 * Gets the label value associated with the specified key.
 			 * @param {string} keyParam The key.
+			 * @returns {string}
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -120,12 +175,14 @@ declare namespace Adobe {
 			 * key.
 			 * @param {string} keyParam The key.
 			 * @param {string} valueParam The value.
+			 * @returns {void}
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
 			 * Deletes the trap preset.
 			 * @param {TrapPreset} replacingWithParam The trap preset to 
 			 * apply in place of the deleted preset.
+			 * @returns {void}
 			 */
 			public remove(replacingWithParam: TrapPreset): void;
 			/**
@@ -135,9 +192,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerTrapPreset(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

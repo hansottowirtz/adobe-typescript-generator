@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -11,6 +11,7 @@ declare namespace Adobe {
 			/**
 			 * The JS API or Extendscript message to be sent to the target 
 			 * application.
+			 * @type {string}
 			 */
 			public body: string;
 			/**
@@ -18,14 +19,19 @@ declare namespace Adobe {
 			 * application. Normally, this will either be JS API or 
 			 * Extendscript, depending on the language supported by the 
 			 * target application.
+			 * @type {string}
 			 */
 			public message: string;
 			/**
 			 * default = null. Set the target application's application 
 			 * specifier string prior to sending a BridgeTalk message.
+			 * @type {string}
 			 */
 			public target: string;
-			/** Sends the BridgeTalk message to the target application. */
+			/**
+			 * Sends the BridgeTalk message to the target application.
+			 * @returns {boolean}
+			 */
 			public send(): boolean;
 		}
 	}

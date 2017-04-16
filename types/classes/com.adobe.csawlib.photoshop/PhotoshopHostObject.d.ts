@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.csawlib.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace CsawlibPhotoshop {
@@ -7,7 +7,14 @@ declare namespace Adobe {
 		 * and all interaction with the host through the HBAPI.
 		 */
 		class PhotoshopHostObject extends Adobe.Csawlib.CSHostObject {
+			/**
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

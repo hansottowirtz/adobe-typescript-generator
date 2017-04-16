@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.cshostadapter/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.cshostadapter/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Cshostadapter {
@@ -18,6 +18,7 @@ declare namespace Adobe {
 			 * @param {boolean} useCapture
 			 * @param {number} priority
 			 * @param {boolean} useWeakReference
+			 * @returns {void}
 			 */
 			public addEventListener(eventType: string, listener: Function, useCapture: boolean, priority: number, useWeakReference: boolean): void;
 			/**
@@ -38,11 +39,15 @@ declare namespace Adobe {
 			 * before an eventListener is triggered.
 			 * @param {string} eventType
 			 * @param {Function} listener
-			 * @param {CSHostObject} idObject
+			 * @param {Adobe.Csawlib.CSHostObject} idObject
 			 * @param {boolean} useCapture
+			 * @returns {EventListener}
 			 */
-			public addEventListenerToObject(eventType: string, listener: Function, idObject: CSHostObject, useCapture: boolean): EventListener;
-			/** Returns the IDScriptingEventAdapter instance. */
+			public addEventListenerToObject(eventType: string, listener: Function, idObject: Adobe.Csawlib.CSHostObject, useCapture: boolean): EventListener;
+			/**
+			 * Returns the IDScriptingEventAdapter instance.
+			 * @returns {Adobe.Cshostadapter.IDScriptingEventAdapter}
+			 */
 			public getInstance(): Adobe.Cshostadapter.IDScriptingEventAdapter;
 			/**
 			 * Removes the specified listener for the specified event from 
@@ -51,6 +56,7 @@ declare namespace Adobe {
 			 * @param {string} eventType
 			 * @param {Function} listener
 			 * @param {boolean} useCapture
+			 * @returns {void}
 			 */
 			public removeEventListener(eventType: string, listener: Function, useCapture: boolean): void;
 			/**
@@ -64,10 +70,11 @@ declare namespace Adobe {
 			 * DOM.
 			 * @param {string} eventType
 			 * @param {Function} listener
-			 * @param {CSHostObject} idObject
+			 * @param {Adobe.Csawlib.CSHostObject} idObject
 			 * @param {boolean} useCapture
+			 * @returns {boolean}
 			 */
-			public removeEventListenerFromObject(eventType: string, listener: Function, idObject: CSHostObject, useCapture: boolean): boolean;
+			public removeEventListenerFromObject(eventType: string, listener: Function, idObject: Adobe.Csawlib.CSHostObject, useCapture: boolean): boolean;
 		}
 	}
 }

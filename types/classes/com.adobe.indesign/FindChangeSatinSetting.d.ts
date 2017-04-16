@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,22 +7,26 @@ declare namespace Adobe {
 			/**
 			 * The light angle of the satin effect. (Range: -360 to 360). 
 			 * Can return: Real (-180 - 180) or NothingEnum enumerator.
+			 * @type {number}
 			 */
 			public angle: number;
 			/**
 			 * If true, applies the satin effect. Can return: Boolean or 
 			 * NothingEnum enumerator.
+			 * @type {boolean}
 			 */
 			public applied: boolean;
 			/**
 			 * The blending mode for the satin effect. Can return: 
 			 * BlendMode enumerator or NothingEnum enumerator.
+			 * @type {Adobe.Indesign.BlendMode}
 			 */
 			public blendMode: Adobe.Indesign.BlendMode;
 			/**
 			 * The distance (in pixels) from the FindChangeSatinSetting to 
 			 * the satin effect. Can return: Unit (0 - 1000 points) or 
 			 * NothingEnum enumerator.
+			 * @type {any}
 			 */
 			public distance: any;
 			/**
@@ -38,26 +42,39 @@ declare namespace Adobe {
 			 * HSB, specify three colors in the format [H,S,B], with H in 
 			 * the range 0 to 360 and S and B as percentages in the range 0 
 			 * to 100. Can return: Swatch or NothingEnum enumerator.
+			 * @type {Adobe.Indesign.Swatch}
 			 */
 			public effectColor: Adobe.Indesign.Swatch;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * If true, inverts the satin effect. Can return: Boolean or 
 			 * NothingEnum enumerator.
+			 * @type {boolean}
 			 */
 			public invertEffect: boolean;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * The opacity of the satin effect (as a percentage). (Range: 0 
 			 * to 100). Can return: Real (0 - 100) or NothingEnum 
 			 * enumerator.
+			 * @type {number}
 			 */
 			public opacity: number;
 			/**
@@ -66,16 +83,20 @@ declare namespace Adobe {
 			 * FindChangeStrokeTransparencySetting, 
 			 * FindChangeFillTransparencySetting or 
 			 * FindChangeContentTransparencySetting).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * The width (in pixels) of the satin effect. Can return: Unit 
 			 * (0 - 144 points) or NothingEnum enumerator.
+			 * @type {any}
 			 */
 			public size: any;
 			/**
@@ -85,11 +106,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerFindChangeSatinSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -99,9 +122,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerFindChangeSatinSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

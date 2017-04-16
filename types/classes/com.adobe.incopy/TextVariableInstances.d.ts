@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class TextVariableInstances extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a text variable instance at the specified location.
@@ -18,33 +22,47 @@ declare namespace Adobe {
 			 * Character or Change. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new TextVariableInstance (Optional)
+			 * @returns {Adobe.Incopy.TextVariableInstance}
 			 */
 			public add(toParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Incopy.TextVariableInstance;
-			/** Returns any TextVariableInstance in the collection. */
+			/**
+			 * Returns any TextVariableInstance in the collection.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
+			 */
 			public anyItem(): Adobe.Incopy.TextVariableInstance;
 			/**
 			 * Displays the number of elements in the TextVariableInstance.
+			 * @returns {number}
 			 */
 			public count(): number;
-			/** Returns every TextVariableInstance in the collection. */
+			/**
+			 * Returns every TextVariableInstance in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first TextVariableInstance in the collection. */
+			/**
+			 * Returns the first TextVariableInstance in the collection.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
+			 */
 			public firstItem(): Adobe.Incopy.TextVariableInstance;
 			/**
 			 * Returns the TextVariableInstance with the specified index or 
 			 * name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
 			 */
 			public item(indexParam: any): Adobe.Incopy.TextVariableInstance;
 			/**
 			 * Returns the TextVariableInstance with the specified ID.
 			 * @param {number} idParam The ID.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.TextVariableInstance;
 			/**
 			 * Returns the TextVariableInstance with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.TextVariableInstance;
 			/**
@@ -56,11 +74,18 @@ declare namespace Adobe {
 			 * @param {any} toParam The TextVariableInstance, index, or 
 			 * name at the end of the range. Can accept: 
 			 * TextVariableInstance, Long Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last TextVariableInstance in the collection. */
+			/**
+			 * Returns the last TextVariableInstance in the collection.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
+			 */
 			public lastItem(): Adobe.Incopy.TextVariableInstance;
-			/** Returns the middle TextVariableInstance in the collection. */
+			/**
+			 * Returns the middle TextVariableInstance in the collection.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
+			 */
 			public middleItem(): Adobe.Incopy.TextVariableInstance;
 			/**
 			 * Returns the TextVariableInstance whose index follows the 
@@ -68,16 +93,19 @@ declare namespace Adobe {
 			 * @param {TextVariableInstance} objParam The 
 			 * TextVariableInstance whose index comes before the desired 
 			 * TextVariableInstance. 
+			 * @returns {Adobe.Incopy.TextVariableInstance}
 			 */
 			public nextItem(objParam: TextVariableInstance): Adobe.Incopy.TextVariableInstance;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -86,6 +114,7 @@ declare namespace Adobe {
 			 * @param {TextVariableInstance} objParam The index of the 
 			 * TextVariableInstance that follows the desired 
 			 * TextVariableInstance.
+			 * @returns {Adobe.Incopy.TextVariableInstance}
 			 */
 			public previousItem(objParam: TextVariableInstance): Adobe.Incopy.TextVariableInstance;
 		}

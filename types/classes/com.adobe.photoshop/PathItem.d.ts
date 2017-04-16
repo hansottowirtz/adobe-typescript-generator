@@ -1,19 +1,33 @@
-/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
 		/** An artwork path item */
 		class PathItem extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
+			/**
+			 * @type {Adobe.Photoshop.PathKind}
+			 */
 			public kind: Adobe.Photoshop.PathKind;
-			/** the name of the path item */
+			/**
+			 * the name of the path item
+			 * @type {string}
+			 */
 			public name: string;
-			/** sub items for this path item */
+			/**
+			 * sub items for this path item
+			 * @type {Adobe.Photoshop.SubPathItems}
+			 * @readonly
+			 */
 			public readonly subPathItems: Adobe.Photoshop.SubPathItems;
-			/** unselect this path item, no paths items are selected */
+			/**
+			 * unselect this path item, no paths items are selected
+			 * @returns {void}
+			 */
 			public deselect(): void;
 			/**
 			 * duplicate this path
 			 * @param {string} name name for the new path
+			 * @returns {Adobe.Photoshop.PathItem}
 			 */
 			public duplicate(name: string): Adobe.Photoshop.PathItem;
 			/**
@@ -28,6 +42,7 @@ declare namespace Adobe {
 			 * @param {boolean} antiAlias use anti aliasing for the 
 			 * selection
 			 * @param {boolean} wholePath use all subpaths when doing fill
+			 * @returns {void}
 			 */
 			public fillPath(fillColor: any, mode: Adobe.Photoshop.ColorBlendMode, opacity: number, preserveTransparency: boolean, feather: number, antiAlias: boolean, wholePath: boolean): void;
 			/**
@@ -35,6 +50,7 @@ declare namespace Adobe {
 			 * @param {number} flatness Flatness in device pixels.  Tells 
 			 * the PostScript printer how to approximate curves. (0.2 - 
 			 * 100).
+			 * @returns {void}
 			 */
 			public makeClippingPath(flatness: number): void;
 			/**
@@ -44,11 +60,18 @@ declare namespace Adobe {
 			 * selection
 			 * @param {Adobe.Photoshop.SelectionType} operation the 
 			 * operation mode for the selection
+			 * @returns {void}
 			 */
 			public makeSelection(feather: number, antiAlias: boolean, operation: Adobe.Photoshop.SelectionType): void;
-			/** delete the object */
+			/**
+			 * delete the object
+			 * @returns {void}
+			 */
 			public remove(): void;
-			/** make this path item the active or selected path item */
+			/**
+			 * make this path item the active or selected path item
+			 * @returns {void}
+			 */
 			public select(): void;
 			/**
 			 * stroke the path with the following information
@@ -56,6 +79,7 @@ declare namespace Adobe {
 			 * stroking the path
 			 * @param {boolean} simulatePressure simulate the pressure when 
 			 * using the tool
+			 * @returns {void}
 			 */
 			public strokePath(tool: Adobe.Photoshop.ToolType, simulatePressure: boolean): void;
 		}

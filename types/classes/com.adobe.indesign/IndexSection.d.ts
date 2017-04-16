@@ -1,35 +1,73 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class IndexSection extends Adobe.Csawlib.CSHostObject {
-			/** The topics in the specified index section. */
+			/**
+			 * The topics in the specified index section.
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly allTopics: any;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
-			/** The unique ID of the IndexSection. */
+			/**
+			 * The unique ID of the IndexSection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
-			/** The index of the IndexSection within its containing object. */
+			/**
+			 * The index of the IndexSection within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** A property that can be set to any string. */
+			/**
+			 * A property that can be set to any string.
+			 * @type {string}
+			 */
 			public label: string;
-			/** The name of the IndexSection. */
+			/**
+			 * The name of the IndexSection.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly name: string;
-			/** The parent of the IndexSection (a Index). */
+			/**
+			 * The parent of the IndexSection (a Index).
+			 * @type {Adobe.Indesign.Index}
+			 * @readonly
+			 */
 			public readonly parent: Adobe.Indesign.Index;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
-			/** A collection of index topics. */
+			/**
+			 * A collection of index topics.
+			 * @type {Adobe.Indesign.Topics}
+			 * @readonly
+			 */
 			public readonly topics: Adobe.Indesign.Topics;
 			/**
 			 * Adds an event listener.
@@ -38,16 +76,19 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerIndexSection(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Gets the label value associated with the specified key.
 			 * @param {string} keyParam The key.
+			 * @returns {string}
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -55,6 +96,7 @@ declare namespace Adobe {
 			 * key.
 			 * @param {string} keyParam The key.
 			 * @param {string} valueParam The value.
+			 * @returns {void}
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
@@ -64,9 +106,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerIndexSection(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

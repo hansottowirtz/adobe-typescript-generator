@@ -70,7 +70,7 @@ module AdobeTypescriptGenerator
     end
 
     def packages
-      @packages ||= {}
+      @packages ||= {'general' => Package.new('general')}
     end
   end
 end

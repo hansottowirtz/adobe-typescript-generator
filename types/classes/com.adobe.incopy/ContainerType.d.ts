@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -6,26 +6,51 @@ declare namespace Adobe {
 			/**
 			 * Alias for ALT. The container contains alternative values of 
 			 * which only one can be used.
+			 * @type {Adobe.Incopy.ContainerType}
+			 * @readonly
 			 */
 			public static readonly alt: Adobe.Incopy.ContainerType;
 			/**
 			 * The container contains alternative values of which only one 
 			 * can be used.
+			 * @type {Adobe.Incopy.ContainerType}
+			 * @readonly
 			 */
 			public static readonly ALT: Adobe.Incopy.ContainerType;
-			/** Alias for BAG. The container contains unordered items. */
+			/**
+			 * Alias for BAG. The container contains unordered items.
+			 * @type {Adobe.Incopy.ContainerType}
+			 * @readonly
+			 */
 			public static readonly bag: Adobe.Incopy.ContainerType;
-			/** The container contains unordered items. */
+			/**
+			 * The container contains unordered items.
+			 * @type {Adobe.Incopy.ContainerType}
+			 * @readonly
+			 */
 			public static readonly BAG: Adobe.Incopy.ContainerType;
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/**
 			 * Alias for SEQ. The container contains ordered or sequential 
 			 * items.
+			 * @type {Adobe.Incopy.ContainerType}
+			 * @readonly
 			 */
 			public static readonly seq: Adobe.Incopy.ContainerType;
-			/** The container contains ordered or sequential items. */
+			/**
+			 * The container contains ordered or sequential items.
+			 * @type {Adobe.Incopy.ContainerType}
+			 * @readonly
+			 */
 			public static readonly SEQ: Adobe.Incopy.ContainerType;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

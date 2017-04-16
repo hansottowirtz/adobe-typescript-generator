@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class Movies extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new Movie
@@ -18,30 +22,46 @@ declare namespace Adobe {
 			 * PageItem. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Movie (Optional)
+			 * @returns {Adobe.Incopy.Movie}
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Incopy.Movie;
-			/** Returns any Movie in the collection. */
+			/**
+			 * Returns any Movie in the collection.
+			 * @returns {Adobe.Incopy.Movie}
+			 */
 			public anyItem(): Adobe.Incopy.Movie;
-			/** Displays the number of elements in the Movie. */
+			/**
+			 * Displays the number of elements in the Movie.
+			 * @returns {number}
+			 */
 			public count(): number;
-			/** Returns every Movie in the collection. */
+			/**
+			 * Returns every Movie in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first Movie in the collection. */
+			/**
+			 * Returns the first Movie in the collection.
+			 * @returns {Adobe.Incopy.Movie}
+			 */
 			public firstItem(): Adobe.Incopy.Movie;
 			/**
 			 * Returns the Movie with the specified index or name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Incopy.Movie}
 			 */
 			public item(indexParam: any): Adobe.Incopy.Movie;
 			/**
 			 * Returns the Movie with the specified ID.
 			 * @param {number} idParam The ID.
+			 * @returns {Adobe.Incopy.Movie}
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.Movie;
 			/**
 			 * Returns the Movie with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Incopy.Movie}
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Movie;
 			/**
@@ -51,27 +71,37 @@ declare namespace Adobe {
 			 * String.
 			 * @param {any} toParam The Movie, index, or name at the end of 
 			 * the range. Can accept: Movie, Long Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last Movie in the collection. */
+			/**
+			 * Returns the last Movie in the collection.
+			 * @returns {Adobe.Incopy.Movie}
+			 */
 			public lastItem(): Adobe.Incopy.Movie;
-			/** Returns the middle Movie in the collection. */
+			/**
+			 * Returns the middle Movie in the collection.
+			 * @returns {Adobe.Incopy.Movie}
+			 */
 			public middleItem(): Adobe.Incopy.Movie;
 			/**
 			 * Returns the Movie whose index follows the specified Movie in 
 			 * the collection.
 			 * @param {Movie} objParam The Movie whose index comes before 
 			 * the desired Movie. 
+			 * @returns {Adobe.Incopy.Movie}
 			 */
 			public nextItem(objParam: Movie): Adobe.Incopy.Movie;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -79,6 +109,7 @@ declare namespace Adobe {
 			 * index.
 			 * @param {Movie} objParam The index of the Movie that follows 
 			 * the desired Movie.
+			 * @returns {Adobe.Incopy.Movie}
 			 */
 			public previousItem(objParam: Movie): Adobe.Incopy.Movie;
 		}

@@ -1,4 +1,6 @@
 class DocUntangler
+  INDEX_ATTRIBUTES_NAMES = ['index', 'nextNameIndex', 'nextValue']
+
   def initialize(doc)
     package_name = doc.xpath("//text()[. = 'Package']")[0].parent.next_sibling.text
     inheritanceList = doc.css('.inheritanceList')[0]
@@ -22,6 +24,10 @@ class DocUntangler
         attributes << DetailUntangler.new(header, header.next_sibling).attribute
       end
     end
+    if index_attributes?(attributes)
+      attributes.reject!{ |a| (INDEX_ATTRIBUTES_NAMES - ['index']).include?(a.name) }
+    end
+
     description = doc.css('.classHeaderTable')[0].parent.xpath('text()').text.strip.gsub(/[\r\n\t\r\u00a0]/, '')
     description = nil if description.empty?
     @package = Package.get_or_new(package_name)
@@ -35,5 +41,15 @@ class DocUntangler
 
   def package
     @package
+  end
+
+  private
+  def index_attributes?(attrs)
+    INDEX_ATTRIBUTES_NAMES.each do |name|
+      if !attrs.collect(&:name).include?(name)
+        return false
+      end
+    end
+    return true
   end
 end

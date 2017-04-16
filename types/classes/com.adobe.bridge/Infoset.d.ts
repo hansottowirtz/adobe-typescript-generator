@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -19,27 +19,40 @@ declare namespace Adobe {
 		 * type, through that property.
 		 */
 		class Infoset extends Adobe.Csawlib.CSHostObject {
-			/** The CacheData object containing cache status for this set. */
+			/**
+			 * The CacheData object containing cache status for this set.
+			 * @type {any}
+			 */
 			public cacheData: any;
-			/** The descriptions of the members of this set. */
+			/**
+			 * The descriptions of the members of this set.
+			 * @type {any[]}
+			 */
 			public description: any[];
 			/**
 			 * The name of the ExtensionHandler object that manages this 
 			 * data.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly extension: string;
-			/** The name of this set. */
+			/**
+			 * The name of this set.
+			 * @type {string}
+			 */
 			public infosetName: string;
 			/**
 			 * Adds a child node to the core data set children.
 			 * @param {string} path 
 			 * @param {any} model 
 			 * @param {string} containerHint 
+			 * @returns {void}
 			 */
 			public addChild(path: string, model: any, containerHint: string): void;
 			/**
 			 * Sets all members of this set to the default value for the 
 			 * data type.
+			 * @returns {void}
 			 */
 			public initializeMembersToDefaultValues(): void;
 		}

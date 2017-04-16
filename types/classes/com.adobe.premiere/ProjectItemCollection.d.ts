@@ -1,24 +1,19 @@
-/// <reference path="../../packages/com.adobe.premiere/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.premiere/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Premiere {
 		class ProjectItemCollection extends Adobe.Csawlib.CSHostObject {
+			/**
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly numItems: number;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx
+			 * @returns {Adobe.Premiere.ProjectItem}
 			 */
-			public index(idx: number): Adobe.Premiere.ProjectItem;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} idx
-			 */
-			public nextNameIndex(idx: number): number;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} index
-			 */
-			public nextValue(index: number): any;
+			[idx: number]: Adobe.Premiere.ProjectItem;
 		}
 	}
 }

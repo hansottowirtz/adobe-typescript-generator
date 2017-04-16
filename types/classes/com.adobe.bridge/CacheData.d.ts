@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -14,13 +14,18 @@ declare namespace Adobe {
 			/**
 			 * Opaque storage to aid extensions in discovering the cache 
 			 * status.
+			 * @type {string}
 			 */
 			public cookie: string;
 			/**
 			 * The cache status for a member of the associated information 
 			 * set, or of the set itself.
+			 * @type {string}
 			 */
 			public status: string;
+			/**
+			 * @type {string}
+			 */
 			public storageHint: string;
 		}
 	}

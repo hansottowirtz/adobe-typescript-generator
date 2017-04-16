@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
@@ -8,6 +8,7 @@ declare namespace Adobe {
 			 * delete measurements
 			 * @param {Adobe.Photoshop.MeasurementRange} range which 
 			 * measurements to delete.  Default to selected
+			 * @returns {void}
 			 */
 			public deleteMeasurements(range: Adobe.Photoshop.MeasurementRange): void;
 			/**
@@ -20,6 +21,7 @@ declare namespace Adobe {
 			 * points to export.  The order of the data points is respected 
 			 * in the exported file.  Defaults to data points visible in 
 			 * Measurement Log palette
+			 * @returns {void}
 			 */
 			public exportMeasurements(file: File, range: Adobe.Photoshop.MeasurementRange, dataPoints: any[]): void;
 		}

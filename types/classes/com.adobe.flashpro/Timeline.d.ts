@@ -1,26 +1,49 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
 		/** The Timeline object represents the Timeline. */
 		class Timeline extends Adobe.Csawlib.CSHostObject {
-			/** The frame number for the current playhead. */
+			/**
+			 * The frame number for the current playhead.
+			 * @type {number}
+			 */
 			public currentFrame: number;
-			/** The currently active layer. */
+			/**
+			 * The currently active layer.
+			 * @type {number}
+			 */
 			public currentLayer: number;
-			/** the length of the longest layer in a scene */
+			/**
+			 * the length of the longest layer in a scene
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly frameCount: number;
-			/** number of layers in the timeline being referred to. */
+			/**
+			 * number of layers in the timeline being referred to.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly layerCount: number;
-			/** An array of layer objects. */
+			/**
+			 * An array of layer objects.
+			 * @type {any[]}
+			 * @readonly
+			 */
 			public readonly layers: any[];
 			/**
 			 * If the timeline's libraryItem property is null, the timeline 
 			 * belongs to a scene. If it's not null, you can treat it like 
 			 * a LibraryItem object.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly libraryItem: any;
-			/** Name of the timeline. Used when working with scenes. */
+			/**
+			 * Name of the timeline. Used when working with scenes.
+			 * @type {string}
+			 */
 			public name: string;
 			/**
 			 * Add a motion guide layer above the current layer and attach 
@@ -32,6 +55,7 @@ declare namespace Adobe {
 			 * guided layer. 
 			 * -1 if current layer type is not normal, otherwise the layer 
 			 * index of the newly added guide layer is returned.
+			 * @returns {number}
 			 */
 			public addMotionGuide(): number;
 			/**
@@ -47,6 +71,7 @@ declare namespace Adobe {
 			 * @param {boolean} bAddAbove If true, add the layer above the 
 			 * current layer.  If false, add the layer below the current 
 			 * layer.  Defaults to true.
+			 * @returns {void}
 			 */
 			public addNewLayer(name: string, layerType: string, bAddAbove: boolean): void;
 			/**
@@ -61,6 +86,7 @@ declare namespace Adobe {
 			 * is not specified, use the current selection. If startFrame 
 			 * is specified, but endFrame is not, endFrame defaults to 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public clearFrames(startFrame: number, endFrame: number): void;
 			/**
@@ -76,6 +102,7 @@ declare namespace Adobe {
 			 * specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public clearKeyframes(startFrame: number, endFrame: number): void;
 			/**
@@ -88,6 +115,7 @@ declare namespace Adobe {
 			 * @param {number} endFrame ending frame to convert to 
 			 * keyframes, if this isn't specified and startFrame is 
 			 * endFrame will default to the value of startFrame.
+			 * @returns {void}
 			 */
 			public convertToBlankKeyframes(startFrame: number, endFrame: number): void;
 			/**
@@ -101,6 +129,7 @@ declare namespace Adobe {
 			 * frame to convert to keyframes, if this isn't specified and 
 			 * startFrame is endFrame will default to the value of 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public convertToKeyframes(startFrame: number, endFrame: number): void;
 			/**
@@ -116,6 +145,7 @@ declare namespace Adobe {
 			 * specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public copyFrames(startFrame: number, endFrame: number): void;
 			/**
@@ -125,17 +155,20 @@ declare namespace Adobe {
 			 * can be provided in order to specify a layer or range of 
 			 * layers to cut: One parameter: layerIndex Two parameters: 
 			 * startIndex, endIndex
+			 * @returns {boolean}
 			 */
 			public copyLayers(): boolean;
 			/**
 			 * Method; copies motion on selected frames, either from a 
 			 * motion tween or from frame by
 			 * frame animation.
+			 * @returns {void}
 			 */
 			public copyMotion(): void;
 			/**
 			 * Method; Copies the motion of the selected frames to the 
 			 * clipboard as ActionScript 3.
+			 * @returns {void}
 			 */
 			public copyMotionAsAS3(): void;
 			/**
@@ -161,6 +194,7 @@ declare namespace Adobe {
 			 * specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame. 
+			 * @returns {void}
 			 */
 			public createMotionObject(startFrame: number, endFrame: number): void;
 			/**
@@ -178,6 +212,7 @@ declare namespace Adobe {
 			 * specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public createMotionTween(startFrame: number, endFrame: number): void;
 			/**
@@ -192,6 +227,7 @@ declare namespace Adobe {
 			 * specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public cutFrames(startFrame: number, endFrame: number): void;
 			/**
@@ -205,6 +241,7 @@ declare namespace Adobe {
 			 * @param {number} startIndex Index of layer to cut, or the 
 			 * first index in a range that specifies the start index of the 
 			 * range of layers to cut.
+			 * @returns {boolean}
 			 */
 			public cutLayers(startIndex: number): boolean;
 			/**
@@ -215,6 +252,7 @@ declare namespace Adobe {
 			 * @param {number} index index of the layer to be deleted. If 
 			 * there is only 1 layer in the timeline, deleteLayer will not 
 			 * do anything
+			 * @returns {void}
 			 */
 			public deleteLayer(index: number): void;
 			/**
@@ -225,6 +263,7 @@ declare namespace Adobe {
 			 * specified index
 			 * Two parameters:  startIndex, endIndex - duplicate the range 
 			 * of layers specified
+			 * @returns {number}
 			 */
 			public duplicateLayers(): number;
 			/**
@@ -239,6 +278,7 @@ declare namespace Adobe {
 			 * Use -1 to apply to all layers (you'll need to set 
 			 * recurseNestedFolders to true as well)  This is how the 
 			 * Expand All/Collapse All menu items work.
+			 * @returns {void}
 			 */
 			public expandFolder(bExpand: boolean, bRecurseNestedParents: boolean, index: number): void;
 			/**
@@ -248,6 +288,7 @@ declare namespace Adobe {
 			 * undefined is returned when a layers with the given name is 
 			 * not found.
 			 * @param {string} name the name of the layer to find
+			 * @returns {any[]}
 			 */
 			public findLayerIndex(name: string): any[];
 			/**
@@ -258,11 +299,13 @@ declare namespace Adobe {
 			 * selected frames don't have the same property value
 			 * @param {string} property specifies which property's value 
 			 * you want returnedList of properties
+			 * @returns {any}
 			 */
 			public getFrameProperty(property: string): any;
 			/**
 			 * Returns an XML string representing the current state of the 
 			 * guidelines for a particular timeline.
+			 * @returns {string}
 			 */
 			public getGuidelines(): string;
 			/**
@@ -276,6 +319,7 @@ declare namespace Adobe {
 			 * returned.
 			 * @param {string} property The name of the property to get the 
 			 * value of.  
+			 * @returns {any}
 			 */
 			public getLayerProperty(property: string): any;
 			/**
@@ -286,6 +330,7 @@ declare namespace Adobe {
 			 * is the layer index, the second is the start frame of the 
 			 * beginning of the selection; the third integer is up to but 
 			 * not including the ending frame of that selection range.
+			 * @returns {any[]}
 			 */
 			public getSelectedFrames(): any[];
 			/**
@@ -293,6 +338,7 @@ declare namespace Adobe {
 			 * 
 			 * RETURNS: an array containing zero-based indecies of the 
 			 * selected layers.
+			 * @returns {any[]}
 			 */
 			public getSelectedLayers(): any[];
 			/**
@@ -301,6 +347,7 @@ declare namespace Adobe {
 			 * isn't specified.
 			 * @param {number} frameNum frameNumber to insert the keyframe 
 			 * at.  If frameNum is not specified, use the current playhead. 
+			 * @returns {void}
 			 */
 			public insertBlankKeyframe(frameNum: number): void;
 			/**
@@ -326,6 +373,7 @@ declare namespace Adobe {
 			 * insert frames into the current layer. Default value is true.
 			 * @param {number} frameNum frameNum is the frame number to 
 			 * insert a frame.
+			 * @returns {void}
 			 */
 			public insertFrames(numFrames: number, bAllLayers: boolean, frameNum: number): void;
 			/**
@@ -334,6 +382,7 @@ declare namespace Adobe {
 			 * @param {number} frameNum The frameNumber to insert the 
 			 * keyframe at on current layer.  If frameNum is not specified, 
 			 * use the current playhead.
+			 * @returns {void}
 			 */
 			public insertKeyframe(frameNum: number): void;
 			/**
@@ -349,6 +398,7 @@ declare namespace Adobe {
 			 * specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public pasteFrames(startFrame: number, endFrame: number): void;
 			/**
@@ -360,11 +410,13 @@ declare namespace Adobe {
 			 * the system clipboard.
 			 * Optional parameters: layerIndex - paste above this layer 
 			 * index
+			 * @returns {number}
 			 */
 			public pasteLayers(): number;
 			/**
 			 * Method; pastes motion on selected frames, either from a 
 			 * copied motion tween or from frame by frame animation.
+			 * @returns {any}
 			 */
 			public pasteMotion(): any;
 			/**
@@ -380,6 +432,7 @@ declare namespace Adobe {
 			 * not specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame.
+			 * @returns {void}
 			 */
 			public removeFrames(startFrame: number, endFrame: number): void;
 			/**
@@ -397,6 +450,7 @@ declare namespace Adobe {
 			 * specified, use the current selection. If startFrame is 
 			 * specified, but endFrame is not, endFrame defaults to 
 			 * startFrame. 
+			 * @returns {void}
 			 */
 			public removeMotionObject(startFrame: number, endFrame: number): void;
 			/**
@@ -409,6 +463,7 @@ declare namespace Adobe {
 			 * @param {boolean} bAddBefore If true move the layer before 
 			 * layerToPutItBy, if false move the layer after 
 			 * layerToPutItBy.  Default value is true
+			 * @returns {void}
 			 */
 			public reorderLayer(layerToMove: number, layerToPutItBy: number, bAddBefore: boolean): void;
 			/**
@@ -419,9 +474,13 @@ declare namespace Adobe {
 			 * @param {number} endFrame startFrame up to but not including 
 			 * endFrame is the range of frames. If startFrame is not 
 			 * specified, use the current selection. 
+			 * @returns {void}
 			 */
 			public reverseFrames(startFrame: number, endFrame: number): void;
-			/** Selects all the frames in the current timeline. */
+			/**
+			 * Selects all the frames in the current timeline.
+			 * @returns {void}
+			 */
 			public selectAllFrames(): void;
 			/**
 			 * Sets the property of the frame object for the selected 
@@ -435,6 +494,7 @@ declare namespace Adobe {
 			 * @param {number} endFrame up to but not including endFrame 
 			 * number to be modified.  If it's not specified endFrame will 
 			 * default to startFrame.
+			 * @returns {void}
 			 */
 			public setFrameProperty(property: string, value: any, startFrame: number, endFrame: number): void;
 			/**
@@ -443,6 +503,7 @@ declare namespace Adobe {
 			 * @param {string} xml The setter accepts XML data and replaces 
 			 * all guidelines currently in the timeline with the ones in 
 			 * the XML string.
+			 * @returns {boolean}
 			 */
 			public setGuidelines(xml: string): boolean;
 			/**
@@ -457,6 +518,7 @@ declare namespace Adobe {
 			 * should be modified.  Choices are 'selected', 'all', 
 			 * 'others'.  The default value is 'selected' if it isn't 
 			 * supplied.
+			 * @returns {void}
 			 */
 			public setLayerProperty(property: string, value: any, layersToChange: string): void;
 			/**
@@ -470,6 +532,7 @@ declare namespace Adobe {
 			 * bReplaceCurrentSelection, the currently selected frames are 
 			 * deselected before selecting the specified frames. Optional, 
 			 * default is true. 
+			 * @returns {void}
 			 */
 			public setSelectedFrames(startFrame: number, endFrame: number, bReplaceCurrentSelection: boolean): void;
 			/**
@@ -484,6 +547,7 @@ declare namespace Adobe {
 			 * replace the current selection, false means to extend the 
 			 * current selection.  Default value for this parameter is true 
 			 * (replace the current selection)
+			 * @returns {void}
 			 */
 			public setSelectedFrames2(selectionList: any, bReplaceCurrentSelection: boolean): void;
 			/**
@@ -495,6 +559,7 @@ declare namespace Adobe {
 			 * @param {boolean} bReplaceCurrentSelection 
 			 * bReplaceCurrentSelection for erasing current selection. If 
 			 * not set defaults to true.
+			 * @returns {void}
 			 */
 			public setSelectedLayers(index: number, bReplaceCurrentSelection: boolean): void;
 			/**
@@ -503,16 +568,19 @@ declare namespace Adobe {
 			 * passed in.
 			 * @param {number} layer index of a mask or masked layer to 
 			 * show masking on during authoring
+			 * @returns {void}
 			 */
 			public showLayerMasking(layer: number): void;
 			/**
 			 * Starts auto playback of the timeline if the timeline is not 
 			 * currently playing.
+			 * @returns {boolean}
 			 */
 			public startPlayback(): boolean;
 			/**
 			 * Stops auto playback of the timeline if it is currently 
 			 * playing.
+			 * @returns {boolean}
 			 */
 			public stopPlayback(): boolean;
 		}

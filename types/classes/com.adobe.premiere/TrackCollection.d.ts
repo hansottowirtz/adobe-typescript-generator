@@ -1,24 +1,19 @@
-/// <reference path="../../packages/com.adobe.premiere/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.premiere/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Premiere {
 		class TrackCollection extends Adobe.Csawlib.CSHostObject {
+			/**
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly numTracks: number;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx
+			 * @returns {Adobe.Premiere.Track}
 			 */
-			public index(idx: number): Adobe.Premiere.Track;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} idx
-			 */
-			public nextNameIndex(idx: number): number;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} index
-			 */
-			public nextValue(index: number): any;
+			[idx: number]: Adobe.Premiere.Track;
 		}
 	}
 }

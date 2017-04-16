@@ -1,16 +1,28 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		/** Preference */
 		class SpellPreference extends Adobe.Incopy.Preference {
-			/** If true, checks for uncapitalized first words in sentences. */
+			/**
+			 * If true, checks for uncapitalized first words in sentences.
+			 * @type {boolean}
+			 */
 			public checkCapitalizedSentences: boolean;
-			/** If true, checks for uncapitalized proper nouns. */
+			/**
+			 * If true, checks for uncapitalized proper nouns.
+			 * @type {boolean}
+			 */
 			public checkCapitalizedWords: boolean;
-			/** If true, checks for misspelled words. */
+			/**
+			 * If true, checks for misspelled words.
+			 * @type {boolean}
+			 */
 			public checkMisspelledWords: boolean;
-			/** If true, checks for repeated words. */
+			/**
+			 * If true, checks for repeated words.
+			 * @type {boolean}
+			 */
 			public checkRepeatedWords: boolean;
 			/**
 			 * If true, underlines misspelled and repeated words, 
@@ -19,15 +31,26 @@ declare namespace Adobe {
 			 * properties are true. For information, see check misspelled 
 			 * words, check repeated words, check capitalized words, and 
 			 * check capitalized sentences.
+			 * @type {boolean}
 			 */
 			public dynamicSpellCheck: boolean;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Incopy.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Incopy.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Incopy.Events;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
@@ -37,13 +60,19 @@ declare namespace Adobe {
 			 * Valid only when both dynamic spell check and check 
 			 * misspelled words are true. Can return: Array of 3 Reals (0 - 
 			 * 255) or UIColors enumerator.
+			 * @type {any}
 			 */
 			public misspelledWordColor: any;
-			/** The parent of the SpellPreference (a Application). */
+			/**
+			 * The parent of the SpellPreference (a Application).
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -53,6 +82,7 @@ declare namespace Adobe {
 			 * Valid only when both dynamic spell check and check repeated 
 			 * words are true. . Can return: Array of 3 Reals (0 - 255) or 
 			 * UIColors enumerator.
+			 * @type {any}
 			 */
 			public repeatedWordColor: any;
 			/**
@@ -63,6 +93,7 @@ declare namespace Adobe {
 			 * Valid when both dynamic spell check and check capitalized 
 			 * sentences are true. Can return: Array of 3 Reals (0 - 255) 
 			 * or UIColors enumerator.
+			 * @type {any}
 			 */
 			public uncapitalizedSentenceColor: any;
 			/**
@@ -72,6 +103,7 @@ declare namespace Adobe {
 			 * UI color. Note: Valid only when both dynamic spell check and 
 			 * check capitalized words are true. . Can return: Array of 3 
 			 * Reals (0 - 255) or UIColors enumerator.
+			 * @type {any}
 			 */
 			public uncapitalizedWordColor: any;
 			/**
@@ -81,11 +113,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Incopy.EventListener}
 			 */
 			public addEventListenerSpellPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -95,9 +129,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerSpellPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

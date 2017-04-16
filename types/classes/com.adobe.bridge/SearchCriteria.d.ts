@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -30,33 +30,45 @@ declare namespace Adobe {
 			 * One or more Operand objects used to populate the drop-down 
 			 * list for the right-side field of this line in the Find 
 			 * dialog.
+			 * @type {any[]}
 			 */
 			public operands: any[];
-			/** The data type of the operand values. */
+			/**
+			 * The data type of the operand values.
+			 * @type {string}
+			 */
 			public operandType: string;
 			/**
 			 * A set of predefined operator strings that are not displayed 
 			 * for selection.
+			 * @type {any[]}
 			 */
 			public operatorTypesToDisable: any[];
 			/**
 			 * A search field, the name of some property associated with 
 			 * the search node.
+			 * @type {string}
 			 */
 			public searchField: string;
 			/**
 			 * A localized display name for the search field, displayed in 
 			 * the Find dialog. .
+			 * @type {string}
 			 */
 			public searchFieldDisplay: string;
 			/**
 			 * Whether searchfield display names are sorted alphabetically 
 			 * in the Find dialog.
+			 * @type {boolean}
 			 */
 			public searchFieldSort: boolean;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 		}

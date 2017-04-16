@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -16,17 +16,33 @@ declare namespace Adobe {
 			 * segments; supplying the positions of left- and 
 			 * right-direction points specifies curved line segments. Can 
 			 * return: Array of Arrays of 2 Units.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly entirePath: any;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Incopy.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Incopy.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Incopy.Events;
-			/** The index of the Path within its containing object. */
+			/**
+			 * The index of the Path within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
@@ -34,15 +50,26 @@ declare namespace Adobe {
 			 * Rectangle, Oval, TextFrame, MediaItem, Sound, Movie, Button, 
 			 * MultiStateObject, ClippingPathSettings or 
 			 * TextWrapPreference).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
-			/** A collection of path points. */
+			/**
+			 * A collection of path points.
+			 * @type {Adobe.Incopy.PathPoints}
+			 * @readonly
+			 */
 			public readonly pathPoints: Adobe.Incopy.PathPoints;
-			/** The path type. */
+			/**
+			 * The path type.
+			 * @type {Adobe.Incopy.PathType}
+			 * @readonly
+			 */
 			public readonly pathType: Adobe.Incopy.PathType;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -52,11 +79,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Incopy.EventListener}
 			 */
 			public addEventListenerPath(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -66,9 +95,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerPath(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -9,39 +9,59 @@ declare namespace Adobe {
 		 * extensible tools.
 		 */
 		class Tools extends Adobe.Csawlib.CSHostObject {
-			/** Returns the ToolObj object for the currently active tool. */
+			/**
+			 * Returns the ToolObj object for the currently active tool.
+			 * @type {Adobe.Flashpro.ToolObj}
+			 * @readonly
+			 */
 			public readonly activeTool: Adobe.Flashpro.ToolObj;
 			/**
 			 * Has the value boolean value true if the alt key is down, 
 			 * false otherwise.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly altIsDown: boolean;
 			/**
 			 * Has the value boolean value true if the control key is down, 
 			 * false otherwise.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly ctlIsDown: boolean;
 			/**
 			 * Has the boolean value true if the left mouse button is 
 			 * currently down, false if the mouse button is up.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly mouseIsDown: boolean;
 			/**
 			 * The position of the last mouse down event on the Stage. 
 			 * penDownLoc has 2 properties, x and y.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly penDownLoc: any;
 			/**
 			 * The current location of the mouse. penLoc has 2 properties, 
 			 * x and y.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly penLoc: any;
 			/**
 			 * Has the boolean value true if the shift key is down, false 
 			 * otherwise.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly shiftIsDown: boolean;
-			/** An array of ToolObj objects. */
+			/**
+			 * An array of ToolObj objects.
+			 * @type {any[]}
+			 * @readonly
+			 */
 			public readonly toolObjs: any[];
 			/**
 			 * This property takes two points and returns a new adjusted or 
@@ -54,11 +74,13 @@ declare namespace Adobe {
 			 * tool).
 			 * @param {any} pt1 The starting click point
 			 * @param {any} p2 the drag to point
+			 * @returns {any}
 			 */
 			public constrainPoint(pt1: any, p2: any): any;
 			/**
 			 * Returns the last key pressed. Used only when creating 
 			 * extensible tools.
+			 * @returns {number}
 			 */
 			public getKeyDown(): number;
 			/**
@@ -75,6 +97,7 @@ declare namespace Adobe {
 			 * 6 - 'X' 
 			 * 7 - hand cursor
 			 * @param {number} cursor The cursor to set.
+			 * @returns {void}
 			 */
 			public setCursor(cursor: number): void;
 			/**
@@ -83,6 +106,7 @@ declare namespace Adobe {
 			 * object. If snapping is "off" via View > Snap Settings, then 
 			 * the point returned is the original point.
 			 * @param {any} pt1 point for input
+			 * @returns {any}
 			 */
 			public snapPoint(pt1: any): any;
 		}

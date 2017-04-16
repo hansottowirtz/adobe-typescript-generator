@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,16 +7,19 @@ declare namespace Adobe {
 			/**
 			 * The angle at which the shadow is thrown. Can return: Real 
 			 * (-180 - 180) or NothingEnum enumerator.
+			 * @type {number}
 			 */
 			public angle: number;
 			/**
 			 * The blending mode for the drop shadow effect. Can return: 
 			 * BlendMode enumerator or NothingEnum enumerator.
+			 * @type {Adobe.Indesign.BlendMode}
 			 */
 			public blendMode: Adobe.Indesign.BlendMode;
 			/**
 			 * The distance between the item and its shadow. Can return: 
 			 * Unit (0 - 1000 points) or NothingEnum enumerator.
+			 * @type {any}
 			 */
 			public distance: any;
 			/**
@@ -30,43 +33,59 @@ declare namespace Adobe {
 			 * [L,A,B], with L in the range 0 to 100 and A and B in the 
 			 * range -128 to 127. Can return: Swatch or NothingEnum 
 			 * enumerator.
+			 * @type {Adobe.Indesign.Swatch}
 			 */
 			public effectColor: Adobe.Indesign.Swatch;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * If true, the drop shadow will take into account other 
 			 * non-shadow effects. Can return: Boolean or NothingEnum 
 			 * enumerator.
+			 * @type {boolean}
 			 */
 			public honorOtherEffects: boolean;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * If true, the layer will knock out the drop shadow. Can 
 			 * return: Boolean or NothingEnum enumerator.
+			 * @type {boolean}
 			 */
 			public knockedOut: boolean;
 			/**
 			 * The shadow mode. Can return: ShadowMode enumerator or 
 			 * NothingEnum enumerator.
+			 * @type {Adobe.Indesign.ShadowMode}
 			 */
 			public mode: Adobe.Indesign.ShadowMode;
 			/**
 			 * The amount (as a percentage) of noise applied to the shadow. 
 			 * (Range: 0 to 100). Can return: Real (0 - 100) or NothingEnum 
 			 * enumerator.
+			 * @type {number}
 			 */
 			public noise: number;
 			/**
 			 * The opacity of the drop shadow (as a percentage). (Range: 0 
 			 * to 100). Can return: Real (0 - 100) or NothingEnum 
 			 * enumerator.
+			 * @type {number}
 			 */
 			public opacity: number;
 			/**
@@ -75,11 +94,14 @@ declare namespace Adobe {
 			 * FindChangeStrokeTransparencySetting, 
 			 * FindChangeFillTransparencySetting or 
 			 * FindChangeContentTransparencySetting).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -88,6 +110,7 @@ declare namespace Adobe {
 			 * 144; for picas: 0p0 to 12p0; for inches: 0 to 2; for mm: 0 
 			 * to 50.08; for cm: 0 to 5.08; for ciceros: 0c0 to 11c3.128.). 
 			 * Can return: Unit (0 - 144 points) or NothingEnum enumerator.
+			 * @type {any}
 			 */
 			public size: any;
 			/**
@@ -95,11 +118,13 @@ declare namespace Adobe {
 			 * footprint of the drop shadow and reduce the radius of the 
 			 * blur. (Range: 0 to 100). Can return: Real (0 - 100) or 
 			 * NothingEnum enumerator.
+			 * @type {number}
 			 */
 			public spread: number;
 			/**
 			 * If true, uses the global light angle. Can return: Boolean or 
 			 * NothingEnum enumerator.
+			 * @type {boolean}
 			 */
 			public useGlobalLight: boolean;
 			/**
@@ -109,6 +134,7 @@ declare namespace Adobe {
 			 * to 352.778; for cm: -35.277 to 35.277; for ciceros: 
 			 * -78c2.389 to 78c2.389. Can return: Unit (-1000 - 1000 
 			 * points) or NothingEnum enumerator.
+			 * @type {any}
 			 */
 			public xOffset: any;
 			/**
@@ -118,6 +144,7 @@ declare namespace Adobe {
 			 * to 352.778; for cm: -35.277 to 35.277; for ciceros: 
 			 * -78c2.389 to 78c2.389). Can return: Unit (-1000 - 1000 
 			 * points) or NothingEnum enumerator.
+			 * @type {any}
 			 */
 			public yOffset: any;
 			/**
@@ -127,11 +154,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerFindChangeDropShadowSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -141,9 +170,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerFindChangeDropShadowSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

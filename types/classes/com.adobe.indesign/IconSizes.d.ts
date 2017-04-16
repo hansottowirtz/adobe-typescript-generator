@@ -1,34 +1,89 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class IconSizes extends Adobe.Csawlib.CSEnumBase {
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
-			/** Extra large icon. */
+			/**
+			 * Extra large icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly EXTRA_LARGE_ICON: Adobe.Indesign.IconSizes;
-			/** Extra small icon. */
+			/**
+			 * Extra small icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly EXTRA_SMALL_ICON: Adobe.Indesign.IconSizes;
-			/** Alias for EXTRA_LARGE_ICON. Extra large icon. */
+			/**
+			 * Alias for EXTRA_LARGE_ICON. Extra large icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly extraLargeIcon: Adobe.Indesign.IconSizes;
-			/** Alias for EXTRA_SMALL_ICON. Extra small icon. */
+			/**
+			 * Alias for EXTRA_SMALL_ICON. Extra small icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly extraSmallIcon: Adobe.Indesign.IconSizes;
-			/** Jumbo icon. */
+			/**
+			 * Jumbo icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly JUMBO_ICON: Adobe.Indesign.IconSizes;
-			/** Alias for JUMBO_ICON. Jumbo icon. */
+			/**
+			 * Alias for JUMBO_ICON. Jumbo icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly jumboIcon: Adobe.Indesign.IconSizes;
-			/** Large icon. */
+			/**
+			 * Large icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly LARGE_ICON: Adobe.Indesign.IconSizes;
-			/** Alias for LARGE_ICON. Large icon. */
+			/**
+			 * Alias for LARGE_ICON. Large icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly largeIcon: Adobe.Indesign.IconSizes;
-			/** Medium icon. */
+			/**
+			 * Medium icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly MEDIUM_ICON: Adobe.Indesign.IconSizes;
-			/** Alias for MEDIUM_ICON. Medium icon. */
+			/**
+			 * Alias for MEDIUM_ICON. Medium icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly mediumIcon: Adobe.Indesign.IconSizes;
-			/** Small icon. */
+			/**
+			 * Small icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly SMALL_ICON: Adobe.Indesign.IconSizes;
-			/** Alias for SMALL_ICON. Small icon. */
+			/**
+			 * Alias for SMALL_ICON. Small icon.
+			 * @type {Adobe.Indesign.IconSizes}
+			 * @readonly
+			 */
 			public static readonly smallIcon: Adobe.Indesign.IconSizes;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

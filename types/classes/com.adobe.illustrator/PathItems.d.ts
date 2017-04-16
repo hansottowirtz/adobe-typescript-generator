@@ -1,12 +1,19 @@
-/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
 		/** A collection of path items */
 		class PathItems extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** number of elements in the collection */
+			/**
+			 * number of elements in the collection
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
-			/** create a path */
+			/**
+			 * create a path
+			 * @returns {Adobe.Illustrator.PathItem}
+			 */
 			public add(): Adobe.Illustrator.PathItem;
 			/**
 			 * Create an elliptical path item.
@@ -19,29 +26,22 @@ declare namespace Adobe {
 			 * default: false )
 			 * @param {boolean} inscribed is the ellipse path inscribed? ( 
 			 * default: true )
+			 * @returns {Adobe.Illustrator.PathItem}
 			 */
 			public ellipse(top: number, left: number, width: number, height: number, reversed: boolean, inscribed: boolean): Adobe.Illustrator.PathItem;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.
 			 * @param {string} nameParam
+			 * @returns {Adobe.Illustrator.PathItem}
 			 */
 			public getByName(nameParam: string): Adobe.Illustrator.PathItem;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx
+			 * @returns {Adobe.Illustrator.PathItem}
 			 */
-			public index(idx: number): Adobe.Illustrator.PathItem;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} idx
-			 */
-			public nextNameIndex(idx: number): number;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} index
-			 */
-			public nextValue(index: number): any;
+			[idx: number]: Adobe.Illustrator.PathItem;
 			/**
 			 * Used to create a regular polygon path item. Not for path 
 			 * item access.
@@ -53,6 +53,7 @@ declare namespace Adobe {
 			 * default: 8 )
 			 * @param {boolean} reversed is the polygon path reversed? ( 
 			 * default: false )
+			 * @returns {Adobe.Illustrator.PathItem}
 			 */
 			public polygon(centerX: number, centerY: number, radius: number, sides: number, reversed: boolean): Adobe.Illustrator.PathItem;
 			/**
@@ -66,8 +67,12 @@ declare namespace Adobe {
 			 * @param {number} height the height of the rectangle
 			 * @param {boolean} reversed is the rectangle path reversed? ( 
 			 * default: false )
+			 * @returns {Adobe.Illustrator.PathItem}
 			 */
 			public rectangle(top: number, left: number, width: number, height: number, reversed: boolean): Adobe.Illustrator.PathItem;
+			/**
+			 * @returns {void}
+			 */
 			public removeAll(): void;
 			/**
 			 * Used to create a rounded-corner rectangular path item. Not 
@@ -82,6 +87,7 @@ declare namespace Adobe {
 			 * default: 20.0 )
 			 * @param {boolean} reversed is the rectangle path reversed? ( 
 			 * default: false )
+			 * @returns {Adobe.Illustrator.PathItem}
 			 */
 			public roundedRectangle(top: number, left: number, width: number, height: number, horizontalRadius: number, verticalRadius: number, reversed: boolean): Adobe.Illustrator.PathItem;
 			/**
@@ -97,6 +103,7 @@ declare namespace Adobe {
 			 * default: 5 )
 			 * @param {boolean} reversed is the star path reversed? ( 
 			 * default: false )
+			 * @returns {Adobe.Illustrator.PathItem}
 			 */
 			public star(centerX: number, centerY: number, radius: number, innerRadius: number, points: number, reversed: boolean): Adobe.Illustrator.PathItem;
 		}

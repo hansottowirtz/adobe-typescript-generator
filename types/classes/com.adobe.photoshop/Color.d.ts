@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {

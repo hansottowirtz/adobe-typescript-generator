@@ -1,23 +1,36 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** Preference */
 		class XMLImportPreference extends Adobe.Indesign.Preference {
-			/** If true, transforms the XML using an XSLT file. */
+			/**
+			 * If true, transforms the XML using an XSLT file.
+			 * @type {boolean}
+			 */
 			public allowTransform: boolean;
 			/**
 			 * If true, creates a link to the imported XML file. If false, 
 			 * embeds the file.
+			 * @type {boolean}
 			 */
 			public createLinkToXML: boolean;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * If true, ignores elements that do not match the existing 
 			 * structure. Note: Valid only when import style is merge.
+			 * @type {boolean}
 			 */
 			public ignoreUnmatchedIncoming: boolean;
 			/**
@@ -25,62 +38,78 @@ declare namespace Adobe {
 			 * XML content contains only whitespace characters such as a 
 			 * carriage return or a tab character. Note: Valid only when 
 			 * import style is merge.
+			 * @type {boolean}
 			 */
 			public ignoreWhitespace: boolean;
-			/** If true, imports CALS tables as InDesign tables. */
+			/**
+			 * If true, imports CALS tables as InDesign tables.
+			 * @type {boolean}
+			 */
 			public importCALSTables: boolean;
 			/**
 			 * The style of incorporating imported XML content into the 
 			 * document.
+			 * @type {Adobe.Indesign.XMLImportStyles}
 			 */
 			public importStyle: Adobe.Indesign.XMLImportStyles;
 			/**
 			 * If true, imports text into tables if tags match placeholder 
 			 * tables and their cells. Note: Valid only when import style 
 			 * is merge.
+			 * @type {boolean}
 			 */
 			public importTextIntoTables: boolean;
 			/**
 			 * If true, imports into the selected XML element. If false, 
 			 * imports at the root element.
+			 * @type {boolean}
 			 */
 			public importToSelected: boolean;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * The parent of the XMLImportPreference (a Application or 
 			 * Document).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * If true, deletes existing elements or placeholders in the 
 			 * document that do not have matches in the XML file. Note: 
 			 * Valid only when import style is merge.
+			 * @type {boolean}
 			 */
 			public removeUnmatchedExisting: boolean;
 			/**
 			 * If true, repeating text elements inherit the formatting 
 			 * applied to placeholder text. Note: Valid only when import 
 			 * style is merge.
+			 * @type {boolean}
 			 */
 			public repeatTextElements: boolean;
 			/**
 			 * The name of the XSLT file. Note: Valid when allow transform 
 			 * is true. Can return: File or XMLTransformFile enumerator.
+			 * @type {any}
 			 */
 			public transformFilename: any;
 			/**
 			 * Stylesheet parameters as a list of name/value pairs in the 
 			 * format [[name, value], [name, value], ...]. Can return: 
 			 * Ordered array containing name:String, value:String.
+			 * @type {any}
 			 */
 			public transformParameters: any;
 			/**
@@ -90,11 +119,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerXMLImportPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -104,9 +135,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerXMLImportPreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

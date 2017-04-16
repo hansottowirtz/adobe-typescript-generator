@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -7,13 +7,17 @@ declare namespace Adobe {
 		 * will get dumped into a separate panel.
 		 */
 		class CompilerErrors extends Adobe.Csawlib.CSHostObject {
-			/** Clears the list of errors. */
+			/**
+			 * Clears the list of errors.
+			 * @returns {void}
+			 */
 			public clear(): void;
 			/**
 			 * indicates if the compile errors panel contains errors, and 
 			 * optionally indicates if it contains warnings.
 			 * @param {boolean} excludeWarnings if true, warnings should be 
 			 * excluded
+			 * @returns {boolean}
 			 */
 			public hasErrors(excludeWarnings: boolean): boolean;
 			/**
@@ -33,6 +37,7 @@ declare namespace Adobe {
 			 * @param {boolean} verbose added for flash builder workflow
 			 * @param {boolean} externalOnly added for flash builder 
 			 * workflow
+			 * @returns {void}
 			 */
 			public save(fileURI: string, bAppendToFile: boolean, useSystemEncoding: boolean, verbose: boolean, externalOnly: boolean): void;
 		}

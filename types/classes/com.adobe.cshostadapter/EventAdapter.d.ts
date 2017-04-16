@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.cshostadapter/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.cshostadapter/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Cshostadapter {
@@ -8,6 +8,7 @@ declare namespace Adobe {
 			 * This API should not be called directly. Instead, use 
 			 * application-specific subclasses of this class, such as the 
 			 * PSEventAdapter for Photoshop
+			 * @returns {void}
 			 */
 			public constructor();
 			/**
@@ -24,6 +25,7 @@ declare namespace Adobe {
 			 * @param {boolean} useCapture
 			 * @param {number} priority
 			 * @param {boolean} useWeakReference
+			 * @returns {void}
 			 */
 			public addEventListener(eventType: string, listener: Function, useCapture: boolean, priority: number, useWeakReference: boolean): void;
 			/**
@@ -32,6 +34,7 @@ declare namespace Adobe {
 			 * received from the host adapter plug-in which requires 
 			 * translation.
 			 * @param {CSXSEvent} event
+			 * @returns {Event}
 			 */
 			protected createAppEvent(event: CSXSEvent): Event;
 			/**
@@ -39,6 +42,7 @@ declare namespace Adobe {
 			 * with the specified type and XML payload.
 			 * @param {string} _type
 			 * @param {string} payload
+			 * @returns {void}
 			 */
 			protected dispatchToEventAdapter(_type: string, payload: string): void;
 			/**
@@ -50,6 +54,7 @@ declare namespace Adobe {
 			 * listener was successfully added or removed by the host 
 			 * adapter plug-in.
 			 * @param {Function} responseHandler
+			 * @returns {void}
 			 */
 			public listEvents(responseHandler: Function): void;
 			/**
@@ -64,6 +69,7 @@ declare namespace Adobe {
 			 * to register event listeners.
 			 * @param {Function} responseHandler
 			 * @param {number} timeout
+			 * @returns {void}
 			 */
 			public pingPlugIn(responseHandler: Function, timeout: number): void;
 			/**
@@ -73,6 +79,7 @@ declare namespace Adobe {
 			 * @param {string} eventType
 			 * @param {Function} listener
 			 * @param {boolean} useCapture
+			 * @returns {void}
 			 */
 			public removeEventListener(eventType: string, listener: Function, useCapture: boolean): void;
 		}

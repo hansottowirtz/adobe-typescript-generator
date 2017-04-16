@@ -1,49 +1,82 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class TextVariableInstance extends Adobe.Csawlib.CSHostObject {
-			/** The associated text variable. */
+			/**
+			 * The associated text variable.
+			 * @type {Adobe.Indesign.TextVariable}
+			 */
 			public associatedTextVariable: Adobe.Indesign.TextVariable;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
-			/** The unique ID of the TextVariableInstance. */
+			/**
+			 * The unique ID of the TextVariableInstance.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
 			/**
 			 * The index of the TextVariableInstance within its containing 
 			 * object.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** A property that can be set to any string. */
+			/**
+			 * A property that can be set to any string.
+			 * @type {string}
+			 */
 			public label: string;
-			/** The name of the TextVariableInstance. */
+			/**
+			 * The name of the TextVariableInstance.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly name: string;
 			/**
 			 * The parent of the TextVariableInstance (a XmlStory, 
 			 * TextFrame, Story, Note, Cell, Footnote or Change).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * The text that replaces the variable marker. Note: This 
 			 * property cannot be set; it can be used only to update 
 			 * variables. .
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly resultText: string;
 			/**
 			 * The insertion point before the table in the story containing 
 			 * the table.
+			 * @type {Adobe.Indesign.InsertionPoint}
+			 * @readonly
 			 */
 			public readonly storyOffset: Adobe.Indesign.InsertionPoint;
 			/**
@@ -53,22 +86,26 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerTextVariableInstance(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Converts the footnote to part of the story text and places 
 			 * the converted text at the former location of the footnote 
 			 * marker in the text.
+			 * @returns {Adobe.Indesign.Text}
 			 */
 			public convertToText(): Adobe.Indesign.Text;
 			/**
 			 * Gets the label value associated with the specified key.
 			 * @param {string} keyParam The key.
+			 * @returns {string}
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -76,9 +113,13 @@ declare namespace Adobe {
 			 * key.
 			 * @param {string} keyParam The key.
 			 * @param {string} valueParam The value.
+			 * @returns {void}
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
-			/** Deletes the TextVariableInstance. */
+			/**
+			 * Deletes the TextVariableInstance.
+			 * @returns {void}
+			 */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
@@ -87,9 +128,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerTextVariableInstance(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

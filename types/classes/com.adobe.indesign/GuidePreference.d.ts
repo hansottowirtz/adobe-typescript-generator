@@ -1,41 +1,62 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** Preference */
 		class GuidePreference extends Adobe.Indesign.Preference {
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * If true, places guides behind all other objects on the 
 			 * spread.
+			 * @type {boolean}
 			 */
 			public guidesInBack: boolean;
-			/** If true, guides cannot be moved, added, or deleted. */
+			/**
+			 * If true, guides cannot be moved, added, or deleted.
+			 * @type {boolean}
+			 */
 			public guidesLocked: boolean;
-			/** If true, displays the guides. */
+			/**
+			 * If true, displays the guides.
+			 * @type {boolean}
+			 */
 			public guidesShown: boolean;
 			/**
 			 * If true, an object within the specified range snaps to the 
 			 * nearest guide when the object is created, moved, or resized. 
 			 * For range information, see guide snapto zone.
+			 * @type {boolean}
 			 */
 			public guidesSnapto: boolean;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * The parent of the GuidePreference (a Application or 
 			 * Document).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -43,11 +64,13 @@ declare namespace Adobe {
 			 * three doubles, each in the range 0 to 255 and representing 
 			 * R, G, and B values, or as a UI color. . Can return: Array of 
 			 * 3 Reals (0 - 255) or UIColors enumerator.
+			 * @type {any}
 			 */
 			public rulerGuidesColor: any;
 			/**
 			 * The magnification (as a percentage) less than which ruler 
 			 * guides do not appear. (Range: 5 to 4000)
+			 * @type {number}
 			 */
 			public rulerGuidesViewThreshold: number;
 			/**
@@ -57,11 +80,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerGuidePreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -71,9 +96,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerGuidePreference(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

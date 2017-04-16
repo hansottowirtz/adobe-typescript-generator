@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
@@ -10,11 +10,14 @@ declare namespace Adobe {
 			/**
 			 * has the legacy text item been updated to a native text frame 
 			 * item?
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly converted: boolean;
 			/**
 			 * create a native text frame from a legacy text item. The 
 			 * original legacy text item is deleted.
+			 * @returns {Adobe.Illustrator.GroupItem}
 			 */
 			public convertToNative(): Adobe.Illustrator.GroupItem;
 		}

@@ -1,38 +1,75 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** MenuElement */
 		class MenuItem extends Adobe.Indesign.MenuElement {
-			/** The menu action that implements the menu item. */
+			/**
+			 * The menu action that implements the menu item.
+			 * @type {Adobe.Indesign.MenuAction}
+			 * @readonly
+			 */
 			public readonly associatedMenuAction: Adobe.Indesign.MenuAction;
 			/**
 			 * If true, the menu item associated with the menu action is 
 			 * checked.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly checked: boolean;
-			/** If true, the MenuItem is enabled. */
+			/**
+			 * If true, the MenuItem is enabled.
+			 * @type {boolean}
+			 * @readonly
+			 */
 			public readonly enabled: boolean;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
-			/** The unique ID of the MenuItem. */
+			/**
+			 * The unique ID of the MenuItem.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
-			/** The index of the MenuItem within its containing object. */
+			/**
+			 * The index of the MenuItem within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** The name of the MenuItem. */
+			/**
+			 * The name of the MenuItem.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly name: string;
-			/** The parent of the MenuItem (a Menu or Submenu). */
+			/**
+			 * The parent of the MenuItem (a Menu or Submenu).
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -43,6 +80,8 @@ declare namespace Adobe {
 			 * to a menu item. Double ampersands are used to display an 
 			 * actual ampersand character in the name. The Mac OS ignores 
 			 * and removes the extra ampersand characters.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly title: string;
 			/**
@@ -52,14 +91,19 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerMenuItem(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
-			/** Deletes the MenuItem. */
+			/**
+			 * Deletes the MenuItem.
+			 * @returns {void}
+			 */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
@@ -68,11 +112,18 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerMenuItem(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Selects the MenuItem. */
+			/**
+			 * Selects the MenuItem.
+			 * @returns {void}
+			 */
 			public select(): void;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

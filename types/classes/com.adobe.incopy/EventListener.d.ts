@@ -1,31 +1,49 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class EventListener extends Adobe.Csawlib.CSHostObject {
-			/** The name of the event. */
+			/**
+			 * The name of the event.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly eventType: string;
 			/**
 			 * The handler to invoke when the event occurs. Can return: 
 			 * File or JavaScript Function.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly handler: any;
-			/** The unique ID of the EventListener. */
+			/**
+			 * The unique ID of the EventListener.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
 			/**
 			 * The index of the EventListener within its containing object.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** A property that can be set to any string. */
+			/**
+			 * A property that can be set to any string.
+			 * @type {string}
+			 */
 			public label: string;
 			/**
 			 * The name of the EventListener; this is an alias to the 
 			 * EventListener's label property.
+			 * @type {string}
 			 */
 			public name: string;
 			/**
@@ -111,21 +129,26 @@ declare namespace Adobe {
 			 * TransformationMatrix, NestedStyle, TabStop, Text, 
 			 * InsertionPoint, TextStyleRange, Paragraph, TextColumn, Line, 
 			 * Word, Character, NestedGrepStyle or NestedLineStyle).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * Gets the label value associated with the specified key.
 			 * @param {string} keyParam The key.
+			 * @returns {string}
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -133,11 +156,18 @@ declare namespace Adobe {
 			 * key.
 			 * @param {string} keyParam The key.
 			 * @param {string} valueParam The value.
+			 * @returns {void}
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
-			/** Deletes the EventListener. */
+			/**
+			 * Deletes the EventListener.
+			 * @returns {void}
+			 */
 			public remove(): void;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

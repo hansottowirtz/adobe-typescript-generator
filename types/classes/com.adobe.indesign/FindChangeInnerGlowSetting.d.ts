@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -7,11 +7,13 @@ declare namespace Adobe {
 			/**
 			 * If true, the inner glow effect is applied. Can return: 
 			 * Boolean or NothingEnum enumerator.
+			 * @type {boolean}
 			 */
 			public applied: boolean;
 			/**
 			 * The blending mode for the inner glow effect. Can return: 
 			 * BlendMode enumerator or NothingEnum enumerator.
+			 * @type {Adobe.Indesign.BlendMode}
 			 */
 			public blendMode: Adobe.Indesign.BlendMode;
 			/**
@@ -25,27 +27,40 @@ declare namespace Adobe {
 			 * [L,A,B], with L in the range 0 to 100 and A and B in the 
 			 * range -128 to 127. Can return: Swatch or NothingEnum 
 			 * enumerator.
+			 * @type {Adobe.Indesign.Swatch}
 			 */
 			public effectColor: Adobe.Indesign.Swatch;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * The amount (as a percentage) of noise applied to the inner 
 			 * glow. (Range: 0 to 100). Can return: Real (0 - 100) or 
 			 * NothingEnum enumerator.
+			 * @type {number}
 			 */
 			public noise: number;
 			/**
 			 * The opacity of the inner glow (as a percentage). (Range: 0 
 			 * to 100). Can return: Real (0 - 100) or NothingEnum 
 			 * enumerator.
+			 * @type {number}
 			 */
 			public opacity: number;
 			/**
@@ -54,32 +69,39 @@ declare namespace Adobe {
 			 * FindChangeStrokeTransparencySetting, 
 			 * FindChangeFillTransparencySetting or 
 			 * FindChangeContentTransparencySetting).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * The size of the inner glow. Can return: Unit (0 - 144 
 			 * points) or NothingEnum enumerator.
+			 * @type {any}
 			 */
 			public size: any;
 			/**
 			 * The light source of the inner glow effect. Can return: 
 			 * InnerGlowSource enumerator or NothingEnum enumerator.
+			 * @type {Adobe.Indesign.InnerGlowSource}
 			 */
 			public source: Adobe.Indesign.InnerGlowSource;
 			/**
 			 * The amount of spread (as a percentage of the inner glow 
 			 * size). (Range: 0 to 100). Can return: Real (0 - 100) or 
 			 * NothingEnum enumerator.
+			 * @type {number}
 			 */
 			public spread: number;
 			/**
 			 * The technique used for the inner glow. Can return: 
 			 * GlowTechnique enumerator or NothingEnum enumerator.
+			 * @type {Adobe.Indesign.GlowTechnique}
 			 */
 			public technique: Adobe.Indesign.GlowTechnique;
 			/**
@@ -89,11 +111,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerFindChangeInnerGlowSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -103,9 +127,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerFindChangeInnerGlowSetting(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

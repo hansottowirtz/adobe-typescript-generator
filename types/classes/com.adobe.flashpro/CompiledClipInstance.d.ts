@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -15,16 +15,19 @@ declare namespace Adobe {
 			/**
 			 * Equivalent to the Name field in the Accessibility Panel. 
 			 * Screen readers identify objects by reading the name aloud.
+			 * @type {string}
 			 */
 			public accName: string;
 			/**
 			 * String representing the ActionScript for this instance. 
 			 * Behaves the same as symbolInstance.actionScript
+			 * @type {string}
 			 */
 			public actionScript: string;
 			/**
 			 * Equivalent to the Description field on the Accessibility 
 			 * Panel. The description is read by the screen reader.
+			 * @type {string}
 			 */
 			public description: string;
 			/**
@@ -37,6 +40,7 @@ declare namespace Adobe {
 			 * 
 			 * forceSimple == false --> Make Child Object Accessible is 
 			 * checked.
+			 * @type {boolean}
 			 */
 			public forceSimple: boolean;
 			/**
@@ -46,6 +50,7 @@ declare namespace Adobe {
 			 * The shortcut is read by the screen readers.
 			 * 
 			 * This property is not available to dynamic text type.
+			 * @type {string}
 			 */
 			public shortcut: string;
 			/**
@@ -56,6 +61,7 @@ declare namespace Adobe {
 			 * silent == true --> Make Object Accessible is unchecked.
 			 * 
 			 * silent == false --> Make Object Accessible is checked.
+			 * @type {boolean}
 			 */
 			public silent: boolean;
 			/**
@@ -65,6 +71,7 @@ declare namespace Adobe {
 			 * 
 			 * Creates a tab order in which objects are accessed when the 
 			 * user presses the tab key.
+			 * @type {number}
 			 */
 			public tabIndex: number;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
@@ -7,17 +7,25 @@ declare namespace Adobe {
 		 * object and all interaction with the host through the HBAPI.
 		 */
 		class CSHostObject extends Adobe.Flash.Utils.Proxy {
-			/** Getter for the delegate */
-			public hostObjectDelegate: HostObject;
-			/** Constructor */
+			/**
+			 * Getter for the delegate
+			 * @type {Adobe.Flex.HostObject}
+			 */
+			public hostObjectDelegate: Adobe.Flex.HostObject;
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any} methodName
 			 * @param {...any} args
+			 * @returns {any}
 			 */
 			public callProperty(methodName: any, ...args: any[]): any;
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
@@ -26,10 +34,12 @@ declare namespace Adobe {
 			 * after replaceDefaultArgs and is just before we do, say, a 
 			 * __call to the host.
 			 * @param {any[]} args
+			 * @returns {any[]}
 			 */
 			public filterArgsForHBAPI(args: any[]): any[];
 			/**
 			 * @param {any} value
+			 * @returns {any}
 			 */
 			public filterSingleObjectForHBAPI(value: any): any;
 			/**
@@ -37,24 +47,28 @@ declare namespace Adobe {
 			 * can be used to make static function calls or get static 
 			 * properties
 			 * @param {string} className
+			 * @returns {Adobe.Flex.HostObject}
 			 */
-			public getClassObjectForName(className: string): HostObject;
+			public getClassObjectForName(className: string): Adobe.Flex.HostObject;
 			/**
 			 * @param {any} name
+			 * @returns {any}
 			 */
 			public getProperty(name: any): any;
 			/**
 			 * @param {string} className
-			 * @param {HostObject} ho
+			 * @param {Adobe.Flex.HostObject} ho
 			 * @param {any} expectedReturnType
 			 * @param {string} ownerName
+			 * @returns {any}
 			 */
-			public getSpecialTranslation(className: string, ho: HostObject, expectedReturnType: any, ownerName: string): any;
+			public getSpecialTranslation(className: string, ho: Adobe.Flex.HostObject, expectedReturnType: any, ownerName: string): any;
 			/**
 			 * Encapsulates a function call to the host
 			 * @param {string} name
 			 * @param {any} expectedReturnType
 			 * @param {any[]} rawargs
+			 * @returns {any}
 			 */
 			public hostCall(name: string, expectedReturnType: any, rawargs: any[]): any;
 			/**
@@ -63,22 +77,26 @@ declare namespace Adobe {
 			 * @param {string} methodName
 			 * @param {any} expectedReturnType
 			 * @param {any[]} rawargs
+			 * @returns {any}
 			 */
 			public hostCallStatic(className: string, methodName: string, expectedReturnType: any, rawargs: any[]): any;
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected hostCreate(args: any[]): void;
 			/**
 			 * Encapsulates a property get to the host
 			 * @param {string} name
 			 * @param {any} expectedReturnType
+			 * @returns {any}
 			 */
 			public hostGet(name: string, expectedReturnType: any): any;
 			/**
 			 * Encapsulates a indexed get to the host
 			 * @param {any} idx
 			 * @param {any} expectedReturnType
+			 * @returns {any}
 			 */
 			public hostGetIndex(idx: any, expectedReturnType: any): any;
 			/**
@@ -88,12 +106,14 @@ declare namespace Adobe {
 			 * @param {string} className
 			 * @param {string} propertyName
 			 * @param {any} expectedReturnType
+			 * @returns {any}
 			 */
 			public hostGetStatic(className: string, propertyName: string, expectedReturnType: any): any;
 			/**
 			 * Encapsulates a property set to the host
 			 * @param {string} name
 			 * @param {any} rawvalue
+			 * @returns {void}
 			 */
 			public hostSet(name: string, rawvalue: any): void;
 			/**
@@ -101,6 +121,7 @@ declare namespace Adobe {
 			 * @param {string} className
 			 * @param {string} propertyName
 			 * @param {any} rawvalue
+			 * @returns {any}
 			 */
 			public hostSetStatic(className: string, propertyName: string, rawvalue: any): any;
 			/**
@@ -110,6 +131,7 @@ declare namespace Adobe {
 			 * org.as3commons lib to quickly discover class hierarchy.
 			 * @param {any} clz
 			 * @param {any} ancClass
+			 * @returns {boolean}
 			 */
 			public isDescendedFrom(clz: any, ancClass: any): boolean;
 			/**
@@ -118,21 +140,24 @@ declare namespace Adobe {
 			 * doesn't need to be an instance func
 			 * @param {any[]} args
 			 * @param {any[]} defaultArgs
+			 * @returns {any[]}
 			 */
 			public replaceDefaultArgs(args: any[], defaultArgs: any[]): any[];
 			/**
 			 * @param {any} name
 			 * @param {any} value
+			 * @returns {void}
 			 */
 			public setProperty(name: any, value: any): void;
 			/**
 			 * Method used on static/normal get/ hostcalls
 			 * @param {any} rawObject
 			 * @param {any} expectedReturnType
-			 * @param {CSHostObject} client
+			 * @param {Adobe.Csawlib.CSHostObject} client
 			 * @param {string} propertyName
+			 * @returns {any}
 			 */
-			public wrapReturnedHostObject(rawObject: any, expectedReturnType: any, client: CSHostObject, propertyName: string): any;
+			public wrapReturnedHostObject(rawObject: any, expectedReturnType: any, client: Adobe.Csawlib.CSHostObject, propertyName: string): any;
 		}
 	}
 }

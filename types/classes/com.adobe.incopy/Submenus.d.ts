@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class Submenus extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new submenu.
@@ -23,25 +27,40 @@ declare namespace Adobe {
 			 * after. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Submenu (Optional)
+			 * @returns {Adobe.Incopy.Submenu}
 			 */
 			public add(titleParam: string, atParam: LocationOptions, referenceParam: MenuElement, withPropertiesParam: any): Adobe.Incopy.Submenu;
-			/** Returns any Submenu in the collection. */
+			/**
+			 * Returns any Submenu in the collection.
+			 * @returns {Adobe.Incopy.Submenu}
+			 */
 			public anyItem(): Adobe.Incopy.Submenu;
-			/** Displays the number of elements in the Submenu. */
+			/**
+			 * Displays the number of elements in the Submenu.
+			 * @returns {number}
+			 */
 			public count(): number;
-			/** Returns every Submenu in the collection. */
+			/**
+			 * Returns every Submenu in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first Submenu in the collection. */
+			/**
+			 * Returns the first Submenu in the collection.
+			 * @returns {Adobe.Incopy.Submenu}
+			 */
 			public firstItem(): Adobe.Incopy.Submenu;
 			/**
 			 * Returns the Submenu with the specified index or name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Incopy.Submenu}
 			 */
 			public item(indexParam: any): Adobe.Incopy.Submenu;
 			/**
 			 * Returns the Submenu with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Incopy.Submenu}
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Submenu;
 			/**
@@ -51,27 +70,37 @@ declare namespace Adobe {
 			 * String.
 			 * @param {any} toParam The Submenu, index, or name at the end 
 			 * of the range. Can accept: Submenu, Long Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last Submenu in the collection. */
+			/**
+			 * Returns the last Submenu in the collection.
+			 * @returns {Adobe.Incopy.Submenu}
+			 */
 			public lastItem(): Adobe.Incopy.Submenu;
-			/** Returns the middle Submenu in the collection. */
+			/**
+			 * Returns the middle Submenu in the collection.
+			 * @returns {Adobe.Incopy.Submenu}
+			 */
 			public middleItem(): Adobe.Incopy.Submenu;
 			/**
 			 * Returns the Submenu whose index follows the specified 
 			 * Submenu in the collection.
 			 * @param {Submenu} objParam The Submenu whose index comes 
 			 * before the desired Submenu. 
+			 * @returns {Adobe.Incopy.Submenu}
 			 */
 			public nextItem(objParam: Submenu): Adobe.Incopy.Submenu;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -79,6 +108,7 @@ declare namespace Adobe {
 			 * index.
 			 * @param {Submenu} objParam The index of the Submenu that 
 			 * follows the desired Submenu.
+			 * @returns {Adobe.Incopy.Submenu}
 			 */
 			public previousItem(objParam: Submenu): Adobe.Incopy.Submenu;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -21,49 +21,91 @@ declare namespace Adobe {
 			/**
 			 * When true, the Alt modifier key was pressed when the item 
 			 * was selected.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly altDown: boolean;
-			/** Whether the menu item can be checked. */
+			/**
+			 * Whether the menu item can be checked.
+			 * @type {boolean}
+			 * @readonly
+			 */
 			public readonly canBeChecked: boolean;
-			/** Whether the item is checked. */
+			/**
+			 * Whether the item is checked.
+			 * @type {boolean}
+			 */
 			public checked: boolean;
 			/**
 			 * When true, the Command modifier key was pressed when the 
 			 * item was selected.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly cmdDown: boolean;
 			/**
 			 * When true, the Control modifier key was pressed when the 
 			 * item was selected.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly ctrlDown: boolean;
-			/** Whether the menu or item is enabled. */
+			/**
+			 * Whether the menu or item is enabled.
+			 * @type {boolean}
+			 */
 			public enabled: boolean;
-			/** A unique identifier for the element. */
+			/**
+			 * A unique identifier for the element.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly id: string;
 			/**
 			 * A string describing the location of the new menu element, 
 			 * with respect to existing menu elements.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly location: string;
 			/**
 			 * When true, the Option modifier key was pressed when the item 
 			 * was selected.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly optionDown: boolean;
-			/** Whether there is a separator after this item. */
+			/**
+			 * Whether there is a separator after this item.
+			 * @type {boolean}
+			 */
 			public separatorAfter: boolean;
-			/** Whether there is a separator before this item. */
+			/**
+			 * Whether there is a separator before this item.
+			 * @type {boolean}
+			 */
 			public separatorBefore: boolean;
 			/**
 			 * When true, the Shift modifier key was pressed when the item 
 			 * was selected.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly shiftDown: boolean;
-			/** The displayed label text, a localizable string. */
+			/**
+			 * The displayed label text, a localizable string.
+			 * @type {string}
+			 */
 			public text: string;
-			/** The type of menu element, a menu or command. */
+			/**
+			 * The type of menu element, a menu or command.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly type: string;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * Adds a new menu to the menu bar, a new submenu to an 
@@ -73,20 +115,24 @@ declare namespace Adobe {
 			 * @param {string} text 
 			 * @param {string} location 
 			 * @param {string} id 
+			 * @returns {Adobe.Bridge.MenuElement}
 			 */
 			public create(_type: string, text: string, location: string, id: string): Adobe.Bridge.MenuElement;
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
 			 * Retrieves a menu element object using its unique identifier.
 			 * @param {string} id 
+			 * @returns {Adobe.Bridge.MenuElement}
 			 */
 			public find(id: string): Adobe.Bridge.MenuElement;
 			/**
 			 * Removes a script-defined menu or menu item.
 			 * @param {string} id 
+			 * @returns {void}
 			 */
 			public remove(id: string): void;
 		}

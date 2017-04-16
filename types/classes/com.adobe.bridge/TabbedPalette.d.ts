@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -22,37 +22,62 @@ declare namespace Adobe {
 		 * available in app.document.palettes.
 		 */
 		class TabbedPalette extends Adobe.Csawlib.CSHostObject {
-			/** When type is script, the ScriptUI Window object to display. */
+			/**
+			 * When type is script, the ScriptUI Window object to display.
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly content: any;
-			/** A non-localized unique identifier for the palette. */
+			/**
+			 * A non-localized unique identifier for the palette.
+			 * @type {string}
+			 */
 			public id: string;
+			/**
+			 * @type {boolean}
+			 */
 			public showMenuItem: boolean;
-			/** The localized string to display as the palette title. */
+			/**
+			 * The localized string to display as the palette title.
+			 * @type {string}
+			 */
 			public title: string;
 			/**
 			 * The type of content displayed in the palette; script 
 			 * (ScriptUI) or web (HTML).
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly type: string;
-			/** When type is web, the path to the page to display. */
+			/**
+			 * When type is web, the path to the page to display.
+			 * @type {string}
+			 */
 			public url: string;
 			/**
 			 * When true, this palette is visible, when false it is hidden.
+			 * @type {boolean}
 			 */
 			public visible: boolean;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
 			 * Removes this palette from the list of available palettes and 
 			 * destroys it.
+			 * @returns {void}
 			 */
 			public remove(): void;
 			/**
 			 * Moves this palette to a specific docking location in the 
 			 * browser.
+			 * @returns {void}
 			 */
 			public setLocation(): void;
 		}

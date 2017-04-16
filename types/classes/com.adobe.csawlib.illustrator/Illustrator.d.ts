@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.csawlib.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib.illustrator/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace CsawlibIllustrator {
@@ -6,9 +6,17 @@ declare namespace Adobe {
 		 * The class Illustrator provides access to the global class of 
 		 * the package com.adobe.illustrator
 		 */
-		namespace Illustrator {
-			const app: Adobe.Illustrator.Application;
-			const rootHostObject: HostObject;
+		class Illustrator {
+			/**
+			 * @type {Adobe.Illustrator.Application}
+			 * @readonly
+			 */
+			public static readonly app: Adobe.Illustrator.Application;
+			/**
+			 * @type {Adobe.Flex.HostObject}
+			 * @readonly
+			 */
+			public static readonly rootHostObject: Adobe.Flex.HostObject;
 		}
 	}
 }

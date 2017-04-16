@@ -1,33 +1,50 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		/** Preference */
 		class ImportedPageAttribute extends Adobe.Incopy.Preference {
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Incopy.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Incopy.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Incopy.Events;
 			/**
 			 * Specifies the cropping of the imported InDesign page. Read 
 			 * only for page items.
+			 * @type {Adobe.Incopy.ImportedPageCropOptions}
 			 */
 			public importedPageCrop: Adobe.Incopy.ImportedPageCropOptions;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * Which page of the InDesign document should be imported. Read 
 			 * only for page items.
+			 * @type {number}
 			 */
 			public pageNumber: number;
-			/** The parent of the ImportedPageAttribute (a Application). */
+			/**
+			 * The parent of the ImportedPageAttribute (a Application).
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -37,11 +54,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Incopy.EventListener}
 			 */
 			public addEventListenerImportedPageAttribute(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -51,9 +70,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerImportedPageAttribute(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

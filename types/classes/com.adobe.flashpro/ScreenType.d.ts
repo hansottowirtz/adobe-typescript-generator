@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -7,11 +7,17 @@ declare namespace Adobe {
 		 * Type in the JS object model.
 		 */
 		class ScreenType extends Adobe.Csawlib.CSHostObject {
-			/** The name of the Screen Type. */
+			/**
+			 * The name of the Screen Type.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly name: string;
 			/**
 			 * The version of the Screen Type. Should only be values like 
 			 * this: "1.0" or "2.0" or "1.3" etc.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly version: string;
 			/**
@@ -19,6 +25,7 @@ declare namespace Adobe {
 			 * wizards left in the stack, the dialog box will close. 
 			 * JS_FALSE is returned if you are trying to close a dialog 
 			 * that is not last in the stack.
+			 * @returns {void}
 			 */
 			public closeWizardDialog_(): void;
 			/**
@@ -26,9 +33,13 @@ declare namespace Adobe {
 			 * return the object that references its DOM. Most useful when 
 			 * calling a function in the jsfl file from the screen type's 
 			 * wizard SWF.
+			 * @returns {any}
 			 */
 			public getJSFLContext(): any;
-			/** Invoke the Screen Type wizard. */
+			/**
+			 * Invoke the Screen Type wizard.
+			 * @returns {void}
+			 */
 			public invoke(): void;
 			/**
 			 * Open the wizard dialog of the Screen Type. If the Screen 
@@ -39,6 +50,7 @@ declare namespace Adobe {
 			 * the dialog box will "stack" multiple implementations inside. 
 			 * Call closeWizardDialog() when finished to balance the stack 
 			 * and pop the dialog off of the stack.
+			 * @returns {void}
 			 */
 			public openWizardDialog(): void;
 		}

@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {

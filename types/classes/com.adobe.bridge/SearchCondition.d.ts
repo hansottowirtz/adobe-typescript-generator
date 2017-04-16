@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -21,16 +21,30 @@ declare namespace Adobe {
 			/**
 			 * The value to compare against the value of the search field 
 			 * in each node.
+			 * @type {string}
 			 */
 			public operand: string;
-			/** The comparison operator for the search. */
+			/**
+			 * The comparison operator for the search.
+			 * @type {string}
+			 */
 			public operatorType: string;
-			/** The name of some property associated with the search node. */
+			/**
+			 * The name of some property associated with the search node.
+			 * @type {string}
+			 */
 			public searchField: string;
+			/**
+			 * @type {string}
+			 */
 			public secondaryOperand: string;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 		}

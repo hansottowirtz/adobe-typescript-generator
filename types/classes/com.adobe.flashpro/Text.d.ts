@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -20,17 +20,20 @@ declare namespace Adobe {
 			 * Equivalent to the Name field in the Accessibility Panel. 
 			 * Screen readers identify objects by reading the name aloud. 
 			 * This property is not available to dynamic text type.
+			 * @type {string}
 			 */
 			public accName: string;
 			/**
 			 * the anti-aliasing sharpness for text. This controls how 
 			 * crisply the text draws. Only applies when 
 			 * 'fontRenderingMode' is 'customThicknessSharpness'
+			 * @type {number}
 			 */
 			public antiAliasSharpness: number;
 			/**
 			 * the anti-aliasing thickness for text. Only applies when 
 			 * 'fontRenderingMode' is 'customThicknessSharpness'
+			 * @type {number}
 			 */
 			public antiAliasThickness: number;
 			/**
@@ -39,16 +42,19 @@ declare namespace Adobe {
 			 * 
 			 * If TRUE, for dynamic or input text fields, the bounding 
 			 * width and height will expand to display all text.
+			 * @type {boolean}
 			 */
 			public autoExpand: boolean;
 			/**
 			 * if TRUE show border around dynamic or input text, ignored if 
 			 * used with static Text.
+			 * @type {boolean}
 			 */
 			public border: boolean;
 			/**
 			 * Equivalent to the Description field on the Accessibility 
 			 * Panel. The description is read by the screen reader.
+			 * @type {string}
 			 */
 			public description: string;
 			/**
@@ -58,6 +64,7 @@ declare namespace Adobe {
 			 * 
 			 * only works with Dynamic or Input Text, will be ignored if 
 			 * used with other text types.
+			 * @type {string}
 			 */
 			public embeddedCharacters: string;
 			/**
@@ -68,13 +75,18 @@ declare namespace Adobe {
 			 * be ignored if used with static text. NOTE: these also 
 			 * correspond to the fontembed xml file inthe configuratiosn 
 			 * folder
+			 * @type {string}
 			 */
 			public embedRanges: string;
-			/** Boolean flag to enable embedding variant glyphs. */
+			/**
+			 * Boolean flag to enable embedding variant glyphs.
+			 * @type {boolean}
+			 */
 			public embedVariantGlyphs: boolean;
 			/**
 			 * Similar to the SymbolInstance.filters array. An array of 
 			 * filters applied to the text element.
+			 * @type {any[]}
 			 */
 			public filters: any[];
 			/**
@@ -86,15 +98,21 @@ declare namespace Adobe {
 			 * best for animation
 			 * 'advanced' - better readability
 			 * 'customThicknessSharpness' - customize the settings
+			 * @type {string}
 			 */
 			public fontRenderingMode: string;
-			/** The number of characters in this text object. */
+			/**
+			 * The number of characters in this text object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * "single line", "multiline", "multiline no wrap", "password"
 			 * 
 			 * only works with dynamic or input Text, will be ignored if 
 			 * used with static text.   password only works for input text.
+			 * @type {string}
 			 */
 			public lineType: string;
 			/**
@@ -103,6 +121,7 @@ declare namespace Adobe {
 			 * 
 			 * only works with Input Text, will be ignored if used with 
 			 * other text types.
+			 * @type {number}
 			 */
 			public maxCharacters: number;
 			/**
@@ -111,6 +130,7 @@ declare namespace Adobe {
 			 * 
 			 * only works with Static Text, will be ignored if used with 
 			 * other text types.
+			 * @type {string}
 			 */
 			public orientation: string;
 			/**
@@ -119,6 +139,7 @@ declare namespace Adobe {
 			 * 
 			 * only works with Dynamic or Input Text, will be ignored if 
 			 * used with other text types.
+			 * @type {boolean}
 			 */
 			public renderAsHTML: boolean;
 			/**
@@ -127,11 +148,13 @@ declare namespace Adobe {
 			 * 
 			 * only works with dynamic or input text, will be ignored if 
 			 * used with static text.
+			 * @type {boolean}
 			 */
 			public scrollable: boolean;
 			/**
 			 * If true, the text can be selected.  Input text is always 
 			 * selectable.
+			 * @type {boolean}
 			 */
 			public selectable: boolean;
 			/**
@@ -139,6 +162,7 @@ declare namespace Adobe {
 			 * insertion point or no selection, selectionEnd is equal to 
 			 * selectionStart. If selectionEnd is set to a value less than 
 			 * selectionStart, selectionStart will be set to selectionEnd.
+			 * @type {number}
 			 */
 			public selectionEnd: number;
 			/**
@@ -147,6 +171,7 @@ declare namespace Adobe {
 			 * selectionEnd there is no subselection.  If selectionStart is 
 			 * set to a value greater than selectionEnd, selectionEnd will 
 			 * be set to selectionStart.
+			 * @type {number}
 			 */
 			public selectionStart: number;
 			/**
@@ -154,6 +179,7 @@ declare namespace Adobe {
 			 * Accessibility Panel. 
 			 * The shortcut is read by the screen readers. 
 			 * This property is not available to dynamic text type.
+			 * @type {string}
 			 */
 			public shortcut: string;
 			/**
@@ -164,6 +190,7 @@ declare namespace Adobe {
 			 * silent == true --> Make Object Accessible is unchecked.
 			 * 
 			 * silent == false --> Make Object Accessible is checked.
+			 * @type {boolean}
 			 */
 			public silent: boolean;
 			/**
@@ -173,23 +200,33 @@ declare namespace Adobe {
 			 * 
 			 * Creates a tab order in which objects are accessed when the 
 			 * user presses the tab key.
+			 * @type {number}
 			 */
 			public tabIndex: number;
-			/** The array of TextRun objects */
+			/**
+			 * The array of TextRun objects
+			 * @type {any[]}
+			 * @readonly
+			 */
 			public readonly textRuns: any[];
-			/** Acceptable values are "static", "dynamic", "input" */
+			/**
+			 * Acceptable values are "static", "dynamic", "input"
+			 * @type {string}
+			 */
 			public textType: string;
 			/**
 			 * If true draw text using device fonts.
 			 * 
 			 * only works with Static Text, will be ignored if used with 
 			 * other text types.
+			 * @type {boolean}
 			 */
 			public useDeviceFonts: boolean;
 			/**
 			 * Contents of text object will be stored in variableName, only 
 			 * works with Dynamic or Input Text, will be ignored if used 
 			 * with other text types.
+			 * @type {string}
 			 */
 			public variableName: string;
 			/**
@@ -216,6 +253,7 @@ declare namespace Adobe {
 			 * property to be returned.
 			 * @param {number} startIndex Index of first character.
 			 * @param {number} endIndex Index of last character.
+			 * @returns {any}
 			 */
 			public getTextAttr(attrName: string, startIndex: number, endIndex: number): any;
 			/**
@@ -231,6 +269,7 @@ declare namespace Adobe {
 			 * @param {number} startIndex Index of first character.
 			 * @param {number} endIndex range of text, starts from 
 			 * startIndex up to but not including endIndex
+			 * @returns {string}
 			 */
 			public getTextString(startIndex: number, endIndex: number): string;
 			/**
@@ -260,6 +299,7 @@ declare namespace Adobe {
 			 * @param {number} startIndex Index of first character.
 			 * @param {number} endIndex starts from startIndex up to but 
 			 * not including endIndex.
+			 * @returns {void}
 			 */
 			public setTextAttr(attrName: string, attrValue: any, startIndex: number, endIndex: number): void;
 			/**
@@ -276,6 +316,7 @@ declare namespace Adobe {
 			 * replace, or index of character to insert the string before.
 			 * @param {number} endIndex starts from startIndex up to but 
 			 * not including endIndex.
+			 * @returns {void}
 			 */
 			public setTextString(text: string, startIndex: number, endIndex: number): void;
 		}

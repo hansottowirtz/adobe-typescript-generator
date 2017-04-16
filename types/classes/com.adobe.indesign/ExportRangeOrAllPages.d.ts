@@ -1,24 +1,43 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class ExportRangeOrAllPages extends Adobe.Csawlib.CSEnumBase {
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
-			/** Exports all pages. */
+			/**
+			 * Exports all pages.
+			 * @type {Adobe.Indesign.ExportRangeOrAllPages}
+			 * @readonly
+			 */
 			public static readonly EXPORT_ALL: Adobe.Indesign.ExportRangeOrAllPages;
 			/**
 			 * Exports the page range specified in the page string 
 			 * property.
+			 * @type {Adobe.Indesign.ExportRangeOrAllPages}
+			 * @readonly
 			 */
 			public static readonly EXPORT_RANGE: Adobe.Indesign.ExportRangeOrAllPages;
-			/** Alias for EXPORT_ALL. Exports all pages. */
+			/**
+			 * Alias for EXPORT_ALL. Exports all pages.
+			 * @type {Adobe.Indesign.ExportRangeOrAllPages}
+			 * @readonly
+			 */
 			public static readonly exportAll: Adobe.Indesign.ExportRangeOrAllPages;
 			/**
 			 * Alias for EXPORT_RANGE. Exports the page range specified in 
 			 * the page string property.
+			 * @type {Adobe.Indesign.ExportRangeOrAllPages}
+			 * @readonly
 			 */
 			public static readonly exportRange: Adobe.Indesign.ExportRangeOrAllPages;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

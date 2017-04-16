@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -6,35 +6,76 @@ declare namespace Adobe {
 			/**
 			 * Dispatched before the Menu is displayed. This event does not 
 			 * bubble. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_DISPLAY: string;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Incopy.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Incopy.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Incopy.Events;
-			/** The index of the Menu within its containing object. */
+			/**
+			 * The index of the Menu within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** A collection of menu elements. */
+			/**
+			 * A collection of menu elements.
+			 * @type {Adobe.Incopy.MenuElements}
+			 * @readonly
+			 */
 			public readonly menuElements: Adobe.Incopy.MenuElements;
-			/** A collection of menu items. */
+			/**
+			 * A collection of menu items.
+			 * @type {Adobe.Incopy.MenuItems}
+			 * @readonly
+			 */
 			public readonly menuItems: Adobe.Incopy.MenuItems;
-			/** A collection of menu separators. */
+			/**
+			 * A collection of menu separators.
+			 * @type {Adobe.Incopy.MenuSeparators}
+			 * @readonly
+			 */
 			public readonly menuSeparators: Adobe.Incopy.MenuSeparators;
-			/** The name of the Menu. */
+			/**
+			 * The name of the Menu.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly name: string;
-			/** The parent of the Menu (a Application). */
+			/**
+			 * The parent of the Menu (a Application).
+			 * @type {Adobe.Incopy.Application}
+			 * @readonly
+			 */
 			public readonly parent: Adobe.Incopy.Application;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
-			/** A collection of submenus. */
+			/**
+			 * A collection of submenus.
+			 * @type {Adobe.Incopy.Submenus}
+			 * @readonly
+			 */
 			public readonly submenus: Adobe.Incopy.Submenus;
 			/**
 			 * The name of the Menu for display in the user interface. The 
@@ -44,6 +85,8 @@ declare namespace Adobe {
 			 * item. Double ampersands are used to display an actual 
 			 * ampersand character in the name. The Mac OS ignores and 
 			 * removes the extra ampersand characters.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly title: string;
 			/**
@@ -53,11 +96,13 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Incopy.EventListener}
 			 */
 			public addEventListenerMenu(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -67,9 +112,13 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerMenu(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

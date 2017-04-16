@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class Columns extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new Column.
@@ -16,25 +20,40 @@ declare namespace Adobe {
 			 * Column, Cell or Table. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new Column (Optional)
+			 * @returns {any}
 			 */
 			public add(atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): any;
-			/** Returns any Column in the collection. */
+			/**
+			 * Returns any Column in the collection.
+			 * @returns {Adobe.Incopy.Column}
+			 */
 			public anyItem(): Adobe.Incopy.Column;
-			/** Displays the number of elements in the Column. */
+			/**
+			 * Displays the number of elements in the Column.
+			 * @returns {number}
+			 */
 			public count(): number;
-			/** Returns every Column in the collection. */
+			/**
+			 * Returns every Column in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first Column in the collection. */
+			/**
+			 * Returns the first Column in the collection.
+			 * @returns {Adobe.Incopy.Column}
+			 */
 			public firstItem(): Adobe.Incopy.Column;
 			/**
 			 * Returns the Column with the specified index or name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Incopy.Column}
 			 */
 			public item(indexParam: any): Adobe.Incopy.Column;
 			/**
 			 * Returns the Column with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Incopy.Column}
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.Column;
 			/**
@@ -44,27 +63,37 @@ declare namespace Adobe {
 			 * String.
 			 * @param {any} toParam The Column, index, or name at the end 
 			 * of the range. Can accept: Column, Long Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last Column in the collection. */
+			/**
+			 * Returns the last Column in the collection.
+			 * @returns {Adobe.Incopy.Column}
+			 */
 			public lastItem(): Adobe.Incopy.Column;
-			/** Returns the middle Column in the collection. */
+			/**
+			 * Returns the middle Column in the collection.
+			 * @returns {Adobe.Incopy.Column}
+			 */
 			public middleItem(): Adobe.Incopy.Column;
 			/**
 			 * Returns the Column whose index follows the specified Column 
 			 * in the collection.
 			 * @param {Column} objParam The Column whose index comes before 
 			 * the desired Column. 
+			 * @returns {Adobe.Incopy.Column}
 			 */
 			public nextItem(objParam: Column): Adobe.Incopy.Column;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -72,6 +101,7 @@ declare namespace Adobe {
 			 * index.
 			 * @param {Column} objParam The index of the Column that 
 			 * follows the desired Column.
+			 * @returns {Adobe.Incopy.Column}
 			 */
 			public previousItem(objParam: Column): Adobe.Incopy.Column;
 		}

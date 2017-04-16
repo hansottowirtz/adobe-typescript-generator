@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.csawlib.misc/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib.misc/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace CsawlibMisc {

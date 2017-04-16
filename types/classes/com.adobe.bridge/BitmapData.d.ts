@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -33,44 +33,85 @@ declare namespace Adobe {
 		 * set.
 		 */
 		class BitmapData extends Adobe.Csawlib.CSHostObject {
+			/**
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly channelCount: number;
-			/** A 32-bit Adler checksum of the image data. */
+			/**
+			 * A 32-bit Adler checksum of the image data.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly checksum: number;
+			/**
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly colorSpace: number;
-			/** Image height in pixels. */
+			/**
+			 * Image height in pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly height: number;
-			/** A pointer to the buffer storing the matrix of pixels. */
+			/**
+			 * A pointer to the buffer storing the matrix of pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly pointer: number;
 			/**
 			 * The rectangle that defines the size of the bitmap image, in 
 			 * the format [0, 0, w, h]. Origin is top left.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly rectangle: any[];
-			/** The length in bytes of a row of pixels. */
+			/**
+			 * The length in bytes of a row of pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly rowBytes: number;
-			/** True if the bitmap image supports per-pixel transparency. */
+			/**
+			 * True if the bitmap image supports per-pixel transparency.
+			 * @type {boolean}
+			 * @readonly
+			 */
 			public readonly transparent: boolean;
-			/** Image width in pixels. */
+			/**
+			 * Image width in pixels.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly width: number;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * Duplicates this object, creating a new object with an exact 
 			 * copy of the contained bitmap.
+			 * @returns {any}
 			 */
 			public clone(): any;
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
 			 * Explicitly frees the memory used to store pixel data for 
 			 * this object.
+			 * @returns {void}
 			 */
 			public dispose(): void;
 			/**
 			 * Writes the image data to a file in JPEG format.
 			 * @param {File} dest 
 			 * @param {number} options 
+			 * @returns {void}
 			 */
 			public exportTo(dest: File, options: number): void;
 			/**
@@ -78,6 +119,7 @@ declare namespace Adobe {
 			 * image.
 			 * @param {number} x 
 			 * @param {number} y 
+			 * @returns {number}
 			 */
 			public getPixel(x: number, y: number): number;
 			/**
@@ -85,6 +127,7 @@ declare namespace Adobe {
 			 * image, including its alpha channel.
 			 * @param {number} x 
 			 * @param {number} y 
+			 * @returns {number}
 			 */
 			public getPixel32(x: number, y: number): number;
 			/**
@@ -92,6 +135,7 @@ declare namespace Adobe {
 			 * replacing the previous content.
 			 * @param {number} data 
 			 * @param {number} dataSize
+			 * @returns {void}
 			 */
 			public loadFromJpegStream(data: number, dataSize: number): void;
 			/**
@@ -99,17 +143,20 @@ declare namespace Adobe {
 			 * replacing the previous content.
 			 * @param {number} data 
 			 * @param {number} dataSize
+			 * @returns {void}
 			 */
 			public loadFromPngStream(data: number, dataSize: number): void;
 			/**
 			 * Resizes the bitmap to the specified dimensions.
 			 * @param {number} dimension 
 			 * @param {string} resizeQuality 
+			 * @returns {void}
 			 */
 			public resize(dimension: number, resizeQuality: string): void;
 			/**
 			 * Rotates the bitmap by the specified multiple of 90 degrees.
 			 * @param {number} angleInDegrees 
+			 * @returns {any}
 			 */
 			public rotate(angleInDegrees: number): any;
 			/**
@@ -117,6 +164,7 @@ declare namespace Adobe {
 			 * @param {number} x 
 			 * @param {number} y 
 			 * @param {any} color 
+			 * @returns {void}
 			 */
 			public setPixel(x: number, y: number, color: any): void;
 			/**
@@ -125,6 +173,7 @@ declare namespace Adobe {
 			 * @param {number} x 
 			 * @param {number} y 
 			 * @param {any} color 
+			 * @returns {void}
 			 */
 			public setPixel32(x: number, y: number, color: any): void;
 		}

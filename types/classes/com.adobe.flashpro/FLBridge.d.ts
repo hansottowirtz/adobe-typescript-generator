@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -13,12 +13,14 @@ declare namespace Adobe {
 			 * Only. Undocumented.
 			 * @param {string} appSpecifier BridgeTalk application 
 			 * specifier for app to bring to front.
+			 * @returns {boolean}
 			 */
 			public bringToFront(appSpecifier: string): boolean;
 			/**
 			 * Initializes BridgeTalk in the Flash application. 
 			 * (Only called internally by Flash application.) Internal 
 			 * Only. Undocumented.
+			 * @returns {boolean}
 			 */
 			public init(): boolean;
 			/**
@@ -26,6 +28,7 @@ declare namespace Adobe {
 			 * installed. Internal Only. Undocumented.
 			 * @param {string} appSpecifier BridgeTalk application 
 			 * specifier for app to check.
+			 * @returns {boolean}
 			 */
 			public isInstalled(appSpecifier: string): boolean;
 			/**
@@ -34,6 +37,7 @@ declare namespace Adobe {
 			 * Undocumented.
 			 * @param {string} appSpecifier BridgeTalk application 
 			 * specifier for app to check.
+			 * @returns {boolean}
 			 */
 			public isRunning(appSpecifier: string): boolean;
 			/**
@@ -43,9 +47,13 @@ declare namespace Adobe {
 			 * you are launching
 			 * @param {string} cmdLine optional command line string to pass 
 			 * to the target app being launched
+			 * @returns {boolean}
 			 */
 			public launch(appSpec: string, cmdLine: string): boolean;
-			/** Check the BridgeTalk message queue for incoming messages. */
+			/**
+			 * Check the BridgeTalk message queue for incoming messages.
+			 * @returns {boolean}
+			 */
 			public pump(): boolean;
 		}
 	}

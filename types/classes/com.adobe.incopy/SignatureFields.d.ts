@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
 		class SignatureFields extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new SignatureField
@@ -18,30 +22,46 @@ declare namespace Adobe {
 			 * PageItem. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new SignatureField (Optional)
+			 * @returns {Adobe.Incopy.SignatureField}
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Incopy.SignatureField;
-			/** Returns any SignatureField in the collection. */
+			/**
+			 * Returns any SignatureField in the collection.
+			 * @returns {Adobe.Incopy.SignatureField}
+			 */
 			public anyItem(): Adobe.Incopy.SignatureField;
-			/** Displays the number of elements in the SignatureField. */
+			/**
+			 * Displays the number of elements in the SignatureField.
+			 * @returns {number}
+			 */
 			public count(): number;
-			/** Returns every SignatureField in the collection. */
+			/**
+			 * Returns every SignatureField in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first SignatureField in the collection. */
+			/**
+			 * Returns the first SignatureField in the collection.
+			 * @returns {Adobe.Incopy.SignatureField}
+			 */
 			public firstItem(): Adobe.Incopy.SignatureField;
 			/**
 			 * Returns the SignatureField with the specified index or name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Incopy.SignatureField}
 			 */
 			public item(indexParam: any): Adobe.Incopy.SignatureField;
 			/**
 			 * Returns the SignatureField with the specified ID.
 			 * @param {number} idParam The ID.
+			 * @returns {Adobe.Incopy.SignatureField}
 			 */
 			public itemByID(idParam: number): Adobe.Incopy.SignatureField;
 			/**
 			 * Returns the SignatureField with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Incopy.SignatureField}
 			 */
 			public itemByName(nameParam: string): Adobe.Incopy.SignatureField;
 			/**
@@ -52,27 +72,37 @@ declare namespace Adobe {
 			 * @param {any} toParam The SignatureField, index, or name at 
 			 * the end of the range. Can accept: SignatureField, Long 
 			 * Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last SignatureField in the collection. */
+			/**
+			 * Returns the last SignatureField in the collection.
+			 * @returns {Adobe.Incopy.SignatureField}
+			 */
 			public lastItem(): Adobe.Incopy.SignatureField;
-			/** Returns the middle SignatureField in the collection. */
+			/**
+			 * Returns the middle SignatureField in the collection.
+			 * @returns {Adobe.Incopy.SignatureField}
+			 */
 			public middleItem(): Adobe.Incopy.SignatureField;
 			/**
 			 * Returns the SignatureField whose index follows the specified 
 			 * SignatureField in the collection.
 			 * @param {SignatureField} objParam The SignatureField whose 
 			 * index comes before the desired SignatureField. 
+			 * @returns {Adobe.Incopy.SignatureField}
 			 */
 			public nextItem(objParam: SignatureField): Adobe.Incopy.SignatureField;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -80,6 +110,7 @@ declare namespace Adobe {
 			 * specified index.
 			 * @param {SignatureField} objParam The index of the 
 			 * SignatureField that follows the desired SignatureField.
+			 * @returns {Adobe.Incopy.SignatureField}
 			 */
 			public previousItem(objParam: SignatureField): Adobe.Incopy.SignatureField;
 		}

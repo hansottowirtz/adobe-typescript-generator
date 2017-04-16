@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -12,11 +12,13 @@ declare namespace Adobe {
 			/**
 			 * The name of this value, which becomes a property of the 
 			 * parent Infoset object.
+			 * @type {string}
 			 */
 			public name: string;
 			/**
 			 * The data type for values accessed through the name property 
 			 * of the parent Infoset object.
+			 * @type {string}
 			 */
 			public type: string;
 		}

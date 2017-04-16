@@ -1,26 +1,24 @@
-/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
 		/** A collection of lines */
 		class Lines extends Adobe.CsawlibIllustrator.IllustratorHostObject {
-			/** number of elements in the collection */
+			/**
+			 * number of elements in the collection
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx
+			 * @returns {Adobe.Illustrator.TextRange}
 			 */
-			public index(idx: number): Adobe.Illustrator.TextRange;
+			[idx: number]: Adobe.Illustrator.TextRange;
 			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} idx
+			 * @returns {void}
 			 */
-			public nextNameIndex(idx: number): number;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} index
-			 */
-			public nextValue(index: number): any;
 			public removeAll(): void;
 		}
 	}

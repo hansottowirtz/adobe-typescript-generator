@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -6,216 +6,314 @@ declare namespace Adobe {
 			/**
 			 * Dispatched after the Event becomes active. This event 
 			 * bubbles. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_ACTIVATE: string;
 			/**
 			 * Dispatched after a style list is changed.  Event is not 
 			 * canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_ANY_STYLE_LIST_CHANGED: string;
 			/**
 			 * Dispatched after the Character Style list is changed.  Event 
 			 * is not canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_CHARACTER_STYLE_LIST_CHANGED: string;
 			/**
 			 * Dispatched when a Event is closing. Since the close has been 
 			 * committed, it can no longer be canceled. This event bubbles. 
 			 * This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_CLOSE: string;
 			/**
 			 * Dispatched after the active context changes. This event 
 			 * bubbles. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_CONTEXT_CHANGED: string;
 			/**
 			 * Dispatched after a Event is deleted. This event bubbles. 
 			 * This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_DELETE: string;
 			/**
 			 * Dispatched after a Event is embedded. This event bubbles. 
 			 * This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_EMBED: string;
 			/**
 			 * Dispatched after the Event is invoked. This event does not 
 			 * bubble. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_INVOKE: string;
 			/**
 			 * Dispatched after one or more links in the Event have been 
 			 * added, deleted, or modified. This event bubbles. This event 
 			 * is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_LINKS_CHANGED: string;
 			/**
 			 * Dispatched after a Event is relocated from one object to 
 			 * another. This event bubbles. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_MOVE: string;
 			/**
 			 * Dispatched after a Event is created. This event bubbles. 
 			 * This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_NEW: string;
 			/**
 			 * Dispatched after a Event is opened. This event bubbles. This 
 			 * event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_OPEN: string;
 			/**
 			 * Dispatched after the Paragraph Style list is changed.  Event 
 			 * is not canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_PARAGRAPH_STYLE_LIST_CHANGED: string;
 			/**
 			 * Dispatched after a Event is placed. This event bubbles. This 
 			 * event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_PLACE: string;
 			/**
 			 * Dispatched when the Event is quitting. Since the quit has 
 			 * been committed, it can not be canceled. This event bubbles. 
 			 * This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_QUIT: string;
 			/**
 			 * Dispatched after an attribute on the active selection 
 			 * changes. This event bubbles. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_SELECTION_ATTRIBUTE_CHANGED: string;
 			/**
 			 * Dispatched after the active selection changes. This event 
 			 * bubbles. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_SELECTION_CHANGED: string;
 			/**
 			 * Dispatched after the spread list is changed.  Event is not 
 			 * canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_SPREAD_LIST_CHANGED: string;
 			/**
 			 * Dispatched after a Event is unembedded. This event bubbles. 
 			 * This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_UNEMBED: string;
 			/**
 			 * Dispatched after a Event is updated. This event bubbles. 
 			 * This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly AFTER_UPDATE: string;
 			/**
 			 * Dispatched before a Event is closed. This event bubbles. 
 			 * This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_CLOSE: string;
 			/**
 			 * Dispatched before the Event becomes inactive. This event 
 			 * bubbles. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_DEACTIVATE: string;
 			/**
 			 * Dispatched before a Event is deleted. This event bubbles. 
 			 * This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_DELETE: string;
 			/**
 			 * Dispatched before the Event is displayed. This event does 
 			 * not bubble. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_DISPLAY: string;
 			/**
 			 * Dispatched before a Event is embedded. This event bubbles. 
 			 * This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_EMBED: string;
 			/**
 			 * Dispatched before the Event is invoked. This event does not 
 			 * bubble. This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_INVOKE: string;
 			/**
 			 * Dispatched before a Event is relocated from one object to 
 			 * another. This event bubbles. This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_MOVE: string;
 			/**
 			 * Dispatched before a Event is placed. This event bubbles. 
 			 * This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_PLACE: string;
 			/**
 			 * Dispatched before the Event is quit. Allows the quit to be 
 			 * canceled. This event bubbles. This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_QUIT: string;
 			/**
 			 * Dispatched before a Event is unembedded. This event bubbles. 
 			 * This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_UNEMBED: string;
 			/**
 			 * Dispatched before a Event is updated. This event bubbles. 
 			 * This event is cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly BEFORE_UPDATE: string;
 			/**
 			 * If true, the event supports the bubbling phase of 
 			 * propagation.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly bubbles: boolean;
 			/**
 			 * If true, the default behavior of the event on its target can 
 			 * be canceled.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly cancelable: boolean;
 			/**
 			 * Dispatched when a cell style is changed.  Event is not 
 			 * canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly CELL_STYLE_CHANGED: string;
-			/** The current propagation target of the event. */
+			/**
+			 * The current propagation target of the event.
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly currentTarget: any;
 			/**
 			 * If true, the default behavior of the event on its target has 
 			 * been canceled.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly defaultPrevented: boolean;
-			/** The current propagation phase of the event. */
+			/**
+			 * The current propagation phase of the event.
+			 * @type {Adobe.Indesign.EventPhases}
+			 * @readonly
+			 */
 			public readonly eventPhase: Adobe.Indesign.EventPhases;
-			/** The name of the event. */
+			/**
+			 * The name of the event.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly eventType: string;
-			/** The unique ID of the Event. */
+			/**
+			 * The unique ID of the Event.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
-			/** The index of the Event within its containing object. */
+			/**
+			 * The index of the Event within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
 			/**
 			 * Dispatched when a layer is changed.  Event is not 
 			 * canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly LAYER_CHANGED: string;
 			/**
 			 * Dispatched when a master page is applied.  Event is not 
 			 * canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly MASTER_PAGE_APPLIED: string;
 			/**
 			 * Dispatched when the Event is invoked. This event does not 
 			 * bubble. This event is not cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly ON_INVOKE: string;
 			/**
@@ -356,38 +454,63 @@ declare namespace Adobe {
 			 * PDFExportPreset, NestedStyle, TabStop, Text, InsertionPoint, 
 			 * TextStyleRange, Paragraph, TextColumn, Line, Word, 
 			 * Character, NestedGrepStyle or NestedLineStyle).
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly parent: any;
 			/**
 			 * If true, propagation of the event beyond the current target 
 			 * has been stopped.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly propagationStopped: boolean;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
 			 * Dispatched when a table style is changed.  Event is not 
 			 * canceleable. This event bubbles. This event is not 
 			 * cancelable.
+			 * @type {string}
+			 * @readonly
 			 */
 			public static readonly TABLE_STYLE_CHANGED: string;
-			/** The target of the event. */
+			/**
+			 * The target of the event.
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly target: any;
-			/** The time the event was initialized. */
+			/**
+			 * The time the event was initialized.
+			 * @type {Date}
+			 * @readonly
+			 */
 			public readonly timeStamp: Date;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
-			/** Cancels the default behavior of the event on its target. */
+			/**
+			 * Cancels the default behavior of the event on its target.
+			 * @returns {void}
+			 */
 			public preventDefault(): void;
-			/** Stops propagation of the event beyond the current target. */
+			/**
+			 * Stops propagation of the event beyond the current target.
+			 * @returns {void}
+			 */
 			public stopPropagation(): void;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

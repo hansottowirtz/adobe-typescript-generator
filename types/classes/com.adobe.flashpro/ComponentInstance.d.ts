@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -13,11 +13,15 @@ declare namespace Adobe {
 			/**
 			 * The fields property of the componentInstance object is an 
 			 * array of schema objects
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly fields: any[];
 			/**
 			 * The AS 2.0 properties accessable from the Components PI. 
 			 * Also see Parameters object.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly parameters: any[];
 		}

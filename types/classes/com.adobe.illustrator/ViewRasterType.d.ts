@@ -1,19 +1,42 @@
-/// <reference path="../../packages/com.adobe.illustrator/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.illustrator/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Illustrator {
 		/** Controls the type of raster image visualization. */
 		class ViewRasterType extends Adobe.CsawlibIllustrator.IllustratorEnumBase {
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
-			/** Adjusted image. */
+			/**
+			 * Adjusted image.
+			 * @type {Adobe.Illustrator.ViewRasterType}
+			 * @readonly
+			 */
 			public static readonly TRACINGVIEWRASTERADJUSTEDIMAGE: Adobe.Illustrator.ViewRasterType;
-			/** No rasters. */
+			/**
+			 * No rasters.
+			 * @type {Adobe.Illustrator.ViewRasterType}
+			 * @readonly
+			 */
 			public static readonly TRACINGVIEWRASTERNOIMAGE: Adobe.Illustrator.ViewRasterType;
-			/** Original image. */
+			/**
+			 * Original image.
+			 * @type {Adobe.Illustrator.ViewRasterType}
+			 * @readonly
+			 */
 			public static readonly TRACINGVIEWRASTERORIGINALIMAGE: Adobe.Illustrator.ViewRasterType;
-			/** Original transparent (dimmed) image. */
+			/**
+			 * Original transparent (dimmed) image.
+			 * @type {Adobe.Illustrator.ViewRasterType}
+			 * @readonly
+			 */
 			public static readonly TRACINGVIEWRASTERTRANSPARENTIMAGE: Adobe.Illustrator.ViewRasterType;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

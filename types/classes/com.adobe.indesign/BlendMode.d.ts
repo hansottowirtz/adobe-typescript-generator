@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -9,6 +9,8 @@ declare namespace Adobe {
 			 * Note: Preserves gray levels and is useful for coloring 
 			 * monochrome images or tinting color images. Creates the 
 			 * inverse effect of the luminosity blend mode.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly color: Adobe.Indesign.BlendMode;
 			/**
@@ -17,27 +19,37 @@ declare namespace Adobe {
 			 * levels and is useful for coloring monochrome images or 
 			 * tinting color images. Creates the inverse effect of the 
 			 * luminosity blend mode.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly COLOR: Adobe.Indesign.BlendMode;
 			/**
 			 * Darkens the base color to reflect the blend color. Note: 
 			 * Blending with white produces no change.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly COLOR_BURN: Adobe.Indesign.BlendMode;
 			/**
 			 * Brightens the base color to reflect the blend color. Note: 
 			 * Blending with pure black produces no change.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly COLOR_DODGE: Adobe.Indesign.BlendMode;
 			/**
 			 * Alias for COLOR_BURN. Darkens the base color to reflect the 
 			 * blend color. Note: Blending with white produces no change.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly colorBurn: Adobe.Indesign.BlendMode;
 			/**
 			 * Alias for COLOR_DODGE. Brightens the base color to reflect 
 			 * the blend color. Note: Blending with pure black produces no 
 			 * change.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly colorDodge: Adobe.Indesign.BlendMode;
 			/**
@@ -45,12 +57,16 @@ declare namespace Adobe {
 			 * colors as the resulting color; replaces areas lighter than 
 			 * the blend color but does not change areas darker than the 
 			 * blend color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly darken: Adobe.Indesign.BlendMode;
 			/**
 			 * Selects the darker of the base or blend colors as the 
 			 * resulting color; replaces areas lighter than the blend color 
 			 * but does not change areas darker than the blend color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly DARKEN: Adobe.Indesign.BlendMode;
 			/**
@@ -59,6 +75,8 @@ declare namespace Adobe {
 			 * greater brightness value. Note: Blending with white inverts 
 			 * the base color values; blending with black produces no 
 			 * change.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly difference: Adobe.Indesign.BlendMode;
 			/**
@@ -66,14 +84,22 @@ declare namespace Adobe {
 			 * versa, depending on which has the greater brightness value. 
 			 * Note: Blending with white inverts the base color values; 
 			 * blending with black produces no change.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly DIFFERENCE: Adobe.Indesign.BlendMode;
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/**
 			 * Alias for EXCLUSION. Creates an effect similar to--but lower 
 			 * in contrast than--the difference blend mode. Note: Blending 
 			 * with white inverts the base color values; blending with 
 			 * black produces no change
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly exclusion: Adobe.Indesign.BlendMode;
 			/**
@@ -81,6 +107,8 @@ declare namespace Adobe {
 			 * than--the difference blend mode. Note: Blending with white 
 			 * inverts the base color values; blending with black produces 
 			 * no change
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly EXCLUSION: Adobe.Indesign.BlendMode;
 			/**
@@ -89,6 +117,8 @@ declare namespace Adobe {
 			 * gray, darkens the artwork as if it were multiplied. Note: 
 			 * Painting with pure black or white results in pure black or 
 			 * white.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly HARD_LIGHT: Adobe.Indesign.BlendMode;
 			/**
@@ -97,16 +127,22 @@ declare namespace Adobe {
 			 * colors darker than 50% gray, darkens the artwork as if it 
 			 * were multiplied. Note: Painting with pure black or white 
 			 * results in pure black or white.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly hardLight: Adobe.Indesign.BlendMode;
 			/**
 			 * Alias for HUE. Creates a color with the luminance and 
 			 * saturation of the base color and the hue of the blend color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly hue: Adobe.Indesign.BlendMode;
 			/**
 			 * Creates a color with the luminance and saturation of the 
 			 * base color and the hue of the blend color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly HUE: Adobe.Indesign.BlendMode;
 			/**
@@ -114,12 +150,16 @@ declare namespace Adobe {
 			 * colors as the resulting color; replaces areas darker than 
 			 * the blend color but does not change areas lighter than the 
 			 * blend color
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly lighten: Adobe.Indesign.BlendMode;
 			/**
 			 * Selects the lighter of the base or blend colors as the 
 			 * resulting color; replaces areas darker than the blend color 
 			 * but does not change areas lighter than the blend color
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly LIGHTEN: Adobe.Indesign.BlendMode;
 			/**
@@ -127,12 +167,16 @@ declare namespace Adobe {
 			 * saturation of the base color and the luminance of the blend 
 			 * color. Note: Creates the inverse effect of the color blend 
 			 * mode.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly luminosity: Adobe.Indesign.BlendMode;
 			/**
 			 * Creates a color with the hue and saturation of the base 
 			 * color and the luminance of the blend color. Note: Creates 
 			 * the inverse effect of the color blend mode.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly LUMINOSITY: Adobe.Indesign.BlendMode;
 			/**
@@ -140,22 +184,30 @@ declare namespace Adobe {
 			 * color, resulting in a darker color. Note: Multiplying with 
 			 * black produces black; multiplying with white leaves the 
 			 * color unchanged.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly multiply: Adobe.Indesign.BlendMode;
 			/**
 			 * Multiplies the base color by the blend color, resulting in a 
 			 * darker color. Note: Multiplying with black produces black; 
 			 * multiplying with white leaves the color unchanged.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly MULTIPLY: Adobe.Indesign.BlendMode;
 			/**
 			 * Alias for NORMAL. Colors the object with the blend color, 
 			 * without interaction with the base color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly normal: Adobe.Indesign.BlendMode;
 			/**
 			 * Colors the object with the blend color, without interaction 
 			 * with the base color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly NORMAL: Adobe.Indesign.BlendMode;
 			/**
@@ -164,6 +216,8 @@ declare namespace Adobe {
 			 * existing artwork, preserving base color highlights and 
 			 * shadows while mixing in the blend color to reflect the 
 			 * lightness or darkness of the original color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly overlay: Adobe.Indesign.BlendMode;
 			/**
@@ -172,18 +226,24 @@ declare namespace Adobe {
 			 * preserving base color highlights and shadows while mixing in 
 			 * the blend color to reflect the lightness or darkness of the 
 			 * original color.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly OVERLAY: Adobe.Indesign.BlendMode;
 			/**
 			 * Alias for SATURATION. Creates a color with the luminance and 
 			 * hue of the base color and the saturation of the blend color. 
 			 * Note: Does not change areas with no saturation (0% gray).
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly saturation: Adobe.Indesign.BlendMode;
 			/**
 			 * Creates a color with the luminance and hue of the base color 
 			 * and the saturation of the blend color. Note: Does not change 
 			 * areas with no saturation (0% gray).
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly SATURATION: Adobe.Indesign.BlendMode;
 			/**
@@ -191,6 +251,8 @@ declare namespace Adobe {
 			 * base colors, resulting in a lighter color. Note: Screening 
 			 * with white produces white; screening with black leaves the 
 			 * color unchanged.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly screen: Adobe.Indesign.BlendMode;
 			/**
@@ -198,6 +260,8 @@ declare namespace Adobe {
 			 * resulting in a lighter color. Note: Screening with white 
 			 * produces white; screening with black leaves the color 
 			 * unchanged.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly SCREEN: Adobe.Indesign.BlendMode;
 			/**
@@ -206,6 +270,8 @@ declare namespace Adobe {
 			 * darkens the artwork as if it were burned. Note: Painting 
 			 * with pure black or white produces a distinctly darker or 
 			 * lighter area, but does not result in pure black or white.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly SOFT_LIGHT: Adobe.Indesign.BlendMode;
 			/**
@@ -215,9 +281,14 @@ declare namespace Adobe {
 			 * were burned. Note: Painting with pure black or white 
 			 * produces a distinctly darker or lighter area, but does not 
 			 * result in pure black or white.
+			 * @type {Adobe.Indesign.BlendMode}
+			 * @readonly
 			 */
 			public static readonly softLight: Adobe.Indesign.BlendMode;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

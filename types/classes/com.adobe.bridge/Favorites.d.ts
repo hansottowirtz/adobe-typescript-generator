@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -17,6 +17,7 @@ declare namespace Adobe {
 			/**
 			 * Sets the section of the Favorites pane for the next node 
 			 * operations in the immediate scope.
+			 * @type {string}
 			 */
 			public section: string;
 		}

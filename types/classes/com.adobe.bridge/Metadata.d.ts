@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -23,16 +23,22 @@ declare namespace Adobe {
 			/**
 			 * The current XMP namespace, used to search for XMP 
 			 * properties.
+			 * @type {string}
 			 */
 			public namespace: string;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * Adds metadata properties to this object that were saved to 
 			 * an XMP template from the FileInfo dialog.
+			 * @returns {void}
 			 */
 			public applyMetadataTemplate(): void;
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 			/**
@@ -40,9 +46,13 @@ declare namespace Adobe {
 			 * property in the specified namespace.
 			 * @param {string} namespace 
 			 * @param {string} uri 
+			 * @returns {string}
 			 */
 			public read(namespace: string, uri: string): string;
-			/** Serializes the XMP packet into a string. */
+			/**
+			 * Serializes the XMP packet into a string.
+			 * @returns {string}
+			 */
 			public serialize(): string;
 		}
 	}

@@ -1,10 +1,14 @@
-/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
 		/** A collection of documents */
 		class Documents extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** number of elements in the collection */
+			/**
+			 * number of elements in the collection
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * a document
@@ -25,29 +29,22 @@ declare namespace Adobe {
 			 * BitsPerChannelType.EIGHT )
 			 * @param {string} colorProfileName name of color profile for 
 			 * document
+			 * @returns {Adobe.Photoshop.Document}
 			 */
 			public add(width: any, height: any, resolution: number, name: string, mode: Adobe.Photoshop.NewDocumentMode, initialFill: Adobe.Photoshop.DocumentFill, pixelAspectRatio: number, bitsPerChannel: Adobe.Photoshop.BitsPerChannelType, colorProfileName: string): Adobe.Photoshop.Document;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.
 			 * @param {string} nameParam
+			 * @returns {Adobe.Photoshop.Document}
 			 */
 			public getByName(nameParam: string): Adobe.Photoshop.Document;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx
+			 * @returns {Adobe.Photoshop.Document}
 			 */
-			public index(idx: number): Adobe.Photoshop.Document;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} idx
-			 */
-			public nextNameIndex(idx: number): number;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} index
-			 */
-			public nextValue(index: number): any;
+			[idx: number]: Adobe.Photoshop.Document;
 		}
 	}
 }

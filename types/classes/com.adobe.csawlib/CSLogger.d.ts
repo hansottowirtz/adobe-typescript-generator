@@ -1,9 +1,12 @@
-/// <reference path="../../packages/com.adobe.csawlib/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Csawlib {
 		class CSLogger {
-			public getInstance(): ILogger;
+			/**
+			 * @returns {Adobe.Flex.ILogger}
+			 */
+			public getInstance(): Adobe.Flex.ILogger;
 		}
 	}
 }

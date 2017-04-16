@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -12,16 +12,22 @@ declare namespace Adobe {
 			/**
 			 * A SearchSpecification object that was used to generate this 
 			 * search result.
+			 * @type {Adobe.Bridge.SearchSpecification}
 			 */
 			public searchSpecification: Adobe.Bridge.SearchSpecification;
 			/**
 			 * The Bridge URI for the search target node that was used to 
 			 * generate this search result.
+			 * @type {string}
 			 */
 			public searchTargetUri: string;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 		}

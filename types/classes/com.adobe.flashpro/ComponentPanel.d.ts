@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -19,11 +19,13 @@ declare namespace Adobe {
 			 * @param {string} replaceFlag This flag specify whether to 
 			 * replace the component or not. And also to show or not the 
 			 * alert.
+			 * @returns {void}
 			 */
 			public addItemToDocument(position: any, categoryName: string, componentName: string, replaceFlag: string): void;
 			/**
 			 * Refreshes the Components Panel's list of Components from 
 			 * disk.
+			 * @returns {boolean}
 			 */
 			public reload(): boolean;
 		}

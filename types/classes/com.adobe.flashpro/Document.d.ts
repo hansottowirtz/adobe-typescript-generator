@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -10,6 +10,7 @@ declare namespace Adobe {
 			/**
 			 * Name of the movie. This is not the instance name, this name 
 			 * will be exposed to the screen reader.
+			 * @type {string}
 			 */
 			public accName: string;
 			/**
@@ -18,6 +19,7 @@ declare namespace Adobe {
 			 * timeline classes. By default this is true.  If the user 
 			 * would prefer to explicitly declare these instances in the 
 			 * class files, then this option can be set to false.
+			 * @type {boolean}
 			 */
 			public as3AutoDeclare: boolean;
 			/**
@@ -25,29 +27,34 @@ declare namespace Adobe {
 			 * values are "AS3" and "ES".  By default, the value is "AS3". 
 			 * If old ECMAScript behavior is desired for the purpose of 
 			 * allowing prototype classes, then this should be set to "ES".
+			 * @type {string}
 			 */
 			public as3Dialect: string;
 			/**
 			 * Number that specifies which frame to export ActionScript 3.0 
 			 * classes.  By default classes are exported in frame 1.
+			 * @type {number}
 			 */
 			public as3ExportFrame: number;
 			/**
 			 * Boolean property that specifies whether the ActionScript 3.0 
 			 * compiler should compile with strict mode option turned on.  
 			 * By default this is true.
+			 * @type {boolean}
 			 */
 			public as3StrictMode: boolean;
 			/**
 			 * Boolean property that specifies whether the ActionScript 3.0 
 			 * compiler should compile with warnings mode option turned on. 
 			 *  By default this is true.
+			 * @type {boolean}
 			 */
 			public as3WarningsMode: boolean;
 			/**
 			 * returns a number with values 1, 2, 3 or - if it is 
 			 * undefined. User can also assign the ActionScript version for 
 			 * the document.
+			 * @type {number}
 			 */
 			public asVersion: number;
 			/**
@@ -55,12 +62,17 @@ declare namespace Adobe {
 			 * Accessibility Panel.
 			 * Instructs Flash to automatically label objects on the stage 
 			 * with the text associated with them.
+			 * @type {boolean}
 			 */
 			public autoLabel: boolean;
-			/** Color representing the background. */
+			/**
+			 * Color representing the background.
+			 * @type {string}
+			 */
 			public backgroundColor: string;
 			/**
 			 * Set/Get the name of the active publish profile for document.
+			 * @type {string}
 			 */
 			public currentPublishProfile: string;
 			/**
@@ -71,23 +83,31 @@ declare namespace Adobe {
 			 * 'editScene()'. The only difference is that we don't get any 
 			 * error message if the index of the timeline is not valid (the 
 			 * property is simply not set -> silent failure).
+			 * @type {number}
 			 */
 			public currentTimeline: number;
 			/**
 			 * Equivalent to the Description field on the Accessibility 
 			 * Panel. The description is read by the screen reader.
+			 * @type {string}
 			 */
 			public description: string;
 			/**
 			 * A string that specifies the top-level ActionScript 3.0 class 
 			 * associated with the document.
+			 * @type {string}
 			 */
 			public docClass: string;
-			/** Private property, the gateway to the DOM2 APIs */
+			/**
+			 * Private property, the gateway to the DOM2 APIs
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly DOM2: any;
 			/**
 			 * Comma delimited list of items in the AS3 external library 
 			 * path for the document. Default value = '.'
+			 * @type {string}
 			 */
 			public externalLibraryPath: string;
 			/**
@@ -100,59 +120,101 @@ declare namespace Adobe {
 			 * 
 			 * forceSimple == false --> Make Child Object Accessible is 
 			 * checked.
+			 * @type {boolean}
 			 */
 			public forceSimple: boolean;
-			/** The number of frames per second. The default is 12. */
+			/**
+			 * The number of frames per second. The default is 12.
+			 * @type {number}
+			 */
 			public frameRate: number;
-			/** Height of the document/stage */
+			/**
+			 * Height of the document/stage
+			 * @type {number}
+			 */
 			public height: number;
 			/**
 			 * returns an integer that represents the internal document ID. 
 			 * Each document in a Flash session will have a unique document 
 			 * ID.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly id: number;
-			/** Flag describing if the document is Compressed/Uncompressed. */
+			/**
+			 * Flag describing if the document is Compressed/Uncompressed.
+			 * @type {boolean}
+			 * @readonly
+			 */
 			public readonly isUncompressed: boolean;
-			/** The library object for the document. */
+			/**
+			 * The library object for the document.
+			 * @type {Adobe.Flashpro.Library}
+			 * @readonly
+			 */
 			public readonly library: Adobe.Flashpro.Library;
 			/**
 			 * Comma delimited list of items in the AS3 library path for 
 			 * the document.
+			 * @type {string}
 			 */
 			public libraryPath: string;
 			/**
 			 * If true, the document should display components as they will 
 			 * appear in the player.
+			 * @type {boolean}
 			 */
 			public livePreview: boolean;
-			/** name of the document */
+			/**
+			 * name of the document
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly name: string;
 			/**
 			 * path of the document (the value is 'undefined' if the 
 			 * document was never saved).
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly path: string;
 			/**
 			 * path of the document as a platform-independent URI (the 
 			 * value is 'undefined' if the document was never saved).
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly pathURI: string;
-			/** the current player target for publishing a SWF */
+			/**
+			 * the current player target for publishing a SWF
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly playerTarget: string;
 			/**
 			 * returns a string with values 1-7, or - if it is undefined ( 
 			 * they'll have to add 8 once there is a new player )
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly playerVersion: string;
-			/** An array of the publish profile names for the document. */
+			/**
+			 * An array of the publish profile names for the document.
+			 * @type {any[]}
+			 * @readonly
+			 */
 			public readonly publishProfiles: any[];
-			/** The current Screen Outline object for the document. */
+			/**
+			 * The current Screen Outline object for the document.
+			 * @type {Adobe.Flashpro.ScreenOutline}
+			 * @readonly
+			 */
 			public readonly screenOutline: Adobe.Flashpro.ScreenOutline;
 			/**
 			 * Array of the selected objects in the document. If nothing is 
 			 * selected. returns an array of length zero. If no document is 
 			 * open, returns null.
+			 * @type {any[]}
 			 */
 			public selection: any[];
 			/**
@@ -163,30 +225,44 @@ declare namespace Adobe {
 			 * silent == true --> Make Movie Accessible is unchecked.
 			 * 
 			 * silent == false --> Make Movie Accessible is checked.
+			 * @type {boolean}
 			 */
 			public silent: boolean;
 			/**
 			 * Comma delimited list of items in the AS3 source path for the 
 			 * document.
+			 * @type {string}
 			 */
 			public sourcePath: string;
-			/** The JPEG Quality setting in the current Publish Profile. */
+			/**
+			 * The JPEG Quality setting in the current Publish Profile.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly swfJPEGQuality: number;
 			/**
 			 * An array of timeline objects. See timeline object for more 
 			 * info.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly timelines: any[];
 			/**
 			 * viewMatrix is a matrix object.  A matrix has 6 properties:  
 			 * a, b, c, d, tx, ty;
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly viewMatrix: any;
-			/** Width of the document/stage */
+			/**
+			 * Width of the document/stage
+			 * @type {number}
+			 */
 			public width: number;
 			/**
 			 * Gets/Sets the zoom percent of the Stage at Author-time. A 
 			 * value of 1 equals 100% zoom, 8 = 800%, .5 = 50%, etc.
+			 * @type {number}
 			 */
 			public zoomFactor: number;
 			/**
@@ -199,6 +275,7 @@ declare namespace Adobe {
 			 * "double", "doubleArray", "string", and "byteArray".
 			 * @param {any} data the value depends on the value of argument 
 			 * 2. The logical rules apply.
+			 * @returns {void}
 			 */
 			public addDataToDocument(name: string, _type: string, data: any): void;
 			/**
@@ -211,6 +288,7 @@ declare namespace Adobe {
 			 * "double", "doubleArray", "string", and "byteArray".
 			 * @param {any} data the value depends on the value of argument 
 			 * 2. The logical rules apply.
+			 * @returns {void}
 			 */
 			public addDataToSelection(name: string, _type: string, data: any): void;
 			/**
@@ -218,6 +296,7 @@ declare namespace Adobe {
 			 * @param {string} filterName "glowFilter", "dropShadowFilter", 
 			 * "blurFilter", "bevelFilter", "gradientBevelFilter", 
 			 * "gradientGlowFilter", "adjustColorFilter"
+			 * @returns {void}
 			 */
 			public addFilter(filterName: string): void;
 			/**
@@ -228,6 +307,7 @@ declare namespace Adobe {
 			 * to. Uses the center of the symbol.
 			 * @param {any} item Specifies from which library and which 
 			 * item to add.
+			 * @returns {boolean}
 			 */
 			public addItem(position: any, item: any): boolean;
 			/**
@@ -239,6 +319,7 @@ declare namespace Adobe {
 			 * starts
 			 * @param {any} endPoint The arguments are points that specify 
 			 * the x,y coordinates between which the path is added.
+			 * @returns {void}
 			 */
 			public addNewLine(startPoint: any, endPoint: any): void;
 			/**
@@ -254,6 +335,7 @@ declare namespace Adobe {
 			 * created without a fill.  default is false.
 			 * @param {boolean} bSuppressStroke If true the shape will be 
 			 * created without a stroke. Default is false
+			 * @returns {void}
 			 */
 			public addNewOval(boundingRectangle: any, bSuppressFill: boolean, bSuppressStroke: boolean): void;
 			/**
@@ -270,6 +352,7 @@ declare namespace Adobe {
 			 * created with no fill. Default is false.
 			 * @param {boolean} bSuppressStroke If true the shape will be 
 			 * created without a stroke. Default is false.
+			 * @returns {void}
 			 */
 			public addNewPrimitiveOval(boundingRectangle: any, bSupressFill: boolean, bSuppressStroke: boolean): void;
 			/**
@@ -289,6 +372,7 @@ declare namespace Adobe {
 			 * created with no fill. Default is false.
 			 * @param {boolean} bSuppressStroke If true the shape will be 
 			 * created without a stroke. Default is false.
+			 * @returns {void}
 			 */
 			public addNewPrimitiveRectangle(boundingRectangle: any, roundness: number, bSupressFill: boolean, bSuppressStroke: boolean): void;
 			/**
@@ -298,6 +382,7 @@ declare namespace Adobe {
 			 * @param {string} profileName_ profileName, name of the new 
 			 * profile (with unique name). If the name is not specified, a 
 			 * default name will be provided.
+			 * @returns {number}
 			 */
 			public addNewPublishProfile(profileName_: string): number;
 			/**
@@ -317,6 +402,7 @@ declare namespace Adobe {
 			 * created with no fill. Default is false.
 			 * @param {boolean} bSuppressStroke If true the shape will be 
 			 * created without a stroke. Default is false.
+			 * @returns {void}
 			 */
 			public addNewRectangle(boundingRectangle: any, roundness: number, bSupressFill: boolean, bSuppressStroke: boolean): void;
 			/**
@@ -330,6 +416,7 @@ declare namespace Adobe {
 			 * false.
 			 * @param {string} name The name of the scene. If name not 
 			 * specified, a new scene name is generated.
+			 * @returns {boolean}
 			 */
 			public addNewScene(name: string): boolean;
 			/**
@@ -338,6 +425,7 @@ declare namespace Adobe {
 			 * argument instead of x,y,w,h.
 			 * @param {string} text The argument is a string consisting of 
 			 * the characters to be inserted in the text field.
+			 * @returns {void}
 			 */
 			public addNewText(boundingRectangle: any, text: string): void;
 			/**
@@ -348,6 +436,7 @@ declare namespace Adobe {
 			 * @param {boolean} bUseDocumentBounds if useDocumentBounds is 
 			 * true align to the bounds of the document, otherwise use the 
 			 * bounds of the selected objects.  Defaults to false.
+			 * @returns {void}
 			 */
 			public align(alignmode: string, bUseDocumentBounds: boolean): void;
 			/**
@@ -355,15 +444,20 @@ declare namespace Adobe {
 			 * If allowScreens() returns true, dom.screenOutline can safely 
 			 * be used, otherwise dom.screenOutline will display an error 
 			 * for the user indicating screens cannot be used.
+			 * @returns {boolean}
 			 */
 			public allowScreens(): boolean;
 			/**
 			 * Arranges the selection.  Only applies to non-shape objects
 			 * @param {string} arrangeMode Acceptable values for 
 			 * arrangemode are "back", "backward", "forward", and "front".
+			 * @returns {void}
 			 */
 			public arrange(arrangeMode: string): void;
-			/** Performs a breakApart operation on the current selection. */
+			/**
+			 * Performs a breakApart operation on the current selection.
+			 * @returns {void}
+			 */
 			public breakApart(): void;
 			/**
 			 * Boolean returned by method which indicates whether the "Edit 
@@ -372,6 +466,7 @@ declare namespace Adobe {
 			 * but rather if one or more symbols are defined.   This should 
 			 * not be used to test whether 
 			 * fl.getDocumentDOM().enterEditMode() is allowed.
+			 * @returns {boolean}
 			 */
 			public canEditSymbol(): boolean;
 			/**
@@ -379,6 +474,7 @@ declare namespace Adobe {
 			 * 
 			 * RETURNS: boolean returned by method indicating whether the 
 			 * <dom.revert()> method should be used.
+			 * @returns {boolean}
 			 */
 			public canRevert(): boolean;
 			/**
@@ -404,17 +500,20 @@ declare namespace Adobe {
 			 * mechanism for authentication, so the credentials are stored 
 			 * and then subsequent java script execution would be 
 			 * successful.
+			 * @returns {boolean}
 			 */
 			public canSaveAVersion(): boolean;
 			/**
 			 * fl.getDocumentDOM().canTestMovie()
 			 * RETURNS: boolean returned by method indicating whether the 
 			 * method should be used.
+			 * @returns {boolean}
 			 */
 			public canTestMovie(): boolean;
 			/**
 			 * RETURNS: boolean returned by method indicating whether the 
 			 * method should be used.
+			 * @returns {boolean}
 			 */
 			public canTestScene(): boolean;
 			/**
@@ -423,16 +522,24 @@ declare namespace Adobe {
 			 * changed in the filter list
 			 * @param {number} newIndex the new index of the filter in the 
 			 * filter List.
+			 * @returns {void}
 			 */
 			public changeFilterOrder(oldIndex: number, newIndex: number): void;
-			/** Copies the selection to the Clipboard. */
+			/**
+			 * Copies the selection to the Clipboard.
+			 * @returns {void}
+			 */
 			public clipCopy(): void;
-			/** Cuts the selection to the Clipboard. */
+			/**
+			 * Cuts the selection to the Clipboard.
+			 * @returns {void}
+			 */
 			public clipCut(): void;
 			/**
 			 * Pastes the Clipboard into the document.
 			 * @param {boolean} bInPlace Default is false, which performs a 
 			 * regular paste operation.
+			 * @returns {void}
 			 */
 			public clipPaste(bInPlace: boolean): void;
 			/**
@@ -442,13 +549,18 @@ declare namespace Adobe {
 			 * unsaved changes in the document.  If true, the user will be 
 			 * prompted with the standard yes/no dialog box if there are 
 			 * unsaved changes.  Default is true.
+			 * @returns {void}
 			 */
 			public close(bPromptToSaveChanges: boolean): void;
-			/** Performs a convert lines to Fills on the selected objects. */
+			/**
+			 * Performs a convert lines to Fills on the selected objects.
+			 * @returns {void}
+			 */
 			public convertLinesToFills(): void;
 			/**
 			 * convert selected objects in current frame to bitmap, and the 
 			 * bitmap is inserted into library
+			 * @returns {boolean}
 			 */
 			public convertSelectionToBitmap(): boolean;
 			/**
@@ -460,19 +572,25 @@ declare namespace Adobe {
 			 * @param {string} name The name for the new symbol, this must 
 			 * be unique or the function will fail and return null
 			 * @param {string} registrationPoint The registration point.
+			 * @returns {any}
 			 */
 			public convertToSymbol(_type: string, name: string, registrationPoint: string): any;
-			/** Copy the filter list (all filters) of the selected objects */
+			/**
+			 * Copy the filter list (all filters) of the selected objects
+			 * @returns {boolean}
+			 */
 			public copyAllFilters(): boolean;
 			/**
 			 * Copy the filter at the specified index in the filter list
 			 * @param {number} index index of the filter in the filter list 
 			 * to be copied
+			 * @returns {void}
 			 */
 			public copyFilter(index: number): void;
 			/**
 			 * Using top selected Drawing Object to crop all selected 
 			 * Drawing Objects underneath it
+			 * @returns {boolean}
 			 */
 			public crop(): boolean;
 			/**
@@ -494,6 +612,7 @@ declare namespace Adobe {
 			 * @param {string} screenSize screen size of device, which can 
 			 * be one of the following: 
 			 * @param {number} dpi screen resolution of SWF
+			 * @returns {void}
 			 */
 			public debugAIRMovie(debugLauncherPath: string, runtimePath: string, applicationXMLPath: string, forDebugging: string, profileName: string, pubidName: string, securityPath: string, screenSize: string, dpi: number): void;
 			/**
@@ -505,11 +624,13 @@ declare namespace Adobe {
 			 * @param {string} ApolloDebugLauncherPath Path to ADL
 			 * @param {string} ApolloRuntimePath Path to Apollo Runtime
 			 * @param {string} apolloSecurity path apollo security file
+			 * @returns {void}
 			 */
 			public debugMovie(ApolloDebugLauncherPath: string, ApolloRuntimePath: string, apolloSecurity: string): void;
 			/**
 			 * Delete envelopes on the selected object. Return true on 
 			 * success, false otherwise.
+			 * @returns {boolean}
 			 */
 			public deleteEnvelope(): boolean;
 			/**
@@ -518,6 +639,7 @@ declare namespace Adobe {
 			 * RETURNS: index of the new current profile in the profiles 
 			 * list; if new profile couldn't be created, fails silently and 
 			 * return unchanged current profile index.
+			 * @returns {number}
 			 */
 			public deletePublishProfile(): number;
 			/**
@@ -529,16 +651,24 @@ declare namespace Adobe {
 			 * If only one timeline object (Scene) exists, returns false
 			 * RETURNS: true if scene was sucessfully deleted, otherwise 
 			 * false.
+			 * @returns {boolean}
 			 */
 			public deleteScene(): boolean;
-			/** Deletes the selection in the document. */
+			/**
+			 * Deletes the selection in the document.
+			 * @returns {void}
+			 */
 			public deleteSelection(): void;
-			/** Disable all filters on selected objects. */
+			/**
+			 * Disable all filters on selected objects.
+			 * @returns {void}
+			 */
 			public disableAllFilters(): void;
 			/**
 			 * Disable specified filter in the filter list.
 			 * @param {number} index Index of the filter to be disabled in 
 			 * the filter list array.
+			 * @returns {void}
 			 */
 			public disableFilter(index: number): void;
 			/**
@@ -546,6 +676,7 @@ declare namespace Adobe {
 			 * click on.
 			 * @param {number} index index of the filter that is always 
 			 * enabled while others are disabled.
+			 * @returns {void}
 			 */
 			public disableOtherFilters(index: number): void;
 			/**
@@ -556,18 +687,21 @@ declare namespace Adobe {
 			 * @param {boolean} bUseDocumentBounds if useDocumentBounds is 
 			 * true distribute using the bounds of the document, otherwise 
 			 * use the bounds of the selected objects.  Defaults to false.
+			 * @returns {void}
 			 */
 			public distribute(distributemode: string, bUseDocumentBounds: boolean): void;
 			/**
 			 * Performs a distribute to layers operation on the current 
 			 * selection, same as selecting the menu item Distribute to 
 			 * Layers.
+			 * @returns {void}
 			 */
 			public distributeToLayers(): void;
 			/**
 			 * Returns true if there is persistent data with the specified 
 			 * name.
 			 * @param {string} name the name of the data to check for.
+			 * @returns {boolean}
 			 */
 			public documentHasData(name: string): boolean;
 			/**
@@ -578,6 +712,7 @@ declare namespace Adobe {
 			 * @param {string} profileName_ profileName, name of the 
 			 * duplicated profile (unique name). If the name is not 
 			 * specified, a default name will be provided.
+			 * @returns {number}
 			 */
 			public duplicatePublishProfile(profileName_: string): number;
 			/**
@@ -587,23 +722,32 @@ declare namespace Adobe {
 			 * 
 			 * RETURNS: true if scene was sucessfully duplicated, otherwise 
 			 * false.
+			 * @returns {boolean}
 			 */
 			public duplicateScene(): boolean;
-			/** Duplicates the selection in the document. */
+			/**
+			 * Duplicates the selection in the document.
+			 * @returns {void}
+			 */
 			public duplicateSelection(): void;
 			/**
 			 * Sets the specified scene as the currently selected scene.
 			 * @param {number} index A zero-based integer that specifies 
 			 * which scene to
+			 * @returns {void}
 			 */
 			public editScene(index: number): void;
-			/** Enable all filters of the selected objects. */
+			/**
+			 * Enable all filters of the selected objects.
+			 * @returns {void}
+			 */
 			public enableAllFilters(): void;
 			/**
 			 * Enable the filter at the specified index in the filters List 
 			 * array.
 			 * @param {number} index Index of the filter to be enabled in 
 			 * the filter list array
+			 * @returns {void}
 			 */
 			public enableFilter(index: number): void;
 			/**
@@ -616,11 +760,13 @@ declare namespace Adobe {
 			 * @param {string} editMode Optional string specifying the 
 			 * mode.  Allowable values are "inPlace", or "newWindow".  No 
 			 * argument means edit symbol mode.
+			 * @returns {void}
 			 */
 			public enterEditMode(editMode: string): void;
 			/**
 			 * Exit out of edit mode.  This command will go up one level 
 			 * from the current level.
+			 * @returns {void}
 			 */
 			public exitEditMode(): void;
 			/**
@@ -633,6 +779,7 @@ declare namespace Adobe {
 			 * Default value is false.
 			 * @param {string} File_URL specifies the filename for the 
 			 * exported file. 
+			 * @returns {void}
 			 */
 			public exportFXG(File_URL: string): void;
 			/**
@@ -641,6 +788,7 @@ declare namespace Adobe {
 			 * @param {number} frameNumber the frame to be exported
 			 * @param {string} bitmapName the name of the bitmap to be 
 			 * added in Library
+			 * @returns {void}
 			 */
 			public exportInstanceToLibrary(frameNumber: number, bitmapName: string): void;
 			/**
@@ -655,6 +803,7 @@ declare namespace Adobe {
 			 * exported. The default number is 99999
 			 * @param {mathObject} jsMatrix Users can add additional matrix 
 			 * to generate PNG sequence
+			 * @returns {void}
 			 */
 			public exportInstanceToPNGSequence(outputURI: string, startFramNum: number, endFrameNum: number, jsMatrix: mathObject): void;
 			/**
@@ -665,6 +814,7 @@ declare namespace Adobe {
 			 * exported file. If fileURI is empty or not specified, Flash 
 			 * displays the Export Movie dialog box. This parameter is 
 			 * optional.
+			 * @returns {void}
 			 */
 			public exportLibraryAsSWC(fileURI: string): void;
 			/**
@@ -683,12 +833,14 @@ declare namespace Adobe {
 			 * specifies whether to export only the current frame (true) or 
 			 * to export all frames, with each frame as a separate PNG file 
 			 * (false). 
+			 * @returns {boolean}
 			 */
 			public exportPNG(fileURI: string, bCurrentPNGSettings: boolean, bCurrentFrame: boolean): boolean;
 			/**
 			 * Export the profile currently active to file.
 			 * @param {string} fileURI_ fileURI (not optional): path of the 
 			 * XML file defining the profile to export
+			 * @returns {void}
 			 */
 			public exportPublishProfile(fileURI_: string): void;
 			/**
@@ -698,6 +850,7 @@ declare namespace Adobe {
 			 * @param {string} profileName A string that specifies the name 
 			 * of the profile to export to an XML string. This parameter is 
 			 * optional
+			 * @returns {string}
 			 */
 			public exportPublishProfileString(profileName: string): string;
 			/**
@@ -710,6 +863,7 @@ declare namespace Adobe {
 			 * (optional): if true, Flash uses current SWF publish 
 			 * settings, otherwise Flash displays the SWF export settings 
 			 * dialog. This argument is false by default.
+			 * @returns {void}
 			 */
 			public exportSWF(fileURI: string, bCurrentSettings: boolean): void;
 			/**
@@ -721,9 +875,13 @@ declare namespace Adobe {
 			 * RETURNS: btoStage
 			 * 
 			 * If TRUE aligns objects to Stage, if FALSE it does not.
+			 * @returns {boolean}
 			 */
 			public getAlignToDocument(): boolean;
-			/** return the blend mode name on the selection. */
+			/**
+			 * return the blend mode name on the selection.
+			 * @returns {string}
+			 */
 			public getBlendMode(): string;
 			/**
 			 * Returns the fill object of selection or the fill object of 
@@ -731,6 +889,7 @@ declare namespace Adobe {
 			 * @param {string} locationOfFill If argument is not set it 
 			 * defaults to selection. In the case of no selection, it 
 			 * returns undefined. 
+			 * @returns {any}
 			 */
 			public getCustomFill(locationOfFill: string): any;
 			/**
@@ -739,17 +898,20 @@ declare namespace Adobe {
 			 * @param {string} locationOfFill If argument is not set it 
 			 * defaults to selection. In the case of no selection, it 
 			 * returns undefined. 
+			 * @returns {any}
 			 */
 			public getCustomStroke(locationOfFill: string): any;
 			/**
 			 * Returns the value of the specified data. The type returned 
 			 * depends on the type of data that was stored.
 			 * @param {string} name the name of the data to return.
+			 * @returns {any}
 			 */
 			public getDataFromDocument(name: string): any;
 			/**
 			 * checks if the "Permit Debugging" checkbox is selected in the 
 			 * Publish Settings dialog.
+			 * @returns {boolean}
 			 */
 			public getDebugForSwf(): boolean;
 			/**
@@ -759,6 +921,7 @@ declare namespace Adobe {
 			 * See element properties for list of acceptable values.
 			 * @param {string} propertyName the name of the property that 
 			 * will return the value. See list of property
+			 * @returns {any}
 			 */
 			public getElementProperty(propertyName: string): any;
 			/**
@@ -787,13 +950,23 @@ declare namespace Adobe {
 			 * property to be returned. 
 			 * @param {number} startIndex Index of first character.
 			 * @param {number} endIndex Index of last character.
+			 * @returns {any}
 			 */
 			public getElementTextAttr(attrName: string, startIndex: number, endIndex: number): any;
-			/** Return the array of filter objects. */
+			/**
+			 * Return the array of filter objects.
+			 * @returns {any[]}
+			 */
 			public getFilters(): any[];
-			/** Returns metadata xml as a string, takes no parameters. */
+			/**
+			 * Returns metadata xml as a string, takes no parameters.
+			 * @returns {string}
+			 */
 			public getMetadata(): string;
-			/** Returns the mobile settings xml. */
+			/**
+			 * Returns the mobile settings xml.
+			 * @returns {string}
+			 */
 			public getMobileSettings(): string;
 			/**
 			 * Returns the player version as a string, takes no parameters. 
@@ -801,6 +974,7 @@ declare namespace Adobe {
 			 * following: "1","2","3"..."9". The string returned returned 
 			 * for Flash Lite will be one of the following: "FlashLite", 
 			 * "FlashLite11", "FlashLite20"...
+			 * @returns {string}
 			 */
 			public getPlayerVersion(): string;
 			/**
@@ -810,6 +984,7 @@ declare namespace Adobe {
 			 * 
 			 * RETURNS: Return value is the bounding rectangle of the 
 			 * current selection, 0 if nothing is selected
+			 * @returns {any}
 			 */
 			public getSelectionRect(): any;
 			/**
@@ -817,11 +992,13 @@ declare namespace Adobe {
 			 * blank string is returned if fl.publishSizeReportXMLEnabled 
 			 * is false or the checkbox "Generate size report" in Publish 
 			 * Settings dialog is unchecked.
+			 * @returns {string}
 			 */
 			public getSizeReportXML(): string;
 			/**
 			 * Returns the full path to the SWF file that is set in the 
 			 * current Publish Profile.
+			 * @returns {string}
 			 */
 			public getSWFPathFromProfile(): string;
 			/**
@@ -842,19 +1019,25 @@ declare namespace Adobe {
 			 * concatenation of all the strings.
 			 * @param {number} startIndex Index of first character to get.
 			 * @param {number} endIndex Index of last character to get.
+			 * @returns {string}
 			 */
 			public getTextString(startIndex: number, endIndex: number): string;
 			/**
 			 * Returns the timeline which is currently being edited in the 
 			 * document.
+			 * @returns {Adobe.Flashpro.Timeline}
 			 */
 			public getTimeline(): Adobe.Flashpro.Timeline;
 			/**
 			 * Gets the location of the transformation point of the current 
 			 * selection.
+			 * @returns {any}
 			 */
 			public getTransformationPoint(): any;
-			/** Converts the current selection to a group. */
+			/**
+			 * Converts the current selection to a group.
+			 * @returns {void}
+			 */
 			public group(): void;
 			/**
 			 * importFile( string [,boolean])
@@ -868,6 +1051,7 @@ declare namespace Adobe {
 			 * file is imported to the current document's Library.
 			 * @param {boolean} showDialog document.importFile(fileURI [, 
 			 * importToLibrary] [, showDialog])
+			 * @returns {void}
 			 */
 			public importFile(fileURI: string, importToLibrary: boolean, showDialog: boolean): void;
 			/**
@@ -876,12 +1060,14 @@ declare namespace Adobe {
 			 * returns -1 if profile couldn't be imported
 			 * @param {string} fileURI_ fileURI (not optional): path of the 
 			 * XML file defining the profile to import
+			 * @returns {number}
 			 */
 			public importPublishProfile(fileURI_: string): number;
 			/**
 			 * Given a string containing XML data, it imports the 
 			 * publishing profile contained in the XML data.
 			 * @param {string} xml 
+			 * @returns {boolean}
 			 */
 			public importPublishProfileString(xml: string): boolean;
 			/**
@@ -889,16 +1075,19 @@ declare namespace Adobe {
 			 * Import menu option and selecting a swf.
 			 * @param {string} fileURI Specifies the URI for the swf to 
 			 * import.
+			 * @returns {void}
 			 */
 			public importSWF(fileURI: string): void;
 			/**
 			 * Create a intersection Drawing Object from all selected 
 			 * Drawing Objects
+			 * @returns {boolean}
 			 */
 			public intersect(): boolean;
 			/**
 			 * checks if a document has been modified since it has been 
 			 * opened
+			 * @returns {boolean}
 			 */
 			public isModified(): boolean;
 			/**
@@ -911,6 +1100,7 @@ declare namespace Adobe {
 			 * true match the size of the objects to the bounds of the 
 			 * document, otherwise use the bounds of the largest object.  
 			 * Defaults to false.
+			 * @returns {void}
 			 */
 			public match(bWidth: boolean, bHeight: boolean, bUseDocumentBounds: boolean): void;
 			/**
@@ -923,6 +1113,7 @@ declare namespace Adobe {
 			 * pressed, false for unpressed.
 			 * @param {boolean} bShiftSel The state of the app preference 
 			 * "Shift Select"
+			 * @returns {void}
 			 */
 			public mouseClick(position: any, bToggleSel: boolean, bShiftSel: boolean): void;
 			/**
@@ -937,6 +1128,7 @@ declare namespace Adobe {
 			 * down when the event occurred.
 			 * @param {boolean} bShiftSelect This indicates the shiftSelect 
 			 * app preference setting.
+			 * @returns {void}
 			 */
 			public mouseDblClk(position: any, bAltDown: boolean, bShiftDown: boolean, bShiftSelect: boolean): void;
 			/**
@@ -947,6 +1139,7 @@ declare namespace Adobe {
 			 * specified amount.
 			 * @param {any} delta The argument is a point that specifies 
 			 * the x,y coordinate values by which the
+			 * @returns {void}
 			 */
 			public moveSelectedBezierPointsBy(delta: any): void;
 			/**
@@ -956,6 +1149,7 @@ declare namespace Adobe {
 			 * all presses of the arrow key as one move step.
 			 * @param {any} distanceToMove A point that specifies the x,y 
 			 * coordinate values by which
+			 * @returns {void}
 			 */
 			public moveSelectionBy(distanceToMove: any): void;
 			/**
@@ -965,38 +1159,50 @@ declare namespace Adobe {
 			 * 100, 0 being no smoothing, 100 maximum smoothing.
 			 * @param {boolean} bUseMultiplePasses Boolean to indicate if 
 			 * muliple passes should be used.
+			 * @returns {void}
 			 */
 			public optimizeCurves(smoothing: number, bUseMultiplePasses: boolean): void;
-			/** Paste the stored filter list to the selected objects */
+			/**
+			 * Paste the stored filter list to the selected objects
+			 * @returns {void}
+			 */
 			public pasteFilters(): void;
 			/**
 			 * Publish the document according to the active publish profile 
 			 * settings. Same action as the UI menu item.
+			 * @returns {void}
 			 */
 			public publish(): void;
 			/**
 			 * Use top selected Drawing Object to punch through all 
 			 * selected Drawing Objects underneath it
+			 * @returns {boolean}
 			 */
 			public punch(): boolean;
-			/** remove all the filters on the selected object. */
+			/**
+			 * remove all the filters on the selected object.
+			 * @returns {void}
+			 */
 			public removeAllFilters(): void;
 			/**
 			 * Remove any persistent data that has been attached to the 
 			 * document with the specified name.
 			 * @param {string} name the name of the data to remove.
+			 * @returns {void}
 			 */
 			public removeDataFromDocument(name: string): void;
 			/**
 			 * Remove any persistent data that has been attached to the 
 			 * selected objects with the specified name.
 			 * @param {string} name the name of the data to remove.
+			 * @returns {void}
 			 */
 			public removeDataFromSelection(name: string): void;
 			/**
 			 * Remove the filter at the specified index in the filter list 
 			 * of the selected objects.
 			 * @param {number} index Index of the filter in the filter list
+			 * @returns {void}
 			 */
 			public removeFilter(index: number): void;
 			/**
@@ -1005,6 +1211,7 @@ declare namespace Adobe {
 			 * @param {string} profileNewName profileNewName: new name for 
 			 * the profile (unique name needed). If the name is not 
 			 * specified, a default name will be provided.
+			 * @returns {boolean}
 			 */
 			public renamePublishProfile(profileNewName: string): boolean;
 			/**
@@ -1016,6 +1223,7 @@ declare namespace Adobe {
 			 * RETURNS: true if names was sucessfully changed, otherwise 
 			 * false.
 			 * @param {string} name The new name of the scene.
+			 * @returns {boolean}
 			 */
 			public renameScene(name: string): boolean;
 			/**
@@ -1024,23 +1232,30 @@ declare namespace Adobe {
 			 * zero-based integer that specifies which scene to
 			 * @param {number} sceneToPutItBefore The second argument is a 
 			 * zero-based integer that specifies which scene you
+			 * @returns {void}
 			 */
 			public reorderScene(sceneToMove: number, sceneToPutItBefore: number): void;
 			/**
 			 * resets the startAngle, endAngle, and centerRadius values. in 
 			 * the PI and on selected objects
+			 * @returns {void}
 			 */
 			public resetOvalObject(): void;
 			/**
 			 * resets the cornerRadius values in the PI and on selected 
 			 * objects
+			 * @returns {void}
 			 */
 			public resetRectangleObject(): void;
-			/** resets the matrix for the current selection */
+			/**
+			 * resets the matrix for the current selection
+			 * @returns {void}
+			 */
 			public resetTransformation(): void;
 			/**
 			 * Reverts the specified document to its previously saved 
 			 * version. Behaves exactly like the menu option.
+			 * @returns {void}
 			 */
 			public revert(): void;
 			/**
@@ -1068,6 +1283,7 @@ declare namespace Adobe {
 			 * mechanism for authentication, so the credentials are stored 
 			 * and then subsequent java script execution would be 
 			 * successful.
+			 * @returns {boolean}
 			 */
 			public revertToLastVersion(): boolean;
 			/**
@@ -1075,6 +1291,7 @@ declare namespace Adobe {
 			 * @param {any} XYZ_Rotation XYZ Coordinate for the Rotation
 			 * @param {boolean} transform_Mode If set to true -> Global 
 			 * transform mode
+			 * @returns {void}
 			 */
 			public rotate3DSelection(XYZ_Rotation: any, transform_Mode: boolean): void;
 			/**
@@ -1089,6 +1306,7 @@ declare namespace Adobe {
 			 * bounding box to rotate acceptable values are: "top right", 
 			 * "top left", "bottom right", "bottom left".  If unspecified, 
 			 * the transformation point is used.
+			 * @returns {void}
 			 */
 			public rotateSelection(angle: number, rotationPoint: string): void;
 			/**
@@ -1100,6 +1318,7 @@ declare namespace Adobe {
 			 * false otherwise.
 			 * @param {boolean} bOkToSaveAs If bOkToSaveAs is true and the 
 			 * file was never saved, then the Save As dialog box
+			 * @returns {boolean}
 			 */
 			public save(bOkToSaveAs: boolean): boolean;
 			/**
@@ -1112,6 +1331,7 @@ declare namespace Adobe {
 			 * omitted and the file was never saved, then the Save As 
 			 * dialog box appears. If bOkToSaveAs is false and the file was 
 			 * never saved, the file is not saved.
+			 * @returns {boolean}
 			 */
 			public saveAndCompact(bOkToSaveAs: boolean): boolean;
 			/**
@@ -1122,6 +1342,7 @@ declare namespace Adobe {
 			 * (or an uncompressed XFL document)
 			 * @param {boolean} selectionOnly a flag indicating if only the 
 			 * current stage selection should be saved to the new document
+			 * @returns {boolean}
 			 */
 			public saveAsCopy(uri: string, selectionOnly: boolean): boolean;
 			/**
@@ -1151,6 +1372,7 @@ declare namespace Adobe {
 			 * mechanism for authentication, so the credentials are stored 
 			 * and then subsequent java script execution would be 
 			 * successful.
+			 * @returns {boolean}
 			 */
 			public saveAVersion(): boolean;
 			/**
@@ -1167,11 +1389,18 @@ declare namespace Adobe {
 			 * transformation point. Acceptable values are: "bottom left", 
 			 * "bottom right", "top right", "top left", "top center", 
 			 * "right center", "bottom center", "left center".
+			 * @returns {void}
 			 */
 			public scaleSelection(xScale: number, yScale: number, whichCorner: string): void;
-			/** Selects all items in the current playhead */
+			/**
+			 * Selects all items in the current playhead
+			 * @returns {void}
+			 */
 			public selectAll(): void;
-			/** Deselects any selected items. */
+			/**
+			 * Deselects any selected items.
+			 * @returns {void}
+			 */
 			public selectNone(): void;
 			/**
 			 * Sets the preference for align(), distribute(), match(), and 
@@ -1179,6 +1408,7 @@ declare namespace Adobe {
 			 * enabling the toStage button in the align panel.
 			 * @param {boolean} bToStage If set to TRUE aligns objects to 
 			 * Stage, if FALSE it does not.
+			 * @returns {void}
 			 */
 			public setAlignToDocument(bToStage: boolean): void;
 			/**
@@ -1189,6 +1419,7 @@ declare namespace Adobe {
 			 * @param {string} mode Valid blend modes are: normal, layer, 
 			 * darken, multiply, lighten, screen, overlay, hardlight, add, 
 			 * subtract, difference, invert, alpha, and erase. 
+			 * @returns {void}
 			 */
 			public setBlendMode(mode: string): void;
 			/**
@@ -1198,6 +1429,7 @@ declare namespace Adobe {
 			 * change the fill settings. It also allows a script to change 
 			 * the toolbar fill settings.
 			 * @param {any} fill sets the fill color object. 
+			 * @returns {void}
 			 */
 			public setCustomFill(fill: any): void;
 			/**
@@ -1207,6 +1439,7 @@ declare namespace Adobe {
 			 * change the stroke settings. It also allows a script to 
 			 * change the toolbar stroke settings.
 			 * @param {any} stroke The stroke object. 
+			 * @returns {void}
 			 */
 			public setCustomStroke(stroke: any): void;
 			/**
@@ -1216,6 +1449,7 @@ declare namespace Adobe {
 			 * uncheck the checkbox
 			 * @param {boolean} modifyDocument true to set the modified 
 			 * flag on the document, which allows the setting to be saved
+			 * @returns {void}
 			 */
 			public setDebugForSwf(value: boolean, modifyDocument: boolean): void;
 			/**
@@ -1226,6 +1460,7 @@ declare namespace Adobe {
 			 * top, and left
 			 * @param {any} value For a complete list of property and 
 			 * values, see the Element Object 
+			 * @returns {void}
 			 */
 			public setElementProperty(property: string, value: any): void;
 			/**
@@ -1252,12 +1487,14 @@ declare namespace Adobe {
 			 * property name and values expected.
 			 * @param {number} startIndex Index of first character.
 			 * @param {number} endIndex Index of last character.
+			 * @returns {boolean}
 			 */
 			public setElementTextAttr(attrName: string, attrValue: any, startIndex: number, endIndex: number): boolean;
 			/**
 			 * This method is used internally by diesel to store the AME 
 			 * preset list asuming that Adobe Media Encoder has been launch 
 			 * by the user.
+			 * @returns {void}
 			 */
 			public setEncoderPresetList(): void;
 			/**
@@ -1267,6 +1504,7 @@ declare namespace Adobe {
 			 * hexadecimal #rrggbb format or an integer containg the value. 
 			 * If set to null, no fill color is set. This is the same thing 
 			 * as setting the Fill color swatch to "no fill".
+			 * @returns {void}
 			 */
 			public setFillColor(color: string): void;
 			/**
@@ -1292,11 +1530,13 @@ declare namespace Adobe {
 			 * @param {any} value the value's type depends on which filter 
 			 * property, see the invidual filter objects for more 
 			 * information.
+			 * @returns {void}
 			 */
 			public setFilterProperty(property: string, index: number, value: any): void;
 			/**
 			 * Set the array of filter objects to the selection.
 			 * @param {any} filters array of filter objects
+			 * @returns {boolean}
 			 */
 			public setFilters(filters: any): boolean;
 			/**
@@ -1304,12 +1544,14 @@ declare namespace Adobe {
 			 * @param {number} opacity The opacity argument is an integer 
 			 * between 0 (transparent) and 100 (completely saturated) that 
 			 * adjusts the transparency of the instance.
+			 * @returns {void}
 			 */
 			public setInstanceAlpha(opacity: number): void;
 			/**
 			 * Sets the brightness for the instance
 			 * @param {number} brightness The argument is specified as a 
 			 * value from -100 to 100
+			 * @returns {void}
 			 */
 			public setInstanceBrightness(brightness: number): void;
 			/**
@@ -1317,6 +1559,7 @@ declare namespace Adobe {
 			 * @param {string} color The color of the tint.
 			 * @param {number} strength The amount of the tint specified by 
 			 * an interger between 0-100.
+			 * @returns {void}
 			 */
 			public setInstanceTint(color: string, strength: number): void;
 			/**
@@ -1329,12 +1572,14 @@ declare namespace Adobe {
 			 * dirtied.
 			 * @param {string} xml metadata xml to replace any current 
 			 * metadata xml
+			 * @returns {boolean}
 			 */
 			public setMetadata(xml: string): boolean;
 			/**
 			 * Takes string argument of mobile settings xml, replaces 
 			 * current mobile settings string with this xml.
 			 * @param {string} xml Mobile settings XML data.
+			 * @returns {boolean}
 			 */
 			public setMobileSettings(xml: string): boolean;
 			/**
@@ -1346,6 +1591,7 @@ declare namespace Adobe {
 			 * @param {any} value The value to be assigned to the property. 
 			 * Acceptable values vary depending on the property you specify 
 			 * in propertyName.
+			 * @returns {void}
 			 */
 			public setOvalObjectProperty(propertyName: string, value: any): void;
 			/**
@@ -1361,6 +1607,7 @@ declare namespace Adobe {
 			 * @param {string} version String representing player version. 
 			 * Valid version strings appear in the Publish Settings 
 			 * dialog's Version drop down list.
+			 * @returns {boolean}
 			 */
 			public setPlayerVersion(version: string): boolean;
 			/**
@@ -1373,6 +1620,7 @@ declare namespace Adobe {
 			 * @param {any} value The value to be assigned to the property. 
 			 * Acceptable values vary depending on the property you specify 
 			 * in propertyName
+			 * @returns {void}
 			 */
 			public setRectangleObjectProperty(propertyName: string, value: any): void;
 			/**
@@ -1385,6 +1633,7 @@ declare namespace Adobe {
 			 * (i.e. calling a function with either a true or false param 
 			 * wouldnt affect the applications global "Contact Selective" 
 			 * preference (Edit->Preferences))
+			 * @returns {void}
 			 */
 			public setSelectionBounds(boundingRectangle: any, bContactSelective: boolean): void;
 			/**
@@ -1404,17 +1653,20 @@ declare namespace Adobe {
 			 * (i.e. calling a function with either a true or flase param 
 			 * wouldnt affect the applications global "Contact Selective" 
 			 * preference (Edit->Preferences))
+			 * @returns {void}
 			 */
 			public setSelectionRect(rect: any, bReplaceCurrentSelection: boolean, bContactSelective: boolean): void;
 			/**
 			 * This will set the stage Vanishing point x and y values.
 			 * @param {any} Vanish_Point X and Y coordinate of the new 
 			 * vanish point
+			 * @returns {void}
 			 */
 			public setStageVanishingPoint(Vanish_Point: any): void;
 			/**
 			 * This will set the stage perspective angle.
 			 * @param {number} Angle stage perspective angle
+			 * @returns {void}
 			 */
 			public setStageViewAngle(Angle: number): void;
 			/**
@@ -1425,6 +1677,7 @@ declare namespace Adobe {
 			 * @param {string} stroke stroke has acceptable values of 
 			 * "hairline", "solid," "dashed," "dotted," "ragged," 
 			 * "stipple," "hatched".
+			 * @returns {void}
 			 */
 			public setStroke(color: string, size: number, stroke: string): void;
 			/**
@@ -1434,6 +1687,7 @@ declare namespace Adobe {
 			 * hexadecimal #rrggbb format or an integer containg the value. 
 			 * If set to null, no color is set. This is the same thing as 
 			 * setting the Stroke color swatch to "no Stroke".
+			 * @returns {string}
 			 */
 			public setStrokeColor(color: string): string;
 			/**
@@ -1441,6 +1695,7 @@ declare namespace Adobe {
 			 * size.
 			 * @param {number} size The argument is a double from 0.25 to 
 			 * 10 specifying the size.
+			 * @returns {void}
 			 */
 			public setStrokeSize(size: number): void;
 			/**
@@ -1448,6 +1703,7 @@ declare namespace Adobe {
 			 * @param {string} stroke stroke has acceptable values of 
 			 * "hairline", "solid," "dashed," "dotted," "ragged," 
 			 * "stipple," "hatched".
+			 * @returns {void}
 			 */
 			public setStrokeStyle(stroke: string): void;
 			/**
@@ -1458,6 +1714,7 @@ declare namespace Adobe {
 			 * description of the colors in the set to add. Warning: This 
 			 * is an encrypted string. We are not exposing the ability to 
 			 * use this method with decrypted strings.
+			 * @returns {boolean}
 			 */
 			public setSwatchKulerTheme(encryptedXMLString: string): boolean;
 			/**
@@ -1482,6 +1739,7 @@ declare namespace Adobe {
 			 * changed, false otherwise.
 			 * @param {any} boundingRectangle The argument is a rectangle 
 			 * that specifies the new size within which the text item
+			 * @returns {boolean}
 			 */
 			public setTextRectangle(boundingRectangle: any): boolean;
 			/**
@@ -1492,6 +1750,7 @@ declare namespace Adobe {
 			 * select
 			 * @param {number} endIndex select a text starts from 
 			 * startIndex up to but not including endIndex
+			 * @returns {boolean}
 			 */
 			public setTextSelection(startIndex: number, endIndex: number): boolean;
 			/**
@@ -1516,11 +1775,13 @@ declare namespace Adobe {
 			 * @param {number} startIndex Index of first character to 
 			 * replace
 			 * @param {number} endIndex Index of last character to replace
+			 * @returns {boolean}
 			 */
 			public setTextString(text: string, startIndex: number, endIndex: number): boolean;
 			/**
 			 * Moves the transformation point of the current selection.
 			 * @param {any} transformationPoint Shapes: 
+			 * @returns {void}
 			 */
 			public setTransformationPoint(transformationPoint: any): void;
 			/**
@@ -1529,11 +1790,13 @@ declare namespace Adobe {
 			 * @param {string} pathToSymbol a path to a symbol in the 
 			 * library that will be shared with the documents in the 
 			 * project
+			 * @returns {boolean}
 			 */
 			public shareAsset(pathToSymbol: string): boolean;
 			/**
 			 * This method will show any potential AME error to the user 
 			 * inside diesel.
+			 * @returns {void}
 			 */
 			public showEncoderError(): void;
 			/**
@@ -1551,11 +1814,13 @@ declare namespace Adobe {
 			 * transformation occurs, if omitted skew occurs about the 
 			 * transformation point. Acceptable values are: "top center", 
 			 * "right center", "bottom center", "left center".
+			 * @returns {void}
 			 */
 			public skewSelection(xSkew: number, ySkew: number, whichEdge: string): void;
 			/**
 			 * smooth the curve of each selected fill outline or curved 
 			 * line
+			 * @returns {void}
 			 */
 			public smoothSelection(): void;
 			/**
@@ -1574,6 +1839,7 @@ declare namespace Adobe {
 			 * max must be set for smoothing to be attempted, otherwise, 
 			 * smoothing will silently fail. A value of -1 means no 
 			 * smoothing max is set.
+			 * @returns {void}
 			 */
 			public smoothSelectionFromMenu(rate: number, min: number, max: number): void;
 			/**
@@ -1583,9 +1849,13 @@ declare namespace Adobe {
 			 * @param {boolean} bUseDocumentBounds If useDocumentBounds is 
 			 * true space the objects to the document bounds, otherwise 
 			 * uses the bounds of the selected objects.  Defaults to false.
+			 * @returns {void}
 			 */
 			public space(direction: string, bUseDocumentBounds: boolean): void;
-			/** Straighten the current selection */
+			/**
+			 * Straighten the current selection
+			 * @returns {void}
+			 */
 			public straightenSelection(): void;
 			/**
 			 * Modify > Shape > Straighten...
@@ -1595,6 +1865,7 @@ declare namespace Adobe {
 			 * @param {number} rate A uint betweeen 0 and 100. 0 is no 
 			 * straightening, 100 is the maximum amount of straightening we 
 			 * can perform in one operation.
+			 * @returns {void}
 			 */
 			public straightenSelectionFromMenu(rate: number): void;
 			/**
@@ -1602,9 +1873,13 @@ declare namespace Adobe {
 			 * selection must contain a graphic, button, movie clip, video 
 			 * or bitmap.
 			 * @param {string} name The name of the library item to use.
+			 * @returns {void}
 			 */
 			public swapElement(name: string): void;
-			/** swaps the Stroke and Fill colors. */
+			/**
+			 * swaps the Stroke and Fill colors.
+			 * @returns {void}
+			 */
 			public swapStrokeAndFill(): void;
 			/**
 			 * Added to support synchronize of active document with version 
@@ -1630,13 +1905,18 @@ declare namespace Adobe {
 			 * mechanism for authentication, so the credentials are stored 
 			 * and then subsequent java script execution would be 
 			 * successful.
+			 * @returns {boolean}
 			 */
 			public synchronizeWithHeadVersion(): boolean;
-			/** Execute a Test Movie operation on the document. */
+			/**
+			 * Execute a Test Movie operation on the document.
+			 * @returns {void}
+			 */
 			public testMovie(): void;
 			/**
 			 * Execute a Test Scene operation on the current scene of the 
 			 * document.
+			 * @returns {void}
 			 */
 			public testScene(): void;
 			/**
@@ -1655,6 +1935,7 @@ declare namespace Adobe {
 			 * similiar to curveFit, but it pertains to the corners of the 
 			 * bitmap image. Acceptable values are: "many corners", 
 			 * "normal", "few corners"
+			 * @returns {void}
 			 */
 			public traceBitmap(threshold: number, minimumArea: number, curveFit: any, cornerThreshold: any): void;
 			/**
@@ -1666,11 +1947,13 @@ declare namespace Adobe {
 			 * @param {number} b the (0,1) element in the matrix
 			 * @param {number} c the (1,0) element in the matrix.
 			 * @param {number} d the (1,1) element in the matrix
+			 * @returns {void}
 			 */
 			public transformSelection(a: number, b: number, c: number, d: number): void;
 			/**
 			 * This will move the center point of 3D Rotation.
 			 * @param {any} XYZ_Point Translation point.
+			 * @returns {void}
 			 */
 			public translate3DCenter(XYZ_Point: any): void;
 			/**
@@ -1679,13 +1962,23 @@ declare namespace Adobe {
 			 * Translation
 			 * @param {boolean} Transform_Mode If set to true -> Global 
 			 * transform mode
+			 * @returns {void}
 			 */
 			public translate3DSelection(XYZ_Translation: any, Transform_Mode: boolean): void;
-			/** Ungroups the current selection. */
+			/**
+			 * Ungroups the current selection.
+			 * @returns {void}
+			 */
 			public unGroup(): void;
-			/** Combine all selected shapes into a Drawing Object */
+			/**
+			 * Combine all selected shapes into a Drawing Object
+			 * @returns {boolean}
+			 */
 			public union(): boolean;
-			/** Unlocks all locked objects on the currently displayed frame */
+			/**
+			 * Unlocks all locked objects on the currently displayed frame
+			 * @returns {void}
+			 */
 			public unlockAllElements(): void;
 			/**
 			 * Posts a XMLUI dialog.  The object returned has properties 
@@ -1697,6 +1990,7 @@ declare namespace Adobe {
 			 * @param {string} fileURI A URI specifying the xml file 
 			 * defining the controls in the panel. Need to use the full 
 			 * path name.   
+			 * @returns {any}
 			 */
 			public xmlPanel(fileURI: string): any;
 		}

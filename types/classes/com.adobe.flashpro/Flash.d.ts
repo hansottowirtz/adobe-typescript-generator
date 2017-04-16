@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -7,46 +7,70 @@ declare namespace Adobe {
 		 * represented as fl or flash.
 		 */
 		class Flash extends Adobe.Csawlib.CSHostObject {
-			/** Reference to Actions panel object */
+			/**
+			 * Reference to Actions panel object
+			 * @type {Adobe.Flashpro.ActionsPanel}
+			 * @readonly
+			 */
 			public readonly actionsPanel: Adobe.Flashpro.ActionsPanel;
 			/**
 			 * The effect descriptor for the current effect being applied.  
 			 * This is used during the executeEffect() method invocation.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly activeEffect: any;
-			/** returns a URI to the application's parent directory */
+			/**
+			 * returns a URI to the application's parent directory
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly applicationURI: string;
 			/**
 			 * Corresponds to the classpath for AS3 set by the Preferences 
 			 * dialog.  String is a semi-colon (;) delimited list of paths.
+			 * @type {string}
 			 */
 			public as3PackagePaths: string;
 			/**
 			 * a CompilerErrors object, which provides access to the 
 			 * compiler errors panel
+			 * @type {Adobe.Flashpro.CompilerErrors}
+			 * @readonly
 			 */
 			public readonly compilerErrors: Adobe.Flashpro.CompilerErrors;
 			/**
 			 * The ComponentsPanel object is a property of the flash object 
 			 * which represents the component panel
+			 * @type {Adobe.Flashpro.ComponentPanel}
+			 * @readonly
 			 */
 			public readonly componentsPanel: Adobe.Flashpro.ComponentPanel;
 			/**
 			 * Returns the the full path name for the local users 
 			 * configuration directory as a platform specific file path.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly configDirectory: string;
-			/** gives a URI to the user config directory */
+			/**
+			 * gives a URI to the user config directory
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly configURI: string;
 			/**
 			 * When set to true, the Contact Sensitive Selection mode is 
 			 * enabled.
+			 * @type {boolean}
 			 */
 			public contactSensitiveSelection: boolean;
 			/**
 			 * Return an array of strings for the various types of 
 			 * documents that can be created (similar to the File-New 
 			 * command).
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly createNewDocList: any[];
 			/**
@@ -54,6 +78,8 @@ declare namespace Adobe {
 			 * documents that can be created (similar to the File-New 
 			 * command).   The entries in the array correspond directly to 
 			 * those (by index) with the entries in fl.createNewDocList.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly createNewDocListType: any[];
 			/**
@@ -61,14 +87,21 @@ declare namespace Adobe {
 			 * templates that can be created (similar to the File-New from 
 			 * template command). This returns the top level categories not 
 			 * the individual tempalte names themselves.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly createNewTemplateList: any[];
-			/** An array of document objects. */
+			/**
+			 * An array of document objects.
+			 * @type {any[]}
+			 * @readonly
+			 */
 			public readonly documents: any[];
 			/**
 			 * The drawingLayer is used for tools when they want to do some 
 			 * temporary drawing while dragging. For example, a selection 
 			 * style marquee.
+			 * @type {Adobe.Flashpro.DrawingLayer}
 			 */
 			public drawingLayer: Adobe.Flashpro.DrawingLayer;
 			/**
@@ -77,16 +110,26 @@ declare namespace Adobe {
 			 * array length corresponds to the number of effects (based on 
 			 * the XML parameter definition files, not the number of JSFL 
 			 * implementation files) registered at launch time.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly effects: any[];
 			/**
 			 * Comma delimited list of items in the global AS3 external 
 			 * library path.
+			 * @type {string}
 			 */
 			public externalLibraryPath: string;
-			/** true, if current fill has image */
+			/**
+			 * true, if current fill has image
+			 * @type {boolean}
+			 * @readonly
+			 */
 			public readonly fillHasBitmap_: boolean;
-			/** Path to the Flex SDK */
+			/**
+			 * Path to the Flex SDK
+			 * @type {string}
+			 */
 			public flexSDKPath: string;
 			/**
 			 * Returns an array of generic objects corresponding to the 
@@ -99,31 +142,43 @@ declare namespace Adobe {
 			 * minASVersion and the maxASVersion (inclusive) can be used to 
 			 * set the ActionScript version of the document, using the 
 			 * Document.asVersion property.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly installedPlayers: any[];
 			/**
 			 * Returns true (1) if the user preferences are currently set 
 			 * to "Show Start Page", otherwise it returns false (0).
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly inStartPageMode: number;
 			/**
 			 * Returns true (1) if application is currently connected to 
 			 * the internet via Ethernet, dialup modem, wireless.  If not 
 			 * connected, returns false (0).
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly isConnectedToInternet: number;
 			/**
 			 * Boolean value set to true when current fill color is 
 			 * gradient
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isFillGradient: boolean;
 			/**
 			 * Returns integer value 1 (if help is available), 0 otherwise.
+			 * @type {number}
+			 * @readonly
 			 */
 			public readonly isNewHelpContentAvailable: number;
 			/**
 			 * Boolean value set to true when current fill color is 
 			 * gradient
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly isStrokeGradient: any;
 			/**
@@ -135,59 +190,82 @@ declare namespace Adobe {
 			 * version 1.6. The current JS engine version (1.6) was added 
 			 * in Flash Pro CS3. For a full list of features: 
 			 * https://developer.mozilla.org/en/New_in_JavaScript_1.6
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly jsEngineVersion: string;
 			/**
 			 * Returns the 5 character code for the locale that the UI is 
 			 * running in.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly languageCode: string;
 			/**
 			 * Comma delimited list of items in the global AS3 library 
 			 * path.
+			 * @type {string}
 			 */
 			public libraryPath: string;
 			/**
 			 * The mathObject provides methods for matrix and point 
 			 * operations.  See spec for details.
+			 * @type {Adobe.Flashpro.mathObject}
+			 * @readonly
 			 */
 			public readonly Math: Adobe.Flashpro.mathObject;
 			/**
 			 * Returns an array of the complete filenames in the MRU (Most 
 			 * Recently Used) list that the authoring tool manages.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly mruRecentFileList: any[];
 			/**
 			 * This is an array of the file types in the MRU (Most Recently 
 			 * Used) list that the authoring tool manages.  This array 
 			 * corresponds to the array for fl.mruRecentFileList
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly mruRecentFileListType: any[];
 			/**
 			 * Returns the interger value of the object drawing mode. 0 = 
 			 * shape, 1 = drawing object, 2 = Primitive
+			 * @type {boolean}
 			 */
 			public objectDrawingMode: boolean;
-			/** Reference to Output Panel object */
+			/**
+			 * Reference to Output Panel object
+			 * @type {Adobe.Flashpro.OutputPanel}
+			 * @readonly
+			 */
 			public readonly outputPanel: Adobe.Flashpro.OutputPanel;
 			/**
 			 * Corresponds to the classpath for AS2 set by the Preferences 
 			 * dialog.  String is a semi-colon (;) delimited list of paths.
+			 * @type {string}
 			 */
 			public packagePaths: string;
-			/** Reference to presetPanel object */
+			/**
+			 * Reference to presetPanel object
+			 * @type {Adobe.Flashpro.PresetPanel}
+			 * @readonly
+			 */
 			public readonly presetPanel: Adobe.Flashpro.PresetPanel;
 			/**
 			 * set maximum size of the portion of the publish cache written 
 			 * to disk in megabytes, corresponds to Disk cache size limit 
 			 * value in Publish Cache section of Preferences dialog. 
 			 * defaults to 250 megabytes.
+			 * @type {number}
 			 */
 			public publishCacheDiskSizeMax: number;
 			/**
 			 * enable/disable publish cache, corresponds to Enable Publish 
 			 * Cache checkbox in Publish Cache section of Preferences 
 			 * dialog.
+			 * @type {boolean}
 			 */
 			public publishCacheEnabled: boolean;
 			/**
@@ -197,6 +275,7 @@ declare namespace Adobe {
 			 * larger will be written to disk, corresponds to Maximum size 
 			 * for memory cache entry value in Publish Cache section of 
 			 * Preferences dialog. defaults to 10 kilobytes.
+			 * @type {number}
 			 */
 			public publishCacheMemoryEntrySizeLimit: number;
 			/**
@@ -204,33 +283,52 @@ declare namespace Adobe {
 			 * memory in megabytes, corresponds to Memory cache size limit 
 			 * value in Publish Cache section of Preferences dialog. 
 			 * defaults to 10 megabytes.
+			 * @type {number}
 			 */
 			public publishCacheMemorySizeMax: number;
 			/**
 			 * enable the generate xml size report when a file is 
 			 * published.
+			 * @type {boolean}
 			 */
 			public publishSizeReportXMLEnabled: boolean;
-			/** An array containing all the screen Types in the system. */
+			/**
+			 * An array containing all the screen Types in the system.
+			 * @type {any[]}
+			 * @readonly
+			 */
 			public readonly screenTypes: any[];
 			/**
 			 * This property yields the path to the executing file. It does 
 			 * not transverse nested scripts called through runScript. In 
 			 * such a case it will return the parent script's path. The 
 			 * property is read only.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly scriptURI: string;
 			/**
 			 * Comma delimited list of items in the global AS3 source path.
+			 * @type {string}
 			 */
 			public sourcePath: string;
-			/** Return an instance of SpriteSheetExporter object */
+			/**
+			 * Return an instance of SpriteSheetExporter object
+			 * @type {Adobe.Flashpro.SpriteSheetExporter}
+			 * @readonly
+			 */
 			public readonly spriteSheetExporter: Adobe.Flashpro.SpriteSheetExporter;
-			/** true if stroke has a fill with bitmap */
+			/**
+			 * true if stroke has a fill with bitmap
+			 * @type {boolean}
+			 * @readonly
+			 */
 			public readonly strokeHasBitmap_: boolean;
 			/**
 			 * An array of initialized SWF panels. The panel has to be 
 			 * opened once to appear in the array.
+			 * @type {any[]}
+			 * @readonly
 			 */
 			public readonly swfPanels: any[];
 			/**
@@ -241,17 +339,23 @@ declare namespace Adobe {
 			 * any app wide tool settings should be a property of the Tools 
 			 * object, any options that are doucment specific should be a 
 			 * property of the Document object.
+			 * @type {Adobe.Flashpro.Tools}
+			 * @readonly
 			 */
 			public readonly tools: Adobe.Flashpro.Tools;
 			/**
 			 * Returns the long string version of the Flash authoring tool, 
 			 * including platform.
+			 * @type {string}
+			 * @readonly
 			 */
 			public readonly version: string;
 			/**
 			 * XMLUI top-level object.  Permits get/set of XMLUI properties 
 			 * during a XMLUI dialog, and makes it possible to 
 			 * accept/cancel the dialog programatically.
+			 * @type {Adobe.Flashpro.XMLUI}
+			 * @readonly
 			 */
 			public readonly xmlui: Adobe.Flashpro.XMLUI;
 			/**
@@ -265,6 +369,7 @@ declare namespace Adobe {
 			 * "timelineChanged", "documentSaved"
 			 * @param {any} callbackFunction The function to execute when 
 			 * the specified event occurs.
+			 * @returns {number}
 			 */
 			public addEventListener(eventType: string, callbackFunction: any): number;
 			/**
@@ -273,6 +378,7 @@ declare namespace Adobe {
 			 * connect. When the player connects to the debugger, the debug 
 			 * session begins.
 			 * @param {number} port The port number on which to connect.
+			 * @returns {boolean}
 			 */
 			public beginPortDebugSession(port: number): boolean;
 			/**
@@ -284,11 +390,13 @@ declare namespace Adobe {
 			 * @param {boolean} debugAS3 If 'debugAS3' is true, the 
 			 * ActionScript 3.0 Debugger opens and waits. If false, the 
 			 * ActionScript 2.0 Debugger opens waits instead.
+			 * @returns {boolean}
 			 */
 			public beginRemoteDebugSession(debugAS3: boolean): boolean;
 			/**
 			 * Bring Flash App to front if other application is in front of 
 			 * it
+			 * @returns {boolean}
 			 */
 			public bringToFront(): boolean;
 			/**
@@ -311,6 +419,7 @@ declare namespace Adobe {
 			 * enable on the Windows operating system's browse for file 
 			 * dialog. If this argument is omitted, all supported file 
 			 * types are enabled.
+			 * @returns {string}
 			 */
 			public browseForFileURL(browseType: string, title: string, previewArea: any, macFormat: string, winFormat: string): string;
 			/**
@@ -319,12 +428,14 @@ declare namespace Adobe {
 			 * @param {string} description Specifies the description of the 
 			 * Browse For Folder dialog.  If this argument is omitted, 
 			 * nothing is shown in the description area.
+			 * @returns {string}
 			 */
 			public browseForFolderURL(description: string): string;
 			/**
 			 * internal API related to code snippets HUD feature
 			 * @param {boolean} discardEdits if true, discard edits on 
 			 * cancel
+			 * @returns {void}
 			 */
 			public cancelCodeSnippetHUD(discardEdits: boolean): void;
 			/**
@@ -332,11 +443,13 @@ declare namespace Adobe {
 			 * selects the Clear Publish Cache menu item, but that menu 
 			 * item also deletes ASO files (files specific to AS2 
 			 * incrementaly compilation).
+			 * @returns {void}
 			 */
 			public clearPublishCache(): void;
 			/**
 			 * Copies a string value to the clipboard.
 			 * @param {string} text A string to be copied to the clipboard.
+			 * @returns {string}
 			 */
 			public clipCopyString(text: string): string;
 			/**
@@ -345,11 +458,13 @@ declare namespace Adobe {
 			 * (prompting the user if neccessary but don't quit the App).
 			 * @param {boolean} promptToSave Bool. true prompts the user to 
 			 * save via a dialog, false saves with no dialog.
+			 * @returns {void}
 			 */
 			public closeAll(promptToSave: boolean): void;
 			/**
 			 * Close all the movie windows that are currently open. Returns 
 			 * true if a player window was open, false if none were found.
+			 * @returns {boolean}
 			 */
 			public closeAllPlayerDocuments(): boolean;
 			/**
@@ -365,12 +480,14 @@ declare namespace Adobe {
 			 * If true, the user is prompted with the standard yes/no 
 			 * dialog box if there are unsaved changes.  Default value is 
 			 * true.
+			 * @returns {void}
 			 */
 			public closeDocument(documentObject: Document, bPromptToSaveChanges: boolean): void;
 			/**
 			 * internal API related to code snippets HUD feature
 			 * @param {string} codeSnippetsText
 			 * @param {string} instanceName
+			 * @returns {void}
 			 */
 			public codeSnippetHUDSelChanged(codeSnippetsText: string, instanceName: string): void;
 			/**
@@ -382,6 +499,7 @@ declare namespace Adobe {
 			 * disk
 			 * @param {string} libraryItemPath path to library item that 
 			 * you want to copy
+			 * @returns {boolean}
 			 */
 			public copyLibraryItem(filURI: string, libraryItemPath: string): boolean;
 			/**
@@ -393,18 +511,21 @@ declare namespace Adobe {
 			 * @param {string} docType Optional docType argument - 
 			 * "timeline", "presentation", "application". Default is 
 			 * "timeline"
+			 * @returns {Adobe.Flashpro.Document}
 			 */
 			public createDocument(docType: string): Adobe.Flashpro.Document;
 			/**
 			 * Creates an MD5 hash (checksum) from the contents of the 
 			 * input string.
 			 * @param {string} inString the string to be checksummed
+			 * @returns {string}
 			 */
 			public createMD5Hash(inString: string): string;
 			/**
 			 * Creates a new document based on the argument index.
 			 * @param {number} file_type This is a zero based index which 
 			 * corresponds to the list obtained by fl.createNewDocList.
+			 * @returns {void}
 			 */
 			public createNewDialog(file_type: number): void;
 			/**
@@ -413,6 +534,7 @@ declare namespace Adobe {
 			 * Creates a new document based on the template index. This is 
 			 * a zero based index which corresponds to the list obtained by 
 			 * fl.createNewTemplateList.
+			 * @returns {void}
 			 */
 			public createNewTemplateDialog(templateIndex: number): void;
 			/**
@@ -421,6 +543,7 @@ declare namespace Adobe {
 			 * @param {string} targetFileURI URI to FLA file you are saving
 			 * @param {string} sourceDirectory URI to folder you are 
 			 * packaging
+			 * @returns {boolean}
 			 */
 			public createUCFPackage(targetFileURI: string, sourceDirectory: string): boolean;
 			/**
@@ -458,6 +581,7 @@ declare namespace Adobe {
 			 * local file system like "file:///C|/Documents and 
 			 * Settings/user/My Documents/Version 
 			 * Cue/Flash_project/documents/Flash.fla"
+			 * @returns {boolean}
 			 */
 			public downloadLatestVersion(fileURI: string): boolean;
 			/**
@@ -470,12 +594,14 @@ declare namespace Adobe {
 			 * purposes and should not be used in effects that are deployed 
 			 * in the field. Once the effect completes the internal state 
 			 * is reset to again suppress immediate updates.
+			 * @returns {void}
 			 */
 			public enableImmediateUpdates(): void;
 			/**
 			 * Shuts down either the ActionScript 3.0 Debugger or the 
 			 * ActionScript 2.0 Debugger if waiting for a connection from 
 			 * the Flash Debug Player.
+			 * @returns {boolean}
 			 */
 			public endRemoteDebugSession(): boolean;
 			/**
@@ -486,6 +612,7 @@ declare namespace Adobe {
 			 * settings from.
 			 * @param {string} profileName The profile name to export. This 
 			 * parameter is optional.
+			 * @returns {string}
 			 */
 			public exportPublishProfileString(ucfURI: string, profileName: string): string;
 			/**
@@ -496,6 +623,7 @@ declare namespace Adobe {
 			 * FLA package (i.e. zip container)
 			 * @param {string} targetURI URI to target file that will be 
 			 * saved to local file system
+			 * @returns {boolean}
 			 */
 			public extractFileFromUCFPackage(ucfURI: string, internalSourceURI: string, targetURI: string): boolean;
 			/**
@@ -503,6 +631,7 @@ declare namespace Adobe {
 			 * RETURNS: TRUE if file exists on disk, or FALSE otherwise.
 			 * @param {string} fileURI a string containing the filepath to 
 			 * the file
+			 * @returns {boolean}
 			 */
 			public fileExists(fileURI: string): boolean;
 			/**
@@ -511,12 +640,14 @@ declare namespace Adobe {
 			 * undefined if no document is associated with the ID.
 			 * @param {number} docID Unique ID to identify an open Flash 
 			 * document.
+			 * @returns {Adobe.Flashpro.Document}
 			 */
 			public findDocumentDOM(docID: number): Adobe.Flashpro.Document;
 			/**
 			 * Returns an array of integers that contain the index of each 
 			 * of the documents with the given name.
 			 * @param {string} name The document name for the item to find.
+			 * @returns {any[]}
 			 */
 			public findDocumentIndex(name: string): any[];
 			/**
@@ -529,6 +660,7 @@ declare namespace Adobe {
 			 * fl.findObjectInDocByName(name, doc);
 			 * @param {Document} doc typically the current doc: var doc = 
 			 * fl.getDocumentDOM();
+			 * @returns {any}
 			 */
 			public findObjectInDocByName(name: string, doc: Document): any;
 			/**
@@ -542,6 +674,7 @@ declare namespace Adobe {
 			 * Element types defined by the elements.
 			 * @param {Document} doc typically the current doc: var doc = 
 			 * fl.getDocumentDOM();
+			 * @returns {any}
 			 */
 			public findObjectInDocByType(_type: string, doc: Document): any;
 			/**
@@ -550,6 +683,7 @@ declare namespace Adobe {
 			 * @param {string} name The name of the template to invoke.
 			 * @param {string} version The version of the template to 
 			 * invoke.
+			 * @returns {any}
 			 */
 			public findScreenType(name: string, version: string): any;
 			/**
@@ -559,9 +693,13 @@ declare namespace Adobe {
 			 * bytes.
 			 * @param {number} memType following number will correspond to 
 			 * returning the resource data in bytes.
+			 * @returns {number}
 			 */
 			public getAppMemoryInfo(memType: number): number;
-			/** Returns the currently active document. */
+			/**
+			 * Returns the currently active document.
+			 * @returns {Adobe.Flashpro.Document}
+			 */
 			public getDocumentDOM(): Adobe.Flashpro.Document;
 			/**
 			 * alizedString("$$$/PI/DrawingObject/Label/label=testLabel");
@@ -569,6 +707,7 @@ declare namespace Adobe {
 			 * fl_dictionary.dat, if the string ID doesn't exist, the 
 			 * default string in this case is 'testLabel' is returned
 			 * @param {string} stringID
+			 * @returns {string}
 			 */
 			public getLocalizedString(stringID: string): string;
 			/**
@@ -577,6 +716,7 @@ declare namespace Adobe {
 			 * setting (usually this is "Settings")
 			 * @param {string} keyName name of preference setting being 
 			 * retrieved
+			 * @returns {number}
 			 */
 			public getPrefInteger(keySection: string, keyName: string): number;
 			/**
@@ -585,6 +725,7 @@ declare namespace Adobe {
 			 * setting (usually this is "Settings")
 			 * @param {string} keyName name of preference setting being 
 			 * retrieved
+			 * @returns {string}
 			 */
 			public getPrefString(keySection: string, keyName: string): string;
 			/**
@@ -597,6 +738,7 @@ declare namespace Adobe {
 			 * false, the panelName parameter is assumed to be the English 
 			 * (unlocalized) name of the panel, which corresponds to the 
 			 * SWF filename without the file extension.
+			 * @returns {Adobe.Flashpro.SwfPanel}
 			 */
 			public getSwfPanel(panelName: string, useLocalizedPanelName: boolean): Adobe.Flashpro.SwfPanel;
 			/**
@@ -607,6 +749,7 @@ declare namespace Adobe {
 			 * fl.extractFileFromUCFPackage() function to retrieve the file 
 			 * from the FLA package.
 			 * @param {string} ucfURI URI to FLA file
+			 * @returns {any[]}
 			 */
 			public getUCFPackageListing(ucfURI: string): any[];
 			/**
@@ -615,6 +758,7 @@ declare namespace Adobe {
 			 * @param {string} instanceName
 			 * @param {any} rectObject this is a generic rect object, which 
 			 * has the following int properties: x, y, width, height
+			 * @returns {void}
 			 */
 			public invokeCodeSnippetHUD(codeSnippetsText: string, instanceName: string, rectObject: any): void;
 			/**
@@ -623,6 +767,7 @@ declare namespace Adobe {
 			 * @param {string} name The name of the template to invoke.
 			 * @param {string} version The version of the template to 
 			 * invoke.
+			 * @returns {any}
 			 */
 			public invokeScreenType(name: string, version: string): any;
 			/**
@@ -630,17 +775,20 @@ declare namespace Adobe {
 			 * @param {number} frameNumber
 			 * @param {number} beforeAddingSnippetLength
 			 * @param {number} afterAddingSnippetLength
+			 * @returns {void}
 			 */
 			public invokeSnippetInsertedHUD(frameNumber: number, beforeAddingSnippetLength: number, afterAddingSnippetLength: number): void;
 			/**
 			 * Checks if the font named in the string fontName exists in 
 			 * the current operating system.
 			 * @param {string} fontName
+			 * @returns {boolean}
 			 */
 			public isFontInstalled(fontName: string): boolean;
 			/**
 			 * determines if an ActionScript 3 identifier is valid or not
 			 * @param {string} identifier name of identifier
+			 * @returns {boolean}
 			 */
 			public isValidIdentifier(identifier: string): boolean;
 			/**
@@ -653,6 +801,7 @@ declare namespace Adobe {
 			 * @param {string} subCategory subCategory is not optional, 
 			 * however if you don't have anything to specify, use ""
 			 * @param {string} eventName this is the event name
+			 * @returns {void}
 			 */
 			public logPIPEvent(category: string, subCategory: string, eventName: string): void;
 			/**
@@ -663,6 +812,7 @@ declare namespace Adobe {
 			 * @param {string} URI the escaped unicode URI to map.
 			 * @param {boolean} returnMBCS if true UTF8 will be returned, 
 			 * otherwise MBCS.  default is false.
+			 * @returns {string}
 			 */
 			public mapPlayerURL(URI: string, returnMBCS: boolean): string;
 			/**
@@ -680,12 +830,14 @@ declare namespace Adobe {
 			 * file to be opened, which is expressed as a URL (file://URL). 
 			 * If the URL is relative, it is relative to the file that 
 			 * contains the script that called this function.
+			 * @returns {Adobe.Flashpro.Document}
 			 */
 			public openDocument(fileURI: string): Adobe.Flashpro.Document;
 			/**
 			 * Invoke the File-Open dialog and allow the user to choose a 
 			 * file to be loaded into the authoring tool. used for start 
 			 * page.
+			 * @returns {boolean}
 			 */
 			public openFileDialog(): boolean;
 			/**
@@ -694,6 +846,7 @@ declare namespace Adobe {
 			 * @param {string} scriptURI This is the full or relative path 
 			 * of the JSFL, AS, ASC, XML, TXT or other file that should be 
 			 * loaded into the Flash text editor.
+			 * @returns {void}
 			 */
 			public openScript(scriptURI: string): void;
 			/**
@@ -719,12 +872,14 @@ declare namespace Adobe {
 			 * to FLAs
 			 * @param {any} profileNameArray an array of profile names that 
 			 * correspond to the fileURIArray items
+			 * @returns {boolean}
 			 */
 			public publishDocument(flaURI: string, publishProfile: string, fileURIArray: any, profileNameArray: any): boolean;
 			/**
 			 * Quits flash prompting user to save unchanged documents
 			 * @param {boolean} bPromptIfNeeded This is an optional 
 			 * parameter.
+			 * @returns {void}
 			 */
 			public quit(bPromptIfNeeded: boolean): void;
 			/**
@@ -734,6 +889,7 @@ declare namespace Adobe {
 			 * provides a mechanism to improve the effects without 
 			 * relaunching the application.  Best if used in a command 
 			 * placed in the commands folder.
+			 * @returns {void}
 			 */
 			public reloadEffects(): void;
 			/**
@@ -746,11 +902,13 @@ declare namespace Adobe {
 			 * setting (usually this is "Settings")
 			 * @param {string} keyName name of preference setting being 
 			 * changed
+			 * @returns {boolean}
 			 */
 			public reloadPref(keySection: string, keyName: string): boolean;
 			/**
 			 * Rebuilds the Toolbar from the toolconfig.xml file. Used only 
 			 * when creating extensible tools.
+			 * @returns {void}
 			 */
 			public reloadTools(): void;
 			/**
@@ -764,6 +922,7 @@ declare namespace Adobe {
 			 * "timelineChanged"
 			 * @param {number} guid this is the return value of the 
 			 * fl.addEventListener() call
+			 * @returns {boolean}
 			 */
 			public removeEventListener(eventType: string, guid: number): boolean;
 			/**
@@ -772,6 +931,7 @@ declare namespace Adobe {
 			 * AS3 dialog that pops up from the main Preferences dialog.  
 			 * This is different than the per fla classpath set from the 
 			 * Publish Profiles dialog.
+			 * @returns {void}
 			 */
 			public resetAS3PackagePaths(): void;
 			/**
@@ -780,6 +940,7 @@ declare namespace Adobe {
 			 * AS2 dialog that pops up from the main Preferences dialog.  
 			 * This is different than the per fla classpath set from the 
 			 * Publish Profiles dialog.
+			 * @returns {void}
 			 */
 			public resetPackagePaths(): void;
 			/**
@@ -794,6 +955,7 @@ declare namespace Adobe {
 			 * the active document, the Document window might not revert 
 			 * until the script that calls this function finishes 
 			 * executing.
+			 * @returns {boolean}
 			 */
 			public revertDocument(documentObject: Document): boolean;
 			/**
@@ -824,6 +986,7 @@ declare namespace Adobe {
 			 * the active document, the Document window might not revert 
 			 * until the script that calls this function finishes 
 			 * executing.
+			 * @returns {boolean}
 			 */
 			public revertDocumentToLastVersion(documentObject: Document): boolean;
 			/**
@@ -838,12 +1001,14 @@ declare namespace Adobe {
 			 * runScript are passed as arguments to the function identified 
 			 * in argument 2 in the file identified in argument 1.  There 
 			 * can be any number of arguments.
+			 * @returns {void}
 			 */
 			public runScript(fileURI: string, funcName: string, arg: any): void;
 			/**
 			 * Saves all open documents, displaying the Save As dialog box 
 			 * for any documents that were not
 			 * previously been saved.
+			 * @returns {void}
 			 */
 			public saveAll(): void;
 			/**
@@ -877,6 +1042,7 @@ declare namespace Adobe {
 			 * the active document, the Document window might not revert 
 			 * until the script that calls this function finishes 
 			 * executing.
+			 * @returns {boolean}
 			 */
 			public saveAVersionOfDocument(documentObject: Document): boolean;
 			/**
@@ -892,6 +1058,7 @@ declare namespace Adobe {
 			 * is null or omitted , the document is saved with its current 
 			 * name; if the document is not yet saved, the save as dialog 
 			 * is displayed.
+			 * @returns {boolean}
 			 */
 			public saveDocument(document: Document, fileURI: string): boolean;
 			/**
@@ -901,6 +1068,7 @@ declare namespace Adobe {
 			 * successfully; false otherwise.
 			 * @param {Document} document document is a Document object 
 			 * that specifies the document to
+			 * @returns {boolean}
 			 */
 			public saveDocumentAs(document: Document): boolean;
 			/**
@@ -910,11 +1078,13 @@ declare namespace Adobe {
 			 * element.
 			 * @param {boolean} editMode true means that the element can be 
 			 * edited, false means the element will become selected.
+			 * @returns {boolean}
 			 */
 			public selectElement(element: any, editMode: boolean): boolean;
 			/**
 			 * Selects the specified tool in the tool palette.
 			 * @param {string} toolName name of the tool to select
+			 * @returns {boolean}
 			 */
 			public selectTool(toolName: string): boolean;
 			/**
@@ -927,6 +1097,7 @@ declare namespace Adobe {
 			 * @param {boolean} bActivateFrame This argument is present for 
 			 * consistency with the Dreamweaver JSAPI.  As in Fireworks, it 
 			 * is optional and it is ignored.
+			 * @returns {void}
 			 */
 			public setActiveWindow(document: Document, bActivateFrame: boolean): void;
 			/**
@@ -936,6 +1107,7 @@ declare namespace Adobe {
 			 * @param {string} keyName name of preference setting being 
 			 * changed
 			 * @param {number} keyValue integer value to set
+			 * @returns {void}
 			 */
 			public setPrefInteger(keySection: string, keyName: string, keyValue: number): void;
 			/**
@@ -945,6 +1117,7 @@ declare namespace Adobe {
 			 * @param {string} keyName name of preference setting being 
 			 * changed
 			 * @param {string} keyValue string value to set
+			 * @returns {void}
 			 */
 			public setPrefString(keySection: string, keyName: string, keyValue: string): void;
 			/**
@@ -954,6 +1127,7 @@ declare namespace Adobe {
 			 * Preferences.xml" file.
 			 * @param {string} xmlString XML data passed as a string, which 
 			 * contains the Project panel's preferences.
+			 * @returns {void}
 			 */
 			public setProjectPrefsAsXML(xmlString: string): void;
 			/**
@@ -961,6 +1135,7 @@ declare namespace Adobe {
 			 * active tab.
 			 * @param {number} tabIndex zero based index, that specifies 
 			 * which tab to display in the help panel
+			 * @returns {void}
 			 */
 			public showHelpTab(tabIndex: number): void;
 			/**
@@ -970,6 +1145,7 @@ declare namespace Adobe {
 			 * to re-enable the alert.
 			 * @param {boolean} show Use false to hide the script warning 
 			 * alert. Use true to re-enable it.
+			 * @returns {void}
 			 */
 			public showIdleMessage(show: boolean): void;
 			/**
@@ -978,6 +1154,7 @@ declare namespace Adobe {
 			 * @param {boolean} showPage True to enable the Start Page, 
 			 * false to disable and change the launch preference to "New 
 			 * Document".
+			 * @returns {void}
 			 */
 			public showStartPage(showPage: boolean): void;
 			/**
@@ -1009,6 +1186,7 @@ declare namespace Adobe {
 			 * the active document, the Document window might not revert 
 			 * until the script that calls this function finishes 
 			 * executing.
+			 * @returns {boolean}
 			 */
 			public synchronizeDocumentWithHeadVersion(documentObject: any): boolean;
 			/**
@@ -1016,11 +1194,13 @@ declare namespace Adobe {
 			 * the trace statement in ActionScript.
 			 * @param {any} message message is the string that will be 
 			 * displayed in output panel
+			 * @returns {void}
 			 */
 			public trace(message: any): void;
 			/**
 			 * Updates the help content. Will force internet connection if 
 			 * it doesn't exist (for example on dial-up).
+			 * @returns {void}
 			 */
 			public updateHelpContents(): void;
 			/**
@@ -1032,6 +1212,7 @@ declare namespace Adobe {
 			 * @param {string} fileURI A URI specifying the xml file 
 			 * defining the controls in the panel. Need to use the full 
 			 * path name.
+			 * @returns {any}
 			 */
 			public xmlPanel(fileURI: string): any;
 		}

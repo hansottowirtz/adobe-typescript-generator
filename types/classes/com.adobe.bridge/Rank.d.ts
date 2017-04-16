@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -22,13 +22,21 @@ declare namespace Adobe {
 			/**
 			 * The localized display name for the corresponding field in 
 			 * the Find dialog.
+			 * @type {string}
 			 */
 			public displayName: string;
-			/** The property name for the ranking property. */
+			/**
+			 * The property name for the ranking property.
+			 * @type {string}
+			 */
 			public valueName: string;
+			/**
+			 * @returns {void}
+			 */
 			public constructor();
 			/**
 			 * @param {any[]} args
+			 * @returns {void}
 			 */
 			protected createWithArgs(args: any[]): void;
 		}

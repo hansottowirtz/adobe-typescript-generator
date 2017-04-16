@@ -1,10 +1,14 @@
-/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
 		/** Guides associated with the document */
 		class Guides extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** number of elements in the collection */
+			/**
+			 * number of elements in the collection
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * a guide
@@ -12,23 +16,18 @@ declare namespace Adobe {
 			 * whether the guide is vertical or horizontal
 			 * @param {any} coordinate location of the guide from origin of 
 			 * image
+			 * @returns {Adobe.Photoshop.Guide}
 			 */
 			public add(direction: Adobe.Photoshop.Direction, coordinate: any): Adobe.Photoshop.Guide;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx
+			 * @returns {Adobe.Photoshop.Guide}
 			 */
-			public index(idx: number): Adobe.Photoshop.Guide;
+			[idx: number]: Adobe.Photoshop.Guide;
 			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} idx
+			 * @returns {void}
 			 */
-			public nextNameIndex(idx: number): number;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} index
-			 */
-			public nextValue(index: number): any;
 			public removeAll(): void;
 		}
 	}

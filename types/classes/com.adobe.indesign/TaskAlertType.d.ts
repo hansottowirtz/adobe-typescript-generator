@@ -1,22 +1,53 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class TaskAlertType extends Adobe.Csawlib.CSEnumBase {
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
-			/** error message */
+			/**
+			 * error message
+			 * @type {Adobe.Indesign.TaskAlertType}
+			 * @readonly
+			 */
 			public static readonly TASK_ERROR: Adobe.Indesign.TaskAlertType;
-			/** Information message */
+			/**
+			 * Information message
+			 * @type {Adobe.Indesign.TaskAlertType}
+			 * @readonly
+			 */
 			public static readonly TASK_INFORMATION: Adobe.Indesign.TaskAlertType;
-			/** Warning message */
+			/**
+			 * Warning message
+			 * @type {Adobe.Indesign.TaskAlertType}
+			 * @readonly
+			 */
 			public static readonly TASK_WARNING: Adobe.Indesign.TaskAlertType;
-			/** Alias for TASK_ERROR. error message */
+			/**
+			 * Alias for TASK_ERROR. error message
+			 * @type {Adobe.Indesign.TaskAlertType}
+			 * @readonly
+			 */
 			public static readonly taskError: Adobe.Indesign.TaskAlertType;
-			/** Alias for TASK_INFORMATION. Information message */
+			/**
+			 * Alias for TASK_INFORMATION. Information message
+			 * @type {Adobe.Indesign.TaskAlertType}
+			 * @readonly
+			 */
 			public static readonly taskInformation: Adobe.Indesign.TaskAlertType;
-			/** Alias for TASK_WARNING. Warning message */
+			/**
+			 * Alias for TASK_WARNING. Warning message
+			 * @type {Adobe.Indesign.TaskAlertType}
+			 * @readonly
+			 */
 			public static readonly taskWarning: Adobe.Indesign.TaskAlertType;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

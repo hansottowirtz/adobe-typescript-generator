@@ -1,106 +1,225 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		/** XMLItem */
 		class XMLElement extends Adobe.Indesign.XMLItem {
-			/** A collection of table cells. */
+			/**
+			 * A collection of table cells.
+			 * @type {Adobe.Indesign.Cells}
+			 * @readonly
+			 */
 			public readonly cells: Adobe.Indesign.Cells;
-			/** A collection of characters. */
+			/**
+			 * A collection of characters.
+			 * @type {Adobe.Indesign.Characters}
+			 * @readonly
+			 */
 			public readonly characters: Adobe.Indesign.Characters;
 			/**
 			 * The contents of the text. Can return: String or 
 			 * SpecialCharacters enumerator.
+			 * @type {any}
 			 */
 			public contents: any;
-			/** A collection of EPS files. */
+			/**
+			 * A collection of EPS files.
+			 * @type {Adobe.Indesign.EPSs}
+			 * @readonly
+			 */
 			public readonly epss: Adobe.Indesign.EPSs;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Indesign.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Indesign.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Indesign.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Indesign.Events;
 			/**
 			 * A collection of imported graphics in any graphic file format 
 			 * (vector, metafile, or bitmap).
+			 * @type {Adobe.Indesign.Graphics}
+			 * @readonly
 			 */
 			public readonly graphics: Adobe.Indesign.Graphics;
-			/** The unique ID of the XMLElement. */
+			/**
+			 * The unique ID of the XMLElement.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
 			/**
 			 * A collection of bitmap images in any bitmap file format 
 			 * (including TIFF, JPEG, or GIF).
+			 * @type {Adobe.Indesign.Images}
+			 * @readonly
 			 */
 			public readonly images: Adobe.Indesign.Images;
-			/** The index of the XMLElement within its containing object. */
+			/**
+			 * The index of the XMLElement within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
-			/** A collection of insertion points. */
+			/**
+			 * A collection of insertion points.
+			 * @type {Adobe.Indesign.InsertionPoints}
+			 * @readonly
+			 */
 			public readonly insertionPoints: Adobe.Indesign.InsertionPoints;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** A collection of lines. */
+			/**
+			 * A collection of lines.
+			 * @type {Adobe.Indesign.Lines}
+			 * @readonly
+			 */
 			public readonly lines: Adobe.Indesign.Lines;
 			/**
 			 * The XML tag applied to the element. Can also accept: String.
+			 * @type {Adobe.Indesign.XMLTag}
 			 */
 			public markupTag: Adobe.Indesign.XMLTag;
 			/**
 			 * The page items collection, which can be used to process all 
 			 * page items in a container (such as a document, page, or 
 			 * group), regardless of type.
+			 * @type {Adobe.Indesign.PageItems}
+			 * @readonly
 			 */
 			public readonly pageItems: Adobe.Indesign.PageItems;
-			/** A collection of paragraphs. */
+			/**
+			 * A collection of paragraphs.
+			 * @type {Adobe.Indesign.Paragraphs}
+			 * @readonly
+			 */
 			public readonly paragraphs: Adobe.Indesign.Paragraphs;
-			/** The parent of the XMLElement (a Document or XMLElement). */
+			/**
+			 * The parent of the XMLElement (a Document or XMLElement).
+			 * @type {any}
+			 * @readonly
+			 */
 			public readonly parent: any;
-			/** The story that contains the text. */
+			/**
+			 * The story that contains the text.
+			 * @type {Adobe.Indesign.Story}
+			 * @readonly
+			 */
 			public readonly parentStory: Adobe.Indesign.Story;
-			/** A collection of PDF files. */
+			/**
+			 * A collection of PDF files.
+			 * @type {Adobe.Indesign.PDFs}
+			 * @readonly
+			 */
 			public readonly pdfs: Adobe.Indesign.PDFs;
-			/** A collection of PICT graphics. */
+			/**
+			 * A collection of PICT graphics.
+			 * @type {Adobe.Indesign.PICTs}
+			 * @readonly
+			 */
 			public readonly picts: Adobe.Indesign.PICTs;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
-			/** A collection of stories. */
+			/**
+			 * A collection of stories.
+			 * @type {Adobe.Indesign.Stories}
+			 * @readonly
+			 */
 			public readonly stories: Adobe.Indesign.Stories;
 			/**
 			 * The insertion point before the table in the story containing 
 			 * the table.
+			 * @type {Adobe.Indesign.InsertionPoint}
+			 * @readonly
 			 */
 			public readonly storyOffset: Adobe.Indesign.InsertionPoint;
-			/** A collection of tables. */
+			/**
+			 * A collection of tables.
+			 * @type {Adobe.Indesign.Tables}
+			 * @readonly
+			 */
 			public readonly tables: Adobe.Indesign.Tables;
-			/** A collection of text columns. */
+			/**
+			 * A collection of text columns.
+			 * @type {Adobe.Indesign.TextColumns}
+			 * @readonly
+			 */
 			public readonly textColumns: Adobe.Indesign.TextColumns;
-			/** A collection of text objects. */
+			/**
+			 * A collection of text objects.
+			 * @type {Adobe.Indesign.Texts}
+			 * @readonly
+			 */
 			public readonly texts: Adobe.Indesign.Texts;
-			/** A collection of text style ranges. */
+			/**
+			 * A collection of text style ranges.
+			 * @type {Adobe.Indesign.TextStyleRanges}
+			 * @readonly
+			 */
 			public readonly textStyleRanges: Adobe.Indesign.TextStyleRanges;
-			/** A collection of WMF graphics. */
+			/**
+			 * A collection of WMF graphics.
+			 * @type {Adobe.Indesign.WMFs}
+			 * @readonly
+			 */
 			public readonly wmfs: Adobe.Indesign.WMFs;
-			/** A collection of words. */
+			/**
+			 * A collection of words.
+			 * @type {Adobe.Indesign.Words}
+			 * @readonly
+			 */
 			public readonly words: Adobe.Indesign.Words;
-			/** A collection of XML attributes. */
+			/**
+			 * A collection of XML attributes.
+			 * @type {Adobe.Indesign.XMLAttributes}
+			 * @readonly
+			 */
 			public readonly xmlAttributes: Adobe.Indesign.XMLAttributes;
-			/** A collection of XML comments. */
+			/**
+			 * A collection of XML comments.
+			 * @type {Adobe.Indesign.XMLComments}
+			 * @readonly
+			 */
 			public readonly xmlComments: Adobe.Indesign.XMLComments;
 			/**
 			 * The text content or page item referred to by the element. 
 			 * Can return: Text, Story, PageItem, Movie, Sound, Graphic, 
 			 * Table or Cell.
+			 * @type {any}
+			 * @readonly
 			 */
 			public readonly xmlContent: any;
-			/** A collection of XML elements. */
+			/**
+			 * A collection of XML elements.
+			 * @type {Adobe.Indesign.XMLElements}
+			 * @readonly
+			 */
 			public readonly xmlElements: Adobe.Indesign.XMLElements;
-			/** A collection of XML instructions. */
+			/**
+			 * A collection of XML instructions.
+			 * @type {Adobe.Indesign.XMLInstructions}
+			 * @readonly
+			 */
 			public readonly xmlInstructions: Adobe.Indesign.XMLInstructions;
-			/** A collection of XML items. */
+			/**
+			 * A collection of XML items.
+			 * @type {Adobe.Indesign.XMLItems}
+			 * @readonly
+			 */
 			public readonly xmlItems: Adobe.Indesign.XMLItems;
 			/**
 			 * Adds an event listener.
@@ -109,6 +228,7 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.EventListener}
 			 */
 			public addEventListenerXMLElement(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Indesign.EventListener;
 			/**
@@ -118,6 +238,7 @@ declare namespace Adobe {
 			 * String or CellStyle.
 			 * @param {boolean} clearingOverridesParam If true, removes 
 			 * local formatting before applying the cell style. (Optional)
+			 * @returns {void}
 			 */
 			public applyCellStyle(usingParam: any, clearingOverridesParam: boolean): void;
 			/**
@@ -125,6 +246,7 @@ declare namespace Adobe {
 			 * the XMLElement.
 			 * @param {any} usingParam The character style to apply. Can 
 			 * accept: String or CharacterStyle.
+			 * @returns {void}
 			 */
 			public applyCharacterStyle(usingParam: any): void;
 			/**
@@ -139,6 +261,7 @@ declare namespace Adobe {
 			 * clearingOverridesThroughRootObjectStyleParam If true, clears 
 			 * unchecked category attributes through the root style. 
 			 * (Optional)
+			 * @returns {void}
 			 */
 			public applyObjectStyle(usingParam: any, clearingOverridesParam: boolean, clearingOverridesThroughRootObjectStyleParam: boolean): void;
 			/**
@@ -148,6 +271,7 @@ declare namespace Adobe {
 			 * accept: String or ParagraphStyle.
 			 * @param {boolean} clearingOverridesParam If true, clears any 
 			 * attributes before applying the style. (Optional)
+			 * @returns {void}
 			 */
 			public applyParagraphStyle(usingParam: any, clearingOverridesParam: boolean): void;
 			/**
@@ -157,6 +281,7 @@ declare namespace Adobe {
 			 * accept: String or TableStyle.
 			 * @param {boolean} clearingOverridesParam If true, removes 
 			 * local formatting before applying the table style. (Optional)
+			 * @returns {void}
 			 */
 			public applyTableStyle(usingParam: any, clearingOverridesParam: boolean): void;
 			/**
@@ -174,6 +299,7 @@ declare namespace Adobe {
 			 * version. (Optional)
 			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
+			 * @returns {Adobe.Indesign.BackgroundTask}
 			 */
 			public asynchronousExportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, versionCommentsParam: string, forceSaveParam: boolean): Adobe.Indesign.BackgroundTask;
 			/**
@@ -181,6 +307,7 @@ declare namespace Adobe {
 			 * text with the change to value.
 			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
+			 * @returns {any}
 			 */
 			public changeGrep(reverseOrderParam: boolean): any;
 			/**
@@ -188,6 +315,7 @@ declare namespace Adobe {
 			 * text with the change to value.
 			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
+			 * @returns {any}
 			 */
 			public changeText(reverseOrderParam: boolean): any;
 			/**
@@ -195,6 +323,7 @@ declare namespace Adobe {
 			 * replaces the text with the change character type value.
 			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
+			 * @returns {any}
 			 */
 			public changeTransliterate(reverseOrderParam: boolean): any;
 			/**
@@ -203,6 +332,7 @@ declare namespace Adobe {
 			 * table row.
 			 * @param {XMLTag} cellTagParam The XML tag that indicates a 
 			 * table cell.
+			 * @returns {Adobe.Indesign.Table}
 			 */
 			public convertElementToTable(rowTagParam: XMLTag, cellTagParam: XMLTag): Adobe.Indesign.Table;
 			/**
@@ -210,9 +340,13 @@ declare namespace Adobe {
 			 * element.
 			 * @param {string} usingParam The name to give to the new 
 			 * attribute. (Optional)
+			 * @returns {Adobe.Indesign.XMLAttribute}
 			 */
 			public convertToAttribute(usingParam: string): Adobe.Indesign.XMLAttribute;
-			/** Duplicates the XMLElement. */
+			/**
+			 * Duplicates the XMLElement.
+			 * @returns {Adobe.Indesign.XMLItem}
+			 */
 			public duplicate(): Adobe.Indesign.XMLItem;
 			/**
 			 * Evaluates an XPath expression starting at this XML element 
@@ -220,6 +354,7 @@ declare namespace Adobe {
 			 * @param {string} usingParam The XPath expression.
 			 * @param {any[]} prefixMappingTableParam The namespace mapping 
 			 * table. Can accept: Array of Arrays of 2 Strings. (Optional)
+			 * @returns {any}
 			 */
 			public evaluateXPathExpression(usingParam: string, prefixMappingTableParam: any[]): any;
 			/**
@@ -237,34 +372,40 @@ declare namespace Adobe {
 			 * version. (Optional)
 			 * @param {boolean} forceSaveParam If true, forcibly saves a 
 			 * version. (Optional)
+			 * @returns {void}
 			 */
 			public exportFile(formatParam: any, toParam: File, showingOptionsParam: boolean, usingParam: PDFExportPreset, versionCommentsParam: string, forceSaveParam: boolean): void;
 			/**
 			 * Finds text that matches the find what value.
 			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
+			 * @returns {any}
 			 */
 			public findGrep(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find what value.
 			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
+			 * @returns {any}
 			 */
 			public findText(reverseOrderParam: boolean): any;
 			/**
 			 * Finds text that matches the find character type value.
 			 * @param {boolean} reverseOrderParam If true, returns the 
 			 * results in reverse order. (Optional)
+			 * @returns {any}
 			 */
 			public findTransliterate(reverseOrderParam: boolean): any;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
 			 * Imports the specified XML file into an InDesign document.
 			 * @param {File} fromParam The XML file.
+			 * @returns {void}
 			 */
 			public importXML(fromParam: File): void;
 			/**
@@ -277,6 +418,7 @@ declare namespace Adobe {
 			 * after the element does not become part of the content of the 
 			 * element. Instead, it becomes content of the parent of the 
 			 * element.
+			 * @returns {Adobe.Indesign.Text}
 			 */
 			public insertTextAsContent(usingParam: any, positionParam: XMLElementPosition): Adobe.Indesign.Text;
 			/**
@@ -284,6 +426,7 @@ declare namespace Adobe {
 			 * preserving existing content.
 			 * @param {any} usingParam The object to mark up. Can accept: 
 			 * PageItem, Movie, Sound, Graphic, Story, Text or Table.
+			 * @returns {void}
 			 */
 			public markup(usingParam: any): void;
 			/**
@@ -293,6 +436,7 @@ declare namespace Adobe {
 			 * @param {any} referenceParam The reference object. Note: 
 			 * Required when the to parameter specifies before or after. . 
 			 * Can accept: XMLItem or Text. (Optional)
+			 * @returns {Adobe.Indesign.XMLElement}
 			 */
 			public move(toParam: LocationOptions, referenceParam: any): Adobe.Indesign.XMLElement;
 			/**
@@ -306,6 +450,7 @@ declare namespace Adobe {
 			 * associates the XML element with the existing page item and 
 			 * moves the page item (rather than a copy of the page item). 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.PageItem}
 			 */
 			public placeIntoCopy(onParam: any, placePointParam: any[], copyItemParam: PageItem, retainExistingFrameParam: boolean): Adobe.Indesign.PageItem;
 			/**
@@ -317,6 +462,7 @@ declare namespace Adobe {
 			 * @param {any[]} geometricBoundsParam The bounds of the page 
 			 * item excluding the stroke width, in the format [y1, x1, y2, 
 			 * x2].
+			 * @returns {Adobe.Indesign.PageItem}
 			 */
 			public placeIntoFrame(onParam: any, geometricBoundsParam: any[]): Adobe.Indesign.PageItem;
 			/**
@@ -326,12 +472,14 @@ declare namespace Adobe {
 			 * @param {boolean} retainExistingFrameParam If true, moves the 
 			 * existing page item. If false, moves a copy of the page item. 
 			 * (Optional)
+			 * @returns {Adobe.Indesign.PageItem}
 			 */
 			public placeIntoInlineCopy(copyItemParam: PageItem, retainExistingFrameParam: boolean): Adobe.Indesign.PageItem;
 			/**
 			 * Places an XML element into an inline frame.
 			 * @param {any[]} dimensionsParam The dimensions of the inline 
 			 * frame in the format [width, height].
+			 * @returns {Adobe.Indesign.PageItem}
 			 */
 			public placeIntoInlineFrame(dimensionsParam: any[]): Adobe.Indesign.PageItem;
 			/**
@@ -339,9 +487,13 @@ declare namespace Adobe {
 			 * content.
 			 * @param {any} usingParam The object to place into. Can 
 			 * accept: Story, PageItem, Graphic, Movie or Sound.
+			 * @returns {void}
 			 */
 			public placeXML(usingParam: any): void;
-			/** Deletes the XMLElement. */
+			/**
+			 * Deletes the XMLElement.
+			 * @returns {void}
+			 */
 			public remove(): void;
 			/**
 			 * Removes the event listener.
@@ -350,6 +502,7 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerXMLElement(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
 			/**
@@ -357,6 +510,7 @@ declare namespace Adobe {
 			 * @param {SelectionOptions} existingSelectionParam The 
 			 * selection status of the XMLElement in relation to previously 
 			 * selected objects. (Optional)
+			 * @returns {void}
 			 */
 			public select(existingSelectionParam: SelectionOptions): void;
 			/**
@@ -365,6 +519,7 @@ declare namespace Adobe {
 			 * @param {string} usingParam The file path to the import file.
 			 * @param {string} relativeBasePathParam Base path used to 
 			 * resolve relative paths. (Optional)
+			 * @returns {Adobe.Indesign.PageItem}
 			 */
 			public setContent(usingParam: string, relativeBasePathParam: string): Adobe.Indesign.PageItem;
 			/**
@@ -373,16 +528,24 @@ declare namespace Adobe {
 			 * the object.
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new XMLElement (Optional)
+			 * @returns {Adobe.Indesign.Asset}
 			 */
 			public store(usingParam: Library, withPropertiesParam: any): Adobe.Indesign.Asset;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
-			/** Untags an element. */
+			/**
+			 * Untags an element.
+			 * @returns {void}
+			 */
 			public untag(): void;
 			/**
 			 * Validates the element against a DTD.
 			 * @param {number} maximumErrorsParam The maximum number of 
 			 * validation errors to generate. (Optional)
+			 * @returns {any}
 			 */
 			public validate(maximumErrorsParam: number): any;
 		}

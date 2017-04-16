@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.bridge/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.bridge/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Bridge {
@@ -22,37 +22,81 @@ declare namespace Adobe {
 		 * update the data.
 		 */
 		class CacheElement extends Adobe.Csawlib.CSHostObject {
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public badges: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public cameraRaw: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public children: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public fullsize: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public icon: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public immediate: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public item: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public itemContent: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public linkTarget: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public metadata: Adobe.Bridge.Infoset;
-			/** The path of the asset associated with this object. */
+			/**
+			 * The path of the asset associated with this object.
+			 * @type {string}
+			 * @readonly
+			 */
 			public readonly path: string;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public preview: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public quickMetadata: Adobe.Bridge.Infoset;
-			/** Core data set. */
+			/**
+			 * Core data set.
+			 * @type {Adobe.Bridge.Infoset}
+			 */
 			public thumbnail: Adobe.Bridge.Infoset;
 			/**
 			 * Calls the authenticate() method defined in the 
 			 * ExtensionHandler object associated with this element.
+			 * @returns {void}
 			 */
 			public doAuthentication(): void;
 		}

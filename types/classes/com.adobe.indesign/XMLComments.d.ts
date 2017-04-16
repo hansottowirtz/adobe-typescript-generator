@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class XMLComments extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new XML comment.
@@ -14,25 +18,40 @@ declare namespace Adobe {
 			 * or Long Integer. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new XMLComment (Optional)
+			 * @returns {Adobe.Indesign.XMLComment}
 			 */
 			public add(valueParam: string, storyOffsetParam: any, withPropertiesParam: any): Adobe.Indesign.XMLComment;
-			/** Returns any XMLComment in the collection. */
+			/**
+			 * Returns any XMLComment in the collection.
+			 * @returns {Adobe.Indesign.XMLComment}
+			 */
 			public anyItem(): Adobe.Indesign.XMLComment;
-			/** Displays the number of elements in the XMLComment. */
+			/**
+			 * Displays the number of elements in the XMLComment.
+			 * @returns {number}
+			 */
 			public count(): number;
-			/** Returns every XMLComment in the collection. */
+			/**
+			 * Returns every XMLComment in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first XMLComment in the collection. */
+			/**
+			 * Returns the first XMLComment in the collection.
+			 * @returns {Adobe.Indesign.XMLComment}
+			 */
 			public firstItem(): Adobe.Indesign.XMLComment;
 			/**
 			 * Returns the XMLComment with the specified index or name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Indesign.XMLComment}
 			 */
 			public item(indexParam: any): Adobe.Indesign.XMLComment;
 			/**
 			 * Returns the XMLComment with the specified ID.
 			 * @param {number} idParam The ID.
+			 * @returns {Adobe.Indesign.XMLComment}
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.XMLComment;
 			/**
@@ -43,27 +62,37 @@ declare namespace Adobe {
 			 * @param {any} toParam The XMLComment, index, or name at the 
 			 * end of the range. Can accept: XMLComment, Long Integer or 
 			 * String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last XMLComment in the collection. */
+			/**
+			 * Returns the last XMLComment in the collection.
+			 * @returns {Adobe.Indesign.XMLComment}
+			 */
 			public lastItem(): Adobe.Indesign.XMLComment;
-			/** Returns the middle XMLComment in the collection. */
+			/**
+			 * Returns the middle XMLComment in the collection.
+			 * @returns {Adobe.Indesign.XMLComment}
+			 */
 			public middleItem(): Adobe.Indesign.XMLComment;
 			/**
 			 * Returns the XMLComment whose index follows the specified 
 			 * XMLComment in the collection.
 			 * @param {XMLComment} objParam The XMLComment whose index 
 			 * comes before the desired XMLComment. 
+			 * @returns {Adobe.Indesign.XMLComment}
 			 */
 			public nextItem(objParam: XMLComment): Adobe.Indesign.XMLComment;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -71,6 +100,7 @@ declare namespace Adobe {
 			 * specified index.
 			 * @param {XMLComment} objParam The index of the XMLComment 
 			 * that follows the desired XMLComment.
+			 * @returns {Adobe.Indesign.XMLComment}
 			 */
 			public previousItem(objParam: XMLComment): Adobe.Indesign.XMLComment;
 		}

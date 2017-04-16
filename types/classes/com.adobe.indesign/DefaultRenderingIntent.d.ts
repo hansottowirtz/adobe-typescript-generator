@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
@@ -9,6 +9,8 @@ declare namespace Adobe {
 			 * output of a particular device. Note: Leaves colors that fall 
 			 * inside the destination gamut unchanged and clips 
 			 * out-of-gamut colors.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly ABSOLUTE_COLORIMETRIC: Adobe.Indesign.DefaultRenderingIntent;
 			/**
@@ -17,20 +19,30 @@ declare namespace Adobe {
 			 * suitable for proofing to simulate the output of a particular 
 			 * device. Note: Leaves colors that fall inside the destination 
 			 * gamut unchanged and clips out-of-gamut colors.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly absoluteColorimetric: Adobe.Indesign.DefaultRenderingIntent;
+			/**
+			 * @type {Adobe.Csawlib.CSEnumSharedCache}
+			 * @readonly
+			 */
 			public static readonly enumCache: Adobe.Csawlib.CSEnumSharedCache;
 			/**
 			 * Alias for PERCEPTUAL. Aims to preserve the visual 
 			 * relationship between colors so they are perceived as natural 
 			 * to the human eye, even though the color values themselves 
 			 * may change.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly perceptual: Adobe.Indesign.DefaultRenderingIntent;
 			/**
 			 * Aims to preserve the visual relationship between colors so 
 			 * they are perceived as natural to the human eye, even though 
 			 * the color values themselves may change.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly PERCEPTUAL: Adobe.Indesign.DefaultRenderingIntent;
 			/**
@@ -40,6 +52,8 @@ declare namespace Adobe {
 			 * reproducible color in the destination color space. Note: 
 			 * Preserves more of the original colors in an image than 
 			 * perceptual rendering intent does.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly RELATIVE_COLORIMETRIC: Adobe.Indesign.DefaultRenderingIntent;
 			/**
@@ -50,19 +64,28 @@ declare namespace Adobe {
 			 * color in the destination color space. Note: Preserves more 
 			 * of the original colors in an image than perceptual rendering 
 			 * intent does.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly relativeColorimetric: Adobe.Indesign.DefaultRenderingIntent;
 			/**
 			 * Alias for SATURATION. Tries to produce vivid colors in an 
 			 * image at the expense of color accuracy.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly saturation: Adobe.Indesign.DefaultRenderingIntent;
 			/**
 			 * Tries to produce vivid colors in an image at the expense of 
 			 * color accuracy.
+			 * @type {Adobe.Indesign.DefaultRenderingIntent}
+			 * @readonly
 			 */
 			public static readonly SATURATION: Adobe.Indesign.DefaultRenderingIntent;
-			/** Constructor */
+			/**
+			 * Constructor
+			 * @returns {void}
+			 */
 			public constructor();
 		}
 	}

@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.incopy/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.incopy/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Incopy {
@@ -8,32 +8,66 @@ declare namespace Adobe {
 			 * users to close the dialog without saving any selections. If 
 			 * false, the dialog contains an OK button but no Cancel 
 			 * button.
+			 * @type {boolean}
 			 */
 			public canCancel: boolean;
-			/** A collection of dialog columns. */
+			/**
+			 * A collection of dialog columns.
+			 * @type {Adobe.Incopy.DialogColumns}
+			 * @readonly
+			 */
 			public readonly dialogColumns: Adobe.Incopy.DialogColumns;
-			/** A collection of event listeners. */
+			/**
+			 * A collection of event listeners.
+			 * @type {Adobe.Incopy.EventListeners}
+			 * @readonly
+			 */
 			public readonly eventListeners: Adobe.Incopy.EventListeners;
-			/** A collection of events. */
+			/**
+			 * A collection of events.
+			 * @type {Adobe.Incopy.Events}
+			 * @readonly
+			 */
 			public readonly events: Adobe.Incopy.Events;
-			/** The unique ID of the Dialog. */
+			/**
+			 * The unique ID of the Dialog.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly id: number;
-			/** The index of the Dialog within its containing object. */
+			/**
+			 * The index of the Dialog within its containing object.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly index: number;
 			/**
 			 * Returns true if the object specifier resolves to valid 
 			 * objects.
+			 * @type {boolean}
+			 * @readonly
 			 */
 			public readonly isValid: boolean;
-			/** A property that can be set to any string. */
+			/**
+			 * A property that can be set to any string.
+			 * @type {string}
+			 */
 			public label: string;
-			/** The name of the Dialog. */
+			/**
+			 * The name of the Dialog.
+			 * @type {string}
+			 */
 			public name: string;
-			/** The parent of the Dialog (a Application). */
+			/**
+			 * The parent of the Dialog (a Application).
+			 * @type {Adobe.Incopy.Application}
+			 * @readonly
+			 */
 			public readonly parent: Adobe.Incopy.Application;
 			/**
 			 * A property that allows setting of several properties at the 
 			 * same time.
+			 * @type {any}
 			 */
 			public properties: any;
 			/**
@@ -43,21 +77,25 @@ declare namespace Adobe {
 			 * File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {Adobe.Incopy.EventListener}
 			 */
 			public addEventListenerDialog(eventTypeParam: string, handlerParam: any, capturesParam: boolean): Adobe.Incopy.EventListener;
 			/**
 			 * Destroys the dialog object. Note: Dialog objects remain in 
 			 * memory until you destroy them or quit the program.
+			 * @returns {void}
 			 */
 			public destroy(): void;
 			/**
 			 * Gets the label value associated with the specified key.
 			 * @param {string} keyParam The key.
+			 * @returns {string}
 			 */
 			public extractLabel(keyParam: string): string;
 			/**
 			 * Resolves the object specifier, creating an array of object 
 			 * references.
+			 * @returns {any}
 			 */
 			public getElements(): any;
 			/**
@@ -65,6 +103,7 @@ declare namespace Adobe {
 			 * key.
 			 * @param {string} keyParam The key.
 			 * @param {string} valueParam The value.
+			 * @returns {void}
 			 */
 			public insertLabel(keyParam: string, valueParam: string): void;
 			/**
@@ -74,11 +113,18 @@ declare namespace Adobe {
 			 * accept: File or JavaScript Function.
 			 * @param {boolean} capturesParam This parameter is obsolete. 
 			 * (Optional)
+			 * @returns {boolean}
 			 */
 			public removeEventListenerDialog(eventTypeParam: string, handlerParam: any, capturesParam: boolean): boolean;
-			/** Displays the dialog. */
+			/**
+			 * Displays the dialog.
+			 * @returns {boolean}
+			 */
 			public show(): boolean;
-			/** Retrieves the object specifier. */
+			/**
+			 * Retrieves the object specifier.
+			 * @returns {string}
+			 */
 			public toSpecifier(): string;
 		}
 	}

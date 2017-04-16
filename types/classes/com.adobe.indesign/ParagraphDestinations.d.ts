@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class ParagraphDestinations extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new paragraph destination.
@@ -13,33 +17,47 @@ declare namespace Adobe {
 			 * paragraph.
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new ParagraphDestination (Optional)
+			 * @returns {Adobe.Indesign.ParagraphDestination}
 			 */
 			public add(destinationParam: Text, withPropertiesParam: any): Adobe.Indesign.ParagraphDestination;
-			/** Returns any ParagraphDestination in the collection. */
+			/**
+			 * Returns any ParagraphDestination in the collection.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
+			 */
 			public anyItem(): Adobe.Indesign.ParagraphDestination;
 			/**
 			 * Displays the number of elements in the ParagraphDestination.
+			 * @returns {number}
 			 */
 			public count(): number;
-			/** Returns every ParagraphDestination in the collection. */
+			/**
+			 * Returns every ParagraphDestination in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first ParagraphDestination in the collection. */
+			/**
+			 * Returns the first ParagraphDestination in the collection.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
+			 */
 			public firstItem(): Adobe.Indesign.ParagraphDestination;
 			/**
 			 * Returns the ParagraphDestination with the specified index or 
 			 * name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
 			 */
 			public item(indexParam: any): Adobe.Indesign.ParagraphDestination;
 			/**
 			 * Returns the ParagraphDestination with the specified ID.
 			 * @param {number} idParam The ID.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.ParagraphDestination;
 			/**
 			 * Returns the ParagraphDestination with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.ParagraphDestination;
 			/**
@@ -51,11 +69,18 @@ declare namespace Adobe {
 			 * @param {any} toParam The ParagraphDestination, index, or 
 			 * name at the end of the range. Can accept: 
 			 * ParagraphDestination, Long Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last ParagraphDestination in the collection. */
+			/**
+			 * Returns the last ParagraphDestination in the collection.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
+			 */
 			public lastItem(): Adobe.Indesign.ParagraphDestination;
-			/** Returns the middle ParagraphDestination in the collection. */
+			/**
+			 * Returns the middle ParagraphDestination in the collection.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
+			 */
 			public middleItem(): Adobe.Indesign.ParagraphDestination;
 			/**
 			 * Returns the ParagraphDestination whose index follows the 
@@ -63,16 +88,19 @@ declare namespace Adobe {
 			 * @param {ParagraphDestination} objParam The 
 			 * ParagraphDestination whose index comes before the desired 
 			 * ParagraphDestination. 
+			 * @returns {Adobe.Indesign.ParagraphDestination}
 			 */
 			public nextItem(objParam: ParagraphDestination): Adobe.Indesign.ParagraphDestination;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -81,6 +109,7 @@ declare namespace Adobe {
 			 * @param {ParagraphDestination} objParam The index of the 
 			 * ParagraphDestination that follows the desired 
 			 * ParagraphDestination.
+			 * @returns {Adobe.Indesign.ParagraphDestination}
 			 */
 			public previousItem(objParam: ParagraphDestination): Adobe.Indesign.ParagraphDestination;
 		}

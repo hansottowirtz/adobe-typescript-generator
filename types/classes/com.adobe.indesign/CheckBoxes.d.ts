@@ -1,9 +1,13 @@
-/// <reference path="../../packages/com.adobe.indesign/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.indesign/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Indesign {
 		class CheckBoxes extends Adobe.Csawlib.CSHostObject {
-			/** The number of objects in the collection. */
+			/**
+			 * The number of objects in the collection.
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * Creates a new CheckBox
@@ -18,30 +22,46 @@ declare namespace Adobe {
 			 * PageItem. (Optional)
 			 * @param {any} withPropertiesParam Initial values for 
 			 * properties of the new CheckBox (Optional)
+			 * @returns {Adobe.Indesign.CheckBox}
 			 */
 			public add(layerParam: Layer, atParam: LocationOptions, referenceParam: any, withPropertiesParam: any): Adobe.Indesign.CheckBox;
-			/** Returns any CheckBox in the collection. */
+			/**
+			 * Returns any CheckBox in the collection.
+			 * @returns {Adobe.Indesign.CheckBox}
+			 */
 			public anyItem(): Adobe.Indesign.CheckBox;
-			/** Displays the number of elements in the CheckBox. */
+			/**
+			 * Displays the number of elements in the CheckBox.
+			 * @returns {number}
+			 */
 			public count(): number;
-			/** Returns every CheckBox in the collection. */
+			/**
+			 * Returns every CheckBox in the collection.
+			 * @returns {any}
+			 */
 			public everyItem(): any;
-			/** Returns the first CheckBox in the collection. */
+			/**
+			 * Returns the first CheckBox in the collection.
+			 * @returns {Adobe.Indesign.CheckBox}
+			 */
 			public firstItem(): Adobe.Indesign.CheckBox;
 			/**
 			 * Returns the CheckBox with the specified index or name.
 			 * @param {any} indexParam The index or name. Can accept: Long 
 			 * Integer or String.
+			 * @returns {Adobe.Indesign.CheckBox}
 			 */
 			public item(indexParam: any): Adobe.Indesign.CheckBox;
 			/**
 			 * Returns the CheckBox with the specified ID.
 			 * @param {number} idParam The ID.
+			 * @returns {Adobe.Indesign.CheckBox}
 			 */
 			public itemByID(idParam: number): Adobe.Indesign.CheckBox;
 			/**
 			 * Returns the CheckBox with the specified name.
 			 * @param {string} nameParam The name.
+			 * @returns {Adobe.Indesign.CheckBox}
 			 */
 			public itemByName(nameParam: string): Adobe.Indesign.CheckBox;
 			/**
@@ -51,27 +71,37 @@ declare namespace Adobe {
 			 * or String.
 			 * @param {any} toParam The CheckBox, index, or name at the end 
 			 * of the range. Can accept: CheckBox, Long Integer or String.
+			 * @returns {any}
 			 */
 			public itemByRange(fromParam: any, toParam: any): any;
-			/** Returns the last CheckBox in the collection. */
+			/**
+			 * Returns the last CheckBox in the collection.
+			 * @returns {Adobe.Indesign.CheckBox}
+			 */
 			public lastItem(): Adobe.Indesign.CheckBox;
-			/** Returns the middle CheckBox in the collection. */
+			/**
+			 * Returns the middle CheckBox in the collection.
+			 * @returns {Adobe.Indesign.CheckBox}
+			 */
 			public middleItem(): Adobe.Indesign.CheckBox;
 			/**
 			 * Returns the CheckBox whose index follows the specified 
 			 * CheckBox in the collection.
 			 * @param {CheckBox} objParam The CheckBox whose index comes 
 			 * before the desired CheckBox. 
+			 * @returns {Adobe.Indesign.CheckBox}
 			 */
 			public nextItem(objParam: CheckBox): Adobe.Indesign.CheckBox;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} idx
+			 * @returns {number}
 			 */
 			public nextNameIndex(idx: number): number;
 			/**
 			 * Overriding this allows us to support for each...in
 			 * @param {number} index
+			 * @returns {any}
 			 */
 			public nextValue(index: number): any;
 			/**
@@ -79,6 +109,7 @@ declare namespace Adobe {
 			 * specified index.
 			 * @param {CheckBox} objParam The index of the CheckBox that 
 			 * follows the desired CheckBox.
+			 * @returns {Adobe.Indesign.CheckBox}
 			 */
 			public previousItem(objParam: CheckBox): Adobe.Indesign.CheckBox;
 		}

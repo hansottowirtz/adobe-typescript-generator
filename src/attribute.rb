@@ -58,27 +58,35 @@ class Attribute < Documentable
       c.print @name
       c.print ': '
       c.print @type
-      c.print ';'
     elsif method?
-      c.print(if flash_proxy? then 'public' else @access_modifier || 'public' end)
-      c.print ' '
-      c.print(if constructor? then 'constructor' else @name end)
-      c.print '('
-      c.print @arguments.collect(&:to_s).join(", ")
-      c.print ')'
-      if !constructor?
-        c.print ': '
-        c.print @type
+      if @name == 'index'
+        arg = @arguments.first
+        c.print "[#{arg.name}: #{arg.type}]: #{@type}"
+      else
+        c.print(if flash_proxy? then 'public' else @access_modifier || 'public' end)
+        c.print ' '
+        c.print(if constructor? then 'constructor' else @name end)
+        c.print '('
+        c.print @arguments.collect(&:to_s).join(", ")
+        c.print ')'
+        if !constructor?
+          c.print ': '
+          c.print @type
+        end
       end
-      c.print ';'
     elsif constant?
-      c.print "public static readonly #{@name}: any;"
+      c.print "public static readonly #{@name}: any"
     end
+    c.print ';'
     c
   end
 
   def doc_tags
-    if method? then @arguments.collect(&:doc_tag) else [] end
+    dts = []
+    dts += @arguments.collect(&:doc_tag) if method?
+    dts += if method? then [DocTag.new('returns', "{#{@type}}")] else [DocTag.new('type', "{#{@type}}")] end
+    dts += [DocTag.new('readonly')] if @readonly
+    dts
   end
 
   def chunk

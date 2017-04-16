@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.utils/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.utils/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Utils {

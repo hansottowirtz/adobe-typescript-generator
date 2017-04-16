@@ -1,0 +1,12 @@
+/// <reference path="../../configurations/com.adobe.csawlib/implementation.d.ts"/>
+/// <reference path="../../configurations/com.adobe.csawlib/extra-globals.d.ts"/>
+/// <reference path="../../packages/general/references.d.ts"/>
+/// <reference path="../../packages/com.adobe.csawlib.misc/references.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/CSAWError.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/CSEnumBase.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/CSEnumSharedCache.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/CSGlobalCache.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/CSHostObject.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/CSLogger.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/CSLoggerConnectionTarget.d.ts"/>
+/// <reference path="../../classes/com.adobe.csawlib/TypeConUtils.d.ts"/>

@@ -1,4 +1,4 @@
-/// <reference path="../../packages/com.adobe.flashpro/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.flashpro/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Flashpro {
@@ -11,7 +11,10 @@ declare namespace Adobe {
 		 * functionality in the APIs.
 		 */
 		class Library extends Adobe.Csawlib.CSHostObject {
-			/** An array of item objects in the Library */
+			/**
+			 * An array of item objects in the Library
+			 * @type {any[]}
+			 */
 			public items: any[];
 			/**
 			 * Adds the item to the document at the specified position.
@@ -21,6 +24,7 @@ declare namespace Adobe {
 			 * a video or bitmap.
 			 * @param {string} namePath if name is not specified, the 
 			 * current library selection is used. Name can be a path.
+			 * @returns {boolean}
 			 */
 			public addItemToDocument(position: any, namePath: string): boolean;
 			/**
@@ -32,6 +36,7 @@ declare namespace Adobe {
 			 * "folder" and "font". Specifying "folder" is the same as 
 			 * using library.newFolder. 
 			 * @param {string} namePath Name of item, can specify path.
+			 * @returns {boolean}
 			 */
 			public addNewItem(_type: string, namePath: string): boolean;
 			/**
@@ -43,6 +48,7 @@ declare namespace Adobe {
 			 * If no name is specified it deletes the currently selected 
 			 * item. To delete all the items in the library, select all 
 			 * items before using deleteItem().
+			 * @returns {boolean}
 			 */
 			public deleteItem(namePath: string): boolean;
 			/**
@@ -54,6 +60,7 @@ declare namespace Adobe {
 			 * false.
 			 * @param {any} namePath name of object to duplicate, if 
 			 * omitted it duplicated current selection.
+			 * @returns {boolean}
 			 */
 			public duplicateItem(namePath: any): boolean;
 			/**
@@ -63,6 +70,7 @@ declare namespace Adobe {
 			 * is set as the edited item. If there is more or less than one 
 			 * item selected in the library, the first scene in the FLA is 
 			 * displayed for editing. 
+			 * @returns {boolean}
 			 */
 			public editItem(namePath: string): boolean;
 			/**
@@ -80,6 +88,7 @@ declare namespace Adobe {
 			 * @param {string} namePath name, is the name of folder to 
 			 * expand/collapse (if this argument is not specified then the 
 			 * function will apply the current selection).
+			 * @returns {boolean}
 			 */
 			public expandFolder(bExpand: boolean, bRecurseNestedParents: boolean, namePath: string): boolean;
 			/**
@@ -89,6 +98,7 @@ declare namespace Adobe {
 			 * folder nesting. See the example in the structure section.
 			 * @param {string} namePath The library path for the item to 
 			 * find. 
+			 * @returns {any[]}
 			 */
 			public findItemIndex(namePath: string): any[];
 			/**
@@ -97,6 +107,7 @@ declare namespace Adobe {
 			 * RETURNS: value of the property
 			 * @param {string} property for a list of properties, see the 
 			 * library item object and it's subclasses.
+			 * @returns {any}
 			 */
 			public getItemProperty(property: string): any;
 			/**
@@ -108,9 +119,13 @@ declare namespace Adobe {
 			 * for the item. If no path is specified it will work on the 
 			 * current selection. It will be ignored if more than one is 
 			 * selected.
+			 * @returns {string}
 			 */
 			public getItemType(namePath: string): string;
-			/** Returns the array of all the selected items in the Library. */
+			/**
+			 * Returns the array of all the selected items in the Library.
+			 * @returns {any[]}
+			 */
 			public getSelectedItems(): any[];
 			/**
 			 * Imports a SWF into the library as a SWF. This is different 
@@ -124,12 +139,14 @@ declare namespace Adobe {
 			 * @param {string} libName the library name for the created 
 			 * item.  If the name is already used an alternate name is 
 			 * created.
+			 * @returns {void}
 			 */
 			public importEmbeddedSWF(linkageName: string, swfData: any, libName: string): void;
 			/**
 			 * Returns true if the specified item exists in the Library. 
 			 * False otherwise.
 			 * @param {string} namePath Name or path of item
+			 * @returns {boolean}
 			 */
 			public itemExists(namePath: string): boolean;
 			/**
@@ -147,6 +164,7 @@ declare namespace Adobe {
 			 * conflicting name with the item dropped in the folder. If 
 			 * false, the name of the item dropped will be changed by a 
 			 * unique name. This argument is optional and false by default.
+			 * @returns {boolean}
 			 */
 			public moveToFolder(folderPath: string, itemToMove: string, replace: boolean): boolean;
 			/**
@@ -156,6 +174,7 @@ declare namespace Adobe {
 			 * @param {string} namePath The name of the folder to be 
 			 * created. If specified as a path, and the path doesn't exist, 
 			 * the path will be created.
+			 * @returns {boolean}
 			 */
 			public newFolder(namePath: string): boolean;
 			/**
@@ -166,6 +185,7 @@ declare namespace Adobe {
 			 * RETURN: The return Value is true if the name of the item 
 			 * could be changed.
 			 * @param {string} namePath The new name of the library item.
+			 * @returns {boolean}
 			 */
 			public renameItem(namePath: string): boolean;
 			/**
@@ -174,6 +194,7 @@ declare namespace Adobe {
 			 * for select is true.
 			 * @param {boolean} selectAll true (default) to select all the 
 			 * items in the library. false to deselect.
+			 * @returns {void}
 			 */
 			public selectAll(selectAll: boolean): void;
 			/**
@@ -191,11 +212,13 @@ declare namespace Adobe {
 			 * @param {boolean} bSelect Allows to switch between selecting 
 			 * or deselecting an item. It is optional and the default value 
 			 * is true (select).
+			 * @returns {boolean}
 			 */
 			public selectItem(namePath: string, bReplaceCurrentSelection: boolean, bSelect: boolean): boolean;
 			/**
 			 * Used to de-select all the Library items. Added to match the 
 			 * document.selectNone() method.
+			 * @returns {void}
 			 */
 			public selectNone(): void;
 			/**
@@ -203,6 +226,7 @@ declare namespace Adobe {
 			 * @param {string} property for a list of properties, see the 
 			 * library item object and it's subclasses.
 			 * @param {any} value 
+			 * @returns {void}
 			 */
 			public setItemProperty(property: string, value: any): void;
 			/**
@@ -212,6 +236,7 @@ declare namespace Adobe {
 			 * otherwise.
 			 * @param {string} namePath The name of item to update. If no 
 			 * name is passed then it defaults to the current selection.
+			 * @returns {boolean}
 			 */
 			public updateItem(namePath: string): boolean;
 		}

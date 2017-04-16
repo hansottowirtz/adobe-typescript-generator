@@ -1,10 +1,14 @@
-/// <reference path="../../packages/com.adobe.photoshop/index.d.ts"/>
+/// <reference path="../../packages/com.adobe.photoshop/references.d.ts"/>
 
 declare namespace Adobe {
 	namespace Photoshop {
 		/** art paths associated with this document */
 		class PathItems extends Adobe.CsawlibPhotoshop.PhotoshopHostObject {
-			/** number of elements in the collection */
+			/**
+			 * number of elements in the collection
+			 * @type {number}
+			 * @readonly
+			 */
 			public readonly length: number;
 			/**
 			 * create a new path item
@@ -12,29 +16,25 @@ declare namespace Adobe {
 			 * @param {any[]} entirePath all of the sub paths, including 
 			 * operation, and the path points, including path closed 
 			 * parameter
+			 * @returns {Adobe.Photoshop.PathItem}
 			 */
 			public add(name: string, entirePath: any[]): Adobe.Photoshop.PathItem;
 			/**
 			 * Get the first element in the collection with the provided 
 			 * name.
 			 * @param {string} nameParam
+			 * @returns {Adobe.Photoshop.PathItem}
 			 */
 			public getByName(nameParam: string): Adobe.Photoshop.PathItem;
 			/**
 			 * Get the element in the collection at the provided index.
 			 * @param {number} idx
+			 * @returns {Adobe.Photoshop.PathItem}
 			 */
-			public index(idx: number): Adobe.Photoshop.PathItem;
+			[idx: number]: Adobe.Photoshop.PathItem;
 			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} idx
+			 * @returns {void}
 			 */
-			public nextNameIndex(idx: number): number;
-			/**
-			 * Overriding this allows us to support for each...in
-			 * @param {number} index
-			 */
-			public nextValue(index: number): any;
 			public removeAll(): void;
 		}
 	}
